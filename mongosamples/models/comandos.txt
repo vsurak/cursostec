@@ -1,0 +1,52 @@
+
+
+docker <operadores de docker> <nombre de la imagen> <parametros que se ejecutan adentro del container>
+docker run --name some-mongo -d mongo:tag 
+
+docker pull mongo
+docker run --name miservidorbases2 -d mongo
+
+// opciones , lo que se quiere es correr un programa/comando que sabemos que existe
+// dentro del sistema operativo en el container que se creo por medio de una imagen
+docker exec -it miservidorbases2 bash
+docker exec -it miservidorbases2 ls
+docker exec -it miservidorbases2 mongo
+
+show databases;
+use fincas;
+show tables;
+
+db.<nombrecollection>.save({json del documento});
+db.siembras.save({"tipoplanta": "culantro", "ubicacion": ["era 1", "era 2"], "semillas": 20 });
+db.siembras.save({"tipoplanta": "culantro", "ubica": ["era 1", "era 2"], "semillas": "200", "fecha" : "10/08/2021" });
+
+
+db.siembras.createIndex({"tipoplanta": 1});
+
+select * from siembres en mongo seria
+db.siembras.find();
+db.siembras.find().pretty();
+
+db.siembras.save({"tipoplanta": "chayote", "ubica": ["era 4", "era 10"], "semillas": "10", "fecha" : "10/08/2021" });
+
+// cuando se trabaja con arreglos en mongo, el no tiene forma de agregar elementos
+// cuando se agregan elementos, mongo extrae todo el arreglo completo en memoria
+// le agrega el elemento y vuelve a escribir todo el arreglo
+// no hay que usar arrays cuando son muchos elementos
+// como recomendacion de diseño en mongo, usar los arreglos
+// para pocos elementos que no cambien muchos
+
+// mapear un folder de la maquina host a un folder dentro de un contenedor
+// esto normalmente es util cuando no queres que hayan datos volátiles
+
+docker run --name serverloquillo -p 27017:27017  mongo
+
+
+// la unica diferencia entre tener un indice o no tenerlo en mongo
+// es si la busqueda se va hacer secuencial o no
+db.siembras.createIndex({"tipoplanta": 1});
+// esta se hace usando el indice porque existe
+db.siembras.find({"tipoplanta" : "chayote"}).pretty();
+
+// pero cuando uno hace find sin indice, el recorrido siempre secuencial
+db.siembras.find({"semillas" : "200"}).pretty();

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "Unafut integrations", "Unafut integrations.dtproj", "{5A76E57C-0314-4E1D-80D5-362ADAE5DAC5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A76E57C-0314-4E1D-80D5-362ADAE5DAC5}.Development|Default.ActiveCfg = Development
+		{5A76E57C-0314-4E1D-80D5-362ADAE5DAC5}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E4E1251B-EE2C-4FEF-A0EB-523537A717E0}
+	EndGlobalSection
+EndGlobal

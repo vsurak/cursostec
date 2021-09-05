@@ -1,0 +1,133 @@
+docker run -it --name serviceserver --net elasticnet --ip 10.0.0.5 -p 5000:5000 -v C:\Dev\hatenetworkservice:/home/hateservice node bash
+
+su
+
+npm install mongoose --save
+
+docker run -d -p 27017:27017 --net elasticnet --ip 10.0.0.6 --name hatesdb mongo mongod --port 27017
+
+docker exec -it hatesdb mongo
+
+-- some examples based in the following documentation:
+https://docs.mongodb.com/manual/reference/method/db.collection.find/
+https://docs.mongodb.com/manual/reference/operator/query/
+https://docs.mongodb.com/manual/reference/operator/aggregation/match/
+
+
+-- return all documents
+db.hateposts.find().pretty();
+
+-- all documents unpaid
+db.hateposts.find({paid: false}).pretty();
+
+-- all documents with 'Odio tv azteca'
+db.hateposts.find({description: "Odio tv azteca"}).pretty();
+
+-- all documents with 'Odio tv azteca', paid
+db.hateposts.find({description: "Odio tv azteca", paid: true}).pretty();
+
+-- all documents with more than 15K likes
+db.hateposts.find({likes: {$gt: 15000}}).pretty();
+
+-- all documents with at least 20K likes, entre marzo y junio del 2019
+db.hateposts.find({
+    likes: {$gte: 20000}, 
+    date:
+        {
+            $gte : new Date('2019-03-01 00:00:00'),
+            $lte : new Date('2019-06-30 23:59:59')
+        }
+}).pretty();
+
+-- all documents with at least 20K likes, entre marzo y junio del 2019 y únicamente el hashtag #region
+db.hateposts.find({
+    likes: {$gte: 20000}, 
+    date:
+        {
+            $gte : new Date('2019-03-01 00:00:00'),
+            $lte : new Date('2019-06-30 23:59:59')
+        },
+    hashtags: ["#region"]
+}).pretty();
+
+-- all documents del 2020 con los hashtags #region o #malavibra
+db.hateposts.find({
+    likes: {$gte: 20000}, 
+    date:
+        {
+            $gte : new Date('2020-01-01 00:00:00'),
+            $lte : new Date('2020-12-31 23:59:59')
+        },
+    hashtags: { $in: ["#region", "#malavibra"] }
+}).pretty();
+
+-- all documents del 2020 con los hashtags #region y #everyday
+db.hateposts.find({
+    likes: {$gte: 20000}, 
+    date:
+        {
+            $gte : new Date('2020-01-01 00:00:00'),
+            $lte : new Date('2020-12-31 23:59:59')
+        },
+    hashtags: { $all: ["#region", "#everyday"] }
+}).pretty();
+
+--  All 10 last documents of 2020 sort by date desc
+db.hateposts.find({
+    date:
+        {
+            $gte : new Date('2020-01-01 00:00:00'),
+            $lte : new Date('2020-12-31 23:59:59')
+        }
+}).sort({date: -1}).limit(10).pretty();
+
+
+--  All 10 last documents of 2020 sort by date desc, con la cuenta y la suma de varios aggregations
+db.hateposts.find({
+    date:
+        {
+            $gte : new Date('2020-01-01 00:00:00'),
+            $lte : new Date('2020-12-31 23:59:59')
+        }
+}).sort({date: -1}).limit(10).pretty();
+
+// projectar ciertos campos con un aggregate 
+db.hateposts.aggregate([
+   {
+     $project: {
+       totalPaid: { $sum: "$amountPaid"},
+       quantity: { $sum: 1 }
+     }
+   }    
+]);
+
+-- Sum of all amounts paid group by description
+db.hateposts.aggregate(
+   [
+     {
+       $group:
+         {
+           _id: "$description",
+           totalPaid: { $sum: "$amountPaid" },
+           count: { $sum: 1 }
+         }
+     }
+   ]
+);
+
+-- Sum of all amounts paid group by description for specific descriptions
+db.hateposts.aggregate(
+   [
+    {  // stage pipeline 1
+       $match: { "description": {$in : ["Odio tv azteca", "Odio madrugar"] }}
+    },
+    { // stage pipeline 2
+       $group:
+         {
+           _id: "$description",
+           totalPaid: { $sum: "$amountPaid" },
+           count: { $sum: 1 }
+         }
+    }
+   ]
+);

@@ -1,0 +1,40 @@
+{
+  "name": "algoritmos",
+  "version": "1.0.0",
+  "description": "Examples library",
+  "main": "dist/wav-test.js",
+  "types": "",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/wav-test.js",
+    "lint": "tslint -c tslint.json -p tsconfig.json -t stylish"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "algoritmos",
+    "ejecucion",
+    "rendimiento"
+  ],
+  "devDependencies": {
+    "@types/node": "11.13.0",
+    "ts-node": "7.0.1",
+    "tslint": "5.14.0",
+    "tslint-config-prettier": "1.18.0",
+    "tslint-config-standard": "8.0.1",
+    "tslint-react": "3.6.0",
+    "typescript": "3.2.2"
+  },
+  "dependencies": {
+    "fft": "0.2.1",
+    "fourier-transform": "1.1.2",
+    "jsmidgen": "0.1.5",
+    "midi-writer-js": "1.7.1",
+    "wav-decoder": "1.3.0",
+    "wav-encoder": "1.3.0"
+  },
+  "author": "rnunez",
+  "license": "MIT"
+}
