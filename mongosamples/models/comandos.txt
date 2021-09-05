@@ -50,3 +50,44 @@ db.siembras.find({"tipoplanta" : "chayote"}).pretty();
 
 // pero cuando uno hace find sin indice, el recorrido siempre secuencial
 db.siembras.find({"semillas" : "200"}).pretty();
+
+
+// cuidado con este comando, va a borrar todos los volume mantenidos por docker
+#docker volume prune
+
+
+docker volume create datamongo
+docker run --name serverloquillo -d -p 27017:27017 -v datamongo:/data/db  mongo
+
+docker exec -it serverloquillo mongo
+use farms
+
+db.siembras.insertMany(
+    [
+        {"tipo" : "arroz", "area_m2": 20000, "fecha":"10/05/2020", "estado": "activo", "gananciaesperada": 230000},
+        {"tipo" : "arroz", "area_m2": 11000, "fecha":"10/15/2020", "estado": "activo", "gananciaesperada": 170000},
+        {"tipo" : "culantro", "area_m2": 2000, "fecha":"02/05/2021", "estado": "cosechado", "gananciaesperada": 18546},
+        {"tipo" : "chayote", "area_m2": 11000, "fecha":"22/01/2021", "estado": "activo", "gananciaesperada": 33000},
+        {"tipo" : "chile", "area_m2": 1000, "fecha":"22/01/2021", "estado": "cosechado", "gananciaesperada": 14500}        
+    ]
+);
+
+db.siembras.find(
+    {gananciaesperada: {$lt : 100000}},
+).limit(2).pretty();
+
+db.siembras.aggregate([
+    { $match: { _id : {$exists:true}}},
+    { $group: { _id: "$estado", gananciaporestado: { $sum: "$gananciaesperada" } } }
+]);
+
+// para busquedas por rangos y busquedas de igualidad
+db.siembras.createIndex({estado : 1});
+
+// solo para busquedas de igualdad donde se quieren retornar buckets de documentos dado un valor
+db.siembras.createIndex( { estado: "hashed" } );
+
+db.siembras.find({estado: "cosechado"}).pretty();
+
+db.stats();
+
