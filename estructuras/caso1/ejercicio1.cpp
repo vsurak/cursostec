@@ -17,13 +17,6 @@ struct splitdata {
 };
 
 
-struct persona {
-    string nombre;
-    string apellido
-    int edad;
-};
-
-
 struct indicesporpalabra {
     string palabra="";
     int cantidadIndicesDeFrases=0;
