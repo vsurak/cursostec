@@ -91,3 +91,9 @@ db.siembras.find({estado: "cosechado"}).pretty();
 
 db.stats();
 
+db.siembras.insertMany(
+    [
+        {"tipo" : "fresas", "area_m2": 45000, "fecha":"10/09/2021", "estado": "activo", "gananciaesperada": 130000},
+        {"tipo" : "arroz", "area_m2": 8000, "area_m2": 11000, "fecha":"10/15/2020", "estado": "activo", "gananciaesperada": 170000}
+    ]
+);

@@ -2,7 +2,6 @@ import * as express from 'express';
 import * as bodyParser from 'body-parser';
 import { Logger } from '../common';
 import {kindnessrouter} from './kindness';
-import {hatesocialrouter} from './hatesocialrouter';
 import {articlesrouter} from './articlesrouter';
 
 class Routes {
@@ -26,7 +25,6 @@ class Routes {
 
     private routes(): void {
         this.express.use('/kind', kindnessrouter);
-        this.express.use('/hate', hatesocialrouter);
         this.express.use('/articles', articlesrouter);
         this.logger.info("Kindness route loaded");
     }

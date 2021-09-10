@@ -1,4 +1,4 @@
-import { articles_data } from '../repositories/dynamo_articles'
+import { articles_data } from '../repositories/data_articles'
 import { Logger } from '../common'
 
 
