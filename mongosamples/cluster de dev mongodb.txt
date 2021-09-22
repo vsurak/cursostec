@@ -2,117 +2,137 @@ Rodrigo Nunez
 --------------------------------
 
 // crear la red
-docker network create --driver bridge --subnet 10.14.1.16/28 mongonet
+docker network create --driver bridge --subnet 10.0.0.32/28 rodri_comidasnet
+
+docker volume create vol_cfg_picante
+docker volume create vol_cfg_dulce
 
 // iniciar un servidor de configuración en modo configserver indicando la red y el nombre del replica set
 // lo ideal es agregar mas servidores de configuracion en la replica
-docker run -d --net mongonet --ip 10.14.1.18 --name cfgtec01 mongo mongod --port 27017 --configsvr --replSet "repconfigtec" --dbpath /data/configdb
-docker run -d --net mongonet --ip 10.14.1.19 --name cfgtec02 mongo mongod --port 27017 --configsvr --replSet "repconfigtec" --dbpath /data/configdb 
+// mongo puede funcionar en 3 modos: configuracion, router y datos
+// en modo datos puede configurarse como standalone, o como sharding
+// todos los servidores de tipo data y configuracion se pueden replicar 
+// cuando se arranca un server y se le dice la replica, esta indicando cual es el conjunto
+// de servidores que se copian datos entre ellos para hacer la replicacion
+
+docker run -d --net rodri_comidasnet -v vol_cfg_picante:/data/configdb --ip 10.0.0.34 --name cfg_picante mongo mongod --port 27017 --configsvr --replSet "repcfgfood" --dbpath /data/configdb
+docker run -d --net rodri_comidasnet -v vol_cfg_dulce:/data/configdb --ip 10.0.0.35 --name cfg_dulce mongo mongod --port 27017 --configsvr --replSet "repcfgfood" --dbpath /data/configdb
 
 // ingresamos a un servidor de configuracion, y solo a uno
-docker exec -it cfgtec01 bash
+docker exec -it cfg_dulce bash
 
 // hacerle init al servicio de replica set para que haya replicacion entre los servidores de configuracion
 rs.initiate(
   {
-    _id: "repconfigtec",
+    _id: "repcfgfood",
     configsvr: true,
     members: [
-      { _id : 0, host : "10.14.1.18:27017" },
-      { _id : 1, host : "10.14.1.19:27017" }
+      { _id : 0, host : "10.0.0.34:27017" },
+      { _id : 1, host : "10.0.0.35:27017" }
     ]
   }
-)
+);
 
-// revisar instruccion rs.slaveOk() 
-// ejecutar rs.status() // me entrega estadisticas del estado de la replicacion
+// ejecutar 
+rs.status() // me entrega estadisticas del estado de la replicacion
 
 
 // inicializo shards y asignarlos a una replica, replica que aun no está activa pero se declara cual es
 
-docker run -d --net mongonet --ip 10.14.1.20 --name data_sj1 mongo mongod --port 27017 --shardsvr --replSet "repSanjose"
-docker run -d --net mongonet --ip 10.14.1.22 --name data_sj2 mongo mongod --port 27017 --shardsvr --replSet "repSanjose"
-docker run -d --net mongonet --ip 10.14.1.21 --name data_limon1 mongo mongod --port 27017 --shardsvr --replSet "repLimon"
-docker run -d --net mongonet --ip 10.14.1.23 --name data_limon2 mongo mongod --port 27017 --shardsvr --replSet "repLimon"
+docker volume create vol_italian_food1
+docker volume create vol_italian_food2
+docker volume create vol_mex_food1
+docker volume create vol_mex_food2
+
+docker run -d --net rodri_comidasnet --ip 10.0.0.36 -v vol_italian_food1:/data/db --name italian_food1 mongo mongod --port 27017 --shardsvr --replSet "rep_italiana" --dbpath /data/db
+docker run -d --net rodri_comidasnet --ip 10.0.0.38 -v vol_italian_food2:/data/db --name italian_food2 mongo mongod --port 27017 --shardsvr --replSet "rep_italiana" --dbpath /data/db
+docker run -d --net rodri_comidasnet --ip 10.0.0.37 -v vol_mex_food1:/data/db --name mex_food1 mongo mongod --port 27017 --shardsvr --replSet "rep_mex" --dbpath /data/db
+docker run -d --net rodri_comidasnet --ip 10.0.0.39 -v vol_mex_food2:/data/db --name mex_food2 mongo mongod --port 27017 --shardsvr --replSet "rep_mex" --dbpath /data/db
 
 // conectarse a uno de los servidores e inicializar la replica entre ellos
-// me conecto a un shardserver que sea miembro de la repSanjose para inicializar la rep
+// me conecto a un shardserver que sea miembro de una de las replicaas para inicializar la replica
+
+docker exec -it italian_food1 mongo 
 rs.initiate(
   {
-    _id : "repSanjose",
+    _id : "rep_italiana",
     members: [
-      { _id : 0, host : "10.14.1.20:27017" },
-      { _id : 1, host : "10.14.1.22:27017" }
+      { _id : 0, host : "10.0.0.36:27017" },
+      { _id : 1, host : "10.0.0.38:27017" }
     ]
   }
-)
+);
+
+// repito el mismo proceso con la otra replica, me conecto a uno de los members
 
 // me conecto a un shardserver que sea miembro de la repLimon para inicializar la rep
 rs.initiate(
   {
-    _id : "repLimon",
+    _id : "rep_mex",
     members: [
-      { _id : 0, host : "10.14.1.21:27017" },
-      { _id : 1, host : "10.14.1.23:27017" }
+      { _id : 0, host : "10.0.0.37:27017" },
+      { _id : 1, host : "10.0.0.39:27017" }
     ]
   }
-)
+);
+
+
+// para el sistema de voting es mejor agregar un arbitro
+docker run -d --net rodri_comidasnet --ip 10.0.0.40 --name italian_arb mongo mongod --port 27017 --replSet rep_italiana
+docker run -d --net rodri_comidasnet --ip 10.0.0.41 --name mex_arb mongo mongod --port 27017 --replSet rep_mex
+
+// me conecto a a algun servidor que este en la replica y le agrego su arbitro
+docker exec -it italian_food1 mongo
+rs.addArb("10.0.0.40:27017")
+rs.status();
+
+
+agrego el arbitro la otra replica
+docker exec -it mex_food1 mongo
+rs.addArb("10.0.0.41:27017")
 
 
 // vamos a inicializar el router indicando cuales son los servidores de configuracion
-docker run -d -p 27017:27017 --net mongonet --ip 10.14.1.24 --name tecmongo mongo mongos --port 27017 --configdb repconfigtec/10.14.1.18:27017,10.14.1.19:27017
+docker run -d -p 27017:27017 --net rodri_comidasnet --ip 10.0.0.42 --name food_router1 mongo mongos --port 27017 --configdb repcfgfood/10.0.0.34:27017,10.0.0.35:27017
 
 // conectamos al router
+docker exec -it food_router1 mongo
 
-sh.addShard( "repSanjose/10.14.1.20:27017");  hacemos shards con un server en cada replica, no hace faltan los otros porque ya estan en replica entre si
-sh.addShard( "repLimon/10.14.1.21:27017");
+sh.addShard( "rep_italiana/10.0.0.36:27017");  hacemos shards con un server en cada replica, no hace faltan los otros porque ya estan en replica entre si
+sh.addShard( "rep_mex/10.0.0.37:27017");
 
 sh.status();
-
-// para el sistema de voting es mejor agregar un arbitro
-
-docker run -d --net mongonet --ip 10.14.1.26 --name poveda mongo mongod --port 27017 --replSet repSanjose
-docker run -d --net mongonet --ip 10.14.1.27 --name bejarano mongo mongod --port 27017 --replSet repLimon
-
-// me conecto a cada servidor de replica y le agrego su arbitro
-agrego arbitro en el primario de la replica de sanjose
-rs.addArb("10.14.1.26:27017")
-
-agrego arbitro en el primario de la replica de limon
-rs.addArb("10.14.1.27:27017")
-
 ya tenemos las replicas listas, el router ya se le dijo cuales son los shardservers
+///////////////////////////////////////////////////////////
+////// ya queda todo listo a nivel de infraestructura /////
+///////////////////////////////////////////////////////////
+
+
 procedemos a configurar la distribucion de datos del shard
 
 conectarnos al router y probamos
 
-// hagan esta parte de distribuir por configuracion los cursos que son de una sede u otra
-// para hacer distribucion manual de datos se puede hacer por shardkeys de rangos o con shard tags
-// desde el router
-sh.addShardTag("repSanjose", "SJ")
-sh.addShardTag("repLimon", "Lemon")
+sh.addShardTag("rep_italiana", "italiana");
+sh.addShardTag("rep_mex", "mexicana");
 
-sh.addTagRange( "matricula.cursos",
-                { sede: "Limon"},
-                { sede: "Limon2"},
-                "Lemon"
-              )
+sh.addTagRange( "comidasdb.platillos",
+                { cocina: "italiana"},
+                { cocina: "italiana999"},
+                "italiana"
+              );
 
-sh.addTagRange( "matricula.cursos",
-                { sede: "San Jose"},
-                { sede: "San Jose2"},
-                "SJ"
-              )
+sh.addTagRange( "comidasdb.platillos",
+                { cocina: "mexicana"},
+                { cocina: "mexicana999"},
+                "mexicana"
+              );
 
-
-
-//rs.remove("x.x.x.x:27024")
 
 // Indico cual va a ser la base de datos que va a soportar sharding
-sh.enableSharding("matricula");
+sh.enableSharding("comidasdb");
 
 // luego el collection y el campo del collection que va servir como shardkey
-sh.shardCollection("matricula.profesores", { nombre : "hashed" } )
+sh.shardCollection("comidasdb.platillos", { cocina : 1 } )
 
 sh.status();
 
@@ -120,24 +140,26 @@ sh.status();
 
 // con eso terminado ya puedo probar el sharding y la replica que funcionan correctamente
 
+// para iniciar lo ideal es: luego los de sharding, luero arb, luego config y finalmente routers
 -------------------
-docker start cfgtec01
-docker start cfgtec02
-docker start data_limon2
-docker start data_limon1
-docker start data_sj2
-docker start data_sj1
-docker start poveda 
-docker start bejarano
-docker start tecmongo
+docker start mex_food2
+docker start mex_food1
+docker start italian_food2
+docker start italian_food1 
+docker start mex_arb
+docker start italian_arb
+docker start cfg_dulce
+docker start cfg_picante
 
 
-docker stop tecmongo
-docker stop data_limon2
-docker stop data_limon1
-docker stop data_sj2
-docker stop data_sj1
-docker stop poveda 
-docker stop bejarano
-docker stop cfgtec01
-docker stop cfgtec02
+// para apagar: primero router, luego shards y de ultimo configs
+docker stop mex_arb
+docker stop italian_arb
+docker stop mex_food2
+docker stop mex_food1
+docker stop italian_food2
+docker stop italian_food1 
+docker stop cfg_dulce
+docker stop cfg_picante
+
+//rs.remove("x.x.x.x:27024")

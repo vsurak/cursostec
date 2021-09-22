@@ -1,13 +1,8 @@
 #ifndef _NODO_
 #define _NODO_ 1
 
-struct jugador {
-    int numero;
-    string nombre;
-}
-
 struct nodo {
-    jugador data;
+    int data;
     nodo* next = nullptr;
 };
 
