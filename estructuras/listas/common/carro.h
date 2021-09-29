@@ -1,15 +1,22 @@
 #ifndef _CARRO_
 #define _CARRO_ 0
 
+#include <iostream>
+
 using namespace std;
 
 class Carro {
     private:
-        color: string;
-        puertas: int;
-        combustible: string;
-        traccion: string;
+        string color;
+        int puertas;
+        string combustible;
+        string traccion;
+
+        int retornarNivelDeAceite();
+
     public:
+        int marchaActual;
+
         void encender();
         void apagar();
         void frenar();
