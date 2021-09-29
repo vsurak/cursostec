@@ -1,5 +1,6 @@
 #include <iostream>
 #include "listas/stack.h"
+#include "listas/queue.h"
 #include "common/container.h"
 
 using namespace std;
@@ -61,4 +62,19 @@ int main() {
     cout << "==============" << endl;
     buscado = release(145);
     cout << buscado.containerid << " " << buscado.brand << endl;
+
+    cout << "=================================COLAS=================" << endl;
+    cout << "=================================COLAS=================" << endl;
+
+    struct queue micola;
+    micola.enqueue(&c1);
+    micola.enqueue(&c2);
+    micola.enqueue(&c3);
+    micola.enqueue(&c4);
+
+    while (!micola.isEmpty()) {
+        struct container currentElement = (*(struct container*)micola.dequeue());
+        cout << "containerid " << currentElement.containerid << endl;
+    }
+
 }
