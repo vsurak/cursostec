@@ -163,3 +163,13 @@ docker stop cfg_dulce
 docker stop cfg_picante
 
 //rs.remove("x.x.x.x:27024")
+
+
+docker rm mex_arb
+docker rm italian_arb
+docker rm mex_food2
+docker rm mex_food1
+docker rm italian_food2
+docker rm italian_food1 
+docker rm cfg_dulce
+docker rm cfg_picante
