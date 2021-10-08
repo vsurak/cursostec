@@ -1,6 +1,6 @@
 #include <iostream>
 //#include "treenodo.h"
-#include "ttreenode.h"
+#include "binarytree.h"
 
 using namespace std;
 
@@ -15,8 +15,13 @@ int main() {
     string elmensaje = *((string*)dato); // hace la programación genérica más incomoda, es mejor usar plantillas
     */
 
-    treenodo<string> minodo(mensaje);
-    treenodo<int> otronodo(49);
+    int values[] = {9, 5, 8, 3, 19, 5, 30, 40};
+    binarytree<int> mitree;
 
-    cout << minodo.getData() << " " << otronodo.getData() << endl;
+    for(int i=0; i<8; i++) {
+        mitree.add(values[i]);
+    }
+
+    cout << mitree.getSize() << " " << mitree.getHeight() << " "<< mitree.getRoot()->getData() << endl;
+
 }

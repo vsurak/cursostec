@@ -5,12 +5,13 @@ template <class T>
 class treenodo {
 
     private:
-        treenodo* left = nullptr;
-        treenodo* right =  nullptr;
-        treenodo* father = nullptr;
         T data;
 
     public:
+        treenodo* left = nullptr;
+        treenodo* right =  nullptr;
+        treenodo* father = nullptr;
+
         treenodo(T pData) {
             data = pData;
             left = nullptr;
