@@ -9,7 +9,7 @@ docker build . -t hadoop
 
 docker network create --driver bridge --subnet 10.0.0.0/28 littlenet
 
-docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v C:\Dev\docker\hadoop\mapr:/home/hadoopuser/mapr --name hadoopserver --net littlenet --ip 10.0.0.2 hadoop
+docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v C:\dev\tec\hadoopbases2\mapr:/home/hadoopuser/mapr --name hadoopserver --net littlenet --ip 10.0.0.2 hadoop
 ```
 
 This is an example of how to manually copy files from the host to the container 
@@ -30,7 +30,7 @@ exit
 ```
 
 ### hadoop related
-These are the commands to start/stop the hadoop single node cluster 
+These are the commands to start/stop the hadoop single node cluster in /opt/hadoop/hadoop-3.3.0/sbin
 ```
 start-all.sh
 stop-all.sh
