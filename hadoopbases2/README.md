@@ -5,7 +5,7 @@ This readme helps you to perform the intended labs in classroom regarding topics
 Build the image, create an internal network and run the image using a local volumen
 path to share files and jars from the host computer
 ```
-docker build . -t hadoop
+    docker build . -t hadoop
 
 docker network create --driver bridge --subnet 10.0.0.0/28 littlenet
 
