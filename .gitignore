@@ -4,3 +4,4 @@ bin
 *.exe
 *.o
 *.dll
+/.metadata/
