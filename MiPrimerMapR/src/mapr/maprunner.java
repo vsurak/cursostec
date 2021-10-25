@@ -23,10 +23,10 @@ public class maprunner {
 	    conf.setMapperClass(SalesMaper.class); 
 	    conf.setReducerClass(SalesReducer.class);         
 	    conf.setInputFormat(TextInputFormat.class);    
-	    conf.setOutputFormat(TextOutputFormat.class);    
+	    conf.setOutputFormat(TextOutputFormat.class);   
 	    conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
 	    FileInputFormat.setInputPaths(conf,new Path("/datainput/datasales.dat"));    
 	    FileOutputFormat.setOutputPath(conf,new Path("/dataoutput"));
-	    JobClient.runJob(conf);    
+	    JobClient.runJob(conf); // indicamos a yarn que ponga en cola este job
 	}    
 }

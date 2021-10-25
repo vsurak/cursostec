@@ -41,7 +41,13 @@ These are example of instructions to prepare hdfs folders and run a map reduce e
 hadoop fs -mkdir /data
 hadoop fs -mkdir /data/input
 hadoop fs -copyFromLocal datasales.dat /data/input
+
+hadoop fs -copyFromLocal datasales.dat /datainput
+
+
 hadoop jar maprexample.jar main.program /data/input/datadates.csv /data/output
+
+hadoop jar salestest.jar mapr.maprunner 
 ```
 
 ### hive related
@@ -77,6 +83,21 @@ SELECT anyo, MAX(monto) from (
 ) as tabla 
 group by anyo;
 ```
+
+
+/////
+create table presupuesto (anyo INT, idDivision INT, division string,  idpartida int, partida string, idsubpartida int, subpartida string, monto decimal(10,2), idestado int) row format delimited fields terminated by ',';
+
+load data inpath '/data/input/presupuesto.csv' into table presupuesto;
+
+select subpartida, sum(monto) from presupuesto group by division, subpartida;
+select subpartida, sum(monto) from presupuesto group by division, subpartida order by sum(monto);
+select division, subpartida, sum(monto) from presupuesto group by division, subpartida order by sum(monto);
+
+SELECT * FROM (
+    select division, subpartida, sum(monto) , rank() over (partition by division order by sum(monto) desc) rank
+    from presupuesto group by division, subpartida
+)  result where rank<4;
 
 ### Kakfa related
 To start the kafkta server just the script `start-kafka.sh` located in the hadoopuser home folder.

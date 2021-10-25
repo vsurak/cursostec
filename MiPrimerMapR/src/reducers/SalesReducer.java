@@ -13,7 +13,7 @@ public class SalesReducer extends MapReduceBase implements Reducer<IntWritable,F
 		float salesSum=0.0f;
 		
 		while (values.hasNext()) {    
-			salesSum+=values.next().get();    
+			salesSum+=values.next().get(); 
 		}    
 		
 		output.collect(key,new FloatWritable(salesSum));    
