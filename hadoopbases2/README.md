@@ -41,6 +41,8 @@ These are example of instructions to prepare hdfs folders and run a map reduce e
 hadoop fs -mkdir /data
 hadoop fs -mkdir /data/input
 hadoop fs -copyFromLocal datasales.dat /data/input
+hadoop fs -copyFromLocal presupuesto.csv /data/input
+
 
 hadoop fs -copyFromLocal datasales.dat /datainput
 
@@ -59,6 +61,7 @@ The following is an example of instructions in hive console to test your hive en
 
 ```
 create schema <name>; // to create an schema
+create database bases2;
 
 create table tmp_sales(fecha string, monto decimal(10,2)) row format delimited fields terminated by ',';
 
@@ -94,10 +97,23 @@ select subpartida, sum(monto) from presupuesto group by division, subpartida;
 select subpartida, sum(monto) from presupuesto group by division, subpartida order by sum(monto);
 select division, subpartida, sum(monto) from presupuesto group by division, subpartida order by sum(monto);
 
-SELECT * FROM (
-    select division, subpartida, sum(monto) , rank() over (partition by division order by sum(monto) desc) rank
+SELECT division, subpartida, monto rank() over (partition by division order by sum(monto) desc) rank  FROM (
+    select division, subpartida, sum(monto) monto
     from presupuesto group by division, subpartida
 )  result where rank<4;
+
+SELECT * FROM (
+    SELECT division, subpartida, monto, rank() over (partition by division order by monto desc) rank  FROM (
+        select division, subpartida, sum(monto) monto
+        from presupuesto group by division, subpartida
+    ) result
+) resultfinal 
+WHERE rank<4 
+ORDER BY division, rank;
+
+select subpartida, sum(monto) from presupuesto 
+where subpartida = "Servicio de agua y alcantarillado"
+group by division, subpartida;
 
 ### Kakfa related
 To start the kafkta server just the script `start-kafka.sh` located in the hadoopuser home folder.

@@ -6,7 +6,7 @@ To build the image and run it
 ```
 docker build . -t pyspark
 
-docker run -it --rm -v C:\Dev\docker\hadoop\pyspark\examples:/src pyspark bash
+docker run -it --rm -v C:\dev\tec\hadoopbases2\pyspark\examples:/src pyspark bash
 ```
 
 ### pyspark related
