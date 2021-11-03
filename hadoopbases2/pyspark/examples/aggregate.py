@@ -22,6 +22,9 @@ dataframe = dataframe.withColumn('fecha',to_date(col('fecha'), 'MM/dd/yyyy'))
 # Group By and Select the data already aggregated
 dataframeAfterYearColumn = dataframe.withColumn('year',year('fecha'))
 
+#al no especificar las columnas del sum, procede a sumar todas excepto el cambio de group by
+#sum_df = dataframeAfterYearColumn.groupBy("year").sum()
+
 sum_df = dataframeAfterYearColumn.groupBy("year").sum("amount")
 
 dataframe = \

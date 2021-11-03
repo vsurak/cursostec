@@ -5,6 +5,7 @@ from pyspark.sql.types import (DateType, IntegerType, FloatType, StructField,
                                StructType, TimestampType, StringType)
 
 spark = SparkSession.builder.appName("probabdo spark").getOrCreate()
+spark.sparkContext.setLogLevel("ERROR")
 
 file_location = "presupuesto.csv"
 df = spark.read.format("csv").option("inferSchema", 
@@ -25,10 +26,10 @@ queryConSparkSQL = spark.sql("""
   limit 5
 """)
 
-queryConSparkSQL.show()
+#queryConSparkSQL.show()
 
 queryConSparkSQL = spark.sql("""
-    select divisionname, subpartida, sum(monto) from presu_table 
+    select divisionname, subpartida, cast(sum(monto) as decimal(15, 2)) subtotal from presu_table 
     group by divisionname, subpartida
     order by 3 desc
 """)
