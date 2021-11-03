@@ -41,7 +41,9 @@ RUN mkdir /home/hadoopuser/tmpdata && \
     mkdir /home/hadoopuser/dfsdata/datanode  && \
     chmod a+rw -R /home/hadoopuser/tmpdata  && \
     chmod a+rw -R /home/hadoopuser/dfsdata  && \
-    mkdir /home/hadoopuser/mapr
+    mkdir /home/hadoopuser/mapr && \
+    mkdir /opt/apache-hive-3.1.2-bin/aux && \
+    chmod a+rxw -R /opt/apache-hive-3.1.2-bin/aux
 
 COPY ./etc/bashrc /etc
 COPY ./etc/bashrc /home/hadoopuser/.bashrc
@@ -61,6 +63,8 @@ COPY /hadoop/etc/yarn-site.xml /opt/hadoop/hadoop-3.3.0/etc/hadoop
 
 COPY /hive/bin/hive-config.sh /opt/apache-hive-3.1.2-bin/bin
 COPY /hive/conf/hive-site.xml /opt/apache-hive-3.1.2-bin/conf
+RUN cp /opt/kafka_2.13-3.0.0/libs/*.jar /opt/apache-hive-3.1.2-bin/aux
+COPY /kafka/kafka-handler.jar /opt/apache-hive-3.1.2-bin/aux
 
 WORKDIR /home/hadoopuser
 COPY /start.sh /home/hadoopuser

@@ -4,7 +4,9 @@ from pyspark.sql.functions import col, date_format, to_date, year
 from pyspark.sql.types import (DateType, IntegerType, FloatType, StructField,
                                StructType, TimestampType, StringType)
 
-spark = SparkSession.builder.appName("Read Transactions").getOrCreate()
+spark = SparkSession.builder.appName("Funcion agregada").getOrCreate()
+
+spark.sparkContext.setLogLevel("ERROR")
 
 csv_schema = StructType([StructField('fecha', StringType()),
                          StructField('amount', FloatType())
@@ -15,19 +17,22 @@ dataframe = spark.read.csv("datasales.dat",
                            header=True)
 
 dataframe = dataframe.withColumn('fecha',to_date(col('fecha'), 'MM/dd/yyyy'))
-dataframe.show()
 
 
 # Group By and Select the data already aggregated
-dataframe = dataframe.withColumn('year',year('fecha'))
-dataframe.show()
+dataframeAfterYearColumn = dataframe.withColumn('year',year('fecha'))
 
-sum_df = dataframe.groupBy("year").sum()
+sum_df = dataframeAfterYearColumn.groupBy("year").sum("amount")
 
 dataframe = \
     sum_df.select(
         col('year'),
         col('sum(amount)').alias('amountperyear'))
 
+print("dataframe after adding the year column")
+dataframeAfterYearColumn.show()
+print("dataframe after executing the sum and group")
+sum_df.show()
+print("final dataframe after the select and project operation")
 dataframe.printSchema()
 dataframe.show()

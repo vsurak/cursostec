@@ -116,7 +116,22 @@ where subpartida = "Servicio de agua y alcantarillado"
 group by division, subpartida;
 
 ### Kakfa related
-To start the kafkta server just run the script `./home/hadoopuser/start-kafka.sh` located in the hadoopuser home folder from the folder /opt/kafka_2.13-3.0.0/
+To start the kafkta server just run the script `/home/hadoopuser/start-kafka.sh` located in the hadoopuser home folder from the folder /opt/kafka_2.13-3.0.0/
 
 To test your Kafka environment follow the [kafka quickstart guide](https://kafka.apache.org/quickstart) 
 
+
+### example with kafka with hive
+1. start and load console hive
+2. in the kafka bin folder crear un topico para que kafka mande eventos a hive en forma de tabla que se almacena en su metastore
+
+./kafka-topics.sh --create --topic newsales --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+
+3. ir a hive y crear una base de datos asociada a dicho topico
+CREATE EXTERNAL TABLE kafkasales
+  (`fecha` timestamp, `monto` double , `id` int)
+  STORED BY 'org.apache.hadoop.hive.kafka.KafkaStorageHandler'
+  TBLPROPERTIES
+  ("kafka.topic" = "newsales", "kafka.bootstrap.servers"="localhost:9092");
+
+https://docs.cloudera.com/runtime/7.2.2/integrating-hive-and-bi/topics/hive_create_table_kafka.html
