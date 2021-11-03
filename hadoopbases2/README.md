@@ -116,7 +116,7 @@ where subpartida = "Servicio de agua y alcantarillado"
 group by division, subpartida;
 
 ### Kakfa related
-To start the kafkta server just the script `start-kafka.sh` located in the hadoopuser home folder.
+To start the kafkta server just run the script `./home/hadoopuser/start-kafka.sh` located in the hadoopuser home folder from the folder /opt/kafka_2.13-3.0.0/
 
 To test your Kafka environment follow the [kafka quickstart guide](https://kafka.apache.org/quickstart) 
 
