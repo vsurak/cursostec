@@ -7,10 +7,28 @@ using namespace std;
 
 class Arco {
     private:
-        INodo* origen;
-        INodo* destino;
+        void* origen;
+        void* destino;
         int peso;
+
     public:
+        Arco(void* pOrigen, void* pDestino, int pPeso) {
+            this->origen = pOrigen;
+            this->destino = pDestino;
+            this->peso = pPeso;
+        }
+
+        void* getOrigen() {
+            return this->origen;
+        }
+
+        void* getDestino() {
+            return this->destino;
+        }
+
+        int getPeso() {
+            return this->peso;
+        }
 };
 
 #endif

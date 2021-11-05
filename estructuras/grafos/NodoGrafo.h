@@ -12,9 +12,20 @@ class NodoGrafo {
         vector<Arco> listaArcos;
 
     public:
+        NodoGrafo(INodo pDato) {
+            this->dato = pDato;
+        }
+
+        void setInfo(INodo pDato) {
+           this->dato = pDato; 
+        }
 
         INodo getInfo() {
             return dato;
+        }
+
+        void addArc(Arco pArco) {
+            this->listaArcos.push_back(pArco);
         }
 };
 

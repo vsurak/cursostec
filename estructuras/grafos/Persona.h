@@ -5,18 +5,22 @@
 
 using namespace std;
 
-class Persona {
-   public:
-      string getNombre() {
-          return this->nombre;
-      }
+class Persona : public INodo {
+    public:
+        Persona() {
+            this->setId(rand()*99999999999);
+        }
 
-      void setNombre(string pNombre) {
-          this->nombre = pNombre;
-      }
-   
-   private:
-      string nombre;
+        string getNombre() {
+            return this->nombre;
+        }
+
+        void setNombre(string pNombre) {
+            this->nombre = pNombre;
+        }
+
+    private:
+        string nombre;
 };
 
 #endif
