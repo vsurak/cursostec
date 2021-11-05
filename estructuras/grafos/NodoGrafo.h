@@ -16,6 +16,10 @@ class NodoGrafo {
             this->dato = pDato;
         }
 
+        NodoGrafo() {
+            
+        }
+
         void setInfo(INodo pDato) {
            this->dato = pDato; 
         }

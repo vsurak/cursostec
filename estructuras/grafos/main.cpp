@@ -16,4 +16,8 @@ int main() {
 
     grafo1.addNode(ana);
     grafo1.addNode(juan);
+
+    grafo1.addArc(ana, juan);
+
+    cout << "termino bien" << endl;
 }

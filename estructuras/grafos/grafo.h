@@ -38,6 +38,40 @@ class Grafo {
                 pDestino.addArc(reverseArc);
             }
         }
+
+        void addArc(INodo pOrigen, INodo pDestino) {
+            this->addArc(pOrigen.getId(), pDestino.getId(), 0);
+        }
+
+        void addArc(INodo pOrigen, INodo pDestino, int pPeso) {
+            this->addArc(pOrigen.getId(), pDestino.getId(), pPeso);
+        }
+
+        void addArc(int pOrigen, int pDestino) {
+            this->addArc(pOrigen, pDestino, 0);
+        }
+
+        void addArc(int pOrigen, int pDestino, int pPeso) {
+            NodoGrafo referencias[2];
+            int currentRef = 0;
+
+            for (vector<NodoGrafo>::iterator nodoActual = this->listaNodos.begin() ; nodoActual != this->listaNodos.end(); ++nodoActual) {
+                if (((NodoGrafo)*nodoActual).getInfo().getId()==pOrigen) {
+                    referencias[0] = ((NodoGrafo)*nodoActual);
+                    currentRef++;
+                }
+                if (((NodoGrafo)*nodoActual).getInfo().getId()==pDestino) {
+                    referencias[1] = ((NodoGrafo)*nodoActual);
+                    currentRef++;
+                }
+                if (currentRef==2) {
+                    break;
+                }
+            }
+
+            this->addArc(referencias[0], referencias[1], pPeso);
+        }
+
 };
 
 #endif
