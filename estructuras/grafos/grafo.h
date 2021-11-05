@@ -2,17 +2,18 @@
 #define _GRAFO_ 1
 #include <vector>
 #include "NodoGrafo.h"
+#include "Persona.h"
+#include "INodo.h"
 
 using namespace std;
 
-template <class T>
 class grafo {
     private:
-        vector<NodoGrafo<T>> listaNodos;
+        vector<NodoGrafo> listaNodos;
 
     public:
         int getSize() {
-            return this->listaNodos.getSize();
+            return this->listaNodos.size();
         }
 };
 

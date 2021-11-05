@@ -1,12 +1,14 @@
 #ifndef _ARCO_
 #define _ARCO_ 1
 
+#include "INodo.h"
+
 using namespace std;
 
 class Arco {
     private:
-        void* origen;
-        void* destino;
+        INodo* origen;
+        INodo* destino;
         int peso;
     public:
 };
