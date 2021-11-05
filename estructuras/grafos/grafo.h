@@ -52,16 +52,17 @@ class Grafo {
         }
 
         void addArc(int pOrigen, int pDestino, int pPeso) {
-            NodoGrafo referencias[2];
+            NodoGrafo referencias[2]; // [origen, destino] como NodoGrafo
             int currentRef = 0;
 
             for (vector<NodoGrafo>::iterator nodoActual = this->listaNodos.begin() ; nodoActual != this->listaNodos.end(); ++nodoActual) {
-                if (((NodoGrafo)*nodoActual).getInfo().getId()==pOrigen) {
-                    referencias[0] = ((NodoGrafo)*nodoActual);
+                NodoGrafo actual = ((NodoGrafo)*nodoActual);
+                if (actual.getInfo().getId()==pOrigen) {
+                    referencias[0] = actual;
                     currentRef++;
                 }
-                if (((NodoGrafo)*nodoActual).getInfo().getId()==pDestino) {
-                    referencias[1] = ((NodoGrafo)*nodoActual);
+                if (actual.getInfo().getId()==pDestino) {
+                    referencias[1] = actual;
                     currentRef++;
                 }
                 if (currentRef==2) {
