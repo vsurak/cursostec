@@ -120,18 +120,27 @@ To start the kafkta server just run the script `/home/hadoopuser/start-kafka.sh`
 
 To test your Kafka environment follow the [kafka quickstart guide](https://kafka.apache.org/quickstart) 
 
-
-### example with kafka with hive
-1. start and load console hive
-2. in the kafka bin folder crear un topico para que kafka mande eventos a hive en forma de tabla que se almacena en su metastore
-
+### integration with spark
 ./kafka-topics.sh --create --topic newsales --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
 
-3. ir a hive y crear una base de datos asociada a dicho topico
-CREATE EXTERNAL TABLE kafkasales
-  (`fecha` timestamp, `monto` double , `id` int)
-  STORED BY 'org.apache.hadoop.hive.kafka.KafkaStorageHandler'
-  TBLPROPERTIES
-  ("kafka.topic" = "newsales", "kafka.bootstrap.servers"="localhost:9092");
+./kafka-topics.sh --list --bootstrap-server localhost:9092
 
-https://docs.cloudera.com/runtime/7.2.2/integrating-hive-and-bi/topics/hive_create_table_kafka.html
+./kafka-console-producer.sh --topic newsales --bootstrap-server localhost:9092
+
+./kafka-console-consumer.sh --topic newsales --from-beginning --bootstrap-server localhost:9092
+
+./kafka-acls.sh --authorizer-properties zookeeper.connect=localhost:9092 --add --allow-principal User:ANONYMOUS --operation All --topic=* --group=* --cluster
+
+1. https://www.youtube.com/watch?v=UcWi3-FODjs  ; se recomienda usarlo hasta tener el producer de datos en java
+code of the video https://github.com/binodsuman/kafka-spark-streaming-integration
+
+2. Luego integrar con Spark Streaming direct, 
+https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html#deploying
+https://spark.apache.org/docs/latest/streaming-programming-guide.html
+
+3. Si por alguna incompatibilidad de versiones no funciona el direct streaming con kafka, primero tratar de tener las mismas versiones de los jar en todos los ambientes y programas; y volver a probar. Si no, ir al punto #1 y hacer el consumer de spark en java
+
+# Complementos
+4. Ejemplo completo con direct streaming y docker https://medium.com/data-arena/enabling-streaming-data-with-spark-structured-streaming-and-kafka-93ce91e5b435
+
+5. Link de suplemento https://hevodata.com/learn/spark-streaming-and-kafka-integration/

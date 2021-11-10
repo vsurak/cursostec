@@ -84,6 +84,8 @@ RUN ./hdfs namenode -format -force -nonInteractive
 RUN chown -R hadoopuser /home/hadoopuser/tmpdata
 RUN chown -R hadoopuser /home/hadoopuser/dfsdata
 
+COPY /kafka/server.properties /opt/kafka_2.13-3.0.0/config
+
 WORKDIR /home/hadoopuser
 RUN cd /home/hadoopuser
 
