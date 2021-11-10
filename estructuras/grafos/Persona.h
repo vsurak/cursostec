@@ -2,6 +2,7 @@
 #define _PERSONA_ 1
 
 #include <iostream>
+#include "INodo.h"
 
 using namespace std;
 

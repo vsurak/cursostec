@@ -2,7 +2,6 @@
 #define _GRAFO_ 1
 #include <vector>
 #include "NodoGrafo.h"
-#include "Persona.h"
 #include "INodo.h"
 
 using namespace std;
@@ -55,6 +54,7 @@ class Grafo {
             NodoGrafo referencias[2]; // [origen, destino] como NodoGrafo
             int currentRef = 0;
 
+            // sería ideal tener un hashtable por ID para no tener que hacer este recorrido tan lento
             for (vector<NodoGrafo>::iterator nodoActual = this->listaNodos.begin() ; nodoActual != this->listaNodos.end(); ++nodoActual) {
                 NodoGrafo actual = ((NodoGrafo)*nodoActual);
                 if (actual.getInfo().getId()==pOrigen) {
@@ -71,6 +71,19 @@ class Grafo {
             }
 
             this->addArc(referencias[0], referencias[1], pPeso);
+        }
+
+        vector<INodo> deepPath(INodo pOrigen) {  //recorrido en profundidad
+            vector<INodo> result;
+
+            return result;
+        } 
+
+        vector<INodo> path(INodo pOrigen, INodo pDestino) { // debe retornar un camino, el primero que encuentre estre el nodo oriegn y destino
+            // en caso de que no haya camino, result se retorna vacío
+            vector<INodo> result;
+
+            return result;
         }
 
 };
