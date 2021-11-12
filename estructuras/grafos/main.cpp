@@ -24,7 +24,7 @@ int main() {
 
     grafo1.addArc(&ana, &juan);
 
-    // caso #5 
+    // caso #5 , 10%
     // Implementar el grafo denominado ciudades #1 en un nuevo grafo
 
     // Implementar el algoritmo de deepPath que retorna el vector de INodo
@@ -37,6 +37,10 @@ int main() {
     // Calcular los siguientes P(Berna, Lisboa), P(Lisboa, Milan)
     // Hacer un for que recorra el vector resultado y castee cada INodo a Ciudad e imprima el recorrido con el 
     // nombre de la ciudad 
+
+    // Implementar el algorithmo de Dijkstra para poder tener en el grafo
+    // una tabla que me diga cuales son los caminos más cortos de todos los nodos
+    // hacia todos los nodos
 
     cout << "Ejercio de recorrido en anchura testeando creacion de arcos" << endl;
 
@@ -58,13 +62,12 @@ int main() {
     NodoGrafo* destino = grafoApps.getNodo(10);
 
     grafoApps.addArc(origen, destino, 3);
-    
     grafoApps.addArc(10, 15, 9);
     grafoApps.addArc(&of, &ig, 1); 
     grafoApps.addArc(7, 10, 4);
-
     grafoApps.addArc(10, 7, 3);
     grafoApps.addArc(7, 4, 6);
+    grafoApps.addArc(&face, &flu, 8);
 
     vector<INodo*> result = grafoApps.broadPath(&ig);
 
@@ -72,6 +75,33 @@ int main() {
         WebApp dato = *((WebApp*)(void*)result[i]);
         cout << dato.getId() << " " << dato.getNombre() << endl;
     }
+
+
+    /// segundo grafo
+
+    cout << "&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&" << endl;
+    Grafo grafoNoConexo(true);
+
+    for(int i=0; i<5; i++) {
+        grafoNoConexo.addNode(&allapps[i]);
+    }
+
+    grafoNoConexo.addArc(&flu, &ig, 3);
+    grafoNoConexo.addArc(&ig, &flu , 4);
+    grafoNoConexo.addArc(&ig, &of , 3);
+    grafoNoConexo.addArc(&twi, &of , 4);
+    grafoNoConexo.addArc(&twi, &face , 6);
+    grafoNoConexo.addArc(&face, &twi , 2);
+    grafoNoConexo.addArc(&face, &of , 1);
+
+    result.clear();
+    result = grafoNoConexo.broadPath(&face);
+
+    for(int i=0; i<result.size(); i++) {
+        WebApp dato = *((WebApp*)(void*)result[i]);
+        cout << dato.getId() << " " << dato.getNombre() << endl;
+    }
+
     cout << "termino bien" << endl;
 
 }

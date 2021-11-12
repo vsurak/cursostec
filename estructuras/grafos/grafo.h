@@ -24,6 +24,18 @@ class Grafo {
             }
         }
 
+        NodoGrafo* findNotVisited() {
+            NodoGrafo* result = nullptr;
+            for (std::vector<NodoGrafo*>::iterator current = listaNodos.begin() ; current != listaNodos.end(); ++current) {
+                NodoGrafo* actual = (*current);
+                if (!actual->visitado) {
+                    result = actual;
+                    break;
+                }
+            }
+            return result;
+        }
+
     public:
         Grafo(bool pDirigido) {
             this->esDirigido =  pDirigido;
@@ -36,7 +48,7 @@ class Grafo {
         void addNode(INodo* pNodo) {
             NodoGrafo* nuevoNodo = new NodoGrafo(pNodo);
             this->listaNodos.push_back(nuevoNodo);
-            hashNodos.insert(std::pair<int,NodoGrafo*>(pNodo->getId(),nuevoNodo));
+            hashNodos.insert(pair<int,NodoGrafo*>(pNodo->getId(),nuevoNodo));
         }
 
         void addArc(NodoGrafo* pOrigen, NodoGrafo* pDestino) {
@@ -66,9 +78,7 @@ class Grafo {
         }
 
         void addArc(int pOrigen, int pDestino, int pPeso) {
-            NodoGrafo* origen = this->getNodo(pOrigen);
-            NodoGrafo* destino = this->getNodo(pDestino);
-            this->addArc(origen, destino, pPeso);
+            this->addArc(this->getNodo(pOrigen), this->getNodo(pDestino), pPeso);
         }
 
         NodoGrafo* getNodo(int pId) { 
@@ -92,28 +102,37 @@ class Grafo {
             nodosProcesados.push(puntoPartida);
             puntoPartida->procesado = true;
             
-            while (!nodosProcesados.empty()) {
-                NodoGrafo* actual = nodosProcesados.front();
-        
-                nodosProcesados.pop();
-                actual->visitado = true;
-                visitados++;
+            do {
+                while (!nodosProcesados.empty()) {
+                    NodoGrafo* actual = nodosProcesados.front();
+                    nodosProcesados.pop();
 
-                result.push_back(actual->getInfo());
-                vector<Arco*> *adyacentes = actual->getArcs();
+                    actual->visitado = true;
+                    visitados++;
+                    result.push_back(actual->getInfo());
 
-                for (int indiceArcos=0; indiceArcos<adyacentes->size(); ++indiceArcos) {
-                    Arco* arco = adyacentes->at(indiceArcos);
-                    NodoGrafo* adyacente = (NodoGrafo*)arco->getDestino();
-                    if (!adyacente->procesado) {
-                        nodosProcesados.push(adyacente);
-                        adyacente->procesado = true;
+                    vector<Arco*> *adyacentes = actual->getArcs();
+
+                    for (int indiceArcos=0; indiceArcos<adyacentes->size(); ++indiceArcos) {
+                        Arco* arco = adyacentes->at(indiceArcos);
+                        NodoGrafo* adyacente = (NodoGrafo*)arco->getDestino();
+                        if (!adyacente->procesado) {
+                            nodosProcesados.push(adyacente);
+                            adyacente->procesado = true;
+                        }
                     }
                 }
-            }
+
+                if (visitados<this->getSize()) {
+                    puntoPartida = this->findNotVisited();
+                    nodosProcesados.push(puntoPartida);
+                    puntoPartida->procesado = true;
+                }
+            } while (visitados<this->getSize()); 
 
             return result;
         }
+
 
         vector<INodo> path(INodo* pOrigen, INodo* pDestino) { // debe retornar un camino, el primero que encuentre estre el nodo oriegn y destino
             // en caso de que no haya camino, result se retorna vacío

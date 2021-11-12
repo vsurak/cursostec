@@ -34,7 +34,6 @@ class NodoGrafo {
         }
 
         void addArc(Arco* pArco) {
-            //cout << &listaArcos << endl;
             this->listaArcos->push_back(pArco);
         }
 
