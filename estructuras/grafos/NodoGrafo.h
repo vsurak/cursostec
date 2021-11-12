@@ -8,28 +8,38 @@ using namespace std;
 
 class NodoGrafo {
     private:
-        INodo dato;
-        vector<Arco> listaArcos;
+        INodo* dato;
+        vector<Arco*>* listaArcos;
 
     public:
-        NodoGrafo(INodo pDato) {
+        // esto es pecado y esta malo , ponerlo private y los getters y setters
+        bool visitado = false;
+        bool procesado = false;
+
+        NodoGrafo(INodo* pDato) {
             this->dato = pDato;
+            this->listaArcos = new vector<Arco*>();
         }
 
         NodoGrafo() {
-            
+            this->listaArcos = new vector<Arco*>();            
         }
 
-        void setInfo(INodo pDato) {
+        void setInfo(INodo* pDato) {
            this->dato = pDato; 
         }
 
-        INodo getInfo() {
+        INodo* getInfo() {
             return dato;
         }
 
-        void addArc(Arco pArco) {
-            this->listaArcos.push_back(pArco);
+        void addArc(Arco* pArco) {
+            //cout << &listaArcos << endl;
+            this->listaArcos->push_back(pArco);
+        }
+
+        vector<Arco*>* getArcs() {
+            return this->listaArcos;
         }
 };
 

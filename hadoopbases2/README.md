@@ -120,6 +120,10 @@ To start the kafkta server just run the script `/home/hadoopuser/start-kafka.sh`
 
 To test your Kafka environment follow the [kafka quickstart guide](https://kafka.apache.org/quickstart) 
 
+./kafka-topics.sh --create --topic bases2 --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
+./kafka-console-producer.sh --topic bases2 --bootstrap-server localhost:9092
+./kafka-console-consumer.sh --topic bases2 --from-beginning --bootstrap-server localhost:9092
+
 ### integration with spark
 ./kafka-topics.sh --create --topic newsales --partitions 1 --replication-factor 1 --bootstrap-server localhost:9092
 

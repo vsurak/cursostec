@@ -26,7 +26,7 @@ public class DataConsumer {
 		JavaStreamingContext ssc = new JavaStreamingContext(sc, new Duration(5000));
 		
 		Map<String, String> kafkaParams = new HashMap<>();
-		kafkaParams.put("metadata.broker.list", "10.0.0.2:9092");
+		kafkaParams.put("metadata.broker.list", "localhost:9092");
 		Set<String> topics = Collections.singleton("newsales");
 		
 		JavaPairInputDStream<String, String> directSparkStream = KafkaUtils.createDirectStream(ssc, String.class,

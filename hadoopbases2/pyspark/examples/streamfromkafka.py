@@ -16,10 +16,9 @@ df = spark \
 df.selectExpr("CAST(key AS STRING)", "CAST(value AS STRING)")
 
 
-
 query = df.writeStream \
   .outputMode("append") \
-  .format("console") \
+ .format("console") \
   .start()
 query.awaitTermination()
 

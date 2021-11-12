@@ -4,15 +4,15 @@
 class INodo {
     public:
         int getId() {
-            return Id;
-        };
+            return id;
+        }
 
         void setId(int pId) {
-            this->Id = pId;
-        };
-   
-   protected:
-      int Id;
+            this->id = pId;
+        }
+        
+    protected:
+        int id;
 };
 
 #endif
