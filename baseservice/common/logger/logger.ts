@@ -6,6 +6,9 @@ export class Logger {
 
     public debug(logText: string): void {
         console.log({"date" : new Date(), "level": "debug", "message":logText});
+        // cloudwath
+        // base de datos
+        // archivo bitacora
     }
 
     public error(logText: string): void {

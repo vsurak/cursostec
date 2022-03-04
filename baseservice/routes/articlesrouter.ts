@@ -12,7 +12,7 @@ app.get("/list", (req, res,next) => {
     })
     .catch((err)=>{
         log.error(err);
-        return "";
+        return "{msg: \"error\"}";
     });
 
 });

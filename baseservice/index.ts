@@ -10,6 +10,7 @@ const server = http.createServer(App);
 server.listen(port);
 
 
+
 server.on('listening', () => {
     const addr = server.address();
     const bind = (typeof addr === 'string') ? `pipe ${addr}` : `port ${addr.port}`;
@@ -17,3 +18,5 @@ server.on('listening', () => {
  });
 
 module.exports = App;
+
+// docker run -it --name nodeserver -v C:\dev\cursostec:/home node /bin/bash
