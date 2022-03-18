@@ -16,6 +16,7 @@ show databases;
 use fincas;
 show tables;
 
+// collection es analogo a un table
 db.<nombrecollection>.save({json del documento});
 db.siembras.save({"tipoplanta": "culantro", "ubicacion": ["era 1", "era 2"], "semillas": 20 });
 db.siembras.save({"tipoplanta": "culantro", "ubica": ["era 1", "era 2"], "semillas": "200", "fecha" : "10/08/2021" });

@@ -19,4 +19,4 @@ server.on('listening', () => {
 
 module.exports = App;
 
-// docker run -it --name nodeserver -v C:\dev\cursostec:/home node /bin/bash
+// docker run -it -p 5000:5000 --name nodeserver -v C:\dev\cursostec\baseservice:/home/baseservice node /bin/bash

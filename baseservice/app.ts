@@ -1,5 +1,5 @@
 import * as express from 'express';
-import * as bodyParser from 'body-parser';
+import * as bodyParser from 'body-parser'; //json
 import Routes from './routes/routes'
 
 class App {
