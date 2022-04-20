@@ -1,0 +1,171 @@
+// rodrigo nunez 
+
+// crear una red que haga NAT hacia mi maquina host
+docker network create --driver bridge --subnet 10.0.0.0/27 turismonet
+
+// listar las redes existentes
+docker network list  
+
+docker volume create vol_cfgvolcan
+docker volume create vol_cfgplaya
+docker volume create vol_arenal
+docker volume create vol_tamarindo
+docker volume create vol_leon
+docker volume create vol_elefante
+docker volume create vol_lasvegas
+docker volume create vol_disney
+
+
+// crear los dos containers (servidores) de configuracion
+// para ello mongodb se inicializa con una bandera que le avisa que la base de datos no va a ser de datos
+// va a ser una base de datos para configuracion de sharding y replicas
+
+docker run -d --net turismonet -v vol_cfgvolcan:/data/configdb --ip 10.0.0.3 --name cfgvolcan mongo mongod --port 27017 --configsvr --replSet "repconfig" --dbpath /data/configdb
+docker run -d --net turismonet -v vol_cfgplaya:/data/configdb --ip 10.0.0.4 --name cfgplaya mongo mongod --port 27017 --configsvr --replSet "repconfig" --dbpath /data/configdb
+
+// ingresamos a un servidor de configuracion, y solo a uno, dado que es una replica , solo debo configurar
+// uno de los servers y el se encarga de replicar hacia los demás
+
+docker exec -it cfgvolcan bash
+
+// esto es un comando de mongo, se corre dentro de mongo
+rs.initiate(
+  {
+    _id: "repconfig",
+    configsvr: true,
+    members: [
+      { _id : 0, host : "10.0.0.3:27017" },
+      { _id : 1, host : "10.0.0.4:27017" }
+    ]
+  }
+);
+
+// rs, replicaset, status, un reporte de cómo está la replica
+rs.status()
+
+// crear los 6 servidores que van a servir como shards y las replicas de esos shards: costarica, kenia, usa
+docker run -d --net turismonet --ip 10.0.0.5 -v vol_arenal:/data/db --name arenal mongo mongod --port 27017 --shardsvr --replSet "repcr" --dbpath /data/db
+docker run -d --net turismonet --ip 10.0.0.6 -v vol_tamarindo:/data/db --name tamarindo mongo mongod --port 27017 --shardsvr --replSet "repcr" --dbpath /data/db
+docker run -d --net turismonet --ip 10.0.0.7 -v vol_leon:/data/db --name leon mongo mongod --port 27017 --shardsvr --replSet "repkenia" --dbpath /data/db
+docker run -d --net turismonet --ip 10.0.0.8 -v vol_elefante:/data/db --name elefante mongo mongod --port 27017 --shardsvr --replSet "repkenia" --dbpath /data/db
+docker run -d --net turismonet --ip 10.0.0.9 -v vol_lasvegas:/data/db --name lasvegas mongo mongod --port 27017 --shardsvr --replSet "repusa" --dbpath /data/db
+docker run -d --net turismonet --ip 10.0.0.10 -v vol_disney:/data/db --name disney mongo mongod --port 27017 --shardsvr --replSet "repusa" --dbpath /data/db
+
+
+// ingresar a solamente uno de los servidores de la replica, no hace falta ingresar a los dos
+// me voy a meter a la consola de mongo para poder hacer el initiate
+
+rs.initiate(
+  {
+    _id : "repcr",
+    members: [
+      { _id : 0, host : "10.0.0.5:27017" },
+      { _id : 1, host : "10.0.0.6:27017" }
+    ]
+  }
+);
+
+docker run -d --net turismonet --ip 10.0.0.11 --name grande mongo mongod --port 27017 --shardsvr --replSet "repcr"
+rs.add( { host: "10.0.0.11:27017" } );
+
+
+docker run -d --net turismonet --ip 10.0.0.12 --name ramonluis mongo mongod --port 27017 --replSet "repcr"
+rs.addArb("10.0.0.12:27017");
+
+
+// me conecto a cualquier server de la replica de kenia para inicializarla
+rs.initiate(
+  {
+    _id : "repkenia",
+    members: [
+      { _id : 0, host : "10.0.0.7:27017" },
+      { _id : 1, host : "10.0.0.8:27017" }
+    ]
+  }
+);
+
+docker run -d --net turismonet --ip 10.0.0.13 --name poveda mongo mongod --port 27017 --replSet "repkenia"
+rs.addArb("10.0.0.13:27017");
+
+
+// me conecto a cualquier server de la replica de usa para inicializarla
+rs.initiate(
+  {
+    _id : "repusa",
+    members: [
+      { _id : 0, host : "10.0.0.9:27017" },
+      { _id : 1, host : "10.0.0.10:27017" }
+    ]
+  }
+);
+
+docker run -d --net turismonet --ip 10.0.0.14 --name juanito mongo mongod --port 27017 --replSet "repusa"
+rs.addArb("10.0.0.14:27017");
+
+// crear un router y ponerlo a funcionar
+docker run -d --net turismonet --ip 10.0.0.2 --name touristrouter1 mongo mongos --port 27017 --configdb repconfig/10.0.0.3:27017,10.0.0.4:27017
+
+docker exec -it touristrouter1 mongo
+
+hacemos shards con un server en cada replica, no hace faltan los otros porque ya estan en replica entre si
+sh.addShard( "repcr/10.0.0.5:27017");  
+sh.addShard( "repkenia/10.0.0.7:27017");
+sh.addShard( "repusa/10.0.0.9:27017");
+
+sh.addShardTag("repcr", "costa rica");
+sh.addShardTag("repkenia", "kenia");
+sh.addShardTag("repusa", "usa");
+
+// nombredelabasededatos.nombredelcollectionquevaestarsharded
+// le especifico el nombre del campo dentro de ese collection que va a servir de rango
+// para saber aque etiqueta enviar la data
+sh.addTagRange( "turismo.atracciones",
+                { pais: "costa rica"},   
+                { pais: "costa rica0"},    
+                "costa rica"
+              );
+
+
+sh.addTagRange( "turismo.atracciones",
+                { pais: "kenia"},   
+                { pais: "kenia0"},    
+                "kenia"
+              );
+
+
+sh.addTagRange( "turismo.atracciones",
+                { pais: "usa"},   
+                { pais: "usa0"},    
+                "usa"
+              );
+
+
+sh.enableSharding("turismo");
+sh.shardCollection("turismo.atracciones", { pais : 1 } )
+
+
+// start and stop
+
+docker start cfgplaya
+docker start cfgvolcan
+docker start grande
+docker start disney
+docker start lasvegas
+docker start elefante
+docker start leon
+docker start tamarindo
+docker start arenal
+
+
+
+
+docker stop grande
+docker stop disney
+docker stop lasvegas
+docker stop elefante
+docker stop leon
+docker stop tamarindo
+docker stop arenal
+docker stop cfgplaya
+docker stop cfgvolcan
+

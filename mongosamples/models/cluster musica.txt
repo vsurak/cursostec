@@ -1,0 +1,95 @@
+// crear la red
+docker network create --driver bridge --subnet 12.1.0.0/28 musicnet
+
+docker volume create vol_cfg_song1
+docker volume create vol_cfg_song2
+
+docker run -d --net musicnet -v vol_cfg_song1:/data/configdb --ip 12.1.0.4 --name cfgsong1 mongo mongod --port 27017 --configsvr --replSet "songsconfigrep" --dbpath /data/configdb
+docker run -d --net musicnet -v vol_cfg_song2:/data/configdb --ip 12.1.0.5 --name cfgsong2 mongo mongod --port 27017 --configsvr --replSet "songsconfigrep" --dbpath /data/configdb
+
+// ingresamos a un servidor de configuracion, y solo a uno
+docker exec -it cfgsong2 bash
+
+// esto es un comando de mongo, se corre dentro de mongo
+rs.initiate(
+  {
+    _id: "songsconfigrep",
+    configsvr: true,
+    members: [
+      { _id : 0, host : "12.1.0.4:27017" },
+      { _id : 1, host : "12.1.0.5:27017" }
+    ]
+  }
+);
+
+rs.status()
+
+docker volume create vol_prince
+docker volume create vol_muse
+docker volume create vol_juanluis
+docker volume create vol_marc
+
+docker run -d --net musicnet --ip 12.1.0.6 -v vol_prince:/data/db --name prince mongo mongod --port 27017 --shardsvr --replSet "reprock" --dbpath /data/db
+docker run -d --net musicnet --ip 12.1.0.7 -v vol_muse:/data/db --name muse mongo mongod --port 27017 --shardsvr --replSet "reprock" --dbpath /data/db
+docker run -d --net musicnet --ip 12.1.0.8 -v vol_juanluis:/data/db --name juanluis mongo mongod --port 27017 --shardsvr --replSet "repsalsa" --dbpath /data/db
+docker run -d --net musicnet --ip 12.1.0.9 -v vol_volmarc:/data/db --name marc mongo mongod --port 27017 --shardsvr --replSet "repsalsa" --dbpath /data/db
+
+
+rs.initiate(
+  {
+    _id : "reprock",
+    members: [
+      { _id : 0, host : "12.1.0.6:27017" },
+      { _id : 1, host : "12.1.0.7:27017" }
+    ]
+  }
+);
+
+rs.initiate(
+  {
+    _id : "repsalsa",
+    members: [
+      { _id : 0, host : "12.1.0.8:27017" },
+      { _id : 1, host : "12.1.0.9:27017" }
+    ]
+  }
+);
+
+// se agrega un arbitro por replica
+docker run -d --net musicnet --ip 12.1.0.10 --name rockarb mongo mongod --port 27017 --replSet reprock
+docker run -d --net musicnet --ip 12.1.0.11 --name salsaarb mongo mongod --port 27017 --replSet repsalsa
+
+// se hace en el servidor primario de la replica , rs es comando de mongo
+rs.addArb("12.1.0.10:27017");
+
+// se hace en el servidor primario de la replica , rs es comando de mongo
+rs.addArb("12.1.0.11:27017");
+
+// router
+docker run -d --net musicnet --ip 12.1.0.3 --name routersongs mongo mongos --port 27017 --configdb songsconfigrep/12.1.0.4:27017,12.1.0.5:27017
+
+docker exec -it routersongs mongo
+
+sh.addShard( "reprock/12.1.0.6:27017");  hacemos shards con un server en cada replica, no hace faltan los otros porque ya estan en replica entre si
+sh.addShard( "repsalsa/12.1.0.8:27017");
+
+sh.addShardTag("reprock", "rock");
+sh.addShardTag("repsalsa", "salsa");
+
+sh.addTagRange( "spotify.canciones",
+                { genero: "rock"},
+                { genero: "rock99999"},
+                "rock"
+              );
+
+
+sh.addTagRange( "spotify.canciones",
+                { genero: "salsa"},
+                { genero: "salsa9999"},
+                "salsa"
+              );
+
+sh.enableSharding("spotify");
+sh.shardCollection("spotify.canciones", { genero : 1 } )
+
+

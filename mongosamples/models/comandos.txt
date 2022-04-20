@@ -4,7 +4,7 @@ docker <operadores de docker> <nombre de la imagen> <parametros que se ejecutan 
 docker run --name some-mongo -d mongo:tag 
 
 docker pull mongo
-docker run --name miservidorbases2 -d mongo
+docker run --name bases2 -d mongo
 
 // opciones , lo que se quiere es correr un programa/comando que sabemos que existe
 // dentro del sistema operativo en el container que se creo por medio de una imagen
@@ -23,6 +23,7 @@ db.siembras.save({"tipoplanta": "culantro", "ubica": ["era 1", "era 2"], "semill
 
 
 db.siembras.createIndex({"tipoplanta": 1});
+db.siembras.createIndex({"semillas": 1});
 
 select * from siembres en mongo seria
 db.siembras.find();
@@ -74,12 +75,22 @@ db.siembras.insertMany(
 );
 
 db.siembras.find(
-    {gananciaesperada: {$lt : 100000}},
-).limit(2).pretty();
+    {semillas: {$lt : 40}},
+).limit(10).pretty();
+
+db.siembras.find(
+    {semillas: {$lt : 120}},
+).limit(10).pretty();
+
+db.siembras.find(
+    {semillas: {$gt : 60}},
+).limit(10).pretty();
+
+
 
 db.siembras.aggregate([
     { $match: { _id : {$exists:true}}},
-    { $group: { _id: "$estado", gananciaporestado: { $sum: "$gananciaesperada" } } }
+    { $group: { _id: "$tipoplanta", totalsemillas: { $sum: "$semillas" } } }
 ]);
 
 // para busquedas por rangos y busquedas de igualidad
