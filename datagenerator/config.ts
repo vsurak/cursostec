@@ -1,15 +1,15 @@
 export const configurations = 
 [
     {
-        quantity : 1700000,
+        quantity : 3000,
         minstickyness: 10,
-        maxstickyness: 75,
-        filename : "extraction_d.dat",
+        maxstickyness: 20,
+        filename : "sample.dat",
         fields : [
             {
                 fieldname: "id",
                 type: "consecutive",
-                starting: 11000000,
+                starting: 1,
                 increment: 1,
             },
             {
