@@ -79,8 +79,8 @@ RUN mkdir /opt/hadoop/hadoop-3.2.3/logs
 RUN chmod ugo+rwx /opt/hadoop/hadoop-3.2.3/logs
 RUN chmod ugo+rwx /opt/apache-hive-3.1.2-bin
 
-#WORKDIR /opt/hadoop/hadoop-3.2.3/bin
-#RUN ./hdfs namenode -format -force -nonInteractive
+WORKDIR /opt/hadoop/hadoop-3.2.3/bin
+RUN ./hdfs namenode -format -force -nonInteractive
 
 RUN chown -R hadoopuser /home/hadoopuser/tmpdata
 RUN chown -R hadoopuser /home/hadoopuser/dfsdata
@@ -90,4 +90,4 @@ RUN chown -R hadoopuser /home/hadoopuser/dfsdata
 WORKDIR /home/hadoopuser
 RUN cd /home/hadoopuser
 
-#CMD ["bash", "-C", "/home/hadoopuser/start.sh"]
+CMD ["bash", "-C", "/home/hadoopuser/start.sh"]

@@ -55,7 +55,7 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 
 # Location of Hadoop.  By default, Hadoop will attempt to determine
 # this location based upon its execution path.
-export HADOOP_HOME=/opt/hadoop/hadoop-3.3.0
+export HADOOP_HOME=/opt/hadoop/hadoop-3.2.3
 
 # Location of Hadoop's configuration information.  i.e., where this
 # file is living. If this is not defined, Hadoop will attempt to
