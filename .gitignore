@@ -5,3 +5,5 @@ bin
 *.o
 *.dll
 /.metadata/
+!/hadoopbases2/kafka
+*.dat

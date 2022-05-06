@@ -1,0 +1,17 @@
+{
+  "name": "datagenerator",
+  "version": "1.0.0",
+  "description": "Generador de json para datos variables de prueba",
+  "main": "generator.js",
+  "scripts": {
+    "start": "tsc generator.ts && node generator.js"
+  },
+  "author": "rnunez",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.31"
+  },
+  "dependencies": {
+    "string-builder": "^0.1.8"
+  }
+}
