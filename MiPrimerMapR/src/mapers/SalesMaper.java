@@ -9,7 +9,9 @@ import org.apache.hadoop.mapred.Mapper;
 import org.apache.hadoop.mapred.OutputCollector;    
 import org.apache.hadoop.mapred.Reporter;  
 
-public class SalesMaper extends MapReduceBase implements Mapper<LongWritable,Text,IntWritable,FloatWritable> {
+// sacar el total de ventas por año
+
+public class SalesMaper extends MapReduceBase implements Mapper<LongWritable,Text,IntWritable,FloatWritable> { 
     
     public void map(LongWritable key, Text value, OutputCollector<IntWritable,FloatWritable> output, Reporter reporter) throws IOException{    
         String line = value.toString();

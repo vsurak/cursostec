@@ -68,4 +68,4 @@ export HIVE_AUX_JARS_PATH=$HIVE_AUX_JARS_PATH
 
 # Default to use 256MB 
 export HADOOP_HEAPSIZE=${HADOOP_HEAPSIZE:-256}
-export HADOOP_HOME=/opt/hadoop/hadoop-3.3.0
+export HADOOP_HOME=/opt/hadoop/hadoop-3.2.3

@@ -1,0 +1,64 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install
+
+PATH: 
+  C:\Program Files\Microsoft MPI\Bin\;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Docker\Docker\Resources\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\ProgramData\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Yarn\bin\;C:\Program Files\nodejs\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\ManagementStudio\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Users\rodri\AppData\Local\Microsoft\WindowsApps;;C:\Users\rodri\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\rodri\AppData\Local\Yarn\bin;C:\Users\rodri\AppData\Roaming\npm
+
+Yarn version: 
+  1.12.3
+
+Node version: 
+  10.14.2
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: EPERM: operation not permitted, lstat 'C:\Users\rodri\OneDrive\Personales\Dev\docker\alg\node_modules\ansi-regex'
+
+npm manifest: 
+  {
+    "name": "algoritmos",
+    "version": "1.0.0",
+    "description": "Examples library",
+    "main": "dist/wav-test.js",
+    "types": "",
+    "scripts": {
+      "build": "tsc",
+      "start": "node dist/wav-test.js",
+      "lint": "tslint -c tslint.json -p tsconfig.json -t stylish"
+    },
+    "repository": {
+      "type": "git",
+      "url": ""
+    },
+    "keywords": [
+      "algoritmos",
+      "ejecucion",
+      "rendimiento"
+    ],
+    "devDependencies": {
+      "@types/node": "11.13.0",
+      "ts-node": "7.0.1",
+      "tslint": "5.14.0",
+      "tslint-config-prettier": "1.18.0",
+      "tslint-config-standard": "8.0.1",
+      "tslint-react": "3.6.0",
+      "typescript": "3.2.2"
+    },
+    "dependencies": {
+      "fourier-transform": "1.1.2",
+      "jsmidgen": "0.1.5",
+      "midi-writer-js": "1.7.1",
+      "wav-decoder": "1.3.0",
+      "wav-encoder": "1.3.0"
+    },
+    "author": "rnunez",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

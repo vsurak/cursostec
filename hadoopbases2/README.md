@@ -9,12 +9,12 @@ path to share files and jars from the host computer
 
 docker network create --driver bridge --subnet 10.0.0.0/28 littlenet
 
-docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -p 90100:9092 -v C:\dev\tec\hadoopbases2\mapr:/home/hadoopuser/mapr --name hadoopserver --net littlenet --ip 10.0.0.2 hadoop
+docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v C:\dev\cursostec\hadoopbases2\mapr:/home/hadoopuser/mapr --name hadoopserver --net littlenet --ip 10.0.0.2 hadoop
 ```
 
 This is an example of how to manually copy files from the host to the container 
 ```
-docker cp maprexample.jar hadoopserver:/home/hadoopuser
+docker cp ejemplobases2.jar hadoopserver:/home/hadoopuser
 docker cp datadates.csv  hadoopserver:/home/hadoopuser
 ```
 
@@ -30,7 +30,7 @@ exit
 ```
 
 ### hadoop related
-These are the commands to start/stop the hadoop single node cluster in /opt/hadoop/hadoop-3.3.0/sbin
+These are the commands to start/stop the hadoop single node cluster in /opt/hadoop/hadoop-3.2.3/sbin
 ```
 start-all.sh
 stop-all.sh
@@ -38,18 +38,11 @@ stop-all.sh
 
 These are example of instructions to prepare hdfs folders and run a map reduce example
 ```
-hadoop fs -mkdir /data
-hadoop fs -mkdir /data/input
-hadoop fs -copyFromLocal datasales.dat /data/input
-hadoop fs -copyFromLocal presupuesto.csv /data/input
+hadoop fs -mkdir /datainput
+hadoop fs -copyFromLocal datasales.db /datainput
 
+hadoop jar ejemplobases2.jar mapr.maprunner
 
-hadoop fs -copyFromLocal datasales.dat /datainput
-
-
-hadoop jar maprexample.jar main.program /data/input/datadates.csv /data/output
-
-hadoop jar salestest.jar mapr.maprunner 
 ```
 
 ### hive related

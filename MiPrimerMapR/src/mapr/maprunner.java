@@ -18,14 +18,14 @@ public class maprunner {
 	public static void main(String[] args) throws IOException{    
 	    JobConf conf = new JobConf(mapr.maprunner.class);    
 	    conf.setJobName("Ejemplo de sales");    
-	    conf.setOutputKeyClass(IntWritable.class);    
-	    conf.setOutputValueClass(FloatWritable.class);            
+	    conf.setOutputKeyClass(IntWritable.class);  //year    
+	    conf.setOutputValueClass(FloatWritable.class);  //suma de montos            
 	    conf.setMapperClass(SalesMaper.class); 
 	    conf.setReducerClass(SalesReducer.class);         
-	    conf.setInputFormat(TextInputFormat.class);    
-	    conf.setOutputFormat(TextOutputFormat.class);   
+	    conf.setInputFormat(TextInputFormat.class);  // el formato de la fuente  
+	    conf.setOutputFormat(TextOutputFormat.class);   // el formato con que lo paso al mapper
 	    conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
-	    FileInputFormat.setInputPaths(conf,new Path("/datainput/datasales.dat"));    
+	    FileInputFormat.setInputPaths(conf,new Path("/datainput/datasales.db"));    
 	    FileOutputFormat.setOutputPath(conf,new Path("/dataoutput"));
 	    JobClient.runJob(conf); // indicamos a yarn que ponga en cola este job
 	}    
