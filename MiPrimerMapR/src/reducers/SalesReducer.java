@@ -16,6 +16,6 @@ public class SalesReducer extends MapReduceBase implements Reducer<IntWritable,F
 			salesSum+=values.next().get(); 
 		}    
 		
-		output.collect(year, new FloatWritable(salesSum));    
+		output.collect(year, new FloatWritable(salesSum));  
 	}    
 }

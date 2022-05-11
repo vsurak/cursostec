@@ -7,9 +7,9 @@ path to share files and jars from the host computer
 ```
     docker build . -t hadoop
 
-docker network create --driver bridge --subnet 10.0.0.0/28 littlenet
+docker network create --driver bridge --subnet 10.0 image.0.0/28 littlenet
 
-docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v C:\dev\cursostec\hadoopbases2\mapr:/home/hadoopuser/mapr --name hadoopserver --net littlenet --ip 10.0.0.2 hadoop
+docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v C:\dev\cursostec\hadoopbases2\mapr:/home/hadoopuser/mapr --name hadoopserver --net littlenet --ip 10.0.0.2 hadoopserver
 ```
 
 This is an example of how to manually copy files from the host to the container 
@@ -38,6 +38,8 @@ stop-all.sh
 
 These are example of instructions to prepare hdfs folders and run a map reduce example
 ```
+
+hadoop fs -ls /
 hadoop fs -mkdir /datainput
 hadoop fs -copyFromLocal datasales.db /datainput
 
