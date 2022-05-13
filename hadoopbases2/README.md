@@ -42,8 +42,10 @@ These are example of instructions to prepare hdfs folders and run a map reduce e
 hadoop fs -ls /
 hadoop fs -mkdir /datainput
 hadoop fs -copyFromLocal datasales.db /datainput
+hadoop fs -copyFromLocal sample.db /data
 
 hadoop jar ejemplobases2.jar mapr.maprunner
+hadoop jar metaverse.jar mapr.maprunner
 
 ```
 
@@ -58,18 +60,18 @@ The following is an example of instructions in hive console to test your hive en
 create schema <name>; // to create an schema
 create database bases2;
 
-create table tmp_sales(fecha string, monto decimal(10,2)) row format delimited fields terminated by ',';
+create table tmp_metaspent(metaverse string, year int, hours int, coins int) row format delimited fields terminated by ',';
 
-load data inpath '/data/input/datasales.dat' into table tmp_sales;
+load data inpath '/metaverse/part-00000' into table tmp_metaspent;
 
-CREATE TABLE IF NOT EXISTS sales ( fecha timestamp, monto decimal(10,2))
-COMMENT 'Ventas por mes por anyo'
+CREATE TABLE IF NOT EXISTS metaspent (metaverse string, year int, hours int, coins int)
+COMMENT 'Las horas y los coins invertidos por metaverso por año'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 STORED AS TEXTFILE;
 
-insert into table sales select from_unixtime(unix_timestamp(fecha, 'MM/dd/yyyy')), monto from tmp_sales;
+insert into table metaspent select trim(metaverse), year, hours, coins from tmp_metaspent;
 ```
 
 Once data is loaded, run some queries to test the performance 

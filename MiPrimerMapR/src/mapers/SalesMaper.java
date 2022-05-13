@@ -1,27 +1,38 @@
 package mapers;
-import java.io.IOException;    
-import org.apache.hadoop.io.IntWritable;    
-import org.apache.hadoop.io.FloatWritable;
+import java.io.IOException;
+
+import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.LongWritable;   
+import org.apache.hadoop.io.MapWritable;   
 import org.apache.hadoop.io.Text;    
 import org.apache.hadoop.mapred.MapReduceBase;    
 import org.apache.hadoop.mapred.Mapper;    
 import org.apache.hadoop.mapred.OutputCollector;    
 import org.apache.hadoop.mapred.Reporter;  
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
-// sacar el total de ventas por año
-
-public class SalesMaper extends MapReduceBase implements Mapper<LongWritable,Text,IntWritable,FloatWritable> { 
+public class SalesMaper extends MapReduceBase implements Mapper<LongWritable,Text,Text,MapWritable> { 
     
-    public void map(LongWritable key, Text value, OutputCollector<IntWritable,FloatWritable> output, Reporter reporter) throws IOException{    
-        String line = value.toString();
-       
+    public void map(LongWritable key, Text value, OutputCollector<Text,MapWritable> output, Reporter reporter) throws IOException{    
+        JSONParser parser = new JSONParser();
+        JSONObject json =  null;
+        MapWritable timecoinsmap = new MapWritable();
         
-        String values[] = line.split(",");  // [12/09/2016, 5493105.35]
-        String year = values[0].split("/")[2];  // [12, 09, 2016]
-        IntWritable intYear = new IntWritable(Integer.valueOf(year));
-        FloatWritable amount = new FloatWritable( Float.valueOf(values[1]));
-       
-        output.collect(intYear, amount); 
+        try {
+            json = (JSONObject)parser.parse(value.toString());        	
+        } catch (ParseException exp) {
+        	exp.printStackTrace();
+        }
+        
+        String year = ((String)json.get("posttime")).split("-")[0];        
+        Text metayear = new Text((String)json.get("metaverso")+","+year);
+        
+        timecoinsmap.put(new Text("coins"), new IntWritable(Integer.parseInt(json.get("coinsspent").toString())));
+        timecoinsmap.put(new Text("minutes"), new IntWritable(Integer.parseInt(json.get("timespent").toString())));
+        
+        
+        output.collect(metayear, timecoinsmap); 
     }
 }

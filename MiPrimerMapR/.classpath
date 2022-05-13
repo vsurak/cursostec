@@ -14,5 +14,6 @@
 	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-mapreduce-client-core-3.3.1.jar"/>
 	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-mapreduce-client-jobclient-3.3.1.jar"/>
 	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-mapreduce-client-shuffle-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/json-simple-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
