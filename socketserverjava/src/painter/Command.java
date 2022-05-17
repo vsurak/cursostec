@@ -2,10 +2,10 @@ package painter;
 
 public class Command implements IConstants {
 	private String command;
-	private int R; //read
-	private int G; //green
-	private int B; // blue
-	private int T;  // transparency
+	private int Red; //read
+	private int Green; //green
+	private int Blue; // blue
+	private int Transparency;  // transparency
 	private int x0; // coordinates in pixels
 	private int y0;
 	private int x1;
@@ -14,7 +14,7 @@ public class Command implements IConstants {
 	
 	public Command(String pCommand) {
 		// default values
-		R = 0; G = 0; B = 0; T = 0;
+		Red = 0; Green = 0; Blue = 0; Transparency = 255;
 		x0=0; y0=0; x1=0; y1=0;
 		radius = 0;	
 
@@ -27,20 +27,20 @@ public class Command implements IConstants {
 		
 		switch (command) {
 			case "line" :
-				R = Integer.parseInt(commandparts[RED]);
-				G = Integer.parseInt(commandparts[GREEN]);
-				B = Integer.parseInt(commandparts[BLUE]);
-				T = Integer.parseInt(commandparts[TRANSPARENCY]);
+				Red = Integer.parseInt(commandparts[RED]);
+				Green = Integer.parseInt(commandparts[GREEN]);
+				Blue = Integer.parseInt(commandparts[BLUE]);
+				Transparency = Integer.parseInt(commandparts[TRANSPARENCY]);
 				x0 = Integer.parseInt(commandparts[X0]);
 				y0 = Integer.parseInt(commandparts[Y0]);
 				x1 = Integer.parseInt(commandparts[X1]);
 				y1 = Integer.parseInt(commandparts[Y1]);
 				break;
 			case "dot" : {
-				R = Integer.parseInt(commandparts[RED]);
-				G = Integer.parseInt(commandparts[GREEN]);
-				B = Integer.parseInt(commandparts[BLUE]);
-				T = Integer.parseInt(commandparts[TRANSPARENCY]);
+				Red = Integer.parseInt(commandparts[RED]);
+				Green = Integer.parseInt(commandparts[GREEN]);
+				Blue = Integer.parseInt(commandparts[BLUE]);
+				Transparency = Integer.parseInt(commandparts[TRANSPARENCY]);
 				x0 = Integer.parseInt(commandparts[X0]);
 				y0 = Integer.parseInt(commandparts[Y0]);
 				radius = Integer.parseInt(commandparts[RADIO]);
@@ -57,36 +57,36 @@ public class Command implements IConstants {
 		this.command = command;
 	}
 
-	public int getR() {
-		return R;
+	public int getRed() {
+		return Red;
 	}
 
-	public void setR(int r) {
-		R = r;
+	public void setRed(int r) {
+		Red = r;
 	}
 
-	public int getG() {
-		return G;
+	public int getGreen() {
+		return Green;
 	}
 
-	public void setG(int g) {
-		G = g;
+	public void setGreen(int g) {
+		Green = g;
 	}
 
-	public int getB() {
-		return B;
+	public int getBlue() {
+		return Blue;
 	}
 
-	public void setB(int b) {
-		B = b;
+	public void setBlue(int b) {
+		Blue = b;
 	}
 
-	public int getT() {
-		return T;
+	public int getTransparency() {
+		return Transparency;
 	}
 
-	public void setT(int t) {
-		T = t;
+	public void setTransparency(int t) {
+		Transparency = t;
 	}
 
 	public int getX0() {

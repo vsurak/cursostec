@@ -22,8 +22,8 @@ class GeneticBase {
 
             for(int i=0;i<population->size(); i++) {
                population->at(i)->setFitnessValue(fitness(population->at(i)));
-
-                if (population->at(i)->getFitnessValue()>50) {  // fitness criteria of selection never will be an absolute value always is relative to the population
+                // ajustarlo al fitness y fitness criteria del problema
+                if (population->at(i)->getFitnessValue()>50) {  // fitness criteria of selection NEVER will be an absolute value, always is relative to the population
                     fitnessPopulation->push_back(population->at(i));
                 } else {
                     unfitnessPopulation->push_back(population->at(i));
@@ -32,11 +32,14 @@ class GeneticBase {
         }
 
         float fitness(individual *pIndividual) {
+            // aqui es donde más hay que hacer mente, cuál va a ser mi función de fitness
+            // la función de fitness tiene la responsabilidad de guiar la población
+            // pues es la que selecciona los mejores dado que esos están cada vez más cerca de la respuesta
             return rand()%100;
         }
 
         void reproduce(int pAmountOfChildrens) {
-            // previous population will be cleared, full saved, partial saved depending on the problem
+            // previous population will be cleared, full saved, partial saved --> depending on the problem
             population->clear();
 
             for(int i=0; i<pAmountOfChildrens; i++) {
@@ -52,7 +55,7 @@ class GeneticBase {
         }
 
         individual* cross(individual *pParent_a, individual *pParent_b) {
-            // this operation will depends on: nibble size, fixed o variable point
+            // this operation will depends on: nibble size, si el punto de corte es fixed o variable point
 
             int cut_position = (rand() % (NIBBLE_SIZE-MIN_GENOTYPE_SIZE_BY_PARENT*2)) + MIN_GENOTYPE_SIZE_BY_PARENT;
 
@@ -64,7 +67,9 @@ class GeneticBase {
 
             unsigned char kid = (pParent_a->getCromosoma() & mask_a) | (pParent_b->getCromosoma() & mask_b);
 
-            individual *children = new individual((pParent_a->getCromosoma() & mask_a) | (pParent_b->getCromosoma() & mask_b));
+            individual *children = new individual(kid);
+
+            // hace falta la mutación, hay que agregar el % de mutación y la mutación en si misma
             return children;
         }
 
@@ -86,6 +91,7 @@ class GeneticBase {
             population->clear();
 
             for(int i=0; i<pAmountOfIndividuals; i++) {
+                // aqui está asumiendo nibble de 8 bits, unsigned char
                 individual* p = new individual((unsigned char) rand()%CROMO_MAX_VALUE);
                 population->push_back(p);
             }

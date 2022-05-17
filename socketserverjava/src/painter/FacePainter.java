@@ -9,27 +9,30 @@ import socket.*;
 
 public class FacePainter extends JFrame {
 	private Image offScreen;
-
+	
 	public FacePainter(String pTitle) {
 		super(pTitle);
-		clear();
 	}
 	
 	public void clear() {
-		Dimension size = this.getSize();
-		offScreen = createImage(size.width, size.height);	
+		offScreen = this.createImage(this.getWidth(), this.getHeight());
+		repaint();
 	}
 	
 	public void paintLine(Command pCommand) {
-		Color figureColor = new Color(pCommand.getR(), pCommand.getG(), pCommand.getB(), pCommand.getT());
-		offScreen.getGraphics().setColor(figureColor);
-		offScreen.getGraphics().drawLine(pCommand.getX0(),  pCommand.getY0(),  pCommand.getX1(), pCommand.getY1());
+		Color figureColor = new Color(pCommand.getRed(), pCommand.getGreen(), pCommand.getBlue(), pCommand.getTransparency());
+		Graphics g = offScreen.getGraphics(); 
+		g.setColor(figureColor);
+		g.drawLine(pCommand.getX0(),  pCommand.getY0(),  pCommand.getX1(), pCommand.getY1());
+		repaint();
 	}
 	
 	public void paintDot(Command pCommand) {
-		Color figureColor = new Color(pCommand.getR(), pCommand.getG(), pCommand.getB(), pCommand.getT());
-		offScreen.getGraphics().setColor(figureColor);
-		offScreen.getGraphics().fillOval(pCommand.getX0() - pCommand.getRadius(), pCommand.getY0() - pCommand.getRadius(), pCommand.getRadius()*2, pCommand.getRadius()*2);		
+		Color figureColor = new Color(pCommand.getRed(), pCommand.getGreen(), pCommand.getBlue(), pCommand.getTransparency());
+		Graphics g = offScreen.getGraphics(); 
+		g.setColor(figureColor);		
+		g.fillOval(pCommand.getX0() - pCommand.getRadius(), pCommand.getY0() - pCommand.getRadius(), pCommand.getRadius()*2, pCommand.getRadius()*2);
+		repaint();
 	}
 	
     @Override
@@ -47,10 +50,12 @@ public class FacePainter extends JFrame {
 			FacePainter window = new FacePainter("Simple GUI");
 			window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			window.setResizable(false);
-			window.setBounds(0, 0, 800, 600);
+			window.setBounds(0, 0, 1080, 1080);
 			window.setLocationRelativeTo(null);
 			window.setBackground(Color.white);
 			window.setVisible(true);
+			
+			window.clear();
 			
 			Controller mainController = new Controller(window);
 			ServerPainter server = new ServerPainter(4000, mainController);

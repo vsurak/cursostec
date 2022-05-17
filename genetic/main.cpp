@@ -9,14 +9,17 @@ using namespace std;
 #define DISTRIBUTION_SIZE 3
 
 int main() {
+
+    // #0 prueba de que funciona 
+    
     // class creation
     GeneticBase genetic;
 
     // 1. Chromosomatic representation
     cromodistribution distribution[DISTRIBUTION_SIZE] = {
-        {"A", 0, 99, 0.00, 0.39, 400, 1000},
-        {"B", 100, 199, 0.39, 0.78, 400, 1000},
-        {"C", 200, 255, 0.78, 1.00, 200, 1000}
+        {"Ojos Azules", 0, 99, 0.00, 0.39, 400, 1000},
+        {"Ojos Negros", 100, 199, 0.39, 0.78, 400, 1000},
+        {"Ojos Verdes", 200, 255, 0.78, 1.00, 200, 1000}
     };
 
 
@@ -35,7 +38,8 @@ int main() {
     }
 
     // 3. measure the fitness of the population and reproduce it until reach the target generations
-    genetic.produceGenerations(1, 40);
+    // la cantidad de generaciones y cuantos hijos quiero hacer por generacion
+    genetic.produceGenerations(3, 20);
 
     // check final population
     cout << "final population" << endl;
@@ -43,5 +47,5 @@ int main() {
     for(int i=0; i<result.size(); i++) {
         cout << result.at(i)->getCromosoma() << endl;
     }
-
+    
 }

@@ -1,8 +1,6 @@
 #ifndef _INDIVIDUAL_
 #define _INDIVIDUAL_ 1
 
-#define CROMO_MAX_VALUE 256
-#define NIBBLE_SIZE 8
 #define MIN_GENOTYPE_SIZE_BY_PARENT 2
 
 class individual {
