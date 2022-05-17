@@ -70,6 +70,8 @@ COPY /hive/conf/hive-site.xml /opt/apache-hive-3.1.2-bin/conf
 WORKDIR /home/hadoopuser
 COPY /start.sh /home/hadoopuser
 RUN chmod +x start.sh
+COPY /init.sh /home/hadoopuser
+RUN chmod +x init.sh
 COPY /hive-setup.sh /home/hadoopuser
 RUN chmod +x hive-setup.sh
 
@@ -90,4 +92,4 @@ RUN chown -R hadoopuser /home/hadoopuser/dfsdata
 WORKDIR /home/hadoopuser
 RUN cd /home/hadoopuser
 
-CMD ["bash", "-C", "/home/hadoopuser/start.sh"]
+CMD ["bash", "-C", "/home/hadoopuser/init.sh"]
