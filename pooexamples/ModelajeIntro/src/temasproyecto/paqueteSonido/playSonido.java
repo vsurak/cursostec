@@ -1,21 +1,21 @@
 package temasproyecto.paqueteSonido;
 
-//Librerías
+//Librerï¿½as
 
 import java.io.*;
 
-import sun.audio.*;
+
 public class playSonido {
 
     
     public static void main(String[] args) 
     throws Exception        
     {
-        //Dirección del archivo .wav.
+        //Direcciï¿½n del archivo .wav.
     	
         String sonido = "C:/Users/dnnxl/workspace/Sonido/now.wav";
         
-        //Crea un objecto de tipo InputStream para leer el archivo en esa dirección.
+        //Crea un objecto de tipo InputStream para leer el archivo en esa direcciï¿½n.
         
         InputStream in = new FileInputStream(sonido);
         
@@ -23,7 +23,7 @@ public class playSonido {
         
        // AudioStream audio = new AudioStream(in);
         
-        //Llama el método para reproducir sonido.
+        //Llama el mï¿½todo para reproducir sonido.
         //AudioPlayer.player.start(audio);
     }
 }

@@ -12,7 +12,7 @@ public class Remolque implements ISellable, IConstants
 		return 0;
 	}
 	@Override
-	public int getAño() {
+	public int getYear() {
 		// TODO Auto-generated method stub
 		return 0;
 	}

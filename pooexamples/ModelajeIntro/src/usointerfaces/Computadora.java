@@ -1,10 +1,10 @@
 package usointerfaces;
 
-public class Carro implements ISellable, IConstants
+public class Computadora implements ISellable, IConstants
 {
-	private int cantidadPuertas;
-	private int Modelo;
-	private double PrecioDelCarro;
+	private String Nombre;
+	private int Pulgadas;
+	private double PrecioFinal;
 	
 	@Override
 	public double getPrice() {
@@ -12,7 +12,7 @@ public class Carro implements ISellable, IConstants
 		return 0;
 	}
 	@Override
-	public int getAño() {
+	public int getYear() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -26,14 +26,10 @@ public class Carro implements ISellable, IConstants
 		// TODO Auto-generated method stub
 		return false;
 	}
-	
 	@Override
 	public double vender(double pPrecioCompra) {
-		double precioFinal;
 		
-		precioFinal = PrecioDelCarro * IMPUESTO_VENTAS * IMPUESTO_LUJO; // I.V.A. + I.BIENES DE LUJO
-		
-		return precioFinal;		
-		
+		PrecioFinal = pPrecioCompra;
+		return PrecioFinal;
 	}
 }

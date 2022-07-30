@@ -2,7 +2,7 @@ package usointerfaces;
 
 public class Casa implements ISellable, IConstants, Comparable
 {
-	private int Tamaño;
+	private int Tamano;
 	private int capacidadPersonas;
 	private double PrecioCasa;
 	
@@ -17,7 +17,7 @@ public class Casa implements ISellable, IConstants, Comparable
 		return PrecioCasa;
 	}
 	@Override
-	public int getAño() {
+	public int getYear() {
 		// TODO Auto-generated method stub
 		return 2010;
 	}
