@@ -58,7 +58,7 @@ podrá hacerse una función genérica que sea agnóstica el tipo de dato que rec
 fecha de presentación de estas asignaciones será el viernes 5 de agosto en clase. 
 
 
-descripción del caso 
+## descripción del caso 
 
 existe un teorema llamado _four color_ el cual indica que con tan solo 4 colores es posible pintar las regiones de cualquier mapa de tal forma que dos regiones adyacentes nunca van a tener el mismo color. https://en.wikipedia.org/wiki/Four_color_theorem . cómo demostraría usted por medio de un programa en C++ que un mapa dado cumple con dicho teorema? que estructura de datos diseñaría para que su solución y algoritmo sea simple? cómo le suministraría la información del mapa al algoritmo?
 
@@ -73,5 +73,5 @@ lecturas complementarias recomendadas
 - fecha de entrega: sábado 13 de agosto antes de medio día
 - entrega al asistente al correo: kevinqj.2002@gmail.com
 - subject: estructuras de datos - caso #1
-- contenido: url al respositorio de git con el código fuente del programa, el último commit del branch principal - debe ser máximo el sábado 13 de agosto a medio día. en el readme.md file o en el main.cpp explicar el formato 
+- contenido: url al respositorio de git con el código fuente del programa, el último commit del branch principal debe ser máximo el sábado 13 de agosto a medio día. en el readme.md file o en el main.cpp explicar el formato 
 - para suministrar el mapa y de la estructura de datos diseñada para solucionar el algoritmo. 
