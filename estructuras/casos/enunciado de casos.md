@@ -62,7 +62,13 @@ descripción del caso
 
 existe un teorema llamado _four color_ el cual indica que con tan solo 4 colores es posible pintar las regiones de cualquier mapa de tal forma que dos regiones adyacentes nunca van a tener el mismo color. https://en.wikipedia.org/wiki/Four_color_theorem . cómo demostraría usted por medio de un programa en C++ que un mapa dado cumple con dicho teorema? que estructura de datos diseñaría para que su solución y algoritmo sea simple? cómo le suministraría la información del mapa al algoritmo?
 
-lectura complementaria recomendada https://cplusplus.com/doc/tutorial/structures/ , descarte la sección de pointers. 
+lecturas complementarias recomendadas 
+
+- https://cplusplus.com/doc/tutorial/structures/ , descarte la sección de pointers. 
+- https://www.youtube.com/watch?v=hWglK8nWh60
+- https://www.w3schools.com/git/
+
+
 
 - fecha de entrega: sábado 13 de agosto antes de medio día
 - entrega al asistente al correo: kevinqj.2002@gmail.com
