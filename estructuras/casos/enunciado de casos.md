@@ -5,7 +5,7 @@ prof. rodrigo núñez
 
 *tipo:* individual
 
-de link proceder a realizar las lecturas en forma grupal y resolver los retos propuestos a continuación para compartirlos con el resto de la clase. a la hora de exponerlo en clase hacerlo por medio de ejemplos programados, no es necesario y no se recomienda realizar presentaciones. 
+de link proceder a realizar las lecturas en forma grupal y resolver los retos propuestos a continuación para compartirlos con el resto de la clase. a la hora de exponerlo en clase hacerlo por medio de ejemplos programados, no es necesario y no se recomienda realizar presentaciones. Valor 10 puntos. 
 
 https://cplusplus.com/doc/tutorial/variables/
 Cristopher Acuña, Josue Romero, Daniel Granados
@@ -56,3 +56,16 @@ David Fernandez, Steven Sequeira
 podrá hacerse una función genérica que sea agnóstica el tipo de dato que reciba 3 valores y retorne el mayor de ellos. 
 
 fecha de presentación de estas asignaciones será el viernes 5 de agosto en clase. 
+
+
+descripción del caso 
+
+existe un teorema llamado _four color_ el cual indica que con tan solo 4 colores es posible pintar las regiones de cualquier mapa de tal forma que dos regiones adyacentes nunca van a tener el mismo color. https://en.wikipedia.org/wiki/Four_color_theorem . cómo demostraría usted por medio de un programa en C++ que un mapa dado cumple con dicho teorema? que estructura de datos diseñaría para que su solución y algoritmo sea simple? cómo le suministraría la información del mapa al algoritmo?
+
+lectura complementaria recomendada https://cplusplus.com/doc/tutorial/structures/ , descarte la sección de pointers. 
+
+- fecha de entrega: sábado 13 de agosto antes de medio día
+- entrega al asistente al correo: kevinqj.2002@gmail.com
+- subject: estructuras de datos - caso #1
+- contenido: url al respositorio de git con el código fuente del programa, el último commit del branch principal - debe ser máximo el sábado 13 de agosto a medio día. en el readme.md file o en el main.cpp explicar el formato 
+- para suministrar el mapa y de la estructura de datos diseñada para solucionar el algoritmo. 
