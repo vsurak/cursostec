@@ -1,7 +1,8 @@
 # caso #1, 5%
 
 *instituto tecnológico de costa rica*, escuela de computación
-prof. rodrigo núñez
+*estructuras de datos*
+_prof. rodrigo núñez_
 
 *tipo:* individual
 
@@ -73,5 +74,4 @@ lecturas complementarias recomendadas
 - fecha de entrega: sábado 13 de agosto antes de medio día
 - entrega al asistente al correo: kevinqj.2002@gmail.com
 - subject: estructuras de datos - caso #1
-- contenido: url al respositorio de git con el código fuente del programa, el último commit del branch principal debe ser máximo el sábado 13 de agosto a medio día. en el readme.md file o en el main.cpp explicar el formato 
-- para suministrar el mapa y de la estructura de datos diseñada para solucionar el algoritmo. 
+- contenido: url al respositorio de git con el código fuente del programa, el último commit del branch principal debe ser máximo el sábado 13 de agosto a medio día. en el readme.md file o en el main.cpp explicar el formato para suministrar el mapa y de la estructura de datos diseñada para solucionar el algoritmo. 
