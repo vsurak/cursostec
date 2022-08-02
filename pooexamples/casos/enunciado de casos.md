@@ -60,7 +60,7 @@ FERNANDEZ SALAS JOSE DAVID
 UGALDE JIMENEZ DAVID FRANCISCO  
 
 tratamiento de aguas  
-'---------------------------------------------  
+---------------------------------------------  
 MALLMA ZAMORA JUAN ERNESTO  
 MONTERO ZUÑIGA AMANDA JESUS  
 BRENES GARRO JOSE JULIAN  
