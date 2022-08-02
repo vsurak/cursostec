@@ -1,12 +1,9 @@
 # caso #1, 7%
 
-*instituto tecnológico de costa rica*, escuela de computación
-
-*programación orientada a objetos*
-
-_prof. rodrigo núñez_
-
-*tipo:* grupal
+*instituto tecnológico de costa rica*, escuela de computación  
+*programación orientada a objetos*  
+_prof. rodrigo núñez_  
+*tipo:* grupal  
 
 ## descripción
 El yate silent 60 es un navío de tipo catamaran que funciona con energía solar, representa un ícono del futuro de la navegación con cero emisiones. posee sistemas de paneles solares, sensores, optimización para el uso de energía, baterías de litio entre muchos otros avances tecnológicos. 
@@ -35,30 +32,35 @@ links relacionados
 *grupos y asignación*
 
 sistemas de refrigeración  
+---------------------------------------------  
 ALFARO CHAVERRI FEDERICO ALBERTO  
 ALFARO GARCIA ISAAC GERMAN  
 CUBILLO JARQUIN HELBERTH FABRICIO  
 SEQUEIRA VARGAS ANTHONY STEVE  
 
-entretenimiento y cocina  
+entretenimiento, luces y cocina  
+---------------------------------------------  
 BARQUERO DIAZ JOSE PABLO  
 CALVO HERNANDEZ SEBASTIAN  
 ACUÑA CAMPOS CRISTOPHER ANTONIO  
 UGALDE RIVAS YEINER ALONSO  
 
 energía solar y baterías  
+---------------------------------------------  
 ALVARADO ANDRADE DANIELA  
 CAMPOS ARGUEDAS OSCAR ANDRES  
 AGUERO MATA MIGUEL EDUARDO  
 KAUFFMANN PORCAR ERICK  
 
 propulsión y motores  
+---------------------------------------------  
 BARQUERO BARRANTES BRYAN DANIEL  
 MENDOZA MATA FIORELLA LUCIA  
 FERNANDEZ SALAS JOSE DAVID  
 UGALDE JIMENEZ DAVID FRANCISCO  
 
 tratamiento de aguas  
+---------------------------------------------  
 MALLMA ZAMORA JUAN ERNESTO  
 MONTERO ZUÑIGA AMANDA JESUS  
 BRENES GARRO JOSE JULIAN  
@@ -66,6 +68,7 @@ RODRIGUEZ BRENES SEBASTIAN
 RODRIGUEZ CRUZ JORGE LUIS  
 
 comunicaciones y navegación  
+---------------------------------------------  
 QUESADA CHAVES SARAH PRISCILLA  
 ROBLES MATA JOSE ANDRES  
 MADRIGAL CHINCHILLA JULIAN ANDRES  
