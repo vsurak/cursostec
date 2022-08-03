@@ -6,6 +6,8 @@
 // validación de reentrancia y redeclaraciones #ifdef y ifndef #endif , tiene sentido cuando hay más de un archivo
 // definiciones de constantes #define 
 
+
+
 // declaración de namesspaces a utilizar
 using namespace std;
 
@@ -23,4 +25,5 @@ int main()  // el int que retonar main es el código de terminación, es cero si
         //cout << x endl; x está en otro contexto o otro scope
         cout << y << endl;
     }
+
 }
