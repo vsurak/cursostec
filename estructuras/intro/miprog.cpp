@@ -11,8 +11,8 @@ using namespace std;
 //}
 
 // los macros nos sirven mucho para definir constantes
-#define ANCHO_PANTALLA 400
-#define ALTO_PANTALLA 600
+#define ANCHO_PANTALLA 1200
+#define ALTO_PANTALLA 790
 
 struct position {
    int X;
@@ -37,13 +37,12 @@ position centrar(int pAncho, int pAlto) {
 int main()
 {
    string mensaje = "Saludando a estructuras de datos";
-    cout << mensaje << std::endl;
+   cout << mensaje << std::endl;
 
-   /*
+   
    int otroarreglo[3];
    int miarreglo[] = {8, 4, 2, 8, 1};
 
-  
 
    otroarreglo[0] = 10;
    otroarreglo[1] = 20;
@@ -57,14 +56,14 @@ int main()
    int a = 30;
    short b = a;
 
-   printf("usando un numero que si cabe: %d \n", b );
+   printf("usando un numero que si cabe: transformo %d en %d, probando %s \n", a, b, "hey clase de estructuras" );
 
    a = 70000;
    b = a;
 
    printf("usando un numero que no cabe: %d \n", b );
 
-   unsigned short test1 = 65535;
+   unsigned short test1 = 65535; 
    printf("usando un ushort al limite: %d \n", test1);
 
    test1++;
@@ -72,7 +71,6 @@ int main()
 
    test1++;
    printf("usando un ushort al limite: %d \n", test1);
-
 
    test1 = 20000;
    printf("primero evaluo despues ejecuto: %d \n", test1++);
@@ -83,7 +81,7 @@ int main()
 
    // printf hace un print con format
 
-   printf("hola a %s hoy el %d del mes %d del anyo %d \n", "todos", 8, 20, 2021);
+   printf("hola a %s hoy el %d del mes %d del anyo %d \n", "todos", 10, 8, 2022);
 
    test1 = test1 + 1;
    test1++;
@@ -93,7 +91,7 @@ int main()
    cout << test1 << endl;
 
    test1 = 30000;
-   test1 += 5000;
+   test1 += 5000; 
    cout << test1 << endl;
 
    test1 = 30000;
@@ -104,7 +102,5 @@ int main()
    test1 *= 2;
    cout << test1 << endl;
 
-
-*/
    return 0;
 }
