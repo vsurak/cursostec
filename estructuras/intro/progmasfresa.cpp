@@ -13,9 +13,6 @@ int main() {
     pos.Y = 200;
     pintarTexto("buenos dias", pos);
 
-    cout << columnaLetra(22) << endl;
-    cout << columnaLetra(10) << endl;
-
     char laA = 'A';
     char laM = 'M';
 
