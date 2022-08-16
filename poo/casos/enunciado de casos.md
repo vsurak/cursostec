@@ -133,8 +133,8 @@ En forma individual las siguientes personas presentarán un diseño borrador en 
 
 Viernes 26 de agosto 
 
-- MADRIGAL CHINCHILLA JULIAN ANDRES 
-- MONTERO ZUÑIGA AMANDA JESUS 
+- MADRIGAL CHINCHILLA JULIAN ANDRES
+- MONTERO ZUÑIGA AMANDA JESUS
 
 - fecha de entrega: miércoles 31 antes de media noche
 - entrega al asistente al correo: kevinqj.2002@gmail.com
