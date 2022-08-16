@@ -115,4 +115,4 @@ Presentaciones preliminares:
 - fecha de entrega: lunes 29 de agosto antes de las 6pm
 - entrega al asistente al correo: kevinqj.2002@gmail.com
 - subject: estructuras de datos - caso #2
-- contenido: url al respositorio de git con el código fuente del programa, el último commit del branch principal debe ser máximo la fecha y hora de entrega. en el readme.md file explicar el diseño y estrategia solución. todos deberán implementar sus propias listas enlazadas y cualquier otra estructura de datos lineal.  
+- contenido: url al respositorio de git con el código fuente del programa en C++, el último commit del branch principal debe ser máximo la fecha y hora de entrega. en el readme.md file explicar el diseño y estrategia solución. todos deberán implementar sus propias listas enlazadas y cualquier otra estructura de datos lineal.  
