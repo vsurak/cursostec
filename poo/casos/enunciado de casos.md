@@ -111,23 +111,26 @@ cómo sería el diseño y la implementación de classes en java para el programa
 
 5. El usuario podrá ver en la pantalla en todo momento el tiempo transcurrido de simulación, el nivel de energia de todas las baterías, el nivel de luz solar sobre los páneles y la velocidad del navío
 
-6. Demuestre finalmente que es posible agregar varios otros elementos del yate que consuman energía dentro de la simulación y que esto no afecte el código realizado entre el punto #1 al #5, es decir, que puedo agregar y quitar componentes del Yate a antojo de quien configura la simulación, no importa si esto se hace desde el main, una classe con constantes o un archivo de configuración separado. 
+6. Demuestre finalmente que es posible agregar varios otros elementos del yate que consuman energía dentro de la simulación y que esto no afecte el código realizado entre el punto #1 al #5, es decir, que puedo agregar y quitar componentes del Yate a antojo de quien configura la simulación, no importa si esto se hace desde el main, una classe con constantes o un archivo de configuración separado.  
 
 Preliminares: 
-Cómo crear un UI para el simulador en Java. Investigue y cree código ejemplo para crear una pantalla que pueda funcionar para visualizar dicho simulador en java. Deberá para ello seguir el patrón de diseño MVC.
+Cómo crear un UI para el simulador en Java. Investigue y cree código ejemplo para crear una pantalla que pueda funcionar para visualizar dicho simulador en java. Deberá para ello seguir el patrón de diseño MVC. 
+
 Miércoles 24 de agosto, 1 ejemplo entre los dos 
 
 ALFARO GARCIA ISAAC GERMAN 
 BARQUERO BARRANTES BRYAN DANIEL 
 
-Cómo funcionan los hilos y el sleep en java. Investigue y cree código ejemplo para explicar el funcionamiento de los hilos de ejecución en java esto con el fin de que dicha tecnología nos permita construir el simulador que que requiere para el demo del consumo del yate. 
+Cómo funcionan los hilos y el sleep en java. Investigue y cree código ejemplo para explicar el funcionamiento de los hilos de ejecución en java esto con el fin de que dicha tecnología nos permita construir el simulador que que requiere para el demo del consumo del yate.  
+
 Miércoles 24 de agosto, ejemplos hechos entre los dos 
 
 QUESADA CHAVES SARAH PRISCILLA 
 SEQUEIRA VARGAS ANTHONY STEVE 
 
 
-En forma individual las siguientes personas presentarán un diseño borrador en dibujo de como podrían modelar dicho simulador y sus reglas de comportamiento sin considerar el punto #6.
+En forma individual las siguientes personas presentarán un diseño borrador en dibujo de como podrían modelar dicho simulador y sus reglas de comportamiento sin considerar el punto #6. 
+
 Viernes 26 de agosto 
 
 MADRIGAL CHINCHILLA JULIAN ANDRES 
