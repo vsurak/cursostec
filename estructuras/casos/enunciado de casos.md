@@ -74,4 +74,45 @@ lecturas complementarias recomendadas
 - fecha de entrega: domingo 14 de agosto antes de medio día
 - entrega al asistente al correo: kevinqj.2002@gmail.com
 - subject: estructuras de datos - caso #1
-- contenido: url al respositorio de git con el código fuente del programa, el último commit del branch principal debe ser máximo el sábado 13 de agosto a medio día. en el readme.md file o en el main.cpp explicar el formato para suministrar el mapa y de la estructura de datos diseñada para solucionar el algoritmo. 
+- contenido: url al respositorio de git con el código fuente del programa, el último commit del branch principal debe ser máximo el domingo 14 de agosto a medio día. en el readme.md file o en el main.cpp explicar el formato para suministrar el mapa y de la estructura de datos diseñada para solucionar el algoritmo. 
+
+
+# caso #2, 5%
+
+*instituto tecnológico de costa rica*, escuela de computación
+*estructuras de datos*
+_prof. rodrigo núñez_
+
+*tipo:* individual
+
+## descripción del caso 
+la compañía 4home es un proveedor de domótica para todo latinoamérica, los consumidores pueden comprar sus productos que van desde tomacorrientes, bombillos, tiras de led, cámaras y gran variedad de sensores de movimiento, humo y apertura de puertas entre otros muchos tipos de dispositivos. Sus clientes luego de instalar dichos dispositivos en casa, usando el app 4home pueden configurarlos para acceder a los mismos y así controlarlos desde la aplicación, haciendo así su casa inteligente. cada tipo de dispositivo tiene sus diferentes parámetros configurables y las acciones propias del tipo de dispositivo, por ejemplo:
+- bombillo, acciones (on, off), parámetros (color, brillo)
+- sensor de puertas, acciones (on, off, se abrió puerta, se cerró puerto, sonar alarma, enviar notificacion)
+- sensor de humo, acciones (on, off, accionar alarma) parámetros (sensibilidad)
+y así cada tipo de dispositivo tiene sus propios parámetros y acciones. 
+
+Cómo diseñaría e implementaría usted en C++ las diversas classes para el app 4home de tal forma que permita realizar las siguientes tareas:
+
+1. Agregar K dispositivos de T tipos diferentes a las H habitaciones de la casa de un consumidor
+2. Que el usuario pueda crear tareas con un nombre, que al accionarlas ejecute acciones y cambie parámetros de un subconjunto seleccionado de los dispositivos de la casa, siendo dichas acciones y parámetros configurables en la tarea
+3. Ejecutar una tarea en particular
+
+Por ejemplo tareas que el consumidor quisiera crear:
+- buenos días: apaga luces, enciende el coffee maker, prende luz del baño, apaga alarmas
+- trabajar: enciende las luces de la oficina y el toma corriente de la computadora y monitor
+
+Presentaciones preliminares:
+
+1. Carlos José Barrantes, propuesta parcial, con ejemplos de código de la idea principal (no la implementación completa), de una posible solución basada en arreglos estáticos, 10pts, viernes 19 de agosto
+
+2. Carlos José Barrantes y Helberth Cubillo, propuesta parcial, con ejemplos de código de la idea principal (no la implementación completa), de una posible solución basada en listas enlazadas programadas por el estudiante 
+24 de agosto, 10pts
+
+3. Isaac Rojas y Jose Pablo Barquero, propuesta parcial, con ejemplos de código de la idea principal (no la implementación completa), de una posible solución basada en la clase vector de c++.
+24 de agosto, 10pts
+
+- fecha de entrega: lunes 29 de agosto antes de las 6pm
+- entrega al asistente al correo: kevinqj.2002@gmail.com
+- subject: estructuras de datos - caso #2
+- contenido: url al respositorio de git con el código fuente del programa, el último commit del branch principal debe ser máximo la fecha y hora de entrega. en el readme.md file explicar el diseño y estrategia solución. todos deberán implementar sus propias listas enlazadas y cualquier otra estructura de datos lineal.  
