@@ -96,5 +96,6 @@ int main()  // el int que retonar main es el código de terminación, es cero si
     }
 
     // recorrido para validar si efectivamente cumple el teorema o no
+
 */
 }
