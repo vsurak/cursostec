@@ -17,7 +17,7 @@ public class Game {
 		int bet4[] = {24};
 		juego.addBet(5.0f, bet4);
 		
-		juego.addBet(17.0f, Constants.red);
+		juego.addBet(17.0f, Constants.oneToTwelve);
 		
 		System.out.println(juego.getTotalBet()+" "+juego.getBalance());
 		
