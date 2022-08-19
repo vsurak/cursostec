@@ -28,6 +28,39 @@ struct region {
     int adyacentes[2];
 };
 
+int currentMaxValue = 10;
+int *valores[10];
+int indiceActual = 0;
+
+void agregarValor(int pNuevoValor) {
+    if (indiceActual>=currentMaxValue) { // se me acabaron los espacios
+        currentMaxValue*=2;
+        //int nuevoArreglo[currentMaxValue];
+        int *nuevoArreglo[] = malloc(currentMaxValue*sizeof(int));  // cuantos bytes quiero q me reserve
+        int *otroArreglo = malloc(currentMaxValue*sizeof(int));
+
+        // acceder a la posicicion 5
+        int *p;
+        p = otroArreglo+5;
+        int valor = *p;
+        *p = 35;
+
+        (*otroArreglo+7) = 45;
+        int value = *(otroArreglo+7);
+
+        int i = 0;
+        for(; i<currentMaxValue/2; i++) {
+            *nuevoArreglo[i] = *valores[i];
+        }
+
+        valores = nuevoArreglo;
+        indiceActual = i;
+    }
+
+    *valores[indiceActual] = pNuevoValor;
+    indiceActual++;
+}
+
 // se pone al final el main que es el punto de entrada del programa
 int main()  // el int que retonar main es el código de terminación, es cero si termino sin errores y otro número si algo falló
 {
