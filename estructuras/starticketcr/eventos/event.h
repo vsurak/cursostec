@@ -1,6 +1,9 @@
 #include <iostream>
 #include <string>
 #include <ctime>
+#include "url.h"
+
+using namespace std;
 
 class Event {
     private: 
@@ -8,7 +11,7 @@ class Event {
         string title;
         string location;
         string organizer;
-        url urls[];
+        Url urls[];
 
     public:
-}
+};
