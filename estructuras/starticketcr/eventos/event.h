@@ -5,6 +5,11 @@
 
 using namespace std;
 
+#ifndef EVENT
+
+#define EVENT 1
+
+
 class Event {
     private: 
         tm eventTime;
@@ -14,4 +19,19 @@ class Event {
         Url urls[];
 
     public:
+        Event(string pTitle, string pLocation, string pOrganizer) {
+            this->title = pTitle;
+            this->location = pLocation;
+            this->organizer = pOrganizer;
+        }
+
+        string getTitle() {
+            return title;
+        }
+
+        string getLocation() {
+            return location;
+        }
 };
+
+#endif

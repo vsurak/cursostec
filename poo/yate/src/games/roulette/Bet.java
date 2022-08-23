@@ -1,8 +1,6 @@
 package games.roulette;
 
 import java.util.LinkedList;
-import java.util.Arrays;
-import java.util.List;
 
 public class Bet {
 	private float amount;
@@ -17,11 +15,15 @@ public class Bet {
 		this.numbers = new LinkedList<Integer>();
 	}
 	
-	public Bet(float pAmount, int pNumbers[]) {
+	public Bet(float pAmount, int pNumbers[]) { 
 		this();
 		this.amount = pAmount;
-		List listofnumbers = Arrays.asList(pNumbers);
-		this.numbers = new LinkedList<Integer>(listofnumbers);
+
+		numbers.clear();
+		
+		for (int betNumber=0; betNumber<pNumbers.length; betNumber++) {
+			numbers.add(pNumbers[betNumber]);
+		}
 	}
 
 	public BetResult getResult() {

@@ -19,6 +19,14 @@ public class Game {
 		
 		juego.addBet(17.0f, Constants.oneToTwelve);
 		
+		juego.addBet(50.0f, Constants.red);
+			
+		System.out.println(juego.getTotalBet()+" "+juego.getBalance());
+		
+		juego.spin();
+		
+		juego.clear();
+
 		System.out.println(juego.getTotalBet()+" "+juego.getBalance());
 		
 	}
