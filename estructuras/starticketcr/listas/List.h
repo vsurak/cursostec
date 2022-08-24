@@ -26,7 +26,6 @@ class List {
             if (quantity>0) {
                 this->last->setNext(newNode);
                 this->last = newNode;
-
             } else {
                 this->first = newNode;
                 this->last = newNode;
