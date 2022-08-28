@@ -1,5 +1,8 @@
 package games.roulette;
 
+import games.roulette.controllers.RouletteMainFrameController;
+import games.roulette.gui.RouletteMainFrame;
+
 public class Game {
 
 	public static void main(String args[]) {
@@ -25,9 +28,19 @@ public class Game {
 		
 		juego.spin();
 		
-		juego.clear();
-
+		juego.imprimirApuestasGanadoras();
+		
 		System.out.println(juego.getTotalBet()+" "+juego.getBalance());
+		
+		juego.clear();
+		
+		
+		RouletteMainFrameController controller = new RouletteMainFrameController(juego);
+		
+		// asignarle al controller que cosas el debe ver del model
+		
+		RouletteMainFrame myroulettewindow = new RouletteMainFrame("Roulette game sample", controller);
+		
 		
 	}
 }

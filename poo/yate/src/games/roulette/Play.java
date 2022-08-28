@@ -15,6 +15,12 @@ public class Play {
 		roulette = new Roulette();
 	}
 	
+	@Override
+	protected void finalize() {
+		bets.clear();
+		roulette = null;
+	}
+	
 	public void clear() {
 		totalBet = 0.0f;
 		bets.clear();
@@ -27,9 +33,10 @@ public class Play {
 		this.bets.add(newBet);
 	}
 	
-	public void spin() {
+	public int spin() {
 		int wonNumber = roulette.spin();
 		this.evaluate(wonNumber);
+		return wonNumber;
 	}
 
 	public float getTotalBet() {
@@ -56,5 +63,17 @@ public class Play {
 				currentBet.setWon(0.0f);
 			}
 		}
+	}
+	
+	public void imprimirApuestasGanadoras() {
+		for(Bet currentBet :  this.bets) {
+			if (currentBet.getResult()==BetResult.WIN) {
+				System.out.println("Apostado: "+currentBet.getAmount()+" Ganado: "+currentBet.getWon());
+			}
+		}
+		
+		//for(int i=0; i<this.bets.size(); i++) {
+		//	Bet currentBet = this.bets.get(i);
+		//}
 	}
 }

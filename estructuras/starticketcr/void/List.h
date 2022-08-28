@@ -1,9 +1,8 @@
 #include "Node.h"
-#include "../eventos/event.h"
 
-#ifndef LIST 
+#ifndef LISTCONVOID 
 
-#define LIST 1
+#define LISTCONVOID 1
 
 class List {
     private:
@@ -20,8 +19,8 @@ class List {
             empty = true;
         }
 
-        void add(Event *pEvent) {
-            Node *newNode = new Node(pEvent);
+        void add(void *data) {
+            Node *newNode = new Node(data);
 
             if (quantity>0) {
                 this->last->setNext(newNode);
@@ -47,8 +46,8 @@ class List {
             return !quantity;
         }
 
-        Event* find(int pPosition) {
-            Event* result = NULL;
+        void* find(int pPosition) {
+            void* result = NULL;
             Node* search = this->first;
 
             if (pPosition<getSize()) {
@@ -62,26 +61,11 @@ class List {
             return result;
         }
 
-        Event* find(string pTitle) {
-            Event* result = NULL;
-            Node* search = this->first;
-
-            while(search!=NULL && search->getData()->getTitle()!=pTitle) {
-                search = search->getNext();
-            }
-
-            if (search!=NULL) {
-                result = search->getData();
-            }
-
-            return result;
-        }
-
         // es que si el position es mayor a la cantidad, entonces inserto al final
-        void insert(int pPosition, Event *pEvent) {
+        void insert(int pPosition, void *pData) {
             
             if (pPosition<getSize() && first!=NULL) {
-                Node *newNodo = new Node(pEvent);
+                Node *newNodo = new Node(pData);
                 Node *searchPosition = this->first;
                 Node *searchBehind = NULL;
 
@@ -100,16 +84,7 @@ class List {
                 
                 quantity++;
             } else {
-                add(pEvent);
-            }
-        }
-
-        void print() {
-            Node *search = first;
-
-            while (search!=NULL) {
-                cout << search->getData()->getTitle() << endl;
-                search = search->getNext();
+                add(pData);
             }
         }
 };

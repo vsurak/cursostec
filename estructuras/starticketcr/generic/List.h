@@ -5,10 +5,11 @@
 
 #define LIST 1
 
+template <class T>
 class List {
     private:
-        Node *first;
-        Node *last;
+        Node<T> *first;
+        Node<T> *last;
         int quantity;
         bool empty;
 
@@ -20,8 +21,8 @@ class List {
             empty = true;
         }
 
-        void add(Event *pEvent) {
-            Node *newNode = new Node(pEvent);
+        void add(T *pData) {
+            Node<T> *newNode = new Node<T>(pData);
 
             if (quantity>0) {
                 this->last->setNext(newNode);
@@ -35,7 +36,7 @@ class List {
             quantity++;
         }
 
-        Node* getFirst() {
+        Node<T>* getFirst() {
             return this->first;
         }
 
@@ -47,9 +48,9 @@ class List {
             return !quantity;
         }
 
-        Event* find(int pPosition) {
-            Event* result = NULL;
-            Node* search = this->first;
+        T* find(int pPosition) {
+            T* result = NULL;
+            Node<T>* search = this->first;
 
             if (pPosition<getSize()) {
                 while(pPosition>0) {
@@ -62,28 +63,13 @@ class List {
             return result;
         }
 
-        Event* find(string pTitle) {
-            Event* result = NULL;
-            Node* search = this->first;
-
-            while(search!=NULL && search->getData()->getTitle()!=pTitle) {
-                search = search->getNext();
-            }
-
-            if (search!=NULL) {
-                result = search->getData();
-            }
-
-            return result;
-        }
-
         // es que si el position es mayor a la cantidad, entonces inserto al final
-        void insert(int pPosition, Event *pEvent) {
+        void insert(int pPosition, T *pEvent) {
             
             if (pPosition<getSize() && first!=NULL) {
-                Node *newNodo = new Node(pEvent);
-                Node *searchPosition = this->first;
-                Node *searchBehind = NULL;
+                Node<T> *newNodo = new Node<T>(pEvent);
+                Node<T> *searchPosition = this->first;
+                Node<T> *searchBehind = NULL;
 
                 while(pPosition>0) {
                     pPosition--;
@@ -104,14 +90,6 @@ class List {
             }
         }
 
-        void print() {
-            Node *search = first;
-
-            while (search!=NULL) {
-                cout << search->getData()->getTitle() << endl;
-                search = search->getNext();
-            }
-        }
 };
 
 #endif
