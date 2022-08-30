@@ -116,3 +116,43 @@ Presentaciones preliminares:
 - entrega al asistente al correo: kevinqj.2002@gmail.com
 - subject: estructuras de datos - caso #2
 - contenido: url al respositorio de git con el código fuente del programa en C++, el último commit del branch principal debe ser máximo la fecha y hora de entrega. en el readme.md file explicar el diseño y estrategia solución. todos deberán implementar sus propias listas enlazadas y cualquier otra estructura de datos lineal.  
+
+
+
+# caso #3, 10%
+
+*instituto tecnológico de costa rica*, escuela de computación
+*estructuras de datos*
+_prof. rodrigo núñez_
+
+*tipo:* individual
+
+## descripción del caso 
+proceda a realizar los siguientes ejercicios programados en C++ usando orientación a objetos. para resolverlos deberá haber hecho las lecturas para quiz de la última semana de agosto y primera de setiembre referente a listas, listas dobles, pilas y colas. todas las estructuras de datos para las listas, pilas y colas deberán estar hechas por el estudiante y ser genéricas. 
+
+1. el usuario quiere escribir una expresión en forma textual la cual puede contener únicamente números enteros, +,-,*,/,%,(,)
+dicha expresión debe ser escrita en notación infija, luego transformada y evaluada en notación postfija usando algoritmos de pilas.
+
+2. proceda a realizar la implementación del TDA cola pero sin usar colas, si no más bien usando un máximo de 2 pilas. las operaciones a implementar serán: isEmpty, enqueue, dequeue, top. 
+
+3. en los aeropuertos hay aviones que se encuentran alistándose para despegar, eso depende de la hora de salida del vuelo, el proceso de abordaje de los pasajeros, mantenimiento de la aeronave y la disponibilidad de pistas para despegar. se quiere hacer un programa en C++ orientado a objetos que permita ordenar el despegue oportuno de los vuelos. el aeropuerto va a contar con K pistas, este valor puede cambiar de aeropuerto a aeropuerto. se asume que cualquier avión puede despegar desde cualquier pista y que vuelos distintos pueden despegar al mismo tiempo siempre y cuando sean pistas diferentes.
+cree en forma aleatoria V vuelos partiendo entre un rango de horas cualquiera en el mismo día, asuma que cada vuelo va a tener un atraso de despegue que puede ir entre 0 a 17 minutos. haga que su programa analice y planifique el despegue en orden de todos los V vuelos en las K pistas.  debe ser posible observar que todos los vuelos salieron en correcto orden y por cuál pista salieron. 
+
+asignaciones preliminares para miércoles 7 de setiembre
+1. Yeiner Ugalde, explicar de forma interactiva el algoritmo de conversión de infijo a postfijo
+
+2. Jose Eduardo Gutierrez, demostrar que una cola con prioridad puede ser usada con o sin prioridad según se necesite. 
+
+
+- fecha de entrega: sábado 10 de setiembre antes de las 4pm
+- entrega al asistente al correo: kevinqj.2002@gmail.com
+- subject: estructuras de datos - caso #3
+- contenido: url al respositorio de git cuyo último commit debe cumplir con la fecha y hora de entrega. asegúrese que el repositorio sea público. debe haber un readme.md file que explique como es que se prueban los 3 ejercicios correctamente. todos los programas son en consola.
+- se evaluará calidad de código bajo las siguientes buenas prácticas:
+
+1. nombres significativos de variables, parámetros y métodos, que tengan claro su intención con el nombre
+2. toda classe o struct debe estar en archivos separados ya sea .h o .cpp
+3. encapsulamiento, una función o método sabe hacer una única cosa y nada más, no se mienta así mismo con el nombre del método
+4. correcta idemtación tomando en cuenta la apertura de braces {, el cierre } y el tab
+5. en un condicional, if, switch, la condición que ocurre más frecuentemente debe ir de primero
+6. en una classe primero se declaran las cosas públicas y seguidamente las privadas
