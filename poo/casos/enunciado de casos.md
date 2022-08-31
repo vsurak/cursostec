@@ -140,3 +140,72 @@ Viernes 26 de agosto
 - entrega al asistente al correo: kevinqj.2002@gmail.com
 - subject: poo - caso #2
 - contenido: url en github con el código fuente del programa en el branch principal, en el mismo repositorio debe haber un readme.md con el modelo gráfico de objetos inicial que se hizo antes de iniciar la programación del simulador, además de las indicaciones de como se hace en su programa para configurar las reglas de carga y consumo de energía del simulador. 
+
+
+# caso #3, 10%
+
+*instituto tecnológico de costa rica*, escuela de computación  
+*programación orientada a objetos*  
+_prof. rodrigo núñez_  
+*tipo:* individual  
+
+## descripción
+*virtual garden*
+el virtual garden es un programa que le permite a la persona ensayar sobre el cuido de diferentes tipos de plantas a lo largo del año. para lograrlo, el usuario simplemente establece la duración del año en tiempo entrenamiento, la cantidad de estaciones 2 o 4. a partir de ahi puede seleccionar una planta para iniciar, todas inician siendo tamaño almácigo. El riego, el sol, alimentación y los cambios estacionales van haciendo a la planta cambiar tomando en cuenta factores como:
+
+1. velocidad de crecimiento
+2. alimentación que afecta color de hojas, floreo y frutos
+3. el monto de agua que necesita para sobrevivir, crecer o morir 
+4. alimentación necesaria para florear
+5. alimentación necesaria para dar fruto
+6. los niveles de sol que necesita para sobrevivir, crecer y morir
+
+el usuario cuenta con las funciones de:
+
+_abonar:_ selecciona una planta del jardín y al escoger dar alimento le suministra una porción.
+_regar:_ suministrando cierta cantidad de agua predeterminada a un de las plantas seleccionadas
+
+una vez iniciado el entrenamiento, la planta iniciará su proceso natural de crecimiento; las diversas variables como las estaciones, el sol, la lluvia, el agua, el abono, tiempo transcurrido y demás, serán factores que irán afectando positiva o negativamente a la planta. 
+
+hasta que la primer planta logre alcanzar al menos un 30% de su tamaño máximo, podrá agregar al jardín otra planta del tipo que desee y así sucesivamente para agregar más plantas al jardín.
+
+el programa debe ser capaz de trabajar con cualquier cantidad de tipos de plantas y ser capaz de mantener el ciclo de vida permanente de cada planta por tiempo indefinido hasta que la planta muera. es importante tomar en cuenta que cada tipo de planta tiene su propio ciclo de vida, no todas son iguales. 
+
+durante todo el proceso el usuario puede visualizar en la pantalla:
+
+- una imagen de la planta en su estado; esto para determinar si la planta requiere más o menos ya sea agua o abono 
+- la cantidad de años y días que han transcurrido en tiempo entrenamiento
+- la fecha actual en tiempo entrenamiento
+- la estación actual 
+- la temperatura
+- cuánto está lloviendo
+- el tamaño de la porción de agua y abono respectivamente
+- las acciones de abonar y regar
+
+el objetivo final es que la persona aprenda cuál es la mejor época para sembrar cada tipo de planta, que aprenda cuáles florecen y cuales no, cuáles dan fruto y cuáles no, que sepa que cuidos darle según la edad y las condiciones del clima a travez del año. 
+
+Cuál sería un diseño de objetos que permita programar en el menor tiempo posible, una solución para los requerimientos anteriores? Cómo podría la herencia y el polimorfismo darme ventajas estratégicas en la solución? 
+
+Cómo hago para que el ciclo de vida de cada tipo de planta pueda ser diferente? Cómo selecciono que imagen mostrar tomando en cuenta tantas variables tales como: si está seca, si está pasada de agua, la edad de la planta, que si necesita abono o la quemé de tanto echarle? 
+
+Cómo le indico al programa qué es bueno y qué es malo para cierto tipo de planta? Cómo sabe que le permite crecer, florear y dar frutos en cierto tiempo o del todo no lograrlo? Cómo me voy a dar cuenta que ya le toca morir sin hardcodear todos esos casos y el de todas las preguntas anteriores? Con qué diseño de objetos podría lograrlo?
+
+Cómo le voy a indicar al programa en que estación estamos? en que momento cambia de estación? entre que fechas debe suceder? y cómo hago para definir cuánto sol o lluvia va hacer cada día del año?
+
+los estudiantes serán quienes buscarán estrategias y formas de solucionar este problema aprovechando las técnicas aprendidas de orientación a objetos, deberán definir diversas reglas y mecanismos que le permita crear un programa flexible que cumpla los requisitos. encontrar respuesta en el diseño orientado a objetos para las interrogantes anteriores, que se presentan como retos de diseño y programación los cuales podrían simplificar o amplificar el tamaño y la complejidad del programa. 
+
+proceda entonces a diseñar e implementar en java este programa de entrenamiento llamado virtual garden.
+
+## asignaciones preliminares
+cada estudiante tiene su creatividad propia, esa misma que le llevará a abordar este problema por frentes diferentes y aprenderemos de nuestra propia forma de atacar la complejidad y de las de los demás. por ello todas las semanas, tres estudiantes nos mostrarán su avance en la solución. el profesor le asignará una nota con respecto al nivel de avance utilizando las siguientes reglas:
+
+1. _semana del 5 al 9 de setiembre, diseño de classes y/o estrategia de la solución:_ Responde a más del 80% de las interrogantes?(15) entre 50% a 80%(9), menos del 50%(4)
+
+2. _del 12 al 21 de setiembre, pruebas de concepto:_ programé pruebas concretas de como voy a resolver los retos técnicos que me plantié en la semana 1, en un 100%(15), 70%(10) o menos del 50%(6)
+
+3. _del 19 al 30 de setiembre, all together:_ dividiendo la solución en 3 macro módulos: simulación, ciclo de vida y operativo, he logrado concluír a mínimo un 80% ya sea: los tres (15), simulación+operativo(7), ciclo de vida+operativo(12), simulacion+cicloc de vida(15), ciclo de vida(10), operativo(5), simulacion(10)  
+
+## otros aspectos
+- fecha de entrega: martes 5 de octubre antes de medio día último commit. 
+- última fecha para consulta: miércoles 28 de setiembre
+- revisión por cita
