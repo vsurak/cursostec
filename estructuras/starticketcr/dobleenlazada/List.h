@@ -5,6 +5,7 @@
 
 #define LIST 1
 
+// 2. ajustar a que esta lista sea doblemente enlazada, cambia el add, find, insert y el remove
 template <class T>
 class List {
     private:
