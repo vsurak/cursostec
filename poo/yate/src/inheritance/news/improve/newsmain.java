@@ -1,4 +1,4 @@
-package inheritance.news;
+package inheritance.news.improve;
 
 import java.time.LocalDate;
 
@@ -13,7 +13,7 @@ public class newsmain {
 	 * finalmente si es mobile entonces solo 1 imagen horizontal máximo.
 	 */
 	public static void main(String[] args) {
-		Noticia article = new Noticia();
+		NoticiaMobile article = new NoticiaMobile();
 		article.setTitulo("Noticia de prueba");
 		article.setDate(LocalDate.of(2022, 8, 20));
 		article.addParrafo("Este es el parrafo 1");
@@ -28,7 +28,7 @@ public class newsmain {
 		article.addPhoto(2, "Url de foto 4 parrafo 2");
 		article.addPhoto(2, "Url de foto 5 parrafo 2");
 		
-		article.displayNoticia(DisplayType.MOBILE);
+		article.displayNoticia();
 	}
 
 }

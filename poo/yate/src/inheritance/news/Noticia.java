@@ -57,7 +57,7 @@ public class Noticia {
 					} else {
 						System.out.println(" ");
 						System.out.print(foto.getUrl()+" ");
-						maxFotos = pType.getValue()-1;
+						maxFotos = pType.getValue();
 					}
 					maxFotos--;
 				}
