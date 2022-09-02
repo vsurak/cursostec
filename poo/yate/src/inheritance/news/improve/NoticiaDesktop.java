@@ -9,7 +9,7 @@ public class NoticiaDesktop extends Noticia {
 		super();
 		maxPhotos = DisplayType.DESKTOP.getValue();
 	}
-	
+		
 	public void addPhoto(int pUbicacionParrafo, String pURL) {
 		super.addPhoto(pUbicacionParrafo, pURL);
 		System.out.println("implementacion en el hijo");

@@ -133,7 +133,7 @@ proceda a realizar los siguientes ejercicios programados en C++ usando orientaci
 1. el usuario quiere escribir una expresión en forma textual la cual puede contener únicamente números enteros, +,-,*,/,%,(,)
 dicha expresión debe ser escrita en notación infija, luego transformada y evaluada en notación postfija usando algoritmos de pilas.
 
-2. proceda a realizar la implementación del TDA cola pero sin usar colas, si no más bien usando un máximo de 2 pilas. las operaciones a implementar serán: isEmpty, enqueue, dequeue, top. 
+2. proceda a realizar la implementación del TDA cola pero sin usar colas, si no más bien usando un máximo de 2 pilas. las operaciones a implementar serán: isEmpty, enqueue, dequeue, front. 
 
 3. en los aeropuertos hay aviones que se encuentran alistándose para despegar, eso depende de la hora de salida del vuelo, el proceso de abordaje de los pasajeros, mantenimiento de la aeronave y la disponibilidad de pistas para despegar. se quiere hacer un programa en C++ orientado a objetos que permita ordenar el despegue oportuno de los vuelos. el aeropuerto va a contar con K pistas, este valor puede cambiar de aeropuerto a aeropuerto. se asume que cualquier avión puede despegar desde cualquier pista y que vuelos distintos pueden despegar al mismo tiempo siempre y cuando sean pistas diferentes.
 cree en forma aleatoria V vuelos partiendo entre un rango de horas cualquiera en el mismo día, asuma que cada vuelo va a tener un atraso de despegue que puede ir entre 0 a 17 minutos. haga que su programa analice y planifique el despegue en orden de todos los V vuelos en las K pistas.  debe ser posible observar que todos los vuelos salieron en correcto orden y por cuál pista salieron. 

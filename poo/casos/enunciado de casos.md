@@ -163,8 +163,9 @@ el virtual garden es un programa que le permite a la persona ensayar sobre el cu
 
 el usuario cuenta con las funciones de:
 
-_abonar:_ selecciona una planta del jardín y al escoger dar alimento le suministra una porción.
-_regar:_ suministrando cierta cantidad de agua predeterminada a un de las plantas seleccionadas
+_abonar:_ selecciona una planta del jardín y al escoger dar alimento le suministra una porción. 
+
+_regar:_ suministrando cierta cantidad de agua predeterminada a una de las plantas seleccionadas
 
 una vez iniciado el entrenamiento, la planta iniciará su proceso natural de crecimiento; las diversas variables como las estaciones, el sol, la lluvia, el agua, el abono, tiempo transcurrido y demás, serán factores que irán afectando positiva o negativamente a la planta. 
 
