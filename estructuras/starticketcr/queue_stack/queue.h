@@ -41,6 +41,11 @@ class Queue {
         bool isEmpty() {
             return queueList->isEmpty();
         }
+
+        T* front() {
+            // va el codigo que hizo karolg
+            return NULL;
+        }
 };
 
 #endif
