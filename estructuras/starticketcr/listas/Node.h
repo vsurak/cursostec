@@ -7,17 +7,17 @@
 class Node {
     private:
         Event *event;
-        Node *next;
+        Node *siguiente;
     
     public:
         Node() {
             event = NULL;
-            next = NULL;
+            siguiente = NULL;
         }
 
         Node(Event *pEvent) {
             this->event = pEvent;
-            next = NULL;
+            siguiente = NULL;
         }
 
         Event* getData() {
@@ -25,11 +25,11 @@ class Node {
         }
 
         Node* getNext() {
-            return next;
+            return siguiente;
         }
 
         void setNext(Node *pValue) {
-            this->next = pValue;
+            this->siguiente = pValue;
         }
 };
 

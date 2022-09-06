@@ -12,6 +12,7 @@ class Queue {
 
     public:
         Queue() {
+            queueList = NULL;
             queueList = new List<T>();
         }
 
