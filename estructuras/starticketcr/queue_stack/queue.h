@@ -40,11 +40,6 @@ class Queue {
         bool isEmpty() {
             return queueList->isEmpty();
         }
-
-        T* back() {
-            // este es el método que implementó maría
-            return NULL;
-        }
 };
 
 #endif
