@@ -11,7 +11,7 @@ class List {
     private:
         Node<T> *first;
         Node<T> *last;
-        int quantity;
+        int size;
         bool empty;
         Node<T> *searchPosition = NULL;
         Node<T> *searchBehind = NULL;
@@ -20,14 +20,14 @@ class List {
         List() {
             first = NULL;
             last = NULL;
-            quantity = 0;
+            size = 0;
             empty = true;
         }
 
         void add(T *pData) {
             Node<T> *newNode = new Node<T>(pData);
 
-            if (quantity>0) {
+            if (size>0) {
                 this->last->setNext(newNode);
             } else {
                 this->first = newNode;
@@ -35,7 +35,7 @@ class List {
             this->last = newNode;
 
             empty = false;
-            quantity++;
+            size++;
         }
 
         Node<T>* getFirst() {
@@ -43,11 +43,11 @@ class List {
         }
 
         int getSize() {
-            return quantity;
+            return size;
         }
 
         bool isEmpty() {
-            return !quantity;
+            return !size;
         }
 
         T* find(int pPosition) {
@@ -82,7 +82,7 @@ class List {
                     this->first = newNodo;
                 }
                 
-                quantity++;
+                size++;
             } else {
                 add(pData);
             }
@@ -106,7 +106,7 @@ class List {
                     search->setNext(NULL);
                     delete search;
                 }
-                quantity--;
+                size--;
             }
             return result;
         } 
