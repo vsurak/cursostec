@@ -29,4 +29,9 @@ int main() {
         cout << *numbersqueue->dequeue() << endl;
     }
 
+    // hacemos una prueba del stack
+    // push de varios elementos
+    // hace un top
+    // hacer varios pop imprimiendo lo que saco del pop
+
 }
