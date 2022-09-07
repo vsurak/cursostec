@@ -144,7 +144,7 @@ asignaciones preliminares para miércoles 7 de setiembre
 2. Jose Eduardo Gutierrez, demostrar que una cola con prioridad puede ser usada con o sin prioridad según se necesite. 
 
 
-- fecha de entrega: sábado 10 de setiembre antes de las 4pm
+- fecha de entrega: martes 13 de setiembre antes de media noche
 - entrega al asistente al correo: kevinqj.2002@gmail.com
 - subject: estructuras de datos - caso #3
 - contenido: url al respositorio de git cuyo último commit debe cumplir con la fecha y hora de entrega. asegúrese que el repositorio sea público. debe haber un readme.md file que explique como es que se prueban los 3 ejercicios correctamente. todos los programas son en consola.
