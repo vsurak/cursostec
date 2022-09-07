@@ -35,6 +35,19 @@ class List {
 
             empty = false;
             quantity++;
+        };
+
+        void addAtBegining(T *pData) {
+            Node<T> *newNode = new Node<T>(pData);
+
+            if (this->first!=NULL) {
+                newNode->setNext(this->first);
+            } else {
+                this->last = newNode;
+            }
+            this->first = newNode;
+
+            quantity++;
         }
 
         Node<T>* getFirst() {
@@ -87,12 +100,12 @@ class List {
             }
         }
 
-        bool remove(int pPosition) {
-            bool result = false;
+        T* remove(int pPosition) {
+            T* result = NULL;
             if (first!=NULL && pPosition<getSize()) {
                 Node<T> *search = first;
                 if (pPosition!=0) {
-                    T* data = find(pPosition);
+                    result = find(pPosition);
 
                     searchBehind->setNext(searchPosition->getNext());
 
@@ -103,12 +116,12 @@ class List {
                 } else {
                     first = first->getNext();
                     search->setNext(NULL);
-                    delete search;
+                    result = search->getData();
                 }
                 quantity--;
             }
             return result;
-        } 
+        };
 };
 
 #endif

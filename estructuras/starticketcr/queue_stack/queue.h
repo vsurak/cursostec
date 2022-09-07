@@ -9,7 +9,6 @@ class Queue {
     private:
         List<T>* queueList;
     
-
     public:
         Queue() {
             queueList = NULL;
@@ -24,8 +23,7 @@ class Queue {
         T* dequeue() {
             T* result = NULL;
             if (!queueList->isEmpty()) {
-                result = queueList->find(0);
-                queueList->remove(0);               
+                result = queueList->remove(0);          
             }
             return result;            
         }
@@ -40,11 +38,6 @@ class Queue {
 
         bool isEmpty() {
             return queueList->isEmpty();
-        }
-
-        T* front() {
-            // va el codigo que hizo karolg
-            return NULL;
         }
 };
 
