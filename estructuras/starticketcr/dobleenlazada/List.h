@@ -1,26 +1,24 @@
 #include "Node.h"
 #include "../eventos/event.h"
+#include "stack.h"
 
 #ifndef LIST 
 
 #define LIST 1
 
 // 2. ajustar a que esta lista sea doblemente enlazada, cambia el add, find, insert y el remove
-template <class T>
-class List {
+template<typename T> class List : public Stack<T> {
     private:
         Node<T> *first;
         Node<T> *last;
         Node<T> *searchPosition;
         int size;
-        bool empty;
 
     public:
         List() {
             first = NULL;
             last = NULL;
             size = 0;
-            empty = true;
         }
 
         void add(T *pData) {
@@ -34,7 +32,6 @@ class List {
             }
             this->last = newNode;
 
-            empty = false;
             size++;
         }
 
@@ -77,9 +74,10 @@ class List {
                 newNodo->setNext(searchPosition);
                 if (searchPosition->getPrev()!=NULL) {  // apariciones de searchBehind ahora serian getPrev de searchPosition, quiz #4 #5
                     searchPosition->getPrev()->setNext(newNodo); // esas lineas se arreglaan con el prev #4 #5
-                    newNode->setPrev(searchPosition->getPrev());  
+                    newNodo->setPrev(searchPosition->getPrev());
+                    searchPosition->setPrev(newNodo);  
                 } else {
-                    this->first->setPrev(newNode); // quiz #4 #5
+                    this->first->setPrev(newNodo); // quiz #4 #5
                     this->first = newNodo;
                 }
                 
@@ -89,14 +87,13 @@ class List {
             }
         }
 
-        bool remove(int pPosition) {
-            bool result = false;
+        T* remove(int pPosition) {
+            T* result = NULL;
             if (first!=NULL && pPosition<getSize()) {
-                Node<T> *search = first;
+                searchPosition = first;
 
                 if (pPosition!=0) {
                     T* data = find(pPosition);
-
 
                     searchPosition->getPrev()->setNext(searchPosition->getNext()); // quiz #4 #5, se quita searchBehind
 
@@ -108,20 +105,30 @@ class List {
                     searchPosition->setNext(NULL);
                     searchPosition->setPrev(NULL);
 
-                    delete searchPosition;
+                    result = searchPosition->getData();
                 } else {
                     first = first->getNext();
-                    search->setNext(NULL);
+                    searchPosition->setNext(NULL);
 
-                    if (first!=NULL) {
-                        first->setPrev(NULL); // quiz #4 #5, hay que limpiar el anterior del que esta despues del primero
+                    if (first!=NULL) { // quiz #4 #5, hay que limpiar el anterior del que esta despues del primero
+                        first->setPrev(NULL); 
+                    } else {
+                        last = NULL;
                     }
-                    delete search;
+                    result = searchPosition->getData();
                 }
                 size--;
             }
             return result;
-        } 
+        };
+
+        void push(T* pValue) {
+            insert(0, pValue);
+        }
+
+        T* pop() {
+            return remove(0);
+        }
 };
 
 #endif

@@ -18,7 +18,7 @@ class Node {
         Node() {
             data = NULL;
             next = NULL;
-            prev = NULL;
+            prev = NULL; // esta linea se agrega para quiz #4 #5
         }
 
         Node(T *pData) {

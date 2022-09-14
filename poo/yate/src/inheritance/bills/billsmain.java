@@ -25,6 +25,29 @@ public class billsmain {
 	 * está dificultando el mantenimiento del programa si tiene la posiblidad de 
 	 * apoyarse en orientación a objetos y herencia. 
 	 */
+	
+	private ArrayList<Bill> validadores;
+	
+	public void init() {
+		validadores = new ArrayList<Bill>();
+		validadores.add(new Bill1000());
+		validadores.add(new Bill2000());
+		validadores.add(new Bill5000());
+	}
+	
+	public boolean validate(ArrayList<Pair> pValues, int pDenominacion) {
+		boolean result = false;
+				
+		for (Bill validator : validadores) {
+			if (validator.getDenominacion()==pDenominacion) {
+				result = validator.validate(pValues);
+				break;
+			}
+		}
+		
+		return result;
+	}
+	
 	public static void main(String[] args) {
 		ArrayList<Pair> cincomil = new ArrayList<Pair>();
 
@@ -39,17 +62,10 @@ public class billsmain {
 		cincomil.add(new Pair("sello","no presente"));
 		cincomil.add(new Pair("lectura","media"));
 		
-		ArrayList<Pair> dosmil = new ArrayList<Pair>();
-		dosmil.add(new Pair("firma de gerente","887d555TAG777d6"));
-		dosmil.add(new Pair("material","plastico"));
-		dosmil.add(new Pair("denominacion","2000"));
-		dosmil.add(new Pair("sello","traslucido"));
-		dosmil.add(new Pair("serie","B"));
-		dosmil.add(new Pair("novidente","no presente"));
-		dosmil.add(new Pair("micro letra","pura vida"));
-		dosmil.add(new Pair("perfecto","20"));
-		dosmil.add(new Pair("hilo","doble"));
-		dosmil.add(new Pair("marca de agua","tiburon"));	
+		billsmain prog = new billsmain();
+		prog.init();
+		
+		System.out.println(prog.validate(cincomil, 2000));
 	}
 
 }

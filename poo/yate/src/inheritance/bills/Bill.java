@@ -5,16 +5,14 @@ import java.util.ArrayList;
 public class Bill {
 	protected String firmagerente;
 	protected String serie;
+	protected int denominacion;
 	// otros fields
 	
 	protected ArrayList<Pair> variableList;
 	
 	
-	public Bill(ArrayList<Pair> pVariables) {
-		this.variableList = pVariables;
-		
-		firmagerente = getValue("firmagerente");
-		serie = getValue("serie");
+	public Bill(int pDenominacion) {
+		denominacion = pDenominacion;
 	}
 	
 	public String getValue(String pKey) {
@@ -29,8 +27,13 @@ public class Bill {
 		return result;
 	}
 	
-	public boolean validate() {
+	public boolean validate(ArrayList<Pair> pVariables) {
 		boolean result = false;
+
+		this.variableList = pVariables;
+		
+		firmagerente = getValue("firmagerente");
+		serie = getValue("serie");
 		
 		result =	!getValue("firma de gerente").isEmpty() &&
 					!getValue("marca de agua").isEmpty() &&
@@ -41,5 +44,9 @@ public class Bill {
 	
 	public boolean validateSegundaVersion() {
 		return true;
+	}
+	
+	public int getDenominacion() {
+		return this.denominacion;
 	}
 }

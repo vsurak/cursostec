@@ -44,4 +44,32 @@ int main() {
         cout << *currentmsg << endl;
     }
 
+
+    // el polimorfismo es una herramienta o técnica de la programación de objetos que nos permite
+    // encapsular comportamientos de una clase en otra, es decir, que puedo hacer que una classe
+    // se comporte como otra en el momento en que se necesite.
+    // Para ello se requiere "firmar un contrato" que establece cuales son los comportamientos
+    // que yo quiero que las demás clases tengan, eso se hace por medio de 
+    // de herencia o implementacion de interfaces
+    // en el caso de C++, las interfaces no existen en un concepto puro, si no que se trabajan
+    // como herencia de clases abstractas
+    // esto es posible porque C++ es de los pocos lenguajes que permiten herencia múltiple
+    // puedo heredar de más de una clase a la vez, ejemplo:
+    // supongo que tengo la clase A que es concreta, y tiene el método sumar, (esto es el comportamiento que queremos acordar que se va a compartir)
+    // supongo que tengo la clase B que es un abstract, es decir, que posee métodos virtuales sin implementación
+    // tiene el método restar que es virtual, ese es el comportamiento que quiero replicar
+    // si tengo la clase C, que hereda(implementa), de A y de B
+    // class C : public A, public B {
+    //    
+    // }
+    // la clase C hereda el método sumar, es concreto, si lo desea le puede hacer override 
+    // dentro del override podría llamar al sumar padre tambien, pero lo importante del polimorfismo
+    // es que forzosamente la clase C tiene si o si un método sumar
+    // de la misma forma, la clase C al heredar de B, está obligada a implementar el método virtual restar
+    // lo importante en polimorfismo es que enotnces la clase C, va a tener el método restar si o si
+    //
+    // C miVariable; ó C *miVariable = new C();
+    // A otraVariable = miVariable; // esto es lo polimorfo, ahora aunque en la memoria esta todo lo que ocupa la clase C, puedo apuntarlo con un puntero de clase A
+    
+
 }
