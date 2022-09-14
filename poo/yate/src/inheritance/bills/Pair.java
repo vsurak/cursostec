@@ -9,6 +9,7 @@ public class Pair {
 		this.key = pKey;
 		this.value = pValue;
 	}
+	
 	public String getKey() {
 		return key;
 	}

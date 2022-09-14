@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class billsmain {
 
 	/*
-	 * un scanner de billetes retorna a un programa una lista de pares
+	 * un scanner de billetes le envía a un programa una lista de pares
 	 * ordenados (llave, valor) de las características que detectó del billete.
 	 * una función de un programa en java toma dicha información y por medio de 
 	 * de un conjunto de ifs revisa ciertas reglas basado en la información de
@@ -13,7 +13,7 @@ public class billsmain {
 	 * 
 	 * la información es diferente dependiendo del tipo de billete, como se puede ver 
 	 * en las listas de Pair en el main, donde se muestra un par de ejemplos de la información 
-	 * que llega de de un billete de 5000 y uno de 2000.
+	 * que llega de un billete de 5000 y uno de 2000.
 	 * 
 	 * de la misma forma el scanner extrae información particular para cada tipo 
 	 * de denominación y emisión. 
@@ -49,8 +49,7 @@ public class billsmain {
 		dosmil.add(new Pair("micro letra","pura vida"));
 		dosmil.add(new Pair("perfecto","20"));
 		dosmil.add(new Pair("hilo","doble"));
-		dosmil.add(new Pair("marca de agua","tiburon"));
-		
+		dosmil.add(new Pair("marca de agua","tiburon"));	
 	}
 
 }

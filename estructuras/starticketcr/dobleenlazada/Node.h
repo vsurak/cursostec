@@ -12,16 +12,19 @@ class Node {
     private:
         T *data;
         Node *next;
+        Node *prev; // esta linea se agrega para quiz #4 #5
     
     public:
         Node() {
             data = NULL;
             next = NULL;
+            prev = NULL;
         }
 
         Node(T *pData) {
             this->data = pData;
             next = NULL;
+            prev = NULL;
         }
 
         T* getData() {
@@ -35,6 +38,15 @@ class Node {
         void setNext(Node *pValue) {
             this->next = pValue;
         }
+
+        Node* getPrev() { // esta linea se agrega para quiz #4 #5
+            return prev;
+        }
+
+        void setPrev(Node *pValue) {// esta linea se agrega para quiz #4 #5
+            this->prev = pValue;
+        }
+
 };
 
 #endif

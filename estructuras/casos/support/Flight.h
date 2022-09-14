@@ -17,21 +17,43 @@ using namespace std;
 class Flight {
 
     private: 
+        string aerolinea; // quiz #6, preg 1
+        string numerovuelo; // quiz #6, preg 1
+        int pasajeros; // quiz #6, preg 1
+
         time_t flightTime;
+        struct tm* flightTimeInfo;
 
     public: 
-        Flight(int pHour, int pMinutes) {
-            flightTime = time(NULL);
-            tm *currentTime = localtime(&flightTime);
+        Flight(int pHour, int pMinutes) {  // quiz #6, , preg 2
+            time(&flightTime);
+            flightTimeInfo = localtime(&flightTime); // creo una hora actual artificial
+
+            flightTimeInfo->tm_hour = pHour;  // modifico la hora y los minutos
+            flightTimeInfo->tm_min = pMinutes;
+
+            flightTime = mktime(flightTimeInfo);  // creo un nuevo time con esa hora y le caigo encima
         }
 
-        char* flightTimeString() {
+        char* getFlightTimeString() {
             char* result = ctime(&flightTime);
             return result;
         }
 
-        int getIntTimeValue() {
+        int getIntTimeValue() { // quiz #6, preg 3, aqui puede que hayan agarrado las horas, multiplicarlo por un factor, digamos 100, 1000 y luego sumar los minutos
+            // yo lo voy hacer por timediff para que quede documentado 
             int result = 0;
+            time_t now;
+            struct tm firstDayYear;
+
+            // saco la fecha actual y queda en now
+            time(&now);
+            firstDayYear = *localtime(&now); // saco el struct y le pongo que es el 1ero de enero, en 0:0:0
+            firstDayYear.tm_hour = 0; firstDayYear.tm_min = 0; firstDayYear.tm_sec = 0;
+            firstDayYear.tm_mon = 1;  firstDayYear.tm_mday = 1;
+
+            result = (int)difftime(mktime(&firstDayYear), flightTime); //saco la cantidad de segundos del inicio de año a la hora del vuelo
+
             return result;
         }
 };
