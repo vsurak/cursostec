@@ -19,6 +19,7 @@ int main() {
     Event *otroEvento = new Event("Charla de Bill Gates", "ITCR", "ASODEC");
     Event *otroEvento2 = new Event("Evento del final", "ITCR", "ASODEC");
 
+
     listA->insert(0, otroEvento2);
     listA->insert(0, otroEvento);
     listA->add(unEvento);
@@ -72,4 +73,80 @@ int main() {
     // A otraVariable = miVariable; // esto es lo polimorfo, ahora aunque en la memoria esta todo lo que ocupa la clase C, puedo apuntarlo con un puntero de clase A
     
 
+    cout << "Pruebas de polimorfismo con la nueva herencia de List => Stack y Queue" << endl;
+
+    List<string> *ingredientes = new List<string>();
+
+    ingredientes->add(new string("arroz"));
+    ingredientes->add(new string("zanahora"));
+    ingredientes->add(new string("cebolla"));
+
+    //L-> arroz, zanahora, cebolla
+
+    ingredientes->insert(1,new string("culantro"));
+
+    //L-> arroz, culantro, zanahora, cebolla
+
+    for(int i=0; i<ingredientes->getSize(); i++) {
+        string *currentmsg = ingredientes->find(i);
+        cout << *currentmsg << endl;
+    }
+
+    ingredientes->enqueue(new string("carne molida"));
+    ingredientes->enqueue(new string("aceite"));
+    //L-> arroz, culantro, zanahora, cebolla, carne molida, aceite
+
+
+    for(int i=0; i<3; i++) {
+        string *currentmsg = ingredientes->pop();
+        cout << *currentmsg << endl;
+        ingredientes->enqueue(currentmsg);
+    }
+
+    //L->  cebolla, carne molida, aceite, arroz, culantro, zanahora
+
+    ingredientes->push(new string("sal"));
+    //L->  sal, cebolla, carne molida, aceite, arroz, culantro, zanahora
+
+    for(int i=0; i<ingredientes->getSize(); i++) {
+        string *currentmsg = ingredientes->find(i);
+        cout << *currentmsg << endl;
+    }
+ 
+    cout << "====ahora si, polimorfeando....=====" << endl;
+
+    Queue<string> *colaAnimales = new List<string>(); 
+    //colaAnimales->add(new string("gato")); // da error
+
+    colaAnimales->enqueue(new string("gato"));
+    colaAnimales->enqueue(new string("perro"));
+    colaAnimales->enqueue(new string("conejo"));
+    colaAnimales->enqueue(new string("leon"));
+
+    //C ->  gato, perro, conejo, leon
+
+    cout << *(colaAnimales->dequeue()) << endl;
+
+    List<string> *listaNombres = new List<string>();
+    
+    Queue<string> *colaA = listaNombres;
+    Stack<string> *miPila = listaNombres;
+
+    miPila->push(colaAnimales->dequeue()); // perro
+    miPila->push(colaAnimales->dequeue()); // conejo
+    miPila->push(colaAnimales->dequeue()); // leon
+
+    // Pila -> leon, conejo, perro
+    // Lista -> leon, conejo, perro
+
+    colaA->enqueue(new string("basurero"));
+    colaA->enqueue(new string("arbol"));
+    colaA->enqueue(new string("casa"));
+
+    // Pila -> leon, conejo, perro, basurero, arbol, casa
+
+    for(;!miPila->isEmpty(); ) {
+        string *currentmsg = miPila->pop();
+        cout << *currentmsg << endl;
+    }
 }

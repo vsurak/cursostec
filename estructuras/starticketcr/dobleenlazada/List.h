@@ -1,13 +1,15 @@
 #include "Node.h"
 #include "../eventos/event.h"
 #include "stack.h"
+#include "queue.h"
 
 #ifndef LIST 
 
 #define LIST 1
 
 // 2. ajustar a que esta lista sea doblemente enlazada, cambia el add, find, insert y el remove
-template<typename T> class List : public Stack<T> {
+template <typename T> 
+class List : public Stack<T>, public Queue<T> {
     private:
         Node<T> *first;
         Node<T> *last;
@@ -129,6 +131,15 @@ template<typename T> class List : public Stack<T> {
         T* pop() {
             return remove(0);
         }
+
+        void enqueue(T* pValue) {
+            add(pValue);
+        }
+
+        T* dequeue() {
+            return remove(0);
+        }
+
 };
 
 #endif

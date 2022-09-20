@@ -3,11 +3,12 @@
 
 #define STACK 1
 
-template <class T>
+template <typename T>
 class Stack {
     public:
-        virtual void push(T* pValue);
+        virtual void push(T* pValue) = 0;
         virtual T* pop() = 0;
+        virtual bool isEmpty() = 0;
 };
 
 #endif
