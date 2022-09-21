@@ -140,6 +140,19 @@ class List : public Stack<T>, public Queue<T> {
             return remove(0);
         }
 
+        void resetSearch() {
+            searchPosition = first;
+        }
+
+        T* next() {
+            T* result = NULL;
+            if (searchPosition!=NULL) {
+                result = searchPosition->getData();
+                searchPosition = searchPosition->getNext();
+            }
+            return result;
+        }
+
 };
 
 #endif

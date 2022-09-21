@@ -22,13 +22,26 @@ int main() {
     listNumbers->add(&numbers[4]);
 
     // cargar las listas con sus algoritmos
+    
     // seleccionar un algoritmo de sort aleatorio y lo ejecuto
+    int selectedSort = rand() % 3;
+    ISort *sortAlg = algoritmosDeSort->find(selectedSort);
+    listNumbers = sortAlg->sort(listNumbers);
+
+    // imprimo la lista ordenada
+    int *value = 0;
+    
+    listNumbers->resetSearch();
+    value = listNumbers->next();
+    while (value!=NULL) {
+        cout << *value << endl;
+        value = listNumbers->next();
+    } 
+
     // selecciono un algoritmo de search aleatorio y lo ejecuto
-
-    ISort *sortAlg = algoritmosDeSort->find(0);
-    ISearch *searchAlg = algoritmosDeSearch->find(0);
-
-    sortAlg->sort(listNumbers);
+    int selectedSearch = rand() % 2;
+    ISearch *searchAlg = algoritmosDeSearch->find(selectedSearch);
+   
     cout << searchAlg->search(listNumbers, 22) << endl;
     cout << searchAlg->search(listNumbers, 200) << endl;
 }
