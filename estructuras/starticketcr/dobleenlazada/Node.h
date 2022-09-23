@@ -6,47 +6,57 @@
 
 using namespace std;
 
-// 1. pasar este nodo a doblemente enlazado
 template <class T>
 class Node {
     private:
         T *data;
         Node *next;
-        Node *prev; // esta linea se agrega para quiz #4 #5
+        Node *previous;    //modificacion, agrego link hacia atras 
     
     public:
         Node() {
             data = NULL;
             next = NULL;
-            prev = NULL; // esta linea se agrega para quiz #4 #5
+            previous = NULL;   //modif, creo previous y la hago null
         }
 
         Node(T *pData) {
             this->data = pData;
             next = NULL;
-            prev = NULL;
+            previous = NULL;  //modif, la pongo en null
         }
 
         T* getData() {
             return data;
         }
 
+        void setData(T *pData) {
+            this->data = pData;
+        }
+
         Node* getNext() {
             return next;
+        }
+
+        Node* getPrevious() {    //modif, creo este metodo que retorna
+            return previous;     //el previo
         }
 
         void setNext(Node *pValue) {
             this->next = pValue;
         }
 
-        Node* getPrev() { // esta linea se agrega para quiz #4 #5
-            return prev;
+        void setPrevious(Node *pValue) {   //modif, creo este metodo que
+            this->previous = pValue;       //pone valor al previo    
         }
 
-        void setPrev(Node *pValue) {// esta linea se agrega para quiz #4 #5
-            this->prev = pValue;
+        Node* getPrev() {    //modif, creo este metodo que retorna
+            return previous;     //el previo
         }
 
+        void setPrev(Node *pValue) {   //modif, creo este metodo que
+            this->previous = pValue;       //pone valor al previo    
+        }
 };
 
 #endif
