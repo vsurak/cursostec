@@ -36,6 +36,7 @@ class SelectionSort : public ISort {
                     number = pNumberList->find(positionXchg + 1);
                     // Ahora todos los nodos se corrieron una posición después de positionXchg
                     // Obtenemos el elemento de positionXchg + 1;
+                    
                     pNumberList->remove(positionXchg + 1); // Eliminamos el nodo en positionXchg + 1 para insertarlo en position.
                     pNumberList->remove(position); // Borramos el nodo de la posición original.
                     pNumberList->insert(position, number); // insertamos el número que orignalmente estaba en positionXchg en position.
