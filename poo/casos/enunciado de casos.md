@@ -205,9 +205,9 @@ cada estudiante tiene su creatividad propia, esa misma que le llevará a abordar
 
 2. _del 12 al 21 de setiembre, pruebas de concepto:_ programé pruebas concretas de como voy a resolver los retos técnicos que me plantié en el bloque 1: en un 100%(15), 70%(10) o menos del 50%(6)
 
-3. _del 19 al 30 de setiembre, all together:_ dividiendo la solución en 3 macro módulos: simulación, ciclo de vida y operativo, he logrado concluír a mínimo un 80% de cada macro módulo, ya sea de: los tres (15), simulación+operativo(7), ciclo de vida+operativo(12), simulacion+cicloc de vida(15), ciclo de vida(10), operativo(5), simulacion(10)  
+3. _del 28 set al 5 de octubre, all together:_ dividiendo la solución en 3 macro módulos: simulación, ciclo de vida y operativo, he logrado concluír a mínimo un 80% de cada macro módulo, ya sea de: los tres (15), simulación+operativo(7), ciclo de vida+operativo(12), simulacion+cicloc de vida(15), ciclo de vida(10), operativo(5), simulacion(10)  
 
 ## otros aspectos
-- fecha de entrega: martes 5 de octubre antes de medio día, último commit en github.
-- última fecha para consulta: miércoles 28 de setiembre
+- fecha de entrega: lunes 10 de octubre antes de medio día, último commit en github.
+- última fecha para consulta: miércoles 5 de octubre
 - revisión por cita
