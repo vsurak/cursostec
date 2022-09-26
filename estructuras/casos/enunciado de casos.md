@@ -155,4 +155,87 @@ asignaciones preliminares para miércoles 7 de setiembre
 3. encapsulamiento, una función o método sabe hacer una única cosa y nada más, no se mienta así mismo con el nombre del método
 4. correcta idemtación tomando en cuenta la apertura de braces {, el cierre } y el tab
 5. en un condicional, if, switch, la condición que ocurre más frecuentemente debe ir de primero
-6. en una classe primero se declaran las cosas públicas y seguidamente las privadas
+6. en una classe primero se declaran las cosas públicas y seguidamente las privadas 
+
+
+# caso #4, 20%
+
+*instituto tecnológico de costa rica*, escuela de computación
+*estructuras de datos*
+_prof. rodrigo núñez_
+
+*tipo:* groups of two
+
+## descripción del caso 
+
+### minando el oro 
+
+existe el interés de una empresa nacional de desarrollar un juego de estrategia que reta a los jugadores a extraer la mayor cantidad de mineral de unos tuneles con cámaras de extracción. se le ha solicitado a usted que diseñe y desarrolle el programa principal para demostrar que la lógica del juego funciona correctamente.
+
+*las puertas* 
+
+el juego debe ofrecer N puertas para entrar a los túneles, existe una puerta principal por donde se ingresa, esa conecta hacia la red de puertas. una puerta puede llevar a mínimo 2 puertas y máximo 4, las puertas se ubican en los puntos cardinales respectivos (este, oeste, norte, sur). al entrar a una puerta de estas podría haber solo conexión hacia las otras puertas o bien podría haber entrada a los túneles de minado. solicite al usuario el total de puertas que se quiere crear o bien lo establece en una constante. 
+
+*túneles* 
+
+los túneles inician con una cámara raíz que siempre está vacía, luego cada camára tiene de 1 a 2 bifurcaciones, cada bifurcación tiene una distancia de 10 a 80 metros que llegaría a otra cámara. la red de túneles y sus bifurcaciones existen bajo la regla del potencial de minado, potencial = cantidad de mineral * distancia. las cámaras con potencial menor siempre están a la izquierda de la cámara actual y las de potencial mayor a la derecha. 
+
+*las cámaras* 
+
+las cámaras pueden tener de 1 a 20 unidades de mineral y nunca existen cámaras a más de 720 metros de profundidad desde la puerta por la que se ingresó al túnel. si una cámara queda sin mineral, se elimina de la red de tuneles con todo y sus bifurcaciones hijas. 
+
+*los personajes* 
+
+existen 3 tipos de personajes; explorador, que camina 20mts por segundo y puede traer por viaje a la puerta hasta 8 unidades de minerales; carguero, que camina 10mts por segundo y puede traer hasta 40 unidades de mineral y finalmente el topo; que camina 7mts por segundo, puede traer hasta 15 unidades de mineral y solo una vez por tunel puede pasarse internamente de la cámara actual a la cámara hermana. 
+
+*los jugadores* 
+
+partipan 2 jugadores, cada uno tiene un turno de 2 minutos, durante ese tiempo debe seleccionar 3 mineros que pueden ser de cualquier tipo de personaje, y escoger la estrategia de juego que quiere seguir para cada minero. dicha estrategia debe darle criterio autónomo a cada minero para decidir a cuáles puertas entrar y cómo recorrer los túneles. como diseñador del juego usted busca una forma rápida y efectiva para que el jugador seleccione como quiere jugar, pues el tiempo el restante será el que tenga para ir a recoger minerales. los mineros suman mineral hasta que llegan a una cámara donde deciden minarla y dicho mineral lo deben llevar hasta la puerta por ponde entraron al tunel. gana el jugador que logre sacar más minerales.
+
+*artefactos técnicos disponibles* 
+
+para usted diseñar la solución de este juego cuenta con los siguientes artefactos: 
+
+1. lenguaje C++
+2. lista doblemente enlazada (la ya programada con las modificaciones que considere)
+3. pilas y colas, puede ser la ya programada o la que ofrezca el lenguaje
+4. árbol AVL genérico, programado por el estudiante 
+5. algoritmos de ordenamiento programados o lo que ofrezca el lenguaje
+6. algoritmo de búsqueda binaria programado
+7. hashtables o diccionarios proporcionados por el lenguaje
+8. orientación a objetos en general
+9. herencia y polimorfismo
+10. diseño o modelaje de objetos
+11. threads proporcionados por el lenguaje
+12. patrón producto consumidor, patrón strategy y cualquier otro patrón de diseño orientado a ojetos
+
+## preliminares 
+
+_Cristopher Acuña:_ cómo funciona un hashtable, map o directory en c++ y cómo podría ser útil para implementar polimorfismo. 
+
+_Josue Romero:_ cómo funcionan los threads en C++, qué es un thread, cómo consideras que podrían ser útiles los threads para este caso 
+
+_Kenneth Rojas:_ qué es el patrón producto consumidor y cómo podría implementarse haciendo uso de hilos y colas. 
+
+_Luis Gonzalez:_ programar un ejemplo de cómo podría el patrón productor consumidor ser útil para este caso, que problema queda sencillo de resolver dado este patrón. 
+
+_Gabriel Gomez:_ programar un ejemplo de cómo podrían ser útiles las pilas para resolver este caso. en que proceso o etapa del problema las pilas podrían ser útiles. 
+
+_Daniel Granados:_  implementar y explicar el algoritmo de búsqueda en un árbol AVL. 
+
+_Emmanuel Matamoros:_ implementar y explicar el algoritmo de borrado en un árbol AVL.  
+
+## aspectos operativos 
+
+- último commit:  domingo 16 de octubre antes de media noche
+- la revisión será con cita
+- se evaluará calidad de código bajo las siguientes buenas prácticas:
+
+1. nombres significativos de variables, parámetros y métodos, que tengan claro su intención con el nombre
+2. toda classe o struct debe estar en archivos separados ya sea .h o .cpp
+3. encapsulamiento, una función o método sabe hacer una única cosa y nada más, no se mienta así mismo con el nombre del método
+4. correcta idemtación tomando en cuenta la apertura de braces {, el cierre } y el tab
+5. en un condicional, if, switch, la condición que ocurre más frecuentemente debe ir de primero
+6. en una classe primero se declaran las cosas privadas y seguidamente las públicas, los atributos van antes de los métodos
+
+
