@@ -164,7 +164,7 @@ asignaciones preliminares para miércoles 7 de setiembre
 *estructuras de datos*
 _prof. rodrigo núñez_
 
-*tipo:* groups of two
+*tipo:* grupal, máximo 2 personas
 
 ## descripción del caso 
 
@@ -174,11 +174,11 @@ existe el interés de una empresa nacional de desarrollar un juego de estrategia
 
 *las puertas* 
 
-el juego debe ofrecer N puertas para entrar a los túneles, existe una puerta principal por donde se ingresa, esa conecta hacia la red de puertas. una puerta puede llevar a mínimo 2 puertas y máximo 4, las puertas se ubican en los puntos cardinales respectivos (este, oeste, norte, sur). al entrar a una puerta de estas podría haber solo conexión hacia las otras puertas o bien podría haber entrada a los túneles de minado. solicite al usuario el total de puertas que se quiere crear o bien lo establece en una constante. 
+el juego debe ofrecer N puertas para entrar a los túneles, existe una puerta principal por donde se ingresa, esa conecta hacia la red de puertas. una puerta puede llevar a mínimo 2 puertas y máximo 4, las puertas se ubican en los puntos cardinales respectivos (este, oeste, norte, sur). al entrar a una puerta de estas podría haber solo conexión hacia las otras puertas o bien podría haber entrada a los túneles de minado. solicite al usuario el total de puertas que se quiere crear o bien lo establece en una constante. si una puerta o no tiene entrada a un túnel, se decide en el momento que se construye la mina, siendo este una posiblidad del 66%. 
 
 *túneles* 
 
-los túneles inician con una cámara raíz que siempre está vacía, luego cada camára tiene de 1 a 2 bifurcaciones, cada bifurcación tiene una distancia de 10 a 80 metros que llegaría a otra cámara. la red de túneles y sus bifurcaciones existen bajo la regla del potencial de minado, potencial = cantidad de mineral * distancia. las cámaras con potencial menor siempre están a la izquierda de la cámara actual y las de potencial mayor a la derecha. 
+los túneles inician con una cámara raíz que no tiene minerales ni entrada a ningún tunel. cada camára, incluyendo la raíz, tiene de 1 a 2 bifurcaciones, cada bifurcación tiene una distancia de 10 a 80 metros que llegaría a otra cámara. la red de túneles y sus bifurcaciones existen bajo la regla del potencial de minado, potencial = cantidad de mineral * distancia. las cámaras con potencial menor siempre están a la izquierda de la cámara actual y las de potencial mayor a la derecha. 
 
 *las cámaras* 
 
@@ -190,11 +190,11 @@ existen 3 tipos de personajes; explorador, que camina 20mts por segundo y puede 
 
 *los jugadores* 
 
-partipan 2 jugadores, cada uno tiene un turno de 2 minutos, durante ese tiempo debe seleccionar 3 mineros que pueden ser de cualquier tipo de personaje, y escoger la estrategia de juego que quiere seguir para cada minero. dicha estrategia debe darle criterio autónomo a cada minero para decidir a cuáles puertas entrar y cómo recorrer los túneles. como diseñador del juego usted busca una forma rápida y efectiva para que el jugador seleccione como quiere jugar, pues el tiempo el restante será el que tenga para ir a recoger minerales. los mineros suman mineral hasta que llegan a una cámara donde deciden minarla y dicho mineral lo deben llevar hasta la puerta por ponde entraron al tunel. gana el jugador que logre sacar más minerales.
+partipan 2 jugadores, cada uno tiene un turno de 2 minutos, durante ese tiempo debe seleccionar 3 mineros que pueden ser de cualquier tipo de personaje, también en ese tiempo debe escoger la estrategia de juego que quiere seguir para cada minero. dicha estrategia debe darle criterio autónomo a cada minero para decidir a cuáles puertas entrar y cómo recorrer los túneles. como diseñador del juego usted busca una forma rápida y efectiva para que el jugador seleccione como quiere jugar, pues el tiempo el restante será el que tenga para ir a recoger minerales. los mineros suman mineral hasta que llegan a una cámara donde deciden minarla y dicho mineral lo deben llevar hasta la puerta por ponde entraron al tunel. gana el jugador que logre sacar más minerales. para navegar por las puertas y los túneles es requesito usar la red construída de puertas y túneles. 
 
 *artefactos técnicos disponibles* 
 
-para usted diseñar la solución de este juego cuenta con los siguientes artefactos: 
+para usted diseñar la solución de este juego, la empresa le ha concedido un conjunto de artefactos técnicos que le pueden ayudar en su implementación:
 
 1. lenguaje C++
 2. lista doblemente enlazada (la ya programada con las modificaciones que considere)
@@ -208,6 +208,9 @@ para usted diseñar la solución de este juego cuenta con los siguientes artefac
 10. diseño o modelaje de objetos
 11. threads proporcionados por el lenguaje
 12. patrón producto consumidor, patrón strategy y cualquier otro patrón de diseño orientado a ojetos
+
+
+entonces, cuál sería su diseño de clases, estructuras de datos, algoritmos y estrategia general para implementar su versión de este juego? 
 
 ## preliminares 
 
