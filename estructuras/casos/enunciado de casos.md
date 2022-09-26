@@ -214,7 +214,9 @@ entonces, cuál sería su diseño de clases, estructuras de datos, algoritmos y 
 
 ## preliminares 
 
-_Cristopher Acuña:_ cómo funciona un hashtable, map o directory en c++ y cómo podría ser útil para implementar polimorfismo. 
+_Cristopher Acuña:_ cómo funciona un map en c++ y cómo podría ser útil para implementar polimorfismo. 
+
+_Sarah Quesada:_ cómo funciona un unordered_map en c++, cómo podría ser útil para implementar polimorfismo y porque este es más rápido que un map. 
 
 _Josue Romero:_ cómo funcionan los threads en C++, qué es un thread, cómo consideras que podrían ser útiles los threads para este caso 
 
