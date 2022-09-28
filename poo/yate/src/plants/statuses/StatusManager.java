@@ -1,33 +1,54 @@
 package plants.statuses;
 
-import plants.Plant;
+import java.util.ArrayList;
 
-public class StatusManager {
+import plants.Plant;
+import plants.simulation.SimulatorReport;
+import plants.utils.*;
+
+public class StatusManager implements IObserver, IConstants {
 	private ArrayList<Plant> garden;
+	
+	public StatusManager() {
+		garden = new ArrayList<Plant>();
+		garden.add(new Plant(1));
+	}
 	// la lista de reglas de abono para todas los tipos de planta que viene del json
 	// la lista de reglas de agua para todos los tipos de planta que viene del json
 	// lo mismo para la temperatura...
 	
-	public void evaluate() {
+	public void evaluate(int pCurrentDays) {
 		for(Plant currentPlant : garden) {
-			currentPlant.evaluate();
+			currentPlant.evaluate(pCurrentDays);
 		}		
 	}
 	
-	public updateTemperature(int cantDays, int temperature) {
-		// las reglas de temperatura sobre vida
-		// recorro todas las plantas del jardin
+	public void updateTemperature(int cantDays, int temperature) {
+		System.out.println("actualizando temp");
 	}
 
-	public updateWater(int cantDays, int agua) {
+	public void updateWater(int cantDays, int agua) {
+		System.out.println("actualizando lluvia");
 		// las reglas de agua sobre vida
 		// recorro todas las plantas del jardin
 	}
 
-	public updateAbono(int cantDays, int abono) {
+	public void updateAbono(int cantDays, int abono) {
 		// las reglas de abono sobre vida
 		// recorro todas las plantas del jardin
 	}
 
+	@Override
+	public void update(Observable o, Object arg) {
+		SimulatorReport simReport = (SimulatorReport)arg;
+		if (simReport.action.compareTo(UPDATE_DAYS)==0) {
+			evaluate(simReport.days);
+		}
+		if (simReport.action.compareTo(UPDATE_WEATHER)==0) {
+			updateTemperature(simReport.days, simReport.temperature);
+			updateWater(simReport.days, simReport.rain);
+		}
+		
+	}
 }
 

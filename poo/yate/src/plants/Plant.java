@@ -1,33 +1,41 @@
 package plants;
 
 import plants.statuses.PlantStatus;
+import plants.statuses.StatusChangeRule;
+import plants.utils.IConstants;
 
-public class Plant {
+import java.time.LocalDate;
+import java.util.*;
+
+public class Plant implements IConstants {
 	private String name;
 	private int type;
 	private PlantStatus currentState;
 	private int life;
-	private int createTime;
+	private int ageDays;
+	private ArrayList<StatusChangeRule> reglas[];
 	
-	private ArrayList<StatusChangeRule> listaDeReglas;
-	private ArrayList<StatusChangeRule> reglas[] = new ArrayList<StatusChangeRule>[8];
-	
-	public int getTime() {
-	
+	public Plant(int pType) {
+		type = pType;
 	}
 	
-	public int getTimeInDays() {
-		
+	public int getAgeinDays() {
+		return ageDays;
+	}
+	
+	public int getTimeInYears() {
+		return ageDays/DAYS_IN_YEARS;
 	}
 	
 	public void evaluate(int currentDays) {
-		ArrayList<StatusChangeRule> rulesparamiestado = reglas[currentState.getId()];
-		
-		for(StatusChangeRule rule : rulesparamiestado) {
-			if (rule.getMinAge()<=getTimeInDays() && rule.getMaxAge()>=getTimeInDays() && el valor de vida) {
+		//ArrayList<StatusChangeRule> rulesparamiestado = reglas[currentState.getId()];
+
+		System.out.println("Evaluating plant type :"+ this.type);
+		/*for(StatusChangeRule rule : rulesparamiestado) {
+			if (rule.getMinDays()<=getAgeinDays() && rule.getMaxDays()>=getAgeinDays()) {
 				this.currentState = rule.getNextState();
 				break;
 			}
-		}
+		}*/
 	}
 }
