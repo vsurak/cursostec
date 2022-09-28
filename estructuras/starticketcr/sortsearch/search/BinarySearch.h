@@ -2,32 +2,46 @@
 
 class BinarySearch: public ISearch{
     private:
-        int compare;
-
+        string name = "BinarySearch";
+        int comparations;
     public:
         BinarySearch(){
+            
         }
-
         int search(List<int>* pNumberList, int pKey ){
-            compare = 0;
+            this->comparations = 0;
             int low = 0;
-            int high = pNumberList->getSize();
-            while (low <= high) {
-                int mid = low + (high - low) / 2;
-
-                compare++;
-                if (*pNumberList->find(mid) == pKey){
-                    return mid;
+            int top = pNumberList->getSize()-1;
+            int mid;
+            while (top - low > 1) {
+                int mid = (top + low) / 2;                
+                this->comparations++;
+                if (*pNumberList->find(mid) < pKey) {
+                    low = mid + 1;                    
                 }
-                compare++;
-                if (*pNumberList->find(mid) < pKey){
-                    low = mid + 1;
-                }else{
-                    high = mid - 1;
+                else {
+                    top = mid;
+                    this->comparations++;
                 }
-
             }
-
-            return -1;
+            this->comparations += 2;
+            //cout << "Comparaciones: " << this->getComparisions() << endl;
+            
+            if (*pNumberList->find(low) == pKey) {
+                return low;
+            }
+            else if (*pNumberList->find(top) == pKey) {
+                return top;
+            }
+            else {
+                return -1;
+            }
         }
+        string getName(){
+            return name;
+        }
+        int getComparisions(){
+            return this->comparations;
+        }
+
 };
