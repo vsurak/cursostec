@@ -218,7 +218,7 @@ _Cristopher Acuña:_ cómo funciona un map en c++ y cómo podría ser útil para
 
 _Sarah Quesada:_ cómo funciona un unordered_map en c++, cómo podría ser útil para implementar polimorfismo y porque este es más rápido que un map. 
 
-_Josue Romero:_ cómo funcionan los threads en C++, qué es un thread, cómo consideras que podrían ser útiles los threads para este caso 
+_Jose Pablo Barquero:_ cómo funcionan los threads en C++, qué es un thread, cómo consideras que podrían ser útiles los threads para este caso 
 
 _Kenneth Rojas:_ qué es el patrón producto consumidor y cómo podría implementarse haciendo uso de hilos y colas. 
 
