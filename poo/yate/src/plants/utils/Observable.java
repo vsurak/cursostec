@@ -7,10 +7,8 @@ import java.util.concurrent.Executors;
 public class Observable {
 	private ArrayList<IObserver> observers;
 	private ExecutorService executorPool;
-	private static Observable self;
 	
 	public Observable() {
-		self = this;
 		observers = new ArrayList<IObserver>();
 		executorPool = Executors.newFixedThreadPool(5);
 	}

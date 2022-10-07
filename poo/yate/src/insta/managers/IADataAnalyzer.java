@@ -22,7 +22,8 @@ public class IADataAnalyzer  implements PropertyChangeListener {
 	@Override
 	public void propertyChange(PropertyChangeEvent evt) {
 		Post newpost = (Post)evt.getOldValue();
-		this.recognizedObjects(newpost);
+		
+		this.recognizedObjects(newpost);	
 		this.identifyLocation(newpost);
 		this.extractPeople(newpost);
 	}

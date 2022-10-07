@@ -1,6 +1,7 @@
 package inheritance.bills;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 public class Bill5000 extends Bill {
 
@@ -9,7 +10,7 @@ public class Bill5000 extends Bill {
 	}
 	
 	// lo que se busca es modelar comportamientos específicos de los hijos
-	public boolean validate(ArrayList<Pair> pVariables) {
+	public boolean validate(Hashtable<String, Pair> pVariables) {
 		boolean result = super.validate(pVariables);
 		
 		result =result && false;

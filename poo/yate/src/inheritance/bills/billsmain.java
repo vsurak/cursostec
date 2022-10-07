@@ -1,6 +1,8 @@
 package inheritance.bills;
 
 import java.util.ArrayList;
+import java.util.Enumeration;
+import java.util.Hashtable;
 
 public class billsmain {
 
@@ -35,7 +37,7 @@ public class billsmain {
 		validadores.add(new Bill5000());
 	}
 	
-	public boolean validate(ArrayList<Pair> pValues, int pDenominacion) {
+	public boolean validate(Hashtable<String, Pair> pValues, int pDenominacion) {
 		boolean result = false;
 				
 		for (Bill validator : validadores) {
@@ -49,23 +51,28 @@ public class billsmain {
 	}
 	
 	public static void main(String[] args) {
-		ArrayList<Pair> cincomil = new ArrayList<Pair>();
+		Hashtable<String, Pair> cincomil = new Hashtable<String, Pair>();
 
-		cincomil.add(new Pair("firma de gerente","AA7838BC563A"));
-		cincomil.add(new Pair("firma presidente","77733ABCCC7AAA"));
-		cincomil.add(new Pair("font_serie","10px"));
-		cincomil.add(new Pair("font_billete","14pix"));
-		cincomil.add(new Pair("serie","A"));
-		cincomil.add(new Pair("marca de agua","unknown"));
-		cincomil.add(new Pair("denominacion","5000"));
-		cincomil.add(new Pair("material","algodon"));
-		cincomil.add(new Pair("sello","no presente"));
-		cincomil.add(new Pair("lectura","media"));
+		cincomil.put("firma de gerente", new Pair("firma de gerente","AA7838BC563A"));
+		cincomil.put("firma presidente", new Pair("firma presidente","77733ABCCC7AAA"));
+		cincomil.put("font_serie", new Pair("font_serie","10px"));
+		cincomil.put("font_billete", new Pair("font_billete","14pix"));
+		cincomil.put("serie", new Pair("serie","A"));
+		cincomil.put("marca de agua", new Pair("marca de agua","unknown"));
+		cincomil.put("denominacion", new Pair("denominacion","5000"));
+		cincomil.put("material", new Pair("material","algodon"));
+		cincomil.put("sello", new Pair("sello","no presente"));
+		cincomil.put("lectura", new Pair("lectura","media"));
 		
 		billsmain prog = new billsmain();
 		prog.init();
 		
 		System.out.println(prog.validate(cincomil, 2000));
+		
+		for(Enumeration<String> keys = cincomil.keys(); keys.hasMoreElements();) {
+			String key = keys.nextElement();
+			System.out.println(key+" : "+cincomil.get(key).getValue());
+		}
 	}
 
 }

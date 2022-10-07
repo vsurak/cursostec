@@ -1,6 +1,7 @@
 package inheritance.bills;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 public class Bill2000 extends Bill {
 	private String microLetra;
@@ -11,7 +12,7 @@ public class Bill2000 extends Bill {
 	}
 	
 	// lo que se busca es modelar comportamientos específicos de los hijos
-	public boolean validate(ArrayList<Pair> pVariables) {
+	public boolean validate(Hashtable<String, Pair> pVariables) {
 		boolean result = super.validate(pVariables);
 		
 		// las reglas propias del billete de 2000

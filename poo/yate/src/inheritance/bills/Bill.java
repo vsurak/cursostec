@@ -1,6 +1,7 @@
 package inheritance.bills;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 public class Bill {
 	protected String firmagerente;
@@ -8,7 +9,7 @@ public class Bill {
 	protected int denominacion;
 	// otros fields
 	
-	protected ArrayList<Pair> variableList;
+	protected Hashtable<String, Pair> variableList;
 	
 	
 	public Bill(int pDenominacion) {
@@ -18,16 +19,14 @@ public class Bill {
 	public String getValue(String pKey) {
 		String result = "";
 		
-		for(Pair currentPair : variableList) {
-			if (currentPair.getKey().equals(pKey)) {
-				result=currentPair.getValue();
-			}
+		if (variableList.contains(pKey)) {
+			result = variableList.get(pKey).getValue();
 		}
 		
 		return result;
 	}
 	
-	public boolean validate(ArrayList<Pair> pVariables) {
+	public boolean validate(Hashtable<String, Pair> pVariables) {
 		boolean result = false;
 
 		this.variableList = pVariables;

@@ -27,6 +27,7 @@ public class MainApp {
 		for(String photoURL : photos) {
 			newPost.addPhoto(photoURL);
 		}
+		
 		listeners.firePropertyChange("newPost", newPost, pAuthor);
 	}
 	

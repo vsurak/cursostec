@@ -34,7 +34,7 @@ public class Simulator extends Observable implements Runnable, IConstants {
 				
 				Thread.sleep(CHECKIN_TIME);
 				dayPass = (int)ChronoUnit.MILLIS.between(startedTime, LocalTime.now()) / DAY_IN_MILLIS;
-				
+								
 				SimulatorReport report = new SimulatorReport();
 				report.action = UPDATE_DAYS;
 				report.days = dayPass;
