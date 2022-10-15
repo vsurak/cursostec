@@ -211,3 +211,53 @@ cada estudiante tiene su creatividad propia, esa misma que le llevará a abordar
 - fecha de entrega: lunes 10 de octubre antes de medio día, último commit en github.
 - última fecha para consulta: miércoles 5 de octubre
 - revisión por cita
+
+
+
+
+
+
+# caso #4, 53%
+
+*instituto tecnológico de costa rica*, escuela de computación  
+*programación orientada a objetos*  
+_prof. rodrigo núñez_  
+*tipo:* individual y grupos de 2  
+
+## descripción
+_*robot wars*_ https://www.youtube.com/watch?v=abrqn4nPw9k 
+
+es hora de la guerra de robots, competencia donde personas de muchas disciplinas ponen a prueba su ingenio para crear robots que luchen hasta la destrucción o inhabilitación de sus enemigos, luchando en una arena con trampas que pueden causar severos daños a los robots. 
+
+ahora tendrá la oportunidad de diseñar e implementar una arena de juego con robots de batalla diseñados por usted y sus compañeros, robots de software con armas especiales para poder librar las batallas. 
+
+![](/images/BattleBots-1.jpg) 
+
+_los robots_ 
+
+los robots funcionan con una batería de 100 de energía, el movimiento, la velocidad, los ataques, consumen dicha energía en forma proporcional al alcance de esas variables (distancia, velocidad, fuerza): 
+
+1. moverse (arriba, abajo, izquierda, derecha), se activa con las flechas direccionales, el robot va a tener una velocidad de pixeles por segundo teniendo un consumo de energía de 1 punto por cada 1000 pixeles recorridos. 
+
+2. golpes, los golpes son físicos, mecánicos por así decirlo, van a tener una fuerza de 1 a 10, para cada nivel de fuerza se requiere 0.3 de energía, el golpe es disparado por un lado del robot (frente, atras, izquierda o derecha) y posee una distancia de impacto, es decir, que tan largo puede estar para pegar el golpe, cada 20 pixeles de dicha distancia incrementa el consumo de energía en un 10%. 
+
+3. armas, son disparables a distancia, por ejemplo balas, fuego, cohetes, bolas de acero y similares. tienen igualmente un nivel de fuerza de 1 a 10 y consumen 0.2 de energía por cada nivel de fuerza, además tienen una velocidad en pixeles por segundo, consumiendo un 15% más de energía por cada 100 pixeles recorridos. 
+
+4. daño, los robots sufren daños cuando reciben un golpe o un disparo y los daños se aplican segun el nivel de fuerza del golpe o arma recibida con la siguiente tabla:
+
+- nivel 1 y 2; reducen la energía en un punto por cada nivel
+- nivel 3,4,5; dañan un arma o golpe o dirección de movimiento en un 20% por cada nivel
+- nivel 6,7,8; dañan un arma o golpe o dirección de movimiento en un 30% por cada nivel
+- nivel 9, 10; dañan por completo una de las direcciones de movimiento
+
+el elemento dañado se selecciona aleatoriamente y en el momento que se daña al 100% deja de funcionar ese módulo. 
+
+
+
+## asignaciones preliminares
+
+
+## otros aspectos
+- fecha de entrega: lunes 10 de octubre antes de medio día, último commit en github.
+- última fecha para consulta: viernes 11 de noviembre
+- revisión por cita

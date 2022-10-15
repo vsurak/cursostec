@@ -40,7 +40,8 @@ public class StatusManager implements IObserver, IConstants {
 
 	@Override
 	public void update(Observable o, Object arg) {
-		SimulatorReport simReport = (SimulatorReport)arg;
+		//SimulatorReport simReport = (SimulatorReport)arg;
+		SimulatorReport simReport = (SimulatorReport)(Object)o;
 		if (simReport.action.compareTo(UPDATE_DAYS)==0) {
 			evaluate(simReport.days);
 		}
