@@ -232,7 +232,7 @@ _Emmanuel Matamoros:_ implementar y explicar el algoritmo de borrado en un árbo
 
 ## aspectos operativos 
 
-- último commit:  domingo 16 de octubre antes de media noche
+- último commit:  domingo 23 de octubre antes de medio día
 - la revisión será con cita
 - se evaluará calidad de código bajo las siguientes buenas prácticas:
 
