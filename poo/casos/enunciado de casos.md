@@ -232,7 +232,7 @@ es hora de la guerra de robots, competencia donde personas de muchas disciplinas
 ahora tendrá la oportunidad de diseñar e implementar una arena de juego con robots de batalla diseñados por usted y sus compañeros, robots de software con armas especiales para poder librar las batallas. 
 
 
-<img src="/images/BattleBots-1.jpg"/> 
+<img src="images/BattleBots-1.jpg"/> 
 
 _los robots_ 
 
@@ -266,7 +266,7 @@ la arena está compuesta por dos zonas rectángulares, cada zona en la respectiv
 cada zona tendrá un máximo de 2 trampas, las trampas pueden afectar a cualquier jugador, dichas trampas se accionan en cualquier momento y reducen la energía del afectado en 5 puntos de energía, esto es si un robot pasa por encima de la trampa al mismo tiempo en que se activa. 
 
 
-<img src="/images/arena2.png"/> 
+<img src="images/arena2.png"/> 
 
 ## asignaciones preliminares
 
