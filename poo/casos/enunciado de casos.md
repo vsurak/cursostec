@@ -250,9 +250,23 @@ los robots funcionan con una batería de 100 de energía, el movimiento, la velo
 - nivel 6,7,8; dañan un arma o golpe o dirección de movimiento en un 30% por cada nivel
 - nivel 9, 10; dañan por completo una de las direcciones de movimiento
 
-el elemento dañado se selecciona aleatoriamente y en el momento que se daña al 100% deja de funcionar ese módulo. 
+el elemento dañado se selecciona aleatoriamente y en el momento que dicho elemento se daña al 100% o más deja de funcionar por completo. 
 
 
+_los competidores_ 
+
+cada competidor de robot wars juega en una computadora separada, al iniciar ingresa su nombre, selecciona el robot que va a utilizar, arma al robot escogiendo un arma y dos golpes. una vez personalizado el robot da inicio para esperar que su contrincante haga lo mismo. tan pronto ambos esten listos inicia la pelea la cual durará hasta que alguno de los robots quede con 0 o menos de energía. 
+
+
+_la arena_ 
+
+la arena está compuesta por dos zonas rectángulares, cada zona en la respectiva computadora de cada jugador. cualquier jugador puede pasarse a la zona del otro de tal forma que ambas zonas realmente actuan como una sola. en todo momento debe ser posible ver el nombre y cuanta energía tienen los jugadores. es posible ver los golpes, disparos, movimiento y demás en forma fluída y animada. 
+
+cada zona tendrá un máximo de 2 trampas, las trampas pueden afectar a cualquier jugador, dichas trampas se accionan en cualquier momento y reducen la energía del afectado en 5 puntos de energía, esto es si un robot pasa por encima de la trampa al mismo tiempo en que se activa. 
+
+
+
+![](/images/arena2.png) 
 
 ## asignaciones preliminares
 
