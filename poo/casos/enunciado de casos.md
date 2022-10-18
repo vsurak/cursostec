@@ -232,7 +232,7 @@ es hora de la guerra de robots, competencia donde personas de muchas disciplinas
 ahora tendrá la oportunidad de diseñar e implementar una arena de juego con robots de batalla diseñados por usted y sus compañeros, robots de software con armas especiales para poder librar las batallas. 
 
 
-<img src="images/BattleBots-1.jpg"/> 
+<img src="images/battlebots.jpg"/> 
 
 _los robots_ 
 
@@ -265,13 +265,36 @@ la arena está compuesta por dos zonas rectángulares, cada zona en la respectiv
 
 cada zona tendrá un máximo de 2 trampas, las trampas pueden afectar a cualquier jugador, dichas trampas se accionan en cualquier momento y reducen la energía del afectado en 5 puntos de energía, esto es si un robot pasa por encima de la trampa al mismo tiempo en que se activa. 
 
-
 <img src="images/arena2.png"/> 
 
-## asignaciones preliminares
+## aspectos técnicos 
 
+- en forma individual, cada estudiante deberá implementar un robot, 3 golpes, 2 armas y una zona de la arena con sus trampas, esto equivale a un 25% del trabajo 
+- el desplazamiento, los disparos y los golpes deben coincider en velocidad y posicionamiento
+- cada jugador ve en la pantalla solo la zona en donde se encuentra su propio robot
+- las armas y golpes son asignados al robot por "dependency injection" en tiempo de ejecución
+- los robots deberán heredar de IRobot, si algún grupo necesita hacer una modificación a dicha classe deberá sincronizar con todo el grupo de poo
+- la tasa de refrescado del juego en general debe ser máximo cada 300 milisegundos
+- la comunicación entre las dos computadoras deberá hacerse vía red, se sugiere que sea por sockets
+- el intercambio de mensajes entre las computadoras se debe hacer por serialización y deserialización de objetos, el formato puede ser binario o json, y cuando se enciende el server se decide el serializador a usar. dicha selección del serializador/deserializador debe lograrse por polimorfismo 
+- tenga presente que al pasarse de una pantalla a otra puede existir un ajuste de dimensiones
+- el servidor, la integración y todos los demás procesos se harán en parejas y corresponde a un 28%
+- se evaluará el diseño de las classes, estrategia de objetos, uso de patrones como observer, producer/consumer, singleton, strategy, facade y factory  
+
+## asignaciones preliminares
+_persona1_ : demostrar como serializar y deserializar objetos usando json 
+
+_persona2_ : demostrar como serializar y deserializar objetos usando bytes en binario
+
+_persona3_ : como funciona el dependency injection, generar un ejemplo útil para el caso 
+
+_persona4_ : crear un ejemplo de cómo podría ser útil el patrón singleton para el caso
+
+_persona5_ : cómo desplazar animadamente una imagen en un JFrame 
+
+_persona6_ : cómo pintar y desplazar un dibujo hecho sobre graphics en java 
 
 ## otros aspectos
-- fecha de entrega: lunes 10 de octubre antes de medio día, último commit en github.
-- última fecha para consulta: viernes 11 de noviembre
+- fecha de entrega: miércoles 9 de noviembre antes de media noche, último commit en github.
+- última fecha para consulta: viernes 4 de noviembre
 - revisión por cita
