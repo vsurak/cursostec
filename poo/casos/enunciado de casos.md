@@ -281,7 +281,15 @@ cada zona tendrá un máximo de 2 trampas, las trampas pueden afectar a cualquie
 - el servidor, la integración y todos los demás procesos se harán en parejas y corresponde a un 28%
 - se evaluará el diseño de las classes, estrategia de objetos
 - debe aplicar los patrones observer, producer/consumer, singleton, strategy y factory 
-- las excepciones deben loguearse, conteniendo información como: fecha y hora, nombre de la classe donde sucede el error, el error o stacktrace, un código de error y una descripción corta. dichos códigos deben venir de una librería de constantes o de un archivo json que con el código de error se obtenga el mensaje de la descripción. 
+- las excepciones deben loguearse, conteniendo información como: fecha y hora, nombre de la classe donde sucede el error, el error o stacktrace, un código de error y una descripción corta. dichos códigos deben venir de una librería de constantes o de un archivo json que con el código de error se obtenga el mensaje de la descripción. algunos links de interés en el tema:
+
+https://projectlombok.org/features/log
+
+https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html
+
+https://www.loggly.com/ 
+https://www.loggly.com/ultimate-guide/java-logging-basics/
+
 - en al menos 3 procesos ponga en práctica los java stream functions. podría no limitarse a 3, pues son un excelente reemplazo para for's que hacen procesamientos de listas, arrays y collections que van a producir un resultado o una transformación. se reduce mucho el código, se simplifican muchas acciones. a continuación dos links de referencia: 
 
 https://medium.com/javarevisited/how-to-use-streams-map-filter-and-collect-methods-in-java-1e13609a318b
