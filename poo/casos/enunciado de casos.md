@@ -279,20 +279,33 @@ cada zona tendrá un máximo de 2 trampas, las trampas pueden afectar a cualquie
 - el intercambio de mensajes entre las computadoras se debe hacer por serialización y deserialización de objetos, el formato puede ser binario o json, y cuando se enciende el server se decide el serializador a usar. dicha selección del serializador/deserializador debe lograrse por polimorfismo 
 - tenga presente que al pasarse de una pantalla a otra puede existir un ajuste de dimensiones
 - el servidor, la integración y todos los demás procesos se harán en parejas y corresponde a un 28%
-- se evaluará el diseño de las classes, estrategia de objetos, uso de patrones como observer, producer/consumer, singleton, strategy, facade y factory  
+- se evaluará el diseño de las classes, estrategia de objetos
+- debe aplicar los patrones observer, producer/consumer, singleton, strategy y factory 
+- las excepciones deben loguearse, conteniendo información como: fecha y hora, nombre de la classe donde sucede el error, el error o stacktrace, un código de error y una descripción corta. dichos códigos deben venir de una librería de constantes o de un archivo json que con el código de error se obtenga el mensaje de la descripción. 
+- en al menos 3 procesos ponga en práctica los java stream functions. podría no limitarse a 3, pues son un excelente reemplazo para for's que hacen procesamientos de listas, arrays y collections que van a producir un resultado o una transformación. se reduce mucho el código, se simplifican muchas acciones. a continuación dos links de referencia: 
+
+https://medium.com/javarevisited/how-to-use-streams-map-filter-and-collect-methods-in-java-1e13609a318b
+
+https://www.amitph.com/java-filter-map-examples/
+
+https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html 
+
 
 ## asignaciones preliminares
-_persona1_ : demostrar como serializar y deserializar objetos usando json 
+miércoles 26 de octubre
+_federeico alfaro_ : demostrar como serializar y deserializar objetos usando json 
 
-_persona2_ : demostrar como serializar y deserializar objetos usando bytes en binario
+_isaac alfaro_ : demostrar como serializar y deserializar objetos usando bytes en binario
 
-_persona3_ : como funciona el dependency injection, generar un ejemplo útil para el caso 
+_jose pablo barquero_ : crear un ejemplo de cómo podría ser útil el patrón singleton para el caso
 
-_persona4_ : crear un ejemplo de cómo podría ser útil el patrón singleton para el caso
+viernes 28 de octubre
 
-_persona5_ : cómo desplazar animadamente una imagen en un JFrame 
+_julian brenes_ : como funciona el dependency injection, generar un ejemplo útil para el caso 
 
-_persona6_ : cómo pintar y desplazar un dibujo hecho sobre graphics en java 
+_erick kauffman_ : cómo desplazar animadamente una imagen en un JFrame 
+
+_juan ernesto mallma_ : cómo pintar y desplazar un dibujo hecho sobre graphics en java 
 
 ## otros aspectos
 - fecha de entrega: miércoles 9 de noviembre antes de media noche, último commit en github.
