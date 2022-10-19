@@ -298,6 +298,10 @@ https://www.amitph.com/java-filter-map-examples/
 
 https://docs.oracle.com/javase/8/docs/api/java/util/stream/Stream.html 
 
+- para mejorar su calidad de código en tiempo real utilice sonarlint para eclipse, se revisará que haya atentido los issues reportados por la herramienta 
+
+https://www.sonarsource.com/products/sonarlint/
+
 
 ## asignaciones preliminares
 miércoles 26 de octubre
