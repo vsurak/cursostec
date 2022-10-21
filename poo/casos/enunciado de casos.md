@@ -288,6 +288,7 @@ https://projectlombok.org/features/log
 https://docs.oracle.com/javase/7/docs/api/java/util/logging/Logger.html
 
 https://www.loggly.com/ 
+
 https://www.loggly.com/ultimate-guide/java-logging-basics/
 
 - en al menos 3 procesos ponga en práctica los java stream functions. podría no limitarse a 3, pues son un excelente reemplazo para for's que hacen procesamientos de listas, arrays y collections que van a producir un resultado o una transformación. se reduce mucho el código, se simplifican muchas acciones. a continuación dos links de referencia: 
@@ -304,7 +305,8 @@ https://www.sonarsource.com/products/sonarlint/
 
 
 ## asignaciones preliminares
-miércoles 26 de octubre
+miércoles 26 de octubre 
+
 _federeico alfaro_ : demostrar como serializar y deserializar objetos usando json 
 
 _isaac alfaro_ : demostrar como serializar y deserializar objetos usando bytes en binario
