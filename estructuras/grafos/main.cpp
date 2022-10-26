@@ -24,26 +24,7 @@ int main() {
 
     grafo1.addArc(&ana, &juan);
 
-    // caso #5 , 10%
-    // Implementar el grafo denominado ciudades #1 en un nuevo grafo
-
-    // Implementar el algoritmo de deepPath que retorna el vector de INodo
-    // Hacer un for que recorra el vector resultado y castee cada INodo a Ciudad e imprima el recorrido con el 
-    // nombre de la ciudad 
-    // una modificación muy útil esn los algoritmos de recorrido ya sea en anchura y profundidad, es que el nodo
-    // tenga un puntero al nodo que lo marcó antes de meterlo en la pila o la cola, es decir, quién lo metió en la pila o la cola
-
-    // Implementar el metodo path 
-    // Calcular los siguientes P(Berna, Lisboa), P(Lisboa, Milan)
-    // Hacer un for que recorra el vector resultado y castee cada INodo a Ciudad e imprima el recorrido con el 
-    // nombre de la ciudad 
-
-    // Implementar el algorithmo de Dijkstra para poder tener en el grafo
-    // una tabla que me diga cuales son los caminos más cortos de todos los nodos
-    // hacia todos los nodos
-
     cout << "Ejercio de recorrido en anchura testeando creacion de arcos" << endl;
-
 
     WebApp ig = WebApp(5, "IG");
     WebApp twi = WebApp(10, "Twitter");

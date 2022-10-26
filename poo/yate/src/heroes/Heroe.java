@@ -3,6 +3,8 @@ package heroes;
 import java.util.ArrayList;
 import java.util.Random;
 
+import heroes.factory.PowersFactory;
+
 
 public class Heroe {
 	private String nombre;
@@ -48,7 +50,7 @@ public class Heroe {
 	}
 	
 	public static void main(String args[]) {
-		Heroe superPoo = new Heroe("poo super");
+		/*Heroe superPoo = new Heroe("poo super");
 		
 		//AbtractPower power = new AbstractPower(); esto no es posible porque no se peude implementar una clase abstracta
 		
@@ -71,7 +73,15 @@ public class Heroe {
 		AbstractPower masTrueno = otroPower;
 		superPoo.addPower(masTrueno);
 		
-		superPoo.fight();
+		superPoo.fight();*/
+		
+		System.out.println("Probado el factory pattern con IFs");
+		
+		AbstractPower unPoder = PowersFactory.create("Trueno");
+		//unPoder.attack();
+		
+		AbstractPower otro = PowersFactory.createDinamico("Magnetismo");
+		otro.attack();
 		
 	}
 }
