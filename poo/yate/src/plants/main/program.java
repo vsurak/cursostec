@@ -2,9 +2,12 @@ package plants.main;
 
 import plants.simulation.Simulator;
 import plants.statuses.StatusManager;
+import plants.utils.Constants;
+import plants.utils.IConstants;
 
 public class program {
 	public static void main(String args[]) {
+		Constants.VALOR_CONSTANTE = 100;
 		try {
 			StatusManager manager = new StatusManager();
 			Simulator sim = new Simulator(manager);

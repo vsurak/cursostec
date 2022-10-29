@@ -23,12 +23,14 @@ public class SocketServer implements Runnable {
 	
 	public void run() {
 		try {
+			// este es el server especifico que escucha los entrantes
+			ServerSocket socketListener = new ServerSocket(PORT_NUMBER);
+			
 			while (listening) {
-				// este es el server especifico que escucha los entrantes
-				ServerSocket socketListener = new ServerSocket(PORT_NUMBER);
 				
 				// la conexion del que se acaba de conectar
 				Socket connection = socketListener.accept();
+				SocketClient client = new SocketClient(connection);
 			}
 			
 		} catch (Exception ex) {

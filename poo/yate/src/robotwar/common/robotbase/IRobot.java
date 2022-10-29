@@ -9,14 +9,19 @@ public class IRobot implements IConstants {
 	private int energy;
 	private int posX;
 	private int posY;
-	private DamageLevel weaponsdamage[];
-	private DamageLevel strikesdamage[];
+	private int strikeIndex;
+	private int weaponIndex;
+	private Weapon weapons[];
+	private Weapon strikes[];
 	private DamageLevel directionsdamage[];
 	
-	public IRobot() {
+	public IRobot(Weapon pdirections, DamageLevel pweapons) {
 		directionsdamage = new DamageLevel[MOVEMENT.values().length];
-		weaponsdamage = new DamageLevel[WEAPONS_PER_ROBOT];
-		strikesdamage = new DamageLevel[STRIKES_PER_ROBOT];
+		weapons = new Weapon[WEAPONS_PER_ROBOT];
+		strikes = new Weapon[STRIKES_PER_ROBOT];
+		
+		strikeIndex = 0;
+		weaponIndex = 0;
 	}
 	
 	/*
@@ -48,4 +53,15 @@ public class IRobot implements IConstants {
 	public void damage(int pLevel) {
 		
 	}
+	
+	public void addStrike(Weapon pStrike) {
+		strikes[strikeIndex] = pStrike;
+		strikeIndex=++strikeIndex%STRIKES_PER_ROBOT;
+	}
+	
+	public void addWeapon(Weapon pStrike) {
+		weapons[weaponIndex] = pStrike;
+		weaponIndex=++weaponIndex%WEAPONS_PER_ROBOT;
+	}
+	
 }
