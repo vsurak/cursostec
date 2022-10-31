@@ -244,3 +244,112 @@ _Emmanuel Matamoros:_ implementar y explicar el algoritmo de borrado en un árbo
 6. en una classe primero se declaran las cosas privadas y seguidamente las públicas, los atributos van antes de los métodos
 
 
+
+# caso #5, 35%
+
+*instituto tecnológico de costa rica*, escuela de computación
+*estructuras de datos*
+_prof. rodrigo núñez_
+
+*tipo:* grupal, máximo 2 personas
+
+## descripción del caso 
+
+hoy en día existen multiples redes sociales para profesionales enfocadas en negocio, empleo, oferta y demanda tales como linkedin, clutch, connectamericas, builtin entre otras. sin embargo dichas redes suelen volverse más bien una barrera de comunicación entre la oferta y la demanda. 
+
+la oferta, por un lado, busca hacer conexiones y vender, para ello se acerca a los tomadores de decisión que requieren productos y servicios bombardeando a los potenciales compradores con correos, mensajes, publicidad, entre otros para lograr del embudo de ventas conseguir unos cuantos. 
+
+la demanda, por su parte, se ve abrumada de la cantidad de oferta que les llega, antes, durante y después de realmente estar necesitando algún producto o servicio. 
+
+mucho de esto sucede al estar todos los participantes de este comercio expuestos, sus nombres, empresas, puestos, intereses y en algunos casos hasta lo que andan buscando ofrecer o comprar.
+
+por esa razón se quiere crear una nueva red social que permita conectar oferentes y compradores de una forma anónima, enfocada únicamente en lo que las partes ofrecen y donde la relación de comunicación es sugerida de forma equilibrada por el sistema y no a placer de las personas. 
+
+
+### gobiz, la nueva red social de negocios creada en estructuras de datos 
+
+_el registro:_ registrarse es muy simple, el usuario selecciona un nickname de minimo 10 letras y máximo 32, el cuál debe ser único en el sistema, escribe un password el cuál es confirmado escribiendolo dos veces y es máximo de 20 letras, selecciona si desea ofrecer, comprar o ambas, finalmente, escribe en máximo máximo 250 letras tanto la oferta como la demanda según corresponda, es decir, escribe lo que ofrece o lo que quiere comprar. 
+
+una vez que la persona se registra, el sistema le indica que eventualmente encontrará "matches" de lo que anda buscando.
+
+_el match:_ cuando el sistema automáticamente detecta que una persona ofrece algo que a otra le interesa, sucede un match, se van agregando matches a las personas, los matches pueden ser de oferta o de demanda. 
+
+cuando los usuarios ingresen al app nuevamente, veran los posibles matches, leyendo el nickname del match, la fecha en que se registró esa persona y el texto donde describió la oferta o demanda. si ambas personas están de acuerdo en que el match que hizo el sistema es válido, entonces, el sistema les permite chatear. sin embargo esta parte no se va implementar, solo los posibles matches, lo que se quiere medir es la efectividad del sistema haciendo estas relaciones. 
+
+_análisis del matcher:_ para que los inversionistas de esta potencial nueva red social se convenzan, necesitan ver la siguiente información en un dashboard:
+
+1. para un nickname ingresado, visualizar los matches actuales ya sean de oferta o demanda. para cada match se debe ver el nickname, la fecha de registro del nickname, si es oferta o demanda y la descripción. puede que el usuario quiera ver todos los actuales, o bien, los matches hechos en un rango de fechas. 
+
+service: contenful  
+environment: master 
+space name: caso5 
+spaceid: 9yr18gr54ppj 
+access token: nekO8xKQJ6Ftx9d4JaIcCf3dBuNQbJMJRHRG_Ekd79s 
+
+ejemplo para retornar todos los registros
+https://cdn.contentful.com/spaces/9yr18gr54ppj/environments/master/entries?access_token=nekO8xKQJ6Ftx9d4JaIcCf3dBuNQbJMJRHRG_Ekd79s&content_type=registros
+
+ejemplo para retornar todos los registros por rango de fechas
+... pendiente
+
+ejemplo para grabar un registro
+... pendiente
+
+
+
+2. comercio circular, se debe visualizar gráficamente, aquellos negocios de más de 3 participantes que generen una economía circular a partir de un nickname, es decir, que ese nickname inicie vendiendo o comprando a otra persona, y que transitivamente el beneficio llegue al mismo nickname de partida. debe mostrar un diagrama graph de todos los posibles comercios circulares. 
+
+por ejemplo, flecha34rock, vende huevos y necesita comprar gallinas ponedoras, flightchicken12 vende gallinas y necesita comprar alimento, ovni_nutritivo fabrica y vende alimento y a la vez necesita huevos para fabricar dicho alimento, pudiendo comprar dichos huevos a flecha34rock. 
+
+3. tamaño de cadena de valor, visualizar gráficamente, la cadena de valor más larga posible con la mayor concurrencia de oferta y demanda, o bien, visualizar la cadena de valor más larga posible con menor concurrencia de oferta y demanda. la concurrencia está dada por el minimo posible de la suma de ofertas y demandas de los participantes involucrados en la cadena. dicha consulta se hace a partir de un nickname específico. 
+
+4. ver un gráfico con el top 10 de productos o servicios más codiciados en la red en un rango de fechas dado. 
+
+5. listar con una etiqueta corta y un porcentaje, las áreas de mercado conexas, con el fin de visualizar todas las áreas existentes y su presencia porcentual en la red. 
+
+## aspectos de implementación 
+
+1. el programa necesario para hacer los registros de los usuarios se deberá hacer en C++, la información ingresada será subida a un servicio vía https, el cuál será suministrado por el profesor. eso quiere decir, que todos verán la misma información. 
+
+
+2. el programa que se encarga de la lógica de análisis de los matches, estructuras de datos para resolver lo solicitado, algoritmos y demás, deberá hacerse en C++, orientado a objetos. el programa consumirá la información por medio de https, haciendo la solicitud al servicio suministrado por el profesor. con la información disponible hará el análisis de matches que permitirá modelar las relaciones existentes y requeridas.  podrá valerse de todas las estructuras de datos vistas en el curso y de cualquier recurso o librería que le ofrezca el lenguaje.
+
+3. el UI podrá hacerlo en el lenguaje o herramienta que guste, dicho programa actuará como una terminal de visualización únicamente, es decir, no tiene lógica de análisis; dicho programa le pedirá la información requerida al programa en C++ por medio de sockets. 
+
+4. utilice un algoritmo de equivalencia de indexado de árbol para determinar si un nickname hace match con otro nickname dado su oferta y demanda. En ese algoritmo tome un nickname de partida, determine si va analizar oferta o demanda de dicho nickname.
+
+proceda a crear un árbol B+ de orden M usando como índice fracciones de las palabras presentes en el texto, insertando en el bloque de datos la referencia al nickname respectivo. luego de eso, seleccione los nicknames que busquen la acción contraria que se analizó (ya sea oferta o demanda), y proceda a indexar de la misma forma. no sea exhaustivo con los nicknames de posible match, pues podría crear multiples bias que darían conjuntos vacíos o relaciones sin sentido. considere un ranking de finalistas según puntuación para resolver eso.  
+
+finalmente, barra el conjunto secuencia para aplicar una fórmula de peso a las relaciones de los nicknames con el individuo de análisis. en caso de que haya un match entre dos nicknames, se crea la relación en el network del sistema. el network del sistema es un grafo como buena red social.  
+
+5. agregue suficiente información en el diseño de los nodos del árbol B+, el conjunto secuencia, los nodos del grafo y los arcos del grafo; tal que, faciliten obtener los resultados solicitados para el análisis del matcher. considere poner en cache cierta información, indexar el grafo o usar técnicas similares para reducir el procesamiento. 
+
+6. podría crear visualizaciones en archivos HTML/JS que son creados cuando se desea ver alguna opcón del análisis del matcher. Para ello podría utilizar D3 o Google Charts. Esto como una opción en lugar de crear las visualizaciones en el lenguaje. 
+
+https://developers.google.com/chart
+
+https://d3js.org/
+
+
+## preliminares 
+
+pareja #1: implementación y ejemplo de un recorrido en profundidad de un grafo en C++. el grafo implementado con listas de adyacencia.
+
+pareja #2: implementación y pruebas de un algoritmo de rutas críticas, más cortas o más largas usando alguno de los algoritmos académicos vistos en clase. el grafo implementado con listas de adyacencia en C++. 
+
+pareja #3: implementación y pruebas de un algoritmo de cerradura transitiva para un grafo. el grafo implementado con listas de adyacencia, en C++. 
+
+pareja #4: declaración de un árbol B++ y su algoritmo de inserción debidamente probado, hecho en C++ y debidamente adecuado para este caso, para ello con que sea generic es suficiente. 
+
+## aspectos operativos 
+
+- último commit:  lunes 21 de noviembre a media noche.
+- la revisión será con cita
+- se evaluará calidad de código bajo las siguientes buenas prácticas:
+
+1. nombres significativos de variables, parámetros y métodos, que tengan claro su intención con el nombre
+2. toda classe o struct debe estar en archivos separados ya sea .h o .cpp
+3. encapsulamiento, una función o método sabe hacer una única cosa y nada más, no se mienta así mismo con el nombre del método
+4. correcta idemtación tomando en cuenta la apertura de braces {, el cierre } y el tab
+5. en un condicional, if, switch, la condición que ocurre más frecuentemente debe ir de primero
+6. en una classe primero se declaran las cosas privadas y seguidamente las públicas, los atributos van antes de los métodos
