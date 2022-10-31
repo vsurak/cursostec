@@ -261,47 +261,29 @@ la oferta, por un lado, busca hacer conexiones y vender, para ello se acerca a l
 
 la demanda, por su parte, se ve abrumada de la cantidad de oferta que les llega, antes, durante y después de realmente estar necesitando algún producto o servicio. 
 
-mucho de esto sucede al estar todos los participantes de este comercio expuestos, sus nombres, empresas, puestos, intereses y en algunos casos hasta lo que andan buscando ofrecer o comprar.
+mucho de esto sucede al estar todos los participantes de este comercio expuestos con sus nombres, empresas, puestos, intereses y en algunos casos hasta lo que andan buscando ofrecer o comprar.
 
 por esa razón se quiere crear una nueva red social que permita conectar oferentes y compradores de una forma anónima, enfocada únicamente en lo que las partes ofrecen y donde la relación de comunicación es sugerida de forma equilibrada por el sistema y no a placer de las personas. 
 
 
 ### gobiz, la nueva red social de negocios creada en estructuras de datos 
 
-_el registro:_ registrarse es muy simple, el usuario selecciona un nickname de minimo 10 letras y máximo 32, el cuál debe ser único en el sistema, escribe un password el cuál es confirmado escribiendolo dos veces y es máximo de 20 letras, selecciona si desea ofrecer, comprar o ambas, finalmente, escribe en máximo máximo 250 letras tanto la oferta como la demanda según corresponda, es decir, escribe lo que ofrece o lo que quiere comprar. 
+_el registro:_ registrarse es muy simple, el usuario selecciona un nickname de minimo 10 letras y máximo 32, debe ser único. escribe un password que es confirmado escribiéndolo dos veces y de máximo 20 letras. luego, selecciona si desea ofrecer, comprar o ambas; finalmente, escribe en máximo 250 letras tanto la oferta como la demanda según corresponda, es decir, escribe lo que ofrece o lo que quiere comprar. 
 
 una vez que la persona se registra, el sistema le indica que eventualmente encontrará "matches" de lo que anda buscando.
 
-_el match:_ cuando el sistema automáticamente detecta que una persona ofrece algo que a otra le interesa, sucede un match, se van agregando matches a las personas, los matches pueden ser de oferta o de demanda. 
+_el match:_ cuando el sistema automáticamente detecta que una persona ofrece algo que a otra le interesa sucede un match, se van agregando matches a las personas, los matches pueden ser de oferta o de demanda. 
 
 cuando los usuarios ingresen al app nuevamente, veran los posibles matches, leyendo el nickname del match, la fecha en que se registró esa persona y el texto donde describió la oferta o demanda. si ambas personas están de acuerdo en que el match que hizo el sistema es válido, entonces, el sistema les permite chatear. sin embargo esta parte no se va implementar, solo los posibles matches, lo que se quiere medir es la efectividad del sistema haciendo estas relaciones. 
 
 _análisis del matcher:_ para que los inversionistas de esta potencial nueva red social se convenzan, necesitan ver la siguiente información en un dashboard:
 
 1. para un nickname ingresado, visualizar los matches actuales ya sean de oferta o demanda. para cada match se debe ver el nickname, la fecha de registro del nickname, si es oferta o demanda y la descripción. puede que el usuario quiera ver todos los actuales, o bien, los matches hechos en un rango de fechas. 
+2. comercio circular, se debe visualizar gráficamente, aquellos negocios de más de 3 participantes que generen una economía circular a partir de un nickname, es decir, que ese nickname inicie vendiendo o comprando a otra persona y que transitivamente el beneficio llegue al mismo nickname de partida. debe mostrar un diagrama graph de todos los posibles comercios circulares. 
 
-service: contenful  
-environment: master 
-space name: caso5 
-spaceid: 9yr18gr54ppj 
-access token: nekO8xKQJ6Ftx9d4JaIcCf3dBuNQbJMJRHRG_Ekd79s 
+    por ejemplo, flecha34rock, vende huevos y necesita comprar gallinas ponedoras, flightchicken12 vende gallinas y necesita comprar alimento, ovni_nutritivo fabrica y vende alimento y a la vez necesita huevos para fabricar dicho alimento, pudiendo comprar dichos huevos a flecha34rock. 
 
-ejemplo para retornar todos los registros
-https://cdn.contentful.com/spaces/9yr18gr54ppj/environments/master/entries?access_token=nekO8xKQJ6Ftx9d4JaIcCf3dBuNQbJMJRHRG_Ekd79s&content_type=registros
-
-ejemplo para retornar todos los registros por rango de fechas
-... pendiente
-
-ejemplo para grabar un registro
-... pendiente
-
-
-
-2. comercio circular, se debe visualizar gráficamente, aquellos negocios de más de 3 participantes que generen una economía circular a partir de un nickname, es decir, que ese nickname inicie vendiendo o comprando a otra persona, y que transitivamente el beneficio llegue al mismo nickname de partida. debe mostrar un diagrama graph de todos los posibles comercios circulares. 
-
-por ejemplo, flecha34rock, vende huevos y necesita comprar gallinas ponedoras, flightchicken12 vende gallinas y necesita comprar alimento, ovni_nutritivo fabrica y vende alimento y a la vez necesita huevos para fabricar dicho alimento, pudiendo comprar dichos huevos a flecha34rock. 
-
-3. tamaño de cadena de valor, visualizar gráficamente, la cadena de valor más larga posible con la mayor concurrencia de oferta y demanda, o bien, visualizar la cadena de valor más larga posible con menor concurrencia de oferta y demanda. la concurrencia está dada por el minimo posible de la suma de ofertas y demandas de los participantes involucrados en la cadena. dicha consulta se hace a partir de un nickname específico. 
+3. tamaño de cadena de valor, visualizar gráficamente la cadena de valor más larga posible con la mayor concurrencia de oferta y demanda, también, visualizar la cadena de valor más larga posible con menor concurrencia de oferta y demanda. la concurrencia está dada por la suma de ofertas y demandas de los participantes involucrados en la cadena. dicha consulta se hace a partir de un nickname específico. 
 
 4. ver un gráfico con el top 10 de productos o servicios más codiciados en la red en un rango de fechas dado. 
 
@@ -312,19 +294,41 @@ por ejemplo, flecha34rock, vende huevos y necesita comprar gallinas ponedoras, f
 1. el programa necesario para hacer los registros de los usuarios se deberá hacer en C++, la información ingresada será subida a un servicio vía https, el cuál será suministrado por el profesor. eso quiere decir, que todos verán la misma información. 
 
 
+    service: contenful  
+
+    environment: master 
+
+    space name: caso5 
+
+    spaceid: 9yr18gr54ppj 
+
+    access token: nekO8xKQJ6Ftx9d4JaIcCf3dBuNQbJMJRHRG_Ekd79s 
+
+
+    ejemplo para retornar todos los registros 
+
+    https://cdn.contentful.com/spaces/9yr18gr54ppj/environments/master/entries?access_token=nekO8xKQJ6Ftx9d4JaIcCf3dBuNQbJMJRHRG_Ekd79s&content_type=registros
+
+    ejemplo para retornar todos los registros por rango de fechas 
+
+    ... pendiente
+
+    ejemplo para grabar un registro 
+
+    ... pendiente 
+
+
 2. el programa que se encarga de la lógica de análisis de los matches, estructuras de datos para resolver lo solicitado, algoritmos y demás, deberá hacerse en C++, orientado a objetos. el programa consumirá la información por medio de https, haciendo la solicitud al servicio suministrado por el profesor. con la información disponible hará el análisis de matches que permitirá modelar las relaciones existentes y requeridas.  podrá valerse de todas las estructuras de datos vistas en el curso y de cualquier recurso o librería que le ofrezca el lenguaje.
 
 3. el UI podrá hacerlo en el lenguaje o herramienta que guste, dicho programa actuará como una terminal de visualización únicamente, es decir, no tiene lógica de análisis; dicho programa le pedirá la información requerida al programa en C++ por medio de sockets. 
 
-4. utilice un algoritmo de equivalencia de indexado de árbol para determinar si un nickname hace match con otro nickname dado su oferta y demanda. En ese algoritmo tome un nickname de partida, determine si va analizar oferta o demanda de dicho nickname.
+4. utilice un algoritmo de árbol equivalente para determinar si un nickname hace match con otro nickname dado su oferta y demanda. Ese algoritmo toma un nickname de partida, determina si va analizar oferta o demanda de dicho nickname. luego procede a crear un árbol B+ de orden M usando como índice fracciones de las palabras presentes en el texto, insertando en el bloque de datos la referencia al nickname respectivo. luego de eso, seleccione los nicknames que busquen la acción contraria que se analizó (ya sea oferta o demanda), y proceda a indexar de la misma forma. no sea exhaustivo con los nicknames de posible match, pues podría crear multiples bias que darían conjuntos vacíos o relaciones sin sentido. considere un ranking de finalistas según puntuación para resolver eso.  
 
-proceda a crear un árbol B+ de orden M usando como índice fracciones de las palabras presentes en el texto, insertando en el bloque de datos la referencia al nickname respectivo. luego de eso, seleccione los nicknames que busquen la acción contraria que se analizó (ya sea oferta o demanda), y proceda a indexar de la misma forma. no sea exhaustivo con los nicknames de posible match, pues podría crear multiples bias que darían conjuntos vacíos o relaciones sin sentido. considere un ranking de finalistas según puntuación para resolver eso.  
-
-finalmente, barra el conjunto secuencia para aplicar una fórmula de peso a las relaciones de los nicknames con el individuo de análisis. en caso de que haya un match entre dos nicknames, se crea la relación en el network del sistema. el network del sistema es un grafo como buena red social.  
+    finalmente, barra el conjunto secuencia para aplicar una fórmula de peso a las relaciones de los nicknames con el individuo de análisis. en caso de que haya un match entre dos nicknames, se crea la relación en el network del sistema. el network del sistema es un grafo.  
 
 5. agregue suficiente información en el diseño de los nodos del árbol B+, el conjunto secuencia, los nodos del grafo y los arcos del grafo; tal que, faciliten obtener los resultados solicitados para el análisis del matcher. considere poner en cache cierta información, indexar el grafo o usar técnicas similares para reducir el procesamiento. 
 
-6. podría crear visualizaciones en archivos HTML/JS que son creados cuando se desea ver alguna opcón del análisis del matcher. Para ello podría utilizar D3 o Google Charts. Esto como una opción en lugar de crear las visualizaciones en el lenguaje. 
+6. podría crear visualizaciones en archivos HTML/JS que son creados cuando se desea ver alguna opcón del análisis del matcher. para ello podría utilizar D3 o Google Charts. esto como una opción en lugar de crear las visualizaciones en el lenguaje. 
 
 https://developers.google.com/chart
 
