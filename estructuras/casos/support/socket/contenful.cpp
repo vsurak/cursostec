@@ -263,9 +263,8 @@ int main(void)
 {
     Contenful regs;
 
-    regs.registerUser("metal_year_2000", "", "requiero de 5 ingenieros en computación con 8 años de experiencia, conocimientos en python.", "holapassword", 28, 10, 2022);
-    regs.registerUser("rock_odin_gold", "soy programador python con experiencia", "", "holapassword", 23, 1, 2019);
+    //regs.registerUser("badbunny_in_concert", "conciertos a estadio lleno de gente escuchando pum pum con el mismo acorde por 2 horas", "transporte y seguridad en todos los paises que visita y mucha fiesta tambien", "conejo123", 02, 11, 2022);
     vector<Registered*> allrecords = regs.getRecords();
-    cout << allrecords.at(1)->getNickname() << endl;
+    cout << allrecords.at(0)->getNickname() << endl;
     return 0;  
 }
