@@ -307,7 +307,7 @@ _análisis del matcher:_ para que los inversionistas de esta potencial nueva red
 
     ejemplo para retornar todos los registros 
 
-    https://cdn.contentful.com/spaces/9yr18gr54ppj/environments/master/entries?access_token=nekO8xKQJ6Ftx9d4JaIcCf3dBuNQbJMJRHRG_Ekd79s&content_type=registros
+    https://cdn.contentful.com/spaces/9yr18gr54ppj/environments/master/entries?select=fields&access_token=nekO8xKQJ6Ftx9d4JaIcCf3dBuNQbJMJRHRG_Ekd79s&content_type=registros
 
     ejemplo para retornar todos los registros por rango de fechas 
 
