@@ -291,36 +291,12 @@ _análisis del matcher:_ para que los inversionistas de esta potencial nueva red
 
 ## aspectos de implementación 
 
-1. el programa necesario para hacer los registros de los usuarios se deberá hacer en C++, la información ingresada será subida a un servicio vía https, el cuál será suministrado por el profesor. eso quiere decir, que todos verán la misma información. 
-
-
-    service: contenful  
-
-    environment: master 
-
-    space name: caso5 
-
-    spaceid: 9yr18gr54ppj 
-
-    access token: nekO8xKQJ6Ftx9d4JaIcCf3dBuNQbJMJRHRG_Ekd79s 
-
-
-    ejemplo para retornar todos los registros 
-
-    https://cdn.contentful.com/spaces/9yr18gr54ppj/environments/master/entries?select=fields&access_token=nekO8xKQJ6Ftx9d4JaIcCf3dBuNQbJMJRHRG_Ekd79s&content_type=registros
-
-    ejemplo para retornar todos los registros por rango de fechas 
-
-    ... pendiente
-
-    ejemplo para grabar un registro 
-
-    ... pendiente 
-
+1. el programa necesario para hacer los registros de los usuarios se deberá hacer en C++, la información ingresada será subida a un servicio vía https, el cuál será suministrado por el profesor. https://github.com/vsurak/cursostec/tree/master/estructuras/casos/support/socket eso quiere decir, que todos verán la misma información. 
 
 2. el programa que se encarga de la lógica de análisis de los matches, estructuras de datos para resolver lo solicitado, algoritmos y demás, deberá hacerse en C++, orientado a objetos. el programa consumirá la información por medio de https, haciendo la solicitud al servicio suministrado por el profesor. con la información disponible hará el análisis de matches que permitirá modelar las relaciones existentes y requeridas.  podrá valerse de todas las estructuras de datos vistas en el curso y de cualquier recurso o librería que le ofrezca el lenguaje.
 
 3. el UI podrá hacerlo en el lenguaje o herramienta que guste, dicho programa actuará como una terminal de visualización únicamente, es decir, no tiene lógica de análisis; dicho programa le pedirá la información requerida al programa en C++ por medio de sockets. 
+https://github.com/vsurak/cursostec/tree/master/socketclient_c
 
 4. utilice un algoritmo de árbol equivalente para determinar si un nickname hace match con otro nickname dado su oferta y demanda. Ese algoritmo toma un nickname de partida, determina si va analizar oferta o demanda de dicho nickname. luego procede a crear un árbol B+ de orden M usando como índice fracciones de las palabras presentes en el texto, insertando en el bloque de datos la referencia al nickname respectivo. luego de eso, seleccione los nicknames que busquen la acción contraria que se analizó (ya sea oferta o demanda), y proceda a indexar de la misma forma. no sea exhaustivo con los nicknames de posible match, pues podría crear multiples bias que darían conjuntos vacíos o relaciones sin sentido. considere un ranking de finalistas según puntuación para resolver eso.  
 

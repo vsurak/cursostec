@@ -15,7 +15,7 @@ public class IRobot implements IConstants {
 	protected Weapon strikes[];
 	protected DamageLevel directionsdamage[];
 	
-	public IRobot(Weapon pdirections, DamageLevel pweapons) {
+	public IRobot() {
 		directionsdamage = new DamageLevel[MOVEMENT.values().length];
 		weapons = new Weapon[WEAPONS_PER_ROBOT];
 		strikes = new Weapon[STRIKES_PER_ROBOT];
