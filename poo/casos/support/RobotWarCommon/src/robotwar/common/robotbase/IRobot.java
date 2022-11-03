@@ -14,11 +14,18 @@ public class IRobot implements IConstants {
 	protected Weapon weapons[];
 	protected Weapon strikes[];
 	protected DamageLevel directionsdamage[];
-	
+	protected ORIENTATION currentOrientation;
+
 	public IRobot() {
+		this(ORIENTATION.EAST);
+	}
+	
+	public IRobot(ORIENTATION pOrientation) {
 		directionsdamage = new DamageLevel[MOVEMENT.values().length];
 		weapons = new Weapon[WEAPONS_PER_ROBOT];
 		strikes = new Weapon[STRIKES_PER_ROBOT];
+		
+		this.currentOrientation = pOrientation;
 		
 		strikeIndex = 0;
 		weaponIndex = 0;
@@ -41,7 +48,7 @@ public class IRobot implements IConstants {
 	}
 	
 	public void fire(int pWeaponId, LocalTime pActionTime, Graphics g) {
-		
+		this.weapons[pWeaponId].fire(this.posX, this.posY, this.currentOrientation);
 	}
 	
 	/*
