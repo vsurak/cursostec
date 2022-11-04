@@ -1,16 +1,16 @@
 package robotwar.common.robotbase;
 
 public class DamageLevel {
-	private double level;
+	private double damageLevel;
 	private boolean enabled;
 	
 	public DamageLevel() {
-		this.level = 100.0;
+		this.damageLevel = 100.0;
 		this.enabled = true;
 	}
 
-	public double getLevel() {
-		return level;
+	public double getDamageLevel() {
+		return damageLevel;
 	}
 
 	public void hitDamage(int pLevel) {

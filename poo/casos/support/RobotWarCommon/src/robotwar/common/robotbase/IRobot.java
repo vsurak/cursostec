@@ -44,7 +44,7 @@ public class IRobot implements IConstants {
 	}
 	
 	public void hit(int pStrikeId, LocalTime pActionTime, Graphics g ) {
-		
+		this.weapons[pStrikeId].fire(this.posX, this.posY, this.currentOrientation);		
 	}
 	
 	public void fire(int pWeaponId, LocalTime pActionTime, Graphics g) {

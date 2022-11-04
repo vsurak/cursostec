@@ -4,9 +4,11 @@ public abstract class Weapon extends DamageLevel {
 	private int posX;
 	private int posY;
 	private int speed;
+	private int level;
 	
-	public Weapon(int pSpeed) {
+	public Weapon(int pSpeed, int pLevel) {
 		this.speed = pSpeed;
+		this.level = pLevel;
 	}
 	
 	public void fire(int pPosX, int pPosY, ORIENTATION pDirection) {
@@ -39,5 +41,13 @@ public abstract class Weapon extends DamageLevel {
 
 	public void setSpeed(int speed) {
 		this.speed = speed;
+	}
+
+	public int getLevel() {
+		return level;
+	}
+
+	public void setLevel(int level) {
+		this.level = level;
 	}
 }

@@ -313,13 +313,13 @@ https://d3js.org/
 
 ## preliminares 
 
-pareja #1: implementación y ejemplo de un recorrido en profundidad de un grafo en C++. el grafo implementado con listas de adyacencia.
+diego granados y daniel granados: implementación y ejemplo de un recorrido en profundidad de un grafo en C++. el grafo implementado con listas de adyacencia.
 
-pareja #2: implementación y pruebas de un algoritmo de rutas críticas, más cortas o más largas usando alguno de los algoritmos académicos vistos en clase. el grafo implementado con listas de adyacencia en C++. 
+Dayana Xie Li y Sarah Quesada Chaves: implementación y pruebas de un algoritmo de rutas críticas, más cortas o más largas usando alguno de los algoritmos académicos vistos en clase. el grafo implementado con listas de adyacencia en C++. 
 
-pareja #3: implementación y pruebas de un algoritmo de cerradura transitiva para un grafo. el grafo implementado con listas de adyacencia, en C++. 
+isaac rojas, yeiner ugalde y kenneth rojas: implementación y pruebas de un algoritmo de cerradura transitiva para un grafo. el grafo implementado con listas de adyacencia, en C++. 
 
-pareja #4: declaración de un árbol B++ y su algoritmo de inserción debidamente probado, hecho en C++ y debidamente adecuado para este caso, para ello con que sea generic es suficiente. 
+Carlos Barrantes y Emmanuel Matamoros y David fernandez: declaración de un árbol B++ y su algoritmo de inserción debidamente probado, hecho en C++ y debidamente adecuado para este caso, para ello con que sea generic es suficiente. 
 
 ## aspectos operativos 
 
