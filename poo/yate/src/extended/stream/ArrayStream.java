@@ -26,7 +26,7 @@ public class ArrayStream {
 		stream.forEach(p -> System.out.println(p));	
 		
 		Stream<Integer> randomNumbers = Stream.generate(() -> (new Random()).nextInt(100));
-		randomNumbers.limit(20).forEach(System.out::println);		
+		randomNumbers.limit(20).forEach(System.out::println);
 	}
 	
 	public static void testChars() {

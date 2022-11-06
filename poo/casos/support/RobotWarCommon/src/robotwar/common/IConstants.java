@@ -7,6 +7,8 @@ public interface IConstants {
 	
 	/* ROBOTS */
 	public static final int ROBOT_MOVEMENT_LENGTH = 1000;
+	// pixels per second
+	public static final int ROBOT_SPEED_DEFAULT = 100;
 	public static final int ENERGY_PER_MOVEMENT = 1;
 	public static final int WEAPONS_PER_ROBOT = 1;
 	public static final int STRIKES_PER_ROBOT = 2;

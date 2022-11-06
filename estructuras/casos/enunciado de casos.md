@@ -313,12 +313,14 @@ https://d3js.org/
 
 ## preliminares 
 
+miércoles 9 de noviembre
 diego granados y daniel granados: implementación y ejemplo de un recorrido en profundidad de un grafo en C++. el grafo implementado con listas de adyacencia.
 
 Dayana Xie Li y Sarah Quesada Chaves: implementación y pruebas de un algoritmo de rutas críticas, más cortas o más largas usando alguno de los algoritmos académicos vistos en clase. el grafo implementado con listas de adyacencia en C++. 
 
 isaac rojas, yeiner ugalde y kenneth rojas: implementación y pruebas de un algoritmo de cerradura transitiva para un grafo. el grafo implementado con listas de adyacencia, en C++. 
 
+viernes 11 de noviembre
 Carlos Barrantes y Emmanuel Matamoros y David fernandez: declaración de un árbol B++ y su algoritmo de inserción debidamente probado, hecho en C++ y debidamente adecuado para este caso, para ello con que sea generic es suficiente. 
 
 ## aspectos operativos 

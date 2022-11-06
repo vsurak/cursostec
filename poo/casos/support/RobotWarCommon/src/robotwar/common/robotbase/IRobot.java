@@ -5,31 +5,35 @@ import java.time.LocalTime;
 
 import robotwar.common.IConstants;
 
-public class IRobot implements IConstants {
+public abstract class IRobot implements IConstants {
 	protected int energy;
 	protected int posX;
 	protected int posY;
 	protected int strikeIndex;
 	protected int weaponIndex;
+	protected int speed;
 	protected Weapon weapons[];
 	protected Weapon strikes[];
 	protected DamageLevel directionsdamage[];
 	protected ORIENTATION currentOrientation;
 
 	public IRobot() {
-		this(ORIENTATION.EAST);
+		this(ORIENTATION.EAST, ROBOT_SPEED_DEFAULT);
 	}
 	
-	public IRobot(ORIENTATION pOrientation) {
+	public IRobot(ORIENTATION pOrientation, int pSpeed) {
 		directionsdamage = new DamageLevel[MOVEMENT.values().length];
 		weapons = new Weapon[WEAPONS_PER_ROBOT];
 		strikes = new Weapon[STRIKES_PER_ROBOT];
 		
 		this.currentOrientation = pOrientation;
 		
-		strikeIndex = 0;
-		weaponIndex = 0;
+		this.strikeIndex = 0;
+		this.weaponIndex = 0;
+		this.speed = pSpeed;
 	}
+	
+	
 	
 	/*
 	 * el move es la dirección que el jugador está presionando, con eso y la hora del accion
@@ -40,8 +44,11 @@ public class IRobot implements IConstants {
 	 * refresco la pantalla con el graphics
 	 */
 	public void move(MOVEMENT pMove, LocalTime pActionTime, Graphics g) {
-		// put your code here
+		// put movement global code here
+		refreshMove(pMove, pActionTime, g);		
 	}
+	
+	protected abstract void refreshMove(MOVEMENT pMove, LocalTime pActionTime, Graphics g);
 	
 	public void hit(int pStrikeId, LocalTime pActionTime, Graphics g ) {
 		this.weapons[pStrikeId].fire(this.posX, this.posY, this.currentOrientation);		
