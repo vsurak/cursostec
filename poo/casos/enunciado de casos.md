@@ -322,6 +322,6 @@ _erick kauffman_ : cómo desplazar animadamente una imagen en un JFrame
 _juan ernesto mallma_ : cómo pintar y desplazar un dibujo hecho sobre graphics en java 
 
 ## otros aspectos
-- fecha de entrega: miércoles 9 de noviembre antes de media noche, último commit en github.
-- última fecha para consulta: viernes 4 de noviembre
+- fecha de entrega: martes 15 de noviembre antes de media noche, último commit en github.
+- última fecha para consulta: miércoles 9 de noviembre
 - revisión por cita
