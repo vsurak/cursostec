@@ -2,10 +2,13 @@
 #include "../eventos/event.h"
 #include "stack.h"
 #include "queue.h"
+#include <unordered_map>
 
 #ifndef LIST 
 
 #define LIST 1
+
+using namespace std;
 
 // 2. ajustar a que esta lista sea doblemente enlazada, cambia el add, find, insert y el remove
 template <typename T> 
@@ -14,6 +17,7 @@ class List : public Stack<T>, public Queue<T> {
         Node<T> *first;
         Node<T> *last;
         Node<T> *searchPosition;
+        unordered_map<int, Node<T>*> nodeIndex; 
         int size;
 
     public:
@@ -21,20 +25,6 @@ class List : public Stack<T>, public Queue<T> {
             first = NULL;
             last = NULL;
             size = 0;
-        }
-
-        void add(T *pData) {
-            Node<T> *newNode = new Node<T>(pData);
-
-            if (size>0) {
-                this->last->setNext(newNode);
-                newNode->setPrev(this->last);  // esta linea se agrega para quiz #4 #5
-            } else {
-                this->first = newNode;
-            }
-            this->last = newNode;
-
-            size++;
         }
 
         Node<T>* getFirst() {
@@ -51,17 +41,29 @@ class List : public Stack<T>, public Queue<T> {
 
         T* find(int pPosition) {
             T* result = NULL;
-            searchPosition = this->first; // esta linea se agrega para quiz #4 #5, se quito searchBehind
+            searchPosition = NULL;
 
-            if (pPosition<getSize()) {
-                while(pPosition>0) {
-                    searchPosition = searchPosition->getNext();
-                    pPosition--;
-                }
+            if (nodeIndex.find(pPosition) != nodeIndex.end()) {
+                searchPosition = nodeIndex[pPosition];
                 result = searchPosition->getData();
             }
 
             return result;
+        }
+
+        void add(T *pData) {
+            Node<T> *newNode = new Node<T>(pData);
+
+            if (size>0) {
+                this->last->setNext(newNode);
+                newNode->setPrev(this->last);  // esta linea se agrega para quiz #4 #5
+            } else {
+                this->first = newNode;
+            }
+            this->last = newNode;
+
+            nodeIndex[size] = newNode; // save for indexing
+            size++;
         }
 
         // si el position es mayor a la cantidad, entonces inserto al final
@@ -83,6 +85,13 @@ class List : public Stack<T>, public Queue<T> {
                     this->first = newNodo;
                 }
                 
+                for(int indexToAdjust=getSize()-1; indexToAdjust>=pPosition; indexToAdjust--) {
+                    if (nodeIndex.find(indexToAdjust) != nodeIndex.end()) {
+                        nodeIndex[indexToAdjust+1] = nodeIndex[indexToAdjust]; 
+                    }
+                }
+
+                nodeIndex[pPosition] = newNodo;
                 size++;
             } else {
                 add(pData);
@@ -119,6 +128,16 @@ class List : public Stack<T>, public Queue<T> {
                     }
                     result = searchPosition->getData();
                 }
+
+                int indexToAdjust=pPosition;
+                for(; indexToAdjust<getSize()-1; indexToAdjust++) {
+                    if (nodeIndex.find(indexToAdjust) != nodeIndex.end()) {
+                        nodeIndex[indexToAdjust] = nodeIndex[indexToAdjust+1]; 
+                    }
+                }
+
+                nodeIndex.erase(indexToAdjust+1);
+
                 size--;
             }
             return result;
