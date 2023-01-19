@@ -8,10 +8,14 @@ _prof. rodrigo núñez_
 ## descripción
 la empresa rvark ha comprado una flotilla de campers tipo rv para rentarlos en costa rica, cada RV tiene tamaños y características diferentes como las que se pueden ver en estos sitios:
 
-https://www.hilltopcamper.com/blog/must-have-features-for-your-rv/
-https://www.gorving.com/tips-inspiration/expert-advice/8-trending-rv-features-2021
-https://worldwidecampers.com/en-us/suppliers/bunk-campers/bunk-aero-plus/
-https://worldwidecampers.com/en-us/suppliers/road-bear/slide-out-class-c-28-30-ft/
+https://www.hilltopcamper.com/blog/must-have-features-for-your-rv/ 
+
+https://www.gorving.com/tips-inspiration/expert-advice/8-trending-rv-features-2021 
+
+https://worldwidecampers.com/en-us/suppliers/bunk-campers/bunk-aero-plus/ 
+
+https://worldwidecampers.com/en-us/suppliers/road-bear/slide-out-class-c-28-30-ft/ 
+
 
 las personas van a ingresar a un sitio web donde van a poder ver todos los diferentes campers disponibles para las fechas deseadas, luego al oprimir el botón de cotizar, se le pedirá ciertos datos como nombre completo, nacionalidad, fecha de nacimiento, email y teléfono. con esa información se estaría creando una solicitud de camper que un operador va a leer y contactará a la persona para terminar de afinar detalles del camper, extras, precio final y realizar el pago, estos últimos pasos que hace el operador son controlados en un sistema aparte que no es parte de este caso.
 
