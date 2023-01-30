@@ -18,7 +18,7 @@ entre los retos más importantes que tiene feria nueva son:
 
 4. asegurarse que el consumidor reciba un producto en buen estado y que el repartidor le haya dado un servicio amable y completo
 
-proceda a realizar un diseño para la base de datos de nuevaferia y este servicio hecha en sql server. luego una vez que tenga el diseño proceda a cargar de información de tal forma que se tengan: 
+proceda a realizar un diseño para la base de datos de ferianueva hecho en sql server. luego una vez que tenga el diseño proceda a cargar de información de tal forma que se tengan: 
 
 - al menos 15 productos
 - al menos 20 personas registradas
@@ -26,13 +26,18 @@ proceda a realizar un diseño para la base de datos de nuevaferia y este servici
 
 el líder técnico quiere que usted le demuestre con su base de datos diseñada, implementada y con datos que podrá dar respuesta a las siguientes incognitas:
 
+## preliminar #1, 15 de febrero, 20pts
 1. cuál es el top 5 de compradores estrella
 
 2. cuál es el top 5 de productos más vendidos en los últimos 15 días
 
 3. cuál es el total de compras por persona
 
-4. cuál es el total vendido por producto
+4. cuál es el total vendido por producto 
+
+- contenido: un archivo sql con todos los scripts necesarios
+
+## preliminar #2, 17 de febrero, 40pts
 
 5. determinar si existe al menos una diferencia de carga de trabajo del 20% entre los dos días de entrega
 
@@ -42,20 +47,19 @@ el líder técnico quiere que usted le demuestre con su base de datos diseñada,
 
 8. demostrar si va a ser posible crear vistas que ayuden a la implementación del sistema
 
+- contenido: un archivo sql con todos los scripts necesarios
+
+## entrega final #3, 22 de febrero, 40pts
 9. demostrar bajo que circustancias en su modelo podrían suceder problemas de dirty read, lost update y phantoms
 
 10. demostrar bajo que circustancias en su modelo podrían darse deadlocks 
 
 11. como se defiende su modelo ante fraudes donde el sistema se ve comprometido con los datos para beneficio de alguna persona 
 
-
-## preliminares
-los 11 puntos anteriores son todos los preliminares 
+- contenido: un archivo sql con todos los scripts necesarios
 
 ## aspectos operativos
-- fecha de entrega: miércoles 22 de febrero antes de media noche
-- entrega al asistente al correo: 
-- subject: bases 2 - caso #1
-- contenido: pdf con el diseño de base de datos, script sql con los 11 puntos solicitados, script sql del llenado de datos
+- entrega al asistente al correo: fvsasistencia@gmail.com
+- subject: bases 2 - caso #1 - <entregable> 
 
 
