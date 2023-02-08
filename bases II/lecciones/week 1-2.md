@@ -30,6 +30,14 @@ La documentación y ejemplos es amplia, por el momento se requiere que el estudi
 - hacer uso del contenedor activo desde la computadora host
 - acceder al contenedor y recorrer la estructura de archivos
 
+video tutorials
+https://www.youtube.com/watch?v=4Dko5W96WHg 
+
+https://www.youtube.com/watch?v=CV_Uf3Dq-EU 
+
+https://www.youtube.com/watch?v=pTFZFxd4hOI 
+
+
 4. Instalar sql server developer edition, edition free
 https://www.microsoft.com/en-us/sql-server/sql-server-downloads 
 

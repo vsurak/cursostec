@@ -34,16 +34,18 @@ La documentación y ejemplos es amplia, por el momento se requiere que el estudi
 - hacer uso del contenedor activo desde la computadora host
 - acceder al contenedor y recorrer la estructura de archivos
 
-5. bajar la imagen docker de mysql y tenerla local 
-
-6. instalar workbench para mysql 
-
 video tutorials
 https://www.youtube.com/watch?v=4Dko5W96WHg 
 
 https://www.youtube.com/watch?v=CV_Uf3Dq-EU 
 
 https://www.youtube.com/watch?v=pTFZFxd4hOI 
+
+
+5. bajar la imagen docker de mysql y tenerla local 
+
+6. instalar workbench para mysql 
+
 
 
 ## actividades dentro de clase
