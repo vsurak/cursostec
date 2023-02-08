@@ -3,23 +3,25 @@
 ## actividades fuera de clase
 
 1. conocer el CLI de su sistema operativo y el de linux principalmente 
-https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
+https://ubuntu.com/tutorials/command-line-for-beginners#1-overview 
+
 
 2. estudiar github
 
 Teoría
-https://docs.github.com/en/get-started/quickstart/hello-world
-https://docs.github.com/en/get-started/using-git/about-git
+https://docs.github.com/en/get-started/quickstart/hello-world 
+
+https://docs.github.com/en/get-started/using-git/about-git 
 
 Video tutorials
-https://www.youtube.com/watch?v=VdGzPZ31ts8
-https://www.youtube.com/watch?v=
+https://www.youtube.com/watch?v=VdGzPZ31ts8 
 
 3. estudiar docker
 
 teoría
-https://docs.docker.com/get-started/
-https://docker-curriculum.com/
+https://docs.docker.com/get-started/ 
+
+https://docker-curriculum.com/ 
 
 La documentación y ejemplos es amplia, por el momento se requiere que el estudiante sea capaz de: 
 - instalar docker en su computadora
@@ -29,7 +31,7 @@ La documentación y ejemplos es amplia, por el momento se requiere que el estudi
 - acceder al contenedor y recorrer la estructura de archivos
 
 4. Instalar sql server developer edition, edition free
-https://www.microsoft.com/en-us/sql-server/sql-server-downloads
+https://www.microsoft.com/en-us/sql-server/sql-server-downloads 
 
 
 ## actividades dentro de clase
