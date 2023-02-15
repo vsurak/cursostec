@@ -57,3 +57,17 @@ posteriormente el equipo de control de calidad valida el diseño de sus compañe
 3. Quiz práctico de git/github
 
 4. Quiz práctico de docker
+
+Other tasks 
+
+_running and accesing mysql via docker_
+
+```s
+docker run -d -p 3306:3306 --name mysqlserver -v c:\dev\mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql
+```
+
+_access the container_
+
+```s
+docker exec -it mysqlserver bash
+```
