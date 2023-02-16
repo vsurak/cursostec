@@ -58,16 +58,67 @@ posteriormente el equipo de control de calidad valida el diseño de sus compañe
 
 4. Quiz práctico de docker
 
-Other tasks 
 
-_running and accesing mysql via docker_
+_plantilla para stored procedures transaccionales en sql server_
 
-```s
-docker run -d -p 3306:3306 --name mysqlserver -v c:\dev\mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql
+```sql
+-----------------------------------------------------------
+-- Autor: Rnunez
+-- Fecha: 12/12/2011
+-- Descripcion: esta description en comentarios queda almacenada
+-- Otros detalles de los parametros
+-----------------------------------------------------------
+-- Author: pedro perez
+-- Fecha: 04-21-2021
+-- Desc: actualiza la tabla de xyz bla bla bla
+-----------------------------------------------------------
+CREATE PROCEDURE [dbo].[XXXXXXSP_VerboEntidad]
+	@Param1 NVARCHAR(35),
+	@Param2 BIGINT
+AS 
+BEGIN
+	
+	SET NOCOUNT ON -- no retorne metadatos
+	
+	DECLARE @ErrorNumber INT, @ErrorSeverity INT, @ErrorState INT, @CustomError INT
+	DECLARE @Message VARCHAR(200)
+	DECLARE @InicieTransaccion BIT
+
+	-- declaracion de otras variables
+
+	-- operaciones de select que no tengan que ser bloqueadas
+	-- tratar de hacer todo lo posible antes de q inice la transaccion
+	
+	SET @InicieTransaccion = 0
+	IF @@TRANCOUNT=0 BEGIN
+		SET @InicieTransaccion = 1
+		SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+		BEGIN TRANSACTION		
+	END
+	
+	BEGIN TRY
+		SET @CustomError = 2001
+
+		-- put your code here
+		
+		IF @InicieTransaccion=1 BEGIN
+			COMMIT
+		END
+	END TRY
+	BEGIN CATCH
+		SET @ErrorNumber = ERROR_NUMBER()
+		SET @ErrorSeverity = ERROR_SEVERITY()
+		SET @ErrorState = ERROR_STATE()
+		SET @Message = ERROR_MESSAGE()
+		
+		IF @InicieTransaccion=1 BEGIN
+			ROLLBACK
+		END
+		RAISERROR('%s - Error Number: %i', 
+			@ErrorSeverity, @ErrorState, @Message, @CustomError)
+	END CATCH	
+END
+RETURN 0
+GO
 ```
 
-_access the container_
-
-```s
-docker exec -it mysqlserver bash
-```

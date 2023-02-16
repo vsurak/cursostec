@@ -62,6 +62,21 @@ https://jamboard.google.com/d/1JPzkIX3QAV339LTrWnnN5Iw9vOOHW83XzLEYXOVxU3c/edit?
 
 4. Quiz práctico de docker
 
+Other tasks 
+
+_running and accesing mysql via docker_
+
+```s
+docker run -d -p 3306:3306 --name mysqlserver -v c:\dev\mysql_data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql
+```
+
+_access the container_
+
+```s
+docker exec -it mysqlserver bash
+```
+
+
 5. Prácticas dentro de clase para resolver el primer preliminar caso #1
 
 6. Prácticas dentro de clase para resolver el segundo preliminar caso #1
