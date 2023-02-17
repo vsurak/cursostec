@@ -74,6 +74,18 @@ _access the container_
 
 ```s
 docker exec -it mysqlserver bash
+
+mysql -u root -p  // ingresando a la consola de mysql con el usuario root y me va a pedir el password 
+
+show databases; // mysql trabaja con lo que se llama un delimitador de instrucción que es por default el ; , pero se puede cambiar
+
+create database ejemplodeclase;
+
+use ejemplodeclase;
+
+show tables;
+
+
 ```
 
 
