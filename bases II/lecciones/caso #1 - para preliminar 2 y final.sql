@@ -3,10 +3,6 @@
 
 --select * from productos  --> checked ya hay productos
 
---lista de productos: nombre del producto, cantidad --> checked
---necesito el idclient
---con eso saco la direccion
-
 CREATE TYPE dbo.TVP_OrderProducts AS TABLE(
     [Name] varchar(128),
     cantidad float
@@ -48,7 +44,7 @@ BEGIN
 		SET @InicieTransaccion = 0
 		IF @@TRANCOUNT=0 BEGIN
 			SET @InicieTransaccion = 1
-			SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+			SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
 			BEGIN TRANSACTION		
 		END
 	
@@ -87,19 +83,43 @@ BEGIN
 		END CATCH	
 	END
 END
-RETURN 0
+RETURN 0	
+GO
+
+-- prueba del stored procedure que pasa bien, llega al commit
+--select * from dbo.Productos
+DECLARE @myProducts TVP_OrderProducts
+INSERT @myProducts VALUES 
+('Aguacate', 5)
+
+exec dbo.[FeriaSP_PlaceOrder] 3, @myProducts
+GO
+
+select * from Ordenes where clienteId = 3
+select * from ProductoXOrden where idOrden = 53
+
+-- prueba del stored procedure que hace rollback
+
+DECLARE @myProducts TVP_OrderProducts
+INSERT @myProducts VALUES 
+('AguacateX', 5)
+
+
+exec dbo.[FeriaSP_PlaceOrder] 3, @myProducts
 GO
 
 
 
-DECLARE @myProducts TVP_OrderProducts
-INSERT @myProducts VALUES 
-('AguacateX', 5),
-('MangoX', 10),
-('PipaX', 2)
 
+----- DIRTY READ -----
+-- hacer feriaSP_PlaceOrder read uncommited
+-- usar una transaccion que afecte un dato que va a leer el SP
 
-exec dbo.[FeriaSP_PlaceOrder] 3, @myProducts
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+BEGIN TRANSACTION		
 
-select * from Ordenes where clienteId = 3
-select * from ProductoXOrden where idOrden = 51
+update dbo.Productos SET precioVenta=10000 WHERE idProducto=4
+
+WAITFOR DELAY '00:00:05'
+
+ROLLBACK

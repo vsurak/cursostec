@@ -37,7 +37,7 @@ el líder técnico quiere que usted le demuestre con su base de datos diseñada,
 
 - contenido: un archivo sql con todos los scripts necesarios
 
-## preliminar #2, 17 de febrero, 40pts
+## preliminar #2, 22 de febrero, 40pts
 
 5. determinar si existe al menos una diferencia de carga de trabajo del 20% entre los dos días de entrega
 
@@ -49,7 +49,7 @@ el líder técnico quiere que usted le demuestre con su base de datos diseñada,
 
 - contenido: un archivo sql con todos los scripts necesarios
 
-## entrega final #3, 22 de febrero, 40pts
+## entrega final #3, 27 de febrero, 40pts
 9. demostrar bajo que circustancias en su modelo podrían suceder problemas de dirty read, lost update y phantoms
 
 10. demostrar bajo que circustancias en su modelo podrían darse deadlocks 
