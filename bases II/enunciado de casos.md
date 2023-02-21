@@ -72,7 +72,7 @@ el líder técnico quiere que usted le demuestre con su base de datos diseñada,
 _prof. rodrigo núñez_  
 *tipo:* parejas  
 
-Proceda a generar en una base de datos la siguiente tabla debidamente rellena basado en el script a continuación:
+Proceda a generar en una base de datos con la siguiente tabla debidamente rellena basado en el script a continuación:
 
 ```sql
 USE [hacker_rank]
@@ -146,4 +146,18 @@ El anterior es la bitácora resultado de una plataforma de entrenamiento y evalu
 
 De los datos extraídos se quiere averiguar lo siguiente:
 
-1. 
+1. cuál es el ranking semestral año con año, de los 10 mejores puntajes aprobados en cada semestre para cualquier ejercicio. Genere el ranking con y sin empates. 
+
+2. clasifque a los usuarios en quintilos basándose en los puntajes obtenidos en promedio de cada usuario dentro de un mismo nivel. Se espera que se creen quintilos para basic, medium y advance. Utilice solo los datos del 2022. 
+
+3. determinar si los usuarios mayormente van subiendo de nivel en el tiempo conforme avanzan en los algoritmos de una misma dificultad o no. 
+
+4. determine el ranking de los top 3 puntajes obtenidos, sacando el ranking por complejidad de los ejercicios y por cada año. 
+
+5. cumulative distribution 
+
+Los queries anteriores se entregaran al final de clase en un solo entregable. 
+
+## aspectos operativos
+- entrega al asistente al correo: fvsasistencia@gmail.com
+- subject: bases 2 - caso #2 - entregable final 

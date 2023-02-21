@@ -88,7 +88,7 @@ https://jamboard.google.com/d/1VEytUfdJGQS_HyjleBUbeyXr1OjbhkgGfHx0WuxBxH0/edit?
 - mem tables
 - design for insertions 
 
-4. Se van hacer exposiciones de las soluciones que se calificaran usando un jugarado conformado por el profesor y un miembro de cada equipo 
+4. Se van hacer exposiciones de las soluciones que se calificaran usando un jurado conformado por el profesor y un miembro de cada equipo 
 https://www.scrumpoker-online.org/en
 
 
