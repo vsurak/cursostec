@@ -69,7 +69,7 @@ resultó que el servicio de copos y cocteles directamente en la playa resultó s
 
 3. otra característica importante es que ahora las personas pueden ingresar a un sitio web y ordenar desde ahí sus copos y cocteles, el sitio web captura su ubicación geográfica en la playa para que alguno de los carritos cercanos pueda llegar y atender la solicitud. Al ordenar puede indicar los productos y la cantidad deseada, así como comentar si tiene algun requerimiento especial. 
 
-4. además, ha tenido tanto éxito el servicio, que ahora se atienden múltiples playas de la zona, siempre es importante saber en que playa está cada carrito, copero y en cúal de ellas es que se realiza la venta y solicitudes de producto. Dado que las playas están a distancias diferentes, algunos productos podrían tener precios diferenciados según la playa en que se encuentren.
+4. además, ha tenido tanto éxito el servicio, que ahora se atienden múltiples playas de la zona, siempre es importante saber en que playa está cada carrito, el copero, y en cúal de ellas es que se realiza la venta y solicitudes de producto. Dado que las playas están a distancias diferentes, algunos productos podrían tener precios diferenciados según la playa en que se encuentren.
 
 5. los coperos ganan un salario por una comisión de ventas, es decir, de cada producto que venden reciben un % el cuál debe ser configurable. Cada fin de semana el sistema determina lo vendido y ganado de cada copero y realiza el pago depositandole a su cuenta de banco la suma de los fees hechos durante la semana. 
 
@@ -82,7 +82,7 @@ registrar una venta deberá hacerse por medio de un stored procedure.
 
 3. demuestre que es posible crear una consulta o varias para saber cuánto se gasto, cuánto se ganó por semana en todo el negocio, además de saber cuánto se le debe pagar a cada copero. 
 
-4. además demuestre que es posible mostrarle al dueño cada semana datos que confirmen que no se están robando o malgastando los ingredientes en la elaboración de los productos, entender los márgenes de ingredientes usandos en ventas versus los ingredientes que se cargan en el carrito. cree vistas que le ayuden a realizar esta extracción de datos. 
+4. además demuestre que es posible mostrarle al dueño cada semana datos que confirmen que no se están robando o malgastando los ingredientes en la elaboración de los productos, entender los márgenes de ingredientes usados en ventas versus los ingredientes que se cargan en el carrito. cree vistas que le ayuden a realizar esta extracción de datos. 
 
 5. debido a que pueden existir errores de conexión en las playas, se recomienda que modifique el stored procedure de registrar ventas para que sea transaccional. demuestre que se comporta correctamente la transacción cuando es exitosa o cuando falla. 
 
