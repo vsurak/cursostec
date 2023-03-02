@@ -1,0 +1,4 @@
+- configuraciones
+- bitácora
+- permisos de usuario
+- historical and archives

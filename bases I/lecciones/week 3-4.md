@@ -27,6 +27,7 @@ las lecturas se van a comprobar por medio de un quiz práctico.
 ## actividades dentro de clase
 
 1. utilizando el modelo del copero, proceda a hacer release de la base de datos a mysql
+forward engineer para pasar del diagrama a la base de datos
 
 2. con ayuda el profesor realice inserts, updates, deletes y selects en las tablas diseñadas
 
@@ -39,4 +40,18 @@ _green:_ dado que son varios coperos, el dueño de la idea tiene temor que se de
 4. Procedan a agregar a su modelo en workbench las tablas necesarias para resolver el requerimiento solicitado. Se procede a revisar los modelos propuestos. 
 
 5. El profesor aleatoriamente ahora va a mezclar grupos verdes con azules para generar una versión unificada del modelo. Se procede a revisar los modelos propuestos. 
+
+Patrones de diseño 
+- maestro detalle
+- media
+- caracerísticas variables
+- transacciones
+
+
+
+Para efectos de valorar diseños
+
+- se crean 5 canales para los 5 requerimientos del caso #2
+- se unen parejas a los canales para que en conjunto generen una propuesta de diseño en workbench que cumpla con el requisito
+- el profesor hará chequeos en todos los grupos para ver lo discutivo
 

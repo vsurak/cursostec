@@ -123,3 +123,38 @@ update dbo.Productos SET precioVenta=10000 WHERE idProducto=4
 WAITFOR DELAY '00:00:05'
 
 ROLLBACK
+
+
+-- simple phantom problem
+
+trans #1
+
+declare @clientid INT
+declare @cantidadDePagos INT
+declare @monto decimal(12,2)
+declare @abono decimal(12,2)
+
+set @clientid = 14
+set @cantidadDePagos = 5
+
+select @monto=sum(totalPrice) -- hay K registros
+from dbo.Ordenes where clienteId = @clientid
+group by clienteid
+
+-- aqui hay una logica en el medio
+WAITFOR DELAY '00:00:05'
+
+-- phantom es un problema normalmente asociado a funciones agregados
+-- otra transaccion inesrta el fantasma, un registro que no estaba considerado arriba
+-- K+1 registros 
+select @abono=sum(totalPrice) / @cantidadDePagos
+from dbo.Ordenes where clienteId = @clientid
+group by clienteid
+
+select @monto, @abono
+
+trans #2
+insert into dbo.Ordenes (postime, totalPrice, pesoTotal, clienteId, estadoOrdenId, direccionId)
+values
+(getdate(), 20000.00, 23, 14, 1, 1)
+

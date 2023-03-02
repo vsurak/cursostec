@@ -154,10 +154,10 @@ De los datos extraídos se quiere averiguar lo siguiente:
 
 4. determine el ranking de los top 3 puntajes obtenidos, sacando el ranking por complejidad de los ejercicios y por cada año. 
 
-5. cumulative distribution 
+5. Se quiere generar un pie chart porcentual basado en las duraciones de la resolución de los algoritmos, el objetivo es visualizar solo 5 slides en el chart con su respectivo porcentaje y cantidades, cada slide es el porcentaje de personas que en promedio han durado cierto rango de duración considerando basic, medium y advance. Es importante al ver un slide del chart saber la cantidad de cada nivel que están en ese rango de duración. 
 
-Los queries anteriores se entregaran al final de clase en un solo entregable. 
 
 ## aspectos operativos
 - entrega al asistente al correo: fvsasistencia@gmail.com
+- fecha de entrega: máximo lunes 6 de marzo, 7pm 
 - subject: bases 2 - caso #2 - entregable final 
