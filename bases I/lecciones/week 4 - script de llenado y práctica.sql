@@ -79,7 +79,7 @@ BEGIN
 END$$
 DELIMITER ;
 
-CALL fillInventoryLogs (10, 1, 3, 2, NULL);
+CALL fillInventoryLogs (5, 3, 2, 1, NULL);
 
 select * from inventorylog where plantid = 5;
 select * from plantas;

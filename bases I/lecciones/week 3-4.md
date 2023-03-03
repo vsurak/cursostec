@@ -48,7 +48,6 @@ Patrones de diseño
 - transacciones
 
 
-
 Para efectos de valorar diseños
 
 - se crean 5 canales para los 5 requerimientos del caso #2
