@@ -1,4 +1,4 @@
-use coperosystem;
+use viveroshop;
 
 INSERT INTO checkstatuses (statusname) VALUES
 ('Clear'),
@@ -26,17 +26,17 @@ insert into provedores (providername, phonenumber) VALUES
 ('Tango Planta', '73927292');
 
 insert into plantas (name, quantity, deleted) VALUES
-('Azucena', 24, 0),
-('Croto especial', 45, 0),
-('Rosa Negra', 12, 0),
-('Limoncillo', 8, 0),
-('Crisantemo amarillo', 45, 0),
-('Geranio', 13, 0),
-('Amapola roja', 11, 0),
-('Amapola amarilla', 9, 0),
-('Lavanda', 17, 0),
-('Zanahoria', 36, 0),
-('Loteria criolla', 29, 0);
+('Azucena', 0, 0),
+('Croto especial', 0, 0),
+('Rosa Negra', 0, 0),
+('Limoncillo', 0, 0),
+('Crisantemo amarillo', 0, 0),
+('Geranio', 0, 0),
+('Amapola roja', 0, 0),
+('Amapola amarilla', 0, 0),
+('Lavanda', 0, 0),
+('Zanahoria', 0, 0),
+('Loteria criolla', 0, 0);
 
 -- Operation Types
 -- 0 = ingreso de cosecha
@@ -45,12 +45,14 @@ insert into plantas (name, quantity, deleted) VALUES
 -- 3 = salida por venta
 -- 4 = ajuste
 
+
+DROP PROCEDURE IF EXISTS fillInventoryLogs;
+
 DELIMITER $$
-DROP PROCEDURE IF EXISTS fillInventoryLogs$$
 CREATE PROCEDURE fillInventoryLogs(IN amountofrecords INT, IN operationtype INT, IN employeeid INT, IN providerid INT, IN inventorycheckid INT)
 BEGIN
 	DECLARE theplantid INT;
-    DECLARE quantity INT;
+    DECLARE quantityTotal INT;
     DECLARE operationFactor INT DEFAULT 1;
     DECLARE recordTime TIMESTAMP;
     
@@ -62,17 +64,31 @@ BEGIN
         END IF;
 
 		SELECT plantid FROM plantas ORDER BY RAND() LIMIT 1 INTO theplantid;
+
+		SET quantityTotal = 1+RAND()*17*operationFactor;
         
 		INSERT INTO inventorylog (operationType, posttime, plantid, quantity, employeeid, providerid, inventorycheckid) VALUES
-		(operationtype, recordTime, theplantid, RAND()*17*operationFactor, employeeid, providerid, inventorycheckid);
+		(operationtype, recordTime, theplantid, quantityTotal, employeeid, providerid, inventorycheckid);
+    
+		UPDATE plantas SET quantity = quantity + quantityTotal WHERE plantid = theplantid;
         
 		SET amountofrecords = amountofrecords - 1;
 	END WHILE;
+    
+    
 END$$
-DELIMITER ;  
+DELIMITER ;
 
-CALL fillInventoryLogs (5, 1, 3, 2, NULL);
+CALL fillInventoryLogs (10, 1, 3, 2, NULL);
 
-select * from inventorylog;
+select * from inventorylog where plantid = 5;
+select * from plantas;
+
+select * from plantas where plantid IN (4,6,9);
+select * from plantas where plantid BETWEEN 4 and 6;
+
+select plantid numeroplanta, name, posttime from plantas;
+
+select quantity*employeeid algo ,posttime, plantid from inventorylog;
 
 
