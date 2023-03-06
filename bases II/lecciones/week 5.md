@@ -23,7 +23,7 @@ ademas agregue la siguiente información supuesta
 5. Crear una tabla comparativa examinando características claves de los siguientes motoros de base de datos nonSQL
 
 | Features | dynamodb (aws) | CosmosDB (azure) | Strapi.io | Contenful | Firebase |
-| --- | ----------- | ----------- | ----------- | ----------- |
+| --- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | Feature 1 | X | X | X | X |   |
 | Feature K | X | X |   | X | X |
 
