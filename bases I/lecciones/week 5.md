@@ -6,16 +6,17 @@
 ## actividades dentro de clase
 
 1. Patrones de diseño expuestos por el profesor 
-- configuraciones
-- bitácora
-- permisos de usuario
-- historical and archives
+- información de control y trazabilidad
+- configuraciones generales
+- bitácora de sistema
+- permisos de usuarios y roles de usuario
+- historical and archives 
 
 2. Se procede a explicar el concepto de producto cruz y join en la instrucción select
 
 3. En grupos se crea un diagrama que muestre los joins que van a ser necesarios para el punto 3 y 4 del caso #2
 
-4. Se introduce el concepto de vistas de la base de datos
+4. Se introduce el concepto de vistas de la base de datos 
 
 5. Hacemos un ejercicio de procesos multioperacion, las parejas van a sacar una lista de todos los procesos de negocio del sistema que requieren más de una operación, listando para cada operación los pasos que debería seguir para completarse
 

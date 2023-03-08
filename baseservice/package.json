@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Minimal starting point for an api service",
   "main": "index.ts",
+  "engines": {
+    "node" : "es2015"
+  },
   "scripts": {
     "checklint": "eslint ./*.ts --fix",
     "start": "tsc index.ts && node index.js",

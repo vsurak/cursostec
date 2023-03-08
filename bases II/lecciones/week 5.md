@@ -4,6 +4,7 @@
 1. 
 
 ## actividades dentro de clase
+0. Cerrar el tema de instrucciones de análisis de SQL Server con la presentación de referencia
 
 1. Crear una propuesta de sitio web innovador, de un servicio completamente nuevo o similar que ya exista en otro lugar que no exista en costa rica o latam
 
