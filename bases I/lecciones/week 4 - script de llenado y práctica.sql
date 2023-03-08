@@ -1,4 +1,4 @@
-use viveroshop;
+
 
 INSERT INTO checkstatuses (statusname) VALUES
 ('Clear'),
@@ -79,7 +79,7 @@ BEGIN
 END$$
 DELIMITER ;
 
-CALL fillInventoryLogs (5, 3, 2, 1, NULL);
+CALL fillInventoryLogs (3, 3, 4, 1, NULL);
 
 select * from inventorylog where plantid = 5;
 select * from plantas;
@@ -90,5 +90,89 @@ select * from plantas where plantid BETWEEN 4 and 6;
 select plantid numeroplanta, name, posttime from plantas;
 
 select quantity*employeeid algo ,posttime, plantid from inventorylog;
+
+ALTER TABLE inventoryLog ADD COLUMN checksum varbinary(150) ;
+
+select * from inventorylog;
+
+SELECT SHA2(CONCAT(operationtype,posttime, quantity, plantid), 256) FROM inventorylog;
+
+UPDATE inventorylog SET checksum=SHA2(CONCAT(operationtype,'papas y platanos',posttime,'chatgpt737373' ,quantity, plantid), 256)
+WHERE inventoryLogid>0
+
+update inventorylog SET quantity=20 WHERE inventorylogid=16;
+
+SELECT * 
+FROM inventorylog
+WHERE SHA2(CONCAT(operationtype,posttime, quantity, plantid), 256) <>checksum;
+
+
+- quiero las plantas y las cantidades que se han vendido
+-- una alternativa para cruzar tablas es haciendo producto cruz, esto todos con todos
+
+select * from plantas;
+select plantid, quantity from inventorylog 
+WHERE operationType = 3;
+
+select inventorylog.plantid, inventorylog.quantity, plantas.plantid from inventorylog, plantas 
+WHERE operationType = 3 AND inventoryLog.plantid = plantas.plantid;
+
+select inventorylog.plantid, inventorylog.quantity, plantas.plantid, plantas.name 
+from inventorylog, plantas 
+WHERE operationType = 3 AND inventoryLog.plantid = plantas.plantid;
+
+-- la manera correcta es usas los modificadores de joins
+-- el normal es el inner join que me permite cruzar campos por cualquier condicion
+
+select inventorylog.plantid, inventorylog.quantity, plantas.plantid, plantas.name 
+from inventorylog
+INNER JOIN plantas ON inventoryLog.plantid = plantas.plantid
+WHERE operationType = 3; 
+
+
+select inventorylog.plantid, inventoryLog.employeeid, inventorylog.quantity, 
+plantas.plantid, plantas.name, 
+concat(employees.firstname, ' ', employees.lastname) employeename 
+from inventorylog
+INNER JOIN plantas ON inventoryLog.plantid = plantas.plantid
+INNER JOIN employees ON Employees.employeeid = inventoryLog.employeeid
+WHERE operationType = 3 
+
+select plantas.name, inventorylog.quantity, 
+concat(employees.firstname, ' ', employees.lastname) employeename 
+from inventorylog
+INNER JOIN plantas ON inventoryLog.plantid = plantas.plantid
+INNER JOIN employees ON Employees.employeeid = inventoryLog.employeeid
+WHERE operationType = 3 
+
+select plantas.name, log.quantity, 
+concat(emp.firstname, ' ', emp.lastname) employeename 
+from inventorylog log
+INNER JOIN plantas ON log.plantid = plantas.plantid
+INNER JOIN employees emp ON emp.employeeid = log.employeeid
+WHERE operationType = 3 ;
+
+-- quiero ver para todas las plantas existentes cuantas unidades hay disponibles para la venta
+
+insert into plantas (name, quantity, deleted) VALUES
+('Crisantemo', 0, 0),
+('Apio', 0, 0);
+
+select plantas.name, SUM(log.quantity) existencia 
+from plantas
+INNER JOIN inventorylog log ON plantas.plantid=log.plantid
+GROUP BY plantas.name;
+
+select plantas.name, SUM(log.quantity) existencia 
+from plantas
+LEFT JOIN inventorylog log ON plantas.plantid=log.plantid
+GROUP BY plantas.name;
+
+
+select plantas.name, IFNULL(SUM(log.quantity),0) existencia 
+from plantas
+LEFT JOIN inventorylog log ON plantas.plantid=log.plantid
+GROUP BY plantas.name;
+
 
 
