@@ -78,7 +78,7 @@ BEGIN
     
 END$$
 DELIMITER ;
-
+use viveroshop;
 CALL fillInventoryLogs (3, 3, 4, 1, NULL);
 
 select * from inventorylog where plantid = 5;
@@ -136,14 +136,14 @@ concat(employees.firstname, ' ', employees.lastname) employeename
 from inventorylog
 INNER JOIN plantas ON inventoryLog.plantid = plantas.plantid
 INNER JOIN employees ON Employees.employeeid = inventoryLog.employeeid
-WHERE operationType = 3 
+WHERE operationType = 3 ;
 
 select plantas.name, inventorylog.quantity, 
 concat(employees.firstname, ' ', employees.lastname) employeename 
 from inventorylog
 INNER JOIN plantas ON inventoryLog.plantid = plantas.plantid
 INNER JOIN employees ON Employees.employeeid = inventoryLog.employeeid
-WHERE operationType = 3 
+WHERE operationType = 3 ;
 
 select plantas.name, log.quantity, 
 concat(emp.firstname, ' ', emp.lastname) employeename 
@@ -174,5 +174,33 @@ from plantas
 LEFT JOIN inventorylog log ON plantas.plantid=log.plantid
 GROUP BY plantas.name;
 
+
+
+CREATE VIEW VW_MovimientosPlanta AS 
+select plantas.name, inventorylog.quantity, 
+concat(employees.firstname, ' ', employees.lastname) employeename 
+from inventorylog
+INNER JOIN plantas ON inventoryLog.plantid = plantas.plantid
+INNER JOIN employees ON Employees.employeeid = inventoryLog.employeeid;
+
+select * from VW_MovimientosPlanta;
+
+DROP PROCEDURE IF EXISTS registerSell;
+
+DELIMITER $$
+CREATE PROCEDURE registerSell(IN productName VARCHAR(35), IN paymentTypeId TINYINT, IN Amount DECIMAL(7,2))
+BEGIN
+	DECLARE productId INT;
+    DECLARE precio DECIMAL(8,2);
+    
+    SELECT productoid FROM copo_productos WHERE descripcion = productName INTO productId;
+    SELECT precio FROM copo_productos WHERE productoid = productId INTO precio;
+    
+    INSERT INTO copo_ventas (tipopago, monto, vuelto, productoid) 
+    VALUES
+    (paymentTypeId, Amount, Amount-precio, productoid);
+    
+END$$
+DELIMITER ;
 
 

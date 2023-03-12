@@ -92,7 +92,7 @@ registrar una venta deberá hacerse por medio de un stored procedure.
 # preliminar #1, jueves 9 de marzo, 40pts 
 - diseño de la base de datos terminado, entregado como pdf y como script de creación de mysql
 
-# preliminar #2, martes 14 de marzo, 30pts
+# preliminar #2, jueves 16 de marzo, 30pts
 - base de datos llena , reto #2 #3 y #4
 - entrega script de creación y llenado, además script con las consultas en mysql 
 
