@@ -29,6 +29,8 @@ https://www.mongodb.com/docs/manual/tutorial/model-embedded-one-to-one-relations
 subject: Bases de datos II - quiz #7
 to: fvsasistencia@gmail.com
 
+<img src="airbnb_mongo_design.png" width=50% height=50%>
+
 
 4. Grupos de lectura sobre la arquitectura de mongodb, MongoDB_Architecture_Guide.pdf, dropbox, quiz #8
 
