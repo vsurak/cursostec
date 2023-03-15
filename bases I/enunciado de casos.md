@@ -105,3 +105,4 @@ registrar una venta deberá hacerse por medio de un stored procedure.
 - entrega al asistente al correo: fvsasistencia@gmail.com 
 
 - subject: bases 1 - caso #2 - preliminar #x
+
