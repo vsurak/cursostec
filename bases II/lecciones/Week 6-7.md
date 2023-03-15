@@ -11,7 +11,7 @@ hasta Aggregation $match inclusive.
 
 Los tutoriales se verificaran por medio de un ejercicio práctico a realizar el miércoles 22 de marzo, quiz #9
 
-subject: Bases de datos II - quiz #9
+subject: Bases de datos II - quiz #8
 to: fvsasistencia@gmail.com
 
 4. desarrollo del caso #3
@@ -26,13 +26,13 @@ https://www.mongodb.com/docs/manual/tutorial/model-embedded-one-to-one-relations
 
 3. Ejercicio de diseño básico en mongodb, quiz #7. En la siguiente imagen encontrará una salida de un listing de airbnb. Proceda a realizar un diseño documental acorde a este display, para todos los campos. Diseñe el json ejemplo para dos propiedades e insertalas en un collection hecho en mongo. Deberá entrega los json y screenshots de las operaciones de insert/write, y de la operación find con pretty. 
 
-subject: Bases de datos II - quiz #7
+subject: Bases de datos II - quiz #6
 to: fvsasistencia@gmail.com
 
 <img src="airbnb_mongo_design.png" width=50% height=50%>
 
 
-4. Grupos de lectura sobre la arquitectura de mongodb, MongoDB_Architecture_Guide.pdf, dropbox, quiz #8
+4. Grupos de lectura sobre la arquitectura de mongodb, MongoDB_Architecture_Guide.pdf, dropbox, quiz #7
 
 How we run applications
 

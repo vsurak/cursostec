@@ -28,6 +28,7 @@ para viernes 24 de marzo
 21.3 
 
 
+Quiz #8
 Las lecturas se evaluaran por medio de un quiz oral colectivo. El profesor abrirá temas de las lecturas y el estudiante para optar por una calificación deberá compartir con la clase hechos técnicos aprendidos de las lecturas. Reglas:
 
 a. un hecho técnico se refiere al comportamiento técnico digital de la tecnología en cuestión, el comportamiento de un algoritmo o la forma de funcionar de una instrucción
@@ -69,8 +70,9 @@ d. si se terminan los temas y una persona no ha participado o no ha logrado util
 
     output: nombre del producto, cantidad de unidades vendidas
 
-subject: Bases de datos I - Quiz #5
-to: fvsasistencia@gmail.com en el momento del corte.
+    subject: Bases de datos I - Quiz #6 #7 
+
+    to: fvsasistencia@gmail.com en el momento del corte. 
 
 2. Se introduce el tema de stored procedures y transacciones atómicas
 
