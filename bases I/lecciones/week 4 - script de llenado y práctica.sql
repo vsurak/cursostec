@@ -79,7 +79,7 @@ BEGIN
 END$$
 DELIMITER ;
 use viveroshop;
-CALL fillInventoryLogs (3, 3, 4, 1, NULL);
+CALL fillInventoryLogs (11, 3, 2, NULL, NULL);
 
 select * from inventorylog where plantid = 5;
 select * from plantas;

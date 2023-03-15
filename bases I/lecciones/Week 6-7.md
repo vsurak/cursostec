@@ -52,7 +52,7 @@ d. si se terminan los temas y una persona no ha participado o no ha logrado util
 
     2.2 muestre todos los productos con su precio actual ordenados de precio mayor a precio menor. Tome en cuenta que el producto podría tener o no precio especial por playa. 
 
-    output:  nombre del producto, precio, un flag que diga si este es precio especial de playa 
+    output:  nombre del producto, precio, un flag que diga si este es precio especial de playa, nombre de la playa 
 
     2.3 averigue que ingredientes son usados en únicamente un solo producto
 
