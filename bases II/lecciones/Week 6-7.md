@@ -28,9 +28,28 @@ https://www.mongodb.com/docs/manual/tutorial/model-embedded-one-to-one-relations
 
 subject: Bases de datos II - quiz #6
 to: fvsasistencia@gmail.com
+fecha de entrega: viernes 17 a medio noche
 
 <img src="airbnb_mongo_design.png" width=50% height=50%>
 
+```sh
+docker run --name mimongoserver -d mongo
+
+docker exec -it mimongoserver bash
+
+mongosh
+
+show databases;
+
+db.characters.insert({"id" : 1,"nombre": "Kevin","nivel": 10,"atuendo": {"camisa": "blanco","pantalon":"negro","zapatos": "negro"}});
+
+show databases;
+
+show collections;
+
+db.characters.find();
+
+```
 
 4. Grupos de lectura sobre la arquitectura de mongodb, MongoDB_Architecture_Guide.pdf, dropbox, quiz #7
 
