@@ -161,3 +161,60 @@ De los datos extraídos se quiere averiguar lo siguiente:
 - entrega al asistente al correo: fvsasistencia@gmail.com
 - fecha de entrega: máximo lunes 6 de marzo, 7pm 
 - subject: bases 2 - caso #2 - entregable final 
+
+
+---
+# caso #3, 13%
+
+*instituto tecnológico de costa rica*, escuela de computación  
+*bases de datos II*  
+_prof. rodrigo núñez_  
+*tipo:* grupos hechos en el ejercicio de webkit   
+
+## descripción
+
+en la semana anterior se crearon grupos de trabajo que ejecutaron la siguiente actividad:
+
+---
+_textualmente_
+
+1. Crear una propuesta de sitio web innovador, de un servicio completamente nuevo o similar que ya exista en otro lugar que no exista en costa rica o latam
+
+2. Del MethodKitStartupCanvas.pdf (dropbox), pensar en que se va a construir un sitio web, proceder a trabajar con el grupo de trabajo designado los puntos:
+- company name, team, question, solution, existing alternatives, target group, goals, mvp
+
+ademas agregue la siguiente información supuesta
+- países donde va operar
+- internacionalización que va a soportar
+- cuátos millones de usuarios van a utilizar el sistema en cada país
+- cantidad de items (productos, artículos, servicios, assets, o similares) que el sistema va a tener para ofrecer
+
+---
+
+cada grupo seleccionó un sistema de base de datos nonSQL (not only sql) en la nube entre dynamodb, strapi, contenful, firebase y cosmosdb. Se quiere hacer la prueba de cuánto se demora implementar un endpoint REST usando como cloud service uno de esos 5 sistemas seleccionados para luego comparar eso con desarrollo en modelos relacionales. 
+
+## preliminar #1, bitácora y diseño de arquitectura, 21 de marzo, 2023
+
+se quiere crear un servicio REST que tenga un único endpoint, https://jamboard.google.com/d/1568pa8tc3KsLe6QiUZPuwK8FjuKLPHbBpeGqxLWsQ30/viewer?f=0 , el nombre del resource queda a su criterio y con este jamboard puede revisar el standard de nombres. El método HTTP se sugiere que sea GET por simplicidad del ejercicio. Dependiendo de la tecnología de base de datos cloud que haya escogido, es posible que sea requerido un mínimo de programación a practicamente nada para habilitar dicho REST endpoint.
+
+1. diseñe una bitácora para registrar las horas invertidas en realizar este caso #3, puede ser un excel file compartido entre el grupo y el profesor al email vsurak@gmail.com, se espera que el excel contenga mínimo los siguientes campos: fecha, nombre del estudiante, cantidad de minutos invertidos, tipo de actividad. El tipo de actividad debe ir desde investigación, pruebas, reuniones, programación, entrega final, en general cualquier tipo de actividad que haya sido necesaria, individual o grupalmente para la realización de este ejercicio. esta bitácora no pretende medir cual integrante trabajó o aportó más o menos tiempo en el trabajo, lo que se quiere es tener un total clasificado para luego hacer un ejercicio de estimación comparativo con una plataforma relacional y sacar costos. Por dicha razón se les pide que mantengan la bitácora al día, si no pueden entrar actualizarla, talvez hacen un grupo de chat entre los integrantes y asi si alguno invierte un tiempo en alguna actividad avisa a alguien para que registren el tiempo usado, no importa si se invertió tiempo y algo no resulto, al fin y al cabo es tiempo de investigación y pruebas, contabilicen todo. 
+
+2. Haga un diagrama de arquitectura de cómo va a terminar funcionando las diferentes piezas involucradas del sistema, eso son cajitas de colores que se conectan con flechas, es importante visualizar a postman, la capa de aplicación y la capa de datos como mínimo. 
+
+enviar a: vsurak@gmail.com
+subject: Bases de datos II - caso #3 - preliminar #1
+antes de media noche y debe venir la lista de integrantes la cual debe concordar con los grupos que trabajaron en clase. 
+
+
+## final, implementación del servicio REST, 24 de marzo, 2023
+
+1. Un integrante del grupo hará la demostración, durante el proceso nos va a explicar cómo fué el proceso de definición de la arquitectura, cómo fué la creación de la base de datos, cómo fué el proceso de diseño de la base de datos y la carga de los datos. Posteriormente nos va a explicar como fué posible habilitar el REST endpoint y hacer el query a la base de datos para obtener la información.
+
+2. La misma persona procede por medio de postman a hacer la demostración de que el servicio rest efectivamente funciona. 
+
+Lo anterior se hará durante la clase y ahi mismo se le asignará la nota. 
+
+Notificar a mas tardar el jueves 23 al profesor si algún integrante va a ser descartado del grupo por no haber trabajado en la asignación. 
+
+
+
