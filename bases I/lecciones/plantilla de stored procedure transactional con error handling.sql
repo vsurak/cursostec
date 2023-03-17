@@ -95,8 +95,8 @@ BEGIN
         RESIGNAL SET MESSAGE_TEXT = @message;
 	END;
     
-    -- SELECT employeeid FROM employees WHERE email = pEmployeeEmail INTO pEmployeeId;
-    SET EmployeeID = pEmployeeId;
+    SELECT IFNULL(employeeid, -1) FROM employees WHERE email = pEmployeeEmail INTO pEmployeeId;
+    -- SET EmployeeID = pEmployeeId;
 
     IF (EmployeeID=-1) THEN
 		SIGNAL SQLSTATE '45000' SET MYSQL_ERRNO = INVALID_EMPLOYEE;
@@ -151,4 +151,4 @@ INSERT INTO tmpInventoryData (inventorygroup, plantid, quantity, operationType) 
 (@migrupo,6, 4,3);
 
 
-call vivero_registerInventoryLog('6503a2c9-c466-11ed-b0a3-0242ac110002','delbarrio@tamarindo.com', 3);
+call vivero_registerInventoryLog("6503a2c9-c466-11ed-b0a3-0242ac110002","delbarrio@tamarindo.com", 3);
