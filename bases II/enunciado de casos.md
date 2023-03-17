@@ -201,9 +201,11 @@ se quiere crear un servicio REST que tenga un único endpoint, https://jamboard.
 
 2. Haga un diagrama de arquitectura de cómo va a terminar funcionando las diferentes piezas involucradas del sistema, eso son cajitas de colores que se conectan con flechas, es importante visualizar a postman, la capa de aplicación y la capa de datos como mínimo. 
 
-enviar a: vsurak@gmail.com
-subject: Bases de datos II - caso #3 - preliminar #1
-antes de media noche y debe venir la lista de integrantes la cual debe concordar con los grupos que trabajaron en clase. 
+enviar a: vsurak@gmail.com 
+
+subject: Bases de datos II - caso #3 - preliminar #1 
+
+antes de media noche y debe venir la lista de integrantes la cual debe concordar con los grupos que trabajaron en clase. En el entregable envíe la imagen de la arquitectura, la bitácora ya el profesor la habrá podido estar chequeando en tiempo real al ser un share file. 
 
 
 ## final, implementación del servicio REST, 24 de marzo, 2023
