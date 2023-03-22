@@ -103,3 +103,18 @@ group by playa
 select * from inventorylog WHERE posttime>=@startime and posttime <= @endtime;
 
 
+2.5 
+select carrito.nombre, playas.nombre, sum(ventas.monto) playatotal, sum(ventas.quantity) from carritos carrito 
+inner join playas 
+inner join ventas
+where ventas.posttime between fechainicial and fechafinal
+group by carrito.nombre, playas,nombre
+order by playatotal, playas.nombre
+
+2.6 
+select productos.nombre, sum(cantidad) from productos 
+inner join ventas
+where ventas.postime between starttime and endtime
+group by productos.nombre
+having count()>=5
+

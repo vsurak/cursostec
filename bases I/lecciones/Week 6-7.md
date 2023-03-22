@@ -4,7 +4,7 @@
 
 1. Del libro Fundamentals of Database Systems 6th Edition, de Navatthe, el cual se encuentra en el dropbox proceder a estudiar las siguientes secciones:
 
-para miércoles 22 de marzo
+para viernes 24 de marzo
 1.2 
 
 1.6 
@@ -18,7 +18,7 @@ para miércoles 22 de marzo
 2.5 
 
 
-para viernes 24 de marzo
+para viernes 31 de marzo
 3.2.4 
 
 21.1 
@@ -78,8 +78,8 @@ d. si se terminan los temas y una persona no ha participado o no ha logrado util
 
 3. Cómo pasar K registros a un stored procedure que requiere procesamiento transaccional
 
-4. Se introduce el tema de tablas temporales 
+4. Stored procedures con error handling y transaction handling 
 
-5. Triggers 
+5. Se introduce el tema de tablas temporales 
 
-6. Stored procedures con error handling y transaction handling 
+6. Triggers 
