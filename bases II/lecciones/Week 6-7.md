@@ -9,7 +9,7 @@ hasta Aggregation $match inclusive.
 
 3. Video tutorial opcional de 30 minutos, https://www.youtube.com/watch?v=pWbMrx5rVBE
 
-Los tutoriales se verificaran por medio de un ejercicio práctico a realizar el miércoles 22 de marzo, quiz #8
+Los tutoriales se verificaran por medio de un ejercicio práctico a realizar el viernes 24 de marzo, quiz #8
 
 subject: Bases de datos II - quiz #8
 to: fvsasistencia@gmail.com
@@ -79,7 +79,6 @@ SANABRIA MARROQUIN RAUL
 Query types
 HIDALGO NAVARRO JOSE PABLO
 ALFARO PARRALES MONICA MARIA
-ALVAREZ MAYORGA JOSUE
 
 Indexing
 MURCIA MORA CARLOS ANTONIO

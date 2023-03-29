@@ -92,14 +92,16 @@ registrar una venta deberá hacerse por medio de un stored procedure.
 # preliminar #1, jueves 9 de marzo, 40pts 
 - diseño de la base de datos terminado, entregado como pdf y como script de creación de mysql
 
-# entrega final, jueves 23 de marzo, 60pts
+# entrega final, lunes 27 de marzo, 60pts
 - base de datos llena , reto #2 #3 y #4 
 - entrega script de creación y llenado, además script con las consultas en mysql 
 - diseño y script de creación de todo el modelo 
 - stored procedures transaccionales de los retos #5 y #6 
+- si va a ree entregar , enviar al asistente el mismo subject y concatenar en mayuscula REENTREGA
 
 ## aspectos operativos
 
 - entrega al asistente al correo: fvsasistencia@gmail.com 
 - subject: bases 1 - caso #2 - preliminar #x
+- si va a ree entregar , enviar al asistente el mismo subject y concatenar en mayuscula REENTREGA
 
