@@ -105,3 +105,60 @@ registrar una venta deberá hacerse por medio de un stored procedure.
 - subject: bases 1 - caso #2 - preliminar #x
 - si va a ree entregar , enviar al asistente el mismo subject y concatenar en mayuscula REENTREGA
 
+
+---
+
+# caso #3, 30%
+
+*instituto tecnológico de costa rica*, escuela de computación  
+*bases de datos I*  
+_prof. rodrigo núñez_  
+*tipo:* parejas  
+
+## descripción
+
+la organización costarricense *_esencial verde_* es reconocida como la mayor autoridad mundial en el tema de gestión integral de los residuos en el continente americano y algunos países de europa. es la organización más grande que vela por el correcto manejo de los deseños generados de procesos productivos y de servicios al consumidor. 
+
+<p align="center>
+    <img src="/media/residuos.png" alt="" width="60%" height="60%" >
+</p>
+
+esencial verde para llevar a cabo su ardua misión de mantener bajo control una gran cantidad de residuos que otras empresas  y personas producen, creando un balance con el ambiente debe valerse de muchos actores y procesos:
+
+1. cuenta con una red registrada de productores de residuos, estos son desde detallistas como supermercados, restaurantes, oficentros y centros comerciales; grandes cadenas como por ejemplo KFC, Taco Bell, hoteles y otros; hasta residuos industriales relacionados a industrias de manufactura de productos y alimentos como grandes fábricas. La organización tiene correctamente mapeados a esos productores geográficamente, con información de contacto y conoce perfectamente sus ciclos de recolección en cada país y localidad, pues pueden variar de una a otra. 
+
+2. además, ha propiciado la creación de empresas locales y regionales para la recolección, empresas que han sido debidamente capacitadas y certificadas para realizar la labor de recolección de desechos en los productores de cierta zona. 
+
+3. el proceso de recolección de desechos puede suceder de 3 formas:
+- esencial verde por medio de sus flotillas llega a los productores de residuos a recolectarlos 
+- una empresa de recoleción los recoje en los productores y seguidamente los lleva al punto de recolección más cercano de esencial verde 
+- el productor de los desechos lleva directamente los mismos al punto de recolección más cercano de esencial verde
+
+4. para que la recolección sea satisfactoria ya sea el productor de desechos o las empresas recolectoras de desechos, deben utilizar recipientes de almacenamiento especializados según el tipo de desecho: químicos, aceites, aguas, cartón, papel, aluminio, biodegradable, etc. Existen diversos tipos de recipientes con multiples capacidades o tamaños, y cada tipo de recipiente puede ser usado para ciertos tipos de desechos específicos. Todos los recipientes poseen un peso lo que permite calcular fácilmente el peso de los residuos y todos los recipientes son reutilizables.
+
+5. los recipientes deben tener un trazabilidad precisa, pues es de suma importancia poder saber con exactitud el origen y recorrido en el proceso completo que hayan tenido los residuos.
+
+6. en todo proceso de recolección de residuos, se retiran aquellos usados y se entregan equivalentes ya limpios, podría ser necesario agregar nuevos recipientes ya sea por deterioro de alguno que haya que sacar de circulación o bien porque se necesitan más pues la cantidad de residuo ha incrementado.
+
+7. esencial verde una vez que tiene los residuos en sus plantes los clasifica como desechos tratables y desechos reciclables/reutilizables. cuando se trata de desechos tratables, estos según el tipo de desecho van a recibir un procedimiento para su síntesis o al menos para que sea menos dañino antes de liberarse al ambiente. Todos estos procedimientos tienen un costo dependiendo del desecho y el volúmen del mismo. Cuando se trata de desechos reciclables, quiere decir que van a ser convertidos en otro producto, ese proceso de conversión tiene un costo, ulteriormente el nuevo productopuede ser vendido, generando una ganancia basada en las ventas del producto y los costos de producción. 
+
+8. cuando hay venta de productos basados en residuos, primero se cubren los costos de producción y las ganancias son repartidas entre los diversos actores del ciclo, entiéndase productures, recolectores, gobierno general, gobierno local, asociaciones, esencial verde o algun otro. quienes son esos actores y el % correspondiente a cada uno, se pacta en un contrato con las partes indicadas al momento que algún productor desea procesar sus residuos con esencial verde, y por ello, dependiendo del tipo de residuo, recolección, cantidad, periodicidad y varios otros criterios negociados se estableces tales porcentajes.
+
+9. esencial verde es una organización internacional, por lo cual debe ser capaz de entregar sus sistemas en múltiples idiomas, realizar cobros y pagos multimoneda y su plataforma tecnológica es accedida desde cualquiera de los países donde opera. 
+
+# preliminar #1, viernes 31 de marzo, 10pts 
+- cada pareja de trabajo hará de 2 a 3 preguntas al representante de esencial verde (el profesor) para aclarar requerimientos
+- las preguntas no deberán ser repetidas entre los grupos de trabajo
+- documente las respuestas y asegúrese que sus preguntas le ayuden a enriquecer un diseño de datos
+- se realiza en clase 
+
+# preliminar #2, martes 11 de abril, 15pts 
+- primer diseño de base de datos hecho en sql server, formato pdf
+- enviar al profesor máximo a media noche
+- email vsurak@gmail.com 
+- el profesor no hará revisiones completas de diagramas previo a este preliminar, solo consultas específicas
+- este preliminar servirá como revisión general del diagrama
+
+
+## aspectos operativos
+

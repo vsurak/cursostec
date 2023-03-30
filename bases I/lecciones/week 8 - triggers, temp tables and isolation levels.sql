@@ -30,32 +30,22 @@ GO
 -- =============================================
 CREATE TRIGGER dbo.FETRI_ProductosBeforeUpdate_ValidatePrice 
    ON  dbo.Productos 
-   INSTEAD OF UPDATE
+   AFTER UPDATE
 AS 
 BEGIN
-	DECLARE @prevPrecio MONEY
-	DECLARE @newPrecio MONEY
-
 	SET NOCOUNT ON -- es para que no retorne counts de registros afectados
+	DECLARE @idProducto INT
 
-	select @prevPrecio = precioVenta from deleted
-	select @newPrecio = precioVenta from inserted
-	
-	IF (@prevPrecio*0.85>@newPrecio) 
+	SELECT @idProducto = idProducto FROM inserted
+
+	IF EXISTS(SELECT 1 FROM inserted 
+			  INNER JOIN deleted 
+			  ON inserted.idProducto = deleted.idProducto
+			  WHERE inserted.precioVenta<deleted.precioVenta*0.85 AND inserted.idProducto=@idProducto)
 	BEGIN
-		update inserted set precioVenta = deleted.precioVenta
-		FROM inserted 
-		INNER JOIN deleted ON deleted.idProducto = inserted.idProducto
-		WHERE inserted.idProducto = deleted.idProducto
+		update dbo.Productos set precioVenta = deleted.precioVenta
+		FROM deleted WHERE deleted.idProducto = @idProducto AND dbo.Productos.idProducto = @idProducto
 	END 
 
 END
 GO
-
-
-
-
-
-
-
-
