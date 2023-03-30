@@ -119,7 +119,7 @@ _prof. rodrigo núñez_
 
 la organización costarricense *_esencial verde_* es reconocida como la mayor autoridad mundial en el tema de gestión integral de los residuos en el continente americano y algunos países de europa. es la organización más grande que vela por el correcto manejo de los deseños generados de procesos productivos y de servicios al consumidor. 
 
-![Manejo integral de residuos](/media/rediduos.png)
+<img src="/media/rediduos.png" width=50% height=50%>    
 
 esencial verde para llevar a cabo su ardua misión de mantener bajo control una gran cantidad de residuos que otras empresas  y personas producen, creando un balance con el ambiente debe valerse de muchos actores y procesos:
 
