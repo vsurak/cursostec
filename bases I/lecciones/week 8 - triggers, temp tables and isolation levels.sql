@@ -27,8 +27,9 @@ GO
 -- Author:		rodri el profe
 -- Create date: 03-29-2023
 -- Description:	Solo se puede rebajar el precio de un producto en max 15%
+-- 03/31/2023, rnunez, ya ahora no va a ser el 15% se modifico a un 20% 
 -- =============================================
-CREATE TRIGGER dbo.FETRI_ProductosBeforeUpdate_ValidatePrice 
+ALTER TRIGGER dbo.FETRI_ProductosBeforeUpdate_ValidatePrice 
    ON  dbo.Productos 
    AFTER UPDATE
 AS 
@@ -41,11 +42,28 @@ BEGIN
 	IF EXISTS(SELECT 1 FROM inserted 
 			  INNER JOIN deleted 
 			  ON inserted.idProducto = deleted.idProducto
-			  WHERE inserted.precioVenta<deleted.precioVenta*0.85 AND inserted.idProducto=@idProducto)
+			  WHERE inserted.precioVenta<deleted.precioVenta*0.80 AND inserted.idProducto=@idProducto)
 	BEGIN
-		update dbo.Productos set precioVenta = deleted.precioVenta
+		UPDATE dbo.Productos set precioVenta = deleted.precioVenta
 		FROM deleted WHERE deleted.idProducto = @idProducto AND dbo.Productos.idProducto = @idProducto
 	END 
-
 END
 GO
+
+-- testing the trigger
+select * from dbo.Productos
+select 3600*0.7
+update dbo.Productos set precioVenta=2520 where idProducto=4
+
+-- diseñando en sql server
+
+insert into dbo.re_products (name) values ('Coca Cola')
+insert into dbo.re_products (name) values ('Lapicero')
+
+select * from dbo.re_products
+
+alter table dbo.re_products add measure varchar(20) not null
+
+alter table dbo.re_products drop column measure
+
+

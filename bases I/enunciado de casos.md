@@ -138,11 +138,13 @@ esencial verde para llevar a cabo su ardua misión de mantener bajo control una 
 
 6. en todo proceso de recolección de residuos, se retiran aquellos usados y se entregan equivalentes ya limpios, podría ser necesario agregar nuevos recipientes ya sea por deterioro de alguno que haya que sacar de circulación o bien porque se necesitan más pues la cantidad de residuo ha incrementado.
 
-7. esencial verde una vez que tiene los residuos en sus plantes los clasifica como desechos tratables y desechos reciclables/reutilizables. cuando se trata de desechos tratables, estos según el tipo de desecho van a recibir un procedimiento para su síntesis o al menos para que sea menos dañino antes de liberarse al ambiente. Todos estos procedimientos tienen un costo dependiendo del desecho y el volúmen del mismo. Cuando se trata de desechos reciclables, quiere decir que van a ser convertidos en otro producto, ese proceso de conversión tiene un costo, ulteriormente el nuevo productopuede ser vendido, generando una ganancia basada en las ventas del producto y los costos de producción. 
+7. esencial verde una vez que tiene los residuos en sus plantas los clasifica como desechos tratables y desechos reciclables/reutilizables. cuando se trata de desechos tratables, estos según el tipo de desecho van a recibir un procedimiento para su síntesis o al menos para que sea menos dañino antes de liberarse al ambiente. Todos estos procedimientos tienen un costo dependiendo del desecho y el volúmen del mismo. Cuando se trata de desechos reciclables, quiere decir que van a ser convertidos en otro producto, ese proceso de conversión tiene un costo, ulteriormente el nuevo productopuede ser vendido, generando una ganancia basada en las ventas del producto y los costos de producción. 
 
 8. cuando hay venta de productos basados en residuos, primero se cubren los costos de producción y las ganancias son repartidas entre los diversos actores del ciclo, entiéndase productures, recolectores, gobierno general, gobierno local, asociaciones, esencial verde o algun otro. quienes son esos actores y el % correspondiente a cada uno, se pacta en un contrato con las partes indicadas al momento que algún productor desea procesar sus residuos con esencial verde, y por ello, dependiendo del tipo de residuo, recolección, cantidad, periodicidad y varios otros criterios negociados se estableces tales porcentajes.
 
 9. esencial verde es una organización internacional, por lo cual debe ser capaz de entregar sus sistemas en múltiples idiomas, realizar cobros y pagos multimoneda y su plataforma tecnológica es accedida desde cualquiera de los países donde opera. 
+
+10. existen empresas que son tan altamente contaminantes que les imposible equilibrar su deuda ambiental con respecto a la producción de residuos, entonces esas empresas tienen la posibilidad de pagarle a otros productores de residuos su factura de recolección y tratamiento de desechos. 
 
 # preliminar #1, viernes 31 de marzo, 10pts 
 - cada pareja de trabajo hará de 2 a 3 preguntas al representante de esencial verde (el profesor) para aclarar requerimientos
@@ -160,3 +162,4 @@ esencial verde para llevar a cabo su ardua misión de mantener bajo control una 
 
 ## aspectos operativos
 
+https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16
