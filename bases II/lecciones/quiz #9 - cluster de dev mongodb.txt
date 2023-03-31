@@ -18,6 +18,7 @@ docker exec -it dispconf1 bash
 
 // hacerle init al servicio de replica set para que haya replicacion entre los servidores de configuracion
 // ojo que este rs es un comando de mongo, entonces se ejecuta dentro de mongo, rs => replicaset
+// no hace falta agregar arbitros a las replicas de configuración, de hecho mongo no lo permite
 rs.initiate(
   {
     _id: "repconfdisp",
@@ -29,62 +30,75 @@ rs.initiate(
   }
 );
 
-// revisar instruccion rs.slaveOk() 
 // ejecutar rs.status() // me entrega estadisticas del estado de la replicacion
 
 
 // inicializo shards y asignarlos a una replica, replica que aun no está activa pero se declara cual es
 
-docker run -d --net mongonet --ip 10.14.1.20 --name data_sj1 mongo mongod --port 27017 --shardsvr --replSet "repSanjose"
-docker run -d --net mongonet --ip 10.14.1.22 --name data_sj2 mongo mongod --port 27017 --shardsvr --replSet "repSanjose"
-docker run -d --net mongonet --ip 10.14.1.21 --name data_limon1 mongo mongod --port 27017 --shardsvr --replSet "repLimon"
-docker run -d --net mongonet --ip 10.14.1.23 --name data_limon2 mongo mongod --port 27017 --shardsvr --replSet "repLimon"
+docker run -d --net disponet --ip 10.0.0.6 --name leon mongo mongod --port 27017 --shardsvr --replSet "repnic"
+docker run -d --net disponet --ip 10.0.0.7 --name esteli mongo mongod --port 27017 --shardsvr --replSet "repnic"
+docker run -d --net disponet --ip 10.0.0.8 --name bocas mongo mongod --port 27017 --shardsvr --replSet "reppan"
+docker run -d --net disponet --ip 10.0.0.9 --name david mongo mongod --port 27017 --shardsvr --replSet "reppan"
+docker run -d --net disponet --ip 10.0.0.10 --name cartago mongo mongod --port 27017 --shardsvr --replSet "repcr"
+docker run -d --net disponet --ip 10.0.0.11 --name liberia mongo mongod --port 27017 --shardsvr --replSet "repcr"
 
 // conectarse a uno de los servidores e inicializar la replica entre ellos
-// me conecto a un shardserver que sea miembro de la repSanjose para inicializar la rep
+// me conecto a un shardserver que sea miembro de la repnic para inicializar la rep
 rs.initiate(
   {
-    _id : "repSanjose",
+    _id : "repnic",
     members: [
-      { _id : 0, host : "10.14.1.20:27017" },
-      { _id : 1, host : "10.14.1.22:27017" }
+      { _id : 0, host : "10.0.0.6:27017" },
+      { _id : 1, host : "10.0.0.7:27017" }
     ]
   }
-)
+);
 
-// me conecto a un shardserver que sea miembro de la repLimon para inicializar la rep
+// me conecto a un shardserver que sea miembro de la reppan para inicializar la rep
 rs.initiate(
   {
-    _id : "repLimon",
+    _id : "reppan",
     members: [
-      { _id : 0, host : "10.14.1.21:27017" },
-      { _id : 1, host : "10.14.1.23:27017" }
+      { _id : 0, host : "10.0.0.8:27017" },
+      { _id : 1, host : "10.0.0.9:27017" }
     ]
   }
-)
+);
+
+// me conecto a un shardserver que sea miembro de la repcr para inicializar la rep
+rs.initiate(
+  {
+    _id : "repcr",
+    members: [
+      { _id : 0, host : "10.0.0.10:27017" },
+      { _id : 1, host : "10.0.0.11:27017" }
+    ]
+  }
+);
+
+// para leer datos en un secundario
+// db.collection.find().readPrefer("secondary"); 
 
 
 // vamos a inicializar el router indicando cuales son los servidores de configuracion
-docker run -d -p 27017:27017 --net mongonet --ip 10.14.1.24 --name tecmongo mongo mongos --port 27017 --configdb repconfigtec/10.14.1.18:27017,10.14.1.19:27017
+docker run -d -p 27017:27017 --net disponet --ip 10.0.0.2 --name disprouter1 mongo mongos --port 27017 --configdb repconfdisp/10.0.0.4:27017,10.0.0.5:27017
+docker run -d -p 27018:27017 --net disponet --ip 10.0.0.3 --name disprouter2 mongo mongos --port 27017 --configdb repconfdisp/10.0.0.4:27017,10.0.0.5:27017
 
-// conectamos al router
 
-sh.addShard( "repSanjose/10.14.1.20:27017");  hacemos shards con un server en cada replica, no hace faltan los otros porque ya estan en replica entre si
-sh.addShard( "repLimon/10.14.1.21:27017");
+// nos conectamos a uno de los routers, a cualquiera 
+docker exec -it disprouter1 mongosh
+
+// hacemos shards con un server en cada replica,
+// no hace faltan los otros porque ya estan en replica entre si
+
+sh.addShard( "repnic/10.0.0.7:27017");  
+sh.addShard( "reppan/10.0.0.9:27017");
+sh.addShard( "repcr/10.0.0.11:27017");
 
 sh.status();
 
-// para el sistema de voting es mejor agregar un arbitro
+====== llegamos hasta aqui, 03/31/2023 ======= todavia no se entrega
 
-docker run -d --net mongonet --ip 10.14.1.26 --name poveda mongo mongod --port 27017 --replSet repSanjose
-docker run -d --net mongonet --ip 10.14.1.27 --name bejarano mongo mongod --port 27017 --replSet repLimon
-
-// me conecto a cada servidor de replica y le agrego su arbitro
-agrego arbitro en el primario de la replica de sanjose
-rs.addArb("10.14.1.26:27017")
-
-agrego arbitro en el primario de la replica de limon
-rs.addArb("10.14.1.27:27017")
 
 ya tenemos las replicas listas, el router ya se le dijo cuales son los shardservers
 procedemos a configurar la distribucion de datos del shard
@@ -121,6 +135,25 @@ sh.enableSharding("matricula");
 sh.shardCollection("matricula.profesores", { nombre : "hashed" } )
 
 sh.status();
+
+
+// para el sistema de voting es mejor agregar un arbitro
+
+docker run -d --net disponet --ip 10.0.0.12 --name poveda mongo mongod --port 27017 --replSet repnic
+docker run -d --net disponet --ip 10.0.0.13 --name ramonluis mongo mongod --port 27017 --replSet reppan
+docker run -d --net disponet --ip 10.0.0.14 --name kevinnunez mongo mongod --port 27017 --replSet repcr
+
+
+// me conecto a un servidor cualquiera de la replica en cuestion y le agrego su arbitro
+agrego arbitro en el primario de la repnic
+rs.addArb("10.0.0.12:27017");
+
+agrego arbitro en el primario de la reppan
+rs.addArb("10.0.0.13:27017");
+
+agrego arbitro en el primario de la repcr
+rs.addArb("10.0.0.14:27017");
+
 
 
 
