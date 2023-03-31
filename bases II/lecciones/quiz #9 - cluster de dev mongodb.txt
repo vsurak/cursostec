@@ -159,25 +159,32 @@ rs.addArb("10.0.0.14:27017");
 
 // con eso terminado ya puedo probar el sharding y la replica que funcionan correctamente
 
--------------------
-docker start cfgtec01
-docker start cfgtec02
-docker start data_limon2
-docker start data_limon1
-docker start data_sj2
-docker start data_sj1
-docker start poveda 
-docker start bejarano
-docker start tecmongo
+-------------------starting 
+docker start dispconf1
+docker start dispconf2
+docker start liberia
+docker start cartago
+docker start esteli
+docker start leon 
+docker start david
+docker start bocas
+docker start poveda
+docker start ramonluis
+docker start kevinnunez
+docker start disprouter1
+docker start disprouter2
 
-
-docker stop tecmongo
-docker stop data_limon2
-docker stop data_limon1
-docker stop data_sj2
-docker stop data_sj1
-docker stop poveda 
-docker stop bejarano
-
+---------- stoping
+docker stop disprouter1
+docker stop disprouter2
+docker stop liberia
+docker stop cartago
+docker stop esteli
+docker stop leon 
+docker stop david
+docker stop bocas
+docker stop poveda
+docker stop ramonluis
+docker stop kevinnunez
 docker stop dispconf1
 docker stop dispconf2
