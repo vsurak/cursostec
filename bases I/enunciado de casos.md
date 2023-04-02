@@ -149,7 +149,7 @@ esencial verde para llevar a cabo su ardua misión de mantener bajo control una 
 # preliminar #1, martes 4 de abril, 10pts 
 - cada pareja de trabajo hará 2 preguntas al representante de esencial verde (el profesor) para aclarar requerimientos
 - las preguntas no deberán ser repetidas entre los grupos de trabajo
-- las preguntas deberán escribirse en el siguiente documento, cada pareja de trabajo use un card del documento para agregar sus dos preguntas
+- las preguntas deberán escribirse en el siguiente documento, cada pareja de trabajo use un card del documento para agregar sus dos preguntas. https://1drv.ms/w/s!AhkFUQ-eTrzhi59UKDb5TJQO6pkiQA?e=HButzG 
 - aproveche el ejercicio para hacer preguntas sustanciosas, apoyelas en imágenes, diseños de tablas, scripts, esquemas o media de apoyo
 
 # preliminar #2, miércoles 12 de abril, 15pts 
