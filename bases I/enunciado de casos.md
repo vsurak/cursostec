@@ -146,13 +146,13 @@ esencial verde para llevar a cabo su ardua misión de mantener bajo control una 
 
 10. existen empresas que son tan altamente contaminantes que les imposible equilibrar su deuda ambiental con respecto a la producción de residuos, entonces esas empresas tienen la posibilidad de pagarle a otros productores de residuos su factura de recolección y tratamiento de desechos. 
 
-# preliminar #1, viernes 31 de marzo, 10pts 
-- cada pareja de trabajo hará de 2 a 3 preguntas al representante de esencial verde (el profesor) para aclarar requerimientos
+# preliminar #1, martes 4 de abril, 10pts 
+- cada pareja de trabajo hará 2 preguntas al representante de esencial verde (el profesor) para aclarar requerimientos
 - las preguntas no deberán ser repetidas entre los grupos de trabajo
-- documente las respuestas y asegúrese que sus preguntas le ayuden a enriquecer un diseño de datos
-- se realiza en clase 
+- las preguntas deberán escribirse en el siguiente documento, cada pareja de trabajo use un card del documento para agregar sus dos preguntas
+- aproveche el ejercicio para hacer preguntas sustanciosas, apoyelas en imágenes, diseños de tablas, scripts, esquemas o media de apoyo
 
-# preliminar #2, martes 11 de abril, 15pts 
+# preliminar #2, miércoles 12 de abril, 15pts 
 - primer diseño de base de datos hecho en sql server, formato pdf
 - enviar al profesor máximo a media noche
 - email vsurak@gmail.com 
