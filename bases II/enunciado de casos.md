@@ -273,7 +273,7 @@ la aplicación usando la identificación previa, más esta solicitud, con ayuda 
 
 8. cuando los proveedores desean actualizar la información de los servicios que ofrecen, lo hacen por medio de un API que provee AIBulb, dicha actualización es guardada en una base de datos en memoria, redis. para que así luego un proceso asíncrono se encargue de tomar las modificaciones pendientes, enviarle la información necesaria a las bases de datos y modelos del IA, actualizar los URLs y objetos de los servicios que actualiza el proveedor, y luego finalmente enviar los datos de la modificación a los lugares respectivos. recordes que un mismo proveedor puede operar en varios países y podría para un mismo servicio no ofrecer exactamente las mismas funciones, por ello, la actualización de URLs, versión y objetos se realiza localizadamente según las zonas indicadas en la actualización. con la actualización lista las aplicaciones inician a hacer uso de los nuevos servicios y funciones.
 
-## preliminar #1, data cluster, databases design and implementation
+## preliminar #1, data cluster, databases design and implementation, 50pts
 - dado el problema anterior proceda a diseñar las colecciones y json necesarios para el sistema 
 - diseñe e implemente relacionalmente en el SABD de su elección lo que sea necesario para dar consistencia transaccional 
 - diseñe, implemente y ponga en ejecución un shard cluster en mongodb que permita a AIBulb proveer con eficiencia (esto es reduciendo al máximo posible que un usuario tenga que consultar y evaluar aplicaciones que involucren hacer query a datos que estén fuera del alcance de su localización o sus preferencias)
