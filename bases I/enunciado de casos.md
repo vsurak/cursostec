@@ -159,7 +159,91 @@ esencial verde para llevar a cabo su ardua misión de mantener bajo control una 
 - el profesor no hará revisiones completas de diagramas previo a este preliminar, solo consultas específicas
 - este preliminar servirá como revisión general del diagrama
 
+# preliminar #3, viernes 21 de abril, 25pts 
+el arquitecto de la solución quiere someter su diseño a varios criterios de aceptación y así asegurar una escalabilidad mínima del sistema deseado: 
+
+- basado en su diseño, si existe una consulta que requiera al menos 4 joins, cuál opción sería más eficiente: encapsular el query en una vista dinámica o en una vista indexada. Si hay diferencia encontrar una justificación teórica que justifique el hallazgo. la cantidad de datos deben ser lo suficiente para encontrar diferencias
+
+- determinar una norma de estrategia de optimización para su diseño de base de datos, determinar una consulta real del sistema que contenga todos los componentes comunes de un query: fields, joins, left/right join, aggregate functions, except/intersect, group by, sort, for json, wheres sobre campos primary y non primary, igualdades y desigualdades. retornando una cantidad generosa de registros evalúe tiempos de ejecución y plan de ejecución de la consulta, y con ello diseñe un conjunto de pasos o normas, que debe seguir el equipo de desarrollo para garantizar que las consultas complejas se optimicen de una forma estandard y ordenada para la organización. Justifique cada normal con scripts ejemplos para hacer la demostración en tiempo real.
+
+- basado en la plantilla para stored procedures transaccionales con error handling y nested transactions handling de sql server, cree un stored procedure realmente funcional para el sistema que reciba por parámetro al menos un [TVP](https://learn.microsoft.com/en-us/sql/relational-databases/tables/use-table-valued-parameters-database-engine?view=sql-server-ver16) 
+
+```sql
+-----------------------------------------------------------
+-- Autor: Rnunez
+-- Fecha: 12/12/2011
+-- Descripcion: esta description en comentarios queda almacenada
+-- Otros detalles de los parametros
+-----------------------------------------------------------
+-- Author: pedro perez
+-- Fecha: 04-21-2021
+-- Desc: actualiza la tabla de xyz bla bla bla
+-----------------------------------------------------------
+CREATE PROCEDURE [dbo].[XXXXXXSP_VerboEntidad]
+	@Param1 NVARCHAR(35),
+	@Param2 BIGINT
+AS 
+BEGIN
+	
+	SET NOCOUNT ON -- no retorne metadatos
+	
+	DECLARE @ErrorNumber INT, @ErrorSeverity INT, @ErrorState INT, @CustomError INT
+	DECLARE @Message VARCHAR(200)
+	DECLARE @InicieTransaccion BIT
+
+	-- declaracion de otras variables
+
+	-- operaciones de select que no tengan que ser bloqueadas
+	-- tratar de hacer todo lo posible antes de q inice la transaccion
+	
+	SET @InicieTransaccion = 0
+	IF @@TRANCOUNT=0 BEGIN
+		SET @InicieTransaccion = 1
+		SET TRANSACTION ISOLATION LEVEL READ COMMITTED
+		BEGIN TRANSACTION		
+	END
+	
+	BEGIN TRY
+		SET @CustomError = 2001
+
+		-- put your code here
+		
+		IF @InicieTransaccion=1 BEGIN
+			COMMIT
+		END
+	END TRY
+	BEGIN CATCH
+		SET @ErrorNumber = ERROR_NUMBER()
+		SET @ErrorSeverity = ERROR_SEVERITY()
+		SET @ErrorState = ERROR_STATE()
+		SET @Message = ERROR_MESSAGE()
+		
+		IF @InicieTransaccion=1 BEGIN
+			ROLLBACK
+		END
+		RAISERROR('%s - Error Number: %i', 
+			@ErrorSeverity, @ErrorState, @Message, @CustomError)
+	END CATCH	
+END
+RETURN 0
+GO
+```
+
+- simplifique por medio de un [CTE](https://learn.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017) la consulta más optimizada del ejercicio de la norma de optimización y averigue si existe diferencia sustancial de rendimiento para esto también sea agregado a la norma del equipo de desarrollo
+
+- para realizar los ejercicios anteriores va a necesitar data, puede usar cualquier tipo de generación aleatoria pues se están ejercitando habilidades de "tunning de la base de datos"
+
 
 ## aspectos operativos
 
-https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16
+- [temporal tables para mantener historiales de datos](
+https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16)
+
+## topics on draft
+- archive, linkedserver, sprecompile, jobs
+- job para recompilar stored procedures
+- schema binding y with encryption
+- niveles de isolacion, dirty read , phantom, lost update, deadlocks
+- reporting services
+- users, roles, permissions, encryption
+- backup and restore
