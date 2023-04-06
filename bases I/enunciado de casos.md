@@ -29,7 +29,7 @@ las personas van a ingresar a un sitio web donde van a poder ver todos los difer
 
 - contenido de la entrega: pdf con el modelo conceptual y bullets con las reglas para el estandar de nombres 
 
-## preliminar #2, 22 de febrero 
+## preliminar #2, 22 de febrero, 30pts
 4. cómo podría hacerse el diseño físico de las fotografías de los campers? en workbench
 
 5. cómo lograría tener tantos atributos diferentes por tipo de camper?
