@@ -292,4 +292,14 @@ deberán ser mantenidos en un repositorio en github centralizado para todos los 
 - fecha y hora del último commit : *domingo 23 de abril, media noche*
 
 
+## preliminar #2, real time notifications, async update for content and sales, TBD , 50pts
+- cuando un proveedor de servicio quiere actualizar su contenido de la página principal debe hacerlo por medio de un api 
+- dado que esto es tan masivo, no se realiza la actualización en el cluster en tiempo real si no que se hace de forma asíncrona
+- el request del proveedor al api en lugar de ser salvado es enviado a un servidor de notificaciones persistente, en este caso se ha decidido que sea kafka 
+- una vez que kafka recibe la notificación se dispara un consumidor que se encarga de actualizar basado en el request la información necesaria en el cluster de mongo 
+- el otro proceso automático que debe existir se va a implementar en logstash, este se va encargar de cada cierto tiempo analizar los request de los usuarios y posteriormente indexar en un elastic search la información necesaria para poder mostrarle reportes por rangos de fecha a los provedores, de la cantidad y tipo de request que han estado procesando por ellos de forma exitosa, el monto de ventas que le han generado cada una; y también, la cantidad y tipo de request que los usuarios están buscando, que se acerca a hacer match con ellos pero que ellos no lo proveen y así crear oportunidades de negocio
+- dicho reporte anterior deberá generarse por proveedor y por rango de fechas utilizando Kibana 
+- diseñe una arquitectura solución y obtenga aprobación de dicha arquitectura con el profesor para los objetivos de este preliminar
+- una vez con la arquitectura aprobada proceda a realizar la implementación necesaria 
+- la revisión será demostrativa en las herramientas solicitadas y con la arquitectura diseñada por el grupo, será con cita de revisión con el profesor 
 

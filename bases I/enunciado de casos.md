@@ -235,17 +235,79 @@ GO
 
 - para realizar los ejercicios anteriores va a necesitar data, puede usar cualquier tipo de generación aleatoria pues se están ejercitando habilidades de "tunning de la base de datos"
 
+- entregable es un repositorio en git con los archivos de flyway, cualquier otro script adicional para realizar pruebas y la norma de optimización en pdf
+
+# preliminar #4, TBD, 35pts 
+- ahora el arquitecto de soluciones necesita que usted diseñe la forma en que los programas van a interactuar con la base de datos, definiendo los layers necesarios para acceder y trabajar con la misma desde las aplicaciones 
+
+- para ello deberá probar dos formas de interconectividad, la primera hacer un acceso cliente servidor desde una aplicación programada en el lenguaje de su preferencia, por ejemplo .net, java, go, python, etc, uno que le permita construir un UI y que exista un driver nativo, jdbc, ado.net y en última instancia odbc. Escoja alguna de las siguientes pantallas para realizar su programa de prueba: 
+	a) chequear los residuos que un transportista recolector se va a llevar de un productor de residuos, haciendo el canje de recipientes respectivos 
+	b) registrar las ventas de productos reciclados realizando la asignación de montos respectivos según contratos 
+(valide el mockup de la pantalla seleccisonada con el diseño de la base de datos y el profesor)
+
+- la segunda forma deberá hacerse por medio de un api en REST, para ello el profesor le va a proporcionar una [base hecha en nodejs](https://github.com/vsurak/cursostec/tree/master/baseservice) , para probarlo, implemente un stored procedure que retorne al menos 500 registros, luego proceda a habilitar dos endpoints que llamen a dicho stored procedure, respetando los layers del servicio REST proporcionado, uno debe hacer uso de un conexión pool y otro que no lo use. Los endpoints deben retornar json. 
+
+- hecho lo anterior proceda a probar con postman su servicio rest, haciendo pruebas de stress sin superar los 20 hilos de ejecución y determine en las métricas de postman versus las métricas del activity monitor de su sql server, cuál de los endpoints obtiene mejores prestaciones y el por qué, esto puede documentarlo entre postman, un documento, screenshots y cualquier otro material de apoyo 
+
+- la revisión de este preliminar será con cita de revisión con el asistente, la aplicación y el servicio rest deberá estar en un solo repositorio de git, se tomará en cuenta los commits de cada integrante 
+
+- se daran 15 puntos extras si implementa y mide otro endpoint utilizando algún ORM
 
 ## aspectos operativos
 
 - [temporal tables para mantener historiales de datos](
 https://learn.microsoft.com/en-us/sql/relational-databases/tables/temporal-tables?view=sql-server-ver16)
 
-## topics on draft
-- archive, linkedserver, sprecompile, jobs
-- job para recompilar stored procedures
-- schema binding y with encryption
-- niveles de isolacion, dirty read , phantom, lost update, deadlocks
-- reporting services
-- users, roles, permissions, encryption
-- backup and restore
+
+# caso #4, 15%
+
+*instituto tecnológico de costa rica*, escuela de computación  
+*bases de datos I*  
+_prof. rodrigo núñez_  
+*tipo:* parejas  
+
+## descripción
+el caso número 4 es continuación del caso número 3, en el sentido que se va a utilizar la misma base de datos, pueden continuar trabajando con la misma pareja o pueden cambiar. en el caso de cambiar de pareja, si y solo si, ambas personas trabajaron en forma conjunta en el caso #3, las dos personas tienen derecho a usar la base de datos y todo lo construido hasta el caso 3, de lo contrario y conversado con el profesor, solo uno de los integrantes tendría derecho a utilizar el trabajo previo. 
+
+# preliminar #1, TBD, 60pts  
+
+- utilizando los stored procedures existentes o bien creando nuevos pero que no sean forzados, si no que deben ser stored procedures que realmente van a ser necesarios para que el sistema funcione, proceda a averiguar bajo que situaciones particulares en el orden de ejecución de cuales quiera dos stored procedures transaccionales, podría producirse alguno de los siguientes problemas:
+
+	a) dirty read
+	b) lost update
+	c) phantom 
+	d) deadlock
+
+- especifique en los comentarios del script, bajo que escenario del sistema podría llegar a suceder eso, haga las pruebas vía script demostrando que si es posible que se de dicha situación
+
+- seguidamente proponga una nueva versión de dichos SP los cuales podrían implicar cambios de código y hasta cambios de diseño, que eliminen o reduzcan sustancialmente la aparición de dicho problema 
+
+- finalmente para terminar de demostrar que su base de datos va a poder operar el día a día de esencial verde, proceda con las siguientes tareas de mantenimiento: 
+
+	a) demuestre que es posible tener SP encriptados y que un atacante no va a poder ver el código del mismo [tip](https://www.mssqltips.com/sqlservertip/7465/encrypt-stored-procedure-sql-server/)
+	b) por medio de un script asegúrese que un schemabinding nos proteje la lógica de negocios de la base de datos ante cambios estructurales en las tablas 
+	c) cree dos jobs del sistema, uno que recompile todos los stored procedures, sacando la lista de los mismos de las vistas del sistema, y que eso lo haga 1 vez por semana. Finalmente, otro que se encargue de pasar los registros de la bitácora del sistema a una bitácora gemela en un linked server, garantizando la transferencia de los registros y con ello eliminando los registros pasados y así mantener la bitácora con un tamaño aceptable, dicha operación debe hacerse 2 veces por semana. 
+
+- la revisión será con cita con el profesor 
+
+# final, TBD, 40pts  
+en esta ultima entrega vamos a utilizar la misma base de datos buscando terminar ciertos aspectos operativos que son normales en ambientes de bases de datos, esto tiene que ver con reportería, seguridad, backup y restore. los siguientes son implementaciones de experimentos que podrá realizar para poner en práctica dichas 3 áreas que están intrinsicamente relacionadas a bases de datos
+
+- cree usuarios en la base de datos que le permita probar lo siguiente: 
+	a) es posible negar todo  acceso a las tablas de la base de datos y operarla únicamente por medio de ejecución de stored procedures
+	b) es posible restringir la visibilidad de columnas a ciertos usuarios
+	c) se pueden crear roles, y que usuarios pertenezcan a roles, dichos roles podrían tener restricciones de tablas y columnas que aplican a los usuarios que pertenecen a dicho role
+	d) como resuelve sql server prioridades de permisos en la jerarquía, por ejemplo que un nivel superior niego acceso a algo y un nivel inferior se le asigne
+	
+- de manera práctica demuestre como funciona y un backup con su restore respectivo, usando métodos full e incremental
+
+- usando una herramienta de reporting, por ejemplo microsoft reporting services (se puede usar en docker), powerbi, tableau o kibana, cree un reporte del sistema con la siguiente especificación:
+	- titulo del reporte
+	- subtitulo del reporte es el rango de fechas de los datos del reporte
+	- contenido: seleccionando el país o una región de forma exclusiva y un rango de fechas, despliegue para todos los tipos de residuos el total recolectado por industria, lo que ha costado procesar dicho total de residuo, lo que se ha cobrado por procesarlo y la diferencia o ganancia neta. 
+	- columnas: país o región, industria, tipo de residuo, costo, venta y ganancia, estas últimas en la moneda base, por ejemplo $
+	- ordenado ascendete por país o región, industria y tipo de residuo
+	- ordenado descendente por ganancia
+	- deberá tener un subtotal por industria y un total al final del reporte 
+
+- la revisión será con cita con el profesor, será 100% demostrativo en las herramientas
