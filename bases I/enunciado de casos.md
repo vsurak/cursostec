@@ -231,11 +231,11 @@ RETURN 0
 GO
 ```
 
-- simplifique por medio de un [CTE](https://learn.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017) la consulta más optimizada del ejercicio de la norma de optimización y averigue si existe diferencia sustancial de rendimiento para esto también sea agregado a la norma del equipo de desarrollo
+- simplifique por medio de un [CTE](https://learn.microsoft.com/en-us/sql/t-sql/queries/with-common-table-expression-transact-sql?view=sql-server-2017) la consulta más optimizada del ejercicio de la norma de optimización y averigue si existe diferencia sustancial de rendimiento para que esto también sea agregado a la norma del equipo de desarrollo
 
 - para realizar los ejercicios anteriores va a necesitar data, puede usar cualquier tipo de generación aleatoria pues se están ejercitando habilidades de "tunning de la base de datos"
 
-- entregable es un repositorio en git con los archivos de flyway, cualquier otro script adicional para realizar pruebas y la norma de optimización en pdf
+- el entregable es un repositorio en git con los archivos de flyway, cualquier otro script adicional para realizar pruebas y la norma de optimización en pdf
 
 # preliminar #4, TBD, 35pts 
 - ahora el arquitecto de soluciones necesita que usted diseñe la forma en que los programas van a interactuar con la base de datos, definiendo los layers necesarios para acceder y trabajar con la misma desde las aplicaciones 

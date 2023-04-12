@@ -1,3 +1,5 @@
+# week from march 27th to 31st
+
 create table #sample (
 	id int,
 	name varchar(20)
@@ -14,9 +16,9 @@ select * from #sample
 select * from dbo.Productos
 
 -- crear un trigger que cuando se actualice el precio de venta, no permita que
--- que dicho precio se reduzca en más de un 15%
+-- que dicho precio se reduzca en mï¿½s de un 15%
 -- voy a crear un trigger before update , para revisar si el nuevo precio
--- no rebaja más de un 15%, si no es así, lo actualizo, y si si es más alta la rebaja
+-- no rebaja mï¿½s de un 15%, si no es asï¿½, lo actualizo, y si si es mï¿½s alta la rebaja
 -- entonces no actualizo el precio lo dejo igual
 
 SET ANSI_NULLS ON
@@ -55,7 +57,7 @@ select * from dbo.Productos
 select 3600*0.7
 update dbo.Productos set precioVenta=2520 where idProducto=4
 
--- diseñando en sql server
+-- diseï¿½ando en sql server
 
 insert into dbo.re_products (name) values ('Coca Cola')
 insert into dbo.re_products (name) values ('Lapicero')
