@@ -97,8 +97,6 @@ sh.addShard( "repcr/10.0.0.11:27017");
 
 sh.status();
 
-====== llegamos hasta aqui, 03/31/2023 ======= todavia no se entrega
-
 
 ya tenemos las replicas listas, el router ya se le dijo cuales son los shardservers
 procedemos a configurar la distribucion de datos del shard
@@ -108,34 +106,44 @@ conectarnos al router y probamos
 // hagan esta parte de distribuir por configuracion los cursos que son de una sede u otra
 // para hacer distribucion manual de datos se puede hacer por shardkeys de rangos o con shard tags
 // desde el router
-sh.addShardTag("repSanjose", "SJ")
-sh.addShardTag("repLimon", "Lemon")
+sh.addShardTag("repnic", "Nicaragua");
+sh.addShardTag("reppan", "Panama");
+sh.addShardTag("repcr", "Costa Rica");
 
-sh.addTagRange( "matricula.cursos",
-                { sede: "Limon"},
-                { sede: "Limon2"},
-                "Lemon"
-              )
+sh.addTagRange( "disponibles.servicios",
+                { pais: "Nicaragua"},
+                { pais: "Nicaragua1"},
+                "Nicaragua"
+              );
 
-sh.addTagRange( "matricula.cursos",
-                { sede: "San Jose"},
-                { sede: "San Jose2"},
-                "SJ"
-              )
+sh.addTagRange( "disponibles.servicios",
+                { pais: "Panama"},
+                { pais: "Panama1"},
+                "Panama"
+              );
 
+sh.addTagRange( "disponibles.servicios",
+                { pais: "Costa Rica"},
+                { pais: "Costa Rica1"},
+                "Costa Rica"
+              );
 
 
 
 //rs.remove("x.x.x.x:27024")
 
 // Indico cual va a ser la base de datos que va a soportar sharding
-sh.enableSharding("matricula");
+sh.enableSharding("disponibles");
 
 // luego el collection y el campo del collection que va servir como shardkey
-sh.shardCollection("matricula.profesores", { nombre : "hashed" } )
+sh.shardCollection("disponibles.servicios", { pais : 1 } );
 
 sh.status();
 
+db.servicios.insertOne({"codigo": 3833, "name": "lavanderia", "pais": "Nicaragua"});
+db.servicios.insertOne({"codigo": 4747, "name": "taxi", "pais": "Panama"});
+db.servicios.insertOne({"codigo": 2626, "name": "corte de pelo", "pais": "Panama"});
+db.servicios.insertOne({"codigo": 2722, "name": "jardineria", "pais": "Nicaragua"});
 
 // para el sistema de voting es mejor agregar un arbitro
 
@@ -144,7 +152,17 @@ docker run -d --net disponet --ip 10.0.0.13 --name ramonluis mongo mongod --port
 docker run -d --net disponet --ip 10.0.0.14 --name kevinnunez mongo mongod --port 27017 --replSet repcr
 
 
-// me conecto a un servidor cualquiera de la replica en cuestion y le agrego su arbitro
+// voy al router, accedo a la base de datos que está en sharding y elevo el writeconcern
+db.adminCommand({
+  "setDefaultRWConcern" : 1,
+  "defaultWriteConcern" : {
+    "w" : 2
+  },
+  "defaultReadConcern" : { "level" : "available" }
+});
+
+// me conecto al servidor primario , replica por replicar y agrego el servidor
+// arbitro respectivo segun la replica 
 agrego arbitro en el primario de la repnic
 rs.addArb("10.0.0.12:27017");
 
@@ -153,7 +171,6 @@ rs.addArb("10.0.0.13:27017");
 
 agrego arbitro en el primario de la repcr
 rs.addArb("10.0.0.14:27017");
-
 
 
 

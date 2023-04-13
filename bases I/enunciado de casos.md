@@ -152,7 +152,7 @@ esencial verde para llevar a cabo su ardua misión de mantener bajo control una 
 - las preguntas deberán escribirse en el siguiente documento, cada pareja de trabajo use un card del documento para agregar sus dos preguntas. https://1drv.ms/w/s!AhkFUQ-eTrzhi59UKDb5TJQO6pkiQA?e=HButzG 
 - aproveche el ejercicio para hacer preguntas sustanciosas, apoyelas en imágenes, diseños de tablas, scripts, esquemas o media de apoyo
 
-# preliminar #2, miércoles 12 de abril, 15pts 
+# preliminar #2, jueves 13 de abril, 15pts 
 - primer diseño de base de datos hecho en sql server, formato pdf
 - enviar al profesor máximo a media noche
 - email vsurak@gmail.com 
@@ -237,7 +237,7 @@ GO
 
 - el entregable es un repositorio en git con los archivos de flyway, cualquier otro script adicional para realizar pruebas y la norma de optimización en pdf
 
-# preliminar #4, TBD, 35pts 
+# preliminar #4, conectividad a la base de datos, 11 de mayo, 35pts 
 - ahora el arquitecto de soluciones necesita que usted diseñe la forma en que los programas van a interactuar con la base de datos, definiendo los layers necesarios para acceder y trabajar con la misma desde las aplicaciones 
 
 - para ello deberá probar dos formas de interconectividad, la primera hacer un acceso cliente servidor desde una aplicación programada en el lenguaje de su preferencia, por ejemplo .net, java, go, python, etc, uno que le permita construir un UI y que exista un driver nativo, jdbc, ado.net y en última instancia odbc. Escoja alguna de las siguientes pantallas para realizar su programa de prueba: 
@@ -252,6 +252,8 @@ GO
 - la revisión de este preliminar será con cita de revisión con el asistente, la aplicación y el servicio rest deberá estar en un solo repositorio de git, se tomará en cuenta los commits de cada integrante 
 
 - se daran 15 puntos extras si implementa y mide otro endpoint utilizando algún ORM
+
+- el último commit en git deberá ser el 11 de mayo a media noche
 
 ## aspectos operativos
 
