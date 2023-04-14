@@ -1,1 +1,1 @@
-docker run --rm -it -v C:\dev\cursostec\logstash\pipeline:/usr/share/logstash/pipeline/ logstash:7.14.1
+docker run --rm -it -v C:\dev\cursostec\bases II\logstash\pipeline:/usr/share/logstash/pipeline/ logstash:8.7.0
