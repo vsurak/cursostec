@@ -159,7 +159,7 @@ esencial verde para llevar a cabo su ardua misión de mantener bajo control una 
 - el profesor no hará revisiones completas de diagramas previo a este preliminar, solo consultas específicas
 - este preliminar servirá como revisión general del diagrama
 
-# preliminar #3, viernes 21 de abril, 40pts 
+# preliminar #3, jueves 27 de abril, 40pts 
 el arquitecto de la solución quiere someter su diseño a varios criterios de aceptación y así asegurar una escalabilidad mínima del sistema deseado, estos son los criterios a demostrar:
 
 - debe ser posible hacer migrations de versiones de bases de datos para controlar lo que se encuentra en desarrollo, qa, stagging y production. se ha dado la directiva de que la creación inicial de la base de datos, todo lo que sea relacionado a creación de tablas irá en un script de ignición o cero, y que posteriormente cada item ya sea función, stored procedure, trigger, views, alters y similares, deberán llevar control de versiones un item por archivo. para simplificar la actualización y controlar las migraciones se va a utilizar [flyway](https://flywaydb.org/). 
