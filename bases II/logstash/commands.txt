@@ -1,1 +1,5 @@
-docker run --rm -it -v C:\dev\cursostec\bases II\logstash\pipeline:/usr/share/logstash/pipeline/ logstash:8.7.0
+docker run --rm -it --net disponet --ip 10.0.0.4 -v "C:\dev\cursostec\bases II\logstash\pipeline:/usr/share/logstash/pipeline/" -v "C:\dev\cursostec\bases II\logstash\data:/home/data" -v "C:\dev\cursostec\bases II\logstash\logstashconfig:/usr/share/logstash/config/" logstash:8.7.0
+
+https://www.elastic.co/guide/en/logstash/7.17/ls-security.html
+
+docker run -d --net disponet --ip 10.0.0.5 --name elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -v "C:\dev\cursostec\bases II\logstash\elasticconfig:/usr/share/elasticsearch/config" elasticsearch:8.7.0

@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "95a6df41-908c-4a1b-a06f-defdac64d8dd",
+		"name": "ElasticSearch",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12745637"
+	},
+	"item": [
+		{
+			"name": "delete an index",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9200/estudiantes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"estudiantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create index",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:9200/estudiantes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"estudiantes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mapping to aggregate text fields",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"properties\": {\r\n    \"token\": { \r\n      \"type\": \"keyword\"\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/estudiantes/_mapping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"estudiantes",
+						"_mapping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get index",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "write a document",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 7,\r\n    \"carnet\": 838383,\r\n    \"nombre\": \"andres palma\",\r\n    \"nota\" : 88.7\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:9200/estudiantes/_doc/7",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"estudiantes",
+						"_doc",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get documents",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "search all documents",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "search by condition",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"query\": {\r\n    \"range\": {\r\n      \"nota\": {\r\n        \"gte\": 80\r\n      }\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:9200/estudiantes/_search",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"estudiantes",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "query the top group count",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"size\": 0,\r\n  \"aggs\": {\r\n    \"group_by_name\": {\r\n      \"terms\": {\r\n        \"field\": \"token\",\r\n        \"size\": 5,\r\n        \"order\": {\r\n          \"_count\": \"desc\"\r\n        }\r\n      }\r\n    }\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9200/variables/_search",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9200",
+					"path": [
+						"variables",
+						"_search"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "basic",
+		"basic": [
+			{
+				"key": "password",
+				"value": "123456",
+				"type": "string"
+			},
+			{
+				"key": "username",
+				"value": "elastic",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
