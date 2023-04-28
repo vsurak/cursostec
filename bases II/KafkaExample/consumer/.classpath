@@ -24,6 +24,6 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/dev/tec/KafkaExample/kafka/slf4j-jdk14-1.7.32.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/KafkaExample/consumer/slf4j-jdk14-1.7.32.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

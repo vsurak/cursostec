@@ -1,0 +1,8 @@
+docker run -it --rm --network disponet -p 2181:2181 --ip 10.0.0.2 -e ALLOW_ANONYMOUS_LOGIN=yes bitnami/zookeeper:latest
+
+docker run -it --rm --name kafka --network disponet --ip 10.0.0.3 -p 9092:9092 -p 9094:9094  -e KAFKA_CFG_ZOOKEEPER_CONNECT=10.0.0.2:2181 -e ALLOW_PLAINTEXT_LISTENER=yes -e KAFKA_CFG_AUTO_CREATE_TOPICS_ENABLE=true bitnami/kafka
+
+docker exec -it kafka bash
+
+kafka-console-producer.sh --bootstrap-server kafka:9092 --topic bases2_marvel
+kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic bases2_marvel --from-beginning
