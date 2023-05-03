@@ -6,3 +6,4 @@ docker exec -it kafka bash
 
 kafka-console-producer.sh --bootstrap-server kafka:9092 --topic bases2_marvel
 kafka-console-consumer.sh --bootstrap-server kafka:9092 --topic bases2_marvel --from-beginning
+
