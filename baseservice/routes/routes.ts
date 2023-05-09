@@ -3,6 +3,7 @@ import * as bodyParser from 'body-parser';
 import { Logger } from '../common';
 import {kindnessrouter} from './kindness';
 import {articlesrouter} from './articlesrouter';
+import { feriarouter } from './feriarouter';
 
 class Routes {
 
@@ -26,7 +27,10 @@ class Routes {
     private routes(): void {
         this.express.use('/kind', kindnessrouter);
         this.express.use('/articles', articlesrouter);
+        this.express.use('/feria', feriarouter);
         this.logger.info("Kindness route loaded");
+        this.logger.info("articles route loaded");
+        this.logger.info("feria route loaded");
     }
 }
 

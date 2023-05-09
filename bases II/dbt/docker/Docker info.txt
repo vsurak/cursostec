@@ -1,0 +1,19 @@
+################################################################################################################
+##Crear docker con dbt
+docker build --tag dbt --no-cache --target dbt-sqlserver --build-arg dbt_sqlserver_ref .
+
+##correr el docker asociando las carpetas de dbt
+docker run -t -d -p 8080:8080 --network=disponet --name dbtserver --mount type=bind,source="C:\dev\cursostec\bases II\dbt\example",target=/usr/app --mount type=bind,source="C:\dev\cursostec\bases II\dbt\example",target=/root/.dbt/ dbt
+
+##iniciar el bash
+docker exec -it dbtserver /bin/bash
+
+
+################################################################################################################
+
+##se cambia el entrypoint por 'dbt' para abrir la documentación
+docker build --tag dbt-docker_2 --target dbt-sqlserver --build-arg dbt_sqlserver_ref .
+
+
+#probando
+docker run -t -p 8080:8080 --mount type=bind,source=/Users/abdelcarmona/Documents/Mentoring/Project/dbt/mentoring,target=/usr/app --mount type=bind,source=/Users/abdelcarmona/Documents/Mentoring/Project/dbt,target=/root/.dbt/ -d dbt-docker_2 docs serve

@@ -1,0 +1,45 @@
+################################################################################################################
+##Crear la imagen que está en el folder docker de dbt
+docker build --tag dbt --no-cache --target dbt-sqlserver --build-arg dbt_sqlserver_ref .
+
+
+##correr el server apuntando a la carpeta donde se va iniciar el python environment de trabajo para dbt
+docker run -t -d -p 8080:8080 --network=disponet --name dbtserver --mount type=bind,source="C:\dev\cursostec\bases II\dbt\example",target=/usr/app --mount type=bind,source="C:\dev\cursostec\bases II\dbt\example",target=/root/.dbt/ dbt
+
+
+## ingreso al batch para inicializar mi proyecto
+docker exec -it dbtserver /bin/bash
+
+## chequear que la paquetería sea la versión que queremos usar
+dbt --version
+
+## creamos el patcher, podemos crear K patchers, esto es el programa donde se configura
+## entradas, salidas, transformaciones y cargas
+dbt init feria_loading
+
+## el archivo de profiles ya va estar mapeando al /root/.dbt/profiles.yml 
+## configurar el file debidamente y testearlo , para ello ubicarse en el folder donde
+## se encuentra su dbt_project.yml y ejecutar
+## asumiendo que el profile section se llama default
+
+dbt debug --profile federation_of_planets
+
+## now lets create a database and then a table with data already loaded from the EL process
+
+CREATE TABLE [dbo].[uss_ships](
+	[recordtime] [datetime] NOT NULL,
+	[ship] [varchar](150) NOT NULL,
+	[capacity] [int] NOT NULL,
+	[weapons] [varchar](150) NOT NULL
+) ON [PRIMARY]
+GO
+
+INSERT INTO dbo.uss_ships (recordtime, ship, capacity, weapons)
+VALUES 
+('2123-05-07 00:00:00', 'NCC-1701: USS Enterprise', 120, 'phasers:2,torpedoes:10'),
+('2160-02-03 00:00:00', 'KCK-2000: Klingon Bird-of-Prey', 80, 'phasers:1,disruptors:5'),
+('2125-01-02 00:00:00', 'RML-2033-A: Romulan Warbird', 115, 'phasers:10,plasma torpedoes:10'),
+('2190-02-07 00:00:00', 'NCC-1701-B: USS Enterprise', 150, 'phasers:3,torpedoes:20'),
+('2224-05-07 00:00:00', 'NCC-1701-C: USS Enterprise', 280, 'phasers:5,torpedoes:40')
+GO
+

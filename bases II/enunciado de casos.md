@@ -292,7 +292,7 @@ deberán ser mantenidos en un repositorio en github centralizado para todos los 
 - fecha y hora del último commit : *domingo 23 de abril, media noche*
 
 
-## preliminar #2, real time notifications, async update for content and sales, martes 9 de mayo, 60pts
+## preliminar #2, real time notifications, async update for content and sales, sábado 13 de mayo, 60pts
 - cuando un proveedor de servicio quiere actualizar su contenido de la página principal debe hacerlo por medio de un api 
 - dado que esto es tan masivo, no se realiza la actualización en el cluster en tiempo real si no que se hace de forma asíncrona
 - el request del proveedor al api en lugar de ser salvado es enviado a un servidor de notificaciones persistente, en este caso se ha decidido que sea kafka 
