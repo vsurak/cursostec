@@ -6,9 +6,11 @@
 
 - proceda ahora a crear un video explicativo de máximo 5 minutos donde se logre dar una respuesta concisa y breve a la incógnitas que se le han planteado a su grupo. Puede valerse imágenes, fotografía, AI, 2.x, animatoon platforms, clips de otros videos, grabaciones propias, etc cualquier material que permita crear la explicación clara y las opiniones y conclusiones finales de ustedes como grupo. Se darán 10 puntos extras de quiz si la explicación es llevadera y si con la forma de explicarlo hace reír al público. 
 
+- podrían iniciar con crear un pseudo storybook para definir la ruta que va a tener el video. 
+
 1. Qué es big data, qué es ciencia de datos y que son sus Vs? Cómo lo usan los negocios para hacer dinero? Cómo es que se crean nuevos descubrimientos gracias a la ciencia de datos? Usted cree que podríamos dirigir un país por decisiones fundamentadas en datos? que considera que podría hacerse más eficiente en comparación a hoy con respecto a ese tema?
 
-2. Cuáles estrategias, respuestas, análisis y pronósticos típicos se obtienen de la ciencia de datos? Escoja una opción entre una entidad del gobierno ó una entidad agrícola ó una entidad dedicada al real state, investigue que podría encontrar de información valiosa y nuevos negocios si tuviera datos sólidos y casi en tiempo real, datos relacionados a dicha industria o mercado en perticular? Qué haría usted hoy ya en ciencia de datos para lograr crear una empresa?
+2. Cuáles estrategias, respuestas, análisis y pronósticos típicos se obtienen de la ciencia de datos? Escoja una opción entre una entidad del gobierno ó una entidad agrícola ó una entidad dedicada al real state, investigue que podría encontrar de información valiosa y nuevos negocios si tuviera datos sólidos y casi en tiempo real, datos relacionados a dicha industria o mercado en particular? Qué haría usted hoy ya en ciencia de datos para lograr crear una empresa?
 
 3. Cuáles son los principales trends relacionados a big data, ciencia de datos e inteligencia artificial que se esperan para esta década? cuáles son los motores de bases de datos, lenguajes, data lakes y herramientas de big data que están conquistando la alfombra roja?
 
@@ -19,4 +21,4 @@
 subject: Bases de datos II - quiz #12
 to: vsurak@gmail.com
 contenido: link al video
-entrega: 10/05/2023 a las 11:20am 
+entrega: 11/05/2023 a las 10:00pm 

@@ -292,7 +292,7 @@ deberán ser mantenidos en un repositorio en github centralizado para todos los 
 - fecha y hora del último commit : *domingo 23 de abril, media noche*
 
 
-## preliminar #2, real time notifications, async update for content and sales, sábado 13 de mayo, 60pts
+## preliminar #2, real time notifications, async update for content and sales, domingo 14 de mayo, 60pts
 - cuando un proveedor de servicio quiere actualizar su contenido de la página principal debe hacerlo por medio de un api 
 - dado que esto es tan masivo, no se realiza la actualización en el cluster en tiempo real si no que se hace de forma asíncrona
 - el request del proveedor al api en lugar de ser salvado es enviado a un servidor de notificaciones persistente, en este caso se ha decidido que sea kafka 
@@ -303,4 +303,23 @@ deberán ser mantenidos en un repositorio en github centralizado para todos los 
 - una vez con la arquitectura aprobada proceda a realizar la implementación necesaria
 - con respecto a las transacciones consistentes, estás podrían estar ocasionando problemas de: dirty read, phantom, lost update y deadlock. estudie los pasos de las transacciones de request y pago del sistema, y encuentre junto con el profesor cuáles son esos posibles casos. Implemente los stored procedures y simule dichas situaciones por medio de llamadas a los SP transaccionales para que así su equipo de trabajo analice posibles soluciones a nivel de diseño o SQL. 
 - la revisión será demostrativa en las herramientas solicitadas y con la arquitectura diseñada por el grupo, será con cita de revisión con el profesor 
+
+
+
+---
+# caso #5, 25%
+
+*instituto tecnológico de costa rica*, escuela de computación  
+*bases de datos II*  
+_prof. rodrigo núñez_  
+*tipo:* teams up to 4 people
+
+## descripción
+- plan de trabajo (ciencia de datos o minado de datos, el negocio)
+- hadoop, hive, impala, pyspark, hdfs, mapreduce  (data engineering)
+- dbt -- cloud
+- R
+- powerbi, tableu (análisis de datos) 
+- del 26 al 27 de mayo, preliminar 1
+- del 7 al 9 de junio, finalizar 
 
