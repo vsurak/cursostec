@@ -8,8 +8,8 @@ const sqlConfig = {
     database: "ferianueva",
     server: "localhost",
     pool: {
-      max: 1,
-      min: 1,
+      max: 5,
+      min: 5,
       idleTimeoutMillis: 30000
     },
     options: {
@@ -24,9 +24,10 @@ export class data_feria {
     public constructor()
     {
         this.log = new Logger();
-
+        
         // via singleton, accediendo a un solo pool tengo una conexiona la base de datos
     }
+
 
     public getClientsByFilter(filter: string) : Promise<any>
     {
@@ -34,7 +35,7 @@ export class data_feria {
             return pool.request()
                 .input("searchcriteria", sql.VarChar(40), filter)
                 .execute("getFilteredClients")
-        })
+        });
     }
 
 }
