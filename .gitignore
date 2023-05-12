@@ -1,9 +1,9 @@
 node_modules
 bin
-!/hadoopbases2/hive/bin
+!/bases II/hadoop-image/hive/bin
 *.exe
 *.o
 *.dll
 /.metadata/
-!/hadoopbases2/kafka
+!/bases II/hadoop-image/kafka
 *.dat

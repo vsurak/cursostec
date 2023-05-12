@@ -4,7 +4,7 @@
   "description": "Minimal starting point for an api service",
   "main": "index.ts",
   "engines": {
-    "node" : "es2015"
+    "node": "es2015"
   },
   "scripts": {
     "checklint": "eslint ./*.ts --fix",
@@ -15,7 +15,8 @@
   "author": "rnunez",
   "license": "ISC",
   "dependencies": {
-    "express": "4.17.1"
+    "express": "4.17.1",
+    "mssql": "^9.1.1"
   },
   "devDependencies": {
     "@types/express": "4.17.8",
