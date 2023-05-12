@@ -26,7 +26,7 @@ public class DataProducer implements IConstants {
             
         	for(int record = 0; record<=newData.length-2; record+=2) {
                 final ProducerRecord<String, String> salesRecord = new ProducerRecord<String, String>(
-                        TOPIC, UUID.randomUUID().toString(), newData[record]+","+newData[record+1]);
+                        TOPIC, newData[record]+","+newData[record+1]);
         		
                 this.theproducer.send(salesRecord);
                 System.out.println(salesRecord);
@@ -34,14 +34,15 @@ public class DataProducer implements IConstants {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        this.theproducer.close();
     }
     
     public static void main(String[] args) throws URISyntaxException {
         Properties properties = new Properties();
         properties.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, KAFKA_SERVER+":"+KAFKA_PORT);
         properties.put(ProducerConfig.CLIENT_ID_CONFIG, APP_ID);
-        properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
-        properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
+        properties.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
+        properties.put(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringSerializer");
         
         DataProducer kafkaProducer = new DataProducer(properties);
         kafkaProducer.PublishMessages();

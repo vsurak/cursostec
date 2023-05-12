@@ -7,5 +7,4 @@ docker run --rm -it --net disponet --ip 10.0.0.4 -v "C:\\Users\\Camilo\\OneDrive
 
 docker run -d --net disponet --ip 10.0.0.5 --name elastic -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" -v "C:\Users\Camilo\OneDrive - Estudiantes ITCR\Documentos\Git hub\RepProfBD2\bases II\logstash\elasticconfig:/usr/share/elasticsearch/config" elasticsearch:8.7.0
 
-
 docker run -d --name dashserver --net disponet -p 5601:5601 kibana:8.7.0
