@@ -6,14 +6,15 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-common-3.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-hdfs-3.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-hdfs-client-3.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-mapreduce-client-app-3.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-mapreduce-client-common-3.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-mapreduce-client-core-3.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-mapreduce-client-jobclient-3.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/hadoop-mapreduce-client-shuffle-3.3.1.jar"/>
-	<classpathentry kind="lib" path="C:/dev/cursostec/MiPrimerMapR/json-simple-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/MiPrimerMapR/hadoop-common-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/MiPrimerMapR/hadoop-hdfs-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/MiPrimerMapR/hadoop-hdfs-client-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/MiPrimerMapR/hadoop-mapreduce-client-app-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/MiPrimerMapR/hadoop-mapreduce-client-common-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/MiPrimerMapR/hadoop-mapreduce-client-core-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/MiPrimerMapR/hadoop-mapreduce-client-jobclient-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/MiPrimerMapR/hadoop-mapreduce-client-shuffle-3.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/MiPrimerMapR/json-simple-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/dev/cursostec/bases II/MiPrimerMapR/metaverse.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

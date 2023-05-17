@@ -1,9 +1,0 @@
-
-version: 2
-
-sources:
-  - name: source_ships
-    database: starshipsales
-    schema: source_ships
-    tables:
-      - name: uss_ships
