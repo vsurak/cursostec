@@ -335,9 +335,13 @@ proceda ahora a crear un board en miro que sirva como base del acuerdo de trabaj
 
 <img src="lecciones/caso5-mirotemplate.png" width=50% height=50%>
 
-_datos de su grupo de trabajo:_ company name, core business, members and logo
+_datos de su grupo de trabajo:_
 
-_datasets:_ debe mostrar los 3 datasets que va a utilizar donde claramente se vean las columnas y datos fake para imaginar el contenido de los datasets. para cada dataset deje claro cuáles campos se van a interrelacionar con los otros datasets. desde el punto de vista de forma se espera visualizar en cada dataset algo similar a esto:
+company name, core business, members and logo
+
+_datasets:_
+
+debe mostrar los 3 datasets que va a utilizar donde claramente se vean las columnas y datos fake para imaginar el contenido de los datasets. para cada dataset deje claro cuáles campos se van a interrelacionar con los otros datasets. desde el punto de vista de forma se espera visualizar en cada dataset algo similar a esto:
 
 <img src="lecciones/datasets.png" width=50% height=50%>
 
@@ -358,3 +362,5 @@ _data value:_
 finalmente, sabiendo el valor agregado de los 4 análisis anteriores y el tamaño de su dataset, determine el valor de los registros en su sistema.
 
 todos los elementos anteriores deben salir de los datos mismos y en ningún momento ser caracter de especulación que haya que calcular manual o visualmente.
+
+- entregable: pdf con toda esta información al correo del profesor
