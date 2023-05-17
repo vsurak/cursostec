@@ -10,6 +10,6 @@
 
 1. continuar con las exposiciones del quiz #13
 
-2. Explicar WAL y algoritmo de Aries
+2. Recapitular patrones de diseño en modelos relacionales, explicar WAL y algoritmo de Aries
 
 3. Ver el video de la clase del viernes 19
