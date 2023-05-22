@@ -10,7 +10,7 @@ path to share files and jars from the host computer
 ```
     docker build . -t hadoop
 
-docker network create --driver bridge --subnet 10.0 image.0.0/28 littlenet
+docker network create --driver bridge --subnet 10.0.0.0/27 disponet
 
 docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v C:\dev\cursostec\bases II\hadoop-image\mapr:/home/hadoopuser/mapr --name hadoopserver --net littlenet --ip 10.0.0.2 hadoop
 ```
