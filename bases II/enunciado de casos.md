@@ -327,7 +327,7 @@ otro reto importante que se debe tomar el cuenta es el tamaño de los datos, las
 
 en la semana 13 su grupo ha trabajado en el diseño y planificación de lo que haría un consultor de ciencia de datos para determinar que valor y utilidad podrían tener los datos y cómo deberían diseñarse los modelos analíticos para sacar valor agregado de los mismos. El profesor le ha proporcionado un dataset https://www.dropbox.com/s/20azr0jxnqhae9b/EAWCSV.zip?dl=0 y ustedes han agregado a la ecuación otros 2 los cuales deben ser reales o parcialmente reales. dicha información va a servir para construir y pactar el modelo de análisis de este caso en particular.
 
-## preliminar #1, 19/05/2023 11:20am, formalización del modelo de datos, 20pts
+## preliminar #1, 22/05/2023 media noche, formalización del modelo de datos, 20pts
 
 este trabajo ya se encuentra adelantado de los acuerdos hechos en el ejercicios de de la semana 13, https://github.com/vsurak/cursostec/blob/master/bases%20II/lecciones/week%2013.md#actividades-en-clase
 
