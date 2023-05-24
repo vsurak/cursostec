@@ -2,7 +2,7 @@
 
 1. realizar el preliminar #1 del caso 5
 
-2. ver el video de la clase asíncrona del viernes 19 de mayo
+2. ver el video de la clase asíncrona del lunes 22 de mayo
 
 ## actividades en clase
 

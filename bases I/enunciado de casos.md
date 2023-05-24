@@ -306,7 +306,7 @@ en esta ultima entrega vamos a utilizar la misma base de datos buscando terminar
   b) es posible restringir la visibilidad de columnas a ciertos usuarios
   c) se pueden crear roles, y que usuarios pertenezcan a roles, dichos roles podrían tener restricciones de tablas y columnas que aplican a los usuarios que pertenecen a dicho role
   d) como resuelve sql server prioridades de permisos en la jerarquía, por ejemplo que un nivel superior niego acceso a algo y un nivel inferior se le asigne
-- de manera práctica demuestre como funciona y un backup con su restore respectivo, usando métodos full e incremental
+- de manera práctica demuestre como funciona un backup con su restore respectivo, usando método full e incremental
 
 - usando una herramienta de reporting, por ejemplo microsoft reporting services (se puede usar en docker), powerbi, tableau o kibana, cree un reporte del sistema con la siguiente especificación:
 
