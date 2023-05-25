@@ -10,9 +10,9 @@ path to share files and jars from the host computer
 ```
     docker build . -t hadoop
 
-docker network create --driver bridge --subnet 10.0.0.0/27 disponet
+docker network create --driver bridge --subnet 15.0.0.0/27 disponet
 
-docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v "C:\dev\cursostec\bases II\hadoop-image\mapr":/home/hadoopuser/mapr --name hadoopserver --net disponet --ip 10.0.0.2 hadoop
+docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v "C:\\Users\\Camilo\\OneDrive - Estudiantes ITCR\\Documentos\\Git hub\\RepProfBD2\\bases II\\hadoop-image\\mapr:/home/hadoopuser/mapr" --name hadoopserver --net disponet --ip 15.0.0.2 hadoop
 ```
 
 ### ssh related
