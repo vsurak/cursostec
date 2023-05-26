@@ -1,1 +1,1 @@
-select ship, weapons from {{ source('dbo', 'uss_ships') }}
+select ship, weapons from {{ source('federationships', 'uss_ships') }}
