@@ -65,14 +65,19 @@ The following is an example of instructions in hive console to test your hive en
 ```
 create schema <name>; // to create an schema
 create database ventas_bases2;
+use ventas_bases2;
 
 // create a temporary table to load the parquet files resulting from the hadoop reduction or similar big data source
-create table tmp_sales(year string, amount float) row format delimited fields terminated by ',';
+create table tmp_sales(year string, amount float) row format delimited fields terminated by '\t';
+
+show tables;
 
 load data inpath '/ventas/anyos/part-00000' into table tmp_sales;
 
+select * from tmp_sales;
 
-CREATE TABLE IF NOT EXISTS sales (year string, DECIMAL(14, 2) float)
+
+CREATE TABLE IF NOT EXISTS sales (year string, amount DECIMAL(14, 2))
 COMMENT 'Total de ventas anuales'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
