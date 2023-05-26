@@ -4,7 +4,7 @@ from pyspark.sql.functions import col, date_format, to_date, year
 from pyspark.sql.types import (DateType, IntegerType, FloatType, StructField,
                                StructType, TimestampType, StringType)
 
-spark = SparkSession.builder.appName("probabdo spark").getOrCreate()
+spark = SparkSession.builder.appName("probando spark").getOrCreate()
 spark.sparkContext.setLogLevel("ERROR")
 
 file_location = "presupuesto.csv"
@@ -26,7 +26,7 @@ queryConSparkSQL = spark.sql("""
   limit 5
 """)
 
-#queryConSparkSQL.show()
+queryConSparkSQL.show()
 
 queryConSparkSQL = spark.sql("""
     select divisionname, subpartida, cast(sum(monto) as decimal(15, 2)) subtotal from presu_table 

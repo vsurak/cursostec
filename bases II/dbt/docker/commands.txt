@@ -4,7 +4,7 @@ docker build --tag dbt --no-cache --target dbt-sqlserver --build-arg dbt_sqlserv
 
 
 ##correr el server apuntando a la carpeta donde se va iniciar el python environment de trabajo para dbt
-docker run -t -d -p 8090:8080 --network=disponet --name dbtserver --mount type=bind,source="C:\dev\cursostec\bases II\dbt\example",target=/usr/app --mount type=bind,source="C:\dev\cursostec\bases II\dbt\example",target=/root/.dbt/ dbt
+docker run -t -d -p 8090:8080 --network=disponet --name dbtserver --mount type=bind,source="C:\dev\cursostec\bases II\dbt\dbtworkspace",target=/usr/app --mount type=bind,source="C:\dev\cursostec\bases II\dbt\dbtworkspace",target=/root/.dbt/ dbt
 
 
 ## ingreso al batch para inicializar mi proyecto
@@ -57,11 +57,12 @@ include the package in the packages.yml file
 dbt deps
 
 
-se quiere crear una transformación basados en el modelo uss_allships, el cual deberá seguir el siguiente schema:
+se quiere crear una transformación basados en la tabla uss_ships, 
+el cual deberá seguir el siguiente schema:
 
 schema: federation
-	- ships (shipid, creationdate, posttime, name, capacity)
-	- weapons (shipid, weapontype, quantity)
+	- starships (shipid, creationdate, posttime, name, capacity)
+	- weapons (weaponid, shipid, weapontype, quantity)
 
 Note que no se desea tener una tabla de weaponstypes y la intermedia para hacer las relaciones, esto 
 porque bajo el contexto de análisis de datos, es conveniente reducir relaciones y duplicar información para

@@ -1,8 +1,0 @@
-version: 2
-
-sources:
-  - name: dbo
-    database: starshipsales
-    schema: dbo
-    tables:
-      - name: uss_ships
