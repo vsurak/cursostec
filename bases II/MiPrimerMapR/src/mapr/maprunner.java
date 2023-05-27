@@ -5,6 +5,7 @@ import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.MapWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.FloatWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.mapred.FileInputFormat;    
 import org.apache.hadoop.mapred.FileOutputFormat;    
 import org.apache.hadoop.mapred.JobClient;    
@@ -26,16 +27,16 @@ public class maprunner {
 	    
 	    // maper
 	    conf.setMapOutputKeyClass(Text.class);
-	    conf.setMapOutputValueClass(FloatWritable.class);	    
+	    conf.setMapOutputValueClass(LongWritable.class);	    
 	    conf.setMapperClass(SalesMaper.class);
 	    
 	    // reducer
 	    conf.setOutputKeyClass(Text.class);      
-	    conf.setOutputValueClass(FloatWritable.class);
+	    conf.setOutputValueClass(LongWritable.class);
 	    conf.setReducerClass(SalesReducer.class);     
 	    
 	    conf.set("fs.hdfs.impl", "org.apache.hadoop.hdfs.DistributedFileSystem");
-	    FileInputFormat.setInputPaths(conf,new Path("/data/datasales.db"));    
+	    FileInputFormat.setInputPaths(conf,new Path("/data/presupuesto.csv"));    
 	    FileOutputFormat.setOutputPath(conf,new Path("/ventas/anyos"));
 	    JobClient.runJob(conf); // indicamos a yarn que ponga en cola este job
 	}    

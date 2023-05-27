@@ -49,9 +49,10 @@ These are example of instructions to prepare hdfs folders and run a map reduce e
 hadoop fs -ls /
 hadoop fs -mkdir /data
 hadoop fs -copyFromLocal datasales.db /data
-hadoop fs -copyFromLocal sample.db /data
+hadoop fs -copyFromLocal presupuesto.csv /data
 
 hadoop jar yearsales.jar mapr.maprunner
+hadoop jar quiz15.jar mapr.maprunner
 hadoop jar metaverse.jar mapr.maprunner
 
 ### hive related
