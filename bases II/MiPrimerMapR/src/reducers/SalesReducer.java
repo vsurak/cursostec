@@ -11,7 +11,7 @@ import org.apache.hadoop.mapred.Reporter;
 import java.util.TreeMap;
 
 
-public class budgetReducer extends MapReduceBase implements Reducer<Text,LongWritable,Text,LongWritable> {	        
+public class SalesReducer extends MapReduceBase implements Reducer<Text,LongWritable,Text,LongWritable> {	        
 	public void reduce(Text keyToEmit, Iterator<LongWritable> values, OutputCollector<Text,LongWritable> output, Reporter reporter) throws IOException {    
         TreeMap<Long, String> top3 = new TreeMap<>();
 

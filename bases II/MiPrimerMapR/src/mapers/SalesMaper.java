@@ -9,7 +9,7 @@ import org.apache.hadoop.mapred.Mapper;
 import org.apache.hadoop.mapred.OutputCollector;    
 import org.apache.hadoop.mapred.Reporter;  
 
-public class budgetMaper extends MapReduceBase implements Mapper<LongWritable,Text,Text,LongWritable> { 
+public class SalesMaper extends MapReduceBase implements Mapper<LongWritable,Text,Text,LongWritable> { 
     
     public void map(LongWritable key, Text lineFromFile, OutputCollector<Text,LongWritable> output, Reporter reporter) throws IOException{    
     	String year;
