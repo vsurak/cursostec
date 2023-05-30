@@ -48,7 +48,7 @@ public class mapRunner {
         conf2.setOutputFormat(TextOutputFormat.class);
 
         conf2.setMapOutputKeyClass(Text.class);
-        conf2.setMapOutputValueClass(LongWritable.class);
+        conf2.setMapOutputValueClass(Text.class);
         conf2.setMapperClass(top3Maper.class);
 
         conf2.setOutputKeyClass(Text.class);

@@ -47,6 +47,10 @@ docker cp datadates.csv  hadoopserver:/home/hadoopuser
 
 These are example of instructions to prepare hdfs folders and run a map reduce example
 hadoop fs -ls /
+hadoop fs -ls /ventas
+hadoop fs -cat /ventas/anyos/part-00000
+hadoop fs -cat /ventas/top3/part-00000
+
 hadoop fs -mkdir /data
 hadoop fs -copyFromLocal datasales.db /data
 hadoop fs -copyFromLocal presupuesto.csv /data
