@@ -3,12 +3,12 @@ federation_of_planets:
   outputs:
     dev:
       type: sqlserver
-      driver: 'ODBC Driver 18 for SQL Server'
+      driver: "ODBC Driver 18 for SQL Server"
       server: 192.168.1.12
       port: 1433
-      database: starshipsales
+      database: federationofplanets
       schema: dbo
-      username: 'sa'
-      password: '123456'
+      username: "sa"
+      password: "123456"
       trust_cert: true
       authentication: sql

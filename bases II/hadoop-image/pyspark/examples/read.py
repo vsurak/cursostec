@@ -12,6 +12,7 @@ csv_schema = StructType([StructField('fecha', StringType()),
 dataframe = spark.read.csv("datasales.dat",
                            schema=csv_schema,
                            header=False)
+dataframe.show()
 
 dataframe = dataframe.withColumn('fecha',to_date(col('fecha'), 'MM/dd/yyyy'))
 

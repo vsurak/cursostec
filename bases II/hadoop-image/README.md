@@ -70,19 +70,26 @@ The following is an example of instructions in hive console to test your hive en
 ```
 create schema <name>; // to create an schema
 create database ventas_bases2;
+use ventas_bases2;
 
-create table tmp_metaspent(metaverse string, year int, hours int, coins int) row format delimited fields terminated by ',';
+// create a temporary table to load the parquet files resulting from the hadoop reduction or similar big data source
+create table tmp_sales(year string, amount float) row format delimited fields terminated by '\t';
 
-load data inpath '/metaverse/part-00000' into table tmp_metaspent;
+show tables;
 
-CREATE TABLE IF NOT EXISTS metaspent (metaverse string, year int, hours int, coins int)
-COMMENT 'Las horas y los coins invertidos por metaverso por año'
+load data inpath '/ventas/anyos/part-00000' into table tmp_sales;
+
+select * from tmp_sales;
+
+
+CREATE TABLE IF NOT EXISTS sales (year string, amount DECIMAL(14, 2))
+COMMENT 'Total de ventas anuales'
 ROW FORMAT DELIMITED
 FIELDS TERMINATED BY ','
 LINES TERMINATED BY '\n'
 STORED AS TEXTFILE;
 
-insert into table metaspent select trim(metaverse), year, hours, coins from tmp_metaspent;
+insert into table sales select year, ROUND(CAST(amount AS DECIMAL(14, 2)), 2) from tmp_sales;
 ```
 
 Once data is loaded, run some queries to test the performance

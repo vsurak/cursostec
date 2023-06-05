@@ -2,7 +2,7 @@
 
 1. revisar con el profesor el preliminar #1 del caso 5 para hacer ajustes y tener una versión final, en dicha revisión puede participar todo el grupo o solo unas cuantas personas. La revisión se hará de forma presencial en las clases del miércoles 24.
 
-2. ver el video de la clase asíncrona del lunes 22 de mayo y realizar el ejercicio solicitado. Fecha de entrega el sábado 27 de mayo a las 6pm. Es individual.
+2. ver el video de la clase asíncrona del lunes 22 de mayo y realizar el ejercicio solicitado. Fecha de entrega el domingo 28 de mayo a media noche. Es individual.
 
 Ejercicio: utilizando la base de datos "presupuesto.csv" está en el folder mapr de la imagen de hadoop, la cual incluye en el esquema de datos:
 

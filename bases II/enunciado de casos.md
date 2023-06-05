@@ -364,3 +364,69 @@ finalmente, sabiendo el valor agregado de los 4 análisis anteriores y el tamañ
 todos los elementos anteriores deben salir de los datos mismos y en ningún momento ser caracter de especulación que haya que calcular manual o visualmente.
 
 - entregable: pdf con toda esta información al correo del profesor
+
+## entrega final, 18/06/2023, data engineering and data analysis,80pts
+
+en este momento usted debe tener su preliminar #1 debidamente aprobado por el profesor y con ello una claridad completa sobre los datasets con los que debe contar para realizar los análisis y propiamente los análisis que debe realizar.
+
+durante todo este entregable final, cualquier tipo de manipulación de sin exclusión va a sumir que los datos entran en la categoría de "big" por lo que ninguna operación podrá hacerse sin usar herramientas capaces de procesar big data.
+
+en este proceso de análisis se van a distinguir 3 etapas de los datos:
+
+<div style="text-align: center;">data staging ---> data warehouse --> data analysis</div>
+
+### data staging
+
+- inputs: dataset de disabilities proporcionado por el profesor, otras fuentes de datos reales
+
+- outputs: los datasets que se definieron en el entregable #1 con sus datos debidamente llenos, las columnas deben ser las mismas definidas en dicho preliminar
+
+el objetivo de data staging es poder obtener los 3 o más datasets que fueron diseñados en el preliminar #1 para con ellos poder construir en la segunda etapa el dataware house.
+
+- para la construcción de dichos datasets usted puede contar con sql server, hive, hadoop, mapr, pyspark y dbt
+
+- la única restricción que tiene es que el dataset de disabilities proporcionado por el profesor debe ser cargado en sql server (las partes que necesite únicamente), limpiado, procesado y ajustado a su especificación utilizando únicamente dbt
+
+- para llenar y adecuar los otros datasets puede utilizar cualquiera de las herramientas disponibles para esta etapa antes mencionados
+
+- los datasets resultantes pueden quedar almacenados en medios o lugares distintos, es decir, esta etapa no se preocupa por unificarlos ni tenerlos en un único storage, salvo que su estrategia así lo logre por defecto
+
+- deben contener toda la data necesaria como fuente de datos, a máximo la fecha del 20 de mayo del 2023
+
+### data warehouse
+
+- la etapa de data warehouse pretende justamente la construcción del warehouse final para poder almacenar la información que se requiere para hacer los análisis debidamente cruzada y desnormalizada hasta donde sea necesaria, con los campos calculados que sean necesarios
+
+- para ello deberá diseñar su tabla de hechos (fact table), tablas de dimensiones (dimesions) de su data warehouse
+
+- deberá crear un data pipeline que permita tomar los datasets resultantes de la etapa anterior, desde la ubicación donde hayan sido dejados (no olvide que está en un ambiente big), y que llene las tablas de su warehouse, usando el diseño definido en el punto anterior
+
+- para crear este data pipeline usted contará con dbt, logstash, microsoft integration services, pyspark, hive, hadoop, apache nifi, apache airflow
+
+- al final de este proceso usted contará con un dataware house con su respectiva tabla de hechos, las tablas de dimensiones y todas debidamente llenas con toda la data limpia, depurada y lista para poder realizar los análisis solicitados
+
+### data analysis
+
+- en este momento usted ya cuenta con el warehouse y su data correcta
+
+- además ya usted sabe cuáles análisis descriptivos y predictivos debe realizar para el negocio que planteo en el preliminar #1
+
+- el análisis de los datos desde el warehouse para obtener los resultados esperados puede realizarlos usando pyspark, hive o lenguaje R
+
+- luego de ese procesamiento ya los resultados estarán resumidos y calculados propiamente, por lo cual ya no serán de tamaño "big" y por ende es más simple su traslado y visualización
+
+- el análisis descriptivo exige el uso de charts, el análisis predictivo no necesariamente
+
+- diseño un dashboard que permita a su negocio mostrar los análisis descriptivos y predictivos que se acordaron en el preliminar #1 y que con ello pueda comunicar y convencer sobre las oportunidades de su negocio
+
+- para crear dicho dashboard usted contará con ya sea powerbi, tableau o kibana
+
+- puede que la salida resultante de los análisis hechos en pyspark, R o hive, no sean accesibles por un generador de dashboards como los anteriores, en cuyo caso puede realizar una migración manual de los datos a otro media storage que si pueda conectar con facilidad como por ejemplo memsql, redis, elasticsearch, mongodb, sql server
+
+### otros aspectos
+
+- se recomienda diseñar todo el pipeline de los stages haciendo mini pruebas de concepto para que pueda garantizar que puede procesar toda la data end to end usando herramientas para big data y que efectivamente tendrán una forma de que los outputs de una etapa sean directamente los inputs de la otra, sin requerir copiar o operaciones manuales
+
+- el trabajo es en grupos, pero se asume que todos los integrantes conocen como está todo interconectado, cuál es el flujo, las operaciones, transformaciones y lógica de estos data pipelines, de la construcción de data warehouse, de los cálculos de los análisis y la visualización de los datos
+
+- la revisión se hará con cita con el profesor entre el 19 y el 21 de junio

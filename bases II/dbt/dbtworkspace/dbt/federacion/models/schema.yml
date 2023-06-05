@@ -1,8 +1,8 @@
 version: 2
 
 sources:
-  - name: dbo
-    database: starshipsales
+  - name: federationships
+    database: federationofplanets
     schema: dbo
     tables:
       - name: uss_ships
