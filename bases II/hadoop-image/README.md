@@ -10,9 +10,9 @@ path to share files and jars from the host computer
 ```
     docker build . -t hadoop
 
-docker network create --driver bridge --subnet 10.0.0.0/27 disponet
+docker network create --driver bridge --subnet 15.0.0.0/27 disponet
 
-docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v "C:\dev\cursostec\bases II\hadoop-image\mapr:/home/hadoopuser/mapr" --name hadoopserver --net disponet --ip 10.0.0.2 hadoop
+docker run -it -p 9000:9000 -p 9092:9092 -p 22:22 -v "C:\\Users\\Camilo\\OneDrive - Estudiantes ITCR\\Documentos\\Git hub\\RepProfBD2\\bases II\\hadoop-image\\mapr:/home/hadoopuser/mapr" --name hadoopserver --net disponet --ip 15.0.0.2 hadoop
 ```
 
 ### ssh related
@@ -47,11 +47,16 @@ docker cp datadates.csv  hadoopserver:/home/hadoopuser
 
 These are example of instructions to prepare hdfs folders and run a map reduce example
 hadoop fs -ls /
+hadoop fs -ls /ventas
+hadoop fs -cat /ventas/anyos/part-00000
+hadoop fs -cat /ventas/top3/part-00000
+
 hadoop fs -mkdir /data
 hadoop fs -copyFromLocal datasales.db /data
-hadoop fs -copyFromLocal sample.db /data
+hadoop fs -copyFromLocal presupuesto.csv /data
 
 hadoop jar yearsales.jar mapr.maprunner
+hadoop jar quiz15.jar mapr.maprunner
 hadoop jar metaverse.jar mapr.maprunner
 
 ### hive related

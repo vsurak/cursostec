@@ -4,7 +4,7 @@ federation_of_planets:
     dev:
       type: sqlserver
       driver: "ODBC Driver 18 for SQL Server"
-      server: 192.168.1.12
+      server: 192.168.5.166
       port: 1433
       database: federationofplanets
       schema: dbo
