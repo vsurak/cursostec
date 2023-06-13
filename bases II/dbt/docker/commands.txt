@@ -6,7 +6,7 @@ docker build --tag dbt --no-cache --target dbt-sqlserver --build-arg dbt_sqlserv
 ##correr el server apuntando a la carpeta donde se va iniciar el python environment de trabajo para dbt
 ## con esto el image está listo para crear en env de python dentro de /usr/app, donde va a crear un folder dbt que es el ambiente donde creo mis proyectos
 ## el image está listo para correr con root, dbt por default maneja el archivo de configuración en el home del user en un folder hiden .dbt
-docker run -t -d -p 8090:8080 --network=disponet --name dbtserver --mount type=bind,source="C:\dev\cursostec\bases II\dbt\dbtworkspace",target=/usr/app --mount type=bind,source="C:\dev\cursostec\bases II\dbt\dbtworkspace",target=/root/.dbt/ dbt
+docker run -t -d -p 8090:8080 --network=disponet --name dbtserver --mount type=bind,source="C:\Users\Camilo\OneDrive - Estudiantes ITCR\Documentos\Git hub\RepProfBD2\bases II\dbt\dbtworkspace",target=/usr/app --mount type=bind,source="C:\Users\Camilo\OneDrive - Estudiantes ITCR\Documentos\Git hub\RepProfBD2\bases II\dbt\dbtworkspace",target=/root/.dbt/ dbt
 
 
 ## ingreso al batch para inicializar mi proyecto
