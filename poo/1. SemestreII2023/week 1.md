@@ -23,4 +23,21 @@ comenten los hallazgos de la información encontrada. 15 minutos.
 
 7. una vez terminado el profesor procederá a realizar otras indicaciones con respecto al sistema de objetos creado.
 
+--- carta del estudiante corregida
+
 8. carta del estudiante, metodología, evaluación y consulta
+
+9. en parejas proceda a resolver el siguiente reto el cual será discutivo posteriormente entre todo el grupo
+
+### reto
+
+un compañero de la U se ha acercado y le ha comentado que una persona que le va muy bien vendiendo tiempos le ha pedido que le haga una aplicación para su teléfono samsung galaxy s23, para poder vender los tiempos y dejar de usar papel. Le ha dicho que la aplicación es muy muy fácil, que solo quiere poder escribir el nombre de la persona, el número que quiere y el monto que le va a comprar, y que así con eso para cuando se haga el sorteo, poder sacar la lista y así saber cuánto hay que pagarle a cada persona por el número que cayó. Su amigo está super emocionado pues le van a pagar 100 mil colones y que de fijo la tendría lista en una semana, pero que quiere saber su opinión al respecto?
+
+qué le diría a su compañero, en el caso de que usted ya haya tomado en cuenta los siguientes aspectos:
+
+- qué procesos son típicos a seguir cuando se fabrica software
+- quiénes son los participantes o roles necesarios en dichos procesos
+- qué cosas funcionales de la aplicación no ha tomado en cuenta su compañero
+- qué es necesario para que esa aplicación la pueda tener quien la compra funcionando en su teléfono
+- qué otros problemas podrían darse durante este proceso
+- será 100 mil colones en una semana un precio justo?
