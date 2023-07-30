@@ -49,7 +49,7 @@ _Práctica evaluada_
 
 8. cada grupo tendrá 5 minutos para presentar el trabajo hecho a los demás compañeros, todos los integrantes deberán aportar a la explicación y encender la cámara al momento. 40 minutos.
 
-_Ejercicio de Java evaluado_
+_Ejercicio de Java con Github evaluado_
 
 1. Utilizando eclipse el profesor explicará como son los proyectos en eclipse, cómo funcionan los programas en java, el JVM, packages, imports y run de un programa. Una vez que el profesor haya terminado la explicación va a hacer commit al repositorio del curso.
 
