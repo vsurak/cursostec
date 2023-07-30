@@ -30,7 +30,3 @@ comenten los hallazgos de la información encontrada. 15 minutos.
 ### reto #1
 
 es usual que un grupo de amigos llegue a un bar o restaurant, cada quien pide su comida, bebidas y al final quieren pagar cuentas separadas. Y pagar separado algunas veces no significa individualmente, pues tal vez una persona va a invitar a la otra. Cómo podríamos crear una abstracción a nivel de estructura de datos que facilite la división de las cuentas y que haga la programación lo más sencilla posible? Luego cuál sería la abstracción del problema, es decir, la abstracción que permite que el restaurante opere correctamente el problema?
-
-### reto #2
-
-un sistema de ventas de tiquetes va a ofrecer la otra semana los tiquetes para el concierto de bad bunny. En total se van a vender 70000 entradas, los ingenieros saben que el sistema es capaz de atender un máximo de 200 personas simultáneamente, más de eso todo el sistema se queda pegado y ya nadie logra comprar nada. Si sabemos que aproximadamente 350000 personas van a intentar comprar su boleto, como podríamos crear una estrategia por medio de una abstracción basada en arreglos, para compensar la poca capacidad del sistema y así lograr atender a todas las personas sin que se caiga el sistema.
