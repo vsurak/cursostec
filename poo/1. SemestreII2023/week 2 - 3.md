@@ -23,9 +23,11 @@ Del paso 1 al paso 5 deben estar listos para la clase del viernes 4 de agosto.
 4. Instalar la versión más reciente de eclipse que funcione en su computador
    https://www.eclipse.org/downloads/
 
+5. Tener algun programa para grabar videos de su computadora.
+
 ## actividades en clase
 
-Práctica evaluada
+_Práctica evaluada_
 
 1. El profesor procederá a explicar dos símbolos fundamentales para representar objetos, los cuales son una cajita y una flecha. Luego procederá a armar grupos de 3 personas.
 
@@ -46,3 +48,17 @@ Práctica evaluada
 7. estudie en internet los términos encapsulamiento, modularidad y jerarquía de objetos, asigne un color a cada cosa y marque en su diagrama junto con una anotación, donde sucede cada uno, dejando claro el ejemplo del por qué lo seleccionado amerita o cumple esos principios de encapsulamiento, modularidad y jerarquía. 20 minutos.
 
 8. cada grupo tendrá 5 minutos para presentar el trabajo hecho a los demás compañeros, todos los integrantes deberán aportar a la explicación y encender la cámara al momento. 40 minutos.
+
+_Ejercicio de Java evaluado_
+
+1. Utilizando eclipse el profesor explicará como son los proyectos en eclipse, cómo funcionan los programas en java, el JVM, packages, imports y run de un programa. Una vez que el profesor haya terminado la explicación va a hacer commit al repositorio del curso.
+
+2. En este momento usted inicia la grabación de su computadora realizando las siguientes tareas:
+   - abrir una terminal
+   - crear un folder de trabajo
+   - hacer un init en el folder
+   - copiar en ese folder los archivos del proyecto java hecho en eclipse por el profesor
+   - ejecutar el cambio en el código indicado por el profesor
+   - crear un repositorio en un github personal
+   - pasar los cambios stage con git add, luego hacer commit y finalmente hacer un push al repositorio creado en el paso anterior
+   - ir al webpage de git, hacer refresh y verificar que los cambios se hayan aplicado
