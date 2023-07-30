@@ -7,28 +7,31 @@ Del paso 1 al paso 5 deben estar listos para la clase del viernes 4 de agosto. E
 
 2. estudiar github y crearse una cuenta en github. Para los que usen windows revisar en este repositorio en la raíz el archivo onwindows_readme.txt
 
-Video tutorial
-https://www.youtube.com/watch?v=VdGzPZ31ts8
+   Video tutorial
+   https://www.youtube.com/watch?v=VdGzPZ31ts8
 
-Teoría
-https://docs.github.com/en/get-started/using-git/about-git
+   Teoría
+   https://docs.github.com/en/get-started/using-git/about-git
 
-cheat sheet
-<img src="media/cheat sheet github.png" width=50% height=50%>
+   cheat sheet
+
+   <img src="media/cheat sheet github.png" width=65% height=65%>
 
 3. Instalar [vscode](https://code.visualstudio.com/download) para su sistema operativo, ya sea windows, linux o mac
 
 4. En el caso de utilizar windows pro, proceda a instalar [Docker desktop](https://docs.docker.com/get-docker/) . Si usted posee windows home entonces proceda a instalar [cygwin](https://www.cygwin.com/install.html) . Cygwin es únicamente en el caso de que no pueda instalar Docker desktop.
 
-5. según la plataforma que haya seleccionado investigue como instalar en esa el compilador g++ e instalelo. para el caso de docker haga download de la imagen gcc
+5. según su sistema operativo ambiente usado en el paso anterior, investigue como instalar para ese ambiente (linux nativo o mac o cygwin) el compilador g++ e instalelo. para el caso de docker haga download de la imagen gcc con el siguiente comando:
 
 ```sh
 docker pull gcc
 ```
 
-para saber que su instalación quedó correcta, ejecute en la terminal g++ y g++ --version , ambos deben poder responder. En el caso de docker con tener la imagen es suficiente.
+para saber que su instalación quedó correcta, ejecute en la terminal del ambiente en cuestion (mac, linux o cygwin) g++ y g++ --version , ambos deben poder responder. En el caso de docker con tener la imagen bajada es suficiente.
 
-6. estudiar los siguientes dos links
+no se va a utilizar clion ni visual studio c++.
+
+6. estudiar los siguientes dos links completos
 
 https://cplusplus.com/doc/tutorial/program_structure/
 
