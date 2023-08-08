@@ -14,9 +14,7 @@ para saber que su instalación quedó correcta, ejecute en la terminal del ambie
 
 no se va a utilizar clion ni visual studio c++.
 
-4. compilar y ejecutar en su computadora los programas hechos en clase por el profesor:
-   - programa 1
-   - programa 2
+4. compilar y ejecutar en su computadora los programas hechos en clase por el profesor que van a estar subidos en github, resueltos en el punto 2, 3, 4 de las actividades en clase.
 
 ## actividades en clase
 
@@ -26,10 +24,13 @@ no se va a utilizar clion ni visual studio c++.
 
 2. Estructura de un programa en C, C++. Pasos básicos, cómo compilar, ejecutar y simplificar con un cmake
 
-3. Medir el rendimiento al buscar en un arreglo bajo el principio de LRU y sin dicho principio.
+3. Hacer un programa en C++, para medir el rendimiento al buscar un item en un arreglo bajo el principio de LRU y sin dicho principio.
 
-4. Ejercicio evaluado, el profesor va a resolver el primer ejercicio, luego en parejas proceder a resolver los siguientes dos ejercicios en papel o en un editor en su teléfono usando lo más similar a sintáxis de C++, llamar al profesor para obtener una nota tan pronto terminen.
+4. Ejercicio evaluado, el profesor va a resolver el primer ejercicio
 
 - https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true
+
+  luego en parejas proceda a escoger uno de los dos algoritmos siguientes, proceda a resolverlo en papel o en un editor en su teléfono usando lo más similar a sintáxis de C++, llamar al profesor para obtener una nota tan pronto terminen. No es necesario ejecutarlo.
+
 - https://www.hackerrank.com/challenges/divisible-sum-pairs/problem?isFullScreen=true
 - https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true

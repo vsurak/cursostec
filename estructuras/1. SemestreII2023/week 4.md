@@ -24,20 +24,24 @@ https://cplusplus.com/doc/tutorial/variables/
 ## actividades en clase
 
 1. Proceda en forma individual en conjunto con el profesor a resolver los siguientes problemas algoritmicos:
-   a. Dada una string, encontrar la substring con repetición continua, asumiendo que la string es circular. por ejemplo:
+
+   a. Dada una string, encontrar la substring con repetición continua, asumiendo que la string es circular. Haga uso de arreglos. Ejemplo de inputs:
+
    "este es un hola hola no un adios" => " hola hola"
+
    "ine viene mañana voy al cine mañana voy al c" => "mañana voy al cine mañana voy al cine"
+
    "estoy programando en C++" => ""
 
-   b. dado una lista de palabras en un arreglo, genere una sopa de letras e imprímila en pantalla. El tamaño de la cuadrícula será dado por parámetro y todas las palabras deben tener un largo menor o igual a dicho tamaño. haga que su programa acomode las palabras en la cuadrícula de la sopa de forma vertical, horizontal y diagonal de forma aleatoria, y proceda después a imprimir en pantalla la sopa de letras resultante.
+   b. dado una lista de palabras en un arreglo, genere una sopa de letras e imprímila en pantalla. El tamaño de la cuadrícula será dado por parámetro, hasta un máximo de 10x10 y todas las palabras deben tener un largo menor o igual a dicho tamaño. haga que su programa acomode las palabras en la cuadrícula de la sopa ya sea de forma vertical, horizontal y diagonal, decidiendo eso de forma pseudo aleatoria, y proceda después a imprimir en pantalla la sopa de letras resultante. Haga uso de matrices o bien llamados arreglos multidimensionales.
 
 2. Ejercicio de gitub, prueba evaluada
 
 - hacer grupos de 4 personas
 - una persona va a crear un repositorio en su cuenta de github llamado "estructuras_gitintro"
-- en los settings, agregue como colaboradores a los otros 3 compañeros para que puedan hacer commit
+- en los settings del repositorio, agregue como colaboradores a los otros 3 compañeros para que puedan hacer commit
 - agregue a su repo los archivos cpp hechos en el punto #1
-- una vez que el archivo este agregado todos los integrantes deberan en sus computadores, crear un folder para la práctica, y en ese folder hacer un git clone del repositorio
+- una vez que el archivo este agregado todos los integrantes deberan en sus computadores crear un folder para la práctica, y en ese folder hacer un git clone del repositorio
 - luego deberan crear un branch con el nombre o un nickname distintivo de cada persona, git branch
 - luego deberán pasarse al branch creado con un git checkout
 - ahora abra el cpp del ejercicio a) y dentro del main agregue un cout al final con su nombre completo: cout << "mi nombre completo" << endl; , salve el archivo
