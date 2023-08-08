@@ -1,5 +1,4 @@
 import * as express from 'express';
-import * as bodyParser from 'body-parser'; //json
 import Routes from './routes/routes'
 
 class App {
@@ -15,8 +14,8 @@ class App {
 
     // Configure Express middleware.
     private middleware(): void {
-        this.express.use(bodyParser.json());
-        this.express.use(bodyParser.urlencoded({ extended: false }));
+        this.express.use(express.json()); // Used to parse JSON bodies
+        this.express.use(express.urlencoded()); // Parse URL-encoded bodies using query-string library
     }
 
     private routes(): void {

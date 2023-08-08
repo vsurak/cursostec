@@ -31,4 +31,22 @@ export class FeriaController {
         const feriadata = new data_feria();
         return feriadata.getClientsByFilter(filter);
     }
+
+    public getActionsPerMonth_withSP() : Promise<any> 
+    {
+        const feriadata = new data_feria();
+        return feriadata.getActionsPerMonth_withSP();
+    }
+
+    public getCountByEventTypeId() : Promise<any>
+    {
+        const feriadata = new data_feria();
+        return feriadata.getCountByEventTypeId();
+    }
+
+    public getEventCountByMonth() : Promise<any> 
+    {
+        const feriadata = new data_feria();
+        return feriadata.getEventCountByMonth();
+    }
 }

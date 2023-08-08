@@ -6,3 +6,5 @@ comm_progs:
 # docker run -it --rm -v C:\dev\cursostec\estructuras:/home gcc bash
 # apt update -y
 # app install curl
+
+docker run -it --rm -v C:\Users\Ale\Desktop:/home gcc bash
