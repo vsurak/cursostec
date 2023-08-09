@@ -1,15 +1,9 @@
 import { Logger } from '../common'
 import IGEvenTypes from './ig_eventtypes'
 import IGEvents from './ig_events'
+import sequelize from './connector'
 
 const sql = require('mssql')
-
-const { Sequelize } = require('sequelize');
-
-const sequelize = new Sequelize('iglogs', 'sa', '123456', {
-    host: '192.168.1.12',
-    dialect: 'mssql'
-});
 
 const sqlConfig = {
     user: "sa",
@@ -27,7 +21,7 @@ const sqlConfig = {
     }
 }
 
-export class data_feria {
+export class data_items {
     private log: Logger;
 
     public constructor()
@@ -47,8 +41,45 @@ export class data_feria {
         });
     }
 
+
+    // IGEvents for ORM comparision 
+
+    public saveIGEvent(data:any) : Promise<any>
+    {
+        try 
+        {
+            // creates an instance of the model object based on json data
+            const newEvent = IGEvents.build(data);
+            // just save it 
+            return newEvent.save();
+        } 
+        catch (error) 
+        {
+            console.error('Error:', error);
+        }
+    }
+
+    public getTop20Events() : Promise<any> 
+    {
+        try {
+            // queries are similar to comprehension list operators in javascript: find, map, match, filter...
+            // is readable for any programmer
+            // no SQL or another language is required
+            return IGEvents.findAll({
+                order: [['eventid', 'DESC']],
+                limit: 20,
+            });
+      
+        } catch (error) {
+          console.error('Error retrieving top 20 events:', error);
+        }
+    }
+
+
     public getActionsPerMonth_withSP() : Promise<any>
     {
+        // is required to have control of the connection
+        // controversial use between stored procedures or implicit SQL queries in code
         return sql.connect(sqlConfig).then((pool:any) => {
             return pool.request()
                 .execute("getActionsByMonth")
@@ -62,12 +93,15 @@ export class data_feria {
     public getCountByEventTypeId() : Promise<any> {
         try {
             const results = IGEvents.findAll({
+                // choose all attributes, equivalente to the select fields clause
                 attributes: [
                     [sequelize.fn('DATENAME', sequelize.literal('MONTH'), sequelize.col('posttime')), 'mes'],
                     'eventtypeid',
                     [sequelize.fn('COUNT', sequelize.col('eventid')), 'cantidad'],
                 ],
+                // group criterias are complex and verbose
                 group: [sequelize.fn('DATENAME', sequelize.literal('MONTH'), sequelize.col('posttime')), 'eventtypeid'],
+                // order sentences are verbose
                 order: [
                     [sequelize.fn('DATENAME', sequelize.literal('MONTH'), sequelize.col('posttime')), 'ASC'],
                     ['eventtypeid', 'ASC'],

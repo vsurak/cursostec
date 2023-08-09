@@ -17,6 +17,33 @@ app.post("/getfilteredclients", (req, res,next) => {
 
 });
 
+
+/// IG Events database example 
+
+app.post("/event", (req, res, next) => {
+    let newevent = req.body;
+    FeriaController.getInstance().saveNewEvent(newevent)
+    .then((result:any)=> {
+        res.json(result);
+    })
+    .catch((err:any)=>{
+        log.error(err);
+        return "{msg: \"error\"}";
+    });
+});
+
+app.get("/gettopevents", (req, res,next) => {
+    FeriaController.getInstance().getTop20Events()
+    .then((data:any)=>{
+        res.json(data);
+    })
+    .catch((err:any)=>{
+        log.error(err);
+        return "{msg: \"error\"}";
+    });
+});
+
+
 app.get("/getactionssp", (req, res,next) => {
     FeriaController.getInstance().getActionsPerMonth_withSP()
     .then((data:any)=>{

@@ -1,9 +1,6 @@
 import { Sequelize, Model, DataTypes } from 'sequelize';
+import sequelize from './connector'
 
-const sequelize = new Sequelize('iglogs', 'sa', '123456', {
-    host: '192.168.1.12',
-    dialect: 'mssql'
-});
 
 const IGEvenTypes = sequelize.define('IGEvenTypes', 
 {

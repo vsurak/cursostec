@@ -1,10 +1,6 @@
 import { Sequelize, Model, DataTypes } from 'sequelize';
 import IGEvenTypes from './ig_eventtypes'
-
-const sequelize = new Sequelize('iglogs', 'sa', '123456', {
-    host: '192.168.1.12',
-    dialect: 'mssql'
-});
+import sequelize from './connector'
 
 const IGEvents  = sequelize.define('IGEvents',
 {

@@ -1,5 +1,5 @@
 import { Logger } from '../common'
-import { data_feria } from '../repositories/data_feria'
+import { data_items } from '../repositories/data_items'
 
 
 export class FeriaController {
@@ -26,27 +26,39 @@ export class FeriaController {
         return this.instance;
     }
 
+    public saveNewEvent(pEvent: any) : Promise<any>
+    {
+        const data_access = new data_items();
+        return data_access.saveIGEvent(pEvent);
+    }
+
+    public getTop20Events() : Promise<any>
+    {
+        const data_access = new data_items();
+        return data_access.getTop20Events();
+    }
+
     public getFilteredClients(filter: string) : Promise<any> 
     {
-        const feriadata = new data_feria();
-        return feriadata.getClientsByFilter(filter);
+        const data_access = new data_items();
+        return data_access.getClientsByFilter(filter);
     }
 
     public getActionsPerMonth_withSP() : Promise<any> 
     {
-        const feriadata = new data_feria();
-        return feriadata.getActionsPerMonth_withSP();
+        const data_access = new data_items();
+        return data_access.getActionsPerMonth_withSP();
     }
 
     public getCountByEventTypeId() : Promise<any>
     {
-        const feriadata = new data_feria();
-        return feriadata.getCountByEventTypeId();
+        const data_access = new data_items();
+        return data_access.getCountByEventTypeId();
     }
 
     public getEventCountByMonth() : Promise<any> 
     {
-        const feriadata = new data_feria();
-        return feriadata.getEventCountByMonth();
+        const data_access = new data_items();
+        return data_access.getEventCountByMonth();
     }
 }
