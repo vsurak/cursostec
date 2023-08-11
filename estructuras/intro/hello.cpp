@@ -40,5 +40,6 @@ int main()
     // como imprimo texto en c++
     // utiliza operadores de entrada y salida standard => std
     std::cout << "hola estructuras de datos" << endl;
+
     cout << "este print no usa el namespace porque arriba pusimos el using" << endl;
 }

@@ -9,7 +9,7 @@ const sqlConfig = {
     user: "sa",
     password: "123456",
     database: "iglogs",
-    server: "192.168.1.12",
+    server: "10.0.130.129",
     pool: {
       max: 1,
       min: 1,

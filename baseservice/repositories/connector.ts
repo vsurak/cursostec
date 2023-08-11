@@ -5,7 +5,7 @@ Sequelize.DATE.prototype._stringify = function _stringify(date:any, options:any)
 };
 
 const sequelize = new Sequelize('iglogs', 'sa', '123456', {
-    host: '192.168.1.12',
+    host: '10.0.130.129',
     dialect: 'mssql'
 });
 
