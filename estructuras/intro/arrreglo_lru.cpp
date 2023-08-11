@@ -52,6 +52,7 @@ int main()
 {
     int datos[SIZE];
     int pruebas[6] = {9630, 1005, 9999, 5000, 7300, 1000};
+
     for (int indiceArray = 0; indiceArray < SIZE; indiceArray++)
     {
         datos[indiceArray] = 1000 + indiceArray;
