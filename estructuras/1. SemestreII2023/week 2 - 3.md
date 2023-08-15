@@ -25,12 +25,3 @@ no se va a utilizar clion ni visual studio c++.
 2. Estructura de un programa en C, C++. Pasos básicos, cómo compilar, ejecutar y simplificar con un cmake
 
 3. Hacer un programa en C++, para medir el rendimiento al buscar un item en un arreglo bajo el principio de LRU y sin dicho principio.
-
-4. Ejercicio evaluado, el profesor va a resolver el primer ejercicio
-
-- https://www.hackerrank.com/challenges/compare-the-triplets/problem?isFullScreen=true
-
-  luego en parejas proceda a escoger uno de los dos algoritmos siguientes, proceda a resolverlo en papel o en un editor en su teléfono usando lo más similar a sintáxis de C++, llamar al profesor para obtener una nota tan pronto terminen. No es necesario ejecutarlo.
-
-- https://www.hackerrank.com/challenges/divisible-sum-pairs/problem?isFullScreen=true
-- https://www.hackerrank.com/challenges/birthday-cake-candles/problem?isFullScreen=true

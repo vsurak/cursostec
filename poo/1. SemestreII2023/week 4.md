@@ -12,7 +12,7 @@
 
    <img src="media/cheat sheet github.png" width=65% height=65%>
 
-2. Estudiar y practicar los siguientes links de de este tutorial de java
+2. Estudiar y practicar los siguientes links de este tutorial de java
 
 - https://www.w3schools.com/java/java_syntax.asp
 - https://www.w3schools.com/java/java_output.asp
