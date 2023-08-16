@@ -16,11 +16,11 @@ using namespace std;
 
 int main()
 {
+
+    int result[2] = {0, 0};
     int calificaciones[2][CANTIDAD_CALIFICACIONES] = {
         {95, 66, 15, 34},
         {76, 56, 8, 95}};
-
-    int result[2] = {0, 0};
 
     for (int indiceCalificaciones = 0; indiceCalificaciones < CANTIDAD_CALIFICACIONES; indiceCalificaciones++)
     {
