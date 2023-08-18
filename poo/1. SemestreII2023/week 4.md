@@ -48,12 +48,14 @@ _Ejercicio de Java con Github evaluado_
    - abrir una terminal
    - crear un folder de trabajo para esta práctica
    - hacer un git init en el folder
-   - crear un branch main con git branch
    - copiar en ese folder los archivos del proyecto java hecho en eclipse por el profesor
-   - ejecutar el cambio en el código indicado por el profesor
+   - pasar los archivos a staged con un git add .
+   - hacer un primer commit y con esto se crea el branch main
+   - ejecutar el cambio en el código indicado por el profesor: implemente atributos y acciones para la clase Obstaculo, creando el obstaculo de su eleccion.
    - crear un repositorio en su github personal
-   - desde la terminal agregar el repositorio remoto con git remote
-   - pasar los cambios a stage con git add, luego hacer commit y finalmente hacer un push al repositorio creado en el paso anterior
+   - desde la terminal agregar el repositorio remoto con git remote add
+   - pasar los cambios a stage con git add, luego hacer commit y finalmente. chequee el estado con git status.
+   - hacer un push al repositorio creado en el paso anterior
    - ir al webpage de git, hacer refresh y verificar que los cambios se hayan aplicado
 
 3. en forma individual, proceda en java usando eclipse a implementar las classes diseñadas en el ejercicio de diseño de objetos de un juego de la semana 3. Debe crear un file java para cada clase, incluír los atributos con el tipo de dato que sea necesario, siempre usando tipos de datos primitivos, implementar los métodos que se diseñaron en el ejercicio. Finalmente, proceda a programar el guion que diseñaron haciendo uso de las clases, instancias y métodos programados. En el caso de los métodos implementele los parámetros que sean necesarios y en el cuerpo del método haga println para saber que se está ejecutando el método. Ejecute su programa y compruebe que funciona.
