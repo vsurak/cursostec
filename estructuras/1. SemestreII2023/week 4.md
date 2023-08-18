@@ -42,10 +42,10 @@ https://cplusplus.com/doc/tutorial/variables/
 - luego deberan crear un branch con el nombre o un nickname distintivo de cada persona, git branch
 - luego deberán pasarse al branch creado con un git checkout
 - ahora abra el cpp del ejercicio 1 y dentro del main agregue un cout al final con su nombre completo: cout << "mi nombre completo" << endl; , salve el archivo
-- pasese al main branch con git checkout
-- haga merge en el main con lo que tiene en el branch de su nickname
 - proceda a pasar los archivos modificados a stagging con git add
 - haga commit con git commit
+- pasese al main branch con git checkout
+- haga merge en el main con lo que tiene en el branch de su nickname
 - todos deben tratar de subir su cambio al main en el github en la nube por medio de git push, para algunos, no se los va a permitir pues la versión arriba va a ser más nueva que la que tienen local, por lo que tendrán que hacer un git pull y un merge desde su branch, y así sucesivamente, hasta que en esa competencia logren todos los integrantes subir su cambio en la nube
 - el profesor revisará el repo en github debidamente actualizado, y revisará los branches locales de cada quien para confirmar que su branch personal solo tiene su nombre, y en su branch main lo que tiene es el contenido al punto en que logró efectivamente hacer push de sus cambios
 
