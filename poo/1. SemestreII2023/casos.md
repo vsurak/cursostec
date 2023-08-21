@@ -80,6 +80,7 @@ dado los requerimientos que deben cumplir los sistemas, organice un equipo de tr
 - los 4 grupos deben ponerse de acuerdo para hacer que el sistema se ejecute como uno solo y la casa opere en forma completa, por eso cada subsistema debe tener un único punto de inicio para que este sea llamado desde un main que deberá hacer el grupo de control de respuesta
 - cada subsistema abrirá su propio JFrame donde deberá de alguna forma indicar lo que está pasando en la casa según el subsistema
 - la revisión será con cita con el asistente, será completa con los 4 grupos integrados y funcionando
+- cada grupo debe poder demostrar que el último commit fué hecho para la fecha de entrega máximo media noche
 - 40 puntos serán para los subsistemas en forma individual y 20 puntos para la integración total de los 4 subsistemas
 
 ---

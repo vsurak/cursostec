@@ -10,7 +10,7 @@
 
 2. de la misma forma el profesor hará los grupos de la casa completa
 
-3. cada grupo se une para iniciar el diseño de su subsistema y tener una primer revisión por parte del profesor y en forma grupal. Para hacer el diseño, se recomienda agregar a eclipse por medio del marketplace un plugin para diagramar el UML de objetos, por ejemplo UML Lab Modeling.
+3. cada grupo se une para iniciar el diseño de su subsistema y tener una primer revisión por parte del profesor y en forma grupal. Haga el diseño en alguna herramienta de diseño tipo miro o similar que le permita realizar trabajo colaborativo.
 
 4. se unen los grupos de la casa completa para que puedan crear un solo diseño de clases que les permita integrarse y retirarse a trabajar en la implementación.
 
