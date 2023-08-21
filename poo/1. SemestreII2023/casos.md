@@ -7,7 +7,7 @@ _type:_ couples
 
 ## descripción
 
-existe una casa donde ocurren sucesos aparentemente paranormales, los vecinos han reportado que la casa se abre por la mañana, apagando las luces, abriendo las ventanas e iniciando el día como cualquier otra cosa. se ensucia como toda casa, se limpia como toda casa, huele como si alguien estuviera cocinando y al final del día las luces se prenden y se escucha una música chill, mientras la misma cierra sus puertas y se asegura para entrar en la quietud de la noche.
+existe una casa donde ocurren sucesos aparentemente paranormales, los vecinos han reportado que la casa se abre por la mañana, apagando las luces, abriendo las ventanas e iniciando el día como cualquier otra casa. se ensucia como toda casa, se limpia como toda casa, huele como si alguien estuviera cocinando y al final del día las luces se prenden y se escucha una música chill, mientras la misma cierra sus puertas y se asegura para entrar en la quietud de la noche.
 
 resulta que la casa no está embrujada, se trata de una casa que es auto mantenible, ella misma "piensa" y se auto sostiene para que cuando llegan los inquilinos no tengan que preocuparse por nada si no que solo vivir en la casa y disfrutar. el problema es que el sistema que controla la casa está hecho en cobol, se quiere instalar dispositivos más nuevos pero para ello el software controlador debe migrarse a java y ustedes han sido seleccionados para crear el sistema de la casa.
 
@@ -25,7 +25,7 @@ la casa está dividida en 4 grandes sistemas que interactúan entre si para darl
 
 3. dichas habitaciones tienen un tamaño definido, una cantidad de puertas y ventanas y ciertas luces.
 
-4. el caso de particular de los baños pueden abrir o cerrar las llaves de la ducha, innodoro y lava manos
+4. el caso particular de los baños pueden abrir o cerrar las llaves de la ducha, innodoro y lava manos
 
 ### dispositivos
 
@@ -67,7 +67,7 @@ dado los requerimientos que deben cumplir los sistemas, organice un equipo de tr
 
 - diseño de clases de toda la casa completo
 - para ello deberá integrarse con los otros subsistemas hechos por sus compañeros de tal forma que se integren los 4 necesarios
-- el diseño debe considerar el uso de intefaces para facilitar la integración entre múltiples grupos
+- el diseño debe considerar el uso de intefaces para facilitar la integración entre múltiples grupos, valiéndose de polimorfismo
 - las interfaces que permiten la integración entre sistemas se diseñan en conjunto con todos los miembros pero es el grupo de control de respuesta quien tendrá la última palabra en cuanto a su implementación
 - el diseño deberá revisarse en formato PDF enviándolo al profesor al correo vsurak@gmail.com para las 8pm, este diseño debe incluir los integrantes de todos los grupos
 
@@ -78,6 +78,7 @@ dado los requerimientos que deben cumplir los sistemas, organice un equipo de tr
 - para este hilo se va usar una escala de 1 hora real equivale a 5 segundos en el sistema
 - toda la casa opera en forma continua hasta que se detenga el programa
 - los 4 grupos deben ponerse de acuerdo para hacer que el sistema se ejecute como uno solo y la casa opere en forma completa, por eso cada subsistema debe tener un único punto de inicio para que este sea llamado desde un main que deberá hacer el grupo de control de respuesta
+- cada subsistema abrirá su propio JFrame donde deberá de alguna forma indicar lo que está pasando en la casa según el subsistema
 - la revisión será con cita con el asistente, será completa con los 4 grupos integrados y funcionando
 - 40 puntos serán para los subsistemas en forma individual y 20 puntos para la integración total de los 4 subsistemas
 
