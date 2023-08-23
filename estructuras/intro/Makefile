@@ -10,4 +10,7 @@ bob:
 alice:
 	c++ alicebob_v2.cpp -o alice.o
 
+repeat:
+	c++ circularrepeat.cpp -o repeat.o
+
 # docker run -it --rm -v C:\dev\cursostec\estructuras:/home gcc bash
