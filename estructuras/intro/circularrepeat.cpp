@@ -48,6 +48,17 @@ string getCircularRepeat(string pTest)
 
                 for (; indexPalabraActual + testIndex < indexPalabraEvaluar; testIndex++)
                 {
+                    /*
+                    if (indexPalabraEvaluar+1==cantidadPalabras) {
+                        palabraComparar = words[0];
+                    }
+                    if (indexPalabraEvaluar+testIndex==cantidadPalabras) {
+                        palabraComparar = words[indexPalabraEvaluar+testIndex];
+                        or
+                        palabraComparar = words[indexPalabraEvaluar+testIndex]+words[0];
+                    }
+                    */
+
                     if (words[indexPalabraActual + testIndex] != words[indexPalabraEvaluar + testIndex])
                     {
                         seRepite = false;
