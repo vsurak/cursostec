@@ -17,23 +17,25 @@ string getCircularRepeat(string pTest)
 {
     string words[MAX_WORDS];
     string word;
+    string result = "";
+    bool encontrada = false;
 
     //<ObjectType> <nombreVariable>([parametros del constructor]);
     stringstream parser(pTest);
 
-    fill_n(words, MAX_WORDS, "$$");
+    // fill_n(words, MAX_WORDS, "$$");
 
     int cantidadPalabras = 0;
     while (getline(parser, word, ' '))
     {
         words[cantidadPalabras++] = word;
     }
-    // al salir de este loop, en word_position va a quedar la cantidad de palabras que sacó
+    // al salir de este loop, en cantidadPalabras va a quedar la cantidad de palabras que sacó
 
     // ubicarme en una palabra e ir a buscar si esa palabra aparece más adelante
-    for (int indexPalabraActual = 0; i < cantidadPalabras - 1; indexPalabraActual++)
+    for (int indexPalabraActual = 0; indexPalabraActual < cantidadPalabras - 1 && !encontrada; indexPalabraActual++)
     {
-        for (int indexPalabraEvaluar = indexPalabraActual + 1; i < cantidadPalabras; indexPalabraEvaluar++)
+        for (int indexPalabraEvaluar = indexPalabraActual + 1; indexPalabraEvaluar < cantidadPalabras && !encontrada; indexPalabraEvaluar++)
         {
             if (words[indexPalabraActual] == words[indexPalabraEvaluar])
             {
@@ -41,26 +43,40 @@ string getCircularRepeat(string pTest)
                 // si no hay espacio entre ellas no hay repetición
                 bool seRepite = true;
                 int testIndex = 1;
-                for (int indexEvaluarRepeticion = indexPalabraActual + 1; indexEvaluarRepeticion < indexPalabraEvaluar; indexEvaluarRepeticion++)
+
+                result += words[indexPalabraActual] + " ";
+
+                for (; indexPalabraActual + testIndex < indexPalabraEvaluar; testIndex++)
                 {
-                    if (words[indexEvaluarRepeticion] != words[indexPalabraEvaluar + testIndex])
+                    if (words[indexPalabraActual + testIndex] != words[indexPalabraEvaluar + testIndex])
                     {
                         seRepite = false;
                         break;
                     }
+
+                    result += words[indexPalabraActual + testIndex] + " ";
+                }
+                if (!seRepite)
+                {
+                    result = "";
+                }
+                else
+                {
+                    encontrada = true;
                 }
                 // ya encontró pero no hemos tomado en cuenta si es circular y también se puede caer porque se acaba el arregl
             }
         }
     }
-    return "";
+    return result;
 }
 
 int main()
 {
-    string test1 = "en, quiero comer bien, comer bi";
+    string test1 = "en, quiero comer bien, comer bien,";
     string test2 = "hola mundo mundo adios";
     string test3 = "hola mundo";
+    string test4 = "en, quiero comer bien, comer bi";
 
     string result = getCircularRepeat(test1);
     cout << "resultado => " << result << endl;
