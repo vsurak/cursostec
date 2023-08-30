@@ -35,7 +35,7 @@ cuando muestra los titulares, debe mostrar el número de posición de relevancia
 
 - deberá enviar esto listo al profesor vía discord, usando un mensaje directo, a más tardar a las 10pm, indique su nombre completo y el link de github donde hizo commit del código
 
-## preliminar #2, 31 de agosto, 50pts
+## preliminar #2, 1ro de setiembre, 50pts
 
 - usando las bases de listas hechas en clase, proceda a implementar la lista que usted seleccionó en el entregable #1
 
