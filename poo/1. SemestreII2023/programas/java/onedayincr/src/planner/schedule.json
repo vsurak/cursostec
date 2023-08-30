@@ -1,0 +1,29 @@
+{
+	"tareas" : [
+		{
+			"task": "comer",
+			"time": "07:00",
+			"tico": "Worker"
+		},
+		{
+			"task": "levantarse",
+			"time": "06:20",
+			"tico": "Worker"
+		},
+		{
+			"task": "trabajar",
+			"time": "07:30",
+			"tico": "Worker"
+		},
+		{
+			"task": "comer",
+			"time": "10:00",
+			"tico": "Worker"
+		},		
+		{
+			"task": "descansar",
+			"time": "17:00",
+			"tico": "Worker"
+		}		
+	]
+}
