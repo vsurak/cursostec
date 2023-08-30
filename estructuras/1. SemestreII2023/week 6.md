@@ -1,3 +1,5 @@
+## actividades en clase
+
 - trabajando caso #1 y viendo listas
 
 Extraer para la asignación, diferencias de implementación y posibles ventajas o desventajas de hacerlo de una forma o de otra. Si es necesario aclarar conceptos del lenguaje proceda a agregarlos. Preparar una presentación de 4 minutos usando ya sea una imagen, pdf, diagrama, dibujo o comentarios en el código.

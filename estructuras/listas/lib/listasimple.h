@@ -7,87 +7,68 @@
 #define POSITION_BEGINNING 0
 #define POSITION_END 99999999
 
-struct listasimple {
+struct listasimple
+{
     int size = 0;
-    nodo* start = nullptr;
-    nodo* end = nullptr;
+    nodo *start = nullptr;
+    nodo *end = nullptr;
 
-    bool isEmpty() {
-        return size == 0 ;
+    bool isEmpty()
+    {
+        return size == 0;
     }
 
-    int getSize() {
+    int getSize()
+    {
         return size;
     }
 
-/*
-    void add(int pValue) {
-        nodo* newvalue = (nodo*)malloc(sizeof(struct nodo));
-        newvalue->data = pValue;
-        
-        if (size == 0) {
-            start = newvalue;
-            end = newvalue;  // end = start;
-        } else {
-            // agregar al final de la lista
-            end->next = newvalue; // esto es equivalente a  (*end).next = &newvalue;            
-            end = newvalue;      
-        }
-
-        size++;
-    }
-
-    void addAtBeginning(int pValue) {
-        nodo* newvalue = (nodo*)malloc(sizeof(struct nodo));
-        newvalue->data = pValue;
-        
-        if (size == 0) {
-            start = newvalue;
-            end = newvalue;  // end = start;
-        } else {
-            newvalue->next = start;
-            start = newvalue;
-        }
-
-        size++;
-    }
-
-*/
-
-    void add(int pValue) {
+    void add(int pValue)
+    {
         insert(pValue, POSITION_END);
     }
 
-    void addAtBeginning(int pValue) {
+    void addAtBeginning(int pValue)
+    {
         insert(pValue, POSITION_BEGINNING);
     }
 
-    int insert(int pValue, int pPosition) {
-        nodo* newvalue = (nodo*)malloc(sizeof(struct nodo));
+    int insert(int pValue, int pPosition)
+    {
+        nodo *newvalue = (nodo *)malloc(sizeof(struct nodo));
         newvalue->data = pValue;
         int result = 0;
 
-        if (size==0) {
+        if (size == 0)
+        {
             start = newvalue;
-            end = newvalue;  
-        } else if (pPosition==0) {
+            end = newvalue;
+        }
+        else if (pPosition == 0)
+        {
             newvalue->next = start;
             start = newvalue;
-        } else {
+        }
+        else
+        {
             int actualPosition = 1;
-            nodo* pointerToPosition = nullptr;
-            nodo* pointerBehind = nullptr;
+            nodo *pointerToPosition = nullptr;
+            nodo *pointerBehind = nullptr;
 
-            if (pPosition>=size) {
+            if (pPosition >= size)
+            {
                 pointerBehind = end;
                 end = newvalue;
                 actualPosition = size;
-            } else {
+            }
+            else
+            {
                 pointerToPosition = start->next;
                 pointerBehind = start;
             }
 
-            while (actualPosition<pPosition && pointerToPosition!=nullptr) {
+            while (actualPosition < pPosition && pointerToPosition != nullptr)
+            {
                 pointerBehind = pointerToPosition;
                 pointerToPosition = pointerToPosition->next;
                 actualPosition++;
@@ -101,8 +82,40 @@ struct listasimple {
         size++;
         return result;
     }
-
 };
 
+/*
+    void add(int pValue) {
+        nodo* newvalue = (nodo*)malloc(sizeof(struct nodo));
+        newvalue->data = pValue;
+
+        if (size == 0) {
+            start = newvalue;
+            end = newvalue;  // end = start;
+        } else {
+            // agregar al final de la lista
+            end->next = newvalue; // esto es equivalente a  (*end).next = &newvalue;
+            end = newvalue;
+        }
+
+        size++;
+    }
+
+    void addAtBeginning(int pValue) {
+        nodo* newvalue = (nodo*)malloc(sizeof(struct nodo));
+        newvalue->data = pValue;
+
+        if (size == 0) {
+            start = newvalue;
+            end = newvalue;  // end = start;
+        } else {
+            newvalue->next = start;
+            start = newvalue;
+        }
+
+        size++;
+    }
+
+*/
 
 #endif

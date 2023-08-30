@@ -4,29 +4,34 @@
 #include "nodo.h"
 #include <stdlib.h>
 
+struct listadoble
+{
+    struct nodo *start = nullptr;
+    struct nodo *end = nullptr;
+    int size = 0;
 
-struct listadoble {
-    struct nodo* start = nullptr;
-    struct nodo* end = nullptr;
-    int size =0;
-
-
-    bool isEmpty() {
+    bool isEmpty()
+    {
         return size == 0;
     }
 
-    int getSize() {
+    int getSize()
+    {
         return size;
     }
 
-    void addToEnd(void* pData) {
-        struct nodo* newNode = (struct nodo*)malloc(sizeof(struct nodo)); 
+    void addToEnd(void *pData)
+    {
+        struct nodo *newNode = (struct nodo *)malloc(sizeof(struct nodo));
         newNode->data = pData;
 
-        if (size==0) {
+        if (size == 0)
+        {
             start = newNode;
             end = newNode;
-        } else {
+        }
+        else
+        {
             newNode->previous = end;
             end->next = newNode;
             end = newNode;
@@ -35,14 +40,18 @@ struct listadoble {
         size++;
     }
 
-    void addToBegining(void* pData) {
-        struct nodo* newNode = (struct nodo*)malloc(sizeof(struct nodo)); 
+    void addToBegining(void *pData)
+    {
+        struct nodo *newNode = (struct nodo *)malloc(sizeof(struct nodo));
         newNode->data = pData;
 
-        if (size==0) {
+        if (size == 0)
+        {
             start = newNode;
             end = newNode;
-        } else {
+        }
+        else
+        {
             newNode->next = start;
             start->previous = newNode;
             start = newNode;
@@ -51,17 +60,21 @@ struct listadoble {
         size++;
     }
 
-    void* removeFirst() {
-        void* result = nullptr;
-        struct nodo* cursor = start;
+    void *removeFirst()
+    {
+        void *result = nullptr;
+        struct nodo *cursor = start;
 
-        if (size>1) {
+        if (size > 1)
+        {
             start->next->previous = nullptr;
             start = start->next;
             cursor->next = nullptr;
             result = cursor->data;
             size--;
-        } else if (size==1) {
+        }
+        else if (size == 1)
+        {
             start = nullptr;
             end = nullptr;
             result = cursor->data;
@@ -69,7 +82,7 @@ struct listadoble {
         }
 
         return result;
-    }   
+    }
 };
 
 #endif
