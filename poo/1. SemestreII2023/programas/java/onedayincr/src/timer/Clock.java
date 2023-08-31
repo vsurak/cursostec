@@ -24,7 +24,7 @@ public class Clock extends Thread {
 			try {
 				currentTime = Calendar.getInstance().getTime();
 				scheduler.processTasks();
-				Thread.sleep(5000);	
+				Thread.sleep(5000);	// controlar la escala de tiempo
 			} catch (Exception ex) {
 				ex.printStackTrace();
 			}

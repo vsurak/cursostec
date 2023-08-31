@@ -6,7 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/dev/cursostec/poo/1. SemestreII2023/programas/java/onedayincr/javax.json-api-1.1.4.jar"/>
 	<classpathentry kind="lib" path="C:/dev/cursostec/poo/1. SemestreII2023/programas/java/onedayincr/javax.json-1.1.4.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

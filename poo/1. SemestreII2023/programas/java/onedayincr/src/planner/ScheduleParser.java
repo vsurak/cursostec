@@ -17,21 +17,7 @@ public class ScheduleParser {
 	public ScheduleParser() {
 		loadJson();
 	}
-	
-	private void loadJson() {
-		String pathtofile = "C:\\dev\\cursostec\\poo\\1. SemestreII2023\\programas\\java\\onedayincr\\src\\planner\\schedule.json";
-        
-		try ( JsonReader reader = Json.createReader(new FileReader(pathtofile))) {
-            JsonObject jsonparser = reader.readObject();
-            
-            jsontasks = jsonparser.getJsonArray("tareas");
-            
-            System.out.println("Loaded JSON: " + jsonparser);            
-        } catch (Exception e) {
-            e.printStackTrace();
-        }		
-	}
-	
+
 	public ArrayList<Task> getTasks() {
 		ArrayList<Task> result = new ArrayList<Task>();
 		
@@ -46,4 +32,18 @@ public class ScheduleParser {
         
         return result;
 	}	
+	
+	private void loadJson() {
+		String pathtofile = "C:\\dev\\cursostec\\poo\\1. SemestreII2023\\programas\\java\\onedayincr\\src\\planner\\schedule.json";
+        
+		try ( JsonReader reader = Json.createReader(new FileReader(pathtofile))) {
+            JsonObject jsonparser = reader.readObject();
+            
+            jsontasks = jsonparser.getJsonArray("tareas");
+            
+            System.out.println("Loaded JSON: " + jsonparser);            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }		
+	}
 }

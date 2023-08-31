@@ -6,7 +6,7 @@ import planner.Task;
 import timer.Clock;
 
 public abstract class Person {
-	protected ArrayList<String> tasks;
+	public ArrayList<String> tasks;
 	
 	public Person() {
 		tasks = new ArrayList<String>();
@@ -32,4 +32,9 @@ public abstract class Person {
 	}
 	
 	protected abstract void loadMyTasks();
+	
+	public static void main(String args) {
+		Person p1;
+		//p1 = new Person(); las classes abstracts no se pueden crear
+	}
 }

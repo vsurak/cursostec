@@ -51,13 +51,9 @@ public class War {
 		
 		
 		CombatManager manager = new CombatManager();
-		IVehicle mivehicle = manager.crearVehiculo();
-		ICombat combate = manager.startCombat();
+		manager.crearVehiculo();
+		manager.prepararVehiculo();
+		manager.combatir();
 		
-		mivehicle.selectArma(3);
-		mivehicle.atacar();
-		
-		combate.danarVehiculo(mivehicle);
-		combate.combatir();
 	}
 }

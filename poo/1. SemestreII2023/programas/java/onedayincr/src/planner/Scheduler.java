@@ -22,7 +22,7 @@ public class Scheduler {
 	}
 	
 	public void processTasks() {
-		for(Task task: tasks) {
+		for(Task task: tasks) {  // falta mejorar, preguntarle al profe por reflexion, tip: ClassforName
 			for(Person tico: ticos) {
 				tico.process(task);
 			}			

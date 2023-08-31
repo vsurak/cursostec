@@ -1,18 +1,35 @@
 package vehicles;
 
-public class CombatManager {
+public class CombatManager implements ICombat {
+	private IVehicle vehiculo;
+	
 	public CombatManager() {
+	
+	}
+	
+	public void crearVehiculo() {
+		vehiculo = new Tanque();
+	}
+	
+	@Override
+	public void prepararVehiculo() {
+		vehiculo.selectArma(1);
+	}
+
+	@Override
+	public void combatir() {
+		vehiculo.atacar();
+	}
+
+	@Override
+	public void danarVehiculo() {
+		vehiculo.damage(10);
+	}
+
+	@Override
+	public void dejarVehiculoSinEnergia() {
+		vehiculo.damage(100);
 		
-	}
-	
-	public IVehicle crearVehiculo() {
-		IVehicle result = null;
-		return result;
-	}
-	
-	public ICombat startCombat() {
-		ICombat result = null;
-		return result;
 	}
 	
 }

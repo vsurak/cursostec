@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Automatic-Module-Name: java.json
+Bnd-LastModified: 1541523939893
+Build-Jdk: 9.0.4
+Built-By: build
+Bundle-Description: Default provider for JSR 374:Java API for Processi
+ ng JSON
+Bundle-DocURL: http://www.oracle.com
+Bundle-License: https://oss.oracle.com/licenses/CDDL+GPL-1.1
+Bundle-ManifestVersion: 2
+Bundle-Name: JSR 374 (JSON Processing) Default Provider
+Bundle-SymbolicName: org.glassfish.javax.json
+Bundle-Vendor: Oracle
+Bundle-Version: 1.1.4
+Created-By: Apache Maven Bundle Plugin
+Export-Package: javax.json;version="1.1.4";uses:="javax.json.stream",j
+ avax.json.spi;version="1.1.4";uses:="javax.json,javax.json.stream",ja
+ vax.json.stream;version="1.1.4";uses:="javax.json",org.glassfish.json
+ .api;version="1.1.4"
+Extension-Name: javax.json
+Implementation-Version: 1.1.4
+Import-Package: javax.json;version="[1.1,2)";resolution:=optional,java
+ x.json.spi;version="[1.1,2)";resolution:=optional,javax.json.stream;v
+ ersion="[1.1,2)";resolution:=optional,org.glassfish.json.api
+Specification-Version: 1.1
+Tool: Bnd-3.5.0.201709291849
