@@ -71,7 +71,7 @@ dado los requerimientos que deben cumplir los sistemas, organice un equipo de tr
 - las interfaces que permiten la integración entre sistemas se diseñan en conjunto con todos los miembros pero es el grupo de control de respuesta quien tendrá la última palabra en cuanto a su implementación
 - el diseño deberá revisarse en formato PDF enviándolo al profesor al correo vsurak@gmail.com para las 8pm, este diseño debe incluir los integrantes de todos los grupos, por ende es un envío por casa
 
-## entregable final, 3 de setiembre, 60pts
+## entregable final, 5 de setiembre, 60pts
 
 - todos los grupos deben realizar su propia implementación del subsistema asignado
 - cada subsistema deberá implementar un Thread el cual deberá leer un archivo json que contenga la configuración que le permita a la casa funcionar 24/7, es decir, dicho json debe decidir que cosas ocurren a qué hora y que día de la semana

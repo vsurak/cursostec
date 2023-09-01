@@ -31,3 +31,5 @@ team 6
 team 7
 /estructuras/listas/lib/listadoble.h, insert
 /estructuras/listas/listas/nododoble.h,
+
+Vamos a ver aspectos de implementación para el caso #1 sobre http y errores que encontré en la revisión de los preliminares anteriores.
