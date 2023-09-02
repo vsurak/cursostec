@@ -45,12 +45,16 @@ cuando muestra los titulares, debe mostrar el número de posición de relevancia
 
 - deberá enviar esto listo al asistente a más tardar a las 10pm, fvsasistencia@gmail.com, subject: estructuras - caso #1 - preliminar #2 y agregar el link del repositorio de github, indique el nombre del branch donde dicho commit final está acorde con la hora de entrega
 
-## final, 5 de setiembre, 30pts
+## final, 6 de setiembre, 30pts
 
 - con las clases helper proporcionadas con el profesor, agregue una capa más a su programa para que usando el api de https://newsapi.org, obtener las noticias en formato json
 
 - dichas noticias son las que va a "parser" para extraer de ahí los titulares y así cargarlas a su sistema previamente hecho
 
-- el programa final será revisado con cita con el profesor a partir del 6 de setiembre
+- el programa final será revisado con cita a partir del 6 de setiembre
 
 - REST url a utilizar, https://newsapi.org/v2/everything?q=election&from=2023-08-18&sortBy=popularity&apiKey=xxxxxxx
+
+- a considerar para la revisión, si el estudiante no es capaz de explicar el código, se le rebajará 15 puntos
+
+- los estudiantes que obtegan menos de 70 en la nota final del caso deberán tener una reunión de consulta con el profesor
