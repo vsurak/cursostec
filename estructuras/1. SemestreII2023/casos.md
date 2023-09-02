@@ -51,7 +51,7 @@ cuando muestra los titulares, debe mostrar el número de posición de relevancia
 
 - dichas noticias son las que va a "parser" para extraer de ahí los titulares y así cargarlas a su sistema previamente hecho
 
-- el programa final será revisado con cita a partir del 6 de setiembre
+- el programa final será revisado con cita a partir del 7 de setiembre
 
 - REST url a utilizar, https://newsapi.org/v2/everything?q=election&from=2023-08-18&sortBy=popularity&apiKey=xxxxxxx
 
