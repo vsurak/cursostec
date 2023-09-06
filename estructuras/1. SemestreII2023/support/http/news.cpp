@@ -135,9 +135,11 @@ public:
 
 int main(void)
 {
+
     Newsapi newsapi;
 
     vector<News *> allrecords = newsapi.getRecords();
+
     cout << allrecords.at(0)->getTitle() << endl;
 
     return 0;
