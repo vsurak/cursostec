@@ -6,6 +6,7 @@ import java.awt.*;
 public class RodriWindow extends JFrame {
 	private JTextArea textArea;
 	private JButton button2;
+	private WindowPro ventanaPro;
 	
 	public RodriWindow() {
 		setTitle("Rodri Window caso #1");
@@ -51,6 +52,7 @@ public class RodriWindow extends JFrame {
         // Add onClick event listeners to the buttons
         button1.addActionListener(e -> decirHola());
         button2.addActionListener(e -> decirAdios());	
+        ventanaPro = new WindowPro();
     }
 	
 	public static void main(String args[]) {
@@ -62,6 +64,7 @@ public class RodriWindow extends JFrame {
 	
 	private void decirHola() {
 		textArea.setText("aqui va mi mensaje");
+		ventanaPro.setVisible(true);
 	}
 	
 	private void decirAdios() {
