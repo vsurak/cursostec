@@ -98,7 +98,7 @@ _type:_ individual
 
 _asignación de temas para caso #2_
 
-<img src="media/gruposcaso2.png" width=65% height=65%>
+<img src="media/gruposcaso.png" width=65% height=65%>
 
 como estudiante usted a selecciónado un tema de trabajo para el caso #2 el cual ha estudiado para entender como funciona, entre los aspectos más importantes que debe averiguar son:
 
