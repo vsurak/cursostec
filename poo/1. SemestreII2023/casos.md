@@ -120,6 +120,6 @@ luego de entender bien el problema, los sistemas y procesos, seleccione una pequ
 - resumen de lo que haría el sistema en máximo 3 párrafos
 - describa 3 procesos que haría su sistema, los 3 procesos deben estar vinculados entre ellos de alguna forma. deje claro que información va ingresar el usuario en cada proceso y que información debería salir resultado del proceso.
 
-para lo anterior se van a usar 30 minutos, posteriormente el profesor aleatoriamente por tema va a preguntar la definición hecha a uno de los estudiantes para ir aclarando la definición.
+enviarle al profesor por discord el link al documento, el lunes 11 de setiembre. luego de esto el profesor le dará retroalimentación de cambios a la documentación y durante la clase del miércoles se expondrán algunos casos.
 
 ---
