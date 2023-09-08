@@ -86,3 +86,40 @@ dado los requerimientos que deben cumplir los sistemas, organice un equipo de tr
 - 40 puntos serán para los subsistemas en forma individual y 20 puntos para la integración total de los 4 subsistemas
 
 ---
+
+# caso #2, diseño e implementación de sistema a la medida, 20%
+
+_instituto tecnológico de costa rica_, escuela de computación  
+_programación orientada a objetos_  
+_prof. rodrigo núñez_  
+_type:_ individual
+
+## descripción
+
+_asignación de temas para caso #2_
+
+<img src="media/gruposcaso2.png" width=65% height=65%>
+
+como estudiante usted a selecciónado un tema de trabajo para el caso #2 el cual ha estudiado para entender como funciona, entre los aspectos más importantes que debe averiguar son:
+
+1. que cosas actualmente existen con respecto a sistemas que se usen en ese tema
+2. qué dispositivos, aparatos o tecnologías están asociados al tema
+3. cómo están conectados a nivel nacional y como funcionan para el país
+4. qué procesos o procedimientos son usuales en esos sistemas humanos
+5. qué personas están involucradas, que ingresan y qué reciben
+6. que son los productos o cosas que entran o salen de los procesos
+7. qué unidades de medidas, cantidades, precios de cosas usualmente se dan en ese contexto
+8. existen edificios, localidades o tipos de areas donde sucede estos procesos
+9. existe en su tema asuntos de transporte, envío, comercialización
+10. busque ejemplos de como se le muestra a los usuarios la información usualmente en estos sistemas
+
+ahora proceda a crear un documento en la nube donde aparezca su nombre completo, el tema asignado y respuesta a todas las preguntas anteriores, puede usar copy paste de internet, usar imágenes, chatgpt, etc. para cuando aplica recuerde contextualizarlo para costa rica.
+
+luego de entender bien el problema, los sistemas y procesos, seleccione una pequeña parte para la cual usted le haría un sistema escriba en el documento:
+
+- resumen de lo que haría el sistema en máximo 3 párrafos
+- describa 3 procesos que haría su sistema, los 3 procesos deben estar vinculados entre ellos de alguna forma. deje claro que información va ingresar el usuario en cada proceso y que información debería salir resultado del proceso.
+
+para lo anterior se van a usar 30 minutos, posteriormente el profesor aleatoriamente por tema va a preguntar la definición hecha a uno de los estudiantes para ir aclarando la definición.
+
+---

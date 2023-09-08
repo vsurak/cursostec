@@ -18,3 +18,7 @@ con el tema asignado, proceda a investigar en que consisten esos procesos, tome 
 - programas o pantallas ejemplos o sitios ejemplos que sean a fin en el tema
 
 tenga esta información lista para conversarla con el grupo y para definición del caso #2 el viernes 8 de setiembre.
+
+3. nuevo tip relacionado a herencia, abstracción y polimorfismo
+
+4. trabajar la definición del caso #2 segun el enunciado de casos

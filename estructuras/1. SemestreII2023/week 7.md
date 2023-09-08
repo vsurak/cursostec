@@ -7,3 +7,5 @@
 https://1drv.ms/w/s!AhkFUQ-eTrzhi6t4Zxl5bS774XiMGA?e=XCGbPt
 
 una vez que ya tenga un contexto definido, proceda a investigar como funcionan esos contexto, busque imágenes, videos, explicaciones; tomando en cuenta detalles como la cantidad de personas activas en dicho contexto, que tipo de cosas ocurren en ese contexto, los pasos que se deben realizar para vivir toda la experiencia en ese contexto y tenga esa información lista para conversarla en clase y para el siguiente paso de definición del caso #2.
+
+3. el profesor va a explicar el concepto de pilas y colas, se va analizar el código en C para su implementación directa y también genérica.
