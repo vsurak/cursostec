@@ -3,25 +3,24 @@
 
 #include "lista.h"
 
-struct queue {
+struct queue
+{
     struct listadoble stackList;
 
-    bool isEmpty() {
+    bool isEmpty()
+    {
         return stackList.isEmpty();
     };
 
-    void enqueue(void* pElement) {
+    void enqueue(void *pElement)
+    {
         stackList.addToEnd(pElement);
     };
 
-    void* dequeue() {
-        if (!stackList.isEmpty()) {
-            return stackList.removeFirst();
-        } else {
-            return nullptr;
-        }
+    void *dequeue()
+    {
+        return stackList.removeFirst();
     }
-
 };
 
 #endif
