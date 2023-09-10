@@ -99,3 +99,42 @@ a) mínimo dos pilas y una cola
 b) mínimo dos colas y una pila
 
 una vez terminado el diagrama, una persona del grupo deberá enviarselo como imágen al profesor vía discord para recibir retroalimentación.
+
+## preliminar #1, 14 de setiembre, 20pts
+
+el objetivo de este preliminar es crear un acuerdo entre los grupos de trabajo y el profesor, dejando claro, evidenciado y documentado lo que va a consistir su caso 2, los entregables y el alcance del mismo. para ello proceda a crear el siguiente entregable usando la herramienta que mejor le convenga pero asegurándose de entregar un pdf final único con el punto #1, #2. luego el punto #3 como archivo json y finalmente el punto #4 como archivos .h . todo lo anterior deberán subirlo a un repositorio en git y enviar antes de media noche el link al profesor al correo vsurak@gmail.com .
+
+1. _diagrama de proceso:_ usando el diagrama borrador sobre el proceso que ya hizo y al que el profesor ya le dió observaciones, proceda a pasar dicho diagrama a limpio, usando el formato de diagramas de estado.
+
+https://medium.com/geekculture/how-to-create-a-state-diagram-110d709c2fc8
+
+https://www.youtube.com/watch?v=obLemkvbWr0
+
+2. agregue una descripción textual paso a paso al diagrama de tal forma que se identifiquen todos los procesos del sistema. deje claro los inputs de cada proceso y las salidas de cada proceso. tome en cuenta que los outputs de un proceso probablemente sean los inputs de otro.
+
+3. diseñe el json file de configuración de la simulación, dicho json debe asegurarse que incluya aspectos como
+
+   - tiempo escala de simulación
+   - rangos de cantidades para todo lo que sea configurable
+   - tiempos de ocurrencia de los eventos y su volúmen
+   - velocidad o rangos de velocidad de procesamiento de cada proceso o etapa
+   - listas o insumos de datos que sean casi aleatorios
+   - tiempo o porcentajes de volúmenes de ocurrencias de cosas, objetos, personas o eventos
+   - rangos de tiempos
+   - listas de productos, nombres, métricas entre otros que sean necesarios
+
+4. diseñe la lista de classes para implementar un simulador automático de los procesos en el diagrama anterior, para ello cree los .h necesarios en C++ que deje claro:
+
+<nombre de classe>
+<atributos con sus respectivos datatypes>
+<métodos con sus parámetros>
+
+por medio de comentarios en los .h deje claro:
+
+- aquellas que son listas, pilas y colas
+- los threads
+- las clases que ayudan a procesar la configuración del simulador
+- las clases o structs que sirven para guardar información
+- las clases que manejan la lógica y reglas de la simulación
+- la o las clases por las cuales se va poder saber lo que está pasando en la simulación
+- las alertas de problemas en la simulación que hacen que el proceso tenga deficiencias
