@@ -5,3 +5,8 @@
 2. preliminar #1 del caso #2
 
 ## actividades en clase
+
+1. dado un arreglo de enteros tal cual como [45, 12, 6, 8, 23, 9, 15...], cómo podría obtener el arreglo ordenado usando pilas.
+
+2. dada una expresión matemática que solo soporta +, -, _, / y números enteros positivos, donde todos los términos y operadores están separados por un espacio, cómo podría resolver la expresión fácilmente haciendo uso de pilas?
+   ej. _ 34 _ + 45 10 2 = 3740 , + / 400 10 _ 3 4 = 52
