@@ -3,6 +3,9 @@ package gui;
 import javax.swing.*;
 import java.awt.*;
 
+// escoge unos 6 componentes del helicoptero
+// le pones acciones como despegar y chequear estado
+
 public class RodriWindow extends JFrame {
 	private JTextArea textArea;
 	private JButton button2;
@@ -35,8 +38,8 @@ public class RodriWindow extends JFrame {
         // Add text area to the frame's content pane
         getContentPane().add(textArea);    
         
-        JButton button1 = new JButton("Hola");
-        button2 = new JButton("Adios");
+        JButton button1 = new JButton("Chequear");
+        button2 = new JButton("Reparar");
 
         // Define positions for the buttons
         button1.setBounds(40, 280, 100, 30);

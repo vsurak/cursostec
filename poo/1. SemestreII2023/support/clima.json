@@ -1,0 +1,10 @@
+{
+    "regiones" : ["zona norte", "pacifico central", "gam"],
+    "clima": {
+        "zona_norte" : {
+            "temperatura" : [20, 30],
+            "lluvia": 60,
+            "fecha": "14/09/2023"
+        }
+    }
+}

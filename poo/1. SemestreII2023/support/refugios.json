@@ -1,0 +1,9 @@
+{
+    "refugios" : [
+        {
+            "name" : "Refugio palo verde",
+            "fechacreacion" : "20/01/1995",
+            "ubicacion" : "Guanacaste"
+        }
+    ]
+}
