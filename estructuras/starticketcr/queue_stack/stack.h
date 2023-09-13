@@ -5,36 +5,40 @@
 #define STACK 1
 
 template <class T>
-class Stack {
-    private:
-        List<T>* stackList;
+class Stack
+{
+private:
+    List<T> *stackList;
 
+public:
+    Stack()
+    {
+        stackList = new List<T>();
+    }
 
-    public:
-        Stack() {
-            stackList = new List<T>();
-        }
+    void push(T *pData)
+    {
+        // insert en posicion 0
+    }
 
-        void push(T* pData) {
+    T *pop()
+    {
+        T *result = NULL;
+        // remove de la posicion 0
+        return result;
+    }
 
-        }
+    T *top()
+    {
+        T *result = NULL;
+        // get del primer elemento
+        return result;
+    }
 
-        T* pop() {
-            T* result = NULL;
-
-            return result;
-        }
-
-        T* top() {
-            T* result = NULL;
-
-            return result;
-        }
-
-        bool isEmpty() {
-            
-        }
+    bool isEmpty()
+    {
+        // retornar el isempty de la lista
+    }
 }
-
 
 #endif

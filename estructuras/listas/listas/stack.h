@@ -3,25 +3,24 @@
 
 #include "lista.h"
 
-struct stack {
+struct stack
+{
     struct listadoble stackList;
 
-    bool isEmpty() {
+    bool isEmpty()
+    {
         return stackList.isEmpty();
     };
 
-    void push(void* pElement) {
+    void push(void *pElement)
+    {
         stackList.addToBegining(pElement);
     };
 
-    void* pop() {
-        if (!stackList.isEmpty()) {
-            return stackList.removeFirst();
-        } else {
-            return nullptr;
-        }
+    void *pop()
+    {
+        return stackList.removeFirst();
     }
-
 };
 
 #endif

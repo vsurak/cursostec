@@ -1,0 +1,29 @@
+{
+    "tiempoSimulacionHora": 20000, // milliseconds
+    "minHora" : 20,
+    "maxHora" : 230,
+    "retencion" : 0.90, // retencion de gente para revision
+    "carcel" : 0.08,
+    "aduanapersonas": {
+        "minTiempo" : 20,
+        "maxTiempo" : 120
+    },
+    "aduanamaletas" : {
+        "minTiempo" : 3,
+        "maxTiempo" : 12
+    },
+    "lobbyEspera" : {
+        "minTiempo" : 20,
+        "maxTiempo" : 70
+    },
+    "equipaje" : {
+        "cantMinMaletas" : 1,
+        "cantMaximaLetas" : 5,
+        "cantMaletasPorVagon" : 20,
+        "cantidadVagones" : 7
+    },
+    "menu" : [
+        "hamburguesa" : [ "pan", "torta", "salsas", "tomate" ],
+        "casadoconbistek" : [ "arroz", "frijoles", "ensalada", "bistek" ],
+    ]
+}

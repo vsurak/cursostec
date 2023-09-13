@@ -100,9 +100,9 @@ b) mínimo dos colas y una pila
 
 una vez terminado el diagrama, una persona del grupo deberá enviarselo como imágen al profesor vía discord para recibir retroalimentación.
 
-## preliminar #1, 14 de setiembre, 20pts
+## preliminar #1, 17 de setiembre, 20pts
 
-el objetivo de este preliminar es crear un acuerdo entre los grupos de trabajo y el profesor, dejando claro, evidenciado y documentado lo que va a consistir su caso 2, los entregables y el alcance del mismo. para ello proceda a crear el siguiente entregable usando la herramienta que mejor le convenga pero asegurándose de entregar un pdf final único con el punto #1, #2. luego el punto #3 como archivo json y finalmente el punto #4 como archivos .h . todo lo anterior deberán subirlo a un repositorio en git y enviar antes de media noche el link al profesor al correo vsurak@gmail.com .
+el objetivo de este preliminar es crear un acuerdo entre los grupos de trabajo y el profesor, dejando claro, evidenciado y documentado lo que va a consistir su caso 2, los entregables y el alcance del mismo. para ello proceda a crear el siguiente entregable usando la herramienta que mejor le convenga pero asegurándose de entregar un pdf final único con el punto #1, #2. luego el punto #3 como archivo json y finalmente el punto #4 como archivos .h . todo lo anterior deberán subirlo a un repositorio en git, en un branch llamado "acuerdo" y enviar antes de media noche el link al profesor al correo vsurak@gmail.com .
 
 1. _diagrama de proceso:_ usando el diagrama borrador sobre el proceso que ya hizo y al que el profesor ya le dió observaciones, proceda a pasar dicho diagrama a limpio, usando el formato de diagramas de estado.
 

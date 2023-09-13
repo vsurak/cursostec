@@ -1,62 +1,75 @@
 #include <iostream>
 
-#ifndef NODE 
+#ifndef NODE
 
 #define NODE 1
 
 using namespace std;
 
 template <class T>
-class Node {
-    private:
-        T *data;
-        Node *next;
-        Node *previous;    //modificacion, agrego link hacia atras 
-    
-    public:
-        Node() {
-            data = NULL;
-            next = NULL;
-            previous = NULL;   //modif, creo previous y la hago null
-        }
+class Node
+{
+private:
+    T *data;
+    int priority;
+    Node *next;
+    Node *previous; // modificacion, agrego link hacia atras
 
-        Node(T *pData) {
-            this->data = pData;
-            next = NULL;
-            previous = NULL;  //modif, la pongo en null
-        }
+public:
+    Node()
+    {
+        data = NULL;
+        next = NULL;
+        priority = 0;
+        previous = NULL; // modif, creo previous y la hago null
+    }
 
-        T* getData() {
-            return data;
-        }
+    Node(T *pData)
+    {
+        this->data = pData;
+        next = NULL;
+        previous = NULL; // modif, la pongo en null
+    }
 
-        void setData(T *pData) {
-            this->data = pData;
-        }
+    T *getData()
+    {
+        return data;
+    }
 
-        Node* getNext() {
-            return next;
-        }
+    void setData(T *pData)
+    {
+        this->data = pData;
+    }
 
-        Node* getPrevious() {    //modif, creo este metodo que retorna
-            return previous;     //el previo
-        }
+    Node *getNext()
+    {
+        return next;
+    }
 
-        void setNext(Node *pValue) {
-            this->next = pValue;
-        }
+    Node *getPrevious()
+    {                    // modif, creo este metodo que retorna
+        return previous; // el previo
+    }
 
-        void setPrevious(Node *pValue) {   //modif, creo este metodo que
-            this->previous = pValue;       //pone valor al previo    
-        }
+    void setNext(Node *pValue)
+    {
+        this->next = pValue;
+    }
 
-        Node* getPrev() {    //modif, creo este metodo que retorna
-            return previous;     //el previo
-        }
+    void setPrevious(Node *pValue)
+    {                            // modif, creo este metodo que
+        this->previous = pValue; // pone valor al previo
+    }
 
-        void setPrev(Node *pValue) {   //modif, creo este metodo que
-            this->previous = pValue;       //pone valor al previo    
-        }
+    Node *getPrev()
+    {                    // modif, creo este metodo que retorna
+        return previous; // el previo
+    }
+
+    void setPrev(Node *pValue)
+    {                            // modif, creo este metodo que
+        this->previous = pValue; // pone valor al previo
+    }
 };
 
 #endif
