@@ -23,3 +23,24 @@ mandar el código por mensaje directo a discord.
 
 2. dada una expresión matemática que solo soporta +, -, _, / y números enteros positivos, donde todos los términos y operadores están separados por un espacio, cómo podría resolver la expresión fácilmente haciendo uso de pilas?
    ej. _ 34 _ + 45 10 2 = 3740 , + / 400 10 _ 3 4 = 52
+
+- 34 \* + 45 10 2
+- 34 \* 55 2
+- 34 110
+  3740
+
+notacion matematica
+prefija, no requiere priorizacion
+
+- - 20 13 8
+
+infija
+(20+13)\*8
+
+postfija
+8 13 20 + \*
+
+- / 400 10 \* 3 4 = 52
+- / 400 10 12
+- 40 12
+  52

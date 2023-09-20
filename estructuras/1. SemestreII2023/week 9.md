@@ -15,17 +15,22 @@ c. usted ya estudió sobre pilas y colas, en particular técnicas de evaluación
 
 se quiere lograr que el computador pueda armar una casa en orden y con sentido, como cuando una persona dice: "quiero una casa de 2 cuartos, sala , comedor, cocina, una gran terraza y desde ahí puedo saltar a la psicina"
 
-cuál podría ser una prueba de concepto hecha en C++, usando orientación a objetos, y la teoría estudiada, que demuestre que es posible diseñar estructuras de datos y reglas que finalmente logren armar una casa. que dicha prueba deje las bases para crear versiones más avanzadas de la maquinaria de construcción.
+cuál podría ser una prueba de concepto hecha en C++, usando orientación a objetos, y la teoría estudiada, que demuestre que es posible diseñar estructuras de datos y reglas que finalmente logren armar una casa. que dicha prueba deje las bases para crear versiones más avanzadas del algoritmo de construcción.
 
-para dicho POC puede utilizar listas y pilas ya implementadas y cualquier otra libería de C++/C. suba el prototipo hecho a un repositorio en GIT y agregue en el mismo un readme.md file para explicar los principios técnicos y estratégicos de su solución, así también el cómo hacer uso del programa.
+para dicho POC puede utilizar listas, colas y pilas ya implementadas y cualquier otra libería de C++/C. suba el prototipo hecho a un repositorio en GIT y agregue en el mismo un readme.md file para explicar los principios técnicos y estratégicos de su solución, así también el cómo hacer uso del programa.
 
-esto se puede realizar de forma individual o en parejas. enviar el link de repositorio al asistente fvsasistencia@gmail.com, subject: estructuras - poc casa lego, a más tardar el jueves 21 a media noche.
+esto se puede realizar de forma individual o en parejas. enviar el link de repositorio al asistente fvsasistencia@gmail.com, subject: estructuras - poc casa lego, a más tardar el jueves 21 a media noche. enviar en el correo los nombres de los integrantes.
 
-cabe recalcar que no se está pidiendo un parser de texto inteligente, ni tampoco nada de UI o componente visuales. se está pidiendo estructuras, reglas para definir la construcción y un engine de armado basado en los puntos a, b, c.
+cabe recalcar que NO se está pidiendo un parser de texto inteligente, NI tampoco nada de UI o componente visuales. se está pidiendo estructuras, reglas para definir la construcción y un engine de armado basado en los puntos a, b, c. cuando hablamos de que el engine debe construir con sentido, es por ejemplo, que el techo no se haga antes que las paredes, o que las paredes no se hagan antes de los cimientos , o bien que quiera poner una puerta sin pared...
+
+puede que sea importante saber la cantidad de piezas de lego por tipo con las que se cuenta, pero no necesariamente.
 
 ## actividades en clase
 
 1. revisar y repasar los ejercicios de la semana 8
+   stephanie sandoval
+   sebastian guillen
+   maria angel
 
 2. proceda a leer de "Guía de Curso - Algoritmos y Estructuras de Datos - 10-06-2018.pdf", el punto 8.1
 
