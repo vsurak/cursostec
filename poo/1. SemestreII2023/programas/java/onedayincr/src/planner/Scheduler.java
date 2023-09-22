@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import ticos.Person;
 import ticos.Worker;
 
-public class Scheduler {
+public class Scheduler implements AutoCloseable {
 	
 	private ArrayList<Task> tasks;
 	private ArrayList<Person> ticos;
@@ -28,4 +28,11 @@ public class Scheduler {
 			}			
 		}
 	}
+
+	@Override
+	public void close() throws Exception {
+		tasks.clear();
+		ticos.clear();
+	}
+	
 }

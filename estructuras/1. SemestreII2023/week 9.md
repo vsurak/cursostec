@@ -36,7 +36,22 @@ puede que sea importante saber la cantidad de piezas de lego por tipo con las qu
 
 3. cuando termine, escriba en el canal general en discord algo del mundo real, del mundo abstracto o algo existente en el mundo del software que usted considere que puede modelarse por medio de árboles. evite que sea algo que ya otro compañero haya escrito.
 
-4. practique el balanceo de árboles con los siguientes casos:
+4. ver algunas soluciones del ejercicio de las lecturas
+
+5. en grupos estudiar y exponer las siguientes incognitas
+
+- camino de un árbol y su longitud
+- cómo sacar la altura de un árbol
+- cómo saber el nivel y la altura al que está un nodo
+- fórmula de árbol equilibrado y perfectamente equilibrado
+- fórmulas para saber cuántos nodos tiene un árbol
+- cómo insertar en un árbol de busqueda binaria
+- como hacer una búsqueda en un árbol de búsqueda binaria
+- qué es un árbol de expresiones
+- cómo se recorre un árbol binario
+- qué operaciones y cómo funcionan las que debe tener el TAD árbol
+
+6. practique el balanceo de árboles con los siguientes casos:
 
 - [8, 12, 65, 33, 9]
 - [90, 1, 130, 12, 10]
@@ -47,5 +62,8 @@ puede que sea importante saber la cantidad de piezas de lego por tipo con las qu
 
 el último, en forma individual, haga el dibujo donde se vea paso a paso los inserts y las rotaciones, envíe dicho dibujo en un mensaje directo al profesor para su evaluación.
 
-5. cómo podría ser la declaración de clase nodo para un AVL y el prototipo del TAD ArbolAVL para
+7. cómo podría ser la declaración de clase nodo para un AVL y el prototipo del TAD ArbolAVL para
    C++, Java, C#, JavaScript, TypeScript y Rust. Esta definición se va a exponer al final de la clase.
+
+- tuvimos a Maria Angel ausente solo conectada
+-
