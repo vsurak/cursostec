@@ -133,3 +133,23 @@ durante la semana va a recibir retroalimentación para terminar de afinar el alc
 2. diseño de las ventanas del sistema; para ello implemente en java todas las ventanas que va a necesitar su sistema, es importante que tenga claro lo que su sistema va hacer y como va a funcionar para diseñar dichas pantallas. se recomienda buscar en internet pantallas similares. utilice como insumo los procesos que haya concordado a implementar con el profesor. internamente en el código, a modo comentarios, pegue el acuerdo del proceso de dicha pantalla, aprobado en conjunto con el profesor, el cual discutieron en discord como versión final.
 
 entregable: cree un repo para su proyeto y un branch que se llame "acuerdo", suba un pdf con el punto #1, garantice que la calidad de la resolución permita leerlo adecuadamente. suba los .java de su gui al mismo repo y en un folder que se llame "wireframes" suba screenshots de las pantallas hechas. deben haber tantos screnshots como ventanas java implementadas. envíe un correo al profesor con copia al asistente, con el link del repositorio antes de media noche. fvsasistencia@gmail.com, subject: poo - caso #2 - preliminar #1, el correo del profesor vsurak@gmail.com
+
+# entregable #2, primer etapa de implementación, jueves 5 de octubre, 30pts
+
+1. para realizar este preliminar debe contar con un diseño de clases y de ventanas aprobado por el profesor. en el caso de que haya obtenido menos de 20 puntos en el preliminar #1, no se puede considerar que su diseño y ventanas está aprobado.
+
+2. el profesor le dará una cita de consulta para hacer un chequeo del avance hecho cuando ya haya avanzado en este preliminar
+
+3. usted va a definir el alcance de este entregable, para ello el profesor va a hacer una dinámica en clase para que usted defina cual va a ser su estrategia de abordaje de la programación de este sistema. dicha estrategia deberá escribirsela al profesor en prosa vía discord. usted decide la estrategia que más se adecue a su sistema y lo que quiere resolver en el sistema, de tal forma que pueda atacar inicialmente aquello que considere más importante para el éxito de su programa. aun así a continuar aparecen 3 ejemplos de estrategias que puede usar o basarse en ellas para definir la suya:
+
+   - ejemplo estrategia A: voy a implementar primero las ventanas con sus controllers usando datos de prueba hardcoded, esto porque quiero estar 100% seguro de que cuales son las entradas y salidas que deben estar en todo el sistema, esto para que en el último entregable todas mis clases se ajusten bien a la información de las pantallas.
+
+   - ejemplo estrategia B: tengo muchas dudas del json, voy a implementar la carga del json y los hilos de ejecución de forma que el programa logre extraer esa data y generar información usando los parámetros de los json, imprimiendo todo eso en consola, así dejo para el final todo lo que son pantallas y las otras clases que las puedo implementar más fácilmente pues lo veo más simple.
+
+   - ejemplo estrategia C: voy a implementar los controllers y las clases de mi modelo completas de tal forma que desde el controlador con un main yo pueda verificar que todo funciona correctamente y con sentido. Para ya al final solo hacer pantallas que es más sencillo y así tengo menos riesgo por si me dejan más trabajo en otro curso.
+
+4. una vez con la estrategia establecida, comuníquesela al profesor vía discord y ahora contará hasta el 5 de octubre para hacer commit de la implementación que usted acordó entregar en esta estrategia. en la clase principal donde tenga el main de inicio del programa, copie a modo commentario el acuerdo de lo que hace su sistema al que llegó con el profesor para el preliinar #1 y también la estrategia que acordó con el profesor en este entregable #2.
+
+5. la revisión será con cita, se evaluará completitud de la estrategia definida, diseño de clases, calidad de código, orientación a objetos, modularidad, herencia, polimorfismo, encapsulamiento.
+
+6. nuevamente tendrá hasta la media noche del 5 de octubre para el commit de este preliminar, la revisión será con cita.

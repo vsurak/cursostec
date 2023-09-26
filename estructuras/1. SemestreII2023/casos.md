@@ -138,3 +138,15 @@ por medio de comentarios en los .h deje claro:
 - las clases que manejan la lógica y reglas de la simulación
 - la o las clases por las cuales se va poder saber lo que está pasando en la simulación
 - las alertas de problemas en la simulación que hacen que el proceso tenga deficiencias
+
+## preliminar #2, 8 de octubre, 30pts
+
+1. para realizar el preliminar #2 del caso #2, deberá haber tenido aprobado las classes prototipo (.h) del preliminar #1, si usted obtuvo menos de 15 puntos entonces muy probablemente sus clases aún no están aprobadas y deberá obtener dicha aprobación haciendo los arreglos respectivos y presentando eso al profesor para el visto bueno.
+
+2. usando el diagrama de procesos que entregó en el preliminar #1, marque usando algún indicador o color, que es lo que va a implementar de su simulador en este segundo entregable, tome en cuenta que falta un entregable final de 50pts.
+
+3. envíe al profesor vía discord, el diagrama actualizado con las marcas que lo que va a implementar en este entregable #2. código ya existente como el de listas, pilas y colas, queda exhento de esta declaración de alcance. es decir, no es válido decir que va implementar las listas, pilas y colas.
+
+4. proceda a implementar el programa en C++ basados en dicho alcance, el cuál deberá hacer commit a más tardar el domingo 8 a la media noche, la revisión será con cita. será válido exceder el alcance pactado durante la implementación, pero siempre se evaluará solo el alcance acordado.
+
+5.
