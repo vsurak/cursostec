@@ -141,7 +141,7 @@ por medio de comentarios en los .h deje claro:
 
 ## preliminar #2, 8 de octubre, 30pts
 
-1. para realizar el preliminar #2 del caso #2, deberá haber tenido aprobado las classes prototipo (.h) del preliminar #1, si usted obtuvo menos de 15 puntos entonces muy probablemente sus clases aún no están aprobadas y deberá obtener dicha aprobación haciendo los arreglos respectivos y presentando eso al profesor para el visto bueno.
+1. para realizar el preliminar #2 del caso #2, deberá haber tenido aprobado las classes prototipo (.h) del preliminar #1, si usted obtuvo menos de 15 puntos entonces muy probablemente sus clases aún no están aprobadas y deberá obtener dicha aprobación haciendo los arreglos respectivos y presentando eso al profesor para el visto bueno. obtenga dicho visto bueno a más tardar el viernes 29 por la noche.
 
 2. usando el diagrama de procesos que entregó en el preliminar #1, marque usando algún indicador o color, que es lo que va a implementar de su simulador en este segundo entregable, tome en cuenta que falta un entregable final de 50pts.
 
