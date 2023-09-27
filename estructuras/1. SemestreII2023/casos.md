@@ -143,7 +143,7 @@ por medio de comentarios en los .h deje claro:
 
 1. para realizar el preliminar #2 del caso #2, deberá haber tenido aprobado las classes prototipo (.h) del preliminar #1, si usted obtuvo menos de 15 puntos entonces muy probablemente sus clases aún no están aprobadas y deberá obtener dicha aprobación haciendo los arreglos respectivos y presentando eso al profesor para el visto bueno. obtenga dicho visto bueno a más tardar el viernes 29 por la noche.
 
-2. usando el diagrama de procesos que entregó en el preliminar #1, marque usando algún indicador o color, que es lo que va a implementar de su simulador en este segundo entregable, tome en cuenta que falta un entregable final de 50pts.
+2. usando el diagrama de procesos que entregó en el preliminar #1, marque usando algún indicador o color, que es lo que va a implementar de su simulador en este segundo entregable, tome en cuenta que falta un entregable final de 50pts, de una duración de una semana.
 
 3. envíe al profesor vía discord, el diagrama actualizado con las marcas que lo que va a implementar en este entregable #2. código ya existente como el de listas, pilas y colas, queda exhento de esta declaración de alcance. es decir, no es válido decir que va implementar las listas, pilas y colas.
 
