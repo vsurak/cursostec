@@ -16,6 +16,7 @@
 - qué es un árbol de expresiones
 - cómo se recorre un árbol binario
 - qué operaciones y cómo funcionan las que debe tener el TAD árbol
+- determinación del factor de carga al momento de insertar en un AVL
 
 2. cómo podría ser la declaración de la clase nodo para un árbol de búsqueda binaria y el prototipo del TAD, para los lenguages C++, Java, C#, JavaScript, TypeScript y Rust. Establezca razones del por qué la implementación de este árbol bajo la declaración en el lenguaje asignado, resulta mejor comparada con alguo de los otros lenguajes que no se le asignó.
 

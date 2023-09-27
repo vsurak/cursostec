@@ -136,7 +136,7 @@ entregable: cree un repo para su proyeto y un branch que se llame "acuerdo", sub
 
 # entregable #2, primer etapa de implementación, jueves 5 de octubre, 30pts
 
-1. para realizar este preliminar debe contar con un diseño de clases y de ventanas aprobado por el profesor. en el caso de que haya obtenido menos de 20 puntos en el preliminar #1, no se puede considerar que su diseño y ventanas está aprobado.
+1. para realizar este preliminar debe contar con un diseño de clases y de ventanas aprobado por el profesor. en el caso de que haya obtenido menos de 20 puntos en el preliminar #1, no se puede considerar que su diseño y ventanas está aprobado. debe tener este visto bueno para más tardar el domingo 1ro de octubre.
 
 2. el profesor le dará una cita de consulta para hacer un chequeo del avance hecho cuando ya haya avanzado en este preliminar
 
@@ -148,7 +148,7 @@ entregable: cree un repo para su proyeto y un branch que se llame "acuerdo", sub
 
    - ejemplo estrategia C: voy a implementar los controllers y las clases de mi modelo completas de tal forma que desde el controlador con un main yo pueda verificar que todo funciona correctamente y con sentido. Para ya al final solo hacer pantallas que es más sencillo y así tengo menos riesgo por si me dejan más trabajo en otro curso.
 
-4. una vez con la estrategia establecida, comuníquesela al profesor vía discord y ahora contará hasta el 5 de octubre para hacer commit de la implementación que usted acordó entregar en esta estrategia. en la clase principal donde tenga el main de inicio del programa, copie a modo commentario el acuerdo de lo que hace su sistema al que llegó con el profesor para el preliinar #1 y también la estrategia que acordó con el profesor en este entregable #2.
+4. una vez con la estrategia establecida, comuníquesela al profesor vía discord y ahora contará hasta el 5 de octubre para hacer commit de la implementación que usted acordó entregar en esta estrategia. en la clase principal donde tenga el main de inicio del programa, copie a modo commentario el acuerdo de lo que hace su sistema al que llegó con el profesor para el preliminar #1 y también la estrategia que acordó con el profesor en este entregable #2.
 
 5. la revisión será con cita, se evaluará completitud de la estrategia definida, diseño de clases, calidad de código, orientación a objetos, modularidad, herencia, polimorfismo, encapsulamiento.
 
