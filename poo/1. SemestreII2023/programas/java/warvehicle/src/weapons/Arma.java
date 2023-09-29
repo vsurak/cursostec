@@ -30,6 +30,16 @@ public class Arma {
 			System.out.println("Weapon "+name+" NO HAY CARGA O ESTA CON SEGURO");
 		}
 	}
+
+	public void disparar(int pCantidadDeTiros) {
+	}
+
+	public void disparar(int pTiros, double pDistancia) {
+	}
+
+	public void disparar(double pDistancia, int pTiros) {
+	}
+
 	
 	public void asegurar()  {
 		locked = true;
