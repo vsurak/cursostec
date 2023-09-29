@@ -1,0 +1,89 @@
+{
+    "tiempoSimulacionHora": 20000, 
+    "minHora" : 11,
+    "maxHora" : 21,
+    "ventanasParaPedido" : 5, 
+    "velocidadParaAtender" : "ventanasParaPedido", 
+    "ventanasParaRetirar" : 2,
+    "velocidadParaRetirar" : "ventanasParaPedido",
+    "cantMaximaporVentana": 10,
+    "menu" : {
+        "comidas": {
+          "hamburguesa": ["pan", "carne de res", "lechuga", "tomate", "queso"],
+          "hotdog": ["pan de hotdog", "salchicha", "cebolla", "mostaza", "ketchup"],
+          "pizza": ["masa de pizza", "salsa de tomate", "queso", "pepperoni", "aceitunas"],
+          "pollo frito": ["pollo", "especias",  "salsa BBQ","salsa bufalo"],
+          "tacos": ["tortillas de maíz", "carne de cerdo", "cebolla", "cilantro", "limón"],
+          "papas fritas": ["papas","especias"]
+        },
+        "refrescos": {
+          "cocacola": ["lata", "hielo"],
+          "limonada": ["limón", "agua", "azúcar"],
+          "refresco de naranja": ["vaso", "hielo", "refresco de naranja"],
+          "té helado": ["vaso", "hielo", "té"],
+          "batido de chocolate": ["vaso", "leche", "chocolate en polvo", "azúcar", "helado de vainilla"]
+        },
+        "postres": {
+          "helado de fresa": ["cono", "helado de fresa", "toppings"],
+          "pastel de chocolate": ["porción de pastel", "chocolate", "crema"],
+          "galletas": ["galletas de chocolate", "galletas de avena", "galletas de mantequilla"],
+          "brownie": ["brownie", "nueces", "helado de vainilla"],
+          "tarta de manzana": ["porción de tarta de manzana", "manzanas", "canela"]
+        }
+    },
+    "inventario": {
+        "pila_comidas": {
+            "pan": 10,
+            "carne de res": 10,
+            "lechuga": 10,
+            "tomate": 10,
+            "queso": 10,
+            "salchicha": 10,
+            "cebolla": 10,
+            "mostaza": 10,
+            "ketchup": 10,
+            "masa de pizza": 10,
+            "salsa de tomate": 10,
+            "pepperoni": 10,
+            "aceitunas": 10,
+            "pollo": 10,
+            "salsa BBQ": 10,
+            "salsa bufalo": 10,
+            "especias": 10,
+            "papas": 10,
+            "salsa de ajo": 10,
+            "tortillas de maíz": 10,
+            "carne de cerdo": 10,
+            "cilantro": 10,
+            "limón": 10
+    },
+    "pila_refrescos": {
+        "lata": 10,
+        "hielo": 10,
+        "vaso": 10,
+        "refresco de naranja": 10,
+        "té": 10,
+        "leche": 10,
+        "chocolate en polvo": 10,
+        "azúcar": 10,
+        "helado de vainilla": 10
+    },
+    "pila_postres": {
+        "cono": 10,
+        "helado de fresa": 10,
+        "toppings": 10,
+        "porción de pastel": 10,
+        "chocolate": 10,
+        "crema": 10,
+        "galletas de chocolate": 10,
+        "galletas de avena": 10,
+        "galletas de mantequilla": 10,
+        "brownie": 10,
+        "nueces": 10,
+        "porción de tarta de manzana": 10,
+        "manzanas": 10,
+        "canela": 10
+    }
+  }
+    
+}

@@ -12,6 +12,7 @@ public class Scheduler implements AutoCloseable {
 	
 	public Scheduler() {
 		
+		
 		ticos = new ArrayList<Person>();
 		
 		Worker w1 = new Worker();

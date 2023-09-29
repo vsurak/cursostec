@@ -2,6 +2,10 @@ package ticos;
 
 public class Worker extends Person {
 
+	public Worker() {
+		super();
+	}
+	
 	@Override
 	protected void loadMyTasks() {
 		tasks.add("levantarse");

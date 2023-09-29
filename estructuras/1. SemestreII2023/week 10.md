@@ -6,19 +6,20 @@
 
 1. en grupos estudiar y exponer las siguientes incognitas
 
-- camino de un árbol y su longitud
-- cómo sacar la altura de un árbol
-- cómo saber el nivel y la altura al que está un nodo
-- fórmula de árbol equilibrado y perfectamente equilibrado
-- fórmulas para saber cuántos nodos tiene un árbol
-- cómo insertar en un árbol de busqueda binaria
-- como hacer una búsqueda en un árbol de búsqueda binaria
+- camino de un árbol y su longitud, done
+- cómo sacar la altura de un árbol, done
+- cómo saber el nivel y la altura al que está un nodo, done
+- fórmula de árbol equilibrado y perfectamente equilibrado, done
+- fórmulas para saber cuántos nodos tiene un árbol, done
+- cómo insertar en un árbol de busqueda binaria, done
+- como hacer una búsqueda en un árbol de búsqueda binaria, done
+- qué operaciones y cómo funcionan las que debe tener el TAD árbol
 - qué es un árbol de expresiones
 - cómo se recorre un árbol binario
-- qué operaciones y cómo funcionan las que debe tener el TAD árbol
+
 - determinación del factor de carga al momento de insertar en un AVL
 
-2. cómo podría ser la declaración de la clase nodo para un árbol de búsqueda binaria y el prototipo del TAD, para los lenguages C++, Java, C#, JavaScript, TypeScript y Rust. Establezca razones del por qué la implementación de este árbol bajo la declaración en el lenguaje asignado, resulta mejor comparada con alguo de los otros lenguajes que no se le asignó.
+2. cómo podría ser la declaración de la clase nodo para un árbol de búsqueda binaria y el prototipo del TAD, tome en cuenta que el nodo pueda guardar cualquier cosa, y puede ser bueno tener un puntero de los nodos al padre. Averigue para los lenguages C++, Java, C#, JavaScript, TypeScript y Rust. Establezca razones del por qué la implementación de este árbol bajo la declaración en el lenguaje asignado, resulta mejor comparada con alguo de los otros lenguajes que no se le asignó.
 
 3. abordar los árboles AVL y sus rotaciones
 

@@ -6,7 +6,7 @@
 
 1. exceptions, sobre carga de operadores, static
 
-2. debate de diseño, el profesor escogerá 3 diseños aleatorios. cada estudiante seleccionado va a compartir su diseño y una correción de las dadas en la revisión. se procederá a debatir la técnica de diseño para argumentar la correctitud del mismo y sus posibles mejoras, aquella corrección que genere más discusión y debate, tendrá al final 5pts extras en el caso #2.
+2. el profesor va a examinar y discutir ejemplos de diseños de objetos con el objetivo de provocar mejoras.
 
 3. hacer el ejercicio para enmarcar el preliminar #2 del caso #2
 
