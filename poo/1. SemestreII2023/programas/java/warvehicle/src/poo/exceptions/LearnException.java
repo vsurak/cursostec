@@ -3,8 +3,12 @@ package poo.exceptions;
 public class LearnException {
 
 	
+	/*
+	 * Esta funcion retorna la division acumulada de pRoot por los valores en pValues
+	 * Si pValues se hace cero vacío retorna -1
+	 */
 	public static long calcularDivisionAcumulada(int[] pValues, long pRoot) {
-		long result = 0;
+		long result = -1;
 		try {
 			// este fragmento de código es propenso a producir exceptions			
 			for(int value : pValues) {
@@ -12,6 +16,7 @@ public class LearnException {
 				pRoot = result;
 			}			
 		} catch (Exception ex) {
+			result = -1;
 			ex.printStackTrace();
 		}
 		

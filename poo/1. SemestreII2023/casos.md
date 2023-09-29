@@ -140,7 +140,7 @@ entregable: cree un repo para su proyeto y un branch que se llame "acuerdo", sub
 
 2. el profesor le dará una cita de consulta para hacer un chequeo del avance hecho cuando ya haya avanzado en este preliminar
 
-3. usted va a definir el alcance de este entregable, para ello el profesor va a hacer una dinámica en clase para que usted defina cual va a ser su estrategia de abordaje de la programación de este sistema. dicha estrategia deberá escribirsela al profesor en prosa vía discord. usted decide la estrategia que más se adecue a su sistema y lo que quiere resolver en el sistema, de tal forma que pueda atacar inicialmente aquello que considere más importante para el éxito de su programa. aun así a continuar aparecen 3 ejemplos de estrategias que puede usar o basarse en ellas para definir la suya:
+3. usted va a definir el alcance de este entregable, dicha estrategia deberá escribirsela al profesor en prosa vía discord. usted decide la estrategia que más se adecue a su sistema y lo que quiere resolver en el sistema, de tal forma que pueda atacar inicialmente aquello que considere más importante para el éxito de su programa. aun así a continuar aparecen 3 ejemplos de estrategias que puede usar o basarse en ellas para definir la suya:
 
    - ejemplo estrategia A: voy a implementar primero las ventanas con sus controllers usando datos de prueba hardcoded, esto porque quiero estar 100% seguro de que cuales son las entradas y salidas que deben estar en todo el sistema, esto para que en el último entregable todas mis clases se ajusten bien a la información de las pantallas.
 
@@ -153,3 +153,5 @@ entregable: cree un repo para su proyeto y un branch que se llame "acuerdo", sub
 5. la revisión será con cita, se evaluará completitud de la estrategia definida, diseño de clases, calidad de código, orientación a objetos, modularidad, herencia, polimorfismo, encapsulamiento.
 
 6. nuevamente tendrá hasta la media noche del 5 de octubre para el commit de este preliminar, la revisión será con cita.
+
+7. tome en cuenta que para el entregable final contará aproximadamente entre 6 a 9 días.
