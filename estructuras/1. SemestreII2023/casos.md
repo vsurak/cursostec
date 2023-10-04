@@ -149,4 +149,22 @@ por medio de comentarios en los .h deje claro:
 
 4. proceda a implementar el programa en C++ basados en dicho alcance, el cuál deberá hacer commit a más tardar el domingo 8 a la media noche, la revisión será con cita. será válido exceder el alcance pactado durante la implementación, pero siempre se evaluará solo el alcance acordado.
 
-5.
+## entrega final, 15 de octubre, 50pts
+
+1. para este entregable ya usted cuenta con la revisión del entregable #2 hecha con el profesor, del cual pudieron haber salido diversas correciones
+
+2. proceda a aplicar las correciones mencionadas y seguidamente a terminar al 100% los demás procesos de su simulador para que este pueda efectivamente ejecutarse en forma indefinida.
+
+3. durante la revisión el profesor correrá el simulador con diversas configuraciones en el json buscando crear tamaños más grandes, mayores tiempos de espera, saturación de funciones en el tiempo, según así lo permita la configuración de la simulación.
+
+4. deberá imprimir en consola las siguientes métricas:
+
+   a. items ingresando, esto es cantidad de personas, ordenes, materiales, flores, etc en fin de lo que sea que se trate su simulador debe existir un item central, el cual debe poderser ver en todo momento cuántos hay en el sistema durante la simulación
+
+   b. cola <nombre>, cantidad de items y tiempo promedio de espera en cola. para todas las colas de su simulador, imprima el nombre de la cola, la cantidad de items que tiene adentro y un promedio de cuánto tiempo están durando esos items en ser sacados de la cola.
+
+   c. pila <nombre>, cantidad de items y tiempo promedio dentro de la pila. para todas las pilas de su simulador, imprima el nombre de la pila, la cantidad de items que tiene adentro y un promedio de cuánto tiempo están durando esos items en ser sacados de la pila.
+
+5. durante la revisión se evaluará calidad de código, diseño de las clases, dominio de C++ y su orientación a objetos, comprensión de todos los algoritmos y procesos por parte de ambos miembros del grupo.
+
+6. la revisión será con cita
