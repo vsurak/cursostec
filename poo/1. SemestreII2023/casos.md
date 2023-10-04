@@ -155,3 +155,13 @@ entregable: cree un repo para su proyeto y un branch que se llame "acuerdo", sub
 6. nuevamente tendrá hasta la media noche del 5 de octubre para el commit de este preliminar, la revisión será con cita.
 
 7. tome en cuenta que para el entregable final contará aproximadamente entre 6 a 9 días.
+
+# entregable final, segunda etapa de implementación, jueves 12 de octubre, 40pts
+
+1. para este entregable usted ya debió haber hecho la entrega #2 basado en una estrategia de trabajo
+
+2. tuvo una revisión con su profesor del cual pudieron salir mejoras que debe aplicar a su programa
+
+3. termine de implementar el sistema para completarlo según lo acordado cubriendo con este el 100% del scope
+
+4. se calificará en esta revisión, calidad de código, nombres de clases, modularidad, definición de clases y sus responsabilidades, la ejecución correcta del programa y la persistencia de la información.
