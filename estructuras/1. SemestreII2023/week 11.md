@@ -6,10 +6,10 @@
 
 1. en grupos estudiar y exponer las siguientes incognitas
 
-- qué operaciones y cómo funcionan las que debe tener el TAD árbol
-- qué es un árbol de expresiones
-- cómo se recorre un árbol binario
-- determinación del factor de carga al momento de insertar en un AVL
+- qué operaciones y cómo funcionan las que debe tener el TAD árbol, done
+- qué es un árbol de expresiones, done
+- cómo se recorre un árbol binario, done
+- determinación del factor de carga al momento de insertar en un AVL, done
 
 2. revisar las implementaciones de la clase nodo en diversos lenguajes
 
@@ -24,4 +24,4 @@
 - [67, 32, 8, 87, 12, 90, 10, 115]
 - [17, 99, 63, 21, 44, 2, 6, 55, 38, 115, 1]
 
-el último, en forma individual, proceda a crearlo y haga el dibujo donde se vea paso a paso los inserts y las rotaciones. luego al final, proceda a dibujar paso a paso como sería el borrado de la llave 99 y 6. envíe dicho dibujo paso a paso al asistente con subject: "ejercicio avl", to: fvsasistencia@gmail.com
+el último, en forma individual, proceda a crearlo y haga el dibujo donde se vea paso a paso los inserts y las rotaciones. luego al final, proceda a dibujar paso a paso como sería el borrado de la llave 99 y 6. envíe dicho dibujo paso a paso al asistente con subject: "ejercicio avl", to: fvsasistencia@gmail.com, hoy 4 de octubre antes de media noche.
