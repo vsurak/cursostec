@@ -168,3 +168,54 @@ por medio de comentarios en los .h deje claro:
 5. durante la revisión se evaluará calidad de código, diseño de las clases, dominio de C++ y su orientación a objetos, comprensión de todos los algoritmos y procesos por parte de ambos miembros del grupo.
 
 6. la revisión será con cita
+
+# caso #3, the smart book reader, 25%
+
+_instituto tecnológico de costa rica_, escuela de computación  
+_estructuras de datos_  
+_prof. rodrigo núñez_  
+_type:_ groups of two
+
+## descripción
+
+una organización sin fines de lucro posee una basta colección de libros en formato txt. la organización quiere poder darle a las comunidades acceso a esos libros, sin embargo, dado que el formato txt no es sencillo de navegar, y además el uso que le podrían dar es más consultivo y citativo, quieren poder ofrecer un portal mucho más inteligente para que las personas comunes puedan hacer indagaciones puntuales sobre los libros.
+
+la organización tiene la teoría de que las personas quieren indagar temas, inspirarse, ver frases, engancharse con pequeñas partes del libro, no leer libros completos. entonces en su idealización están imaginando que las personas ingresan a un portal web donde pueden por medio de una escritura en libre en free text, obtener fragmentos y análisis de los libros disponibles.
+
+<img src="media/searchbar.png" width=65% height=65%>
+
+con ello, el resultado esperado es que el sistema haga la búsqueda sobre toda la biblioteca de libros y encuentre párrafos, episodios o frases que se acerquen a la idea o inspiración de la persona, y que así encuentre lo que anda buscando o incluso llegue a sentir el deseo de leer el libro completo.
+
+los encargados del proyecto en la organización han especificado que luego de hacer una búsqueda ellos quieren poder ver en los resultados de búsqueda lo siguiente:
+
+- el nombre del libro y su autor
+- un extracto de un párrafo del libro que evoca a la frase de búsqueda
+- el número de página donde se extrajo el párrafo o sección
+- el sentimiento de la frase: negativo, positivo, neutro, misterioso, novela, fantasía
+- una imagen o ícono que ilustre el texto extraído
+
+como restricción, quieren que el sistema solo retorne el top 3 de los matches por libro y que retorne los resultados del top 10 de los libros, es decir, que máximo retornaría 30 resultados en caso de encontrar match.
+
+para efectos de crear el sistema se cuentan con varios recursos:
+
+a) la biblioteca de libros (hay que crear dicha biblioteca bajando libros de alguna fuente, como por ejemplo https://www.ebooksread.com/ o similar)
+
+b) un catálogo de sustantivos importantes accesibles por medio de un api https://github.com/dulldesk/words-api , existen otras similares
+
+c) maneras de encontrar sinónimos y palabras relaciondas por medio de un api, https://www.wordsapi.com/
+
+d) inteligencias artificiales que pueden generar imágenes por medio de prompts o bien searches de íconos o palabras por api, como por ejemplo https://thenounproject.com/search/photos/?q=lights
+
+e) modelos pre entrenados para análisis de sentimiento en texto como por ejemplo chatgpt y su api https://platform.openai.com/docs/guides/gpt/chat-completions-api
+
+f) otros recursos disponibles gratis en el internet
+
+## preliminar #1, descomposición de la frase e indexación de libros
+
+1. uno de los primeros retos es extraer aquello que sea realmente importante en la frase dada por el usuario, eliminar palabras repetidas y enfocarse en sustantivos y talvez algunos adjetivos. para ello puede ser necesario una cache de palabras la cual podría implementarse fácilmente por medio de hashtables
+
+2. usando árboles AVL, hashtables y rankings, cree un sistema de indexación para los libros, de tal forma que dado la frase del usuario, se sepa una aproximación inicial de cuáles libros de la biblioteca vale la pena analizar, y que además permita llegar al archivo, sus índices y contenido rápidamente.
+
+3. cree su biblioteca de libros con al menos 30 libros, dejándolos guardados en un folder.
+
+4. implemente estas estructuras y algoritmos en C++
