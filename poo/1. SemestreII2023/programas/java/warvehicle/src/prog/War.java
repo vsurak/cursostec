@@ -1,6 +1,9 @@
 package prog;
 
 import weapons.*;
+
+import java.lang.reflect.Method;
+
 import vehicles.*;
 
 public class War {
@@ -56,5 +59,25 @@ public class War {
 		manager.prepararVehiculo();
 		manager.combatir();
 		
+		
+		System.out.println("=======using reflexion==========");
+		Arco prueba = new Arco();
+		// reflexion se conoce como una técnica de orientación a objetos para explorar
+		// lo que tiene un objeto o una instancia adentro segun su clase en forma 
+		// dinámica
+		System.out.println(prueba.getClass());
+		
+		for(Method m : prueba.getClass().getDeclaredMethods()) {
+			System.out.println(m.getName());
+		}
+		try {
+			Object otroobj = Class.forName("weapons.Arco").getDeclaredConstructor().newInstance();
+			Arco otro = (Arco)otroobj;
+			otro.asegurar();
+			otro.disparar();
+		} 
+		catch (Exception ex) {
+			System.out.println("No encuentro esa clase");
+		}
 	}
 }

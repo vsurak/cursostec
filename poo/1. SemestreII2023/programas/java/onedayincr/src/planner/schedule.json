@@ -3,12 +3,12 @@
 		{
 			"task": "comer",
 			"time": "07:00",
-			"tico": "Worker"
+			"tico": "ticos.Worker"
 		},
 		{
 			"task": "levantarse",
 			"time": "06:20",
-			"tico": "Worker"
+			"tico": "ticos.Student"
 		},
 		{
 			"task": "trabajar",

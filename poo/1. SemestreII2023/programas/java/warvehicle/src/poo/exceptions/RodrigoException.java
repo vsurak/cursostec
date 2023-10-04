@@ -1,6 +1,8 @@
 package poo.exceptions;
 
-public class RodrigoException extends Exception {
+import java.io.IOException;
+
+public class RodrigoException extends IOException {
 	private int positionOfFailed;
 
 	public RodrigoException(String pMessage, int pIndex) {

@@ -1,5 +1,7 @@
 package poo.exceptions;
 
+import java.io.IOException;
+
 public class LearnException {
 
 	
@@ -87,11 +89,28 @@ public class LearnException {
 		result = LearnException.calcularDivisionAcumuladaV3(valores, 900);
 		System.out.println(result);
 
+		// en excepciones, existe una cláusula llama finally
+		// el finally es un bloque de código que se ejecuta siempre
+		// suceda o no suceda excepcion
 		try {
+			// es el bloque de código que está propenso a fallar a producir una excepcion o que tiene adentro throw
 			result = LearnException.calcularDivisionAcumuladaV4(valores, 900);
 		} catch (RodrigoException ex) {
+			// lo que se hace en el caso de que ocurra una excepcion, los catches se pueden apilar en orden
 			System.out.println("Oye, pusiste en la posicion "+ex.getpositionOfFailed()+" un cero");
+		} 
+		catch(IOException ex) {
+			// aqui entra en caso de que suceda una exception de IO
 		}
+		catch (Exception ex) {
+			// aqui entra en caso de suceda un exception
+		}
+		finally {
+			// este bloque siempre se va a ejecutar suceda o no suceda una 
+			// exception
+		}
+		
+		
 		System.out.println(result);
 
 	}

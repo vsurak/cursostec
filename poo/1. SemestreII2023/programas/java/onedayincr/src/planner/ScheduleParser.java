@@ -1,6 +1,7 @@
 package planner;
 
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import javax.json.Json;
@@ -35,8 +36,10 @@ public class ScheduleParser {
 	
 	private void loadJson() {
 		String pathtofile = "C:\\dev\\cursostec\\poo\\1. SemestreII2023\\programas\\java\\onedayincr\\src\\planner\\schedule.json";
-        
-		try ( JsonReader reader = Json.createReader(new FileReader(pathtofile))) {
+        FileReader fileReader = null;
+		try {
+			fileReader = new FileReader(pathtofile);
+			JsonReader reader = Json.createReader(fileReader);
             JsonObject jsonparser = reader.readObject();
             
             jsontasks = jsonparser.getJsonArray("tareas");
@@ -44,6 +47,15 @@ public class ScheduleParser {
             System.out.println("Loaded JSON: " + jsonparser);            
         } catch (Exception e) {
             e.printStackTrace();
-        }		
+        }
+		finally {
+			if (fileReader!=null) {
+				try {
+					fileReader.close();
+				} catch (IOException ex) {
+					
+				}
+			}
+		}
 	}
 }

@@ -27,8 +27,11 @@ week 15: observer, visitor
 2. el profesor le va a asignar un patrón de diseño que deberá estudiar usando el libro "design patterns.pdf" en el tec digital. una vez que tenga el patrón asignado proceda a realizar un ejemplo implementando las clases necesarias del patrón y por medio de un main probar que el patrón efectivamente funciona. para la implementación escoja uno de los siguientes contextos:
 
    a. aplicación de citas tipo tindr
+
    b. aplicación de contenido visual tipo instagram
+
    c. aplicación similar a discord
+
    d. aplicación para turismo
 
 el patrón asignado con su ejemplo programado se irá exponiendo clase a clase, dicha exposición será evaluada.
