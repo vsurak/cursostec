@@ -28,7 +28,7 @@ el último, en forma individual, proceda a crearlo y haga el dibujo donde se vea
 
 5. comparación de la búsqueda binaria y los árboles AVL
 
-6. suponga que el archivo attractions.dat tuviera miles de registros, y que las ciudades aparecieran repetidas en tal archivo.
+6. suponga que el archivo attractions.db tuviera miles de registros, y que las ciudades aparecieran repetidas en tal archivo.
    Como diseñaría usted un AVL que permita indexar el archivo de tal forma que dado un nombre de ciudad como llave de búsqueda, se pueda listar rápidamente los attractions de la ciudad y la cantidad promedio de visitantes por mes de cada atracción.
 
 7. árboles B, y cómo se podrían usar árboles B para el ejemplo anterior.
