@@ -39,3 +39,7 @@ el patrón asignado con su ejemplo programado se irá exponiendo clase a clase, 
 adicionalmente, los expositores deberán preparar un ejercicio práctico para sus compañeros para validar que efectivamente hayan aprendido el patrón que explicaron. se evaluará por separado la exposición y la calidad del ejercicio dado. limite el tiempo de exposición y ejercicio a un máximo de 25 minutos.
 
 se sugiere a todos los estudiantes realizar las lecturas de teoría previas a cada patrón, en las actividades fuera de clase viene el calendario de exposición de cada patrón.
+
+3. exposición del patrón abstract factory y ejercicio
+
+4. cuál es la técnica de dependency injection y el patrón productor consumidor

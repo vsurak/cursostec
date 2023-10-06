@@ -210,7 +210,7 @@ e) modelos pre entrenados para análisis de sentimiento en texto como por ejempl
 
 f) otros recursos disponibles gratis en el internet
 
-## preliminar #1, descomposición de la frase e indexación de libros
+## preliminar #1, descomposición de la frase e indexación de libros, 35pts
 
 1. uno de los primeros retos es extraer aquello que sea realmente importante en la frase dada por el usuario, eliminar palabras repetidas y enfocarse en sustantivos y talvez algunos adjetivos. para ello puede ser necesario una cache de palabras la cual podría implementarse fácilmente por medio de hashtables
 
@@ -218,4 +218,10 @@ f) otros recursos disponibles gratis en el internet
 
 3. cree su biblioteca de libros con al menos 30 libros, dejándolos guardados en un folder.
 
-4. implemente estas estructuras y algoritmos en C++
+4. para ir pensando en la integración de este sistema de indexado con una posible aplicación, permita que su programa funcione como un http server que proceso REST requests, el request que debe recibir es la frase enviada por el usuario, y la respuesta debe ser la lista de libros con una calificación, entre mayor la calificación es más probable que se encuentre contenido relacionado a la frase en ese libro.
+
+5. pruebe su motor de búsqueda y servicio REST haciendo uso de postman.
+
+6. el código del servidor web para rest no se va a evaluar, es decir, se puede usar como caja negra.
+
+7. implemente estas estructuras y algoritmos en C++
