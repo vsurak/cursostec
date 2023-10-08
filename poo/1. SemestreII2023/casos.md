@@ -195,7 +195,7 @@ no existe una forma certera de garantizar un precio, y en la mayoría de los cas
 
 - distribución de cultivos principales en el país
 
-<img src="media/cultivos.png" width=65% height=65%>
+<img src="media/cultivoscr.png" width=65% height=65%>
 
 - existen regiones del país que dependen en mayor medida de la actividad agrícola
 
