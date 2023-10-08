@@ -165,3 +165,112 @@ entregable: cree un repo para su proyeto y un branch que se llame "acuerdo", sub
 3. termine de implementar el sistema para completarlo según lo acordado cubriendo con este el 100% del scope
 
 4. se calificará en esta revisión, calidad de código, nombres de clases, modularidad, definición de clases y sus responsabilidades, la ejecución correcta del programa y la persistencia de la información.
+
+# caso #3, empoderando al productor agrícola costarricense, 35%
+
+_instituto tecnológico de costa rica_, escuela de computación  
+_programación orientada a objetos_  
+_prof. rodrigo núñez_  
+_type:_ groups of two
+
+## descripción
+
+en costa rica el sector agrícola tiene dos realidades:
+
+a) las de los grandes productores que poseen procesos industriales de gran volúmen, mecanización, laboratorios, ingeniería y una alta capacidad de exportación
+
+b) la de los pequeños y medianos productos, pobres entre los pobres, donde su realidad es una, las ganancias de sus producción simplemente no alcanza para vivir; y extrañamente, el consumidor pagando altas sumas por productos en supermercados
+
+por qué la producción agrícola no genera los ingresos y el bienestar de vida que debería siendo este tan importante ?
+
+la agricultura es una actividad de alto riesgo, esto porque los cultivos están sujetos a cambios en el clima, plagas, precios muy altos en abonos y plaguicidas, un mercado de oferta demanda con muchas variaciones. los agricultores, históricamente, para producir deben solicitar financiamiento a entidades bancarias, hagase la idea hipotética que usted necesita 1000 colones para sembrar unas hectáreas, cuidarlas, cosecharlas y llevarlas a la venta. usted pronostica que va a vender su producción en 1500 colones, al final, la ganancia van a ser 500 colones en caso de sacar casi el 100% de la producción sin problema.
+
+sin embargo, que pasa si para cuando saca su producto, el precio de dicho producto hace que lo más que pueda obtener de la venta sean 700 colones. quiere decir que no va a lograr pagar el préstamo y tampoco le generó ganancia. súmele que entonces para la próxima producción, va a necesitar de nuevo otro préstamo.
+
+no existe una forma certera de garantizar un precio, y en la mayoría de los casos tampoco es posible garantizar los compradores del producto. a continuación se muestran varios datos informativos relacionados a esta problemática:
+
+- el calentamiento global afecta la agricultura, existe un incremento en la temperatural anual y disminución de lluvias que estará muy marcado para el 2030
+
+<img src="media/vulnerabilidadclima.png" width=65% height=65%>
+
+- distribución de cultivos principales en el país
+
+<img src="media/cultivos.png" width=65% height=65%>
+
+- existen regiones del país que dependen en mayor medida de la actividad agrícola
+
+<img src="media/dependenciaagricola.png" width=65% height=65%>
+
+- nuestros agricultores tienen un perfil, ante una actividad que no tiene herederos, pocos hijos de agricultores continúan con la actividad
+
+<img src="media/perfilagricola.png" width=65% height=65%>
+
+- el sector agrícola debe competir con otros sectores para obtener mano de obra local
+
+- certificarse con estándarres mundiales, carbono neutral o similares es costoso
+
+- hay muy poco financiamiento nacional e internacional, es financiamiento de alto riesgo
+
+- se recibe asistente técnica del mag que es muy tradicional sin innovación, sin técnicas y tecnología reciente
+
+- la brecha tecnológica rural crea una barrera para aprovechar la digitalización
+
+- hay poco intercambio técnico y de producción con otros países
+
+- el sector agrícola está muy sujeto al modelo aternalista
+
+- hay mucha resistancia al cambio en el sector
+
+- el sector productivo agrícula participa muy poco en plataformas digitales o gestoras de conocimiento
+
+- se conoce que en los mercados globales y altamente competitivos es urgente darle valor agregado a la
+  producción, sin embargo esta suele ser de una escala menor o muy artesanal
+
+- por ejemplo no es lo mismo exportar banano que puré o banano pasa, una piña, que jugo concentrado, café en grano o café tostado, a un esqueje ornamental que una planta en maceta
+
+- es imperativo que en Costa Rica se refuerce el sistema de investigación y transferencia de tecnología, que se integre más con el sistema universitario, y que permita ofrecer al productor el ingrediente innovador en sus actividades para mejorar la productividad, mecanizar procesos, o producir bajo ambientes controlados
+
+- los miles de mujeres y hombres que laboran en la producción agrícola, son héroes anónimos que merecen nuestro apoyo y reconocimiento, lamentablemente muchos de ellos se han visto obligados como consecuencia de una estrategia de desarrollo excluyente, a vivir en precaria subsistencia
+
+- los productores son víctimas de una doble injusticia: la de los países ricos que predican el libre comercio, pero practican multimillonarios subsidios, el proteccionismo agrícola; y la de nuestros ingenuos gobiernos, que eluden el problema con la consigna de “sálvese el que pueda”
+
+- la investigación agrícola ha estado a cargo del Ministerio de Agricultura y Ganadería y en menor grado en las universidades. Este modelo ha sido insuficiente, no solo por la escasa inversión de recursos que el Estado hace en este campo, sino también porque la investigación que se hace, pareciera no tener el retorno económico en el sector a que esta
+  dirigida, por lo que las empresas agrícolas adolecen de la base tecnológica esencial para competir en el mercado Internacional y para mantenerse competitivas mediante una permanente modernización y transformación
+
+- por otra parte, el recurso hídrico es un gran desafío; la extracción de agua para la agricultura representa el 70% del total de extracciones de este recurso
+
+- la FAO estima que más del 40% de la población rural del mundo vive en cuencas de ríos que carecen de agua. en algunas de estas zonas, entre el 80 y el 90% del agua se utiliza con fines agrícolas
+
+- los productores están ahogados por préstamos caros, insumos agrícolas con precios por las nubes, pagos debajo de los costos y desalojos de casa, tierras y herramientas de trabajo
+
+- existen casos de personas que se quitan la vida como resultado de los desalojos que sufren los agricultores
+
+- 37% del trabajo de los hombres en las zonas rurales es del sector primario (agricultura, ganadería y pesca), según datos del Instituto Nacional de Estadística y Censos (INEC) del III trimestre 2022
+
+- la morosidad en la cartera de crédito agrícola aumenta desde el 2016 y en diciembre del 2021 rompió récord con un saldo agropecuario en riesgo, es superior a ₡68.920 millones, lo que representó un 14,3% de la cartera total agropecuaria y un aumento del 3,9% con respecto año anterior
+
+- el sector agropecuario está siendo víctima de una carnicería financiera. bancos públicos y banca privada van tras los patrimonios de las y los productores
+
+- "yo soy agricultor, tengo 38 años de vender en la Feria del agricultor de Tibás y 37 de vender en la Feria del Agricultor de Hatillo, por primera vez en 37 años tengo cinco domingos de no vender en Hatillo porque no tengo producción, se me pusieron tan caros los insumos que tuve que reestructurar"
+
+- “Nosotros estamos parando de producir tubérculos, porque ya no hay una relación beneficiosa a la hora de vender y le castigan a uno la cosecha. en mi pueblo he contado con los dedos de la mano y me sobran los agricultores que ahorita siguen ahí"
+
+como puede leerse, la lista de retos del sector agrícola pequeño y mediano es alto, y cualquier idea que se quiera implementar requiere un ingrediente inevitable, mucho mucho dinero.
+
+## preliminar #1, diseño de una solución, 15pts
+
+1. mínimo haga un grupo de trabajo de dos personas para discutir sobre este caso
+
+2. lean cuidadosamente toda la información presente en este caso, consulte videos en youtube, lea noticias, en general, infórmese de este problema
+
+3. genere una lista de ideas de soluciones de software que busquen solucionar 1 o más problemas de los antes planteados, escriban las ideas bajo alguna dinámica y converselas con su compañer@ de trabajo y con otros compañeros de clase. busque una forma de que la pareja con ayuda de los compañeros, voten y opinen por las ideas de una forma cuantitativa para determinar cuáles de las ideas podrían ser mejores en terminos de factibilidad, tecnología y alcance, es decir, que llegue a apoyar o mejorar a la mayor cantidad de personas. para dichas ideas, no se preocupe por detalles de implementación o tecnologías que usted aún no conozca
+
+4. si es necesario reclute más personas para desarrollar la idea; podrá agregar más personas al equipo de trabajo usando las siguientes reglas de conformación de equipo de trabajo:
+
+   - si su idea resuelve de 1 a 2 problemas , 2 integrantes
+   - si resuelve 2.x problemas, 3 integrantes
+   - si resuelve 3 a 4 problemas, 4 integrantes
+
+5. diseñe en un diagrama amplio y detallado un MVP para su idea, es decir, el minimo producto viable para poder fabricar su idea, dicho diagrama debe poder mostrar el flujo de su idea, flujo del sistema, la forma en que se financia, la forma en que genera ganancias, la arquitectura de software de la solución y el diseño en capas de objetos que van a ser necesarios en este desarrollo
+
+6. prepare un pitch de 3 minutos máximo de su idea para presentarla al grupo
