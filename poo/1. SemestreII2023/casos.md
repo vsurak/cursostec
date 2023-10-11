@@ -156,7 +156,7 @@ entregable: cree un repo para su proyeto y un branch que se llame "acuerdo", sub
 
 7. tome en cuenta que para el entregable final contará aproximadamente entre 6 a 9 días.
 
-# entregable final, segunda etapa de implementación, jueves 12 de octubre, 40pts
+# entregable final, segunda etapa de implementación, domingo 22 de octubre, 40pts
 
 1. para este entregable usted ya debió haber hecho la entrega #2 basado en una estrategia de trabajo
 

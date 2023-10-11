@@ -149,7 +149,7 @@ por medio de comentarios en los .h deje claro:
 
 4. proceda a implementar el programa en C++ basados en dicho alcance, el cuál deberá hacer commit a más tardar el domingo 8 a la media noche, la revisión será con cita. será válido exceder el alcance pactado durante la implementación, pero siempre se evaluará solo el alcance acordado.
 
-## entrega final, 15 de octubre, 50pts
+## entrega final, 22 de octubre, 50pts
 
 1. para este entregable ya usted cuenta con la revisión del entregable #2 hecha con el profesor, del cual pudieron haber salido diversas correciones
 
