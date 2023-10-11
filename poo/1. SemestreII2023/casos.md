@@ -257,7 +257,7 @@ no existe una forma certera de garantizar un precio, y en la mayoría de los cas
 
 como puede leerse, la lista de retos del sector agrícola pequeño y mediano es alto, y cualquier idea que se quiera implementar requiere un ingrediente inevitable, mucho mucho dinero.
 
-## preliminar #1, diseño de una solución, 15pts
+## preliminar #1, diseño de una solución, 25 de octubre, 15pts
 
 1. mínimo haga un grupo de trabajo de dos personas para discutir sobre este caso
 
@@ -270,7 +270,8 @@ como puede leerse, la lista de retos del sector agrícola pequeño y mediano es 
    - si su idea resuelve de 1 a 2 problemas , 2 integrantes
    - si resuelve 2.x problemas, 3 integrantes
    - si resuelve 3 a 4 problemas, 4 integrantes
+   - se aceptan grupos más grandes previo discusión y aprobación con el profesor
 
-5. diseñe en un diagrama amplio y detallado un MVP para su idea, es decir, el minimo producto viable para poder fabricar su idea, dicho diagrama debe poder mostrar el flujo de su idea, flujo del sistema, la forma en que se financia, la forma en que genera ganancias, la arquitectura de software de la solución y el diseño en capas de objetos que van a ser necesarios en este desarrollo
+5. diseñe en un diagrama amplio y detallado de un MVP para su idea, es decir, el minimo producto viable para poder fabricar su idea, dicho diagrama debe poder mostrar el flujo de su idea, flujo del sistema, la forma en que se financia, la forma en que genera ganancias, la arquitectura de software de la solución y el diseño en capas de objetos que van a ser necesarios en este desarrollo.
 
-6. prepare un pitch de 3 minutos máximo de su idea para presentarla al grupo
+6. prepare un pitch de 3 minutos máximo de su idea para presentarla al grupo.
