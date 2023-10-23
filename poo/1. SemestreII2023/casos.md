@@ -257,7 +257,7 @@ no existe una forma certera de garantizar un precio, y en la mayoría de los cas
 
 como puede leerse, la lista de retos del sector agrícola pequeño y mediano es alto, y cualquier idea que se quiera implementar requiere un ingrediente inevitable, mucho mucho dinero.
 
-## preliminar #1, diseño de una solución, 25 de octubre, 15pts
+## preliminar #1, diseño de una solución, 26 de octubre, 15pts
 
 1. mínimo haga un grupo de trabajo de dos personas para discutir sobre este caso
 

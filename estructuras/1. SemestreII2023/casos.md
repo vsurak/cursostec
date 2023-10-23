@@ -210,7 +210,7 @@ e) modelos pre entrenados para análisis de sentimiento en texto como por ejempl
 
 f) otros recursos disponibles gratis en el internet
 
-## preliminar #1, descomposición de la frase e indexación de libros, 35pts
+## preliminar #1, descomposición de la frase e indexación de libros, lunes 30 de Octubre, 35pts
 
 1. uno de los primeros retos es extraer aquello que sea realmente importante en la frase dada por el usuario, eliminar palabras repetidas y enfocarse en sustantivos y talvez algunos adjetivos. para ello puede ser necesario una cache de palabras la cual podría implementarse fácilmente por medio de hashtables
 

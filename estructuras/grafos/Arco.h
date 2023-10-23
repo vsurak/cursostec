@@ -5,30 +5,40 @@
 
 using namespace std;
 
-class Arco {
-    private:
-        void* origen;
-        void* destino;
-        int peso;
+class Arco
+{
+private:
+    void *origen;
+    void *destino;
+    int peso;
 
-    public:
-        Arco(void* pOrigen, void* pDestino, int pPeso) {
-            this->origen = pOrigen;
-            this->destino = pDestino;
-            this->peso = pPeso;
-        }
+public:
+    Arco(void *pOrigen, void *pDestino, int pPeso)
+    {
+        this->origen = pOrigen;
+        this->destino = pDestino;
+        this->peso = pPeso;
+    }
 
-        void* getOrigen() {
-            return this->origen;
-        }
+    Arco(void *pOrigen, void *pDestino)
+    {
+        this(pOrigen, pDestino, 0);
+    }
 
-        void* getDestino() {
-            return this->destino;
-        }
+    void *getOrigen()
+    {
+        return this->origen;
+    }
 
-        int getPeso() {
-            return this->peso;
-        }
+    void *getDestino()
+    {
+        return this->destino;
+    }
+
+    int getPeso()
+    {
+        return this->peso;
+    }
 };
 
 #endif
