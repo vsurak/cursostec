@@ -198,7 +198,13 @@ como restricción, quieren que el sistema solo retorne el top 3 de los matches p
 
 para efectos de crear el sistema se cuentan con varios recursos:
 
-a) la biblioteca de libros (hay que crear dicha biblioteca bajando libros de alguna fuente, como por ejemplo https://www.ebooksread.com/ o similar)
+a) la biblioteca de libros, hay que crear una biblioteca bajando libros de alguna fuente, recomendable que sea en un solo idioma, por ejemplo:
+
+https://www.gutenberg.org/browse/scores/top
+http://www.fullbooks.com/
+https://www.blindworlds.com/publicacion/82460
+https://www.samaelgnosis.net/libros/txt/
+http://aktivaesperanto.org.es/descargas/index.htm
 
 b) un catálogo de sustantivos importantes accesibles por medio de un api https://github.com/dulldesk/words-api , existen otras similares
 
