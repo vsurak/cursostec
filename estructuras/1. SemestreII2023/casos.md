@@ -169,7 +169,7 @@ por medio de comentarios en los .h deje claro:
 
 6. la revisión será con cita
 
-# caso #3, the smart book reader, 25%
+# caso #3, the smart book reader, 35%
 
 _instituto tecnológico de costa rica_, escuela de computación  
 _estructuras de datos_  
