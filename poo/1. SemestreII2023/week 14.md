@@ -2,21 +2,21 @@
 
 1. trabajar el diseño y la implementación del caso #3
 
-2. todos los integrantes del grupo de trabajo del caso #3 deben tener instalado local la base de datos asignada para el caso, también puede ser usada vía docker.
+2. todos los integrantes del grupo de trabajo del caso #3 deben tener instalado local la base de datos asignada para el caso, también puede ser usada vía docker. dicha base de datos fué asignada por el profesor al momento de validar la idea de su caso #3.
 
 3. elaborar el pitch oral que va a presentar durante la lección del 27 de octubre, dicho pitch deberá hacerlo una sola persona designada y deberá tener el siguiente formato:
 
-<span style="color:blue">problema, se debe explicar el problema que se va a atacar con uno o varios datos cuantitativos, la narrativa debe permitir al escucha hacer empatía, e identificarse con el problema</span>
+_problema, se debe explicar el problema que se va a atacar con uno o varios datos cuantitativos, la narrativa debe permitir al escucha hacer empatía, e identificarse con el problema_
 
-<span style="color:green">solucion, se explica que es lo que va a hacer su sistema para resolver el problema en cuestión</span>
+solucion, se explica que es lo que va a hacer su sistema para resolver el problema en cuestión
 
-<span style="color:red">beneficios, se detalla cuantitativamente los beneficios esperados al implementar la solución explicada</span>
+_beneficios, se detalla cuantitativamente los beneficios esperados al implementar la solución explicada_
 
 dado lo anterior, supongamos un ejemplo: se quiere crear un collar con google maps incorporado para los perros callejeros, que les proporcione un electroshock cuando van se acercan a una calle, para que así no las crucen y no los maten.
 
 pitch ejemplo:
 
-<span style="color:blue">en costa rica más de 4000 perros callejeros mueren año a año a causa de atropellos en carretera, y sin contar aquellos que quedan gravemente heridos, perros que no cuentan con un hogar. las municipalidades gastan hasta 8 millones de colones anuales recogiendo y enterrando dichos animales. </span> <span style="color:green">en innovadog, nos hemos dado a la tarea en conjunto con las municipalidades de crear un innovador collar con google maps para los perros callejeros, el cuál al estar muy cerca de un calle les emite una descarga electrica baja no dañina como señal de advertencia para que se aleje de la calle. cuando el perro insiste en acercarse la descarga aumenta hasta dejarlo inconciente a la orilla, evitando así que se exponga a un atropello. </span> <span style="color:red">gracias a innovadog, nuestros perros callejeros podrán andar seguros, reduciremos su tasa de mortalidad y dejaremos de tener 1 millon, si no 2 y hasta 3 millones de lindos perritos en nuestras calles</span>
+_en costa rica más de 4000 perros callejeros mueren año a año a causa de atropellos en carretera, y sin contar aquellos que quedan gravemente heridos, perros que no cuentan con un hogar. las municipalidades gastan hasta 8 millones de colones anuales recogiendo y enterrando dichos animales._ en innovadog, nos hemos dado a la tarea en conjunto con las municipalidades de crear un innovador collar con google maps para los perros callejeros, el cuál al estar muy cerca de un calle les emite una descarga electrica baja no dañina como señal de advertencia para que se aleje de la calle. cuando el perro insiste en acercarse la descarga aumenta hasta dejarlo inconciente a la orilla, evitando así que se exponga a un atropello. _gracias a innovadog, nuestros perros callejeros podrán andar seguros, reduciremos su tasa de mortalidad y dejaremos de tener 1 millon, si no 2 y hasta 3 millones de lindos perritos en nuestras calles_
 
 ## actividades en clase
 
