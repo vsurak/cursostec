@@ -231,3 +231,19 @@ f) otros recursos disponibles gratis en el internet
 6. el código del servidor web para rest no se va a evaluar, es decir, se puede usar como caja negra.
 
 7. implemente estas estructuras y algoritmos en C++
+
+## preliminar #2, indexación de texto, párrafos y palabras en árboles B, jueves 9 de noviembre, 40pts
+
+1. para este punto ya usted cuenta con una forma de descomponer la frase ingresada por un usuario, con ello hacer una búsqueda en un sistema de índices hecho con AVL+hashtables, lo cuál permite calcular un ranking que nos indica cuáles libros es donde se va a buscar párrafos relacionados a la frase del usuario.
+
+2. ahora vamos a trabajar en la búsqueda de párrafos relacionados a la frase, en los libros seleccionados por el algoritmo del preliminar #1. estos son los atributos deseables de la búsqueda basada en la frase:
+
+   - entre más apariciones de las palabras de la frase estén en el párrafo el match es más acertado
+   - la distancia y orden entre las palabras de la frase es importante para garantizar el sentido y la precisión de la búsqueda, por lo tanto distancias o ordenes diferentes tienen una calificación menor
+   - los sinónimos o cambios de modo plural o singular se consideran palabras iguales que hacen más acertada la búsqueda
+
+3. para hacer la búsqueda más eficiente sobre las palabras usted contará con árboles B, B\* y B+ que le permitan diseñar e implementar un sistema de indexación. no tiene restricción alguna en cuanto a la cantidad de esos árboles a utilizar, pero serán el componente principal de su sistema de indexación de tal forma que pueda encontrar los párrafos que hagan match con la frase de forma más acertada, y que pueda sacar los párrafos haciendo la menor cantidad de operaciones y recorridos posibles, para que así obtenga un algoritmo eficiente. un tiempo aceptable para que su programa encuentre los párrafos en todos los libros seleccionados es de máximo 4 segundos.
+
+4. valide con el profesor la estructura y algoritmos para este sistema de indexación, el profesor estará atendiendo dichas consultas hasta el viernes 3 de noviembre a las 3pm.
+
+5. la revisión será con cita, se revisará el brach Btrees con el commit a la hora indicada.
