@@ -275,3 +275,19 @@ como puede leerse, la lista de retos del sector agrícola pequeño y mediano es 
 5. diseñe en un diagrama amplio y detallado de un MVP para su idea, es decir, el minimo producto viable para poder fabricar su idea, dicho diagrama debe poder mostrar el flujo de su idea, flujo del sistema, la forma en que se financia, la forma en que genera ganancias, la arquitectura de software de la solución y el diseño en capas de objetos que van a ser necesarios en este desarrollo.
 
 6. prepare un pitch de 3 minutos máximo de su idea para presentarla al grupo.
+
+## preliminar #2, 35pts, capa de UI y datos, domingo 5 de noviembre antes de media noche
+
+1. para realizar este preliminar debe tener el diagrama del entregable #1 corregido y aprobado por el profesor
+
+2. diseñe e implemente las pantallas de su sistema, dichas pantallas no van a realizar ninguna función aún, pero si deben tener todos los campos e información mimica para lograr visualizar los contenidos de las pantallas, la navegación y completitud de los datos según lo acordado en el diagrama.
+
+3. implemente el layer de acceso a datos, a saber:
+
+   a. si usted accede a una base de datos de forma directa, como por ejemplo mongodb, redis o postgresql; lo que va implementar es una o varias clases en Java, de nombre "<NombreContextual>repository", ejemplo: ProductsRepository, TechnicalRepository, PostRepository, PaymentRepository... las cuales deben seguir el patrón singleton, realizan la conexión a la base de datos una única vez, e implementan los métodos que va a necesitar su sistema. va a requerir recibir objetos del model en los métodos para poder realizar sus operaciones, dichos objetos será necesario implementarlos; de la misma forma dichos métodos lo que deben retornar son objetos del modelo cuando así sea necesario, nunca objetos de la base de datos.
+
+   esto implica también en su base de datos haber creado las colecciones donde se va almacenar dicha información.
+
+   b. si usted lo que accede es un headless CMS, lo que va a implementar es una o varias clases en Java con el nombre "<NombreContextual>ApiClient", por ejemplo: AgricultorApiClient, ProductsApiClient, PaymentApiClient... y lo que van a implementar son las llamadas a los endpoints de los contenidos creados en el headless CMS, por ende, se debieron haber diseñado los recursos de contenido propiamente en el CMS, habilitar para dichos recursos los endpoints respectivos ya sean GET, POST, PUT. los métodos en las clases ApiClient van a requerir recibir objetos del modelo que habrá que implementar, y también deberá retornar objetos del módelo cuando así sea necesario, nunca json o objetos http response de ningún tipo. las classes ApiClient deben seguir patrón singleton.
+
+4. el profesor hará revisiones preliminares de las pantallas propuestas y del diagrama corregido hasta el día viernes 3 de noviembre a las 3pm. la revisión de este preliminar será con cita usando el repositorio con el commit a la hora indicada y en un branch llamado preliminar#2.

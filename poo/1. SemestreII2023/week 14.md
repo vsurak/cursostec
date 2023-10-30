@@ -27,5 +27,3 @@ _en costa rica más de 4000 perros callejeros mueren año a año a causa de atro
 3. cree un canal en discord con sus compañeros del caso #3, proceda a diseñar e implementar una clase en java que les permita conectarse a la base de datos, realizar una escritura de información y realizar una lectura de información. Probar dicha clase por medio de un main. enviar ambas clases al asistente para revisión, email fvsasistencia@gmail.com , subject: poo - data access, para hoy antes de media noche.
 
 4. el profesor va a revisar los diagramas del caso #3 y realizará ajustes que reportará vía discord o reuniéndose con los grupos, dichas modificaciones deberán aplicarse para la entrega del segundo preliminar.
-
-5. patrón productor consumidor explicación por parte del profesor. esto quedará para semana 15.
