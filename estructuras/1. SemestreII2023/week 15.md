@@ -38,4 +38,4 @@
 
 dado el tema asignado, implemente una clase en C++ que inicialice un grafo de al menos 17 nodos. segun el tema que tiene asignado escoja un contexto de lo que representa sus nodos y las relaciones. cree una clase que sea la información que va estar contenida en el Nodo, dicha clase debe tener también un Id y las relaciones del grafo deben ser con peso. contextualice el grafo para que sea dirigido. agreguele a la clase grafo un método que retorne un vector con las componentes conexas del grafo. haciendo uso de ese método, en la misma clase donde cargó el grafo, proceda a llamarlo para posteriormente imprimir cada una de las componentes.
 
-enviar el ejercicio el día de hoy para las 12 medio día al asistente [fvsasistencia@gmail.com](fvsasistencia@gmail.com) vía email, con el subject: estructuras de datos - componentes conexas.
+enviar el ejercicio el día 2 de noviembre para la media noche, al asistente [fvsasistencia@gmail.com](fvsasistencia@gmail.com) vía email, con el subject: estructuras de datos - componentes conexas.
