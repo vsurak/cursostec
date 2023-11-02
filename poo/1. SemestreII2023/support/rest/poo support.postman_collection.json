@@ -1,0 +1,58 @@
+{
+	"info": {
+		"_postman_id": "6f4c6518-db56-4f49-8a48-015dc723b08c",
+		"name": "poo support",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12745637"
+	},
+	"item": [
+		{
+			"name": "search phrase",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/search/saludos grupo de poo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"search",
+						"saludos grupo de poo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enviar un objeto product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Papa celeste africana\",\r\n    \"quantity\" : 500,\r\n    \"price\" : 17000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
