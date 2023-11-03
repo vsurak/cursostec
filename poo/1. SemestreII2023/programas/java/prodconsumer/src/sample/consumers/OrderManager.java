@@ -23,10 +23,12 @@ public class OrderManager extends Thread implements Constants {
 		while (isActive) {
 			try {
 				Order currentOrder = ordersQueue.poll();
+				System.out.println("Hay "+ordersQueue.size()+" ordenes pendientes");
 				if (currentOrder!=null) {
 					System.out.println("Manager "+this.managerId+" procesando la orden numero "+currentOrder.getOrderId());
+					// aqui es donde va la lógica de procesamiento
 				}
-				Thread.sleep(THREAD_RELAX);
+				Thread.sleep(THREAD_CONSUMERS_TIME);
 			} catch (Exception ex) {
 				
 			}

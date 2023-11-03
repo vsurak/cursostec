@@ -10,8 +10,14 @@ import sample.producers.ShopingCart;
 
 public class OrdersSimulator implements Constants {
 	private Queue<Order> orders;
+
+	// arreglo de consumers
 	private OrderManager managers[] = new OrderManager[ORDER_MANAGERS];
+	
+	// arreglo de producers mobileapp
 	private MobileApp apps[] = new MobileApp[MOBILE_APPS];
+	
+	// arreglo de producer shopingcarts
 	private ShopingCart carts[] = new ShopingCart[SHOPING_CARTS];
 	
 	public OrdersSimulator() {

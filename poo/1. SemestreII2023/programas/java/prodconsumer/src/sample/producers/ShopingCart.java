@@ -27,7 +27,7 @@ public class ShopingCart extends Thread implements Constants{
 				ordersQueue.add(newOrder);
 
 				System.out.println("ShopingCart active "+this.cartId+" creando la orden numero "+newOrder.getOrderId());
-				Thread.sleep(THREAD_RELAX);
+				Thread.sleep(THREAD_PRODUCERS_WAIT);
 			} catch (Exception ex) {
 				
 			}
