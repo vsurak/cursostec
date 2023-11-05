@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import market.controllers.ProductsController;
+import market.model.Order;
 import market.model.Product;
 
 @RestController
@@ -22,9 +24,11 @@ public class AgroApi {
 		return result;
 	}
 	
-	@PostMapping(path = "/product", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.TEXT_PLAIN_VALUE)
-	public ResponseEntity<String> create(@RequestBody Product pProduct) {
+	@PostMapping(path = "/product", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+	public ResponseEntity<Order> createProduct(@RequestBody Product pProduct) {
 	    System.out.println("Recibi este producto: "+pProduct.getName());
-	    return new ResponseEntity<>("Feliz de crear el producto: "+pProduct.getName(), HttpStatus.CREATED);
+	    
+	    ProductsController controller = new ProductsController();
+	    return new ResponseEntity<>(controller.orderProduct(pProduct), HttpStatus.CREATED);
 	}
 }

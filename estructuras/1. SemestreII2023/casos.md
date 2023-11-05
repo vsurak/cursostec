@@ -247,3 +247,29 @@ f) otros recursos disponibles gratis en el internet
 4. valide con el profesor la estructura y algoritmos para este sistema de indexación, el profesor estará atendiendo dichas consultas hasta el viernes 3 de noviembre a las 3pm.
 
 5. la revisión será con cita, se revisará el brach Btrees con el commit a la hora indicada.
+
+## entrega final, smart book reader completo, 25 pts, 21 de noviembre
+
+1. para este momento usted cuenta con un servicio rest funcional, tiene los libros, posee el sistema de indexación de archivos y posee el sistema de indexación de texto en los libros completo y funcionando.
+
+2. implemente el portal web usando HTML/JS, apoyese de cualquier plantilla HTML ya hecha y opcionalmente puede usar ReactJS o VueJS pero no es necesario.
+
+3. la página presentará al usuario un input text para ingresar la frase y un botón de buscar, al oprimir el botón de buscar, la frase es enviada a su backend rest implementado en C++, el cual realizará todas las búsquedas indexadas y retornará el resultado en formato json. recuerde que la respuesta contiene 10 top libros y 3 top párrafos matches por libro, y que la respuesta debe contener:
+
+- el nombre del libro y su autor
+- un extracto de un párrafo del libro que evoca a la frase de búsqueda
+- el número de página donde se extrajo el párrafo o sección
+- el sentimiento de la frase: negativo, positivo, neutro, misterioso, novela, fantasía
+- una imagen o ícono que ilustre el texto extraído
+
+4. requiere implementar un método para sacar el sentimiento y la imagen del texto extraído
+
+5. se calificará el diseño, implementación y algoritmos de todas las estructuras de datos usadas, buscando claridad de código, idea y simplicidad de la solución ante un problema complejo; también algoritmos claves como los que dan peso al ranking del libro, y los que determinan el nivel de influencia de la frase en el párrafo seleccionado, siendo este otro sistema de ranking de párrafos por libro.
+
+6. se espera que se sigan principios y prácticas de orientación a objetos, correcto uso de herencia, polimorfismo y encapsulamiento de clases. se castigará código repetitivo, exceso de valores hardcoded, nombres no significativos o de una sola letra en variables.
+
+7. se espera que todos los integrantes tengan dominio del 100% del código, las estructuras de datos, algoritmos y estrategias que se implementaron en todos los dominios de la solución.
+
+8. el último commit será antes de media noche y la revisión final será con cita con el revisor.
+
+9. cualquier sospecha de copia anulará el trabajo.

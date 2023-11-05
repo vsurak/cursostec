@@ -291,3 +291,33 @@ como puede leerse, la lista de retos del sector agrícola pequeño y mediano es 
    b. si usted lo que accede es un headless CMS, lo que va a implementar es una o varias clases en Java con el nombre "<NombreContextual>ApiClient", por ejemplo: AgricultorApiClient, ProductsApiClient, PaymentApiClient... y lo que van a implementar son las llamadas a los endpoints de los contenidos creados en el headless CMS, por ende, se debieron haber diseñado los recursos de contenido propiamente en el CMS, habilitar para dichos recursos los endpoints respectivos ya sean GET, POST, PUT. los métodos en las clases ApiClient van a requerir recibir objetos del modelo que habrá que implementar, y también deberá retornar objetos del módelo cuando así sea necesario, nunca json o objetos http response de ningún tipo. las classes ApiClient deben seguir patrón singleton.
 
 4. el profesor hará revisiones preliminares de las pantallas propuestas y del diagrama corregido hasta el día viernes 3 de noviembre a las 3pm. la revisión de este preliminar será con cita usando el repositorio con el commit a la hora indicada y en un branch llamado preliminar#2.
+
+## entrega final, 50pts, finalización del sistema, 19 de noviembre
+
+1. para este punto su grupo de trabajo ya cuenta con las pantallas implementadas a nivel de UI y cuenta con una implementación que le permite realizar todas las operaciones que requiere su sistema a nivel de almacenamiento ya sea en base de datos o vía headless cms.
+
+2. proceda entonces ahora a implementar su sistema completo y funcional tomando en cuenta las siguientes reglas:
+
+   a. los inputs de usuario tienen validaciones para que no sean vacíos, valide texto, números, fechas, vacíos.
+
+   b. el UI nunca debe pedir al usuario Ids, ni tener que saber información de memoria para poder llenar los inputs de las pantallas.
+
+   c. todas las ventanas del UI tienen su controller
+
+   d. en el caso de tener que llamar a un api rest desde algún UI, existe una clase especializada para realizar dicha función , un apiclient
+
+   e. si implementó un rest server, este tiene claramente clases separadas para las capas de router, lógicas, repositories y una clara colección de clases del model.
+
+   f. se implementaron los patrones de diseño que solicitó el profesor en la revisión del preliminar #1. sientase en la libertad de aplicar otros patrones adicionales.
+
+   g. se respetan los principios de encapsulamiento, modularidad de objetos; getters, setters, buen uso de constantes, herencia, polimorfismo, no existen variables i,j,k o con nombres no significativos, todos los nombres de clase son en singular y pascalcase.
+
+3. tienen un repositorio de trabajo único para todo el grupo de trabajo en el cuál es evidente los commits y aportes de todos los integrantes del equipo.
+
+4. todos los integrantes del equipo tienen dominio 100% de todas las classes y componentes implementados del sistema.
+
+5. es posible ejecutar y usar el sistema, el comportamiento esperado en el sistema es aquel que se acordó con el profesor entre el entregable #1 por medio del diagrama y las pantallas que se revisaron y se aprobaron. para la revisión tenga a mano dicho acuerdo.
+
+6. tenga datos de prueba en el sistema para no tener que ingresar todo desde cero.
+
+7. el último commit debe ser antes de media noche, las revisiones serán con cita con el profesor.
