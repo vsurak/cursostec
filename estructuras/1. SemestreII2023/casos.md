@@ -232,7 +232,7 @@ f) otros recursos disponibles gratis en el internet
 
 7. implemente estas estructuras y algoritmos en C++
 
-## preliminar #2, indexación de texto, párrafos y palabras en árboles B, jueves 9 de noviembre, 40pts
+## preliminar #2, indexación de texto, párrafos y palabras en árboles B, domingo 12 de noviembre, 40pts
 
 1. para este punto ya usted cuenta con una forma de descomponer la frase ingresada por un usuario, con ello hacer una búsqueda en un sistema de índices hecho con AVL+hashtables, lo cuál permite calcular un ranking que nos indica cuáles libros es donde se va a buscar párrafos relacionados a la frase del usuario.
 
