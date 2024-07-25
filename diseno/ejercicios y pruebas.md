@@ -19,7 +19,9 @@ El software de reuniones virtuales ThinkTogether actualmente solo soporta video 
 _patrones disponibles:_ command, mediator, chain of responsability
  
 
-### Problema: 
+### Problema: SalmaDraw
 El software de ilustración SalmaDraw se ha extendido en su uso en multiples dispositivos como apple computers, ipad, android tables, pc y algunos smartphones de pantalla grande. Sin embargo no todas las funcionalidades pueden operar de la misma manera dependiendo del hardware y el sistema operativo. Por ejemplo texturizar se podría hacer pixel perfect o algunas veces aplicarle algoritmos para hacer ajustes. Texturas generativas algunas veces las genera de cierto tamaño de resolución en otras ocaciones usa técnicas basados en texturas ya existentes. Según los puntos de presión del pen, las herramientas de dibujo podrían requerir correr algoritmos adicionales para hacer las líneas , contornos, rellenos y similares. Si cuenta con GPU o no, los filtros podrían ser básicos o usar nuevos con AI.  
 
 _patrones disponibles:_ visitor, decorator, chain of responsability
+
+
