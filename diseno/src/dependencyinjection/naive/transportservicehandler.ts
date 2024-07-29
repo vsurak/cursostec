@@ -60,13 +60,13 @@ export function sendPackage(req: Request, res: Response): void {
         }
 
         // Create the package object
-        const packaInfo = new Package(id, weight, type, career, costList);
+        const packageInfo = new Package(id, weight, type, career, costList);
 
         // perform some logic for example, process the payment of the shiping cost
         // get storage conditions from storage service
 
         // send the package order to the transport provider
-        CareerRouter.getInstance().sendPackage(packaInfo);
+        CareerRouter.getInstance().sendPackage(packageInfo);
 
         res.status(200).json({ message: 'Package sent successfully' });
     } catch (error) {

@@ -33,12 +33,14 @@ export class CareerRouter {
             default:
                 packageToSend.career = 'Invalid career';
         }
-
+        // que problemas futuros tendría este switch?
 
         console.log(packageToSend);
     }
 
     private sendPackageDHL(packageToSend: Package) {
+        // sacar aqui una lista de problemas futuros que tendría esté método?
+
         console.log('Sending package with DHL');
     }
 
@@ -54,5 +56,5 @@ export class CareerRouter {
         console.log('Sending package with UPS');
     }
 
-    
+    // finalmente que principios de diseño se estarían violando en este código?
 }
