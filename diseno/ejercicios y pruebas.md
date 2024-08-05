@@ -38,3 +38,31 @@ Ellivhsan es una plataforma web de shopping en línea que vende productos para e
 - entrega 31 de Julio, 9pm, correo: vsurak@gmail.com, subject: diseno - ejercicio #2
 - en caso de que lo haga en papel enviar las fotografías legibles del código
 
+## ejercicio #3 - design patterns observer, factory, builder
+
+el siguiente diseño se ha implementado en un mobile application, el TrayectoryResolver en su método resolve va resolviendo K tareas, mantiene el id, número y estado de la tarea actual, así como la lista de tareas. El Dashboard de la aplicación es un Thread que cada WAIT_FOR_TRAYECTORY milisegundos chequea la tarea actual para refrescar el estado en la pantalla, y además, compara la tarea actual con la lista de tareas para determinar si ya se terminó la última y con ello saber si toda la trayectoria se resolvió y así mostrar el resultado final calculado por TractoryResolver. Modifique el diseño actual para que utilice Observer pattern y permita tener varios tipos de Resolvers no solo de trayectoria utilizando ya sea AbstractFactory o Builder pattern. 
+
+![Image](./images/TrayectoryResolver.png)
+
+- el entregable será el nuevo diseño de clases mejorado con los patrones, sea claro en el diagrama con los métodos que participan en los patrones, además de respetar las simbologías para que sea leíble todas las partes del patrón y sus interacciones. El entregable es una imagen legigle con el diseño de objetos mejorado.
+- el ejercicio es individual
+- entrega jueves 8 de Agosto, 10pm, correo: vsurak@gmail.com, subject: diseno - ejercicio #3 
+- usar algun diagramador de UML 
+
+
+
+## ejercicio #4 - design patterns bridge, adapter
+
+bromelia es una aplicación que genera icons basados en imágenes existentes de dos proveedores. BromeliaPictInventory es la clase encargada de hablar tanto con el api de pixbay https://pixabay.com/api/docs/ y también con el api de unplash https://unsplash.com/documentation; para ambos casos se utilizan las funcionalides de search photos de ambas api's y así juntar ambos resultados en las top 10 fotos ganadoras según ciertos criterios de evaluación de las carácteristicas e información de las fotos retornadas por cada api. Sin embargo el código en BromeliaPictInventory se ha vuelto muy complicado y hay que estar lideando con las cosas que se pueden hacer en un api u en otro. Por esa razón, se le ha encomendado que implemente un patrón adapter para que sea usado desde BromeliaPictInventory eliminando por completo las diferencias entre las apis. Adicionalmente, ahora se quiere tener varios algoritmos de selección y puntuación de las fotos, para que no sea ya solo el top 10 y la evaluación hardcoded que existe de las fotos resultantes, si no que mas bien, el usuario desde Bromelia pueda seleccionar alguna técnica o tendencia, y así el algoritmo que se aplique sea diferente, aumentando la calidad del resultado. Para ello, se le ha pedido que abstraiga esa funcionalidad que también está en la clase BromeliaPictInventory, en el método, rankPhotosResult(listaFotosUnplash, listaFotosPixBay), para que ahora se puedan utilizar con un patrón bridge desde la misma clase BromeliaPictInventory.
+
+- realice la reorganización del nuevo código utilizando el patrón bridge y adapter
+- de las apis puede asumir algunas llamadas según la especificación de las apis de search photos de ambas plataformas, más no debe implementarse la llamada, solo saber cuál método del api es y sus parámetros de ser necesario
+- debe ser claro la adaptación que se hace de las dos apis en el adapter y el uso de dicha adaptación en la clase BromeliaPictInventory, tanto para la información que se envía como la que se recibe
+- debe ser claro la transformación que sufre la función rankPhotosResult que ahora podría ser valorada por K algoritmos, tome en cuenta que ya se hizo la adaptación de las api
+- haga el solution en el lenguaje de su preferencia
+- cree un folder "naive" para que se vea la estructura del código actual sin aplicar los cambios
+- cree un folder "patternized" para que se vea la estructura nueva propuesta del código aplicando los patrones
+- este ejercicio puede ser en parejas
+- entrega sábado 10 de Agosto, 11am, correo: vsurak@gmail.com, subject: diseno - ejercicio #4 
+- contenido: los integrantes del ejercicio, link al repositorio de git con la solución 
+
