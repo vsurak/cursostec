@@ -51,28 +51,26 @@ Below are two screenshots corresponding to the two applications. They contain nu
   
 - **#4**: Permission to display the "Sales Target Progress" card. Only members of C-Level can see it.
 
-#### para realizar los pasos anteriores se da a continuación una guía a alto nivel
+#### To carry out the previous steps, a high-level guide is provided below
 
-1. Ingrese al FGA de auth0 de Okta y cree su cuenta free trial
-2. Cree su primer store de autorización
-3. Haga login en el dashboard de FGA
-4. Siga la guía del getting started, diseñe el modelo, cree las tuplas de las reglas
-5. Pruebe el modelo y las reglas: pregunte si un grupo tiene cierto permiso en cierta aplicación, si un usuario tiene permiso de ingreso en cierta aplicación, si un usuario tiene cierto permiso en cierta aplicación que fué heredado por pertenecer a cierto grupo; tanto para casos fallidos como correctos. 
-6. Una vez que su modelo y reglas funciona, cierre la prueba de concepto haciendo las llamadas desde postman
-7. Siga los pasos en el dashboard para crear un cliente, dicho cliente solo va a hacer security checks, no va a modificar ninguna configuración de la autorización.
-8. Una vez creado el cliente ya cuenta con un modelid, client_id y client_secret
-9. Obtenga un acecss token por medio del api /oauth/token que salen en las instrucciones en la ayuda del api de FGA, siempre todo por medio de postman
-10. Con dicho access token proceda a hacer los checks, simulando lo mismo que probó en el paso 5 pero por medio del api llamandose desde postman, /stores/{{store_id}}/check
+1. Access the FGA of Auth0 by Okta and create your free trial account.
+2. Create your first authorization store.
+3. Log in to the FGA dashboard.
+4. Follow the getting started guide, design the model, and create the rule tuples.
+5. Test the model and rules: ask if a group has a certain permission in a specific application, if a user has access permission in a particular application, or if a user has a certain permission in an application inherited from belonging to a specific group; both for failed and successful cases.
+6. Once your model and rules are working, finalize the proof of concept by making the API calls from Postman.
+7. Follow the steps in the dashboard to create a client. This client will only perform security checks and will not modify any authorization settings.
+8. Once the client is created, you will have a model ID, client ID, and client secret.
+9. Obtain an access token through the /oauth/token API, as described in the FGA API help instructions, always using Postman.
+10. With the access token, proceed to make the checks, simulating the same tests from step 5 but through the API using Postman, /stores/{{store_id}}/check.
 
+**Other reference links**
 
-**otros links de referencia**
+Okta Developer REST API Reference: https://developer.okta.com/docs/reference/rest/
 
-Okta developer REST api reference, https://developer.okta.com/docs/reference/rest/
-
-**indicaciones finales**
-Fecha de revisión contra cita:  19, 20 y 21 de agosto. 
-El profesor asignará citas de revisión. 
-
+**Final instructions**
+Review dates: August 19, 20, and 21.
+The professor will assign review appointments.
 
 # caso #2, 7%, UX test un caso de la vida real
 
