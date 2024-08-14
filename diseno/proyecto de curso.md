@@ -50,3 +50,5 @@ es necesario empezar el proyecto encontrando un muy buen problema. para lograr d
 
 fecha de entrega stage #1 : del 30 de agosto al 4 de setiembre, esto es para hacer el submit del formulario. recuerde que puede hacer varios submits de forma grupal o individual. 
 
+- esta entrega no tiene ningún valor porcentual, pero es mandatorio para poder iniciar con el proceso de diseño del proyecto que se dará en las etapas posteriores 
+
