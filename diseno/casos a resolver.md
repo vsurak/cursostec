@@ -97,7 +97,7 @@ Se va a realizar el ejercicio simulando una situación del mundo real. El profes
 9. documente en un readme.md file el UI, el proceso que se seguió para el test de usabilidad, los sujetos de prueba, los resultados obtenidos de las pruebas de usabilidad y un listado de las correciones que le harían al UI para mejorar los problemas encontrados. Realice la investigación respectiva para ver ejemplos de como mostrar esta información. 
 
 Suba el MD file a un repositorio de git y envíe ese link como su entregable final del caso.
-Fecha de entrega: 
+Fecha de entrega: viernes 30 de agosto, 8pm 
 Email: vsurak@gmail.com 
 Subject: Caso #2 - LightSoul
 Contenido: link al repositorio de git con el readme.md, lista de integrantes 
