@@ -66,3 +66,18 @@ bromelia es una aplicación que genera icons basados en imágenes existentes de 
 - entrega sábado 10 de Agosto, 11am, correo: vsurak@gmail.com, subject: diseno - ejercicio #4 
 - contenido: los integrantes del ejercicio, link al repositorio de git con la solución 
 
+
+## ejercicio #5 - tiktok resumen
+
+el profesor va asigar personas para fabricar pequeños reels de entre 20 a 35 segundos para resumir los temas vistos en clase a lo largo del semestre. dicha asignación se hará en las diferentes clases, y los tiktoks le serán enviados al profesor para su validación, para luego ser subidos a un tiktok que proporcionará el profesor y así verlos durante la clase. dichos clips van a ser evaluados y al final de semestre los top 3 tiktos que hayan obtenido mayor cantidad de likes, tendrán respectivamente 4%, 3% y 2% adicional a la entrega de actas. 
+
+el tema central es res, umir/explicar un tópico visto en clase:
+
+-- para el 25 de agosto
+- ux, ILAMA GAMBOA NAOMI JOUSEPH
+- authentication, KAUFFMANN PORCAR ERICK
+- MFA, VENEGAS MASIS CARLOS ANDRES
+- authorization, CABRERA TABASH SAMIR FERNANDO
+- FGA, ACUÑA CAMPOS CRISTOPHER ANTONIO
+- dependency injection, WONG HERRERA MELANIE CRISTINA
+
