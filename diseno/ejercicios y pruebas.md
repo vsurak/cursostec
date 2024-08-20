@@ -81,3 +81,30 @@ el tema central es res, umir/explicar un tópico visto en clase:
 - FGA, ACUÑA CAMPOS CRISTOPHER ANTONIO
 - dependency injection, WONG HERRERA MELANIE CRISTINA
 
+
+## ejercicio #6 - encuentre los REST endpoints
+
+el profesor va a crear grupos de trabajo a los que les va a asignar una de las siguientes pantallas. proceda a identificar y definir todos los endpoints de un REST api que permita implementar dicha pantalla. cada endpoint deberá incluir:
+
+- resource + path 
+- method
+- headers
+- payload in json
+- response in json
+- justify the correctness of this endpoint
+
+### airbnb book
+![Image](./images/rest#1.png)
+
+### Settings
+![Image](./images/rest#2.png)
+
+### chatgpt
+![Image](./images/rest#3.png)
+
+### rent a car
+![Image](./images/rest#4.png)
+
+### person profile
+![Image](./images/rest#5.png)
+
