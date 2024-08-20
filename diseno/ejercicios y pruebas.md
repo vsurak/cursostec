@@ -93,17 +93,18 @@ el profesor va a crear grupos de trabajo a los que les va a asignar una de las s
 - response in json
 - justify the correctness of this endpoint
 
-<img src="./images/rest1.png" alt="airbnb book" width="50%" heigth="50%" />
+### airbnb book
+<img src="./images/rest1.png" width="60%" heigth="60%" />
 
 ### Settings
-![Image](./images/rest2.png)
+<img src="./images/rest2.png" width="60%" heigth="60%" />
 
 ### chatgpt
-![Image](./images/rest3.png)
+<img src="./images/rest3.png" width="60%" heigth="60%" />
 
 ### rent a car
-![Image](./images/rest4.png)
+<img src="./images/rest4.png" width="60%" heigth="60%" />
 
 ### person profile
-![Image](./images/rest5.png)
+<img src="./images/rest5.png" width="60%" heigth="60%" />
 
