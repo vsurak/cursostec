@@ -94,17 +94,17 @@ el profesor va a crear grupos de trabajo a los que les va a asignar una de las s
 - justify the correctness of this endpoint
 
 ### airbnb book
-![Image](./images/rest#1.png)
+![Image](./images/rest1.png)
 
 ### Settings
-![Image](./images/rest#2.png)
+![Image](./images/rest2.png)
 
 ### chatgpt
-![Image](./images/rest#3.png)
+![Image](./images/rest3.png)
 
 ### rent a car
-![Image](./images/rest#4.png)
+![Image](./images/rest4.png)
 
 ### person profile
-![Image](./images/rest#5.png)
+![Image](./images/rest5.png)
 
