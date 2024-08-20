@@ -93,8 +93,7 @@ el profesor va a crear grupos de trabajo a los que les va a asignar una de las s
 - response in json
 - justify the correctness of this endpoint
 
-### airbnb book
-![Image](./images/rest1.png)
+<img src="./images/rest1.png" alt="airbnb book" width="50%" heigth="50%" />
 
 ### Settings
 ![Image](./images/rest2.png)
