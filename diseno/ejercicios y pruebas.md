@@ -108,3 +108,10 @@ el profesor va a crear grupos de trabajo a los que les va a asignar una de las s
 ### 5. person profile
 <img src="./images/rest5.png" width="60%" heigth="60%" />
 
+## ejercicio #7 - software architech elevator
+1. según la lectura, mencione al menos 3 errores comunes en las organizaciones con respecto al alcance, vision o responsabilidades del arquitecto de software?
+
+2. siguiendo la analogía del elevador, imagine una organización como el ITCR, cuáles podrían ser 7 de los pisos?
+
+Enviar respuesta al correo vsurak@gmail.com, antes de las 11:20am, subject: diseno - ejercicio #7
+
