@@ -115,3 +115,219 @@ el profesor va a crear grupos de trabajo a los que les va a asignar una de las s
 
 Enviar respuesta al correo vsurak@gmail.com, antes de las 11:20am, subject: diseno - ejercicio #7
 
+## ejercicio #8 y #9 - microservices design
+
+Dado el siguiente api documentada en este swagger file
+```yml
+openapi: 3.1.0
+info:
+  title: E-commerce API
+  version: 1.0.0
+  description: A mockup API for an e-commerce platform.
+
+paths:
+  /goods:
+    get:
+      summary: List all goods
+      responses:
+        '200':
+          description: A list of goods
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Good'
+
+  /goods/search:
+    get:
+      summary: Search goods
+      parameters:
+        - name: query
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Good'
+
+  /cart:
+    post:
+      summary: Add item to cart
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CartItem'
+      responses:
+        '201':
+          description: Item added to cart
+
+    delete:
+      summary: Remove item from cart
+      parameters:
+        - name: itemId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Item removed from cart
+
+    get:
+      summary: Review shopping cart before checkout
+      responses:
+        '200':
+          description: Shopping cart details
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CartItem'
+
+  /reviews/goods:
+    post:
+      summary: Add review for a good
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Review'
+      responses:
+        '201':
+          description: Review added
+
+  /reviews/sellers:
+    post:
+      summary: Add review for a seller
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Review'
+      responses:
+        '201':
+          description: Review added
+
+  /reviews:
+    get:
+      summary: Retrieve reviews for a list of goods
+      parameters:
+        - name: goodsIds
+          in: query
+          required: true
+          schema:
+            type: array
+            items:
+              type: string
+      responses:
+        '200':
+          description: Reviews for the specified goods
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Review'
+
+  /compare:
+    get:
+      summary: Compare goods with other platforms
+      parameters:
+        - name: goodId
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Comparison results
+          content:
+            application/json:
+              schema:
+                type: object
+
+  /checkout:
+    post:
+      summary: Checkout
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Checkout'
+      responses:
+        '200':
+          description: Checkout successful
+
+components:
+  schemas:
+    Good:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        price:
+          type: number
+        description:
+          type: string
+
+    CartItem:
+      type: object
+      properties:
+        goodId:
+          type: string
+        quantity:
+          type: integer
+
+    Review:
+      type: object
+      properties:
+        userId:
+          type: string
+        rating:
+          type: integer
+        comment:
+          type: string
+
+    Checkout:
+      type: object
+      properties:
+        cartId:
+          type: string
+        paymentMethod:
+          type: string
+```
+
+haga un diagrama de bloques donde se transforme este REST api monolítico a una arquitectura de microservices, asegúrese que su diagrama visualmente y con la menor cantidad de texto posible logre mostrar lo siguiente:
+
+- protocolos de comunicación usados
+- tecnologías y lenguajes de programación a usar en las diferentes capas de la arquitectura
+- cloud service utilizado
+- cloud services requeridos usando la misma simbología que use el proveedor de cloud (aws, azure, gcp o digital ocean)
+- servicios de authenticación, authorizacion, sesiones, balanceo de cargas
+- si se trabaja en una sola base de datos o de varias, dejando clara la principal ventaja del esquema seleccionado
+- conectividad con servicios de terceros
+
+se sabe además que este api es para un marketplace donde se comercializan diferentes tipos de bienes, y que actualmente procesa de 4000000 a 7000000 millones de requets de búsqueda de bienes diarios, de los cuales entre el 4% al 13% son conversiones de compra en el marketplace y de un 1% a 2.5% son conversiones en otros sitios de compra cuando se usa la operación de comparativa. 
+
+- el ejercicio se puede hacer en parejas. 
+- fecha de entrega: viernes 6 de septiembre, 2024 antes de media noche. 
+- [citas de revisión](https://outlook-sdf.office.com/bookwithme/user/7e85ed0aa69344e48d8dfd2b5da9d877@akurey.com/meetingtype/qlN1e15PykKdYs4Haqekmw2?bookingcode=9131d046-64eb-40dd-be92-a8c5f2428af8&anonymous&ep=mlink)
+- entregable: un diagrama en pdf, miro, canva o https://app.diagrams.net/ tal que los integrantes del trabajo puedan explicar la solución planteada a nivel técnico y estratégico. 
+
+
