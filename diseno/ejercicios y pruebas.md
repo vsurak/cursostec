@@ -329,5 +329,3 @@ se sabe además que este api es para un marketplace donde se comercializan difer
 - fecha de entrega: viernes 6 de septiembre, 2024 antes de media noche. 
 - [citas de revisión](https://outlook-sdf.office.com/bookwithme/user/7e85ed0aa69344e48d8dfd2b5da9d877@akurey.com/meetingtype/qlN1e15PykKdYs4Haqekmw2?bookingcode=9131d046-64eb-40dd-be92-a8c5f2428af8&anonymous&ep=mlink)
 - entregable: un diagrama en pdf, miro, canva o https://app.diagrams.net/ tal que los integrantes del trabajo puedan explicar la solución planteada a nivel técnico y estratégico. 
-
-

@@ -102,3 +102,58 @@ Email: vsurak@gmail.com
 Subject: Caso #2 - LightSoul
 Contenido: link al repositorio de git con el readme.md, lista de integrantes 
 
+# caso #3, 4%, entrevista para puesto de backend engineer
+
+_instituto tecnológico de costa rica_, escuela de computación  
+_diseño de software_  
+_prof. rodrigo núñez_  
+_tipo:_ individual 
+
+## descripción
+usted es un ingeniero de software especializado en backend, por más de 10 años ha trabajado en varias empresas y proyectos que han usado todas las tecnologías de backend presentes en este [artículo](https://ellow.io/top-backend-technologies/). usted va a tener una entrevista de trabajo para un puesto de backend engineer, cree su curriculum ficticio utilizando una plantilla similar a las existentes en este [link](https://resumeworded.com/backend-developer-resume-example). asegúrese que en la experiencia laboral sea claro:
+- el role que desempeñaba
+- en que consistía el proyecto 
+- el usó que le dió a cada una de las tecnologías requeridas en el proyecto para solucionar el reto
+
+el objetivo es que entienda el role de todas esas tecnologías en proyectos de software, no tiene que estudiar o aprender ninguna de esas, con la información del artículo es suficiente. una vez que tenga su CV listo proceda:
+
+1. enviar el CV a vsurak@gmail.com , con el subject: caso #3 - backend engineer
+2. fecha máxima para enviar el CV el miércoles 11 de septiembre, 11-09-2024
+3. [agende](https://outlook-sdf.office.com/bookwithme/user/7e85ed0aa69344e48d8dfd2b5da9d877%40akurey.com/meetingtype/3328d64e-3697-4577-b711-5dcc21a5ad02?bookingcode=3de07cc0-e5ea-4e94-8d1d-b03d3d27ca41&anonymous) la entrevista de trabajo para el puesto
+4. durante la entrevista solo se le haran preguntas sobre las tecnologías del artículo, las cuales deben aparecer en el curriculum, espere preguntas del tipo:
+- qué lenguaje de programación usaron para el backend del proyecto XYZ
+- por qué utilizaron la tecnología X en el proyecto Y
+- por qué utilizaron X y no Y en el proyecto Z
+- que ventajas/desventajes tuvieron con la tecnología X en el proyecto Y
+- explíque qué fué lo que se hizo tecnológicamente hablando en el proyecto X
+
+# caso #4, 9%, conexiones de datos y concurrencia en REST
+
+_instituto tecnológico de costa rica_, escuela de computación  
+_diseño de software_  
+_prof. rodrigo núñez_  
+_tipo:_ grupos del proyecto 
+
+## descripción
+
+en conjunto con el profesor determine al menos uno de los motores de bases de datos a utilizar en su proyecto. luego investigue para algún lenguaje de su preferencia entre c#, java, go, python o typescript las tecnologías disponibles en ese lenguaje para la implementación de un servicio REST.
+
+una vez que haya determinado tanto la base de datos, el lenguaje de programación y el framework para desarrollar el rest proceda:
+
+1. cree una tabla o collection en la base de datos y llenela con 60000 registros ficticios
+2. agregue un endpoint a su REST api que dado un query y o parámetros retorne aproximadamente un 35% de los registros
+3. agregue otro endpoint a su REST api que haga exactamente lo mismo del punto #2 y que haga uso de un fixed size connection pool para el acceso de la base de datos
+4. agregue otro endpoint a su REST api que haga exactamente lo mismo del punto #2 y #3 y agregue una cache por medio de un redis server, de tal forma que los parámetros del endpoint sirvan de llave para la cache, permitiendo que hayan cache hits y fails entre los requests
+5. una vez terminado y probados los endpoints dockerice la solución, usando un container para el api, otro para redis y otro para redis. utilice docker compose para dockerización. este paso se pudo haber hecho desde el paso #1.
+6. utilizando postman o jmeter, proceda a ejecutar un test de stress sobre la solución implementada, atacando a los 3 endpoints, configure la prueba para que se simulen 20 clientes (threads) concurrentes haciendo los requests continuamente con una pausa de 233ms entre cada request de cada thread. la prueba completa corre durante 1 minuto.
+7. extraiga los resultados obtenidos por el software de pruebas (jmeter o postman), de lo que tenga para monitorear conexiones de base de datos, cpu y memoria del lado de los servidores, tabule toda la información asegurándose de tener medidas de las variables:
+- cpu, memoria y conexiones de la base de datos para cada endpoint
+- cpu, memoria y conexiones de redis para cada endpoint
+- cpu, memoria y conexiones del backend api para cada endpoint
+- tiempo promedio de respuesta para cada endpoint
+8. emita las conclusiones cuantitativas basadas en los resultados obtenidos que contrasten los cambios de rendimiento usando el framework seleccionado para REST, la incorporación de pool, y de cache respectivamente
+9. suba todo el proyecto a un repositorio de git y documente todo lo anterior en el readme.md 
+
+- fecha para el último commit: 21-09-2024, 21 de setiembre a las 10am
+- la revisión será con cita con el profesor 
+- cualquier sospecha de copia implicará una nota de cero
