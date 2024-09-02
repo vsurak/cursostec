@@ -324,7 +324,7 @@ haga un diagrama de bloques donde se transforme este REST api monolítico a una 
 - conectividad con servicios de terceros
 - la distribución de endpoints por microservicio
 
-se sabe además que este api es para un marketplace donde se comercializan diferentes tipos de bienes, y que actualmente procesa de 4000000 a 7000000 millones de requets de búsqueda de bienes diarios, de los cuales entre el 4% al 13% son conversiones de compra en el marketplace y de un 1% a 2.5% son conversiones en otros sitios de compra cuando se usa la operación de comparativa. 
+se sabe además que este api es para un marketplace donde se comercializan diferentes tipos de bienes, y que actualmente procesa de 4 a 7 millones de requets de búsqueda de bienes diarios, de los cuales entre el 4% al 13% son conversiones de compra en el marketplace y de un 1% a 2.5% son conversiones en otros sitios de compra cuando se usa la operación de comparativa. 
 
 - el ejercicio se puede hacer en parejas. 
 - fecha de entrega: viernes 6 de septiembre, 2024 antes de media noche. 
