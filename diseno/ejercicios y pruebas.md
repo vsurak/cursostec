@@ -330,3 +330,18 @@ se sabe además que este api es para un marketplace donde se comercializan difer
 - fecha de entrega: viernes 6 de septiembre, 2024 antes de media noche. 
 - [citas de revisión](https://outlook-sdf.office.com/bookwithme/user/7e85ed0aa69344e48d8dfd2b5da9d877@akurey.com/meetingtype/qlN1e15PykKdYs4Haqekmw2?bookingcode=9131d046-64eb-40dd-be92-a8c5f2428af8&anonymous&ep=mlink)
 - entregable: un diagrama en pdf, miro, canva o https://app.diagrams.net/ tal que los integrantes del trabajo puedan explicar la solución planteada a nivel técnico y estratégico. 
+
+
+## ejercicio #10 - conexion pool and cache
+el profesor va a crear grupos aleatorios con un tema asignado, para el cuál deberá investigar y explicarle al grupo en froma corta, como programaría y configuraría dicho tema para ser usado en el caso #4.
+
+Temas:
+- conexion pool en java de tamaño fijo
+- conexion pool en python con tamaño dinámico
+- monitoreo de un conexion pool hecho en c#
+- cache en redis accedida desde python
+- cache en memcached accedida desde typescript
+- cache en redis accedida desde typescript
+
+El resultado deberá pegarlo en el text channel en discord del curso, agregando el nombre de los integrantes del grupo.
+
