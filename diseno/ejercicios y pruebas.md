@@ -333,7 +333,12 @@ se sabe además que este api es para un marketplace donde se comercializan difer
 
 
 ## ejercicio #10 - conexion pool and cache
-el profesor va a crear grupos aleatorios con un tema asignado, para el cuál deberá investigar y explicarle al grupo en froma corta, como programaría y configuraría dicho tema para ser usado en el caso #4.
+el profesor va a crear grupos aleatorios con un tema asignado, para el cuál deberá investigar y explicarle al grupo como programaría y configuraría dicho tema para ser usado en el caso #4. Cubra en su explicación:
+- librerías disponibles y mejor calificadas para realizar dicha tarea en dicho lenguaje
+- explique los parámetros que se puedan configurar en las instrucciones de forma simple para sus compañeros
+- código ejemplo debidamente comentado 
+- dos bondades del código expuesto
+- un problema o limitante del código expuesto
 
 Temas:
 - conexion pool en java de tamaño fijo
@@ -343,5 +348,5 @@ Temas:
 - cache en memcached accedida desde typescript
 - cache en redis accedida desde typescript
 
-El resultado deberá pegarlo en el text channel en discord del curso, agregando el nombre de los integrantes del grupo.
+El resultado deberá pegarlo en el text channel en discord del curso, agregando el nombre de los integrantes del grupo. Fecha y hora máxima para pegar este contenido: Viernes 13 de setiembre, 9:15am. 
 
