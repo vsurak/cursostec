@@ -110,7 +110,7 @@ _prof. rodrigo núñez_
 _tipo:_ individual 
 
 ## descripción
-usted es un ingeniero de software especializado en backend, por más de 10 años ha trabajado en varias empresas y proyectos que han usado todas las tecnologías de backend presentes en este [artículo](https://ellow.io/top-backend-technologies/). usted va a tener una entrevista de trabajo para un puesto de backend engineer, cree su curriculum ficticio utilizando una plantilla similar a las existentes en este [link](https://resumeworded.com/backend-developer-resume-example). asegúrese que en la experiencia laboral sea claro:
+usted es un ingeniero de software especializado en backend, por más de 10 años ha trabajado en varias empresas y proyectos que han usado todas las tecnologías de backend presentes en este [artículo](https://ellow.io/top-10-backend-technologies-2024/). usted va a tener una entrevista de trabajo para un puesto de backend engineer, cree su curriculum ficticio utilizando una plantilla similar a las existentes en este [link](https://resumeworded.com/backend-developer-resume-example). asegúrese que en la experiencia laboral sea claro:
 - el role que desempeñaba
 - en que consistía el proyecto 
 - el usó que le dió a cada una de las tecnologías requeridas en el proyecto para solucionar el reto
