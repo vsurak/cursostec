@@ -52,3 +52,91 @@ fecha de entrega stage #1 : del 30 de agosto al 4 de setiembre, esto es para hac
 
 - esta entrega no tiene ningún valor porcentual, pero es mandatorio para poder iniciar con el proceso de diseño del proyecto que se dará en las etapas posteriores 
 
+
+## stage #2 - diseño de arquitectura - 6%
+
+para este punto ya usted tuvo la sesión de trabajo con el profesor en la que se hizo un primer diseño de arquitectura de alto nivel para su proyecto. proceda ahora a seleccionar una herramienta que le permita realizar diagramas y que a la vez le permita realizar trabajo colaborativo con sus compañeros de grupo, como por ejemplo, canva, miro, diagram.net o otro similar. procedan entonces entre los integrantes del grupo a crear el diagrama de arquitectura general de su proyecto, siga los siguientes lineamientos:
+
+1. durante la sesión con el profesor quedaron aspectos técnicos que debían investigar y decidir como grupo, lo primero es que todos esos pendientes esten definidos.
+
+2. consulte esta imagen para determinar cuáles patrones parecen tener sentido dentro de su arquitectura y que componentes tecnológicos son los que van a ser parte de dichos patrones. valide esto con el profesor. no se limite a estos patrones, pueden existir más:
+
+![Image](./images/patronesdisenoarqui.gif) 
+
+https://learn.microsoft.com/en-us/azure/architecture/patterns/
+
+3. decidan la orientación de su diagrama de arquitectura, ya sea que se va a diagramar de izquierda a derecha, o bien de arriba abajo, o de abajo hacia arriba. siendo el punto de inicio de referencia el frontend, hasta llegar al punto más profundo que sería la capa de datos.
+
+4. seleccione una paleta de colores a utilizar que permita agrupar elementos dependiendo de su alcance y/o capas, asignando un color a cada grupo, ejemplos de grupos: frontend, middlewares, backend, 3rd party services, security, data, cloud platform, cloud services, infraestructure.
+
+5. identifique que componentes de la arquitectura son transversales y cuales de los elementos activos de la arquitectura requieren accederlos, de tal forma que se puedan diagramar transversalmente para indicar al lector del diagrama que dicho componente transversal es accesible desde esos elementos activos y no requerir entonces de diagramar líneas, haciendo así el diagrama más limpio. Por ejemplo, un elemento transveral puede ser una capa de authentication y authorization, si dicha capa transversal es usada por el FE y los services, entonces no hace falta tirar lineas de esos elementos activos (FE y services) hacia esa capa de seguridad, si no por el contrario solo se diagrama de forma transversal de forma que el ancho (en caso de izquierda derecha), o la altura (en caso de arriba abajo o abajo arriba) sean del mismo tamaño. 
+
+6. ahora proceda a diagramar todos los bloques del diagrama con sus respectivos nombres, colores, ubicación y orientación decidida en los puntos anteriores. 
+
+7. conecte los bloques usando flechas sólidas en un solo color, de tal forma que si una flecha es A--->B, significa que el componente arquitectónico A llama de alguna forma al componente arquitectónico B.
+
+8. para todos los servicios del cloud platform seleccionado, identifique su nombre oficial y su ícono/logo en diagramas de arquitectura
+
+9. Una vez terminado el diagrama proceda a validarlo con el siguiente checklist
+
+- [ ] se respetó la paleta de colores acordada por el grupo 
+- [ ] no hay exceso de flechas que se pudieron evitar con alguna transversalidad 
+- [ ] los componentes que son propios del cloud platform están representados con su ícono
+- [ ] todo aquello que sea programado tiene claro el lenguaje, frameworks y/o librerías a utilizar
+- [ ] el uso de mayúsculas y minúsculas es uniforme
+- [ ] los contrastes de color y letras permiten una clara lectura del diagrama
+- [ ] son claros los protocolos de comunicación y los formatos de transmisión 
+- [ ] en el diseño de la arquitectura se han eliminado cuellos de botella
+- [ ] en el diseño de la arquitectura se han eliminado cualquier "single point of failure"
+- [ ] en caso de existir más de una base de datos diferente es claro el contexto que almacena cada una
+- [ ] es posible distinguir la técnica de escalabilidad que se va implementar 
+- [ ] es claro si es server side o client side rendering
+- [ ] los tipos de token que se van a validar y enviar están en el diagrama
+- [ ] los patrones arquitectónicos son evidentes y enmarcados con línea punteada clara 
+
+para este diagrama tendrá una revisión preliminar con el profesor la cuál deberá solicitarla a mas tardar para el 23 de setiembre. 
+
+proceda a crear un repositorio en github para el proyecto donde todos sus compañeros tengan acceso y que el profesor también tenga derecho de lectura. cree un readme.md para el proyecto y coloque en el mismo
+
+- heading de primer nivel, nombre del proyecto y marca
+- descripción breve del proyecto
+- lista de requerimientos de alto nivel planteados en la sesión de trabajo con el profesor, agrupados cada requerimiento por los de prioridad 1, 2 y 3.
+- heading de segundo nivel, diagrama de arquitecura, y ponga aquí el respectivo diagrama terminado
+- fecha y hora del último commit: 28 de setiembre, a media noche. 
+- de la nota de este diagrama, 30 puntos corresponden a la participación en la sesión de trabajo presencial para el diseño preliminar de arquitectura que tuvieron con el profesor
+
+## stage #3 - problem definition and ideation, 4%
+
+el objetivo de esta etapa es determinar cuál es el problema más importante de todo el sistema a resolver, en cuyo punto toda la importancia del sistema recae y donde es necesario realizar la innovación, a esto le vamos a llamar el problem statement, y para encontrarlo vamos a realizar lo siguiente. 
+
+1. Star from the end: entre los integrantes del grupo, reunirse para crear un diagrama, en el extremo derecho del diagrama va a existir lo que queremos que suceda satisfactoriamente en nuestro sistema, aquel objetivo, tarea o actividad, que define en su totalidad el éxito del proyecto y la aceptación de los usuarios por su sistema. lo escribimos en una cajita. 
+
+2. Actors: en el extremo izquierdo del diagrama, anote verticalmente todos aquellos actores que disparan acciones las cuales son necesarias para que se logre el objetivo que está a la derecha. estos actores pueden ser personas, usuarios, otros sistemas. 
+
+3. Flujo: ahora diagrame usando etiquetas y flechas los flujos de trabajo que me llevan paso a paso para que todos los actores logren llevar a cabo la completitud del objetivo o tarea final. 
+
+por ejemplo vea este diagrama 
+
+![Image](./images/design-sprint-map-737x410.jpg) 
+
+4. una vez con el diagrama listo, muéstreselo al profesor para chequearlo y haga las mejoras que se le sugieran.
+
+5. observando el diagrama cada integrante de grupo puede votar por el paso más importante de todo el flujo, el cuál va a ser el foco de esfuerzo principal del proyecto. cada integrante tiene un solo voto. para determinar el paso más importante, puede ser identificando en el diagrama aquel paso que tiene que darse mandatoriamente para que se cumpla el objetivo, o bien, podría ser el paso que es más "atractivo" para el usuario, o bien podría ser aquel paso a donde muchos de los otros pasos llegan a el, haciendo de suma importancia innovar en ese paso para simplificar el sistema. 
+
+6. una vez identificado el punto más crítico de su diagrama, el cuál todos han votado y coincidido en que ese paso es el más crítico. proceda entonces a escribir el "problem statement", el cuál ya no va a ser toda la magnitud de su sistema, si no que va a ser ese problema fundamental que ha sido identificado en el diagrama, y que ese problem statement será el norte, emblema y objetivo principal que deberá dar solución eficaz y diferenciada su sistema. 
+
+
+7. el profesor va a revisar los problem statements de los grupos
+
+8. seguidamente en clase también se va a hacer el ejercicio de los crazy 8's
+
+9. fuera de lecciones con los crazy 8s terminados proceda a:
+- cada estudiante selecciona el cuadro/idea que más le gustó
+- cada integrante le presenta a su grupo su idea seleccionada de los crazy 8s
+- los integrantes votan por la idea que más le gusto tomando en cuenta la de los compañeros
+- como grupo diseñan y pasan en limpio un storyboard que sería la solución principal que se va implementar en el proyecto, el storyboard deberá tener de 3 a 7 frames máximo
+- info adicional https://miro.com/es/storyboard/que-es-storyboard/ , https://www.bing.com/images/search?q=como+hacer+un+storyboard&form=HDRSC4&first=1 
+
+10. agregue en el md file una sección de segundo nivel para incorporar el problem statement y la o las imágenes del storyboard.
+
+fecha para el último commit: 25 de setiembre media noche
