@@ -69,7 +69,7 @@ https://learn.microsoft.com/en-us/azure/architecture/patterns/
 
 4. seleccione una paleta de colores a utilizar que permita agrupar elementos dependiendo de su alcance y/o capas, asignando un color a cada grupo, ejemplos de grupos: frontend, middlewares, backend, 3rd party services, security, data, cloud platform, cloud services, infraestructure.
 
-5. identifique que componentes de la arquitectura son transversales y cuales de los elementos activos de la arquitectura requieren accederlos, de tal forma que se puedan diagramar transversalmente para indicar al lector del diagrama que dicho componente transversal es accesible desde esos elementos activos y no requerir entonces de diagramar líneas, haciendo así el diagrama más limpio. Por ejemplo, un elemento transveral puede ser una capa de authentication y authorization, si dicha capa transversal es usada por el FE y los services, entonces no hace falta tirar lineas de esos elementos activos (FE y services) hacia esa capa de seguridad, si no por el contrario solo se diagrama de forma transversal de forma que el ancho (en caso de izquierda derecha), o la altura (en caso de arriba abajo o abajo arriba) sean del mismo tamaño. 
+5. identifique que componentes de la arquitectura son transversales y cuales de los elementos activos de la arquitectura requieren accederlos, de tal forma que se puedan diagramar transversalmente para indicar al lector del diagrama que dicho componente transversal es accesible desde esos elementos activos y no requerir entonces de diagramar líneas, haciendo así el diagrama más limpio. Por ejemplo, un elemento transveral puede ser una capa de authentication y authorization, si dicha capa transversal es usada por el FE y los services, entonces no hace falta tirar lineas de esos elementos activos (FE y services) hacia esa capa de seguridad, si no por el contrario solo se diagrama de forma transversal de forma que el ancho (en caso de izquierda derecha), o la altura (en caso de arriba abajo o abajo arriba) sean del mismo tamaño y coincidan alineadamente. 
 
 6. ahora proceda a diagramar todos los bloques del diagrama con sus respectivos nombres, colores, ubicación y orientación decidida en los puntos anteriores. 
 
@@ -96,11 +96,11 @@ https://learn.microsoft.com/en-us/azure/architecture/patterns/
 
 para este diagrama tendrá una revisión preliminar con el profesor la cuál deberá solicitarla a mas tardar para el 23 de setiembre. 
 
-proceda a crear un repositorio en github para el proyecto donde todos sus compañeros tengan acceso y que el profesor también tenga derecho de lectura. cree un readme.md para el proyecto y coloque en el mismo
+proceda a crear un repositorio en github para el proyecto donde todos sus compañeros tengan acceso y que el profesor también tenga derecho de lectura. cree un readme.md para el proyecto y documente en el readme:
 
 - heading de primer nivel, nombre del proyecto y marca
 - descripción breve del proyecto
-- lista de requerimientos de alto nivel planteados en la sesión de trabajo con el profesor, agrupados cada requerimiento por los de prioridad 1, 2 y 3.
+- lista de requerimientos de alto nivel planteados en la sesión de trabajo con el profesor, agrupados por prioridad 1, 2 y 3.
 - heading de segundo nivel, diagrama de arquitecura, y ponga aquí el respectivo diagrama terminado
 - fecha y hora del último commit: 28 de setiembre, a media noche. 
 - de la nota de este diagrama, 30 puntos corresponden a la participación en la sesión de trabajo presencial para el diseño preliminar de arquitectura que tuvieron con el profesor
