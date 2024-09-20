@@ -130,13 +130,14 @@ por ejemplo vea este diagrama
 
 8. seguidamente en clase también se va a hacer el ejercicio de los crazy 8's
 
-9. fuera de lecciones con los crazy 8s terminados proceda a:
-- cada estudiante selecciona el cuadro/idea que más le gustó
-- cada integrante le presenta a su grupo su idea seleccionada de los crazy 8s
+9. con los crazy 8s terminados, cada estudiante selecciona el cuadro/idea que más le gustó y procede a dibujarlo en mayor detalle utilizando 3 cuadros
+
+10. fuera de clase, el grupo de trabajo se reune y :
+- cada integrante le presenta a su grupo su idea detallada seleccionada de los crazy 8s, y la explica
 - los integrantes votan por la idea que más le gusto tomando en cuenta la de los compañeros
 - como grupo diseñan y pasan en limpio un storyboard que sería la solución principal que se va implementar en el proyecto, el storyboard deberá tener de 3 a 7 frames máximo
 - info adicional https://miro.com/es/storyboard/que-es-storyboard/ , https://www.bing.com/images/search?q=como+hacer+un+storyboard&form=HDRSC4&first=1 
 
 10. agregue en el md file una sección de segundo nivel para incorporar el problem statement y la o las imágenes del storyboard.
 
-fecha para el último commit: 25 de setiembre media noche
+fecha para el último commit: 28 de setiembre media noche
