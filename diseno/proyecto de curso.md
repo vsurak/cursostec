@@ -138,6 +138,6 @@ por ejemplo vea este diagrama
 - como grupo diseñan y pasan en limpio un storyboard que sería la solución principal que se va implementar en el proyecto, el storyboard deberá tener de 3 a 7 frames máximo
 - info adicional https://miro.com/es/storyboard/que-es-storyboard/ , https://www.bing.com/images/search?q=como+hacer+un+storyboard&form=HDRSC4&first=1 
 
-10. agregue en el md file una sección de segundo nivel para incorporar el problem statement y la o las imágenes del storyboard.
+11. agregue en el md file una sección de segundo nivel para incorporar el problem statement y la o las imágenes del storyboard.
 
 fecha para el último commit: 28 de setiembre media noche
