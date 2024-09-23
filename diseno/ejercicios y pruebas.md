@@ -351,11 +351,11 @@ Temas:
 El resultado deberá pegarlo en el text channel en discord del curso, agregando el nombre de los integrantes del grupo. Fecha y hora máxima para pegar este contenido: Viernes 13 de setiembre, 9:15am. 
 
 ## ejercicio #11 - evaluación en diseño de arquitectura de software
-el viernes 27 de setiembre se va a realizar durante la clase una evaluación teórica en tiempo real, para ello el profesor va a realizar 3 preguntas teóricas basadas en las lecturas ....... De forma individual el estudiante le enviará en máximo 1 minuto la respuesta al profesor por medio de un mensaje directo en discord. Las respuestas deberán ser propias del estudiante, invalidando cualquier copy/paste de las lecturas. 
+el viernes 27 de setiembre se va a realizar durante la clase una evaluación teórica en tiempo real, para ello el profesor va a realizar 3 preguntas teóricas basadas en las [lecturas](https://github.com/vsurak/cursostec/blob/master/diseno/7.%20el%20dise%C3%B1o%20de%20la%20arquitectura%20de%20software.md), puntos del 1 al 4. De forma individual, el estudiante le enviará en máximo 1 minuto la respuesta al profesor por medio de un mensaje directo en discord. Las respuestas deberán ser propias del estudiante, invalidando cualquier copy/paste de las lecturas. 
 
 ## ejercicio #12 y #13 - requerimientos no funcionales del proyecto
 
-en los grupos de trabajo del proyecto, refiérase al checklist o cuestionario para identificar los requerimientos no funcionales de un sistema ...... . Agregue en el md file de su proyecto una sección de segundo nivel con los requerimientos no funcionales de su proyecto, y conteste todas las preguntas del checklist, las respuestas deben cumplir:
+en los grupos de trabajo del proyecto, refiérase al checklist o [cuestionario para identificar los requerimientos no funcionales de un sistema](https://github.com/vsurak/cursostec/blob/master/diseno/6.%20el%20proceso%20de%20revision%20del%20diseno.md#2-en-relaci%C3%B3n-con-los-atributos-de-calidad-del-software-requerimientos-no-funcionales) . Agregue en el md file de su proyecto una sección de segundo nivel con los requerimientos no funcionales de su proyecto, y conteste todas las preguntas del checklist, las respuestas deben cumplir:
 
   - ser cuantificables cuando se trate de tamaño, tiempo, costo
   - ser específicas en cuánto a tecnologías o técnicas, cuando se trate de herramientas que se necesiten para solventar dicho requerimiento, sistemas de terceros, clouds, documentación. Todas las herramientas, lenguajes, y cualquier otra que se mencione en estas respuestas deberá coincidir con lo entregado en el diagrama de arquitectura del sistema
