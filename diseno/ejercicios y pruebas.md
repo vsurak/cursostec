@@ -350,3 +350,51 @@ Temas:
 
 El resultado deberá pegarlo en el text channel en discord del curso, agregando el nombre de los integrantes del grupo. Fecha y hora máxima para pegar este contenido: Viernes 13 de setiembre, 9:15am. 
 
+## ejercicio #11 - evaluación en diseño de arquitectura de software
+el viernes 27 de setiembre se va a realizar durante la clase una evaluación teórica en tiempo real, para ello el profesor va a realizar 3 preguntas teóricas basadas en las lecturas ....... De forma individual el estudiante le enviará en máximo 1 minuto la respuesta al profesor por medio de un mensaje directo en discord. Las respuestas deberán ser propias del estudiante, invalidando cualquier copy/paste de las lecturas. 
+
+## ejercicio #12 y #13 - requerimientos no funcionales del proyecto
+
+en los grupos de trabajo del proyecto, refiérase al checklist o cuestionario para identificar los requerimientos no funcionales de un sistema ...... . Agregue en el md file de su proyecto una sección de segundo nivel con los requerimientos no funcionales de su proyecto, y conteste todas las preguntas del checklist, las respuestas deben cumplir:
+
+  - ser cuantificables cuando se trate de tamaño, tiempo, costo
+  - ser específicas en cuánto a tecnologías o técnicas, cuando se trate de herramientas que se necesiten para solventar dicho requerimiento, sistemas de terceros, clouds, documentación. Todas las herramientas, lenguajes, y cualquier otra que se mencione en estas respuestas deberá coincidir con lo entregado en el diagrama de arquitectura del sistema
+
+fecha para el commit: viernes 4 de octubre, 8pm 
+
+
+## ejercicio #14 - discusión de caso situacional hipotético
+
+el profesor va a proceder a conversar sobre un caso en particular hipotético, los estudiantes deberán participar dando recomendaciones, sugiriendo técnicas, herramientas, diseños, prácticas de testing, documentación, refutando con base puntos de otros compañeros. cada estudiante deberá participar verbalmente al menos una vez en la discusión y el contenido de la participación definirá la nota recibida, el procesor va a tratar de refutar o cuestionar su participación en todo lo posible. Si un estudiante mencionó algún punto en particular, ya eso no podrá ser usado por otro estudiante. Para efectos de enriquecer su punto de discusión tome en cuenta:
+
+- diseño de seguridad, herramientas, técnicas, pros, cons, velocidad de desarrollo
+- diseño de frontend, tecnologías, patrones, procesos en background, ux, ui, lenguajes, velocidad de desarrollo, prioridades del negocio, el cómo diseñaría ciertos objetos
+- diseño de backend, tipos de backends, patrones, servicios cloud, servicios de terceros, problemas de rendimiento, escalabilidad, conexiones a la base de datos, reducción de costos en cloud, almacenamiento de archivos
+- diseño de datos, tipos de bases de datos, modelos de datos, cómo diseñaría ciertas tablas o colecciones, temas de rendimiento, velocidad de lectura, permisos en la base de datos
+- cloud services, que cosas se pueden aprovechar del proveedor, costos, no code, componentes que deben utilizarse 
+
+Su participación se medirá de la siguiente forma:
+- las tecnologías, herramientas y técnicas mencionadas tienen coherencia con el punto discutido, los temas del curso y técnica, 35pts
+- respaldó con criterio propio sus afirmaciones, apoyándose en algún item estudiado durante el curso 35pts
+- deja claro consecuencias positivas y/o negativas de lo que está discutiendo, proponiendo; sabe que responder ante los cuestionamientos del profesor sobre su afirmación, 30pts
+
+fecha de la actividad: miércoles 25 de setiembre en horario de clases
+
+**caso situacional**
+
+el artista neon frank va a dar una gira de conciertos en europa, latinoamérica y estados unidos durante el 2025, para un total de 37 conciertos en vivo. usted, como uno de los ingenieros de software del departamento de estrategia comercial y mercadeo del artista, está en una reunión donde se va conversar el tipo de experiencia que se quiere tener durante la gira. 
+
+el director de mercadeo inicia explicando que tradicionalmente ellos le dan material a las agencias promotoras de cada país y los lineamientos que deben seguir para el mercadeo del evento, incluyendo frases, artes, reels para redes sociales de neon frank y clips de audio que pueden usar en la promoción. sin embargo, en esta oportunidad quieren crear otros canales de vivencia con el artista, por ello las promotoras en cada país se les va a ofrecer paquetes de funcionalidades que pueden adquirir con el show, los paquetes deben incluír al menos 2 funcionalidades de la siguiente lista:
+
+- por la compra de ciertos productos del país, se dan activaciones para que se obsequien premios del artísta
+- por medio de concursos en diversas redes sociales los fans ganan puntos que les permiten obtener productos NFT del artista
+- habilitar realidad aumentada en productos patrocinadores del evento que acerquen a los fans con la personalidad del artista 
+- un sistema de rifa de citas para compra de entradas para reducir el colapso de los sistemas de compras de entradas locales del país
+- según la interacción de los fans con el contenido del evento en redes sociales puedan participar de una visita al backstage
+- distribuir tracks separados por instrumentos de algunas canciones del artísta para que músicos locales puedan crear mixes o obras que concursen para ser usadas durante el evento
+- recopilar audiencias, videos y clips de artistas locales interpretando total o parcialmente fragmentos de la música del artísta para que luego una AI filtre los top 3 para montar una improvisación en vivo con el artísta para el dia del evento
+- entre los compradores de entrada algunos resulten seleccionados para conversar 10 minutos con neon frank por whatsapp, usando un número auto generado no trackeable posterior al chat 
+- dar premios a las 3 mejores fotos tomadas por los fans del evento
+
+el departamento de mercadeo de neon frank deberá proveer la plataforma tecnológica para facilitar todas las funciones anteriores y además de quedarse con información valiosa sobre los patrocinadores, costos, participantes, tiempos, y formas de integración que hicieron las promotoras en los fans, para más adelante hacer estudios de mercado por país. 
+

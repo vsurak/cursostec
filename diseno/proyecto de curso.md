@@ -141,3 +141,11 @@ por ejemplo vea este diagrama
 11. agregue en el md file una sección de segundo nivel para incorporar el problem statement y la o las imágenes del storyboard.
 
 fecha para el último commit: 28 de setiembre media noche
+
+## stage #4 - diseño del frontend 
+
+
+## stage #5 - diseño de los datos
+
+
+## stage #6 - diseño del backend
