@@ -82,19 +82,18 @@ el tema central es res, umir/explicar un tópico visto en clase:
 - dependency injection, WONG HERRERA MELANIE CRISTINA
 
 -- para el 8 de octubre
-CALVO RODRIGUEZ KEVIN YADIR, escoja un servicio del cloud platform de su proyecto y explique como pretende usarlo en el proyecto, para lograr qué cosa y el cómo se logra eso en su proyecto usando ese servicio
 
-SALAS ARAYA ANDRES, explicar el uso que va a tener la AI en su proyecto, cuál AI va usar, una explicación de como se invoca vía API y que es lo que espera que dicha AI logre y que cosas cree que no se van a poder lograr para su proyecto usando esa AI. 
+- CALVO RODRIGUEZ KEVIN YADIR, escoja un servicio del cloud platform de su proyecto y explique como pretende usarlo en el proyecto, para lograr qué cosa y el cómo se logra eso en su proyecto usando ese servicio
 
-MASIS AAGESEN LUANY, en que consiste su proyecto y cómo ha sido el proceso de problem statement y diseño de arquitectura de alto nivel
+- SALAS ARAYA ANDRES, explicar el uso que va a tener la AI en su proyecto, cuál AI va usar, una explicación de como se invoca vía API y que es lo que espera que dicha AI logre y que cosas cree que no se van a poder lograr para su proyecto usando esa AI. 
 
-MORATAYA SANDOVAL PAMELA YARETH, un ejemplo en código del REST service de su proyecto que reciba un request, lo enrute a la lógica, y esa lógica haga un salvado en la base de datos. 
+- MASIS AAGESEN LUANY, en que consiste su proyecto y cómo ha sido el proceso de problem statement y diseño de arquitectura de alto nivel
 
-VALVERDE ARGUEDAS SAMUEL, en que consiste la técnica de crazy 8's y que uso tuvo en su proyecto
+- MORATAYA SANDOVAL PAMELA YARETH, un ejemplo en código del REST service de su proyecto que reciba un request, lo enrute a la lógica, y esa lógica haga un salvado en la base de datos. 
 
-MORA URBINA ANDRES, explicar como funciona el patron de event driven que usa https://activitypub.rocks/ 
+- VALVERDE ARGUEDAS SAMUEL, en que consiste la técnica de crazy 8's y que uso tuvo en su proyecto
 
-
+- MORA URBINA ANDRES, explicar como funciona el patron de event driven que usa https://activitypub.rocks/  
 
 
 
