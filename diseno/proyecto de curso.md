@@ -142,10 +142,79 @@ por ejemplo vea este diagrama
 
 fecha para el último commit: 28 de setiembre media noche
 
-## stage #4 - diseño del frontend 
+## alcance de cada proyecto 
+para los siguientes stages del proyecto cada grupo tendrá asignado solo cierta parte, para dicha parte es donde van a realizar los diseños que se solicitan en los stages 4, 5 y 6. 
+
+### **asignaciones:**
+
+**minchapp** 
+- visualizador que permita descubrir información de los cuidadores, ver detalles, crear un vínculo con el dueño de la casa para que este tenga la confianza de seleccionar a alguno de ellos.
+- a nivel de datos es importante los cuidadores, información de ellos, media de los cuidadores, sus redes sociales, reviews, testimonios, depósitos de garantía, rates, hoja de delincuencia y cualquier otra información que los cuidadores desen compartir acerca de sus calidades y credenciales. además lo que sea necesario para poder integrarse con la AI. 
+- a nivel de servicios lo más importante es lograr obtener la lista de los cuidadores la cual depende de filtros de usuario, queries textuales, AI, geolocalización, distancia, facilidades, credenciales, calidades, entrenamiento, reviews. tenga en cuenta que puede ser necesario hacer paginación, podría ser importante tener como tipo favoritos/like/saved cuidadores durante el proceso de búsqueda. 
+
+**placewise** 
+- las funcionalidades necesarias para poder publicar una propiedad usando tanto información detallada como medios visuales tales como fotos, videos, grabaciones, documentos, planos, experiencias en sitio, recorridos por la zona, lo que el promotor decida que puede fabricar para potenciar la propiedad
+- a nivel de datos es importante el 100% de lo requerido para publicar la propiedad, excepto detalles que tengan que ver con asuntos legales, lo importante es crear excitación por las propiedades. en el caso de promotores y vendedores la información puede ser parcial, de forma que solo sea necesario un mínimo para poder hacer la publicación. la interacción con redes sociales, paginación podría ser necesario tomarlos en cuenta.
+- a nivel de servicios solo aquello necesario para subir la propiedad de forma parcial y total, esto es porque podría ser que no todo el contenido esté listo en un solo momento, haciendo necesario que se vaya subiendo información parcialmente y hasta cierto momento el promotor decide publicar la propiedad
+- tenga en cuenta que para un promotor, a nivel de UI, datos y servicios; podría estar trabajando en varias propiedades al mismo tiempo
+- dejar las previstas en los pasos anteriores para la integración de la AI
+
+**aiwoodworks** 
+- creación del diseño basado en prompts únicamente, sin imágenes de referencia, con especificaciones básicas de dimensiones. luego basado en ese diseño lograr obtener un fabricante proponente que el comprador decida y se logre establecer la relación de posible contratación entre las partes. esto debe hacer en tiempo record. 
+- a nivel de datos es importante tener historia de los prompts y los resultados obtenidos, también de todas las solicitudes hechas por el comprador y todas las ofertas o trabajdos dirigidos a los fabricantes. puede que exista cierta información en el fabricante que ayude a hacer el proceso de selección y quote del fabricante mucho más rápido. como el objetivo es ponerlos a negociar y ver detalles, los datos deben llegar hasta el punto en que se establece el vínculo de comunicación entre ambos. 
+- en servicios tome en cuenta que puede requerir paginado, los tiempos de espera de los resultados de la AI, también la geo información es importante así como los filtros de búsqueda y selección. 
+
+**lab.doc** 
+
+
+**healthphone** 
+
+**auctia**
+
+**ilama**
+
+**tpet**
+
+
+## stage #4 - diseño del frontend 4%
+
+el diseño del frontend de su proyecto va a estar compuesto de 4 piezas fundamentales de diseño: UI/UX, diagrama de capas, classes del sistema y boilerplate de la estructura del proyecto. todo esta sección de diseño se documentará en el mismo repositorio del proyecto en el readme.md, cree una sección de primer nivel "Diseño del frontend" y una de segundo nivel para cada uno de los artefactos del diseño del frontend. a continuación se detallan los entregables de cada artefacto del diseño de FE, tome en cuenta que solo deberá diseñar la parte que se indique de su proyecto. 
+
+### ux/ui
+- haga el diseño de las pantallas asignadas utilizando figma
+- haga una matrix de requerimientos funcionales versus componentes visuales en las pantallas para cotejar que todas los requerimientos fueron cubiertos, las filas son requerimientos y las columnas componentes visuales 
+- haga pruebas de usabilidad con 3 usuarios que no conozcan del proyecto y que cumplan con el perfil de "user persona" definido en la etapa 1
+- documente los resultados de las pruebas en el MD file copiandolos de la herramienta de testing de UX usada
+- haga los ajustes al UI dado los resultados de las pruebas
+- documente en el md file un antes y un después de su diseño de UI
+
+### diagrama de capas
+- utilizando una herramienta de diagramación como miro, draw.io o similar, proceda a realizar un diagrama de las capas del UI, dichas capas podrían ser muy específicas dependiendo de la tecnología de frontend que haya escogido
+- también las capas deben tener componentes de alto nivel en el frontend como por ejemplo: layers de visual componentes, de lógica, modelos, controladores, templates, capas de proxies o clientes de servicios, capas de seguridad, capas de procesamiento asíncrono según la tecnología, capa de lógica, capa de local storage por ejemplo. todas las capas dependen de la tecnología específica y de su proyecto en particular. se recomienda buscar ejemplos de diseños de capas de FE para la tecnología seleccionada en varios tipos de proyectos.
+- utilice un conjunto de colores según la responsabilidad de las capas
+- el diagrama de capas se puede ver como un "zoom in" del FE en el diagrama de la arquitectura
+- si hay algún protocolo o tecnología en particular usada en alguna de las capas indíquela en el diagrama
+
+### diagrama de classes
+- haga el diagrama de las classes solicitadas utilizando el standard UML y una herramienta de graficación UML
+- para este diagrama se espera que sean claras las classes, interfaces y classes abstractas; que esté bien utilizando las relaciones de objetos en las flechas directas e indirectas, así como claras las flechas de implements y herencia
+- todas las classes deberán tener sus atributos con el tipo de dato correspondiente mas no se espera que sea 100% exhaustivo, no hace falta que el diagrama tenga los getters o setters propiamente del lenguaje
+- las classes deberan tener mención de al menos el nombre de los métodos asignados, recuerde que en OO los métodos son verbos, las classes sustantivos en singular
+- utilizando colores o cajas punteadas con labels, revele en el diagrama el uso de patrones de diseño
+
+
+### boilerplate
+- deberá crear el boilerplate que da inicio al proyecto de FE
+- el boilderplate deberá estar hecho en el lenguaje de programación seleccionado
+- cree en el repositorio un folder con el nombre de la aplicación, el cuál será su frontend
+- dentro de dicho folder suba el código fuente del boilerplate
+- en un nuevo readme.md, explique los diferentes folders y archivos del boilerplate
+- no omita archivos de configuración, gitignore, o cualquier que sea necesario para ejecutar el FE
+- en el readme raíz de su proyecto ponga en esta sección un link a este subfolder 
 
 
 ## stage #5 - diseño de los datos
 
 
 ## stage #6 - diseño del backend
+
