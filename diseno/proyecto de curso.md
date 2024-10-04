@@ -191,21 +191,20 @@ para los siguientes stages del proyecto cada grupo tendrá asignado solo cierta 
 - a nivel de servicios traer promociones, testimonios, reviews y agendas disponibles que me sirvan a mi como consumidor, tanto por distancia como por el tipo de mascota o la disponibilidad, de tal forma que no haya fallo en la selección de la consulta veterinaria remota. necesitamos el servicio de establecer la cita obviamente, y que eso me envíe una confirmación linda de mi cita no se si al teléfono o al correo o algo, y ahí cerramos el ciclo.
 - a nivel de datos necesitamos las citas, reviews, testimonios, agendas como componentes más activos, de forma parcial podrían estar los "pacientes", dueños de mascota, veterinarias, los médicos y listo. 
 
-## stage #4 - diseño del frontend 4%
+## stage #4 - diseño del frontend 10%
 
-el diseño del frontend de su proyecto va a estar compuesto de 4 piezas fundamentales de diseño: UI/UX, diagrama de capas, classes del sistema y boilerplate de la estructura del proyecto. todo esta sección de diseño se documentará en el mismo repositorio del proyecto en el readme.md, cree una sección de primer nivel "Diseño del frontend" y una de segundo nivel para cada uno de los artefactos del diseño del frontend. a continuación se detallan los entregables de cada artefacto del diseño de FE, tome en cuenta que solo deberá diseñar la parte que se indique de su proyecto. 
+el diseño del frontend de su proyecto va a estar compuesto de 4 piezas fundamentales de diseño: UI, diagrama de capas, classes del sistema y boilerplate de la estructura del proyecto. todo esta sección de diseño se documentará en el mismo repositorio del proyecto en el readme.md, cree una sección de primer nivel "Diseño del frontend" y una de segundo nivel para cada uno de los artefactos del diseño del frontend. a continuación se detallan los entregables de cada artefacto del diseño de FE, tome en cuenta que solo deberá diseñar la parte que se indique de su proyecto. 
 
-### ux/ui
-- haga el diseño de las pantallas asignadas utilizando figma
+en todo el proyecto se va a sugerir el uso de boilerplates, pero si usted considera mejor hacerlo por su propia cuenta no hay restricción al respecto. 
+
+### ui
+- haga el diseño de las pantallas asignadas utilizando el lenguaje de programación de su FE, se recomienda usar alguna librería o herramienta que facilite la creación de componentes visuales
 - haga una matrix de requerimientos funcionales versus componentes visuales en las pantallas para cotejar que todas los requerimientos fueron cubiertos, las filas son requerimientos y las columnas componentes visuales 
-- haga pruebas de usabilidad con 3 usuarios que no conozcan del proyecto y que cumplan con el perfil de "user persona" definido en la etapa 1
-- documente los resultados de las pruebas en el MD file copiandolos de la herramienta de testing de UX usada
-- haga los ajustes al UI dado los resultados de las pruebas
-- documente en el md file un antes y un después de su diseño de UI
+- documente en el md file las pantallas, usando screenshots, de cada una de las pantallas explicando lo que debe suceder en la pantalla, con cada acción que pueda existir en la pantalla, mensajes de error y de confirmación. 
 
 ### diagrama de capas
 - utilizando una herramienta de diagramación como miro, draw.io o similar, proceda a realizar un diagrama de las capas del UI, dichas capas podrían ser muy específicas dependiendo de la tecnología de frontend que haya escogido
-- también las capas deben tener componentes de alto nivel en el frontend como por ejemplo: layers de visual componentes, de lógica, modelos, controladores, templates, capas de proxies o clientes de servicios, capas de seguridad, capas de procesamiento asíncrono según la tecnología, capa de lógica, capa de local storage por ejemplo. todas las capas dependen de la tecnología específica y de su proyecto en particular. se recomienda buscar ejemplos de diseños de capas de FE para la tecnología seleccionada en varios tipos de proyectos.
+- también las capas deben tener componentes de alto nivel en el frontend como por ejemplo: layer de visual componentes, de lógica, modelos, controladores, templates, capas de proxies o clientes de servicios, capas de seguridad, capas de procesamiento asíncrono según la tecnología, capa de lógica, capa de local storage por ejemplo. todas las capas dependen de la tecnología específica y de su proyecto en particular. se recomienda buscar ejemplos de diseños de capas de FE para la tecnología seleccionada en varios tipos de proyectos.
 - utilice un conjunto de colores según la responsabilidad de las capas
 - el diagrama de capas se puede ver como un "zoom in" del FE en el diagrama de la arquitectura
 - si hay algún protocolo o tecnología en particular usada en alguna de las capas indíquela en el diagrama
@@ -216,20 +215,51 @@ el diseño del frontend de su proyecto va a estar compuesto de 4 piezas fundamen
 - todas las classes deberán tener sus atributos con el tipo de dato correspondiente mas no se espera que sea 100% exhaustivo, no hace falta que el diagrama tenga los getters o setters propiamente del lenguaje
 - las classes deberan tener mención de al menos el nombre de los métodos asignados, recuerde que en OO los métodos son verbos, las classes sustantivos en singular
 - utilizando colores o cajas punteadas con labels, revele en el diagrama el uso de patrones de diseño
+- este diagrama se puede unificar con el de bloques, haciendo que las clases queden envueltas en los bloques respectivos
 
 
 ### boilerplate
 - deberá crear el boilerplate que da inicio al proyecto de FE
 - el boilderplate deberá estar hecho en el lenguaje de programación seleccionado
-- cree en el repositorio un folder con el nombre de la aplicación, el cuál será su frontend
-- dentro de dicho folder suba el código fuente del boilerplate
-- en un nuevo readme.md, explique los diferentes folders y archivos del boilerplate
+- cree en el repositorio un folder con el nombre de la aplicación, el cuál será su frontend, agregue al nombre del folder un sufijo UI o FE
+- dentro de dicho folder suba el código fuente del boilerplate, el boilerplate debe ajustarse según lo que diga el diagrama de bloques y el diagrama de classes, es decir, todo debe ser consistente entre las 3 partes
+- elimine del boilerplate todo aquello que no va a usar que no está diseñado en su arquitectura ni en sus diagramas. 
+- en un nuevo readme.md, dentro del folder del FE, explique los diferentes folders y archivos del boilerplate
 - no omita archivos de configuración, gitignore, o cualquier que sea necesario para ejecutar el FE
 - en el readme raíz de su proyecto ponga en esta sección un link a este subfolder 
 
 
-## stage #5 - diseño de los datos
+## stage #5 - diseño de los datos - 6%
+- modele las tablas o collections necesarios para lograr el alcance que se acordó con el profesor
+- para bases de datos relacionales, utilice una herramienta de diagrama de datos que le permita generar el script de creación de base de datos o que posea forward engineering
+- para bases de datos nonSQL, haga el modelo como json ejemplos inicialmente y materialicelo utilizando la librería de modelaje/ORM que aplique para el lenguaje del backend y para su motor de base de datos, como por ejemplo para mongodb y typescript, usar mongoose o alguno similar
+- para el modelo relacional, cree en el repositorio un folder llamado data, ahi agregue el script de creación de la base de datos y los scripts de llenado de datos, diseñe un sistema de numeración de scripts que le permita llevar control de versiones
+- para el modelo nonSQL, deberá ponerse de acuerdo en que folder del backend va a guardarse los modelos de datos, proceder en ese folder a generar los diversos archivos del modelo/ORM usando la tecnología seleccionada, se recomienda hacer comentarios en cada modelo sobre su itención y de cualquier campo que vaya a tener un significado solo conocido por usted
+- en el readme.md, agregue un título de nivel 2 para el diseño del modelo de datos, donde agregará la imagen del modelo; y al pie de la imagen un link a los folders del repositorio respectivo para chequear los modelos en código, tanto imágen como scripts o ORM deben ser consistentes. 
+
+## stage #6 - diseño del backend - 10%
+- el diseño del backend constará de tres partes, el diagrama de bloques, el diagrama de clases y el boilerplate del backend, los dos diagramas se pueden unificar en uno solo si efectivamente son claras las clases y los bloques funcionales
+- los bloques funcionales son todas aquellas capas o conceptos macro que tiene su arquitectura, es como hacer un zoom in de la capa de backend del diagrama de arquitectura. por ejemplo podría ser que hayan layers de seguridad, proxys, conectores para 3rd party services, controllers, routers, handlers, repositories, helpers, messaging, loggers, authorization layers y cualquier otra definición que su diseño, solución y tecnología requieran
+- el diagrama de clases deberá incluir las clases necesarias para todos los bloques, detallando sus atributos y los nombres de los métodos, no olvide que en diseño UML las classes son sustantivos en singular y los métodos son verbos/acción. debe ser claro en el diagrama de clases los patrones de diseño de objetos y arquitectónicos acordados con el profesor
+- deje claro en el diseño también aquellas estrategias del backend importantes como authentication, authorization, pooling, cache, storage externos, interconectividad con la AI 
+- finalmente cuando ya tenga su diseño establecido, busque un boilerplate para su arquitectura de backend que sea lo más similar a su diseño, baje el boilerplate y proceda hacerle los ajustes para que coincida con el diseño de bloques y classes planteado. Elimine del boilerplate todo aquello que no va a usar que no está diseñado en su arquitectura ni en sus diagramas. 
+- en el readme.md documente ambos diagramas con sus respectivas explicaciones
+- en el folder src, cree un folder para su backend, y suba ahí su proyecto base en código 
+
+## stage #7 - dockerizacion - 4%
+- utilizando docker-compose, dockerice los servidores de su solucion
+- agregue en los folders del repositorio los Dockerfile de las imágenes que sean necesarias personalizar para su proyecto
+- esto debe incluir cualquier container necesario como por ejemplo: FE, BE, data, SQS, redis, mongo, postgresql, sql server, etc . Recuerde que es recomendable tener un server/container por servidor específico. 
+- levante el ambiente de su proyecto usando docker-compose 
+- compruebe que el UI es posible verlo aunque no haga nada ni funcione, pero si es posible ver las pantallas activas
+- compruebe que el backend y los datos funcionan, habilitando un endpoint de GET que muestre algún dato que se encuentra en la base de datos 
 
 
-## stage #6 - diseño del backend
+**otros aspectos técnicos**
 
+- todo el proyecto deberá llevarse en un solo repositorio compartido entre los integrantes
+- se revisaran los commits respectivos hechos durante toda la duracción del proyecto por cada miembro del equipo asignado a las diferentes partes del proyecto
+- se rebajará puntos si se nota un solo commit de entrega por cualquiera de los miembros del equipo
+- durante las clases se estará realizando actividades que van directamente a este proyecto
+- último día para consultas, domingo 13 de octubre
+- último commit del proyecto máximo domingo 20 de octubre, la revisión será con cita 

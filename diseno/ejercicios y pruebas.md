@@ -366,17 +366,8 @@ Temas:
 
 El resultado deberá pegarlo en el text channel en discord del curso, agregando el nombre de los integrantes del grupo. Fecha y hora máxima para pegar este contenido: Viernes 13 de setiembre, 9:15am. 
 
-## ejercicio #11 - evaluación en diseño de arquitectura de software
-el viernes 27 de setiembre se va a realizar durante la clase una evaluación teórica en tiempo real, para ello el profesor va a realizar 3 preguntas teóricas basadas en las [lecturas](https://github.com/vsurak/cursostec/blob/master/diseno/7.%20el%20dise%C3%B1o%20de%20la%20arquitectura%20de%20software.md), puntos del 1 al 4. De forma individual, el estudiante le enviará en máximo 1 minuto la respuesta al profesor por medio de un mensaje directo en discord. Las respuestas deberán ser propias del estudiante, invalidando cualquier copy/paste de las lecturas. 
-
-
-Nodal es un ingeniero de software con dos años de experiencia, lleva 3 semanas reuniéndose con Belinda, gerente de una productora de fresas y sub productos que exporta a 3 países de latam. Han estado haciendo los mockups completos en dibujos a mano alzada de una futura aplicación para el control y monitoreo de calidad de las fresas y jaleas empacadas. Se han enfocado mucho en la sencillez del app para que los operarios puedan realizar las pruebas de calidad, registrar la información, tomar fotografías y videos de la evidencia; también para que el app controle los cambios de turno de los supervisores de calidad. Llevan aproximadamente 15 pantallas, bien detalladas, todas siguiendo un mismo estilo y cubriendo con mucho detalle cada aspecto de como funciona la nueva app. Terminando en semana 4, Belinda quiere iniciar cuánto antes con el desarrollo, y le ofrece a Nodal $80,000.00 dólares para desarrollar el app para Android. Nodal ha aceptado y le dice que podrá tener lista el app en 4 meses.
-
-1. Qué factores importantes que influencian el diseño de software, fueron tomados en cuenta aquí que aportan valor, y cuáles se dejaron por fuera. Cómo podría usted solventar dichas falencias pero siempre manteniéndose en el mismo presupuesto y tiempo?
-
-2. Pensando en diseño de componentes, explique qué aspectos podrían estarle causando a Nodal que el tiempo de desarrollo del sistema sea mucho mayor? 
-
-3. Explique 1 riesgo en el proceso de diseño, que podría estar provocando que el sistema fracase total o parcialmente una vez que sea entregado al equipo de control de calidad de la planta de fresas?
+## ejercicio #11 - principios de diseño
+el profesor realizará una evaluación oral durante la clase solicitando a cada estudiante que de la materia vista en clase a la fecha, de ejemplos que cumplan con algun principio de diseño de los abordados en la unidad 4 del curso. 
 
 
 ## ejercicio #12 y #13 - requerimientos no funcionales del proyecto
@@ -424,3 +415,14 @@ el director de mercadeo inicia explicando que tradicionalmente ellos le dan mate
 
 el departamento de mercadeo de neon frank deberá proveer la plataforma tecnológica para facilitar todas las funciones anteriores y además de quedarse con información valiosa sobre los patrocinadores, costos, participantes, tiempos, y formas de integración que hicieron las promotoras en los fans, para más adelante hacer estudios de mercado por país. 
 
+## ejercicio #15 - evaluación en diseño de arquitectura de software
+el viernes 27 de setiembre se va a realizar durante la clase una evaluación teórica en tiempo real, para ello el profesor va a realizar 3 preguntas teóricas basadas en las [lecturas](https://github.com/vsurak/cursostec/blob/master/diseno/7.%20el%20dise%C3%B1o%20de%20la%20arquitectura%20de%20software.md), puntos del 1 al 4. De forma individual, el estudiante le enviará en máximo 1 minuto la respuesta al profesor por medio de un mensaje directo en discord. Las respuestas deberán ser propias del estudiante, invalidando cualquier copy/paste de las lecturas. 
+
+
+Nodal es un ingeniero de software con dos años de experiencia, lleva 3 semanas reuniéndose con Belinda, gerente de una productora de fresas y sub productos que exporta a 3 países de latam. Han estado haciendo los mockups completos en dibujos a mano alzada de una futura aplicación para el control y monitoreo de calidad de las fresas y jaleas empacadas. Se han enfocado mucho en la sencillez del app para que los operarios puedan realizar las pruebas de calidad, registrar la información, tomar fotografías y videos de la evidencia; también para que el app controle los cambios de turno de los supervisores de calidad. Llevan aproximadamente 15 pantallas, bien detalladas, todas siguiendo un mismo estilo y cubriendo con mucho detalle cada aspecto de como funciona la nueva app. Terminando en semana 4, Belinda quiere iniciar cuánto antes con el desarrollo, y le ofrece a Nodal $80,000.00 dólares para desarrollar el app para Android. Nodal ha aceptado y le dice que podrá tener lista el app en 4 meses.
+
+1. Qué factores importantes que influencian el diseño de software, fueron tomados en cuenta aquí que aportan valor, y cuáles se dejaron por fuera. Cómo podría usted solventar dichas falencias pero siempre manteniéndose en el mismo presupuesto y tiempo?
+
+2. Pensando en diseño de componentes, explique qué aspectos podrían estarle causando a Nodal que el tiempo de desarrollo del sistema sea mucho mayor? 
+
+3. Explique 1 riesgo en el proceso de diseño, que podría estar provocando que el sistema fracase total o parcialmente una vez que sea entregado al equipo de control de calidad de la planta de fresas?
