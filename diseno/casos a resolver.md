@@ -157,3 +157,18 @@ una vez que haya determinado tanto la base de datos, el lenguaje de programació
 - fecha para el último commit: 29-09-2024, 29 de setiembre a las 10am
 - la revisión será con cita con el profesor 
 - cualquier sospecha de copia implicará una nota de cero
+
+
+# caso #5
+
+responder las siguientes preguntas en el canal general:
+
+suponga que el 6 de noviembre debe realizar una presentación demo de su proyecto a unos inversionistas, que a la vez seran jueces de su proyecto, y debe cumplir que:
+
+1. hace uso de alguna AI de alguna forma
+2. accede al menos a un servicio de terceros,  que no es la AI
+3. el demo pareciera como si estuviera funcionando y tiene un efecto "woow" para convercer a los inversionistas, pues va a pedir a los inversionistas fondos para financiar su proyecto
+4. hay publicada en vivo un landing page del producto
+5. asuma que alguno de los integrantes podría no abordar el caso
+
+Cuál sería su estrategia para lograr lo anterior en el tiempo dado, Aclare cómo sería el demo, la presentación y el landing page. 
