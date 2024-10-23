@@ -170,7 +170,7 @@ ahora para terminar de afinar el contenido de su proyecto, se han fijado 3 objet
 2. ofrecer al público un landing page comercial que sirva de ventas y link a su producto
 3. en forma ficticia, obtener la calificación y financiamiento del proyecto de una mesa de jueces e inversionistas a los cuales les dará un demo del prototipo en acción 
 
-### implementación del demo, 40pts
+### implementación del prototipo, 40pts
 el prototipo de su proyecto se debe centrar en el alcance definido por el profesor, debe causar un impacto emocional y comercial en la capacidad principal que hace a su producto único, dicho prototipo debe convencer al expectador del valor de su producto. El demo debe cumplir lo siguiente:
 
 1. El FE debe ser igual a los diseños propuestos de UI o mejorado
@@ -214,3 +214,17 @@ Si su proyecto requiere de $250K, ese monto equivale a los 30pts. Si entre todos
 
 - revisión con el profesor del prototipo, landing page y exposición, 4, 5 y 6 de noviembre.
 - demo/exposición/networking con los jueces, miércoles 13 de noviembre, de 2pm a 4pm
+
+### tips para el demo
+
+cosas que podrían preguntar los jueves
+
+1. de donde saca o cómo calculo el valor de retorno de la inversión?
+2. costo operativo versus ventas versus ganancia
+3. cómo pretenden mercadear y dar seguimiento a redes sociales, leads, prospectar y alcanzar nuevos clientes?
+4. cuáles son los capabilities y las pruebas que han hecho para que la AI logre efectivamente obtener el resultado? 
+5. en tal paso en tal parte de la explicación, dice que va a durar X tiempo, no cree que es mucho o muy poco? resumen, les pueden cuestionar el tiempo de duración de las cosas
+6. cualquier componente de la arquitectura que expongan, deben una justificación cuantitativa del por qué decidieron usar ese componente
+7. podrían perdirles ver alguna variación del "happy path" del demo live
+8. todo lo que es contacto humano automatizado, cómo lo logran: contactar proveedores, contactar fabricantes, como la AI o algo automático pone de acuerdo a personas
+9. temas de seguridad 
