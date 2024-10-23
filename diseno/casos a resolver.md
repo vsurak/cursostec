@@ -159,16 +159,58 @@ una vez que haya determinado tanto la base de datos, el lenguaje de programació
 - cualquier sospecha de copia implicará una nota de cero
 
 
-# caso #5
+# caso #5, 10%, prototipado y demo del proyecto
+## description
 
-responder las siguientes preguntas en el canal general:
+en este punto del semestre usted como equipo ya cuenta con un proyecto debidamente diseñado a nivel de FE, BE, data, servicios de terceros, arquitectura, patrones, el mismo, se encuentra justificado técnicamente con un boilerplate soporte tanto para FE como BE, así como una estructura inicial en base de datos.
 
-suponga que el 6 de noviembre debe realizar una presentación demo de su proyecto a unos inversionistas, que a la vez seran jueces de su proyecto, y debe cumplir que:
+ahora para terminar de afinar el contenido de su proyecto, se han fijado 3 objetivos fundamentales
 
-1. hace uso de alguna AI de alguna forma
-2. accede al menos a un servicio de terceros,  que no es la AI
-3. el demo pareciera como si estuviera funcionando y tiene un efecto "woow" para convercer a los inversionistas, pues va a pedir a los inversionistas fondos para financiar su proyecto
-4. hay publicada en vivo un landing page del producto
-5. asuma que alguno de los integrantes podría no abordar el caso
+1. implementar funcionalmente en FE, backend, data, cloud y servicios de terceros un prototipo de su proyecto
+2. ofrecer al público un landing page comercial que sirva de ventas y link a su producto
+3. en forma ficticia, obtener la calificación y financiamiento del proyecto de una mesa de jueces e inversionistas a los cuales les dará un demo del prototipo en acción 
 
-Cuál sería su estrategia para lograr lo anterior en el tiempo dado, Aclare cómo sería el demo, la presentación y el landing page. 
+### implementación del demo, 40pts
+el prototipo de su proyecto se debe centrar en el alcance definido por el profesor, debe causar un impacto emocional y comercial en la capacidad principal que hace a su producto único, dicho prototipo debe convencer al expectador del valor de su producto. El demo debe cumplir lo siguiente:
+
+1. El FE debe ser igual a los diseños propuestos de UI o mejorado
+2. EL FE debe seguir los patrones de diseño, patrones arquitectónicos y boiler plate del FE que se diseñó
+3. EL FE hace uso de un mix entre funcionalidad programada, funcionalidad hardcoded y animación para lograr sorprender a los expectadores y dejar claras las fortalezas de su producto
+4. El FE interactúa efectivamente con el BE vía la tecnología que se haya diseñado
+5. Existe algún resultado, datos, pantalla o funcionalidad en el FE que fué alimentada por el acceso real a una AI, ya sea que esa AI se accede desde FE o desde BE según como se haya diseñado
+6. El BE está implementado sobre el boilerplate que se diseñó y sobre las tecnologías diseñadas
+7. El BE implementa y sirve al FE en todos los endpoints que tenga implementados para que el FE funcione correctamente en el prototipo
+8. El BE en el prototipo podría ser el que tenga que acceder a la AI para poder dar resultado
+9. Se implementa un proceso automatizado para hacer deployment del backend en producción, creando un pequeño esquema de CI/CD con la tecnología más sencilla con que logre automatizar este proceso para el equipo de desarrollo
+10. EL BE está dockerizado, contenerizado o similar
+11. La capa de datos tuvo las correciones necesarias y se implementó todo aquello que el BE requiera para servir al FE, cuenta con las tablas y los datos necesarios, sigue el diseño y la tecnología establecida en el proceso de diseño
+
+### landing page, 20 pts
+
+su producto deberá contar con un landing page comercial, se sugiere usar una plantilla de landing page, debe cumplir lo siguiente:
+
+1. debe estar hosted en un servidor público que pueda ser accedido públicamente en internet vía http
+2. El landing page debe tener mínimo 3 secciones, que sea principalmente visual, conciso, sin mucho texto narrativo y debe dejar claro al visitante lo siguiente:
+    - cómo se llama el producto, qué es lo que resuelve el producto por medio del slogan y algunos otros decoradores que dejen claro al vistante del landing page las virtudes del producto y que es lo que resuelve, en los primeros 4 segundos de ver la página. En esta misma sección debe ser claro el cómo funciona el producto, explicado máximo en 3 pasos que queden claro para así tener claro el funcionamiento del producto y lo que el usuario debe hacer para sacarle provecho
+    - en la siguiente sección deben verse historias de éxito, clientes que confían en ustedes que usan el producto, métricas de éxito a demostrar, marcas que los apoyan; en general referencias, logos, info de quénes han trabajado satisfactoriamente con ustedes y su producto. en esta misma sección debe quedar claro el modelo de pricing.
+    - la última sección es una invitación a ver el demo, agendar una reunión o saber más, para que se puedan poner en contacto con ustedes
+3. el landing page debe ser funcional y será usada para la exposición con los jueces
+
+### demostración y exposición del prototipo, 40pts
+
+1. cada equipo de trabajo contará con 10 minutos exactos para exponer ante un panel de 3 a 4 jueces
+2. las personas que expongan queda a criterio del equipo de trabajo
+3. la exposición debe cumplir lo siguiente:
+    - dejar claro cuál es problema que están resolviendo (este va más allá del problema establecido en el problem statement)
+    - beneficios económicos, debe ser claro en la exposición cuánto pierdo o gano en beneficios económicos, se debe decir el beneficio, el monto que se ahorra o se gana, y la forma estratégica en que su sistema logra obtener ese beneficio. La cantidad de beneficios a mencionar queda a su discresión
+    - beneficos técnicos, esto se refieren a bondades o atributos de su sistema que lo hacen especial, dichas bondades deben exponerse como: el beneficio de negocio que se va a recibir en forma cuantitativa, el atributo o atributos arquitéctonicos y del diseño que hace posible que logren ese beneficio. Por ejemplo: XYproduct permite un ahorro de hasta 26 horas CPU en aws, esto debido a su cache redis elástica distribuida permite que más del 30% de los request repetidos para lectura sean sacados de la cache, minimizando el uso de CPU. 
+    - apoyarse en el landing page del producto para hacer la exposición
+    - hacer un demo en vivo del prototipo funcionando a los jueces
+    - el timeline para terminar el proyecto y lanzarlo al mercado
+    - cuánto dinero le están pidiendo a los inversionistas para finalizar el proyecto, la proyección de en cuánto tiempo tendrán retorno de inversión y cuánto retorno recibirá el inversionista
+4. En este último punto, el juez inversionista pondrá la nota, de este rubro de la siguiente forma. 
+
+Si su proyecto requiere de $250K, ese monto equivale a los 30pts. Si entre todos los inversionistas logra que le den los $250K o más, entonces gana los 30 puntos de la exposición/demo. Si entre todos los jueces logra $130K, eso es un 52%, es decir, 15.6 puntos de 30. Los jueces tienen "dinero infinito", entonces no importa el monto que se pida, ellos van a estar dispuestos a dar si les gusta el demo y el producto. 
+
+- revisión con el profesor del prototipo, landing page y exposición, 4, 5 y 6 de noviembre.
+- demo/exposición/networking con los jueces, miércoles 13 de noviembre, de 2pm a 4pm
