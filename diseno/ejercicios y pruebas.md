@@ -96,6 +96,26 @@ el tema central es res, umir/explicar un tópico visto en clase:
 - MORA URBINA ANDRES, explicar como funciona el patron de event driven que usa https://activitypub.rocks/  
 
 
+Los siguientes tiktos deben ser ustedes mismos explicando el código o esquema solicitado
+
+ECHEVERRIA PEREZ JOSUE DAVID, explicar con bloques de código en algún lenguaje patron ambasador
+
+CALERO RIOS MANUEL DE JESUS, explicar con código de microservices el circuit breaker pattern
+
+URBINA SALAZAR LUIS GERARDO, explicar con un set de datos ejemplo como sucede el sharding en mongodb
+
+MATAMOROS JIMENEZ EMMANUEL JOSE, hacer en un ejemplo de dos pasos con escritura como es que un compensation transaction pattern logra hacer rollback
+
+MERCADO RIOS ALFREDO, usando el código del proyecto crear un caso que se use patron gate keeper y explicar el patrón en el código
+
+JIMENEZ VALVERDE ANGEL EDUARDO, con código prototipo, explicar como llegaría a funcionar el patrón ambasador en su proyecto
+
+RODRIGUEZ CAMACHO KENDALL ANDRES, usando el diagrama de datos explicar un patron de datos en el diseño
+
+ROBLES MATA JOSE ANDRES, con código del proyecto y el diagrama, explicar atomic design
+
+
+
 
 
 ## ejercicio #6 - encuentre los REST endpoints
