@@ -1,20 +1,22 @@
 # Instituto Tecnológico de Costa Rica
-## Profesor Rodrigo Nunez
-## Curso de bases de datos I
-## Casos a resolver - 80%
+**Profesor Rodrigo Nunez**
+**Curso de bases de datos I**
+**Casos a resolver - 80%**
 
 
 # Caso #1 - diseño de una base de datos relacional
 
 A continuación se le va a presentar un conjunto de requerimientos de un software para dos sistemas, de los cuales solo va a trabajar en uno. Con ello usted va a realizar las preguntas que considere oportunas al cliente (profesor), listar entidades e investigar información asociada las entidades y el cómo se comportan. 
 
+---
 
-## Title: Payment Assistant
-### Descripción
+**Title: Payment Assistant** 
+
+**Descripción**
 
 Imagina un asistente personal que no solo recuerda tus pagos recurrentes, sino que también los ejecuta por ti con solo confirmar un recordatorio. Con tecnología de inteligencia artificial de vanguardia, nuestra app te permite registrar y programar pagos de servicios como luz, agua, renta y más, usando simplemente tu voz. Olvídate de fechas vencidas, multas o estrés financiero. Además, con planes flexibles que se adaptan a tus necesidades, disfrutas de una experiencia gratuita para un pago mensual y opciones premium para múltiples transacciones.
 
-### Requerimientos Funcionales
+**Requerimientos Funcionales**
 
 1. **Interacción por Voz:**
    - La aplicación debe permitir al usuario registrar pagos recurrentes (electricidad, agua, renta, pólizas, préstamos, etc.) mediante comandos de voz.
@@ -49,14 +51,16 @@ Imagina un asistente personal que no solo recuerda tus pagos recurrentes, sino q
    - Debe ofrecer planes de suscripción basados en la cantidad de pagos y transferencias mensuales.
    - Debe gestionar la facturación y renovación automática de suscripciones.
 
+---
 
-## Title: App assistant
-### Descripción
+**Title: App assistant**
+
+**Descripción**
 
 Esta es una herramienta que no solo simplifica la capacitación de tus empleados, sino que también se convierte en un asistente experto para guiar paso a paso en tareas complejas dentro de cualquier aplicación. Con nuestra innovadora solución, tus equipos pueden grabar tareas específicas usando comandos de voz y acciones en su computadora o teléfono, creando una base de conocimiento impulsada por inteligencia artificial. Desde agregar una cuenta favorita en un banco hasta cancelar una suscripción en Netflix, nuestra app aprende y replica estos procesos, ofreciendo asistencia en tiempo real cuando los usuarios más lo necesitan. Con planes flexibles que crecen junto a tu empresa, comienza con una tarea gratuita y escala según tus necesidades.
 
 
-### Requerimientos Funcionales
+**Requerimientos Funcionales**
 
 1. **Grabación de Tareas:**
    - La aplicación debe permitir a los usuarios grabar tareas mediante comandos de voz y capturar las acciones realizadas en la computadora o dispositivo móvil.

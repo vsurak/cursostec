@@ -1,20 +1,23 @@
 # Instituto Tecnológico de Costa Rica
-## Profesor Rodrigo Nunez
-## Curso de diseño de software
-## Casos a resolver - 80%
+**Profesor Rodrigo Nunez**
+**Curso de diseño de software**
+**Casos a resolver - 80%**
 
 
-# Caso #1 - requerimientos del diseño y atributos del software, 10% 
+
+
+# Caso #1 - primer acercamiento al diseño de alto nivel, 10% 
 
 A continuación se le va a presentar un conjunto de requerimientos de un software para dos sistemas, de los cuales solo va a trabajar en uno. Con ello usted va a realizar las preguntas que considere oportunas al cliente (profesor), con lo cual va a empezar a tomar decisiones de cómo se va a realizar el diseño de este sistema. Los pasos para completar este caso se irán dando conforme avancen las lecciones. 
 
 
 ## Title: Payment Assistant
-### Descripción
+
+**Descripción**
 
 Imagina un asistente personal que no solo recuerda tus pagos recurrentes, sino que también los ejecuta por ti con solo confirmar un recordatorio. Con tecnología de inteligencia artificial de vanguardia, nuestra app te permite registrar y programar pagos de servicios como luz, agua, renta y más, usando simplemente tu voz. Olvídate de fechas vencidas, multas o estrés financiero. Además, con planes flexibles que se adaptan a tus necesidades, disfrutas de una experiencia gratuita para un pago mensual y opciones premium para múltiples transacciones.
 
-### Requerimientos Funcionales
+**Requerimientos Funcionales**
 
 1. **Interacción por Voz:**
    - La aplicación debe permitir al usuario registrar pagos recurrentes (electricidad, agua, renta, pólizas, préstamos, etc.) mediante comandos de voz.
@@ -50,7 +53,7 @@ Imagina un asistente personal que no solo recuerda tus pagos recurrentes, sino q
    - Debe gestionar la facturación y renovación automática de suscripciones.
 
 
-### Requerimientos No Funcionales
+**Requerimientos No Funcionales**
 
 1. **Escalabilidad:**
    - La aplicación debe soportar 1,000 usuarios en fase beta y escalar a 100,000 usuarios en 6 meses.
@@ -77,7 +80,7 @@ Imagina un asistente personal que no solo recuerda tus pagos recurrentes, sino q
    - La interfaz debe ser intuitiva y accesible para usuarios no técnicos.
    - Debe soportar múltiples idiomas (español, inglés, etc.).
 
-### Requerimientos de Infraestructura
+**Requerimientos de Infraestructura**
 
 1. **Hosting:**
    - Uso de servicios en la nube (AWS, Google Cloud, Azure) para alojar el backend y la base de datos.
@@ -92,12 +95,13 @@ Imagina un asistente personal que no solo recuerda tus pagos recurrentes, sino q
 
 
 ## Title: App assistant
-### Descripción
+
+**Descripción**
 
 Esta es una herramienta que no solo simplifica la capacitación de tus empleados, sino que también se convierte en un asistente experto para guiar paso a paso en tareas complejas dentro de cualquier aplicación. Con nuestra innovadora solución, tus equipos pueden grabar tareas específicas usando comandos de voz y acciones en su computadora o teléfono, creando una base de conocimiento impulsada por inteligencia artificial. Desde agregar una cuenta favorita en un banco hasta cancelar una suscripción en Netflix, nuestra app aprende y replica estos procesos, ofreciendo asistencia en tiempo real cuando los usuarios más lo necesitan. Con planes flexibles que crecen junto a tu empresa, comienza con una tarea gratuita y escala según tus necesidades.
 
 
-### Requerimientos Funcionales
+**Requerimientos Funcionales**
 
 1. **Grabación de Tareas:**
    - La aplicación debe permitir a los usuarios grabar tareas mediante comandos de voz y capturar las acciones realizadas en la computadora o dispositivo móvil.
@@ -128,7 +132,7 @@ Esta es una herramienta que no solo simplifica la capacitación de tus empleados
    - Debe ofrecer planes de pago basados en la cantidad de tareas grabadas y el número de usuarios.
    - Implementar un sistema de facturación recurrente y gestión de suscripciones.
 
-### Requerimientos No Funcionales
+**Requerimientos No Funcionales**
 
 1. **Escalabilidad:**
    - La aplicación debe soportar 900 usuarios en la fase beta y escalar a 500,000 usuarios en dos años.
@@ -153,7 +157,7 @@ Esta es una herramienta que no solo simplifica la capacitación de tus empleados
    - Debe incluir tutoriales y guías para facilitar la adopción de la aplicación.
 
 
-## Requerimientos de Infraestructura
+**Requerimientos de Infraestructura**
 
 1. **Hosting:**
    - Uso de servicios en la nube (AWS, Google Cloud, Azure) para alojar el backend y la base de datos.
@@ -170,15 +174,21 @@ Esta es una herramienta que no solo simplifica la capacitación de tus empleados
 ## Entregable #1 - 3%
 
 1. el profesor va a crear parejas de trabajo en forma aleatoria
+
 2. la pareja, como ingenieros consultores, están en el predicamente de obtener del cliente tanta información como sea posible sobre el sistema, busque siempre simplificar los problemas del cliente para que también su diseño y solución se reduzca lo más posible.
+
 3. Para el martes 25 de febrero, envíe un mensaje de discord al cliente, con el cuestionario de preguntas sobre el sistema. 
+
 4. Obtenga las respuetas del cliente esa misma semana
+
 5. Para el viernes 28 antes de las 5pm, envíe en un mensaje al profesor los una aproximación inicial a muy alto nivel de cómo ustedes como consultores ven diseñada esta solución, incluyendo en el mensaje: 
 
-a) retos principales y más complejos de esta aplicación
-b) determinar la lista de requerimientos que va a ser imposible lograr en un 100% (del todo no, o si es parcialmente especificar lo que podrían alcanzar hacer)
-c) listar las tecnologías lenguajes, frameworks, servicios y plataformas respectivas para: frontend/mobile, backend, bases de datos, AI, 3rd parties, cloud/hosting, devops y QA. Justique el uso de cada item dentro del app, escribiendo la responsabilidad que va a tener dentro del sistema. Por ejemplo:  react/native, para generar el código del app mobile tanto en android como en ios. 
+a) retos principales y más complejos de esta aplicación 
+
+b) determinar la lista de requerimientos que va a ser imposible lograr en un 100% (del todo no, o si es parcialmente especificar lo que podrían alcanzar hacer) 
+
+c) listar las tecnologías lenguajes, frameworks, servicios y plataformas respectivas para: frontend/mobile, backend, bases de datos, AI, 3rd parties, cloud/hosting, devops y QA. Justique el uso de cada item dentro del app, escribiendo la responsabilidad que va a tener dentro del sistema. Por ejemplo:  react/native, para generar el código del app mobile tanto en android como en ios.  
 
 
 ## Entregable #2 - 7%
-
+TBD

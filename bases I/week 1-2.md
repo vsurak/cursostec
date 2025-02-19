@@ -1,4 +1,3 @@
-Weeks from february 6th to 17th
 
 
 ## actividades fuera de clase
@@ -8,19 +7,20 @@ https://ubuntu.com/tutorials/command-line-for-beginners#1-overview
 
 2. estudiar github
 
-Teoría
+Teoría 
+
 https://docs.github.com/en/get-started/quickstart/hello-world 
 
 https://docs.github.com/en/get-started/using-git/about-git 
 
 
-Video tutorials
+Video tutorials 
+
 https://www.youtube.com/watch?v=VdGzPZ31ts8 
 
 
 3. estudiar docker
 
-teoría
 https://docs.docker.com/get-started/ 
 
 https://docker-curriculum.com/ 
@@ -32,7 +32,8 @@ La documentación y ejemplos es amplia, por el momento se requiere que el estudi
 - hacer uso del contenedor activo desde la computadora host
 - acceder al contenedor y recorrer la estructura de archivos
 
-video tutorials
+video tutorials 
+
 https://www.youtube.com/watch?v=4Dko5W96WHg 
 
 https://www.youtube.com/watch?v=CV_Uf3Dq-EU 
@@ -44,7 +45,7 @@ https://www.youtube.com/watch?v=pTFZFxd4hOI
 
 6. instalar workbench para mysql 
 
-### tip _running and accesing mysql via docker_
+***tip _running and accesing mysql via docker***
 
 ```s
 docker run -d -p 3306:3306 --name mysqlserver -v <mifolderpathlocal>:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 mysql
