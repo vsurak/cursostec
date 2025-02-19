@@ -1,10 +1,14 @@
-# Instituto Tecnológico de Costa Rica
-**Profesor Rodrigo Nunez**
-**Curso de bases de datos I**
-**Casos a resolver - 80%**
+# Instituto Tecnológico de Costa Rica 
+
+**Profesor Rodrigo Nunez** 
+
+**Curso de bases de datos I** 
+
+**Casos a resolver durante el semestre - 80%** 
 
 
-# Caso #1 - diseño de una base de datos relacional
+
+# Caso #1 - diseño de una base de datos relacional - 10%
 
 A continuación se le va a presentar un conjunto de requerimientos de un software para dos sistemas, de los cuales solo va a trabajar en uno. Con ello usted va a realizar las preguntas que considere oportunas al cliente (profesor), listar entidades e investigar información asociada las entidades y el cómo se comportan. 
 
@@ -91,6 +95,9 @@ Esta es una herramienta que no solo simplifica la capacitación de tus empleados
    - Debe ofrecer planes de pago basados en la cantidad de tareas grabadas y el número de usuarios.
    - Implementar un sistema de facturación recurrente y gestión de suscripciones.
 
+---
+
+Ahora procedamos a resolver las siguientes actividades:
 
 1. el profesor va a crear parejas de trabajo en forma aleatoria, cada pareja va a seleccionar un solo sistema de los anteriores. 
 
