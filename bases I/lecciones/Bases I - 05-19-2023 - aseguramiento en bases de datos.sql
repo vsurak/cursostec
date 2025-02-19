@@ -10,6 +10,5 @@
 -- a) doy permiso a todo, y niego aquello que quiero restringir
 -- b) niego todo y doy acceso a lo que necesito
 
--- lo ideal es crear roles: operador, recepción, logistica, gerencia
+-- lo ideal es crear roles: operador, recepciï¿½n, logistica, gerencia
 
-select * from dbo.Productos
