@@ -113,3 +113,34 @@ Ahora procedamos a resolver las siguientes actividades:
 
 5. los entregables de diseño serán especificados por el profesor conforme  se vaya avanzando en el estudio de los patrones vistos en clase, los mismos se entregaron con un mensaje directo al profesor por discord
 
+
+## Entregable 1 - 5%
+
+el primer entregable deberá incluir todas las tablas relacionadas a: 
+
+- usuarios y/o perfil de usuarios tanto para administrativos de la plataforma como para consumidores de la plataforma 
+
+- permisos, roles, accesos, grants, denys y similares; y todo lo que sea necesario relacionar para que un usuario pueda verificar si puede o no realizar ciertas funciones en el sistema
+
+- todo tipo de archivo, attachment, recording, streaming, media files, documentos almacenados y similares que requiera la plataforma y los cuales van a ser almacenados en algún servicio basado en IDs y URLs, o sea almacenamiento físico externo
+
+- administración de empresas y los usuarios que pertenecen o no a empresas que acceden al servicio; o bien , cualquiera tipo de estructura organizacional que sea requerida
+
+- transacciones, pagos, balances, devoluciones, reclamos, precios, renovaciones y todo aquello que tenga que ver con operaciones de dinero
+
+- subscripciones, planes, vigencias, planes, limites de las subscripciones, registro de uso de las subscripciones y la forma de validar cuando se alcanzan los límites que las subscripciones requieran 
+
+- bitácora o bitácoras del sistema
+
+- tablas necesaria para soportar internacionalización de idiomas y monedas
+
+Deberá documentar un mapeo entre el diseño de las tablas y la información descubierta por entidad, para garantizar que sus tablas cumplen con la totalidad de los campos necesarios y que se les asignó un tipo de dato adecuado para los campos de las tablas. 
+
+El diseño debe cumplir con:
+- llaves primarias y foráneas
+- correctos ajustados los null y not null
+- valores default en los campos que sea necesario
+- los necesarios identities
+
+Fecha de entrega: sábado 8 de marzo, 10am
+

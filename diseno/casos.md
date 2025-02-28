@@ -191,4 +191,25 @@ c) listar las tecnologías lenguajes, frameworks, servicios y plataformas respec
 
 
 ## Entregable #2 - 7%
-TBD
+
+1. Investigue como realizar un goal map en referencia a técnicas como google sprint o design thinking 
+
+2. Proceda a crear un goal diagram ubicando el objetivo principal del sistema lo más a la derecha del diagrama y las entidades involucradas a la izquierda. Rellene el workflow del mapa y diagramelo en alguna herramienta que se lo permita. 
+
+3. Determine entonces usando ese mapa cuales son los estados que garantizan el éxito del sistema, aquellos puntos que son más valiosos para lograr el objetivo principal del sistema, los cuales van a hacer que el usuario acepte o no el uso de esta aplicación.
+
+4. Una vez determinados los más importantes, listelos y proceda a diseñar las pantallas de su sistema que realizarían dichos flujos del mapa.
+
+5. Diseñe los wireframes en blanco y negro de las pantallas necesarias para esos flujos prioridad #1 para el negocio.
+
+6. Cree las pantallas a modo mockup o mimic utilizando alguna AI que genere código en el lenguaje que haya seleccionado en el entregable #1. Si ninguna AI genera para ese lenguaje, entonces proceda a utilizar plantillas para crear las pantallas diseñadas. 
+
+7. Proceda a realizar un test de usabilidad con al menos 3 personas (que no sean estudiantes del Tec), de las pantallas diseñadas utilizando alguna herramienta de testing de usuabilidad digital en la nube, recopile los resultados. 
+
+8. Documenten todo el entregable del punto 1 al 7 en un md file en github, dividiendose el trabajo a su criterio. Debe ser evidente los commits de cada integrante en las diversas secciones del documento md. Solo un md file. En la documentación debe dejar claro las evidencias de que las pruebas de usabilidad se hicieron con personas reales no estudiantes del Tec. Fotografías de personas frente a una computadora no es evidencia, no debe caber duda en la evidencia de que esa persona hizo esa prueba. 
+
+9. La revisión será con el profesor, y se espera que cualquier miembro del grupo de trabajo sea capaz de defender, explicar y realizar raciocinios y conclusiones sobre todo el entregable, de lo contrario se le asignará una nota de cero.
+
+La entrega será enviándole al profesor un correo con los integrantes y el link al url público de github el cual contiene el MD file, fecha máxima para la entrega domingo 9 de marzo, 10pm.  Fecha límite para consultas viernes 7 de marzo a medio día. 
+
+
