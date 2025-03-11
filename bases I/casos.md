@@ -142,5 +142,38 @@ El diseño debe cumplir con:
 - valores default en los campos que sea necesario
 - los necesarios identities
 
-Fecha de entrega: sábado 8 de marzo, 10am
+Fecha de entrega: sábado 15 de marzo, 10am
+
+
+## Entregable #2 - 5%
+
+En este momento usted ya cuenta con una base de datos inicial para este problema, ahora deberá realizar dos actividades adicionales para terminar de practicar con workbench y mysql. 
+
+1. complete las tablas que requiere su sistema que no fueron tomadas en cuenta en el entregable #1, en la mayoría de los casos dichas tablas van a estar relacionadas a las grabaciones, procesamientos de la AI, interacción del sistema con la AI, interacción del humano con la AI, comandos de voz, análisis y resultados que genera la AI y la ejecución propiamente de lo que hace el sistema. 
+
+2. obtenga visto bueno del profesor del diseño final 
+
+3. haga deployment de su base de datos a MySQL
+
+4. Ahora proceda a crear un script de llenado de base de datos en un archivo SQL, en cual va a realizar los INSERT que sean necesarios para popular de información la base de datos, de forma que pueda retornar las siguientes consultas. A la par de cada consulta aparece la cantidad mínima de registros que se espera que retorne. Los scripts de las consultas deberían ir en un archivo SQL aparte. 
+
+__4.1 listar todos los usuarios de la plataforma que esten activos con su nombre completo, email, país de procedencia, y el total de cuánto han pagado en subscripciones desde el 2024 hasta el día de hoy, dicho monto debe ser en colones__ (20+ registros)
+
+__4.2 listar todas las personas con su nombre completo e email, los cuales le queden menos de 15 días para tener que volver a pagar una nueva subscripción__ (13+ registros)
+
+__4.3 un ranking del top 15 de usuarios que más uso le dan a la aplicación y el top 15 que menos uso le dan a la aplicación__ (15 y 15 registros)
+
+__4.4 determinar cuáles son los análisis donde más está fallando la AI, encontrar los casos, situaciones, interpretaciones, halucinaciones o errores donde el usuario está teniendo más problemas en hacer que la AI determine correctamente lo que se desea hacer, rankeando cada problema de mayor a menor cantidad de ocurrencias entre un rango de fechas__ (30+ registros)
+
+Para entregar esto, haga un respositorio de git con un readme.md que contenga:
+
+- integrantes
+- link al script de creación de la base de datos
+- link al script de llenado de datos
+- link al script con las consultas 
+- para cada script de consulta, un data table que muestre los resultados de los datos obtenidos de la consulta
+- debe ser notorio en los commits los aportes de cada integrante, caso contrario se rebajaran puntos a discresión
+- último commit viernes 21 de marzo
+
+Enviar el link al repositorio en mensaje directo a @Manollito por discord. 
 
