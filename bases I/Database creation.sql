@@ -17,13 +17,11 @@ USE `petsdb` ;
 -- -----------------------------------------------------
 -- Table `petsdb`.`pets_countries`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `petsdb`.`pets_countries` (
-  `countryid` TINYINT(16) NOT NULL AUTO_INCREMENT,
+CREATE TABLE IF NOT EXISTS `petsdb`.`pets_test` (
+  `testid` TINYINT(16) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(60) NOT NULL,
-  `currency` VARCHAR(30) NOT NULL,
-  `currencySymbol` VARCHAR(3) NOT NULL,
   `language` VARCHAR(7) NOT NULL,
-  PRIMARY KEY (`countryid`))
+  PRIMARY KEY (`testid`))
 ENGINE = InnoDB;
 
 

@@ -35,6 +35,18 @@ WHERE condición
 ORDER BY columna ASC|DESC
 LIMIT n;
 
+
+
+SELECT columnas | aggregatefunction (5)
+FROM table1, table2, table3 (1)
+JOIN conditions (3)
+WHERE condiciónes (2)
+GROUP BY <condiciones> (4)
+HAVING <condiciones agregadas> (6)
+ORDER BY columna ASC|DESC (7 o a veces 2)
+LIMIT n; (8)
+
+
 ```
 
 refiérase a [Introduccion a SQL](Introduccion%20a%20SQL.sql) para ampliar en los ejemplos hechos en clase. 
