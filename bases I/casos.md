@@ -172,8 +172,9 @@ Para entregar esto, haga un respositorio de git con un readme.md que contenga:
 - link al script de llenado de datos
 - link al script con las consultas 
 - para cada script de consulta, un data table que muestre los resultados de los datos obtenidos de la consulta
+- se sugiere hacer los scripts y data tables embebidos en el md file para mayor facilidad de lectura
 - debe ser notorio en los commits los aportes de cada integrante, caso contrario se rebajaran puntos a discresión
-- último commit viernes 21 de marzo
+- último commit lunes 24 de marzo, media noche
 
 Enviar el link al repositorio en mensaje directo a @Manollito por discord. 
 

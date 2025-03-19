@@ -213,3 +213,39 @@ c) listar las tecnologías lenguajes, frameworks, servicios y plataformas respec
 La entrega será enviándole al profesor un correo con los integrantes y el link al url público de github el cual contiene el MD file, fecha máxima para la entrega domingo 9 de marzo, 10pm.  Fecha límite para consultas viernes 7 de marzo a medio día. 
 
 
+# Caso #2 - diseño del FE y BE, 20% 
+
+El caso #2 se realizará en grupos de 3 a 4 personas máximo, los estudiantes deciden como armar los grupos y no es necesario mantener la pareja anterior. Los grupos se deben reunir y analizar los resultados y diseños hechos en el caso #1, rescatar aquello que sea más aprovechable para este siguiente entregable. Si en el grupo quedan integrantes de payment assistant y app assistant mezclados, deben decidir como grupo a cuál plataforma entregarse. 
+
+Este caso pretende completar aspectos del diseño de objetos y arquitectónicos de la solución. El profesor dará una inducción sobre diagramas de arquitectura y sus diseños para que tengamos una base de lo que se quiere lograr principalmente.
+
+En el caso #1 entregable #1, los integrantes habían sacado una primer aproximación de las tecnologías que se pretendían usar para la implementación de la solución, al crear estos nuevos grupos, reúnase con sus compañeros y consoliden un stack. Al igual que en los entregables anteriores, cree un repositorio en gihub que pueda acceder todos los miembros del grupo y creer una estructura inicial y proceda a ir creando las diferentes secciones, toda la documentación esta vez será en inglés.
+
+Estructura sugerida :
+
+- "# System name - set your own name" 
+
+- "*Members* - list the names of the group members" 
+
+- "## Description: Write a brief description of the system, highlighting its strengths"
+
+- "## Stack: write down the final stack to be use decided for the group"
+
+- "## Frontend design specifications"
+
+- "### Authentication platform", Conduct research to determine which service platform you will use for authentication, ensuring that it offers at least: 
+
+   a) login y password
+   b) login y password automatic screen generation or SDK for screen generation
+   c) compatible with your FE programming language 
+   d) access by API available
+   e) MFA and a sandbox for testing purpose
+
+- Using a demo code, proceed to test how the chosen platform works and how the login screen can be customized. Document this process in the MD file. The demo code must be use in the selected programming language of the FE. 
+
+- Using Postman, make API calls to simulate authentication with MFA. Document the process and save your own Postman collection for future review
+
+- suggested platforms to look into: auth0, okta, cognito, MS entra, onelogin, firebase, veriam
+
+el resto de la especificación de este caso está en progreso. 
+
