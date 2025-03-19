@@ -234,7 +234,7 @@ BEGIN
 		SELECT ELT(FLOOR(1 + RAND() * 4), 'patitas vet', 'mi mascota', 'uñitas', 'maskotitas') INTO @vetname;
 		SELECT ELT(FLOOR(1 + RAND() * 6), 'fiebre', 'infección', 'sano', 'sarro', 'virus estomacal', 'dolor muscular') INTO @condicion;
 
-		INSERT INTO pets_visits (startime, endtime, description, vetname, `condition`, ownerid, petid)
+		INSERT INTO pets_visits (starttime, endtime, description, vetname, `condition`, ownerid, petid)
 		VALUES (@starttime, @endtime, 'Esto es la descripcion', @vetname, @condicion, @ownerid, @petid);
 
 		SET @countVisits = @countVisits - 1;
@@ -251,18 +251,7 @@ DELETE FROM pets_visits;
 DELETE FROM pets_visits WHERE visitid = 1;
 
 
+select * from pets_countries, pets_estates;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+select c.*, e.* from pets_countries c, pets_estates e
+WHERE c.countryid = e.countryid and c.currency >10000
