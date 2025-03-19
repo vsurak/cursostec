@@ -16,7 +16,11 @@ se exploran opciones como:
 
 2. Se procede a realizar como parte de ejercicios de clase las siguientes consultas por parte de los estudiantes los cuales deben enviar como ejercicio #2 a @Manollito por discord.  Los queries deberán hacerse en papel y enviar fotografía. 
 
-a) determine la edad promedio de fallecimiento por raza
-b) cuál ciudad hace más uso de los servicios veterinarios
-c) genere una lista de los dueños de mascotas firstname, lastname y space, donde la columna space deberá decir "large" o "small" dependiendo si la persona tiene más mascotas grandes que pequeñas. 
+a) determine la edad promedio de fallecimiento por raza 
+
+b) cuál ciudad hace más uso de los servicios veterinarios 
+
+c) genere una lista de los dueños de mascotas firstname, lastname y space, donde la columna space deberá decir "large" o "small" dependiendo si la persona tiene más mascotas grandes que pequeñas.  
+
+
 
