@@ -96,4 +96,9 @@ INNER JOIN pets_pets pets ON pets_visits.petid = pets.petid
 group by pets.name ORDER BY COUNT(*) DESC;
 
 
+select * from pets_pets where status = 2;
+
+select AVG(age) from pets_pets;
+-- sacar las razas en status = 2, y el average por race
+
 

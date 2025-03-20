@@ -169,7 +169,7 @@ Para entregar esto, haga un respositorio de git con un readme.md que contenga:
 
 - integrantes
 - link al script de creación de la base de datos
-- link al script de llenado de datos
+- link al script de llenado de datos, si llenar una tabla requiere de más de 15 registros, este llenado deberá hacerse procedimental por calculos y randoms controlados debidamente según la distribución de los datos necesaria para los resultados de las consultas, y no por medio de INSERTS exhaustivos 
 - link al script con las consultas 
 - para cada script de consulta, un data table que muestre los resultados de los datos obtenidos de la consulta
 - se sugiere hacer los scripts y data tables embebidos en el md file para mayor facilidad de lectura
