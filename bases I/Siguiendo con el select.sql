@@ -42,12 +42,6 @@ vetname veterinaria, `condition` estadoDeLaMascota
 FROM pets_visits
 INNER JOIN pets_pets ON pets_visits.petid = pets_pets.petid;
 
-SELECT starttime, TIMESTAMPDIFF(MINUTE,starttime, endtime) TiempoDeConsulta,
-vetname veterinaria, `condition` estadoDeLaMascota
-FROM pets_visits visits
-INNER JOIN pets_pets pets ON visits.petid = pets.petid;
-
-
 SELECT visits.*, pets.*
 FROM pets_visits visits
 INNER JOIN pets_pets pets ON visits.petid = pets.petid;
@@ -95,10 +89,122 @@ SELECT COUNT(1) visits, pets.name from pets_visits
 INNER JOIN pets_pets pets ON pets_visits.petid = pets.petid
 group by pets.name ORDER BY COUNT(*) DESC;
 
-
 select * from pets_pets where status = 2;
 
-select AVG(age) from pets_pets;
--- sacar las razas en status = 2, y el average por race
+SELECT AVG(age) AverageDeadAge, pets_pets.race 
+FROM pets_pets
+WHERE status = 2
+GROUP BY race;
+
+ALTER TABLE pets_pets DROP COLUMN racesize;
+ALTER TABLE pets_pets ADD COLUMN racesize VARCHAR(10) NOT NULL DEFAULT('Mid');
+select * from pets_pets;
+
+ALTER TABLE pets_visits ADD COLUMN checksum VARBINARY(256) DEFAULT(0);
+ALTER TABLE pets_visits ADD COLUMN Amount DECIMAL(10,2) DEFAULT(0.0);
+select min(visitid), max(visitid) from pets_visits;
+
+
+DROP PROCEDURE SetMontosCheckSum;
+DELIMITER //
+
+CREATE PROCEDURE SetMontosCheckSum()
+BEGIN
+	SET @visitId = 1001;
+
+	WHILE @visitId > 1 DO
+
+		UPDATE pets_visits set amount = 25000 + ELT(FLOOR(1 + RAND() * 5), 5000, 9000, 12000, 4500, 7000),        
+        checksum=SHA2(CONCAT(DATE_FORMAT(starttime, '%Y-%m-%d %H:%i:%s'),DATE_FORMAT(endtime, '%Y-%m-%d %H:%i:%s'), description, ownerid, petid, '6372823rodrigo best database professor ever893838', amount, `condition`, vetname), 512)
+        WHERE visitid = @visitId;
+        
+		SET @visitId = @visitId - 1;
+	END WHILE ;
+END //
+
+DELIMITER ;
+
+call SetMontosCheckSum();
+select * from pets_visits;
+update pets_visits set amount = 110000 where visitid = 89;
+
+
+SELECT * FROM (
+	select visitid, vetname, amount, 
+	CASE 
+		WHEN checksum<>SHA2(CONCAT(DATE_FORMAT(starttime, '%Y-%m-%d %H:%i:%s'),DATE_FORMAT(endtime, '%Y-%m-%d %H:%i:%s'), description, ownerid, petid, amount, `condition`, vetname), 512) THEN 'Invalid'
+		ELSE 'Valid'
+	END AuditValue
+	from pets_visits
+) As Result
+WHERE AuditValue = 'Invalid';
+
+
+-- montos por veterinaria por mes del año 2025 ordenados por veterinaria y mes
+
+SELECT vetname, MONTHNAME(starttime) Mes, SUM(amount) montoTotal 
+FROM pets_visits
+WHERE YEAR(starttime)=2025
+GROUP BY vetname, MONTH(starttime), MONTHNAME(starttime) 
+ORDER BY vetname, MONTH(starttime), MONTHNAME(starttime);
+
+
+SELECT VetsPerMonth.vetname, VetsPerMonth.Mes, VetsPerMonth.MontoTotal, totalPerVet.vetTotal,  
+(VetsPerMonth.MontoTotal/totalPerVet.vetTotal)*100 PercPerMonth, Total.Total, (totalPerVet.vetTotal/Total.Total)*100 OpePercentage 
+FROM 
+(
+	SELECT vetname, MONTHNAME(starttime) Mes, SUM(amount) montoTotal 
+	FROM pets_visits
+	WHERE YEAR(starttime)=2025
+	GROUP BY vetname, MONTH(starttime), MONTHNAME(starttime) 
+) As VetsPerMonth
+INNER JOIN (
+	SELECT vetname, SUM(amount) vetTotal
+	FROM pets_visits
+	WHERE YEAR(starttime)=2025
+	GROUP BY vetname
+) AS totalPerVet ON VetsPerMOnth.vetname = totalPerVet.vetname
+INNER JOIN (
+	SELECT SUM(amount) Total
+	FROM pets_visits
+	WHERE YEAR(starttime)=2025
+) as Total ON 1=1
+ORDER BY vetname, mes, vetTotal DESC;
+
+
+WITH MonthlySales AS (
+    SELECT
+        vetname,
+        DATE_FORMAT(starttime, '%Y-%m') AS month,
+        SUM(Amount) AS monthly_amount
+    FROM pets_visits
+    WHERE YEAR(starttime) = 2025
+    GROUP BY vetname, DATE_FORMAT(starttime, '%Y-%m')
+),
+VetTotalSales AS (
+    SELECT
+        vetname,
+        SUM(monthly_amount) AS vet_total_amount
+    FROM MonthlySales
+    GROUP BY vetname
+),
+OverallTotalSales AS (
+    SELECT
+        SUM(monthly_amount) AS overall_total_amount
+    FROM MonthlySales
+)
+SELECT
+    ms.vetname,
+    ms.month,
+    ms.monthly_amount,
+    ROUND((ms.monthly_amount / vts.vet_total_amount) * 100, 2) AS vet_month_percentage,
+    ROUND((ms.monthly_amount / ots.overall_total_amount) * 100, 2) AS overall_month_percentage
+FROM MonthlySales ms
+JOIN VetTotalSales vts ON ms.vetname = vts.vetname
+CROSS JOIN OverallTotalSales ots
+ORDER BY ms.vetname, ms.month;
+
+
+
 
 
