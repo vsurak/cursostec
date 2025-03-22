@@ -254,7 +254,9 @@ Estructura sugerida :
 
 Following the same document structure, at heading level 3 (###), complete the following frontend (FE) designs:
 
-_*client architecture*_ Determine whether your client will follow a client-server or N-layer architecture. Additionally, specify the technology that will be used to implement this architecture. In this section, also indicate whether mobile development will be native or hybrid (shared code base). In the case of a web app, determine whether it will use client-side rendering or server-side rendering:
+### client architecture  
+
+Determine whether your client will follow a client-server or N-layer architecture. Additionally, specify the technology that will be used to implement this architecture. In this section, also indicate whether mobile development will be native or hybrid (shared code base). In the case of a web app, determine whether it will use client-side rendering or server-side rendering:
 
 
    - client server: PHP+Laravel, Ruby on Rails, Asp.net, python+Django, python+Flask, ReactJS+NextJS, Java+JSF y similares. (Only server side rendering)
@@ -262,10 +264,12 @@ _*client architecture*_ Determine whether your client will follow a client-serve
    - N layer: siempre requiere uso de APIs, PHP, Asp.Net, python+Django, python+Flask, ReactJS, ReactJS+NextJS, ReactNative, Angular, Swift, Kotlin y similares. (both CSR y SSR is achievable)
 
 
-_*Visual Components*_ In this section, clarify all the design patterns and strategies that will be strictly followed to design and build the visual components of your application. Keep in mind that many of these techniques may or may not apply to the technologies chosen in the previous step. Research and select the approaches that best suit your project’s needs. For example: 
+### Visual Components 
+
+In this section, clarify all the design patterns and strategies that will be strictly followed to design and build the visual components of your application. Keep in mind that many of these techniques may or may not apply to the technologies chosen in the previous step. Research and select the approaches that best suit your project’s needs. For example: 
 
 
-Patterns & Principles: 
+*Patterns & Principles:* 
 
    - Solid principle (must) 
 
@@ -282,7 +286,7 @@ Patterns & Principles:
    - State management pattern (web): redux, vuex 
 
 
-Toolkits and standards : 
+*Toolkits and standards:*  
 
    - Jetpack compose (kotlin) 
 
@@ -300,13 +304,18 @@ Toolkits and standards :
 
    - Chakra UI 
 
-_*Object design patterns *_ In this section, proceed to create a class design diagram using a simplified UML, focusing on classes, attributes, methods, packages, and associations. Where applicable, apply object-oriented design patterns, and use colors or boxes to visually group the classes involved in each pattern.
+### Object design patterns
+
+In this section, proceed to create a class design diagram using a simplified UML, focusing on classes, attributes, methods, packages, and associations. Where applicable, apply object-oriented design patterns, and use colors or boxes to visually group the classes involved in each pattern.
 
 Refer to the catalog of design patterns at: 
 
 👉 https://refactoring.guru/design-patterns/catalog
 
-_*External services*_ Design this section using boxes and brief explanations within the document to describe all components in the frontend architecture responsible for:
+
+### External services 
+
+Design this section using boxes and brief explanations within the document to describe all components in the frontend architecture responsible for:
 
 - Handling the interaction between UI components and client-side business logic. In many cases, the technologies chosen above already define the proper components and layers to achieve this. 
 
@@ -322,26 +331,15 @@ _*External services*_ Design this section using boxes and brief explanations wit
 
    - Any other external services required by the application
 
-_*Project structure*_ finalmente, pegue y documente la estructura de su proyecto de FE, especificando los folders base y explicando lo que debe contener cada folder, similar a esto: 
+### Project structure 
 
-src/
-├── assets/                  # Images, fonts, icons, etc.
-├── components/              # All UI components based on Atomic Design
-│   ├── atoms/               # Smallest reusable elements (buttons, inputs, labels)
-│   ├── molecules/           # Combinations of atoms (form fields, input groups)
-│   ├── organisms/           # Complex components (headers, cards, navbars)
-│   ├── templates/           # Page-level layouts with empty content slots
-│   └── pages/               # Final views with actual content
-├── hooks/                   # Reusable custom hooks (e.g., useAuth, useFetch)
-├── services/                # API logic, axios instances, external service integrations
-├── contexts/                # React Context providers (e.g., AuthContext, ThemeContext)
-├── utils/                   # Utility functions and helpers
-├── routes/                  # Route definitions and route guards
-├── styles/                  # Global styles, variables, themes
-├── App.jsx                  # Root component
-└── main.jsx                 # Entry point (ReactDOM.render or createRoot)
+Finally, paste and document the structure of your frontend project, specifying the base folders and explaining what each folder should contain, similar to the example below:
 
-_*Final FE architecture diagram*_ cree un diagrama unificado final usando alguna herramienta similar a Miro, la cual tenga todas partes cubiertas en esta sección de diseño del FE: stack, tecnologías, patrones, protocolos, flechas de asociación y responsabilidad, colores para los layers, indicaciones de principios, diagrama de classes con los patrones a utilizar, helpers, arquitectura y rendering. El diagrama puede ser top down or left right.  Incruste dicho diagrama en el MD file en esta sección.  
+![React Project Structure](images/reactprojectstructure.png)
+
+### Final FE architecture diagram 
+
+Cree un diagrama unificado final usando alguna herramienta similar a Miro, la cual tenga todas partes cubiertas en esta sección de diseño del FE: stack, tecnologías, patrones, protocolos, flechas de asociación y responsabilidad, colores para los layers, indicaciones de principios, diagrama de classes con los patrones a utilizar, helpers, arquitectura y rendering. El diagrama puede ser top down or left right.  Incruste dicho diagrama en el MD file en esta sección.  
 
 Esta no es la fecha de entrega pero se recomienda tener esto diseñado para el viernes 28 de Marzo.
 
