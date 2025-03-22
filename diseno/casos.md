@@ -246,11 +246,102 @@ Estructura sugerida :
    e) MFA and a sandbox for testing purpose 
    
 
-- Using a demo code, proceed to test how the chosen platform works and how the login screen can be customized. Document this process in the MD file. The demo code must be use in the selected programming language of the FE. 
+- Using a demo code, proceed to test how the chosen platform works and how the login screen can be customized. Document this process in the MD file. The demo code must be use in the selected programming language of the FE, and the source code stored in the repository
 
-- Using Postman, make API calls to simulate authentication with MFA. Document the process and save your own Postman collection for future review
+- Using Postman, make API calls to simulate authentication with MFA. Document the process and save your own Postman collection for future review. Link this file in the document and stored it in the repository. 
 
 - suggested platforms to look into: auth0, okta, cognito, MS entra, onelogin, firebase, veriam
 
-el resto de la especificación de este caso está en progreso. 
+Following the same document structure, at heading level 3 (###), complete the following frontend (FE) designs:
+
+_*client architecture*_ Determine whether your client will follow a client-server or N-layer architecture. Additionally, specify the technology that will be used to implement this architecture. In this section, also indicate whether mobile development will be native or hybrid (shared code base). In the case of a web app, determine whether it will use client-side rendering or server-side rendering:
+
+
+   - client server: PHP+Laravel, Ruby on Rails, Asp.net, python+Django, python+Flask, ReactJS+NextJS, Java+JSF y similares. (Only server side rendering)
+
+   - N layer: siempre requiere uso de APIs, PHP, Asp.Net, python+Django, python+Flask, ReactJS, ReactJS+NextJS, ReactNative, Angular, Swift, Kotlin y similares. (both CSR y SSR is achievable)
+
+
+_*Visual Components*_ In this section, clarify all the design patterns and strategies that will be strictly followed to design and build the visual components of your application. Keep in mind that many of these techniques may or may not apply to the technologies chosen in the previous step. Research and select the approaches that best suit your project’s needs. For example: 
+
+
+Patterns & Principles: 
+
+   - Solid principle (must) 
+
+   - Dry principle (must) 
+
+   - Separation of concern (must) 
+
+   - Responsive Design (must) 
+
+   - Atomic Design (all) 
+
+   - MVC (all), MVP (android), MVVM (WPF, Angular, React) 
+
+   - State management pattern (web): redux, vuex 
+
+
+Toolkits and standards : 
+
+   - Jetpack compose (kotlin) 
+
+   - Material design (kotlin) 
+
+   - Swift UI declarative (swift) 
+
+   - Apple HIG  
+
+   - netlify, amplify, tailwind, vercel
+
+   - bootstrap  
+
+   - storybook 
+
+   - Chakra UI 
+
+_*Object design patterns *_ In this section, proceed to create a class design diagram using a simplified UML, focusing on classes, attributes, methods, packages, and associations. Where applicable, apply object-oriented design patterns, and use colors or boxes to visually group the classes involved in each pattern.
+
+Refer to the catalog of design patterns at: 
+
+👉 https://refactoring.guru/design-patterns/catalog
+
+_*External services*_ Design this section using boxes and brief explanations within the document to describe all components in the frontend architecture responsible for:
+
+- Handling the interaction between UI components and client-side business logic. In many cases, the technologies chosen above already define the proper components and layers to achieve this. 
+
+- Managing connectivity with third-party services such as: 
+
+   - Authentication and authorization providers
+
+   - SaaS platforms
+
+   - Cloud storage solutions
+
+   - External APIs
+
+   - Any other external services required by the application
+
+_*Project structure*_ finalmente, pegue y documente la estructura de su proyecto de FE, especificando los folders base y explicando lo que debe contener cada folder, similar a esto: 
+
+src/
+├── assets/                  # Images, fonts, icons, etc.
+├── components/              # All UI components based on Atomic Design
+│   ├── atoms/               # Smallest reusable elements (buttons, inputs, labels)
+│   ├── molecules/           # Combinations of atoms (form fields, input groups)
+│   ├── organisms/           # Complex components (headers, cards, navbars)
+│   ├── templates/           # Page-level layouts with empty content slots
+│   └── pages/               # Final views with actual content
+├── hooks/                   # Reusable custom hooks (e.g., useAuth, useFetch)
+├── services/                # API logic, axios instances, external service integrations
+├── contexts/                # React Context providers (e.g., AuthContext, ThemeContext)
+├── utils/                   # Utility functions and helpers
+├── routes/                  # Route definitions and route guards
+├── styles/                  # Global styles, variables, themes
+├── App.jsx                  # Root component
+└── main.jsx                 # Entry point (ReactDOM.render or createRoot)
+
+_*Final FE architecture diagram*_ cree un diagrama unificado final usando alguna herramienta similar a Miro, la cual tenga todas partes cubiertas en esta sección de diseño del FE: stack, tecnologías, patrones, protocolos, flechas de asociación y responsabilidad, colores para los layers, indicaciones de principios, diagrama de classes con los patrones a utilizar, helpers, arquitectura y rendering. El diagrama puede ser top down or left right.  Incruste dicho diagrama en el MD file en esta sección.  
+
+Esta no es la fecha de entrega pero se recomienda tener esto diseñado para el viernes 28 de Marzo.
 
