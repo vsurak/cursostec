@@ -254,7 +254,7 @@ Estructura sugerida :
 
 Following the same document structure, at heading level 3 (###), complete the following frontend (FE) designs:
 
-### client architecture  
+### Client architecture  
 
 Determine whether your client will follow a client-server or N-layer architecture. Additionally, specify the technology that will be used to implement this architecture. In this section, also indicate whether mobile development will be native or hybrid (shared code base). In the case of a web app, determine whether it will use client-side rendering or server-side rendering:
 
@@ -295,6 +295,8 @@ In this section, clarify all the design patterns and strategies that will be str
    - Swift UI declarative (swift) 
 
    - Apple HIG  
+
+   - https://developer.apple.com/design/human-interface-guidelines 
 
    - netlify, amplify, tailwind, vercel
 
@@ -343,3 +345,7 @@ Cree un diagrama unificado final usando alguna herramienta similar a Miro, la cu
 
 Esta no es la fecha de entrega pero se recomienda tener esto diseñado para el viernes 28 de Marzo.
 
+
+## Backend design specifications 
+
+esta sección está en construcción

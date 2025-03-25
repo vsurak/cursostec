@@ -178,3 +178,70 @@ Para entregar esto, haga un respositorio de git con un readme.md que contenga:
 
 Enviar el link al repositorio en mensaje directo a @Manollito por discord. 
 
+
+
+# Caso #2 - Concurrencia, Transacciones, Capa de acceso a datos y Migraciones
+
+La coorporación Dancing CaipirIA de Brasil ha iniciado operaciones en Costa Rica y con ello ha traído nuevos servicios digitales al país. Dicha organización se ha especializado por invertir mucho dinero en la creación de emprendimientos digitales en todo latinoamerica y para apoyar ese crecimiento también han comprado otras empresas consolidadas en los diferentes países donde deciden invertir. El CEO ha externado en una conferencia de prensa: 
+
+<p align="center">
+"A gente enxergou na Costa Rica, pelo seu tamanho e estabilidade econômica, um nicho ideal pra testar e lançar novos produtos e serviços que depois podem se espalhar por toda a região. Viemos pra dançar junto, brindar com caipirinhas temperadas com tecnologia e trocar ideias com nossos irmãos costarriquenhos e com as empresas tech do país."
+</p>
+
+
+Los altos directivos de Dancing CaipirIA, han selecionado Costa Rica como el espacio de laboratorio para probar un novedoso servicio llamado Soltura. Esta plataforma lo que busca es que las personas no tengan que preocuparse por estar contratando y pagando servicios por separado como por ejemplo gimnasios, spa, terapeutas, grooming de mascotas, escuelas de mascotas, paseos, hoteles, combustible, peluquería, dietas, entre muchas otras cosas más.
+
+Soltura, ofrece paquetes básicos de vida por montos fijos mensuales, que tienen como beneficios principales la simplicidad del pago por parte de los consumidores, de forma que solo tienen que pagar una mensualidad a Soltura, y por otro lado, una reducción del costo de tales servicios para los consumidores. Para dar un ejemplo, suponga que Soltura entre sus paquetes podría tener en Costa Rica:
+
+Paquete Profesional Joven: 
+
+| Beneficio                              | Cantidad               |
+|----------------------------------------|------------------------|
+| Gimnasio SmartFit                      | 6 horas por semana     |
+| Lavandería y aplanchado                | 1 servicio             |
+| Limpieza básica de hogar               | 2 días                 |
+| Combustible (gas o diésel)             | ₡50,000 colones        |
+| Corte de pelo (Tito Barbers)           | 1 corte                |
+| Cenas seleccionadas                    | 2 cenas                |
+| Almuerzos seleccionados                | 4 almuerzos            |
+| Plan móvil (Kolbi)                     | Ilimitado              |
+| Parqueo                                | 10 horas               |
+
+
+Paquete Full Modern Family: 
+
+| Beneficio                              | Cantidad                     |
+|----------------------------------------|------------------------------|
+| Gimnasio (4 personas)                  | 4 horas por semana           |
+| Yoga o Pilates (familiar)              | 4 horas                      |
+| Grooming para mascota                  | 1 servicio                   |
+| Revisión veterinaria                   | 1 consulta                   |
+| Clases de natación o fútbol (niños)    | 3 clases                     |
+| Combustible (gas o diésel)             | ₡100,000 colones             |
+| Uber Eats                              | 10 pedidos (envío gratis + 20% dto.) |
+| Uber Rides                             | ₡7,000 colones en viajes     |
+
+También Soltura ofrece paquetes personalizados, donde las personas pueden tomar algún paquete, agregar y quitar beneficios de los disponibles y con ello hacerlo más a la medida, en este caso el precio mensual del paquete se calcula dependiendo de los servicios deseados. 
+
+Los consumidores de Soltura, pagan una subscripción de tal forma que con solo un pago único pueden acceder a todos estos beneficios mensualmente, en las tiendas, proveedores, escuelas y demás que tenga contratados Soltura. En la mayoría de los casos, al aplicación de Soltura posee un código QR para los dueños de la subscripción y si es el caso para los miembros de la familia que el dueño de la subscripción incluya como miembro. 
+
+También puede darse que a la hora de pagar algún servicio como por ejemplo gasolina, el miembro realiza el pago por medio de un QR, código o cupón o NFC que habilita la aplicación.
+
+Para que esto sea posible Dancing CaipirIA agresivamente establece acuerdos comerciales con múltiples proveedores en el país, que a cambio de una masa crítica de usuarios estables y de la simplificación de costos operativos al resumir N personas en un solo pago; otorga a CaipirAI de honorosos descuentos de los cuales obtienen el margen y a la vez transfieren ahorro a los miembros de Soltura. 
+
+Soltura, hace los cargos "ahead", es decir, que carga los montos a inicio a mes, antes de que las personas lo consuman, esto para evitar fraudes o cuentas por pagar con múltiples proveedores, si no que más bien los consumidores pagan por adelantado su mensualidad a Soltura. 
+
+Los miembros de Soltura puede realizar los pagos de sus membresías por medio de cualquier tarjeta débido o crédito de costa rica, así como también tarjetas de crédito internacionales y plataformas de cobro como google wallet, apple wallet, apple pay, paypal. Si no hay una cancelación de servicio, el cargo se hace reguarlmente en los primeros 3 días del mes que no sea ni sábado ni domingo ni feriado. 
+
+Los directivos y estrategas han hecho un amplio estudio del mercado con el que están seguro que triunfaran en suelo tico y con ello llevar Soltura a otros países de Latam. 
+
+Dado que este proyecto es nuevo, su empresa ha sido contrata por Dancing CaipirIA; en la última reunión con el CTO Digão Nunesinhio, se les ha indicado que inicien con el diseño de la base de datos, pues en sus palabras ha dicho que tiene prioridad para el éxito del proyecto y que el motor de base de datos que se va a utilizar va a ser principalmente SQL Server. Aún así, dado que la plataforma Soltura es un app mobile, que se conecta a un backend con este SQL server, también se conoce que va existir una página web de Soltura, con paquetes informativos, promociones, mercadeo, media y más; este tipo de contenido se desea manejar en MongoDB; de la misma forma toda la plataforma de servicio al cliente, seguimento de casos, reviews y resolución de quejas también estará modelado en MongoDB.
+
+Proceda entonces en conjunto con sus colegas consultores de empresa a realizar el diseño de ambas bases de datos.
+
+---- las siguientes partes y definición de entregables, y ejercicios de este caso siguen en construcción -----
+
+
+Grupos: se conformarán grupos (empresas consultoras) de 4 personas. 
+Fecha para entrega del diseño final: jueves 3 de abril
+Fecha para última consulta de diseños preliminares tanto para mongo como sqlserver: lunes 31 de marzo
