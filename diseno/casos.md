@@ -341,11 +341,142 @@ Finally, paste and document the structure of your frontend project, specifying t
 
 ### Final FE architecture diagram 
 
-Cree un diagrama unificado final usando alguna herramienta similar a Miro, la cual tenga todas partes cubiertas en esta sección de diseño del FE: stack, tecnologías, patrones, protocolos, flechas de asociación y responsabilidad, colores para los layers, indicaciones de principios, diagrama de classes con los patrones a utilizar, helpers, arquitectura y rendering. El diagrama puede ser top down or left right.  Incruste dicho diagrama en el MD file en esta sección.  
+Create a final unified diagram using a tool like Miro, covering all parts of the **Frontend Design** section:  
 
-Esta no es la fecha de entrega pero se recomienda tener esto diseñado para el viernes 28 de Marzo.
+- **Stack, technologies, patterns, protocols**  
+- **Association and responsibility arrows**  
+- **Color-coded layers**  
+- **Principle indicators**  
+- **Class diagram with design patterns**  
+- **Helpers, architecture, and rendering**  
+
+The diagram can be **top-down or left-right**. Embed this diagram in the **MD file** under this section.  
 
 
-## Backend design specifications 
+## **Backend Design Specifications**  
 
-esta sección está en construcción
+Before designing the backend, you will complete a small **serverless API deployment exercise** using **AWS and Serverless Framework**. This will help clarify how to architect your backend.  
+
+The professor has provided a **Serverless Framework API template** located at:  
+[`src/svlesstemplate`](src/svlesstemplate)  
+
+Currently, the template uses:  
+- **Two handlers**  
+- **One middleware class**  
+- **One repository class**  
+
+Modify this template to fit your **Case #2 design**, considering the following recommendations:  
+
+1. **Handler Responsibilities (SOLID & Cohesion Principle)**  
+   - Multiple handlers should have **clearly distinct responsibilities** (currently unclear in the template).  
+   
+2. **README.md Fixes & Adjustments**  
+   - Improve the readme.md by document any issues you encountered and the fixes applied.  
+
+3. **Logger Improvements (Design Pattern Required)**  
+   - Replace `console.log` with **CloudWatch, persistent storage, or third-party logging**.  
+   - The logger should be **agnostic**, allowing different logger implementations (use an **object design pattern**).  
+
+4. **Optional & Mandatory Middleware (Design Pattern Required)**  
+   - Middleware should be **optional** and allow **chaining multiple middleware**.  
+   - Some middleware (e.g., **authentication**) should be **mandatory** (use a **design pattern** to enforce this).  
+
+5. **Repository Layer Improvements (Decoupling & Reusability)**  
+   - Handlers **should not directly access repositories**.  
+   - Introduce a **business logic layer** between handlers and repositories.  
+   - Support **multiple repositories** (different data sources: DBs, APIs, etc.).  
+   - Ensure **transparency** for handlers (prepare for **serverless & microservices**).  
+
+6. **Deployment & Testing**  
+   - Implement **two test functions** in the new serverless template (one for each handler).  
+   - Read different data from a **cloud database** in both functions.
+   - **Deploy to AWS**.  
+   - Create a **Postman collection** to test the deployed API.  
+
+### **Proof of Concepts**  
+Add a **"Proof of Concepts"** subsection under **Backend design**. Document each of the **6 points above**, explaining:  
+- **Challenge faced**  
+- **Solution chosen**  
+- **Advantages over the original template**  
+
+Format:  
+- **POC Step 1**  
+- **POC Step N**  
+...and so on.  
+
+### **Backend Architecture**  
+In this section, analyze and decide on the following architectures:  
+
+1. **REST, GraphQL, gRPC, Monolithic, or Monolithic-MVC?**  
+   - Which **internal layers** will handle requests/responses?  
+   - How do **object design patterns** interact with requests or any other triger   
+
+2. **Serverless, Cloud, On-Premise, or Hybrid?**  
+   - Determine **hardware demands** and **cloud machine types**.  
+   - Impacts **frameworks, libraries, and programming languages**. Enlist which ones and what are the advantages
+
+3. **Service vs. Microservices?**  
+   - Defines **logical divisions** for workload distribution.  
+   - It affects **code organization** and **team collaboration**, how to handle it
+
+4. **Event-Driven, Queues, Brokers, Producer/Consumer, Pub/Sub?**  
+   - Identify which parts need these architectures.  
+   - Map **cloud services** that provide these features.  
+   - Define **integration layers and classes**.  
+
+5. **API Gateway (Security & Scalability)?**  
+   - Decide if an **API Gateway** is needed.  
+   - Choose the **cloud service** that supports it.  
+   - How it support security and scalability 
+
+
+### **Data Layer Design**  
+Make all design decisions specified in:  
+[**Data Layer Design**](https://github.com/vsurak/cursostec/blob/master/diseno/3.%20dise%C3%B1o%20de%20la%20l%C3%B3gica%20y%20los%20datos%2C%20o%20backend%20y%20data.md#dise%C3%B1o-de-la-capa-de-datos)  
+
+Each decision must include:  
+1. **Cloud service technology**  
+2. **Object-oriented design patterns**  
+3. **Class layers for data access**  
+4. **Configuration policies/rules**  
+5. **Expected benefits**  
+
+
+## **Architecture Design**  
+
+At this point, you have documented all decisions in the previous sections in a **markdown architecture document**. Now, create a **single, detailed architecture diagram** of the **entire system solution**, ensuring:  
+
+- **All designed layers are shown**  
+- **Object patterns & involved classes per layer**  
+- **System behavior under external stimuli**  
+- **Required cloud services & libraries**  
+- **Architectural patterns used**  
+- **Consistent color/symbol coding**  
+- **Top-down or left-right structure**  
+- **Communication protocols & cloud zones**  
+- **Key architecture attributes**  
+- **Clear communication of analysis results**  
+
+
+## **Architecture Compliance Matrix**  
+
+Create a **matrix** where:  
+- **Rows** = Non-functional requirements + top 3 functional requirements.  
+- **Columns** = Key architectural components/decisions.  
+
+Fill the matrix with **X/marks** to show which parts of the architecture fulfill each requirement.  
+
+
+Fecha de entrega de todo el diseño: martes 15 de abril
+Fecha para última consulta: viernes 11 de abril
+Entregable: 
+1. Repositorio en github 
+
+2. El MD file en el repositorio con todo el diseño realizado en este caso de la arquitectura, con todas las secciones indicadas anteriormente. Los commits serán el reflejo de los aportes de los integrantes a todo lo largo de la resolución del caso 
+
+3. Todas imágenes, colecciones de postman, archivos, scripts, screenshots, pdf, y cualquier otro archivo que haya sido necesario para completar este caso. 
+
+4. Deberá hacer la entrega enviando un correo al profesor con el link al repositorio, el nombre del grupo y sus integrantes. 
+
+La revisión será con cita con el profesor a partir del 21 de Abril. 
+

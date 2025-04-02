@@ -1,0 +1,37 @@
+service: svlesstemplate
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+
+functions:
+  exampleHandlerOne:
+    handler: src/handlers/exampleHandlerOne.exampleHandlerOne
+    events:
+      - http:
+          path: example-one
+          method: post
+
+  exampleHandlerTwo:
+    handler: src/handlers/exampleHandlerTwo.exampleHandlerTwo
+    events:
+      - http:
+          path: example-two
+          method: post
+
+plugins:
+  - serverless-dotenv-plugin
+
+package:
+  individually: true
+
+custom:
+  dotenv:
+    path: .env
+
+resources:
+  Resources:
+    # Add any additional resources here if needed

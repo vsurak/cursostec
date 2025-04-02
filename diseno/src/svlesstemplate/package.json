@@ -1,0 +1,20 @@
+{
+  "name": "svlesstemplate",
+  "version": "1.0.0",
+  "description": "A serverless backend project using TypeScript and AWS SDK.",
+  "main": "src/index.ts",
+  "scripts": {
+    "build": "tsc",
+    "deploy": "serverless deploy",
+    "offline": "serverless offline"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1234.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.5.0",
+    "serverless": "^2.60.0",
+    "serverless-offline": "^8.0.0"
+  },
+  "license": "MIT"
+}
