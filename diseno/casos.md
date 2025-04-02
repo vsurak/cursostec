@@ -467,16 +467,24 @@ Create a **matrix** where:
 Fill the matrix with **X/marks** to show which parts of the architecture fulfill each requirement.  
 
 
-Fecha de entrega de todo el diseño: martes 15 de abril
-Fecha para última consulta: viernes 11 de abril
-Entregable: 
-1. Repositorio en github 
+### **Delivery Deadline for Full Design: Tuesday, April 15**  
+### **Last Consultation Date: Friday, April 11**  
 
-2. El MD file en el repositorio con todo el diseño realizado en este caso de la arquitectura, con todas las secciones indicadas anteriormente. Los commits serán el reflejo de los aportes de los integrantes a todo lo largo de la resolución del caso 
+#### **Deliverables:**  
+1. **GitHub repository**  
+2. **Markdown (MD) file** in the repository containing:  
+   - The complete architecture design for this case.  
+   - All sections outlined previously.  
+   - **Commit history** reflecting contributions from all team members throughout the case resolution.  
+3. **All supporting files**, including:  
+   - Images (diagrams, screenshots).  
+   - Postman collections.  
+   - Scripts, PDFs, or any other necessary files.  
+4. **Submission email** to the professor with:  
+   - Repository link.  
+   - Group name and member list.  
 
-3. Todas imágenes, colecciones de postman, archivos, scripts, screenshots, pdf, y cualquier otro archivo que haya sido necesario para completar este caso. 
+#### **Review Process:**  
+- Scheduled meetings with the professor **starting April 21**.  
 
-4. Deberá hacer la entrega enviando un correo al profesor con el link al repositorio, el nombre del grupo y sus integrantes. 
-
-La revisión será con cita con el profesor a partir del 21 de Abril. 
 
