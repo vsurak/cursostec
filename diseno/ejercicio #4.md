@@ -2,5 +2,3 @@ Basados en la sección https://github.com/vsurak/cursostec/blob/master/diseno/ca
 
 Escribir en el mensaje de entrega los integrantes. 
 
-Este yo pongo las notas en clase:
-
