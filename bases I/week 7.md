@@ -51,7 +51,7 @@ db.recetas.find({categoria: "mariscos"}, { titulo: 1, categoria: 1, ingredientes
 
 Ya este diseño cumple todo lo que se necesita PEEERO:
 1. puedo buscar por título, SI
-2. listar las categorías, SI pero a qué costo? porque tengo que recorrer todas las recetas para sacar todas las categorías distintas
+2. listar las categorías, SI pero a qué costo? porque tengo que recorrer todas las recetas para sacar todas las categorías distintas, esto sugiere que es necesario otra coleccion con las categorías.
 
 
 
