@@ -180,7 +180,7 @@ Enviar el link al repositorio en mensaje directo a @Manollito por discord.
 
 
 
-# Caso #2 - 30% - Concurrencia, Transacciones, Capa de acceso a datos y Migraciones
+# Caso #2 - 30% - TSQL, Seguridad, Concurrencia, Transacciones y Migrado de datos
 
 La coorporación Dancing CaipirIA de Brasil ha iniciado operaciones en Costa Rica y con ello ha traído nuevos servicios digitales al país. Dicha organización se ha especializado por invertir mucho dinero en la creación de emprendimientos digitales en todo latinoamerica y para apoyar ese crecimiento también han comprado otras empresas consolidadas en los diferentes países donde deciden invertir. El CEO ha externado en una conferencia de prensa: 
 
