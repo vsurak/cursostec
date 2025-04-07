@@ -180,7 +180,7 @@ Enviar el link al repositorio en mensaje directo a @Manollito por discord.
 
 
 
-# Caso #2 - 30% - TSQL, Seguridad, Concurrencia, Transacciones y Migrado de datos
+# Caso #2 - 35% - TSQL, Seguridad, Concurrencia, Performance, Transacciones y Migrado de datos
 
 La coorporación Dancing CaipirIA de Brasil ha iniciado operaciones en Costa Rica y con ello ha traído nuevos servicios digitales al país. Dicha organización se ha especializado por invertir mucho dinero en la creación de emprendimientos digitales en todo latinoamerica y para apoyar ese crecimiento también han comprado otras empresas consolidadas en los diferentes países donde deciden invertir. El CEO ha externado en una conferencia de prensa: 
 
@@ -330,7 +330,10 @@ Normalmente para las pruebas tendrá dos conexiones abiertas simultáneas a la b
   - Determinar si es posible que suceden **deadlocks en cascada**, donde A bloquea B, B bloquea C, y C bloquea A, debe poder observar el deadlock en algún monitor.
   - Determinar como deben usarse los niveles de isolacion: `READ UNCOMMITTED`, `READ COMMITTED`, `REPEATABLE READ`, `SERIALIZABLE`, mostrando los problemas posibles al usar cada tipo de isolación en casos particulares, se recomienda analizar casos como: obtener un reporte general histórico de alguna operación, calcular el tipo de cambio a utiliza en un momento dado, adquisición de planes cuando se están actualizando, cambios de precio durante subscripciones, agotamiento de existencias de algún beneficio.  
   - Crear un **cursor de update** que bloquee los registros que recorre uno a uno, demuestre en que casos dicho cursor los bloquea y en que casos no, para que el equipo de desarrollo sepa para que escenarios usar cursos y cuando no.
-  
+  - Defina lo que es la "transacción de volumen" de su base de datos, por ejemplo, en uber la transacción es buscar un driver, en paypal es procesar un pago, en amazon es buscar artículos, y así sucesivamente, es la operación que más solicitudes recibe el sistema, dicho esto: 
+   - Determine cuántas transacciones por segundo máximo es capaz de procesar su base de datos, valide el método con el profesor
+   - Determine como podría tripilar el valor averiguado anteriormente sin hacer cambios en su base de datos ni incrementar hardware ni modificando el query 
+
 ---
 
 ## Noticas de última hora se anuncian para semana santa - 15pts
