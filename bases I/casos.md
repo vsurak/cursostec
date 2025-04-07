@@ -237,112 +237,103 @@ Los directivos y estrategas han hecho un amplio estudio del mercado con el que e
 
 Dado que este proyecto es nuevo, su empresa ha sido contrata por Dancing CaipirIA; en la última reunión con el CTO Digão Nunesinhio, se les ha indicado que inicien con el diseño de la base de datos, pues en sus palabras ha dicho que tiene prioridad para el éxito del proyecto y que el motor de base de datos que se va a utilizar va a ser principalmente SQL Server. Aún así, dado que la plataforma Soltura es un app mobile, que se conecta a un backend con este SQL server, también se conoce que va existir una página web de Soltura, con paquetes informativos, promociones, mercadeo, media y más; este tipo de contenido se desea manejar en MongoDB; de la misma forma toda la plataforma de servicio al cliente, seguimento de casos, reviews y resolución de quejas también estará modelado en MongoDB.
 
+## Diseño de la base de datos - 20pts
+
 Proceda entonces en conjunto con sus colegas consultores de empresa a realizar el diseño de ambas bases de datos.
 
-## Test de la base de datos
+## Test de la base de datos - 65pts
 
 Ahora que ya Soltura cuenta con un diseño de base de datos aprobados por los ingenieros, CTO, contrapartes ingenieros de Soltura, se les ha pedido que realicen pruebas contextuales para medir el comportamiento, técnicas, rendimiento y semántica de la base de datos diseñada en SQL Server. A continuación se detallan todos los test requeridos. 
-
-Gracias por compartir el enunciado. A continuación, voy a reescribir y adaptar los ejercicios al contexto de un sistema de **subscripciones mensuales que cubren combinaciones de servicios** (como gimnasios, parqueos, tiendas, bienestar, etc.) pagados por los usuarios. También actualizaré el lenguaje para ajustarse a **SQL Server en su versión más reciente** (como SQL Server 2022) y eliminaré cualquier instrucción que implique uso de Oracle o tecnologías ajenas a SQL Server.
 
 
 ### Población de Datos
 
 - Crear scripts de llenado para la base de datos utilizando **solo T-SQL**, cumpliendo con:
   - El sistema opera al menos con **dos monedas** (ej. CRC y USD).
-  - Al menos **20 usuarios con suscripciones activas** y **5 usuarios sin suscripción**, distribuidos entre diferentes regiones o afiliaciones.
+  - Al menos **25 usuarios con suscripciones activas** y **5 usuarios sin suscripción**, distribuidos entre diferentes regiones o afiliaciones.
   - Cargar los **catálogos base del sistema**: tipos de servicios (gimnasios, salud, parqueos, etc.), tipos de planes, métodos de pago, monedas, estados de suscripción, etc.
-  - Llenar la tabla de **planes de suscripción**, con variaciones como: individual, familiar, empresarial.
-  - Incluir al menos **3 empresas proveedoras de servicios**, cada una ofreciendo **2 a 4 combinaciones de servicios**.
-  - Para cada combinación de servicios, debe haber **3 a 6 servicios individuales**. De estos:
-    - **1 a 4 servicios activos con beneficios definidos** (descuentos, acceso mensual).
-    - **2 a 4 servicios descontinuados o sin disponibilidad**.
-    - **2 servicios aún no asignados a ningún plan**.
-
----
-
-### Consultas Misceláneas
-
-- Crear **una vista indexada** con al menos 4 tablas (ej. usuarios, suscripciones, pagos, servicios). La vista debe ser **dinámica**, no una vista materializada con datos estáticos.
-- Crear **un procedimiento almacenado transaccional** que realice inserciones o actualizaciones en al menos 3 tablas (ej. `Pagos`, `Bitacora`, `Suscripciones`).
-- Escribir un `SELECT` que use `CASE` para crear una columna calculada que agrupe dinámicamente datos (por ejemplo, agrupar usuarios por plan en rangos de monto).
-- Diseñar una **consulta compleja** que incluya:
-  - 4 `JOIN`s entre tablas del sistema.
-  - 2 funciones agregadas (ej. `SUM`, `AVG`).
-  - 3 subconsultas.
-  - Un `CASE`, `CONVERT`, `ORDER BY`, `HAVING`, una función escalar, y operadores como `IN`, `NOT IN`, `EXISTS`.
-  - Ejecutar esta consulta con el **Query Store** o el **Query Analyzer**, optimizarla y comparar tiempos/resultados antes y después.
-- Crear una consulta con al menos 3 `JOIN`s que resuelva un problema de:
-  - **SET DIFFERENCE**: servicios que un usuario podría recibir pero no están incluidos en su plan.
-  - **INTERSECTION**: servicios comunes entre dos planes distintos.
-- Crear un procedimiento almacenado transaccional que llame a otro SP transaccional, el cual a su vez llame a otro. Cada uno debe modificar al menos 2 tablas. Se debe demostrar `COMMIT` y `ROLLBACK` con ejemplos exitosos y fallidos.
-- Crear un SP que retorne un resultado en **formato XML con `FOR XML EXPLICIT`**, representando claramente la jerarquía entre tablas como: Usuario > Suscripción > Servicios.
-- Crear un SP que reciba datos en formato XML (parámetro) y realice un `INSERT` basado en un `JOIN` entre el XML y una tabla real.
-- Repetir el ejercicio anterior usando **Table-Valued Parameters (TVP)** en vez de XML.
-- Crear un `SELECT` que genere un archivo **CSV** de datos basado en un `JOIN` entre dos tablas (usar `BULK INSERT` o `BCP` si se desea automatizar).
-- Configurar una **tabla de bitácora en otro servidor SQL Server** accesible vía **Linked Servers** con impersonación segura desde los SP del sistema.
+  - Llenar la tabla de **planes de suscripción**, con variaciones como: Joven deportista, Familia de Verano, Viajero frecuente, Nomada Digiital, etc.
+  - Incluir al menos **7 empresas proveedoras de servicios**, cada uno ofreciendo **2 a 4 combinaciones de servicios** que se deben usar para crear de 7 a 9 planes diferentes.
+  - Para cada plan de servicios, debe haber **3 a 6 subscripciones a usuarios diferentes no repetidos en otra combinación**. 
+  
 
 ---
 
 ### Demostraciones T-SQL (uso de instrucciones específicas)
 
-Crear ejemplos claros para:
+Todos las pruebas a continuación se deben hacer en uno o varios scripts TSQL. Perfectamente un solo query puede resolver varios puntos de las pruebas. 
 
-1. Cursor **local**, mostrando que no es visible fuera de la sesión.
-2. Cursor **global**, accesible desde otras sesiones.
+1. Cursor **local**, mostrando que no es visible fuera de la sesión de la base de datos
+2. Cursor **global**, accesible desde otras sesiones de la base de datos
 3. Uso de un **trigger** (por ejemplo, para log de inserciones en pagos).
-4. Uso de `sp_recompile`.
-5. Uso de `MERGE` para sincronizar datos de planes.
+4. Uso de `sp_recompile`, cómo podría estar recompilando todos los SP existentes cada cierto tiempo?
+5. Uso de `MERGE` para sincronizar datos de planes por ejemplo.
 6. `COALESCE` para manejar valores nulos en configuraciones de usuario.
 7. `SUBSTRING` para extraer partes de descripciones.
 8. `LTRIM` para limpiar strings.
 9. `AVG` con agrupamiento (ej. promedio de montos pagados por usuario).
 10. `TOP` para mostrar top 5 planes más populares.
-11. `&&` (usado como alias para `AND`, demostrar su uso correcto o incorrecto si aplica).
-12. `SCHEMABINDING` en funciones y vistas.
-13. `WITH ENCRYPTION` para proteger SP.
-14. `EXECUTE AS` para ejecutar SP con permisos elevados.
-15. `UNION` entre planes individuales y empresariales.
-16. `DISTINCT` para evitar duplicados en servicios asignados.
+11. `&&` en que caso se usa
+12. `SCHEMABINDING` demostrar que efectivamente funciona en SPs, vistas, funciones.
+13. `WITH ENCRYPTION` demostrar que es posible encriptar un SP y que no lo violenten. 
+14. `EXECUTE AS` para ejecutar SP con impersonificación, es posible? qué significa eso?
+15. `UNION` entre planes individuales y empresariales por ejemplo.
+16. `DISTINCT` para evitar duplicados en servicios asignados por ejemplo.
 
 ---
 
-### Seguridad
+### Mantenimiento de la Seguridad
+
+Esta parte se puede probar visualmente con el management studio y combinando con scripts que demuestren el comportamiento de lo configurado.
 
 - Crear usuarios de prueba y:
-  - Mostrar cómo permitir o denegar acceso a la base de datos.
-  - Conceder solo permisos de `SELECT` sobre una tabla.
-  - Permitir ejecución de ciertos SPs y denegar acceso directo a las tablas.
+  - Mostrar cómo permitir o denegar acceso a la base de datos, del todo poder verla o no, poder conectarse o no
+  - Conceder solo permisos de `SELECT` sobre una tabla a un usuario específico. Será posible crear roles y que existan roles que si puedan hacer ese select sobre esa tabla y otros Roles que no puedan? Demuestrelo con usuarios y roles pertinentes. 
+  - Permitir ejecución de ciertos SPs y denegar acceso directo a las tablas que ese SP utiliza, será que aunque tengo las tablas restringidas, puedo ejecutar el SP?
+- habrá alguna forma de implementar RLS, row level security 
 - Crear un **certificado y llave asimétrica**.
 - Crear una **llave simétrica**.
-- Cifrar datos sensibles de los usuarios usando **cifrado asimétrico** y proteger la llave privada con la simétrica.
-- Crear un SP que descifre los datos personales usando las llaves anteriores.
+- Cifrar datos sensibles usando **cifrado asimétrico** y proteger la llave privada con la simétrica.
+- Crear un SP que descifre los datos protegidos usando las llaves anteriores.
+
+---
+
+### Consultas Misceláneas
+
+- Crear **una vista indexada** con al menos 4 tablas (ej. usuarios, suscripciones, pagos, servicios). La vista debe ser **dinámica**, no una vista materializada con datos estáticos. Demuestre que si es dinámica. 
+- Crear **un procedimiento almacenado transaccional** que realice una operación del sistema, relacionado a subscripciones, pagos, servicios, transacciones o planes, y que dicha operación requiera insertar y/o actualizar al menos 3 tablas.
+- Escribir un `SELECT` que use `CASE` para crear una columna calculada que agrupe dinámicamente datos (por ejemplo, agrupar cantidades de usuarios por plan en rangos de monto, no use este ejemplo).
+- Imagine una cosulta que el sistema va a necesitar para mostrar cierta información, o reporte o pantalla, y que esa consulta vaya a requerir:
+  - 4 `JOIN`s entre tablas.
+  - 2 funciones agregadas (ej. `SUM`, `AVG`).
+  - 3 subconsultas or 3 CTEs
+  - Un `CASE`, `CONVERT`, `ORDER BY`, `HAVING`, una función escalar, y operadores como `IN`, `NOT IN`, `EXISTS`.
+  - Escriba dicha consulta y ejecutela con el query analizer, utilizando el analizador de pesos y costos del plan de ejecución, reacomode la consulta para que sea más eficiente sin necesidad de agregar nuevos índices. 
+- Crear una consulta con al menos 3 `JOIN`s que analice información donde podría ser importante obtener un **SET DIFFERENCE** y un **INTERSECTION**
+- Crear un procedimiento almacenado transaccional que llame a otro SP transaccional, el cual a su vez llame a otro SP transaccional. Cada uno debe modificar al menos 2 tablas. Se debe demostrar que es posible hacer `COMMIT` y `ROLLBACK` con ejemplos exitosos y fallidos sin que haya interrumpción de la ejecución correcta de ninguno de los SP en ninguno de los niveles del llamado. 
+- Será posible que haciendo una consulta SQL en esta base de datos se pueda obtener un JSON para ser consumido por alguna de las pantallas de la aplicación que tenga que ver con los planes, subscripciones, servicios o pagos. Justifique cuál pantalla podría requerir esta consulta. 
+- Podrá su base de datos soportar un SP transaccional que actualice los contratos de servicio de un proveedor, el proveedor podría ya existir o ser nuevo, si es nuevo, solo se inserta. Las condiciones del contrato del proveedor, deben ser suministradas por un **Table-Valued Parameter (TVP)**, si las condiciones son sobre items existentes, entonces se actualiza o inserta realizando las modificacinoes que si diseño requiera, si son condiciones nuevas, entonces se insertan. 
+- Crear un `SELECT` que genere un archivo **CSV** de datos basado en un `JOIN` entre dos tablas 
+- Configurar una **tabla de bitácora en otro servidor SQL Server** accesible vía **Linked Servers** con impersonación segura desde los SP del sistema. Ahora haga un SP genérico para que cualquier SP en el servidor principal, pueda dejar bitácora en la nueva tabla que se hizo en el Linked Server.
 
 ---
 
 ### Concurrencia
 
-- Usar solo T-SQL, **sin `LOCK` explícitos**.
-- Simular situaciones de alta concurrencia:
-  - Crear scripts que produzcan **deadlocks entre dos transacciones** con `SELECT` y `UPDATE` en distintas tablas.
-  - Intentar **deadlocks en cascada**, donde A bloquea B, B bloquea C, y C bloquea A.
-  - Demostrar los niveles de aislamiento: `READ UNCOMMITTED`, `READ COMMITTED`, `REPEATABLE READ`, `SERIALIZABLE`, mostrando los problemas que resuelven y los que generan.
-  - Crear un **cursor de actualización** que bloquee los registros que recorre, mostrando que solo los recorridos están bloqueados.
-  - Crear un SP que genere un **deadlock en cascada de 3 niveles** (A → B → C → A), visible en el Monitor de Actividad o por script.
-  - Crear SP que actualiza el estado de una tarea, validando permisos de usuario y dejando registro en bitácora.
-  - Crear un escenario en que el uso conjunto de una vista con el SP anterior genere un **deadlock o inconsistencia realista**.
+Para este ejercicio solo utilice T-SQL, no podría hacer uso de ningun operador de `LOCK` explícito de los que provee SQL Server. 
 
+El objetivo de estas pruebas es ver el comportamiento de la base de datos bajo situaciones de alta concurrencia. Dado que no vamos a contar con tantos usuarios, las situaciones se van a diseñar utilizando `WAIT FOR DELAY` para controlar el flujo de ejecución que fuerce la situación que se daría ante alta concurrencia.
+
+Normalmente para las pruebas tendrá dos conexiones abiertas simultáneas a la base de datos (dos scripts que correran por separado).
+
+  - Cree una situación de **deadlocks entre dos transacciones** que podrían llegar a darse en el sistema en el momento de hacer un canje de un servicio donde el deadlock se de entre un `SELECT` y `UPDATE` en distintas tablas. 
+  - Determinar si es posible que suceden **deadlocks en cascada**, donde A bloquea B, B bloquea C, y C bloquea A, debe poder observar el deadlock en algún monitor.
+  - Determinar como deben usarse los niveles de isolacion: `READ UNCOMMITTED`, `READ COMMITTED`, `REPEATABLE READ`, `SERIALIZABLE`, mostrando los problemas posibles al usar cada tipo de isolación en casos particulares, se recomienda analizar casos como: obtener un reporte general histórico de alguna operación, calcular el tipo de cambio a utiliza en un momento dado, adquisición de planes cuando se están actualizando, cambios de precio durante subscripciones, agotamiento de existencias de algún beneficio.  
+  - Crear un **cursor de update** que bloquee los registros que recorre uno a uno, demuestre en que casos dicho cursor los bloquea y en que casos no, para que el equipo de desarrollo sepa para que escenarios usar cursos y cuando no.
+  
 ---
 
-### Reportes (con SQL Server Reporting Services - SSRS)
+## Noticas de última hora se anuncian para semana santa - 15pts
 
-1. **Reporte de Estado de Planes**:
-   - Nombre del plan, fecha de inicio, fecha final, monto estimado, monto pagado, servicios incluidos, estado del plan.
-   - Filtro por nombre de plan y rango de fechas.
-
-2. **Reporte de Actividad de Usuarios**:
-   - Nombre del usuario, horas de uso registradas, cantidad de servicios usados, planes activos, beneficios obtenidos.
-   - Filtro por fechas, nombre de usuario, tipo de plan.
-
-
+Mantenganse sintonizados 
 
