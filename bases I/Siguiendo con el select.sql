@@ -207,4 +207,52 @@ ORDER BY ms.vetname, ms.month;
 
 
 
+SELECT fut_matches.matchid, fut_matches.matchtime, fut_matches.finishedtime, fut_matches.homeid
+FROM  fut_matches, fut_teams visitors, fut_teams homes
+WHERE fut_matches.visitorid = visitors.teamid and fut_matches.homeid = homes.teamid  
+ORDER BY fut_matches.matchtime
+
+--> lo transforma a un join
+
+SELECT fut_matches.matchid, fut_matches.matchtime, fut_matches.finishedtime, fut_matches.homeid
+FROM  fut_matches 
+INNER JOIN fut_teams visitors ON fut_matches.visitorid = visitors.teamid
+INNER JOIN fut_teams homes ON fut_matches.homeid = homes.teamid 
+ORDER BY fut_matches.matchtime
+
+
+SELECT fut_matches.matchid, fut_matches.matchtime, fut_matches.finishedtime, fut_matches.homeid
+FROM  fut_matches 
+INNER JOIN fut_teams visitors ON fut_matches.visitorid = visitors.teamid
+INNER JOIN fut_teams homes ON fut_matches.homeid = homes.teamid 
+WHERE fut_matches.matchid IS NOT NULL
+ORDER BY fut_matches.matchtime
+
+
+select * from dbo.caipi_roles
+
+-- metodo incorrecto
+DECLARE @IDRole INT
+INSERT INTO dbo.caipi_roles (rolename)
+VALUES ('Cashier')
+
+SELECT @IDRole = MAX(roleid) FROM dbo.caipi_roles
+
+SELECT @IDRole
+
+
+-- metodo correcto
+DECLARE @IDRole INT
+INSERT INTO dbo.caipi_roles (rolename)
+VALUES ('Servicio al Cliente')
+
+SELECT @IDRole = SCOPE_IDENTITY()
+
+SELECT @IDRole
+SELECT * from dbo.caipi_roles
+
+
+
+
+
 

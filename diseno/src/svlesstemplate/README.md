@@ -80,12 +80,3 @@ To deploy the application to AWS, run the following command:
 serverless deploy
 ```
 
-This command will package your application and deploy it to AWS, creating the necessary resources.
-
-## Modifying the Application
-
-- **Handlers**: Modify `src/handlers/exampleHandlerOne.ts` and `src/handlers/exampleHandlerTwo.ts` to change the behavior of your Lambda functions.
-- **Middleware**: Update `src/middleware/exampleMiddleware.ts` to add or modify request processing logic.
-- **Repository**: Change `src/repository/exampleRepository.ts` to adjust data operations.
-- **Logging**: Use the `log` function from `src/utils/logger.ts` for logging throughout your application.
-

@@ -336,7 +336,57 @@ Normalmente para las pruebas tendrá dos conexiones abiertas simultáneas a la b
 
 ---
 
-## Noticas de última hora se anuncian para semana santa - 15pts
+## Noticas de última hora - soltura ha iniciado adquisiciones en costa rica - 15pts
 
-Mantenganse sintonizados 
+Previo a la semana santa, la empresa Soltura estuvo en conversaciones con los dueños e inversionistas de varias empresas ya establecidas en el país, entre ellas "payment assistant" y "app assistant" (como grupo de trabajo escogen solo una del entregable del caso #1), esas empresas ya han logrado cierta tracción y público en Costa Rica y han decidido que dichas aplicaciones podrían ser dadas como parte de los planes de subscripción de Soltura. 
+
+En lugar de negociar con los dueños para verlos como proveedores, quieren usarlas para aumentar su cartera de usuarios, haciendo que por el mismo precio que ya pagan por el servicio, obtengan un plan que obtengan mínimo lo mismo y dos servicios más adicionales. Esto para el periodo de adquisición y dejar que los mismos usuarios posteriormente se muevan a otros planes. 
+
+Esto ha hecho que ustedes como equipo de tecnología les toque realizar una migración de los datos importantes de la base de datos del sistema adquirido, a la base de datos del sistema de soltura. No se pretende copiar las tablas, si no más bien migrar los usuarios y sus subscripciones del sistema adquirido, de tal forma que esos usuarios y sus planes ahora sean parte de los usuarios y planes de soltura. Para esta migración se sabe lo siguiente con respecto al sistema adquirido (payment assistant, app assistant): 
+
+1. Existen poco más de 1000 usuarios activos 
+
+2. El 70% de los usuarios tienen un plan activo que se paga mensualmente y el resto un plan pagado anual. 
+
+3. Hay 2 planes activos en el sistema. 
+
+4. Las fechas de pago de los planes y los montos se deben conversar al momento de hacer la migración de datos. 
+
+5. Los usuarios consumidores deben conversar sus permisos en el app.
+
+6. Se debe crear algún tipo de mecanismo o tabla que haga correspondencia entre los usuarios del sistema adquirido y los usuarios en Soltura, de tal forma que para las rutinas en Soltura sea transparente el tipo de usuario .
+
+7. Todos los usuarios migrados van a tener un nuevo usuario en Soltura con su email respectivo y sus datos respectivos de perfil de usuario, pero al hacer login deben estar forzados a ingresar un nuevo password pues no puede ser migrado el password del sistema anterior. 
+
+8. Soltura va crear una imagen en el home page y un banner publicitario indicando que dicho sistema (payment assistant o app assistant) ahora es Soltura, la fecha a partir de cuando se hace la migración y un link hacia la guía de pasos que deben seguir los usuarios ese día (este link no existe solo se pone). No hay que hacer los banner ni nada, solo el ingreso de los datos en los collections respectivos.
+
+EL CTO de soltura ha dejado abierta la opción de herramienta para hacer la migración de la base de datos de MySQL a SQL server, entre las opciones que estableció están: 
+
+- DBT 
+- Logstash 
+- SQL Server Integration Services 
+- Python notebook con Pandas 
+
+## Entregable final 
+
+- Todos los pasos anteriores se deberán documentar en un solo MD file en el repositorio con todas las secciones tal cual se han solicitado en este enunciado de caso #2 
+
+- Se revisaran adicionalmente las bases de datos llenas en MySQL y en SQL Server 
+
+- Los scripts se anclaran como bloques de código en el md file, no como links, pero también deberá haber un folder con los scripts 
+
+- Muchos de los scripts se revisaran en ejecución con explicación de código y datos 
+
+- Se revisará en forma general el diseño de la base de datos de Soltura 
+
+- Las tareas que son aplicadas en SQL Server se revisarán directamente en SQL Server 
+
+- Fecha para la última consulta: martes 29 de abril 
+
+- Revisión con cita programada a partir del sábado 3 de abril 
+
+
+
+
+
 
