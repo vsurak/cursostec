@@ -212,3 +212,4 @@ LEFT JOIN (                                                               -- Se 
 4. Dinámica de discusión ejercicio #5 y #6
 
 Se uniran los grupos del caso y analizaran los diseños de otros grupos en búsqueda de errores y mejoras. Se entrevistaran a todos los integrantes del grupo para escuchar el análisis de los hallazgos . 
+
