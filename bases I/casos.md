@@ -381,9 +381,11 @@ EL CTO de soltura ha dejado abierta la opción de herramienta para hacer la migr
 
 - Las tareas que son aplicadas en SQL Server se revisarán directamente en SQL Server 
 
-- Fecha para la última consulta: martes 29 de abril 
+- Fecha para la última consulta: sábado 3 de mayo 
 
-- Revisión con cita programada a partir del sábado 3 de abril 
+- Fecha para último commit: martes 6 de mayo 
+
+- Revisión con cita programada a partir del miércoles 7 de mayo 
 
 
 

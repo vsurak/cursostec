@@ -434,7 +434,7 @@ In this section, analyze and decide on the following architectures:
 Make all design decisions specified in:  
 [**Data Layer Design**](https://github.com/vsurak/cursostec/blob/master/diseno/3.%20dise%C3%B1o%20de%20la%20l%C3%B3gica%20y%20los%20datos%2C%20o%20backend%20y%20data.md#dise%C3%B1o-de-la-capa-de-datos)  
 
-Each decision must include:  
+Each decision must analyze at least:  
 1. **Cloud service technology**  
 2. **Object-oriented design patterns**  
 3. **Class layers for data access**  
@@ -467,8 +467,8 @@ Create a **matrix** where:
 Fill the matrix with **X/marks** to show which parts of the architecture fulfill each requirement.  
 
 
-### **Delivery Deadline for Full Design: Tuesday, April 15**  
-### **Last Consultation Date: Friday, April 11**  
+### **Delivery Deadline for Full Design: Saturday, April 26**  
+### **Last Consultation Date: Saturday, April 26**  
 
 #### **Deliverables:**  
 1. **GitHub repository**  
@@ -485,6 +485,6 @@ Fill the matrix with **X/marks** to show which parts of the architecture fulfill
    - Group name and member list.  
 
 #### **Review Process:**  
-- Scheduled meetings with the professor **starting April 21**.  
+- Scheduled meetings with the professor **starting May 2nd**.  
 
 
