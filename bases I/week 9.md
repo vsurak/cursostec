@@ -2,6 +2,8 @@
 
 ### 1. Cursors 
 
+Los cursores por defecto bloquean a nivel de fila. 
+
 ```sql
 DECLARE @teamid SMALLINT
 DECLARE @teamname VARCHAR(60)

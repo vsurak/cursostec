@@ -467,8 +467,8 @@ Create a **matrix** where:
 Fill the matrix with **X/marks** to show which parts of the architecture fulfill each requirement.  
 
 
-### **Delivery Deadline for Full Design: Saturday, April 26**  
-### **Last Consultation Date: Saturday, April 26**  
+### **Delivery Deadline for Full Design: Sunday, April 27th**  
+### **Last Consultation Date: Sunday, April 26th**  
 
 #### **Deliverables:**  
 1. **GitHub repository**  
@@ -486,5 +486,3 @@ Fill the matrix with **X/marks** to show which parts of the architecture fulfill
 
 #### **Review Process:**  
 - Scheduled meetings with the professor **starting May 2nd**.  
-
-
