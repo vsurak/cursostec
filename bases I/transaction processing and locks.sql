@@ -7,7 +7,7 @@ DECLARE @RoleId INT
 SELECT @NewRole = 'Repartidor'
 SELECT @NewUser = 'jperez'
 
-SET TRANSACTION ISOLATION LEVEL READ COMMITTED -- dato que READ COMMITTED es el default, esto está sobrando, pero todo bien si se pone
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED -- dato que READ COMMITTED es el default, esto estï¿½ sobrando, pero todo bien si se pone
 BEGIN TRANSACTION
 	INSERT INTO dbo.caipi_roles (rolename) VALUES (@NewRole)
 
@@ -26,7 +26,7 @@ select * from dbo.caipi_users
 SELECT @NewRole = 'Driver'
 SELECT @NewUser = 'johndoe'
 
-SET TRANSACTION ISOLATION LEVEL READ COMMITTED -- dato que READ COMMITTED es el default, esto está sobrando, pero todo bien si se pone
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED -- dato que READ COMMITTED es el default, esto estï¿½ sobrando, pero todo bien si se pone
 BEGIN TRANSACTION
 	INSERT INTO dbo.caipi_roles (rolename) VALUES (@NewRole)
 
@@ -40,7 +40,7 @@ ROLLBACK
 SELECT @NewRole = 'UberDriver2'
 SELECT @NewUser = NULL
 
-SET TRANSACTION ISOLATION LEVEL READ COMMITTED -- dato que READ COMMITTED es el default, esto está sobrando, pero todo bien si se pone
+SET TRANSACTION ISOLATION LEVEL READ COMMITTED -- dato que READ COMMITTED es el default, esto estï¿½ sobrando, pero todo bien si se pone
 BEGIN TRANSACTION
 BEGIN TRY 
 	INSERT INTO dbo.caipi_roles (rolename) VALUES (@NewRole)
