@@ -152,6 +152,20 @@ en el caso que haya tambien base de datos no relacional, el ejemplo de diseño p
 
 **Ejercicio #6**
 
+Basado en el entregable del caso #2, el cual puede ir a consultar y según la explicación de la lectura del libro "the software architect elevator", proceda a contestar de forma individual las siguientes preguntas. 
+
+1) usando la metáfora del jardinero que responsabilidades va a tener el arquitecto de software si los tech leads e ingenieros se encargaron de: implementar la arquitectura de software, hacer el deployment a la nube, programar todos los esqueletos y estructuras de los proyectos para los programadores y organizar el QA y los procesos de CI CD 
+
+2) mencione 5 decisiones claves de su diseño que hubiesen sido tomadas finalmente por el arquitecto de software 
+
+3) que partes de su diseño solución van a requerir control de versiones en el proceso de desarrollo y producción 
+
+4) dado el mapa de navegación de su arquitectura según la lectura, mencione 3 de los límites más claros y marcados en dicho mapa. 
+
+5) viendo toda la documentación y el diseño, identifique si efectivamente es una rampa o si hay acantilados técnicos en la misma. Justifique su respuesta identicando ya sea los puntos rampa o los puntos acantilados. 
+
+
+Enviar sus respuestas al asistente antes de las 11:20am por medio de discord, indicando su nombre completo y que se trata del ejercicio # 6 . 
 
 
 
@@ -188,3 +202,4 @@ Proceda entonces ha:
 2. Diseña tu modelo de base de datos relacional usando alguna herramienta o dibujo a mano alzada para posterior tomar una foto. 
 
 3. Enviarlo al asistente por discord indicando que es el ejercicio #7, incluyendo nombre completo y descripción de máximo 4 líneas de lo que se incorporó para cumplir con las 3 prácticas de diseño sugeridas. El ejercicio es individual. 
+
