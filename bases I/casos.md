@@ -293,7 +293,7 @@ Esta parte se puede probar visualmente con el management studio y combinando con
 - habrá alguna forma de implementar RLS, row level security 
 - Crear un **certificado y llave asimétrica**.
 - Crear una **llave simétrica**.
-- Cifrar datos sensibles usando **cifrado asimétrico** y proteger la llave privada con la simétrica.
+- Cifrar datos sensibles usando **cifrado simétrico** y proteger la llave privada con las llaves asimétrica definidas en un certificado del servidor. 
 - Crear un SP que descifre los datos protegidos usando las llaves anteriores.
 
 ---

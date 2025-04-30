@@ -165,7 +165,7 @@ Basado en el entregable del caso #2, el cual puede ir a consultar y según la ex
 5) viendo toda la documentación y el diseño, identifique si efectivamente es una rampa o si hay acantilados técnicos en la misma. Justifique su respuesta identicando ya sea los puntos rampa o los puntos acantilados. 
 
 
-Enviar sus respuestas al asistente antes de las 8:50am por medio de discord, indicando su nombre completo y que se trata del ejercicio # 6 . 
+Enviar sus respuestas al asistente antes de las 8:55am por medio de discord, indicando su nombre completo y que se trata del ejercicio # 6 . 
 
 
 
