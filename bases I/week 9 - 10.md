@@ -2,18 +2,18 @@
 
 ### 1. Cursors 
 
-Los cursores por defecto bloquean a nivel de fila. 
+Los cursores podrían bloquear las filas que van recoriendo si se usa el modificador SCROLL_LOCKS. 
 
 ```sql
 DECLARE @teamid SMALLINT
 DECLARE @teamname VARCHAR(60)
 DECLARE @division TINYINT
 
-DECLARE fut_teams_cursor CURSOR FOR
+DECLARE fut_teams_cursor CURSOR SCROLL_LOCKS FOR
 SELECT teamid, teamname, division
 FROM dbo.fut_teams WITH (ROWLOCK, UPDLOCK) -- otra opcion es que el cursor sea para update
 
--- DECLARE fut_teams_cursor CURSOR FOR
+-- DECLARE fut_teams_cursor CURSOR SCROLL_LOCKS FOR
 -- SELECT teamid, teamname, division
 -- FROM dbo.fut_teams FOR UPDATE
 
@@ -199,6 +199,13 @@ El segundo tipo, son las indexadas o materializadas, se les llama así, pues sus
 - explicar el esquema de locking desde la perspectiva del libro de navatte
 
 ### 7. Problemas de concurrencia de la base de datos y los niveles de isolación 
+
+
+**Ejercicio #7:**
+Utilizando la plantilla de SP transaccional proporcionada por el profesor "XXXXXSP_VerboEntidad.sql" y el diseño de su base de datos para el caso #2, proceda a implementar un SP que dado el nombre de un proveedor de Soltura, calcule el monto que se le debe pagar del mes anterior al actual e inserte la transacción de pago a ese proveedor por el monto calculado, adicionalmente inserte un log indicando el id de la transacción hecha y la cantidad de subscripciones que fueron tomadas en cuenta en dicho monto. 
+
+El ejercicio es individual, envié el archivo SQL al asistente para antes de las 11:40am del día de hoy. 
+
 
 
 

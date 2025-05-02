@@ -176,5 +176,49 @@ select * from dbo.fut_teamstats
 select * from dbo.fut_matches
 select * from dbo.fut_teams
 
+BEGIN TRAN
+DECLARE @teamid SMALLINT
+DECLARE @teamname VARCHAR(60)
+DECLARE @division TINYINT
+
+--DECLARE fut_teams_cursor CURSOR FOR
+--SELECT teamid, teamname, division
+--FROM dbo.fut_teams WITH (ROWLOCK, UPDLOCK) -- otra opcion es que el cursor sea para update
+
+DECLARE fut_teams_cursor CURSOR SCROLL_LOCKS FOR
+SELECT teamid, teamname, division
+FROM dbo.fut_teams FOR UPDATE
+
+OPEN fut_teams_cursor
+
+FETCH NEXT FROM fut_teams_cursor INTO @teamid, @teamname, @division
+
+WHILE @@FETCH_STATUS = 0
+BEGIN
+    -- Example operation on the current record
+    PRINT 'Processing Team: ' + @teamname + ', Division: ' + CAST(@division AS VARCHAR)
+
+	WAITFOR DELAY '00:00:02'
+    FETCH NEXT FROM fut_teams_cursor INTO @teamid, @teamname, @division
+END
+
+CLOSE fut_teams_cursor
+DEALLOCATE fut_teams_cursor
+
+COMMIT
 
 
+-- esto lo corrí en paralelo con el cursor
+Declare @teamid INT
+SET @teamid = 1
+BEGIN TRAN
+	WHILE @teamid < 6 BEGIN
+		
+		UPDATE dbo.fut_teams SET teamname = teamname + 'Y' WHERE teamid = @teamid 
+		WAITFOR DELAY '00:00:01'
+
+		set @teamid = @teamid + 1
+	END 
+COMMIT
+
+select * from dbo.fut_teams
