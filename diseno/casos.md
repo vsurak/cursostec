@@ -486,3 +486,133 @@ Fill the matrix with **X/marks** to show which parts of the architecture fulfill
 
 #### **Review Process:**  
 - Scheduled meetings with the professor **starting May 2nd**.  
+
+
+# Caso #3 - Data Pura Vida - 50% 
+
+Durante años, Costa Rica ha enfrentado una limitación estructural importante: la ausencia de un sistema centralizado de datos que facilite el acceso, análisis y aprovechamiento de la información por parte de diversos actores. Actualmente no existe un ecosistema nacional que permita a personas, instituciones públicas, poderes del Estado, organizaciones sociales y al sector privado compartir, reutilizar y comercializar información de forma estructurada. Esta fragmentación ha dificultado la toma de decisiones basadas en evidencia, ha ralentizado los procesos institucionales y ha limitado el desarrollo de soluciones innovadoras que podrían surgir del uso estratégico de datos.
+
+Frente a este desafío, se propone la creación de un ecosistema nacional de datos interoperables, seguros y regulados, en el que tanto entidades públicas como privadas puedan aportar y utilizar información de valor. Este sistema permitiría clasificar los datos según su naturaleza: abiertos o de acceso restringido, gratuitos o sujetos a un modelo de cobro según su uso. Se establecerían estándares robustos de seguridad y privacidad para garantizar la protección de la información sensible y el cumplimiento normativo. El objetivo es habilitar un entorno en el que datos confiables puedan ser utilizados para generar nuevas aplicaciones, productos tecnológicos y servicios basados en ciencia de datos e inteligencia artificial.
+
+Con la implementación de este ecosistema, Costa Rica podría dar un salto hacia una economía y un gobierno dirigidos por datos reales. Las instituciones optimizarían sus procesos, el sector privado encontraría nuevas oportunidades de innovación y colaboración, y la ciudadanía tendría acceso a información útil y transparente. Además, la coexistencia de datos públicos y privados, gestionados bajo esquemas claros y seguros, abriría un espacio dinámico para el desarrollo tecnológico y la transformación digital sostenible del país.
+
+## Requerimientos de la plataforma
+
+### Portal Data Pura Vida 
+
+**Portal Web Esperado para la Plataforma *Data Pura Vida***
+
+**bio registro verde**
+Esta sección es el punto de entrada al ecosistema *Data Pura Vida*, donde toda persona física o jurídica interesada en participar debe registrarse. Está orientada a validar de manera segura y confiable la identidad y capacidad de los usuarios y organizaciones para operar dentro de la plataforma, estableciendo mecanismos de autenticación avanzada y validación documental automatizada por inteligencia artificial.
+
+* Permitir el registro de personas físicas, jurídicas, instituciones, cámaras, grupos y empresas
+* Solicitar datos diferenciados según el tipo de entidad: información personal, societaria, legal y tributaria
+* Incluir validación interna previa a la aprobación del registro, marcando los registros como pendientes
+* Implementar IA para verificar la completitud y validez de los documentos subidos
+* Exigir que los representantes se registren como individuos con identidad digital, biometría, prueba de vida y autenticación multifactor (MFA)
+* Asignar llaves de seguridad a organizaciones para delegar o revocar accesos de usuarios asociados
+* Permitir que una persona administre múltiples organizaciones desde una misma cuenta
+* Capturar datos preliminares de cuentas IBAN y/o tarjetas de crédito como parte del proceso de registro
+* Notificar por correo electrónico una vez el registro ha sido validado y aprobado
+* Exigir documentos como cédulas físicas o jurídicas, actas, registros tributarios, direcciones y más según el tipo de entidad
+* Adaptar dinámicamente los formularios y campos requeridos según la categoría de registro
+* Establecer validaciones inteligentes por IA personalizadas a los requisitos según el tipo de usuario o entidad
+* Restringir el acceso al portal solo desde direcciones IP ubicadas en Costa Rica
+* Permitir el registro de IPs institucionales o listas blancas para acceso autorizado
+* Generar claves criptográficas simétricas y asimétricas para cada entidad/persona
+* Proteger claves con un sistema de llave tripartita, distribuyendo una parte a Data Pura Vida y las otras dos a custodios definidos
+
+**Feliz compartiendo datos**
+Esta sección permite que las personas, instituciones y organizaciones definan cómo desean compartir sus datos dentro del ecosistema, garantizando control, seguridad, privacidad y versatilidad en la forma de carga y disponibilidad de los datos. Se habilitan múltiples mecanismos de publicación y se integran procesos inteligentes para garantizar la calidad, gobernanza y utilidad de la información.
+
+* Permitir a los usuarios decidir qué datos compartir dentro del ecosistema
+* Soportar múltiples formatos de carga: archivos Excel, CSV, JSON, APIs y conexiones directas a bases de datos SQL y NoSQL
+* Configurar los parámetros de conexión de forma cifrada para cada medio de carga de datos
+* Requerir nombre, descripción y metadata útil para IA sobre las columnas del dataset
+* Validar el formato, estructura y contenido de cada dataset compartido
+* Configurar si el dataset es público o privado, gratuito o pagado, permanente o con disponibilidad temporal
+* Permitir definir montos de acceso para datasets con modelo de cobro
+* Habilitar control granular sobre el acceso por institución, persona o grupo de actores
+* Permitir seleccionar campos específicos a cifrar dentro del dataset
+* Restringir acceso a datos por límites de tiempo, volumen o frecuencia de consulta
+* Requerir que cada dataset tenga un nombre único
+* Especificar columnas que relacionan un dataset con otro si existen relaciones entre ellos
+* Asignar permisos de acceso a los datasets privados
+* Definir si los datos son de solo lectura o también escritura, y el mecanismo para escritura (API, archivo o conexión directa)
+* Indicar si la carga de datos es única o recurrente, completa o por deltas
+* Configurar parámetros para los deltas: campos diferenciales, frecuencia por "timed pull" o por notificación mediante callbacks
+* Automatizar el proceso de carga de datos mediante un motor de IA que aplique un flujo ETDL: extracción, transformación, limpieza, detección de contexto, modelado y carga
+* Detectar y evitar duplicidades, optimizar relaciones con datos ya existentes y ajustar el modelo de datos en función de las interrelaciones
+* Monitorear todo el proceso con métricas de transferencia, carga, limpieza, eliminación, modelado, volumen, datos omitidos, datos consultados y tasa de éxito
+* Incluir un módulo de compra donde los usuarios puedan visualizar datasets disponibles con acceso pagado
+* Permitir seleccionar el dataset de interés, ver el precio, términos de uso, duración del acceso y condiciones de cobro
+* Soportar múltiples métodos de pago: tarjeta de crédito, débito y otros mecanismos nacionales compatibles
+* Asignar automáticamente los permisos correspondientes al usuario tras la confirmación de pago
+* Mostrar confirmaciones claras de transacción y activar el acceso conforme a las condiciones acordadas (tiempo, volumen, frecuencia)
+* Asociar el acceso adquirido a los dashboards del usuario para permitir su uso inmediato
+* Todos los datos cargados deben estar protegidos contra los ingenieros de la plataforma en forma cifrada o cifrada el area de acceso 
+
+**Descubriendo Costa Rica**
+Esta es la sección central del portal donde los usuarios exploran, visualizan y analizan la información consolidada. Actúa como una ventana a los datos del país, permitiendo construir dashboards personalizados mediante interacción manual o con ayuda de IA, siempre bajo un modelo seguro de consulta sin exportación directa.
+
+* Visualizar todos los datos accesibles como una fuente consolidada
+* Construir dashboards manualmente o mediante prompts inteligentes que generen visualizaciones automáticas
+* Permitir representación gráfica en forma de tablas, gráficos, conteos, tendencias y predicciones
+* Impedir la descarga directa de datos en cualquier momento
+* Mostrar datos de forma preliminar en modo de construcción de dashboard y luego con datos reales al ejecutar consultas
+* Bloquear exportaciones de gráficos y contenidos; todo se visualiza exclusivamente dentro del portal
+* Permitir a los usuarios guardar sus dashboards personalizados
+* Habilitar la opción de compartir dashboards entre usuarios o con visibilidad pública dentro de la plataforma
+* Visualizar en tiempo real el consumo de los datos pagados dentro de los dashboards construidos
+* Mostrar métricas de consumo como: volumen de datos consultados, número de consultas realizadas, tiempo restante o límite alcanzado
+* En caso de superar el límite de uso, deshabilitar temporalmente el acceso y mostrar opciones para renovar o ampliar el paquete adquirido
+* Registrar todas las transacciones y consumos en un historial accesible por el usuario para consulta y auditoría interna
+
+**Descripción del Proyecto de Voto Electrónico en Costa Rica**
+
+Costa Rica no cuenta actualmente con un sistema oficial de voto electrónico como herramienta electoral, y su implementación enfrenta desafíos políticos, constitucionales y legales que requieren atención cuidadosa. Sin embargo, el concepto del voto electrónico va mucho más allá de las elecciones nacionales: puede ser utilizado para encuestas, consultas públicas, toma de decisiones en instituciones, validación ciudadana de propuestas o proyectos, y direccionamiento de políticas. En una sociedad democrática y digital, la participación no puede seguir limitada únicamente a eventos electorales cada varios años.
+
+El objetivo del proyecto es crear una plataforma de voto electrónico que sea accesible, segura y multifuncional. Esta herramienta permitirá a ciudadanos y organizaciones registrar propuestas de diversa índole —desde decisiones administrativas hasta proyectos municipales o reformas legales—, y someterlas a votación de públicos específicos. Las votaciones serán parametrizables, con reglas claras y mecanismos de validación, alcanzando poblaciones segmentadas según diversos criterios como edad, ubicación, afiliación o profesión. Este sistema busca promover un entorno donde la voz ciudadana pueda incidir de manera ágil y directa en múltiples esferas.
+
+El resultado esperado es una Costa Rica más participativa, con una ciudadanía empoderada y con herramientas modernas para expresarse, influir y decidir. Se fomentará una cultura de transparencia, donde todas las votaciones serán públicas en contenido y resultados, pero asegurando que los votos individuales sean siempre anónimos. La plataforma brindará reportes en tiempo real, será altamente segura, y ofrecerá un respaldo técnico y criptográfico que garantice la integridad de cada voto emitido. Esto dará agilidad competitiva al país, permitiendo decisiones más rápidas, mejor informadas y colectivamente validadas.
+
+---
+
+**Requerimientos Funcionales**
+
+* Los ciudadanos deberán registrarse utilizando MFA, prueba de vida, identidad digital y confirmaciones físicas y temporales
+* Se generarán identidades cifradas con llaves propias que protegen la integridad de cada usuario
+* Organizaciones e instituciones también podrán registrarse, únicamente a través de una persona física ya registrada
+* En una fase posterior, extranjeros podrán registrarse, condicionados por listas blancas de IPs y países permitidos
+* La validez de identidad deberá comprobarse periódicamente durante el tiempo de uso
+* El sistema solicitará documentos digitales que pasarán revisión automática por IA
+* Algunos registros requerirán aprobación mancomunada de 2 a 3 validadores humanos con llaves privadas distribuidas
+* Cualquier persona física, o en representación de una organización, podrá presentar propuestas para votación
+* Las propuestas pueden incluir temas como leyes, decisiones ejecutivas, proyectos municipales, innovaciones, reglamentos o admisiones
+* Cada tipo de propuesta deberá cumplir con un set de requisitos: contenido, documentación, beneficios, impacto y cuantificación
+* Se deben establecer reglas de validación específicas por tipo de propuesta y por sección del contenido
+* El sistema debe permitir definir el público objetivo de cada votación usando criterios como edad, nacionalidad, sexo, educación, afiliación institucional, o listas específicas de identificadores
+* Se podrá asignar peso diferenciado a los votos según el grupo poblacional
+* Las votaciones tendrán plazos definidos y configurables
+* Se debe configurar cómo se notificará el inicio de la votación
+* Se establecerán reglas claras de aceptación, rechazo o calificación según el resultado de los votos
+* Todas las votaciones serán públicas en contenido y resultados en la primera versión
+* Los votos individuales serán anónimos y no podrán rastrearse
+* El sistema deberá prevenir cualquier acceso no autorizado por parte de personal técnico o de red a la base de datos de votos
+
+---
+
+**Requerimientos No Funcionales**
+
+* El sistema debe tener seguridad criptográfica avanzada para garantizar la integridad y confidencialidad de los votos
+* Las identidades de usuarios deben estar protegidas con mecanismos de cifrado fuerte, llave privada, y validación biométrica
+* La plataforma debe ser 100% web, accesible desde cualquier dispositivo con conexión segura
+* Toda la infraestructura deberá estar hospedada en entornos con aislamiento lógico que impida accesos directos por parte de ingenieros o administradores del sistema
+* Debe existir auditoría completa de cada proceso sin comprometer el anonimato de los votantes
+* La base de datos debe tener control de acceso en múltiples niveles con segregación de roles
+* Toda transacción debe ser firmada digitalmente y trazable sin comprometer la identidad del votante
+* El sistema debe ser escalable para permitir desde pequeñas consultas internas hasta votaciones masivas a nivel nacional
+* Las comunicaciones y transferencias deben usar canales cifrados end-to-end
+* El sistema debe tener alta disponibilidad y mecanismos de recuperación automática ante fallos
+* Debe haber monitoreo en tiempo real de seguridad, actividad sospechosa y estado general del sistema
+

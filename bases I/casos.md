@@ -389,6 +389,52 @@ EL CTO de soltura ha dejado abierta la opción de herramienta para hacer la migr
 
 
 
+# Caso #3 - Voto Pura Vida -35%
 
+Costa Rica no cuenta actualmente con un sistema oficial de voto electrónico como herramienta electoral, y su implementación enfrenta desafíos políticos, constitucionales y legales que requieren atención cuidadosa. Sin embargo, el concepto del voto electrónico va mucho más allá de las elecciones nacionales: puede ser utilizado para encuestas, consultas públicas, toma de decisiones en instituciones, validación ciudadana de propuestas o proyectos, y direccionamiento de políticas. En una sociedad democrática y digital, la participación no puede seguir limitada únicamente a eventos electorales cada varios años.
+
+El objetivo del proyecto es crear una plataforma de voto electrónico que sea accesible, segura y multifuncional. Esta herramienta permitirá a ciudadanos y organizaciones registrar propuestas de diversa índole, desde decisiones administrativas hasta proyectos municipales o reformas legales, y someterlas a votación de públicos específicos. Las votaciones serán parametrizables, con reglas claras y mecanismos de validación, alcanzando poblaciones segmentadas según diversos criterios como edad, ubicación, afiliación o profesión. Este sistema busca promover un entorno donde la voz ciudadana pueda incidir de manera ágil y directa en múltiples esferas.
+
+El resultado esperado es una Costa Rica más participativa, con una ciudadanía empoderada y con herramientas modernas para expresarse, influir y decidir. Se fomentará una cultura de transparencia, donde todas las votaciones serán públicas en contenido y resultados, pero asegurando que los votos individuales sean siempre anónimos. La plataforma brindará reportes en tiempo real, será altamente segura, y ofrecerá un respaldo técnico y criptográfico que garantice la integridad de cada voto emitido. Esto dará agilidad competitiva al país, permitiendo decisiones más rápidas, mejor informadas y colectivamente validadas.
+
+---
+
+**Requerimientos Funcionales**
+
+* Los ciudadanos deberán registrarse utilizando MFA, prueba de vida, identidad digital y confirmaciones físicas y temporales
+* Se generarán identidades cifradas con llaves propias que protegen la integridad de cada usuario
+* Organizaciones e instituciones también podrán registrarse, únicamente a través de una persona física ya registrada
+* En una fase posterior, extranjeros podrán registrarse, condicionados por listas blancas de IPs y países permitidos
+* La validez de identidad deberá comprobarse periódicamente durante el tiempo de uso
+* El sistema solicitará documentos digitales que pasarán revisión automática por IA
+* Algunos registros requerirán aprobación mancomunada de 2 a 3 validadores humanos con llaves privadas distribuidas
+* Cualquier persona física, o en representación de una organización, podrá presentar propuestas para votación
+* Las propuestas pueden incluir temas como leyes, decisiones ejecutivas, proyectos municipales, innovaciones, reglamentos o admisiones
+* Cada tipo de propuesta deberá cumplir con un set de requisitos: contenido, documentación, beneficios, impacto y cuantificación
+* Se deben establecer reglas de validación específicas por tipo de propuesta y por sección del contenido
+* El sistema debe permitir definir el público objetivo de cada votación usando criterios como edad, nacionalidad, sexo, educación, afiliación institucional, o listas específicas de identificadores
+* Se podrá asignar peso diferenciado a los votos según el grupo poblacional
+* Las votaciones tendrán plazos definidos y configurables
+* Se debe configurar cómo se notificará el inicio de la votación
+* Se establecerán reglas claras de aceptación, rechazo o calificación según el resultado de los votos
+* Todas las votaciones serán públicas en contenido y resultados en la primera versión
+* Los votos individuales serán anónimos y no podrán rastrearse
+* El sistema deberá prevenir cualquier acceso no autorizado por parte de personal técnico o de red a la base de datos de votos
+
+---
+
+**Requerimientos No Funcionales**
+
+* El sistema debe tener seguridad criptográfica avanzada para garantizar la integridad y confidencialidad de los votos
+* Las identidades de usuarios deben estar protegidas con mecanismos de cifrado fuerte, llave privada, y validación biométrica
+* La plataforma debe ser 100% web, accesible desde cualquier dispositivo con conexión segura
+* Toda la infraestructura deberá estar hospedada en entornos con aislamiento lógico que impida accesos directos por parte de ingenieros o administradores del sistema
+* Debe existir auditoría completa de cada proceso sin comprometer el anonimato de los votantes
+* La base de datos debe tener control de acceso en múltiples niveles con segregación de roles
+* Toda transacción debe ser firmada digitalmente y trazable sin comprometer la identidad del votante
+* El sistema debe ser escalable para permitir desde pequeñas consultas internas hasta votaciones masivas a nivel nacional
+* Las comunicaciones y transferencias deben usar canales cifrados end-to-end
+* El sistema debe tener alta disponibilidad y mecanismos de recuperación automática ante fallos
+* Debe haber monitoreo en tiempo real de seguridad, actividad sospechosa y estado general del sistema
 
 
