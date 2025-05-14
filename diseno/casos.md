@@ -641,6 +641,7 @@ Adicionalmente, **toda la documentación del diseño debe residir en un reposito
 * [ ] Evaluación de riesgos utilizando metodologías reconocidas como **ISO 31000** o **NIST RMF** o otras tablas similares simplificadas
 * [ ] Estrategia integral con roadmap, milestones, recursos y estructura del equipo
 * [ ] Definición de **KPIs clave** y mecanismos para su recolección y cálculo en cada milestone
+* [ ] Declarar, cumplir, regular, abordar o resolver los aspectos documentados en la unidad 6 y 7 del curso en este mismo repositorio 
 * [ ] Diseño de los componentes: **Frontend, Backend, Data, Terceros, Cloud y Protocolos**
 * [ ] Al menos **3 customer journeys** completos y visuales
 * [ ] **Service Design** por cada customer journey usando herramientas como **Blueprints, Value Maps** o **UX Journey Maps**
