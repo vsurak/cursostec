@@ -618,6 +618,28 @@ Configura los parámetros de votación para una propuesta específica.
 * Guardar la configuración completa de la votación en estado *preparado*
 * Permitir actualizar esta configuración solo hasta que inicie el periodo de votación
 
+### **Dashboard de consulta**
+
+El **dashboard del sistema de voto electrónico** deberá implementarse con una herramienta de visualización que pueda integrarse a la arquitectura de datos utilizada por el proyecto (por ejemplo: **Power BI, Tableau, Kibana, Databox, Reporting Services, Looker**, entre otras). Esta herramienta permitirá mostrar resultados de las votaciones. 
+
+A continuación, se describen los requisitos específicos que debe cumplir el dashboard:
+
+* Validar que el usuario tenga **privilegios elevados** antes de mostrar los resultados totales de votaciones
+* Mostrar el **top 5 de las votaciones más recientes**, incluyendo:
+
+  * Las **preguntas** de cada votación
+  * Los **resultados agregados** por opción de respuesta
+  * Segmentación de resultados por algún **dato demográficos o social** (edad, sexo, región, grupo institucional, etc.), siempre preservando el anonimato 
+
+* Si la propuesta es de tipo **emprendimiento o crowdfunding**, también deberá mostrar:
+
+  * El **monto total solicitado** por el proyecto
+  * El **monto recibido** a través de inversión ciudadana
+  * El **monto ejecutado** hasta la fecha según el plan de desembolsos 
+
+* Integrarse directamente a las bases de datos o a través del datalake/configuración de BI elegida
+* Garantizar la **visualización solo en la plataforma** (sin descarga/exportación de datos)
+
 
 ### **Otros aspectos**
 Todos los endpoints deberán:
