@@ -664,6 +664,6 @@ Adicionalmente, **toda la documentación del diseño debe residir en un reposito
 
 **Importante:** El diseño no debe contemplar QA ni pruebas automáticas. Las clases serán utilizadas por el profesor para profundizar sobre tecnologías, arquitectura, metodologías y documentación, de acuerdo con los avances detectados en los canales de Slack y los tableros de tareas.
 
-* Revisión de avances: desde **11 de junio**
+* Revisión final a partir del **11 de junio**
 * Último día para consultas: **viernes 6 de junio**
 

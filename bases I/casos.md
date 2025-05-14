@@ -478,4 +478,98 @@ El módulo de **crowdfunding** del sistema de voto electrónico tiene como objet
 * La plataforma es responsable de realizar los pagos a los inversionistas según el cronograma pactado
 * En caso de incumplimiento, se inician procesos legales
 * Los creadores del proyecto deben presentar mensualmente estados financieros y de resultados para los inversionistas y el público fiscalizador
+* Considerar que este módulo es un indicio de otros módulos que se pueden construir basados en la plataforma de voting, podrían verse como parte del sistema o podrían diseñarse como una forma de integrar nuevos módulos o extensiones en el futuro
+
+## Demo del Micitt
+
+El Micitt debe presentar un prototipo de Voto Pura Vida a los poderes de la república enfocado en el caso de uso del crowdfunding para obtener el visto bueno con el que el proyecto irá avanzando. El Micitt ha seleccionado a su equipo de trabajo para crear este prototipo el cuál debe incluir:
+
+### diseño de la base de datos
+
+Para el desarrollo del **prototipo del sistema de voto electrónico**, se deben cumplir una serie de entregables técnicos enfocados en el **diseño, implementación y seguridad de la base de datos**, además de establecer buenas prácticas de versionamiento y documentación. El objetivo de esta fase es garantizar que el almacenamiento, procesamiento y protección de los datos cumplan con los requerimientos funcionales y no funcionales definidos previamente, especialmente en lo relacionado con la confidencialidad del voto, trazabilidad de procesos, segmentación por perfil, y auditoría.
+
+* Se debe definir si el sistema utilizará una o varias bases de datos, pudiendo ser relacionales (como PostgreSQL o SQL Server), no relacionales (como MongoDB), o una combinación híbrida
+* Diseñar e implementar las **tablas** (para relacional) y **colecciones** (para no relacional) necesarias para cubrir los flujos del sistema: usuarios, identidades, propuestas, votos, validaciones, logs, permisos, entre otros
+* Considerar todos los requerimientos del sistema, tanto funcionales (votaciones, filtros por perfil, resultados, auditorías) como no funcionales (secreto del voto, no repudio, alta disponibilidad, cifrado de datos)
+* Incorporar medidas robustas de **seguridad** en el diseño desde el inicio: separación de roles, control de acceso, cifrado en tránsito y en reposo, protección de llaves
+* Crear un **script de llenado inicial (data seeding)** para las tablas o colecciones necesarias que permitan probar el prototipo (usuarios, propuestas de prueba, segmentos de población, reglas de votación, etc.)
+* Implementar **Stored Procedures** y **Funciones** necesarias para las operaciones más relevantes del backend, como la emisión del voto, el cómputo de resultados, generación de hash, validación de elegibilidad, auditoría, etc.
+* Diseñar y probar los **esquemas de seguridad nativos** del motor de base de datos: creación de roles, permisos, acceso segmentado y restricciones por IP o autenticación de múltiples factores (si aplica)
+* Implementar mecanismos de **cifrado y descifrado** de datos sensibles (como votos, llaves, identidad del usuario) con herramientas como PGP, AES, RSA, o bibliotecas del motor de base de datos
+* Diseñar e implementar un mecanismo seguro de **gestión de llaves**, contemplando llaves públicas, privadas y esquemas de compartición (por ejemplo, llave tri-partita) con acceso segregado
+* Cada equipo tendrá derecho a **dos sesiones de revisión con el arquitecto de software (profesor)** vía videollamada. Es requisito que todo el grupo esté presente y con el diseño preparado
+* Toda la documentación técnica, scripts, diagramas y estructuras deben estar centralizados en **un único repositorio en GitHub**
+* Se debe implementar **control de versiones de la base de datos** utilizando la herramienta **Flyway**
+  👉 [https://www.red-gate.com/products/flyway/](https://www.red-gate.com/products/flyway/)
+* Todos los scripts, migraciones, seeds y actualizaciones estructurales deben ser gestionados y ejecutados exclusivamente mediante **Flyway**
+* Considere en su diseño como eliminar o al menos reducir en gran medida el reproceso de contenido por AI
+
+### implementación del API
+
+Para la **implementación del API** del sistema de voto electrónico y crowdfunding, se desarrollará una **serverless** en el lenguaje de programación que el equipo elija (por ejemplo, Python, Node.js, C#, Go, etc.). Aunque se trabajará bajo el enfoque tecnológico de **cloud computing (AWS o Azure)**, el **despliegue será completamente local**, garantizando que todos los miembros del grupo tengan la misma implementación y acceso a la base de datos de forma local. Este enfoque asegura consistencia, colaboración distribuida y portabilidad del entorno de desarrollo.
+
+Los **endpoints de la API** se implementarán en **dos categorías: utilizando procedimientos almacenados (Stored Procedures)** y mediante un **ORM (Object-Relational Mapping)**. En esta sección se describen los endpoints correspondientes a la categoría de Stored Procedures, con una descripción de alto nivel de los pasos que deben ejecutarse, teniendo en cuenta el **control transaccional**, **validaciones críticas** y la posible integración con servicios de IA.
+
+---
+
+### **Endpoints implementados por Stored Procedures**
+
+**a) crearActualizarPropuesta**
+Permite crear una nueva propuesta o actualizar una existente.
+
+* Recibir datos del formulario y archivos adjuntos (documentación soporte)
+* Insertar o actualizar información en las tablas/colecciones correspondientes
+* Validar que el usuario tenga permisos de creación/edición sobre la propuesta
+* Asociar la propuesta a su población meta: criterios como edad, grupo, región, etc.
+* Enviar los datos a revisión interna (estado: *pendiente de validación*)
+* Registrar el historial de cambios y generar hash de integridad
+* Preparar contenido para revisión automatizada por IA
+* Envolver todo el proceso en una transacción completa
+
+**b) revisarPropuesta**
+Proceso de validación y publicación de propuestas.
+
+* Recibir el identificador de la propuesta
+* Consultar su tipo y extraer sus criterios de validación
+* Preparar payloads esperados para validación por IA o LLM (opcional pero obligatorio dejar estructuras preparadas)
+* Procesar los resultados de IA/LLM o validaciones automáticas estructuradas
+* Si cumple los requisitos, actualizar el estado de la propuesta a *publicada*
+* Registrar validación, timestamp, resultado de revisión e identidad de los revisores
+* Dejar trazabilidad del análisis técnico y la fuente de aprobación
+* Ejecutar dentro de una transacción atómica para evitar estados inconsistentes
+
+**c) invertir**
+Permite a un ciudadano invertir en una propuesta abierta y aprobada.
+
+* Validar que el proyecto esté en estado *aprobado para inversión*
+* Verificar identidad del usuario y confirmar su registro en el sistema
+* Validar el pago y confirmar el monto transferido por el inversionista
+* Calcular el porcentaje accionario a entregar basado en monto y valor total
+* Verificar que no se exceda el total permitido (overflow de inversión)
+* Insertar registro de inversión, relación con propuesta y plan de entrega de fondos
+* Generar calendario de revisión (fechas clave para fiscalización del proyecto)
+* Preparar plan de desembolsos por tramos mensuales
+* Ejecutar todos los pasos dentro de una transacción única
+
+**d) repartirDividendos**
+Distribuye dividendos a inversionistas de un proyecto activo.
+
+* Validar que el proyecto esté en estado *ejecutando* y con fiscalizaciones aprobadas
+* Recibir y verificar reporte de ganancias y disponibilidad de fondos para reparto
+* Consultar los inversionistas y sus porcentajes de participación
+* Calcular el monto a distribuir a cada inversionista según su equity
+* Verificar que todos los inversionistas tengan medios de depósito válidos
+* Generar transacciones de pago para cada inversionista
+* Registrar el ciclo de distribución, con montos, fechas, e IDs de transacciones
+* Ejecutar todo el proceso de forma segura y transaccional
+
+---
+
+Cada uno de estos procedimientos deberá:
+
+* Estar versionado y almacenado en el repositorio GitHub del grupo
+* Documentarse claramente con nombre, parámetros, lógica interna, y ejemplos de uso
+* Usar mecanismos de protección de datos sensibles, roles y transacciones seguras
+* Tener pruebas locales funcionales con datos del script de llenado de la base
+
 
