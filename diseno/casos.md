@@ -657,7 +657,9 @@ Adicionalmente, **toda la documentación del diseño debe residir en un reposito
 * [ ] Identificar ventajas y desventajas del diseño, proponiendo mitigaciones a los riesgos y limitaciones
 * [ ] Incorporar **pruebas de concepto, prototipos o ejemplos** que guíen la futura ejecución y validen elecciones tecnológicas
 * [ ] Documentar versiones de **frameworks, SDKs, lenguajes y herramientas** utilizadas, así como sus restricciones y licencias
-
+* [ ] El diseño es claro en cuanto a principios de diseño
+* [ ] Hay uso de patrones arquitéctonicos avanzados creados especiamente para casos como este
+* [ ] El diseño de datos y de arquitectura considera donde sea necesario prácticas y patrones para AI. Unidad 8. 
 ---
 
 **Importante:** El diseño no debe contemplar QA ni pruebas automáticas. Las clases serán utilizadas por el profesor para profundizar sobre tecnologías, arquitectura, metodologías y documentación, de acuerdo con los avances detectados en los canales de Slack y los tableros de tareas.
