@@ -493,7 +493,6 @@ Para el desarrollo del **prototipo del sistema de voto electrónico**, se deben 
 * Considerar todos los requerimientos del sistema, tanto funcionales (votaciones, filtros por perfil, resultados, auditorías) como no funcionales (secreto del voto, no repudio, alta disponibilidad, cifrado de datos)
 * Incorporar medidas robustas de **seguridad** en el diseño desde el inicio: separación de roles, control de acceso, cifrado en tránsito y en reposo, protección de llaves
 * Crear un **script de llenado inicial (data seeding)** para las tablas o colecciones necesarias que permitan probar el prototipo (usuarios, propuestas de prueba, segmentos de población, reglas de votación, etc.)
-* Implementar **Stored Procedures** y **Funciones** necesarias para las operaciones más relevantes del backend, como la emisión del voto, el cómputo de resultados, generación de hash, validación de elegibilidad, auditoría, etc.
 * Diseñar y probar los **esquemas de seguridad nativos** del motor de base de datos: creación de roles, permisos, acceso segmentado y restricciones por IP o autenticación de múltiples factores (si aplica)
 * Implementar mecanismos de **cifrado y descifrado** de datos sensibles (como votos, llaves, identidad del usuario) con herramientas como PGP, AES, RSA, o bibliotecas del motor de base de datos
 * Diseñar e implementar un mecanismo seguro de **gestión de llaves**, contemplando llaves públicas, privadas y esquemas de compartición (por ejemplo, llave tri-partita) con acceso segregado
@@ -506,9 +505,9 @@ Para el desarrollo del **prototipo del sistema de voto electrónico**, se deben 
 
 ### implementación del API
 
-Para la **implementación del API** del sistema de voto electrónico y crowdfunding, se desarrollará una **serverless** en el lenguaje de programación que el equipo elija (por ejemplo, Python, Node.js, C#, Go, etc.). Aunque se trabajará bajo el enfoque tecnológico de **cloud computing (AWS o Azure)**, el **despliegue será completamente local**, garantizando que todos los miembros del grupo tengan la misma implementación y acceso a la base de datos de forma local. Este enfoque asegura consistencia, colaboración distribuida y portabilidad del entorno de desarrollo.
+Para la **implementación del API** del sistema de voto electrónico y crowdfunding, se desarrollará un service **serverless** en el lenguaje de programación que el equipo elija (por ejemplo, Python, Node.js, C#, Go, etc.). Aunque se trabajará bajo el enfoque tecnológico de **cloud computing (AWS o Azure)**, el **despliegue será completamente local**, garantizando que todos los miembros del grupo tengan la misma implementación y acceso a la base de datos de forma local. Este enfoque asegura consistencia, colaboración distribuida y portabilidad del entorno de desarrollo.
 
-Los **endpoints de la API** se implementarán en **dos categorías: utilizando procedimientos almacenados (Stored Procedures)** y mediante un **ORM (Object-Relational Mapping)**. En esta sección se describen los endpoints correspondientes a la categoría de Stored Procedures, con una descripción de alto nivel de los pasos que deben ejecutarse, teniendo en cuenta el **control transaccional**, **validaciones críticas** y la posible integración con servicios de IA.
+Los **endpoints de la API** se implementarán en **dos categorías: utilizando procedimientos almacenados (Stored Procedures)** y mediante un **ORM (Object-Relational Mapping)**. En esta sección se describen los endpoints correspondientes a cada categoría, con una descripción de alto nivel de los pasos que deben ejecutarse, teniendo en cuenta el **control transaccional**, **validaciones críticas** y la posible integración con servicios de IA.
 
 ---
 
@@ -565,11 +564,75 @@ Distribuye dividendos a inversionistas de un proyecto activo.
 
 ---
 
-Cada uno de estos procedimientos deberá:
+### **Endpoints implementados por ORM**
 
+A continuación se detallan los **endpoints implementados mediante ORM** para el prototipo del sistema de voto electrónico y crowdfunding. Estos endpoints están orientados a interacciones más dinámicas, de consulta, edición o configuración, y deben gestionarse mediante un ORM del lenguaje seleccionado (por ejemplo, **Entity Framework, SQLAlchemy, TypeORM, Prisma**, etc.). Todos deben incluir validaciones de seguridad, reglas de negocio y gestión de datos cifrados, según los estándares definidos para el sistema.
+
+
+**a) votar**
+Permite a un ciudadano emitir un voto sobre una propuesta activa.
+
+* Validar credenciales del usuario
+* Validar autenticación multifactor (MFA) y comprobación de vida
+* Confirmar existencia activa del ciudadano en el sistema
+* Verificar si el usuario está habilitado para votar en esa propuesta según su perfil
+* Verificar que la propuesta siga abierta en el rango de fechas definido
+* Confirmar que el usuario **no ha votado previamente** en esa propuesta
+* Registrar el voto en la base de datos asociando la propuesta, fecha y decisión
+* Cifrar el voto utilizando la llave vinculada a la identidad del votante
+* Sumarizar el voto dentro de la colección de resultados cifrados sin exponer contenido
+* Registrar trazabilidad y evento de participación
+
+**b) comentar**
+Permite agregar un comentario a una propuesta, sujeto a reglas de validación.
+
+* Verificar si la propuesta permite comentarios
+* Validar al usuario con credenciales y sesión activa
+* Analizar el comentario y validar que cumpla con la estructura y documentación requerida
+* Procesar validación automática de documentos o contenido adjunto (uso de IA opcional)
+* Si se acepta, subir el comentario a la base con metadatos de usuario, propuesta y estado
+* Si se rechaza, registrar el intento con motivo del rechazo y timestamp
+* Todos los comentarios deben tener un estado: *pendiente, aprobado o rechazado*
+* El contenido debe almacenarse cifrado si incluye archivos o documentos sensibles
+
+**c) listarVotos**
+Consulta los últimos cinco votos realizados por el usuario autenticado.
+
+* Validar identidad del usuario, credenciales, MFA y prueba de vida
+* Consultar en la base las cinco últimas propuestas en las que ha participado mediante voto
+* Obtener la llave criptográfica del usuario
+* Extraer los votos asociados, descifrarlos y mostrar: propuesta, fecha y decisión (resumen, no detalle)
+* Registrar esta operación como evento de consulta auditada
+
+**d) configurarVotacion**
+Configura los parámetros de votación para una propuesta específica.
+
+* Validar que el usuario tenga permisos para configurar esa propuesta
+* Definir población meta mediante filtros como edad, sexo, nacionalidad, ubicación, instituciones, etc.
+* Configurar la geografía y zona de impacto (nacional, regional, municipal, etc.)
+* Establecer fechas de apertura y cierre de la votación
+* Definir los votantes: listas directas, segmentadas o por reglas automáticas
+* Establecer restricciones adicionales como IPs, accesos, horarios o turnos
+* Especificar el tipo de votación: única, múltiple, calificación, etc.
+* Cargar la(s) pregunta(s) asociada(s) a la propuesta y los posibles valores de respuesta
+* Guardar la configuración completa de la votación en estado *preparado*
+* Permitir actualizar esta configuración solo hasta que inicie el periodo de votación
+
+
+### **Otros aspectos**
+Todos los endpoints deberán:
 * Estar versionado y almacenado en el repositorio GitHub del grupo
 * Documentarse claramente con nombre, parámetros, lógica interna, y ejemplos de uso
 * Usar mecanismos de protección de datos sensibles, roles y transacciones seguras
 * Tener pruebas locales funcionales con datos del script de llenado de la base
+* Funcionar como transacciones atómicas
+* Dejar bitácora de lo acontecido
+
+- el caso debe hacerse en grupos de 4, otro tamaño debe ser validado por el profesor
+- todo debe documentarse en el repositorio único en github
+- en la revisión todos los integrantes deben tener el ambiente completo funcionando en local
+- fecha para la última consulta: Junio 6, 2025
+- las revisiones inician a partir del 11 de Junio, 2025
+
 
 
