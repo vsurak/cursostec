@@ -567,3 +567,100 @@ Esta es la sección central del portal donde los usuarios exploran, visualizan y
 * Mostrar métricas de consumo como: volumen de datos consultados, número de consultas realizadas, tiempo restante o límite alcanzado
 * En caso de superar el límite de uso, deshabilitar temporalmente el acceso y mostrar opciones para renovar o ampliar el paquete adquirido
 * Registrar todas las transacciones y consumos en un historial accesible por el usuario para consulta y auditoría interna
+* La exploración de los datos también puede suceder sistema a sistema, para únicamente el caso en que la data se va a utilizar para alimentar un modelo de AI, en cuyo caso, Data Pura Vida deberá ofrecer un conjunto de plataformas limitadas y de igual forma un medio limitado para la creación o alimentación de dichos modelos. Considere la entrega de la data en forma vectorial como una opción, pero el principio que debe prevalecer es reducir al máximo la posibilidad de que descarguen la data indirectamente bajo presunciones de uso en una AI. 
+
+
+### Pura vida data lake
+
+Para garantizar la operatividad, escalabilidad y seguridad del sistema de datos centralizados de *Data Pura Vida*, se debe establecer una arquitectura compuesta por un **datalake (o equivalente funcional)** como núcleo de almacenamiento, un **backend API** que exponga toda la lógica de negocio, y un **portal web de backoffice** para administración y supervisión del ecosistema. El datalake, aunque no necesariamente con la estructura técnica clásica, actuará como repositorio inteligente y seguro de millones de registros, diseñado para trabajar con datos estructurados y semiestructurados, permitiendo control total de versiones, cambios, relaciones y usos. El backend API será responsable de ejecutar operaciones administrativas, de membresía, seguridad, autenticación, intercambio de llaves, mantenimiento de datasets y lógica de negocio completa del sistema. Finalmente, el backoffice web será una herramienta robusta para el personal autorizado, desde donde podrán operar y supervisar el ecosistema, manteniendo la trazabilidad y el cumplimiento normativo.
+
+**Requerimientos de Backend (API):**
+
+* La API debe desarrollarse en la misma tecnología cloud utilizada para los portales web del sistema
+* Toda interacción con la API debe estar protegida por mecanismos de acceso como whitelist de IPs, validación de tokens y MFA
+* El sistema estará basado inicialmente en servicios monolíticos con posibilidad de migrar a una arquitectura de microservicios en el futuro
+* Se debe implementar versionamiento en los endpoints de la API y mantener compatibilidad hacia atrás en la medida posible
+* Las operaciones API deben cubrir: autenticación, validación de identidad, gestión de usuarios, operaciones sobre datasets, llaves de acceso, métricas, y procesos administrativos
+* La API debe tener módulos separados para tareas críticas como gestión de credenciales, firmas, cifrado de datos, monitoreo de integridad y auditoría
+* La lógica de negocio debe garantizar trazabilidad, cumplimiento legal, y control de cada transacción realizada dentro del sistema
+* Se deben incluir endpoints para gestionar accesos temporales, revocación de permisos, y control granular por rol y contexto
+
+**Requerimientos del Portal Web de Backoffice:**
+
+* El backoffice debe permitir el mantenimiento de usuarios y validaciones asociadas a identidad, membresía y roles
+* Gestionar reglas de carga de datos, incluyendo formatos, validaciones, estructuras y condiciones por tipo de entidad o dataset
+* Administrar configuraciones de conectividad a fuentes externas: APIs, bases de datos, callbacks, entre otros
+* Permitir la activación, desactivación, edición y supervisión de objetos de datos, pipelines y flujos de integración
+* Revocar o regenerar llaves de seguridad, incluyendo llaves simétricas, asimétricas y tri-partitas
+* Gestionar los custodios de llaves para entidades y usuarios, con confirmaciones mancomunadas
+* Auditar todas las operaciones realizadas en el sistema con detalle por usuario, acción, fecha y efecto
+* Generar reportes de uso, acceso, consumo de datasets, métricas de integración, calidad de datos y anomalías
+* Monitorear el estado operativo de servicios, tareas, transferencias, cargas y procesos internos
+* Extraer información y evidencias para procesos legales o regulatorios bajo autorización especial
+* Administrar permisos, accesos, y visibilidad de datos y funciones usando RBAC (Role-Based Access Control)
+
+**Requerimientos del Datalake (o equivalente funcional):**
+
+* Aunque se llame “datalake”, puede ser cualquier infraestructura moderna que permita almacenamiento, consulta y gestión masiva de datos
+* Debe soportar millones de registros, miles de usuarios concurrentes, y un crecimiento dinámico de la información
+* Usar inteligencia artificial para normalizar los modelos de datos, rediseñarlos según uso y relacionarlos automáticamente con datasets existentes
+* Detectar y evitar duplicidad de datos durante cargas y transferencias
+* Controlar y gestionar cargas delta, identificando diferencias entre cargas anteriores y actuales
+* Ser eficiente en operaciones de *merge* de datos, sin perder integridad ni contexto
+* Llevar trazabilidad continua de datos usados, no usados, descartados y archivados
+* Tener monitoreo en tiempo real de estado, salud, tráfico, errores, cuellos de botella y uso por entidad o usuario
+* Permitir múltiples niveles de acceso con control lógico, por usuario, entidad, o tipo de dato
+* Implementar RBAC (control de acceso basado en roles) y RLS (restricción a nivel de fila) para segmentación fina
+* Impedir que cualquier ingeniero de datos, devops, o personal técnico con privilegios pueda acceder a los datos en plano o sin autorización
+* Toda la data sensible debe estar cifrada en reposo y en tránsito, y sus accesos siempre deben dejar registro auditable
+
+Este diseño asegura que *Data Pura Vida* no solo sea funcional, sino también resiliente, escalable, auditable y blindado contra accesos indebidos, cumpliendo con estándares de gobierno de datos, privacidad y seguridad de clase mundial.
+
+## Metodología de Trabajo para Data Pura Vida
+
+Para desarrollar el diseño completo del sistema *Data Pura Vida*, los estudiantes trabajarán organizados en **grupos de 4 personas**. Cada grupo deberá **designar un Project Manager (PM)** responsable de coordinar tareas, mantener comunicación activa y garantizar el cumplimiento de entregables y cronogramas. El seguimiento del proyecto se realizará de manera **colaborativa vía Slack**, y todos los miembros deben unirse al espacio común utilizando el siguiente enlace:
+👉 [https://join.slack.com/t/compu-tec/shared\_invite/zt-35j73du38-MrE0u8ck0wZLsO7ed\_TdnA](https://join.slack.com/t/compu-tec/shared_invite/zt-35j73du38-MrE0u8ck0wZLsO7ed_TdnA)
+
+Una vez dentro del espacio Slack, cada grupo debe crear un **canal privado**, nombrado con su identificación de grupo, e **invitar al profesor** para revisión continua. En este canal deben **anclar el enlace a su herramienta de administración de tareas**, como Trello, ClickUp, Notion, Asana o similares. La planificación debe estar **actualizada al menos con una semana de visibilidad futura**, siguiendo metodologías que asemejen **Scrum o Kanban**, y mantener el board del proyecto con tareas asignadas, fechas, responsables y progreso.
+
+Debido al carácter académico del curso, no se realizarán *dailys* tradicionales. En su lugar, cada grupo debe definir **dos horarios semanales fijos** para publicar un *daily status report* por escrito en su canal privado, siguiendo el esquema:
+
+* **Yesterday**: lo realizado desde el último reporte
+* **Today**: tareas activas y asignadas en el board
+* **Blockers**: cualquier obstáculo que impida avanzar (no saber algo no cuenta como bloqueo)
+
+El cumplimiento activo de estas tareas, incluyendo la gestión del Slack, los dailys, la actualización del board y la comunicación en slack tendrá un valor de **15 puntos** en la evaluación.
+
+Adicionalmente, **toda la documentación del diseño debe residir en un repositorio GitHub**, cuyo enlace también debe anclarse en el canal. El objetivo principal es entregar un **diseño completo, técnico, claro y detallado** de la solución *Data Pura Vida*, que será evaluado con base en el siguiente checklist de atributos:
+
+---
+
+### **Checklist de Atributos del Diseño de "Data Pura Vida"**
+
+* [ ] Plan de ejecución del proyecto con un **timeline visual** y tareas por etapa
+* [ ] Evaluación de riesgos utilizando metodologías reconocidas como **ISO 31000** o **NIST RMF** o otras tablas similares simplificadas
+* [ ] Estrategia integral con roadmap, milestones, recursos y estructura del equipo
+* [ ] Definición de **KPIs clave** y mecanismos para su recolección y cálculo en cada milestone
+* [ ] Diseño de los componentes: **Frontend, Backend, Data, Terceros, Cloud y Protocolos**
+* [ ] Al menos **3 customer journeys** completos y visuales
+* [ ] **Service Design** por cada customer journey usando herramientas como **Blueprints, Value Maps** o **UX Journey Maps**
+* [ ] Revisión de **estándares y regulaciones nacionales/internacionales**, incluyendo **Ley 8968 (Costa Rica)**, **GDPR**, **ISO/IEC 27001**, **OECD Data Governance** y similares
+* [ ] Diseño de arquitectura desde la **vista de capas (alta)** hasta la **vista de clases/patrones (baja)**
+* [ ] Definir prácticas de **manejo de código**, versiones, ramas, CI/CD y despliegue en la nube (**Git Flow**, **GitHub Actions**, **Terraform**, etc.)
+* [ ] Integraciones claras con sistemas externos: APIs, llaves, protocolos de autenticación (**OAuth2, JWT**), esquemas de clase
+* [ ] Servicios críticos deben estar claramente configurados, incluyendo **monitoreo, alta disponibilidad y fallback**
+* [ ] Establecer prácticas de codificación seguras y modernas (**OWASP**, **SOLID**, **Clean Code**, **Twelve-Factor App**)
+* [ ] Incluir **guías de integración (how to)** y ejemplos de código funcional para los servicios principales
+* [ ] Validar que el diseño cubre todos los requerimientos funcionales y no funcionales del sistema
+* [ ] Reforzar **temas de seguridad y uso de IA** en cada etapa del sistema: desde datos hasta APIs
+* [ ] Identificar ventajas y desventajas del diseño, proponiendo mitigaciones a los riesgos y limitaciones
+* [ ] Incorporar **pruebas de concepto, prototipos o ejemplos** que guíen la futura ejecución y validen elecciones tecnológicas
+* [ ] Documentar versiones de **frameworks, SDKs, lenguajes y herramientas** utilizadas, así como sus restricciones y licencias
+
+---
+
+**Importante:** El diseño no debe contemplar QA ni pruebas automáticas. Las clases serán utilizadas por el profesor para profundizar sobre tecnologías, arquitectura, metodologías y documentación, de acuerdo con los avances detectados en los canales de Slack y los tableros de tareas.
+
+* Revisión de avances: desde **11 de junio**
+* Último día para consultas: **viernes 6 de junio**
+
