@@ -420,6 +420,14 @@ El resultado esperado es una Costa Rica más participativa, con una ciudadanía 
 * Todas las votaciones serán públicas en contenido y resultados en la primera versión
 * Los votos individuales serán anónimos y no podrán rastrearse
 * El sistema deberá prevenir cualquier acceso no autorizado por parte de personal técnico o de red a la base de datos de votos
+* Todo ciudadano registrado podrá consultar el listado de votaciones: abiertas, en curso y finalizadas
+* Las votaciones finalizadas deben mostrar sus resultados de forma clara y accesible
+* La información de las propuestas podrá visualizarse completa o mediante resúmenes adaptados al perfil del ciudadano, usando técnicas de síntesis automática y visualización (gráficas, comparativas, KPIs)
+* El perfil de cada ciudadano determinará su elegibilidad para participar en cada votación
+* La pertenencia a grupos, instituciones o comunidades también formará parte del perfil y podrá usarse para definir acceso a ciertas votaciones
+* Cada ciudadano podrá emitir un solo voto por propuesta, sin posibilidad de modificación posterior
+* Los resultados de una votación no se mostrarán hasta que se cierre el plazo de votación o hasta que todos los votantes elegibles hayan participado
+* La plataforma debe registrar cada participación con un hash verificable y no rastreable al usuario
 
 ---
 
@@ -436,5 +444,38 @@ El resultado esperado es una Costa Rica más participativa, con una ciudadanía 
 * Las comunicaciones y transferencias deben usar canales cifrados end-to-end
 * El sistema debe tener alta disponibilidad y mecanismos de recuperación automática ante fallos
 * Debe haber monitoreo en tiempo real de seguridad, actividad sospechosa y estado general del sistema
+* Todos los votos emitidos deben ser secretos, protegidos criptográficamente y sin asociación directa a la identidad del votante
+* Los votos deben cumplir con los principios de **no repudio**, de forma que el sistema pueda demostrar que el voto fue emitido por un usuario válido y autorizado, sin posibilidad de negación posterior
+* Pueden existir procesos manuales de verificación de datos en etapas como registro, validación de propuestas o aprobación de votaciones, especialmente en casos especiales o excepcionales
+* Las verificaciones manuales deberán seguir esquemas de aprobación múltiple y estar registradas en el sistema con auditoría completa
+* El sistema debe mantener un alto nivel de disponibilidad y tolerancia a fallos, garantizando la continuidad del proceso electoral digital
+* Toda transmisión y almacenamiento de datos debe seguir estándares internacionales de cifrado y protección de datos (como **AES-256**, **TLS 1.3**, **ISO/IEC 27001**)
+* La infraestructura deberá estar blindada contra accesos no autorizados, especialmente por parte de personal técnico (ingenieros de red, devops, etc.), utilizando técnicas como control de acceso lógico, zero-trust y enclave de datos confidenciales
 
+## Modulo de crowdfunding
+
+El módulo de **crowdfunding** del sistema de voto electrónico tiene como objetivo impulsar la innovación y el emprendimiento en Costa Rica mediante un proceso participativo, transparente y digitalmente gobernado. Este módulo permite que ciudadanos y organizaciones presenten propuestas de proyectos con potencial empresarial, los cuales podrán ser evaluados y validados por entidades especializadas como aceleradoras, incubadoras o grupos de inversión. Además, el gobierno puede intervenir para fomentar iniciativas alineadas con sus objetivos estratégicos, condicionando apoyos a criterios territoriales o sociales. Una vez validadas, las propuestas se publican para ser financiadas colectivamente por ciudadanos, y su ejecución es supervisada por la misma comunidad, que puede incluso votar para detener un proyecto en caso de irregularidades. La plataforma administra el flujo de capital, asegura la transparencia en el uso de fondos, y garantiza los retornos a los inversionistas conforme a los planes establecidos.
+
+* Personas físicas u organizaciones registradas pueden presentar proyectos en forma de propuestas
+* Las propuestas tendrán tipos diferenciados con reglas y validaciones específicas
+* Existen grupos especiales registrados que pueden avalar propuestas: aceleradoras, incubadoras, grupos inversores
+* Estos grupos deben declarar sus condiciones, honorarios, porcentajes de equity u otros esquemas de cobro
+* Las propuestas pueden pasar por versiones sucesivas antes de someterse a votación final
+* El gobierno puede otorgar aval mediante votación y añadir planes de uso e interés nacional
+* El gobierno puede votar sobre beneficios especiales como incentivos de CCSS, Hacienda, entre otros
+* También puede establecer condiciones como número de empleados, ubicación o sector económico para guiar el desarrollo
+* Propuestas avaladas pueden ser publicadas por su autor cuando estén listas
+* Las propuestas deben incluir presupuesto, plan de ejecución y plan de desembolso
+* Los ciudadanos registrados pueden invertir directamente en los proyectos publicados
+* La inversión es entregada completa por los ciudadanos al inicio
+* La plataforma administra los desembolsos mensuales conforme al plan aprobado
+* Se establece una fecha oficial de despliegue e inicio del proyecto
+* Cualquier ciudadano puede actuar como fiscalizador durante la ejecución
+* Las irregularidades pueden ser reportadas con evidencia y sometidas a votación por una población segmentada
+* La votación puede decidir continuar o detener el proyecto
+* Un proyecto detenido suspende los desembolsos y la adjudicación
+* El plan de ejecución debe contemplar la forma de pago a los inversionistas y su plazo
+* La plataforma es responsable de realizar los pagos a los inversionistas según el cronograma pactado
+* En caso de incumplimiento, se inician procesos legales
+* Los creadores del proyecto deben presentar mensualmente estados financieros y de resultados para los inversionistas y el público fiscalizador
 
