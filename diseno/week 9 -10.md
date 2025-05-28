@@ -203,3 +203,25 @@ Proceda entonces ha:
 
 3. Enviarlo al asistente por discord indicando que es el ejercicio #7, incluyendo nombre completo y descripción de máximo 4 líneas de lo que se incorporó para cumplir con las 3 prácticas de diseño sugeridas. El ejercicio es individual. 
 
+
+Ejercicio #8 
+
+1. Escriba los nombres de los macro componentes del proceso de registro tanto de personas como de empresas del caso #3. 
+
+2. Dibuje los macro componentes en bloques o cajas.
+
+3. Descomposición jerarquica: Diagramelo como una jerarquía de componentes, donde los más indivisibles se unen para ir formando un componente más completo hacia arriba, siendo los niveles superiores de la jerarquía componentes funcionales auto contenidos.
+
+4. Ahora seleccione una sola de las jerarquías del punto 3, es decir, para solo uno de los macro componentes, realice un refinamiento paso a paso de los niveles inferiores. 
+
+5. Lo anterior hará la jerarquía aún más amplia, proceda a cada item del nivel inferior de la jerarquía seleccionada a especificar los alcances numéricos o limitaciones de dicho componente. Justifique su respuesta. 
+- por ejemplo cantidad de transacciones
+- tamaño en MB
+- cantidad de request o mensajes que debe procesar por hora
+- tiempo que debe durar procesando documentos
+- dispositivos que debe tener a mano como teléfono, cámara, lector de huella dactilar
+- cantidad de request por día que se deben enviar a un servicio de terceros
+- cantidad de reintentos de un proceso por persona
+- etc
+
+El trabajo es individual, enviárselo en mensaje directo al asistente antes de las 9:30am. 
