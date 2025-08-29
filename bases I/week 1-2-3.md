@@ -167,10 +167,6 @@ Periféricos:
 
 
 
-
-
-
-
 ### actividades fuera de clase
 
 1. conocer el CLI de su sistema operativo y el de linux principalmente 

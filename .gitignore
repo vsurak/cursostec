@@ -7,3 +7,4 @@ bin
 /.metadata/
 !/bases II/hadoop-image/kafka
 *.dat
+/bases I/mysql
