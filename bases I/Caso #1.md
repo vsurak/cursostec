@@ -4,8 +4,6 @@ Groups: 2 persons
 
 ## Description
 
-Got it 👍 — here’s the full version in **English**, with both the **functional requirements** and the **two descriptive paragraphs**:
-
 ---
 
 ## System Description
