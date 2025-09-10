@@ -78,14 +78,13 @@ Juan es un entusiasta de las criptomonedas. Tiene varias cuentas donde almacena 
 Escribe un SELECT que muestre el nombre del usuario, el nombre de la criptomoneda, el balance actual, la suma total de todas sus transacciones exitosas en esa moneda y la fecha de la última transacción exitosa. 
 
 
-## **Use Case 3: Lo siento! no puedes hacer eso!!**
+## **Use Case 3: Lo siento! no puedes hacer eso!!** 
+
+Este no se evaluó
 
 Una empresa de logística tiene un sistema interno para gestionar pedidos, clientes y reportes de entregas. En la plataforma, algunos empleados solo pueden **ver información** (como un supervisor que revisa métricas), otros pueden **modificar datos de clientes o pedidos**, y los administradores pueden **crear, actualizar o eliminar cualquier registro**. Cada acción que hacen los usuarios queda registrada para auditoría. Por ejemplo, cuando un gerente cambia el estado de un pedido o asigna un envío a un repartidor, el sistema guarda **quién lo hizo y cuándo**, para mantener control y seguridad sobre la operación.
 
 **Idea clave para diseño:** los usuarios del sistema tienen **roles distintos que determinan qué acciones pueden realizar**, y todas las acciones importantes deben ser auditables.
 
-**Ejercicio #3** 
+**Ejercicio-no evaluado** 
 Escribe un select que dado una lista de roles, retorne la lista de permisos que todos esos roles comparten.  
-
-
-

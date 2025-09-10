@@ -24,7 +24,6 @@ Additionally, Merkadit integrates a **point-of-sale (POS)** module for tenant bu
 
 1.3. Register rental contracts for each tenant, including: 
 
-
 * Start and end date.
 * Base monthly rent.
 * Percentage fee on sales.
@@ -97,7 +96,76 @@ Additionally, Merkadit integrates a **point-of-sale (POS)** module for tenant bu
 6.3. Enforce access control with credentials and role-based permissions. 
 
 
-**Class Activity:**
+## Case #1 Deliverables
+
+1. **Research the problem domain**
+
+   * Investigate and document all possible entities that are relevant to the *Merkadit* problem.
+   * Example entities include: businesses (stores), inventories, prices, barcodes, payment security, reporting, addresses, shopping centers, commissions, and payments.
+   * The purpose of this step is to understand the context before starting the database design.
+
+2. **Design the database schema**
+
+   * Based on your research, identify the entities, attributes, and relationships.
+   * Create an Entity-Relationship Diagram (ERD) using MySQL Workbench or a similar tool.
+   * Your design should include primary keys, foreign keys, and constraints where appropriate.
+
+3. **Review sessions with the professor**
+
+   * Each team of two students will have the opportunity to review their preliminary design twice with the professor.
+   * The goal is to receive feedback and refine the schema before deployment.
+
+4. **Deploy the schema in MySQL**
+
+   * Use the forward engineer tool in workbench to deploy the database.
+
+5. **Insert sample data**
+   Write a SQL scripts that inserts the following data:
+
+   * At least two buildings.
+   * One store space (local) in the first building, and two in the second.
+   * For each store space, insert randomly between 4 and 7 different businesses.
+   * Create contracts for each business linked to their respective store space.
+   * Insert inventory for two businesses chosen randomly.
+   * Generate random purchases for those two businesses with inventory:
+
+     * Purchases should occur randomly within the last 4 months.
+     * Ensure inventory levels never go negative (avoid unrealistic quantities).
+     * Sale dates should also be randomized within the timeframe.
+
+6. **Write SQL queries for reporting**
+
+   * Create a query that generates a business report as of the current date.
+   * The report should include:
+
+     * Business name
+     * Store space name
+     * Building name
+     * Date of the first sale in the current month
+     * Date of the last sale in the current month
+     * Number of items sold
+     * Total sales amount
+     * Percentage and monetary amount due to the store space owner
+     * Rental fee amount to be paid by the business
+
+7. **Create a visual report**
+
+   * Use the query from step 6 as a data source.
+   * Create a professional-looking report that includes:
+
+     * Title and subtitle
+     * Current date
+     * A table with the query results
+     * Subtotals grouped by business
+     * A final total at the end of the report
+   * You may use any of the following tools (or a similar one): Power BI, Crystal Reports, Tableau, Kibana.
+   * The report should demonstrate clear data visualization and professional presentation.
+
+- Last date for reviews: Sunday 21st, September 2025
+- Last date to commit: Tuesday 30th, September 2025. Create a repository in github, it must include the diagram as a PDF file and the script file, also one readme.md with the instructions to run the report. Is expected to find commits during the 3 weeks from both members, by the contrary hard penalties will be apply. 
+
+---
+**Class Activities:**
 
 1. Work groups will be formed during class, and each group will focus on a separate topic: 
 
@@ -110,4 +178,6 @@ c) **Inventory** – registration of the products that merchants will sell in th
 d) **Sales** – registration of sales through the POS for each merchant. 
 
 
-Proceed to create the design, either digitally or on paper, and send it to the teacher to review and discuss with classmates.
+1. Proceed to create the design, either digitally or on paper, and send it to the teacher to review and discuss with classmates.
+
+2. Using the designs in activity 4, proceed to write queries that use: order by, top, nested queries, exists, in, calculated fields. 
