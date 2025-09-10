@@ -1,4 +1,4 @@
-# Caso #1, Merkadit, 20%
+# Caso #1, Merkadit, 25%
 
 Groups: 2 persons
 
@@ -108,30 +108,96 @@ Additionally, Merkadit integrates a **point-of-sale (POS)** module for tenant bu
 
    * Based on your research, identify the entities, attributes, and relationships.
    * Create an Entity-Relationship Diagram (ERD) using MySQL Workbench or a similar tool.
-   * Your design should include primary keys, foreign keys, and constraints where appropriate.
-
-3. **Review sessions with the professor**
-
+   * Your design should include primary keys, foreign keys, and constraints where appropriate. Use as much as possible the data design patterns. 
    * Each team of two students will have the opportunity to review their preliminary design twice with the professor.
    * The goal is to receive feedback and refine the schema before deployment.
+   * After final review proceed to adjust, improve and using the forward engineer tool, deploy the database to the mysql server 
 
-4. **Deploy the schema in MySQL**
-
-   * Use the forward engineer tool in workbench to deploy the database.
-
-5. **Insert sample data**
-   Write a SQL scripts that inserts the following data:
+3. **Insert sample data**
+   Write a SQL script that inserts the following data:
 
    * At least two buildings.
    * One store space (local) in the first building, and two in the second.
    * For each store space, insert randomly between 4 and 7 different businesses.
    * Create contracts for each business linked to their respective store space.
-   * Insert inventory for two businesses chosen randomly.
+   * Insert inventory for three different businesses chosen randomly and with different products categories
    * Generate random purchases for those two businesses with inventory:
 
      * Purchases should occur randomly within the last 4 months.
      * Ensure inventory levels never go negative (avoid unrealistic quantities).
      * Sale dates should also be randomized within the timeframe.
+     * Include randomly between 50 to 70 purchases per month
+
+4. **Enable and test an API**
+
+You are to create a REST API to interact with the database. The implementation must follow the specified technical and architectural requirements.
+
+**Technology Selection:**
+*   Choose one of the following technologies for implementation:
+    *   NodeJS + Express
+    *   Flask or FastAPI (Python)
+    *   Java Spring Boot
+    *   ASP.NET Core Web API or .NET Minimal API
+
+**Architectural Layers:**
+The application must be structured into four distinct layers. The purpose of each layer is as follows:
+
+*   **Handler Layer (API Routes/Endpoints):**
+    *   Purpose: This is the outermost layer that receives HTTP requests and sends HTTP responses.
+    *   Responsibilities: It handles protocol-specific tasks like parsing incoming request data (JSON, query parameters), validating basic input format, routing requests to the appropriate controller, and returning the controller's response to the client with the correct status codes and data formatting.
+
+*   **Controller Layer (Business Logic Orchestration):**
+    *   Purpose: This layer contains the core application logic and acts as a coordinator.
+    *   Responsibilities: It processes the data received from the handler, makes decisions, validates business rules, and calls the appropriate methods in the service layer. It should not contain direct data access code.
+
+*   **Service Layer (Complex Business Logic):**
+    *   Purpose: This layer encapsulates complex business operations and transactions that may involve multiple entities or repository calls.
+    *   Responsibilities: It implements use cases that are too complex for a single repository, often orchestrating calls to multiple repositories. It is called by the controller layer.
+
+*   **Repository Layer (Data Access):**
+    *   Purpose: This is the layer responsible for all direct communication with the database.
+    *   Responsibilities: It executes SQL queries, calls stored procedures, and maps raw database data into application objects. It should be the only layer that knows about the database schema and technology.
+
+**Stored Procedures to Implement:**
+You must create and call two stored procedures from the repository layer.
+
+*   **Stored Procedure 1: `registerSale`**
+    *   Purpose: To record the sale of an item at a store.
+    *   Input Parameters must have at least:
+        *   Product name
+        *   Store name (`comercio`)
+        *   Quantity sold
+        *   Amount paid (`monto pagado`)
+        *   Payment method (`medio de pago`)
+        *   Payment confirmations (`confirmaciones de pago`)
+        *   Reference numbers (`numeros de referencia`)
+        *   Invoice number (`numero de factura`)
+        *   Customer (`cliente`)
+        *   Applied discounts (`descuentos aplicados`)
+    *   Implementation Requirements:
+        *   Must include comprehensive exception handling.
+        *   Must log details of the operation (e.g., computer, user, checksum).
+
+*   **Stored Procedure 2: `settleCommerce`**
+    *   Purpose: To settle the accounts for a store for the current month.
+    *   Input Parameters it must have at least:
+        *   Name of the store (`comercio`)
+        *   Name of the location/premises (`local`)
+    *   Logic it must perform:
+        *   Check if the store has already been settled for the current month.
+        *   If it has NOT been settled:
+            *   Calculate the total fees owed to the premises administrator based on all sales.
+            *   Calculate the remaining amount that belongs to the store.
+            *   Execute the respective financial transactions (e.g., adjusting balances).
+            *   Record the settlement to prevent it from being done a second time.
+        *   If it has been settled, it should handle this scenario appropriately.
+    *   Implementation Requirements:
+        *   Must include comprehensive exception handling and transaction management to ensure data integrity.
+        *   Must log details of the operation (e.g., computer, user, checksum).
+
+*  **Postman test:**
+    *   Create a postman collection to test your api
+    *   Perform the calls and verify in the database the correctness of the REST request
 
 6. **Write SQL queries for reporting**
 
@@ -148,9 +214,7 @@ Additionally, Merkadit integrates a **point-of-sale (POS)** module for tenant bu
      * Percentage and monetary amount due to the store space owner
      * Rental fee amount to be paid by the business
 
-7. **Create a visual report**
-
-   * Use the query from step 6 as a data source.
+   * Transform this query into a view and use it as data source for a report
    * Create a professional-looking report that includes:
 
      * Title and subtitle
