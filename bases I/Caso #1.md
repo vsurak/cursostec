@@ -196,6 +196,7 @@ You must create and call two stored procedures from the repository layer.
         *   Must log details of the operation (e.g., computer, user, checksum).
 
 *  **Postman test:**
+    *   Implement two handlers for the API to process both stored procedures
     *   Create a postman collection to test your api
     *   Perform the calls and verify in the database the correctness of the REST request
 
