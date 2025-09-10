@@ -227,7 +227,7 @@ You must create and call two stored procedures from the repository layer.
    * The report should demonstrate clear data visualization and professional presentation.
 
 - Last date for reviews: Sunday 21st, September 2025
-- Last date to commit: Tuesday 30th, September 2025. Create a repository in github, it must include the diagram as a PDF file and the script file, also one readme.md with the instructions to run the report. Is expected to find commits during the 3 weeks from both members, by the contrary hard penalties will be apply. 
+- Last date to commit: Tuesday 30th, September 2025. Create a repository in github, it must include the diagram as a PDF file, the script file, the scripts for the stored procedures and the view, the postmal collection and the api source code. Also one readme.md with the instructions to run the report. Is expected to find commits during the 3 weeks from both members, by the contrary hard penalties will be apply. 
 
 ---
 **Class Activities:**
