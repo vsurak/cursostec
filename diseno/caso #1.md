@@ -1,4 +1,4 @@
-# Caso #1, 25%
+# Caso #1, 30%
 
 Groups of 3. 
 
