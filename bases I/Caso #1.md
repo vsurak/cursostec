@@ -199,7 +199,7 @@ You must create and call two stored procedures from the repository layer.
     *   Create a postman collection to test your api
     *   Perform the calls and verify in the database the correctness of the REST request
 
-6. **Write SQL queries for reporting**
+5. **Write SQL queries for reporting**
 
    * Create a query that generates a business report as of the current date.
    * The report should include:
