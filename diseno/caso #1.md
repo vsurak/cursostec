@@ -23,13 +23,14 @@ From the **coach’s perspective**, the day looks different. Take Maria, a profe
 
 This model allows users to plan ahead while giving coaches a consistent flow of opportunities to earn, all within a simple and structured 20-minute framework.
 
+The starting packages are going to be offered in Colombia & Brasil during the first year of operations. 
 
 ## Case resolution overview
 Your task is to design the frontend architecture for the 20minCoach platform. This is a comprehensive software design project that will require research, decision-making, and detailed documentation. You will work on creating a scalable, maintainable, and efficient frontend system.
 
 You must generate documentation for the proposed system design. The document should cover the key aspects that need to be considered in the design, but the structure and format are left to the discretion of the working group. The focus should be on clarity and completeness of content rather than presentation style, ensuring that the information is easy to follow and logically organized.
 
-The documentation should be written intelligently and concisely, avoiding unnecessary filler descriptions or generic “AI-generated” text that does not add value. The objective is to provide clear and actionable details that directly support the development effort. Each section must address essential design elements such as scope, modules, data, processes, and technical requirements without unnecessary complexity or vague explanations.
+The documentation should be written intelligently and concisely, avoiding unnecessary filler descriptions or generic “AI-generated” text that does not add value. The objective is to provide clear and actionable details that directly support the development effort. Each section must address essential design elements such as scope, modules, data, processes, and technical requirements without unnecessary complexity or vague explanations. Documentations will be in English. 
 
 A practical way to validate the quality of the design specification is to assess whether a programmer could take the document and begin implementing the project without needing to ask any questions to the team. The documentation must be precise enough to remove ambiguities and complete enough to serve as the only reference needed for development.
 
