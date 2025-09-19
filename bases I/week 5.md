@@ -1,8 +1,6 @@
-# SQL básico - continuación
+# SQL básico parte 2
 
-1. Se procede a realizar multiples queries en [Intensificando el SELECT](Siguiendo%20con%20el%20select.sql)  
-
-se exploran opciones como:
+1. Se requiere explorar y poner en práctica temas tales como:
 
 - projection de campos, renombrando campos
 - instrucción case 
@@ -12,15 +10,18 @@ se exploran opciones como:
 - operaciones de fecha 
 - count, sum, min, max funciones agregadas introductorias
 - group by 
+- cursores
+- queries anidados
+- limit
+- views
+- stored procedures 
 
+Todo este tema se hace de forma práctica con bases de datos ejemplo y desarrollando los scripts a modo práctica con los estudiantes.
 
-2. Se procede a realizar como parte de ejercicios de clase las siguientes consultas por parte de los estudiantes los cuales deben enviar como ejercicio #2 a @Manollito por discord.  Los queries deberán hacerse en papel y enviar fotografía. 
+Scripts hechos anteriormente :
 
-a) determine la edad promedio de fallecimiento por raza 
+a. [Siguiendo con el select](Siguiendo%20con%20el%20select.sql)  
 
-b) cuál ciudad hace más uso de los servicios veterinarios 
-
-c) genere una lista de los dueños de mascotas firstname, lastname y space, donde la columna space deberá decir "large" o "small" dependiendo si la persona tiene más mascotas grandes que pequeñas.  
-
+b. [SQL basico](SQL%20basico.sql)  
 
 

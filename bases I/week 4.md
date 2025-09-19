@@ -1,6 +1,6 @@
 # structure query language SQL
 
-## introducción a SQL - create table, insert, delete, update, select
+## introducción a SQL - create table, insert, delete, update, select parte I
 
 *DDL*: data definition language, todo lo que tenga que ver con creación, diseño, definición de estructuras, reglas, objetos, funciones, jobs, procesos
 
