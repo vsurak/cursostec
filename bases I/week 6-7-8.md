@@ -57,7 +57,7 @@ FROM prestamos p
 JOIN clientes c ON p.clientid = c.clientid;
 ```
 
-**Official Help**: [MySQL Functions Reference](https://www.w3schools.com/mysql/mysql_ref_functions.asp)
+**Official Help**: [MySQL Functions Reference](https://dev.mysql.com/doc/refman/8.4/en/create-procedure.html)
 
 ---
 
@@ -118,7 +118,7 @@ CREATE INDEX index_name ON table_name(column_name);
 CREATE INDEX idx_type ON transactions(type);
 ```
 
-**Official Help**: [Indexing Best Practices](https://stackoverflow.com/questions/95183/how-does-one-create-an-index-on-the-date-part-of-datetime-field-in-mysql)
+**Official Help**: [Indexing Best Practices](https://dev.mysql.com/doc/refman/8.4/en/create-index.html)
 
 ---
 
@@ -164,7 +164,7 @@ SELECT STRING_FUNCTION(string_column);
 SELECT UPPER(nombre) AS name_upper FROM clientes;
 ```
 
-**Official Help**: [MySQL String Functions](https://www.w3schools.com/mysql/mysql_ref_functions.asp)
+**Official Help**: [MySQL String Functions](https://dev.mysql.com/doc/refman/8.4/en/string-functions.html)
 
 
 ## Ejercicio #6
@@ -204,6 +204,4 @@ La entrega es el archivo SQL con la consulta y el dibujo explicativo como imagen
 - Entrega tardía -20
 - Sospecha de copia -100
 - Incongruencias o errores de AI -40
-
-
 
