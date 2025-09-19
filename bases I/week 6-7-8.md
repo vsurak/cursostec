@@ -201,3 +201,9 @@ Una vez terminado el script con la consulta, haga un dibujo usando datos que eje
 
 La entrega es el archivo SQL con la consulta y el dibujo explicativo como imagen, se entrega en el classroom. 
 
+- Entrega tardía -20
+- Sospecha de copia -100
+- Incongruencias o errores de AI -40
+
+
+
