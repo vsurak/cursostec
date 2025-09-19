@@ -15,6 +15,9 @@ Functions in MySQL are built-in operations that return a value based on input pa
 2. Formatting client names or emails for display in reports or dashboards.
 
 **Basic Syntax**  
+
+Como estandard de nombres se suele usar fn<Action><Entity>, por ejemplo fnCalculateRate 
+
 ```sql
 DELIMITER //
 
@@ -71,6 +74,9 @@ Triggers are database operations that automatically execute in response to speci
 2. Update loan status to 'EN_MORA' if a payment is missed beyond a threshold.
 
 **Basic Syntax**  
+
+Como estandard de nombres se suele usar tr<Momento><Event><TableName>, por ejemplo trBeforeInsertPrestamos 
+
 ```sql
 CREATE TRIGGER trigger_name
 AFTER INSERT ON table_name
@@ -109,13 +115,16 @@ Indexes improve query performance by allowing MySQL to locate rows faster. A pri
 2. Filtering transactions by `posttime` or `type`.
 
 **Basic Syntax**  
+Como estandard de nombres se suele usar idx<TableName><FieldName>, por ejemplo idxTransactionsType  
+
+
 ```sql
 CREATE INDEX index_name ON table_name(column_name);
 ```
 
 **Example (secondary index on transactions type)**  
 ```sql
-CREATE INDEX idx_type ON transactions(type);
+CREATE INDEX idxTransactionsType ON transactions(type);
 ```
 
 **Official Help**: [Indexing Best Practices](https://dev.mysql.com/doc/refman/8.4/en/create-index.html)
