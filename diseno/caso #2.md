@@ -1,7 +1,3 @@
-
-AI prompts
-
-
 # Caso #2: PromptSales –  40%
 Trabajo a realizarse en grupos de 3 a 4 personas. 
 
@@ -189,6 +185,7 @@ Para esto proceda en esta sección a:
 * Para el cloud provider seleccionado, detallar patrones, layers, configuración de componentes, ubicación de configuración en código y cómo se usan. Entre más servicios y componentes del cloud se use va a ser mejor, esto porque ahorra programación y reduce costos. 
 * Dar guía de programación de todos los layers y validación de seguridad de métodos del backend.
 * Incluir diagramas de clases de los puntos críticos, indicando patrones de diseño de objetos y cómo se aplican.
+* El diagrama de arquitectura a nivel de layers y estructura debe hacer match con el diseño por dominios
 
 ## Stack de tecnologías
 
@@ -199,22 +196,29 @@ Para esto proceda en esta sección a:
 # Entregable 3 final
 
 * Incluir correcciones de entregables 1 y 2.
+* No tiene fecha de último commit
+* Las revisiones se asignaran entre el 23 al 29 de noviembre
+* Última fecha para consultas el 19 de noviembre 
+
 
 ## Diseño de base de datos
 
-* Definir motores de base de datos para cada sistema, incluyendo elección de bases no relacionales si aplica.
+* Definir motores de base de datos para cada sistema, incluyendo elección de bases relacionales y al menos una que su criterio puede ser no relacional.
 * Diseñar al menos una base de datos relacional.
 * Diseñar una base de datos no relacional con ejemplos de JSON o schemas en código.
-* Implementar ejemplo de repository layer usando stored procedures, incluyendo operación de escritura y lectura.
-* Implementar ejemplo de repository layer usando ORM, incluyendo operación de escritura y lectura.
+* Implementar y probar un ejemplo de repository layer usando stored procedures, incluyendo operación de escritura y lectura.
+* Implementar y probar un ejemplo de repository layer usando ORM, incluyendo operación de escritura y lectura.
+* Agregar las previstas de cache y connection pool correspondientes en los repositories implementados. 
+* Seleccione la tecnología y haga un diseño de procesos o data pipeline que va a permitir traer información de las bases de datos de las subempresas, sumarizandola en la base de datos de PromptSales
 
 ## Diseño de MCP servers
 
-* MCP server central conectado a la base de datos de PromptSales que:
+* Dado que la base de datos de PromptSales es usada para: 
+  
+  * Registra toda la información que se procesa en el portal web centralizado.
+  * Almacena información resumida de efectividad de campañas para consultas rápidas, información que viene de los otros sistemas
 
-  * Registra toda la información del portal web centralizado.
-  * Almacena información resumida de efectividad de campañas.
-  * Permite consultas en lenguaje natural sobre rendimiento de campañas.
+* Diseñe e implemente un MCP server que permita realizar consultas en lenguaje natural sobre el rendimiento de las compañas 
 * Documentar pautas de creación de MCP servers: ubicación de configuración, reglas, código de implementación, tools, resources y prompts.
 * Diseñar MCP servers valiosos para todo el sistema y diagramar la interacción entre ellos.
 
@@ -225,18 +229,19 @@ Para esto proceda en esta sección a:
 
 ## Testability
 
-* Documentar y proveer ejemplos ejecutables de:
+* Documentar y proveer ejemplos ejecutables de cómo se harían los siguientes tipos de pruebas:
 
   * Unit testing.
   * Test de REST API.
   * Test de seguridad.
   * Test de stress.
+  * Test de MCP servers 
 
 # Otros aspectos
 
 * Enviar correo al profesor con el link del repo para revisión para cada entregable
 * Designar un project manager que cree y distribuya tareas mediante Trello, comparta el board con el profesor al correo vsurak@gmail.com 
 * Cada integrante del grupo debe mantener los tiquetes actualizados al menos una vez por semana.
-* Crear canal de Discord para reportar dos veces por semana el "daily status", incluyendo logros, planes y bloqueos. Todos los integrantes deberán reportar dicho status. Esta participación será evaluada. 
-* Deployment en Kubernetes con configuración lista para cumplir todos los requerimientos funcionales y no funcionales.
+* Crear canal de Discord para reportar dos veces por semana el "daily status", incluyendo logros, planes y bloqueos. Todos los integrantes deberán reportar dicho status. Esta participación será evaluada. El grupo debe decidir el día y hora en que todos van hacer el update. 
+* Deployment en Kubernetes con configuración lista para cumplir todos los requerimientos funcionales y no funcionales. Se revisaran los archivos de configuracion de deployment tanto de producción como dev. 
 * Mantener bitácora centralizada de uso de AI con fecha, hora, nombre del estudiante, prompt, resultado y método de validación o corrección de la salida obtenida por la AI. 
