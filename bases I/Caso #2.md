@@ -65,7 +65,7 @@ El ecosistema de PromptSales depende de la interacción entre varios tipos de da
 
 * Las subempresas PromptContent, PromptAds y PromptCrm deben estar **interconectadas mediante servidores MCP (Model Context Protocol)**, permitiendo la comunicación segura y eficiente entre los sistemas de IA, automatización y gestión de datos.
 * El **despliegue, orquestación y mantenimiento** de toda la infraestructura debe realizarse con **Kubernetes**, asegurando alta disponibilidad, balanceo de carga y escalabilidad dinámica de los servicios.
-* La **integración con servicios externos** (plataformas de anuncios, CRM, herramientas de contenido, pagos y analítica) se debe realizar por medio de **APIs REST** o **servidores MCP**, dependiendo del tipo de servicio y del nivel de automatización requerido.
+* La **integración con servicios externos o internos** (plataformas de anuncios, CRM, herramientas de contenido, pagos y analítica) se debe realizar por medio de **APIs REST** o **servidores MCP**, dependiendo del tipo de servicio y del nivel de automatización requerido.
 * Todas las **aplicaciones web y paneles administrativos** deben desarrollarse y desplegarse en **Vercel**, aprovechando su integración nativa con frameworks modernos (Next.js, React) y su sistema de despliegue continuo (CI/CD).
 * Se debe implementar una **base de datos Redis en la nube** centralizada para almacenar resultados temporales y datos cacheados, con el fin de:
 
@@ -87,6 +87,7 @@ _Escalabilidad_
 * La arquitectura debe soportar un incremento de **hasta 10 veces** la carga base sin degradación perceptible del rendimiento.
 * Kubernetes debe permitir **autoescalado horizontal** basado en CPU, memoria y número de solicitudes concurrentes.
 * El sistema debe manejar simultáneamente **más de 5000 campañas activas** y **más de 300 agentes o usuarios concurrentes** distribuidos entre las subempresas.
+* Las API de cualquiera de las plataformas podría llegar a alcanzar en el primer año hasta 100000 operaciones de usuario por minuto que requieren acceso a la base de datos, en horario habitual de 7am hasta 7pm. Y hasta 300 procesos no supervisados por minuto ejecutándose en background fuera de horario de oficina. 
 
 _Tolerancia a Fallos_
 
@@ -118,9 +119,9 @@ _Seguridad_
 
 PromptContent
 
-* Cargar al menos 50 imágenes con descripciones amplias, coherentes y hashtags clasificadores.
+* Cargar al menos 100 imágenes de forma algorítmica, con descripciones amplias, coherentes y hashtags clasificadores.
 * Indexar las descripciones usando una base de datos vectorial como Pinecone, Faiss o pgvector.
-* Incluir datos necesarios para conectar al menos a una API externa que requiera autenticación por POST que sea un api real.
+* Incluir datos necesarios para conectar al menos a una API externa que requiera autenticación por un método POST y que sea un api real.
 * Configurar y probar un MCP server con dos tools:
 
   * getContent: recibe una descripción textual y retorna imágenes que coinciden y sus hashtags.
@@ -128,9 +129,11 @@ PromptContent
 
 PromptAds
 
-* Crear un stored procedure transaccional usando la plantilla "XXXXXSP_VerboEntidad" para crear una nueva campaña, considerando la posible necesidad de TVP (Table-Valued Parameters).
-* Llenar de forma algorítmica un registro histórico de al menos 1000 campañas.
+* Crear un stored procedure transaccional usando la plantilla "XXXXXSP_VerboEntidad" para crear una nueva campaña, utilice TVPs (Table-Valued Parameters) los cuales van a brindar ventajas al SP.
+* Llenar de forma algorítmica un registro histórico de al menos 1000 campañas, teniendo un 30% activas y un 70% ya culminadas, todas entre el periodo Julio 2024 a Octubre 2025, con picos pronunciados en diciembre, enero y otro mes de su elección. 
 * Cada campaña debe incluir N canales de venta, N mercados y N anuncios, todos con resultados reales como likes, views, interacciones, ventas, horas de exposición, cantidad de público alcanzado, costo y revenue.
+* Escriba queries que le permitan explicar el uso en SQL de EXCEPT, INTERSECT, MERGE, LTRIM, LOWERCASE, FLOOR, CEIL, UPDATE DE SELECT.
+* Escriba un query que permita extraer dado un rango de fechas, aquellos Ads para una misma marca que hayan causado un sentimiento negativo en redes sociales y que hayan causado una baja comparada de reacción entre influencers. Debe ser posible identificar bien el canal, el tipo de sentimiento negativo y el % de baja que tuvo el canal o influencer. 
 * Demostrar cómo monitorear el rendimiento de las consultas ejecutadas en esta base de datos.
 
 PromptCrm
@@ -145,29 +148,29 @@ PromptCrm
 * Crear al menos dos vistas para simplificar la consulta anterior y materializarlas con índices.
 * Comparar con show estimated execution plan la consulta sin optimización y luego con vistas e índices para demostrar la mejora en rendimiento, considere en la vista mejorar la consulta estratégicamente. 
 * Crear un stored procedure para registrar logs en la base de datos y pruebelo. 
-* Desarrollar un conjunto de SP transaccionales en PromptAds o PromptCrm que simulen:
+* Desarrollar un conjunto de SP transaccionales que simulen:
 
   * Deadlock en cascada de tres transacciones.
-  * Situaciones de incorrect summary problem, dirty read y lost update, y como esos mismos procedures o scripts, pueden arreglarse para que no sufran dichos problemas 
-  * Deadlock entre dos clientes diferentes en computadoras distintas.
+  * Situaciones de incorrect summary problem, dirty read y lost update, y como esos mismos procedures o scripts, pueden arreglarse a nivel de código y que realicen la misma operación, pero previniendo que sucedan dichos problemas demostrados.
+  * Simular un deadlock entre dos clientes en computadoras distintas.
 
 PromptSales
 
 * La misión de esta base de datos es registrar toda la información generada desde el portal web centralizado.
 * Almacenar información sumarizada de la efectividad de campañas desde su creación hasta cierre.
-* Crear un ETL que se ejecute cada 4 minutos para actualizar solo los valores sumarizados desde las otras bases de datos, considerando solo los delta de datos modificados.
+* Crear un ETL que se ejecute cada 11 minutos para actualizar solo los valores sumarizados desde las otras bases de datos, considerando solo los delta de datos modificados.
 * Usar cualquier herramienta de diseño visual de pipelines, no pandas o programadas, para desarrollar el ETL.
-* Configurar un MCP server que permita consultas mediante lenguaje natural sobre el rendimiento de campañas.
+* Configurar un MCP server que permita consultas mediante lenguaje natural sobre el rendimiento de campañas, de forma que se pueda saber el alcance, porcentaje de éxito, ventas alcanzadas, cantidad de reacciones, canales en los que aplicó la campaña y otra información que la AI pueda determinar. 
 * Crear scripts en PostgreSQL que demuestren y les sirva de apoyo para explicar: triggers, cursores, interbloqueos, extracción de metadata de tablas del sistema, monitoreo de consultas, coalesce, case, left join, right join, cross join, y control de permisos mediante grant y revoke para lectura y escritura.
 
 Otros aspectos
 
-* Todo el deployment se realizará con Kubernetes, pudiendo optar por montar el ambiente completo en cada computadora o usar una red distribuida con VPN.
-* Cada base de datos y proceso se debe ejecutar en un pod separado, con configuración que cumpla los requerimientos funcionales y no funcionales.
+* Todo el deployment se realizará con Kubernetes, pudiendo optar por montar el ambiente completo en cada computadora o usar una red distribuida con VPN. El deployment debe funcionar correctamente y de forma automática. 
+* Cada base de datos y proceso se debe ejecutar en un pod separado, con configuración que cumpla los requerimientos funcionales y no funcionales a escala. 
 * No se desarrollará el portal web, solo las bases de datos y las integraciones con MCP server. Se puede usar un MCP client existente si se requiere programar únicamente los servers.
-* Se puede usar N8N si es necesario para flujos de integración.
+* Se puede usar N8N si es necesario para flujos de integración, MCP servers y otros. 
 * Mantener una bitácora de uso de AI en una tabla que incluya fecha y hora, nombre del estudiante, prompt, resultado del prompt, y método usado para validar o corregir el resultado, incluyendo optimizaciones y evitación de código hardcoded.
 * Se revisará el uso correcto de github y la participación de todos los integrates en los commits
-* Cada grupo deberá crear un text channel en discord con un nombre de grupo, y al menos dos veces por semana cada estudiante deberá dar un status report de lo que ha avanzado a ese momento 
+* Cada grupo deberá crear un text channel en discord con un nombre de grupo, y al menos dos veces por semana cada estudiante deberá dar un status report de lo que ha avanzado a ese momento, esto se evaluará. 
 * Última fecha para revisiones preliminares de diseños de modelos de datos: martes 28 de octubre
 * No habrá fecha para último commit pero las citas de revisión serán entre el 16 y el 22 de noviembre, 2025

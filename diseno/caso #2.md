@@ -65,7 +65,7 @@ El ecosistema de PromptSales depende de la interacción entre varios tipos de da
 
 * Las subempresas PromptContent, PromptAds y PromptCrm deben estar **interconectadas mediante servidores MCP (Model Context Protocol)**, permitiendo la comunicación segura y eficiente entre los sistemas de IA, automatización y gestión de datos.
 * El **despliegue, orquestación y mantenimiento** de toda la infraestructura debe realizarse con **Kubernetes**, asegurando alta disponibilidad, balanceo de carga y escalabilidad dinámica de los servicios.
-* La **integración con servicios externos** (plataformas de anuncios, CRM, herramientas de contenido, pagos y analítica) se debe realizar por medio de **APIs REST** o **servidores MCP**, dependiendo del tipo de servicio y del nivel de automatización requerido.
+* La **integración con servicios externos e internos** (plataformas de anuncios, CRM, herramientas de contenido, pagos y analítica) se debe realizar por medio de **APIs REST** o **servidores MCP**, dependiendo del tipo de servicio y del nivel de automatización requerido.
 * Todas las **aplicaciones web y paneles administrativos** deben desarrollarse y desplegarse en **Vercel**, aprovechando su integración nativa con frameworks modernos (Next.js, React) y su sistema de despliegue continuo (CI/CD).
 * Se debe implementar una **base de datos Redis en la nube** centralizada para almacenar resultados temporales y datos cacheados, con el fin de:
 
@@ -87,6 +87,7 @@ _Escalabilidad_
 * La arquitectura debe soportar un incremento de **hasta 10 veces** la carga base sin degradación perceptible del rendimiento.
 * Kubernetes debe permitir **autoescalado horizontal** basado en CPU, memoria y número de solicitudes concurrentes.
 * El sistema debe manejar simultáneamente **más de 5000 campañas activas** y **más de 300 agentes o usuarios concurrentes** distribuidos entre las subempresas.
+* Las API de cualquiera de las plataformas podría llegar a alcanzar en el primer año hasta 100000 operaciones de usuario por minuto que requieren acceso a la base de datos, en horario habitual de 7am hasta 7pm. Y hasta 300 procesos no supervisados por minuto ejecutándose en background fuera de horario de oficina. 
 
 _Tolerancia a Fallos_
 
@@ -112,32 +113,34 @@ Proceda a crear el diseño de la solución para este proyecto. Toda la documenta
 
 ## Métricas de los requerimientos no funcionales
 
-Documentar cada atributo no funcional con valores cuantitativos, parámetros técnicos y tecnologías a usar. Incluir ejemplos claros, abajo se documentan ejemplos de valores y tecnologías, pero ustedes deben diseñar y encontrar sus propios valores los cuales deben estar justificados por alguna teoría o práctica. 
+Documentar cada atributo no funcional con valores cuantitativos, parámetros técnicos y tecnologías a usar. Incluir ejemplos claros, abajo se documentan ejemplos de valores y tecnologías, pero ustedes deben diseñar y encontrar sus propios valores los cuales deben estar justificados por alguna teoría o práctica debidamente argumentada y analizada; realizando las extrapolaciones o cálculos que usted pueda diseñar bajo un algoritmo o método cuantitativo diseñado por el grupo mismo. 
 
 ### Performance
 
 * Tiempo máximo permitido para una consulta estándar: 1.5 segundos.
 * Tiempo máximo para resultados cacheados: 200 ms usando Redis.
-* Tecnología: PostgreSQL, Redis.
+* Tecnología: PostgreSQL, Redis; aquí pueden ser métricas por las técnologías clave por separado. 
 
 ### Scalability
 
 * Debe soportar incremento de carga de hasta 10x sin degradación.
-* Kubernetes configurado con autoescalado horizontal por CPU y memoria.
+* Kubernetes configurado con autoescalado horizontal por CPU y memoria. Justificarlo con la configuracion de K8s.
 
 ### Reliability
 
 * Tasa de errores máxima permitida: 0.1% de transacciones por día.
 * Monitoreo con pg_stat_statements y logs centralizados.
+* Es importante determinar como se monitorea y como se notifican alertas. 
 
 ### Availability
 
-* Disponibilidad mínima: 99.9% mensual.
+* Disponibilidad mínima: 99.9% mensual. En el diseño de infraestructura debe lograr verse como se logra esto, podría ir en el diagrama de arquitectura, pero sería mejor uno de infraestructura. 
 * Redis y bases de datos con failover y replicación.
+* Considere load balancers. 
 
 ### Security
 
-* Autenticación: OAuth 2.0 y OpenID Connect.
+* Autenticación: OAuth 2.0 y/o OpenID Connect.
 * Cifrado TLS 1.3 en comunicación y AES-256 en reposo.
 
 ### Maintainability
@@ -151,7 +154,7 @@ Documentar cada atributo no funcional con valores cuantitativos, parámetros té
 
 ### Compliance
 
-* Cumplimiento de GDPR y CCPA en gestión de datos sensibles.
+* Cumplimiento de GDPR en gestión de datos sensibles.
 
 ### Extensibility
 
@@ -182,8 +185,8 @@ Para esto proceda en esta sección a:
 * Definir si se va usar algún API gateway.
 * Incluir todos los layers de la arquitectura.
 * Seleccionar cloud provider entre gRPC, AWS o Azure.
-* Indicar el uso de Supabase y Vercel si fuese requerido
-* Para el cloud provider seleccionado, detallar patrones, layers, configuración de componentes, ubicación de configuración en código y cómo se usan. Entre más servicios y componentes del cloud se use va a ser mejor, esto porque ahorra programación y reduce costos. 
+* Indicar el uso de Supabase y Vercel si fuese requerido y el como se va usar e integrar dentro de su arquitectura con el provedor de cloud. 
+* Para el cloud provider seleccionado, detallar patrones, layers, configuración de componentes, ubicación de configuración en código y cómo se usan. Entre más servicios y componentes del cloud se use va a ser mejor, esto porque ahorra programación y reduce costos, además de ser componentes altamente escalables. 
 * Dar guía de programación de todos los layers y validación de seguridad de métodos del backend.
 * Incluir diagramas de clases de los puntos críticos, indicando patrones de diseño de objetos y cómo se aplican.
 * El diagrama de arquitectura a nivel de layers y estructura debe hacer match con el diseño por dominios
@@ -208,7 +211,7 @@ Para esto proceda en esta sección a:
 * Implementar y probar un ejemplo de repository layer usando stored procedures, incluyendo operación de escritura y otra de lectura.
 * Implementar y probar un ejemplo de repository layer usando ORM, incluyendo operación de escritura y otra de lectura.
 * Agregar las previstas de cache y connection pool correspondientes en los repositories implementados. 
-* Seleccione la tecnología y haga un diseño de procesos o data pipeline que va a permitir traer información de las bases de datos de las subempresas, sumarizandola en la base de datos de PromptSales
+* Seleccione la tecnología y haga un diseño de procesos o data pipeline que va a permitir traer información de las bases de datos de las subempresas, sumarizandola en la base de datos de PromptSales. Se sugiere hacer un diagrama para esto y que tenga las reglas de los pipelines, no olvide agregar criterios de delta para evitar traer información repetida. 
 
 ## Diseño de MCP servers
 
@@ -218,25 +221,26 @@ Para esto proceda en esta sección a:
   * Almacena información resumida de efectividad de campañas para consultas rápidas, información que viene de los otros sistemas
   * Guarda información general de integración de las AI
 
-* Diseñe e implemente un MCP server que permita realizar consultas en lenguaje natural sobre el rendimiento de las compañas 
+* Diseñe e implemente un MCP server que permita realizar consultas en lenguaje natural sobre el rendimiento de las compañas, las ventas logradas, el alcance, los canales usados, la geografía usada y cualquier otra información que la AI pueda obtener.  
 * Documentar pautas de creación de MCP servers: ubicación de configuración, reglas, código de implementación, tools, resources y prompts.
 * Diseñar MCP servers valiosos para todo el sistema y diagramar la interacción entre ellos. Solo se diseñan por diagrama, no se implementan todos, solo el solicitado arriba. 
 
 ## Deployment
 * Indicar la tecnologia, archivos y scripts que se van a utilizar para hacer el deployment en cloud, así como también para el CI CD, debidamente vinculado a código. 
 * Indicar y guiar como se va a dar mantenimiento y deploy de los migrations de bases de datos
+* Crear github actions básicos que al hacer push al branch principal de deployment se ejecute alguna operación o regla básica, esto para entrenar levemente el uso de estos actions en los procesos de deployment. 
 
 
 ## Testability
 
-* Documentar y proveer ejemplos ejecutables de cómo se harían los siguientes tipos de pruebas, se sugiere fuertemente que investigue la batería de servicios de diseño, mantenimiento, ejecución, actualización de QA soportada por AI, esto para que su diseño de pruebas se haga con prácticas recientes y herramientas con capacidades de AI:
+* Documentar y guiar el cómo se harían los siguientes tipos de pruebas, y a la vez implementar, ejecutar y documentar resultados de pruebas ejemplo que deben quedar en el source code y debidamente configuradas para su ejecución.  Se sugiere fuertemente que investigue la batería de servicios de diseño, mantenimiento, ejecución, actualización de QA soportada por AI, esto para que su diseño de pruebas se haga con prácticas recientes y herramientas con capacidades de AI:
 
-  * Unit testing.
-  * Test de REST API.
-  * Test de seguridad.
-  * Test de stress.
-  * Test de MCP servers 
-  * Linter de código
+  * Unit testing de al menos una clase.
+  * Test de REST API, de una operación de lectura y otra de escritura. 
+  * Test de seguridad, validar permisos grant y rechazo de accesos a algún método del API. 
+  * Test de stress, con cierta cantidad aceptable para una sola computadora ejecutando el test y otra computadora mínimo soportando la infraestructura. 
+  * Test de MCP servers, los 2 MCP servers creados anteriormente deben ser probados y que los resultados obtenidos sean corroborados automáticaente.  
+  * Linter de código, su configuración y uso dentro de la solución. 
 
 # Otros aspectos
 
@@ -244,5 +248,5 @@ Para esto proceda en esta sección a:
 * Designar un project manager que cree y distribuya tareas mediante Trello, comparta el board con el profesor al correo vsurak@gmail.com 
 * Cada integrante del grupo debe mantener los tiquetes actualizados al menos una vez por semana.
 * Crear canal de Discord para reportar dos veces por semana el "daily status", incluyendo logros, planes y bloqueos. Todos los integrantes deberán reportar dicho status. Esta participación será evaluada. El grupo debe decidir el día y hora en que todos van hacer el update. 
-* Deployment en Kubernetes con configuración lista para cumplir todos los requerimientos funcionales y no funcionales. Se revisaran los archivos de configuracion de deployment tanto de producción como dev. 
+* Deployment en Kubernetes con configuración lista para cumplir todos los requerimientos funcionales y no funcionales a escala. Se revisaran los archivos de configuracion de deployment tanto de producción como dev. El deployment de dev debe ser posible verificar que se hace correctamente. 
 * Mantener bitácora centralizada de uso de AI con fecha, hora, nombre del estudiante, prompt, resultado y método de validación o corrección de la salida obtenida por la AI. 
