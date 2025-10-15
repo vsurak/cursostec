@@ -9,7 +9,7 @@ sql server
 AI prompts
 
 
-# Caso #2: PromptSales –  42%
+# Caso #2: PromptSales –  40%
 Trabajo a realizarse en grupos de 3 a 4 personas. 
 
 **Descripción**

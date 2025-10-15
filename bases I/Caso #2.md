@@ -1,11 +1,3 @@
-supabase
-mongodb
-redis
-dynamodb
-sql server
-AI prompts
-
-
 # Caso #2: PromptSales –  42%
 Trabajo a realizarse en grupos de 3 a 4 personas. 
 
@@ -177,5 +169,5 @@ Otros aspectos
 * Mantener una bitácora de uso de AI en una tabla que incluya fecha y hora, nombre del estudiante, prompt, resultado del prompt, y método usado para validar o corregir el resultado, incluyendo optimizaciones y evitación de código hardcoded.
 * Se revisará el uso correcto de github y la participación de todos los integrates en los commits
 * Cada grupo deberá crear un text channel en discord con un nombre de grupo, y al menos dos veces por semana cada estudiante deberá dar un status report de lo que ha avanzado a ese momento 
-* Última fecha para revisiones preliminares de diseños de modelos de datos: domingo 26 de octubre
-* No habrá fecha para último commit pero las citas de revisión se iniciaran a partir del 14 de noviembre, 2025
+* Última fecha para revisiones preliminares de diseños de modelos de datos: martes 28 de octubre
+* No habrá fecha para último commit pero las citas de revisión serán entre el 16 y el 22 de noviembre, 2025
