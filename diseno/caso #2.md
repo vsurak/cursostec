@@ -172,7 +172,7 @@ Para esto proceda en esta sección a:
 * Asegurar independencia entre dominios internos y globales.
 * Esta documentación debe estar debidamente vinculada y guiada por código en el repositorio. 
 
-# Entregable 2 - 4 de noviembre último commit - 10%
+# Entregable 2 - 8 de noviembre último commit - 10%
 
 ## Diagrama de arquitectura
 
@@ -239,7 +239,7 @@ Para esto proceda en esta sección a:
   * Test de REST API, de una operación de lectura y otra de escritura. 
   * Test de seguridad, validar permisos grant y rechazo de accesos a algún método del API. 
   * Test de stress, con cierta cantidad aceptable para una sola computadora ejecutando el test y otra computadora mínimo soportando la infraestructura. 
-  * Test de MCP servers, los 2 MCP servers creados anteriormente deben ser probados y que los resultados obtenidos sean corroborados automáticaente.  
+  * Test del MCP server creado anteriormente, debe ser probados y que los resultados obtenidos sean corroborados automáticaente.  
   * Linter de código, su configuración y uso dentro de la solución. 
 
 # Otros aspectos
