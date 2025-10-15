@@ -239,7 +239,7 @@ The following items are layers that you should consider to include in your appli
 
 
 - Last date for questions to the professor: Monday 22nd, september
-- Last date to commit: Saturday 27th, September
+- Last date to commit: Wednesday 01st, October 2025
 - Commits are going to review to validate every group member participation along the 3 work weeks, penalties might apply
 
 ---
