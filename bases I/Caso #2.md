@@ -158,7 +158,7 @@ PromptSales
 * Crear un ETL que se ejecute cada 4 minutos para actualizar solo los valores sumarizados desde las otras bases de datos, considerando solo los delta de datos modificados.
 * Usar cualquier herramienta de diseño visual de pipelines, no pandas o programadas, para desarrollar el ETL.
 * Configurar un MCP server que permita consultas mediante lenguaje natural sobre el rendimiento de campañas.
-* Crear scripts en PostgreSQL que demuestren: triggers, cursores, interbloqueos, extracción de metadata de tablas del sistema, monitoreo de consultas, y control de permisos mediante grant y revoke para lectura y escritura.
+* Crear scripts en PostgreSQL que demuestren y les sirva de apoyo para explicar: triggers, cursores, interbloqueos, extracción de metadata de tablas del sistema, monitoreo de consultas, coalesce, case, left join, right join, cross join, y control de permisos mediante grant y revoke para lectura y escritura.
 
 Otros aspectos
 
