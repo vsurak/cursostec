@@ -1,11 +1,4 @@
-backend and data
-syncronization of data
-AI prompts
-supabase
-mongodb
-redis
-dynamodb
-sql server
+
 AI prompts
 
 
@@ -117,3 +110,133 @@ _Seguridad_
 
 # Actividades a realizar
 
+Proceda a crear el diseño de la solución para este proyecto. Toda la documentación del diseño, guías, código fuente relacionado y demás debe estar en un repositorio de GitHub y documentada en un único archivo readme.md en la raíz del repositorio. La documentación debe permitir que cualquier miembro del equipo, al clonar el repositorio, pueda comprender todas las decisiones de diseño y trabajar directamente en los requerimientos sin necesidad de información adicional. Todas las secciones deben ser claras, cuantitativas, exactas y orientadas a la implementación, evitando juicios de valor o narrativas sobre atributos de productos o servicios generados por IA.
+
+# Entregable 1 - 26 de octubre último commit - 5%
+
+## Métricas de los requerimientos no funcionales
+
+Documentar cada atributo no funcional con valores cuantitativos, parámetros técnicos y tecnologías a usar. Incluir ejemplos claros, abajo se documentan ejemplos de valores y tecnologías, pero ustedes deben diseñar y encontrar sus propios valores los cuales deben estar justificados por alguna teoría o práctica. 
+
+### Performance
+
+* Tiempo máximo permitido para una consulta estándar: 1.5 segundos.
+* Tiempo máximo para resultados cacheados: 200 ms usando Redis.
+* Tecnología: PostgreSQL, Redis.
+
+### Scalability
+
+* Debe soportar incremento de carga de hasta 10x sin degradación.
+* Kubernetes configurado con autoescalado horizontal por CPU y memoria.
+
+### Reliability
+
+* Tasa de errores máxima permitida: 0.1% de transacciones por día.
+* Monitoreo con pg_stat_statements y logs centralizados.
+
+### Availability
+
+* Disponibilidad mínima: 99.9% mensual.
+* Redis y bases de datos con failover y replicación.
+
+### Security
+
+* Autenticación: OAuth 2.0 y OpenID Connect.
+* Cifrado TLS 1.3 en comunicación y AES-256 en reposo.
+
+### Maintainability
+
+* Código modular siguiendo DDD y separación de dominios.
+* Documentación en readme.md y comentarios claros en código.
+
+### Interoperability
+
+* Integración de APIs REST y MCP servers entre subempresas y servicios externos.
+
+### Compliance
+
+* Cumplimiento de GDPR y CCPA en gestión de datos sensibles.
+
+### Extensibility
+
+* Arquitectura modular, permite agregar nuevas subempresas o módulos sin alterar sistemas existentes.
+
+## Domain driven design
+
+Para esto proceda en esta sección a: 
+
+* Identificar todos los dominios principales por subempresa y dominios globales.
+* Definir contratos entre dominios mediante interfaces o APIs.
+* Crear facades para simplificar la interacción entre subempresas y dominios.
+* Diseñar pruebas unitarias y de integración por dominio.
+* Diagrama de dominios que muestre dependencias, límites de contexto y flujos de datos.
+* Asegurar independencia entre dominios internos y globales.
+
+# Entregable 2 - 4 de noviembre último commit - 10%
+
+## Diagrama de arquitectura
+
+* Crear un diagrama general de todos los sistemas o subempresas, o diagramas individuales y luego un diagrama de alto nivel que integre todo.
+* Documentar patrones de arquitectura usados, cómo y dónde se aplican.
+* Definir si se usará REST o GraphQL, serverless o servidores dedicados, lenguajes de programación y microservicios.
+* Justificar cómo conviven microservicios en caso de que se usen y domain driven design.
+* Indicar uso de pub/sub o event driven design.
+* Definir si se usará monolithic 
+* Definir si se va usar algún API gateway.
+* Incluir todos los layers de la arquitectura.
+* Seleccionar cloud provider entre gRPC, AWS o Azure.
+* Indicar el uso de Supabase y Vercel si fuese requerido
+* Para el cloud provider seleccionado, detallar patrones, layers, configuración de componentes, ubicación de configuración en código y cómo se usan. Entre más servicios y componentes del cloud se use va a ser mejor, esto porque ahorra programación y reduce costos. 
+* Dar guía de programación de todos los layers y validación de seguridad de métodos del backend.
+* Incluir diagramas de clases de los puntos críticos, indicando patrones de diseño de objetos y cómo se aplican.
+
+## Stack de tecnologías
+
+* Numerar todas las tecnologías a usar y explicar integración en cada sistema.
+* Indicar configuraciones especiales si aplica.
+* Especificar versiones a usar y cómo se controlarán las versiones.
+
+# Entregable 3 final
+
+* Incluir correcciones de entregables 1 y 2.
+
+## Diseño de base de datos
+
+* Definir motores de base de datos para cada sistema, incluyendo elección de bases no relacionales si aplica.
+* Diseñar al menos una base de datos relacional.
+* Diseñar una base de datos no relacional con ejemplos de JSON o schemas en código.
+* Implementar ejemplo de repository layer usando stored procedures, incluyendo operación de escritura y lectura.
+* Implementar ejemplo de repository layer usando ORM, incluyendo operación de escritura y lectura.
+
+## Diseño de MCP servers
+
+* MCP server central conectado a la base de datos de PromptSales que:
+
+  * Registra toda la información del portal web centralizado.
+  * Almacena información resumida de efectividad de campañas.
+  * Permite consultas en lenguaje natural sobre rendimiento de campañas.
+* Documentar pautas de creación de MCP servers: ubicación de configuración, reglas, código de implementación, tools, resources y prompts.
+* Diseñar MCP servers valiosos para todo el sistema y diagramar la interacción entre ellos.
+
+## Deployment
+* Indicar la tecnologia, archivos y scripts que se van a utilizar para hacer el deployment en cloud, así como también para el CI CD
+* Indicar y guiar como se va a dar mantenimiento y deploy de los migrations de bases de datos
+
+
+## Testability
+
+* Documentar y proveer ejemplos ejecutables de:
+
+  * Unit testing.
+  * Test de REST API.
+  * Test de seguridad.
+  * Test de stress.
+
+# Otros aspectos
+
+* Enviar correo al profesor con el link del repo para revisión para cada entregable
+* Designar un project manager que cree y distribuya tareas mediante Trello, comparta el board con el profesor al correo vsurak@gmail.com 
+* Cada integrante del grupo debe mantener los tiquetes actualizados al menos una vez por semana.
+* Crear canal de Discord para reportar dos veces por semana el "daily status", incluyendo logros, planes y bloqueos. Todos los integrantes deberán reportar dicho status. Esta participación será evaluada. 
+* Deployment en Kubernetes con configuración lista para cumplir todos los requerimientos funcionales y no funcionales.
+* Mantener bitácora centralizada de uso de AI con fecha, hora, nombre del estudiante, prompt, resultado y método de validación o corrección de la salida obtenida por la AI. 
