@@ -167,6 +167,7 @@ Para esto proceda en esta sección a:
 * Diseñar pruebas unitarias y de integración por dominio.
 * Diagrama de dominios que muestre dependencias, límites de contexto y flujos de datos.
 * Asegurar independencia entre dominios internos y globales.
+* Esta documentación debe estar debidamente vinculada y guiada por código en el repositorio. 
 
 # Entregable 2 - 4 de noviembre último commit - 10%
 
@@ -186,28 +187,26 @@ Para esto proceda en esta sección a:
 * Dar guía de programación de todos los layers y validación de seguridad de métodos del backend.
 * Incluir diagramas de clases de los puntos críticos, indicando patrones de diseño de objetos y cómo se aplican.
 * El diagrama de arquitectura a nivel de layers y estructura debe hacer match con el diseño por dominios
-
-## Stack de tecnologías
-
 * Numerar todas las tecnologías a usar y explicar integración en cada sistema.
 * Indicar configuraciones especiales si aplica.
 * Especificar versiones a usar y cómo se controlarán las versiones.
+* Patrones arquitectónicos, layers de servicios o componentes de cloud y patrones de diseño orientados a objetos deben estar vinculados a código, el cual sirve de guía a los desarrolladores. 
+
 
 # Entregable 3 final
 
 * Incluir correcciones de entregables 1 y 2.
-* No tiene fecha de último commit
+* No tiene fecha de último commit 
 * Las revisiones se asignaran entre el 23 al 29 de noviembre
 * Última fecha para consultas el 19 de noviembre 
 
-
 ## Diseño de base de datos
 
-* Definir motores de base de datos para cada sistema, incluyendo elección de bases relacionales y al menos una que su criterio puede ser no relacional.
+* Definir motores de base de datos para cada sistema, incluyendo elección de bases relacionales y al menos una que a su criterio puede ser no relacional.
 * Diseñar al menos una base de datos relacional.
-* Diseñar una base de datos no relacional con ejemplos de JSON o schemas en código.
-* Implementar y probar un ejemplo de repository layer usando stored procedures, incluyendo operación de escritura y lectura.
-* Implementar y probar un ejemplo de repository layer usando ORM, incluyendo operación de escritura y lectura.
+* Diseñar una base de datos no relacional con ejemplos ya sea en JSON o schemas en código.
+* Implementar y probar un ejemplo de repository layer usando stored procedures, incluyendo operación de escritura y otra de lectura.
+* Implementar y probar un ejemplo de repository layer usando ORM, incluyendo operación de escritura y otra de lectura.
 * Agregar las previstas de cache y connection pool correspondientes en los repositories implementados. 
 * Seleccione la tecnología y haga un diseño de procesos o data pipeline que va a permitir traer información de las bases de datos de las subempresas, sumarizandola en la base de datos de PromptSales
 
@@ -215,27 +214,29 @@ Para esto proceda en esta sección a:
 
 * Dado que la base de datos de PromptSales es usada para: 
   
-  * Registra toda la información que se procesa en el portal web centralizado.
+  * Registrar toda la información que se procesa en el portal web centralizado.
   * Almacena información resumida de efectividad de campañas para consultas rápidas, información que viene de los otros sistemas
+  * Guarda información general de integración de las AI
 
 * Diseñe e implemente un MCP server que permita realizar consultas en lenguaje natural sobre el rendimiento de las compañas 
 * Documentar pautas de creación de MCP servers: ubicación de configuración, reglas, código de implementación, tools, resources y prompts.
-* Diseñar MCP servers valiosos para todo el sistema y diagramar la interacción entre ellos.
+* Diseñar MCP servers valiosos para todo el sistema y diagramar la interacción entre ellos. Solo se diseñan por diagrama, no se implementan todos, solo el solicitado arriba. 
 
 ## Deployment
-* Indicar la tecnologia, archivos y scripts que se van a utilizar para hacer el deployment en cloud, así como también para el CI CD
+* Indicar la tecnologia, archivos y scripts que se van a utilizar para hacer el deployment en cloud, así como también para el CI CD, debidamente vinculado a código. 
 * Indicar y guiar como se va a dar mantenimiento y deploy de los migrations de bases de datos
 
 
 ## Testability
 
-* Documentar y proveer ejemplos ejecutables de cómo se harían los siguientes tipos de pruebas:
+* Documentar y proveer ejemplos ejecutables de cómo se harían los siguientes tipos de pruebas, se sugiere fuertemente que investigue la batería de servicios de diseño, mantenimiento, ejecución, actualización de QA soportada por AI, esto para que su diseño de pruebas se haga con prácticas recientes y herramientas con capacidades de AI:
 
   * Unit testing.
   * Test de REST API.
   * Test de seguridad.
   * Test de stress.
   * Test de MCP servers 
+  * Linter de código
 
 # Otros aspectos
 
