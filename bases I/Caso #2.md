@@ -130,7 +130,7 @@ PromptContent
 PromptAds
 
 * Crear un stored procedure transaccional usando la plantilla "XXXXXSP_VerboEntidad" para crear una nueva campaña, utilice TVPs (Table-Valued Parameters) los cuales van a brindar ventajas al SP.
-* Llenar de forma algorítmica un registro histórico de al menos 1000 campañas, teniendo un 30% activas y un 70% ya culminadas, todas entre el periodo Julio 2024 a Octubre 2025, con picos pronunciados en diciembre, enero y otro mes de su elección. 
+* Llenar de forma algorítmica un registro histórico de al menos 1000 campañas, teniendo un 30% activas y un 70% ya culminadas, todas entre el periodo Julio 2024 a Enero 2026, con picos pronunciados en diciembre, enero y otro mes de su elección. 
 * Cada campaña debe incluir N canales de venta, N mercados y N anuncios, todos con resultados reales como likes, views, interacciones, ventas, horas de exposición, cantidad de público alcanzado, costo y revenue.
 * Escriba queries que le permitan explicar el uso en SQL de EXCEPT, INTERSECT, MERGE, LTRIM, LOWERCASE, FLOOR, CEIL, UPDATE DE SELECT.
 * Escriba un query que permita extraer dado un rango de fechas, aquellos Ads para una misma marca que hayan causado un sentimiento negativo en redes sociales y que hayan causado una baja comparada de reacción entre influencers. Debe ser posible identificar bien el canal, el tipo de sentimiento negativo y el % de baja que tuvo el canal o influencer. 
@@ -174,3 +174,47 @@ Otros aspectos
 * Cada grupo deberá crear un text channel en discord con un nombre de grupo, y al menos dos veces por semana cada estudiante deberá dar un status report de lo que ha avanzado a ese momento, esto se evaluará. 
 * Última fecha para revisiones preliminares de diseños de modelos de datos: martes 28 de octubre
 * No habrá fecha para último commit pero las citas de revisión serán entre el 16 y el 22 de noviembre, 2025
+
+Entregables de seguimiento
+
+## Entregable #1 - preventive - no evaluado
+
+1. Hacer el diseño de las 4 bases de datos, entregar por discord y recibir retroalimentación del profesor.
+
+## Entregable #2 - tackle the unknown - 7% 
+
+Este entregable se busca hacer pruebas de concepto, podría ser que el diseño no esté 100% corregido, que la carga de datos no sea completa y que falten varias otras cosas, pero se quiere enfocar en resolver aquello que es desconocido. Es decir, este entregable son más tipo pruebas de concepto para que logren dominar técnicas y tecnologías, en la revisión final se revisará todo completo. 
+
+PromptContent
+* Configurar y probar un MCP server con dos tools:
+  * getContent: recibe una descripción textual y retorna imágenes que coinciden y sus hashtags.
+  * un segundo tool que reciba una descripción de campaña y público meta, almacene la solicitud y genere una bitácora de tres mensajes por población objetivo en función del mensaje recibido. 
+
+Para hacer esto va ser necesario darle a la AI un contexto que salga de este otro ejercicio: 
+* Indexar las descripciones usando una base de datos vectorial como Pinecone, Faiss o pgvector.
+
+PromptCrm
+* Configurar un link server entre PromptCrm y PromptAds para consultas cruzadas.
+* Cifrar información sensible como cédulas y datos de contexto usando un certificado X.509 en master, demostrando que se cifra y descifra correctamente.
+* Mostrar que al hacer backup y restore en otro servidor, los datos cifrados no pueden ser descifrados.
+* Comparar con show estimated execution plan la consulta sin optimización y luego con vistas e índices para demostrar la mejora en rendimiento, considere en la vista mejorar la consulta estratégicamente. 
+* Desarrollar un conjunto de SP transaccionales que simulen:
+
+  * Deadlock en cascada de tres transacciones.
+  * Situaciones de incorrect summary problem, dirty read y lost update, y como esos mismos procedures o scripts, pueden arreglarse a nivel de código y que realicen la misma operación, pero previniendo que sucedan dichos problemas demostrados. 
+
+Puede escoger solo uno de los problemas de niveles de isolación, pero no olvide que debe completarlos todos para el entregable final. 
+
+PromptSales
+* Crear un ETL que se ejecute cada 11 minutos para actualizar solo los valores sumarizados desde las otras bases de datos, considerando solo los delta de datos modificados.
+* Usar cualquier herramienta de diseño visual de pipelines, no pandas o programadas, para desarrollar el ETL.
+
+Ensayo
+Crear y probar el deployment vía KS: 
+
+* Todo el deployment se realizará con Kubernetes, pudiendo optar por montar el ambiente completo en cada computadora o usar una red distribuida con VPN. El deployment debe funcionar correctamente y de forma automática. 
+
+Puede que no esté completo el deployment pero logra levantar un ambiente de varios servers funcionando. 
+
+- Último día para consultas para este entregable jueves 6 de noviembre. 
+- Se revisará con cita con el profesor entre el 9 y 12 de noviembre, 2025
