@@ -172,7 +172,7 @@ Para esto proceda en esta sección a:
 * Asegurar independencia entre dominios internos y globales.
 * Esta documentación debe estar debidamente vinculada y guiada por código en el repositorio. 
 
-# Entregable 2 - 8 de noviembre último commit - 10%
+# Entregable 2 - 11 de noviembre último commit - 10%
 
 ## Diagrama de arquitectura
 
@@ -200,8 +200,8 @@ Para esto proceda en esta sección a:
 
 * Incluir correcciones de entregables 1 y 2.
 * No tiene fecha de último commit 
-* Las revisiones se asignaran entre el 23 al 29 de noviembre
-* Última fecha para consultas el 19 de noviembre 
+* Las revisiones se asignaran entre el 24 al 29 de noviembre
+* Última fecha para consultas el 23 de noviembre 
 
 ## Diseño de base de datos
 
