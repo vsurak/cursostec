@@ -172,7 +172,7 @@ Para esto proceda en esta sección a:
 * Asegurar independencia entre dominios internos y globales.
 * Esta documentación debe estar debidamente vinculada y guiada por código en el repositorio. 
 
-# Entregable 2 - 11 de noviembre último commit - 10%
+# Entregable 2 - 13 de noviembre último commit - 10%
 
 ## Diagrama de arquitectura
 
