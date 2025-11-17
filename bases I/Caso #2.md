@@ -175,11 +175,15 @@ Otros aspectos
 * Última fecha para revisiones preliminares de diseños de modelos de datos: martes 28 de octubre
 * No habrá fecha para último commit pero las citas de revisión serán entre el 16 y el 22 de noviembre, 2025
 
+---
+
 Entregables de seguimiento
 
 ## Entregable #1 - preventive - no evaluado
 
 1. Hacer el diseño de las 4 bases de datos, entregar por discord y recibir retroalimentación del profesor.
+
+---
 
 ## Entregable #2 - tackle the unknown - 7% 
 
@@ -218,3 +222,13 @@ Puede que no esté completo el deployment pero logra levantar un ambiente de var
 
 - Último día para consultas para este entregable jueves 6 de noviembre. 
 - Se revisará con cita con el profesor entre el 9 y 12 de noviembre, 2025
+
+---
+
+## Entregable final - finalización de todas las taresa - 35%
+- Para entre entregable se esperan las correciones del entregable #1 y #2
+- Se evaluaran todas las actividades solicitadas del caso 
+- La revisión será con cita y se tomaran en cuenta solo las personas presentes el día y hora de la revisión
+- Última fecha de consultas viernes 21 de noviembre
+- No hay fecha para el último commit
+- Las revisiones se calendarizaran entre el 1ro y el 6 de noviembre

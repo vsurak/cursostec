@@ -200,7 +200,7 @@ Para esto proceda en esta sección a:
 
 * Incluir correcciones de entregables 1 y 2.
 * No tiene fecha de último commit 
-* Las revisiones se asignaran entre el 24 al 29 de noviembre
+* Las revisiones se asignaran entre el 1 al 3 de noviembre
 * Última fecha para consultas el 23 de noviembre 
 
 ## Diseño de base de datos
