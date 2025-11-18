@@ -173,7 +173,7 @@ Otros aspectos
 * Se revisará el uso correcto de github y la participación de todos los integrates en los commits
 * Cada grupo deberá crear un text channel en discord con un nombre de grupo, y al menos dos veces por semana cada estudiante deberá dar un status report de lo que ha avanzado a ese momento, esto se evaluará. 
 * Última fecha para revisiones preliminares de diseños de modelos de datos: martes 28 de octubre
-* No habrá fecha para último commit pero las citas de revisión serán entre el 16 y el 22 de noviembre, 2025
+* No habrá fecha para último commit pero las citas de revisión serán entre el 1ro y 6 de diciembre, 2025
 
 ---
 
@@ -231,4 +231,4 @@ Puede que no esté completo el deployment pero logra levantar un ambiente de var
 - La revisión será con cita y se tomaran en cuenta solo las personas presentes el día y hora de la revisión
 - Última fecha de consultas viernes 21 de noviembre
 - No hay fecha para el último commit
-- Las revisiones se calendarizaran entre el 1ro y el 6 de noviembre
+- Las revisiones se calendarizaran entre el 1ro y el 6 de diciembre
