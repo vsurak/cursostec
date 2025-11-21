@@ -196,11 +196,11 @@ Para esto proceda en esta sección a:
 * Patrones arquitectónicos, layers de servicios o componentes de cloud y patrones de diseño orientados a objetos deben estar vinculados a código, el cual sirve de guía a los desarrolladores. 
 
 
-# Entregable 3 final
+# Entregable 3 final - 25%
 
 * Incluir correcciones de entregables 1 y 2.
 * No tiene fecha de último commit 
-* Las revisiones se asignaran entre el 1 al 3 de noviembre
+* Las revisiones se asignaran entre el 1 al 3 de diciembre
 * Última fecha para consultas el 23 de noviembre 
 
 ## Diseño de base de datos
