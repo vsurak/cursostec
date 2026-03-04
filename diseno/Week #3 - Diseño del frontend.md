@@ -3,7 +3,9 @@
 A continuación clase a clase se van a abordar un conjunto de aspectos que deben ser considerados cuando se diseña el frontend de un sistema. Tenemos que entender frontend como todo el alcance de la interacción humano computador, la cual puede ser por medio de mobile apps, web apps, por comandos de voz, chat, biométricos, impulsos mentales, entre otros. Es decir, es la interface entre el humano y el componente tecnológico físico y digital. 
 
 
-## Technology stack: tecnología de frontend, de seguridad, librerías de terceros, frameworks, hosting; todos con su respectiva versión.
+## Technology stack 
+
+Tecnología de frontend, de seguridad, librerías de terceros, frameworks, hosting; todos con su respectiva versión.
 
 - Consideraciones para decidir el stack de tecnologías
 
@@ -36,7 +38,7 @@ La autenticación basada en certificados utiliza criptografía de clave pública
 **Biometric**
 La autenticación biométrica valida la identidad a partir de características físicas o comportamentales como huella digital, reconocimiento facial o iris. Desde la arquitectura, generalmente actúa como un factor adicional (MFA) y depende de hardware especializado y APIs del sistema operativo. Su fortaleza radica en que es difícil de replicar, pero requiere manejo cuidadoso de datos sensibles y cumplimiento de normativas de privacidad.
 
-![Authentication](images/authentication design.gif)
+![](images/authenticationdesign.gif)
 
 ---
 
