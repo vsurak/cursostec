@@ -130,8 +130,3 @@ ejemplo https://github.com/vsurak/cursostec/tree/master/diseno/src/dependencyinj
     - En Asp.net + webservices
     - En Python + FastApi o Django
     - En Supabase
-
-## Authentication and Authorization mechanism - architectural pattern 
-
-password, MFA, Token, OAuth, Certificate, Biometric, role based, attribute based, ACL, Policy based
-
