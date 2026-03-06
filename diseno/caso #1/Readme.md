@@ -47,7 +47,7 @@ Describir paso a paso lo que sucede en cada pantalla en términos de acciones (n
 
 #### Monitoreo del avance
 
-#### Obtención del resultado
+#### Obtención del resultado / exportar
 
 #### Logout 
 
@@ -62,7 +62,6 @@ The user can login into his account using the microsoft authentication screen
 - Seleccionar la plantilla de DUA
 - Cómo monitoreo el avance del proceso 
 - Cómo se ve el resultado final
-
 
 
 ### UX test results
