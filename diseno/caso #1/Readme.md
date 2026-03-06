@@ -80,7 +80,28 @@ The user can login into his account using the microsoft authentication screen
 
 
 ## 1.3 Component design strategy
-Define la técnica y los principios de diseño de componentes del frontend, cómo se logra la reutilización de componentes, cómo se logra centralizar los estilos, el branding, la internacionalización y la responsividad.
+
+Los frameworks de desarrollo o lenguajes de programación por ejemplo para mobile apps poseen paradigmas para desarrollar sus componentes visuales. Esos métodos buscan lograr por ejemplo:
+
+- Que el diseño sea uniforme, es decir, que las etiquetas se vean igual en todas las pantallas, que los botones sigan el mismo estilo, que los colores sean los de la marca y así sucesivamente.
+- Reutilización, es decir, que el componente boton se crea solo una vez, el componente de seleccionar archivo solo una vez, que una caja de diálogo se programe solo una vez, y esto se reutilice en todas las ventanas. 
+- Que sea uniforme aplicar el branding del sistema
+- Detalles de forma se ajusten en un solo lugar y no mezclado con la lógica de negocios
+- Si el sistema soporta múltiples idiomas o monedas, eso se haga a nivel visual en un lugar centralizado
+- Que el sistema sea responsivo, es decir que se ajuste bien al tamaño de los distintos smartphones, tabletas, computadoras y browsers.
+- Adecuar la accesibilidad, en caso de que el sistema requiera ser accesible en alguno de los niveles y estandards, aplicar los ajustes de accesibilidad a nivel de componentes únicamente, y así se propagan al resto del sistema 
+
+Para crear la definición de esta sección entonces proceda con la AI:
+
+1. Dado las tecnologías de desarrollo de frontend [listar las seccionadas], qué frameworks o estrategias de diseño por componentes ofrece, comparelas en una matriz por año de aparición y características de reutilización, internacionalización y responsividad, ventajas y desventajas.  
+
+Esto les va a arrojar varias opciones con sus cualidades, ventajas y desventajas. Use esa información para seleccionar una de las opciones y documente en este apartado.
+
+- name of the strategy
+- reutilization by:
+- internacionalization by:
+- responsiveness by: 
+
 
 ## 1.4 Security 
 Tecnologías, técnicas y classes con su respectiva ubicación en la estructura del proyecto responsables de la autenticación y la autorización de permisos y sesiones. 
