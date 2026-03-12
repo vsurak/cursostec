@@ -106,6 +106,18 @@ Esto les va a arrojar varias opciones con sus cualidades, ventajas y desventajas
 ## 1.4 Security 
 Tecnologías, técnicas y classes con su respectiva ubicación en la estructura del proyecto responsables de la autenticación y la autorización de permisos y sesiones. 
 
+- Si es MFA
+- Qué medios de MFA soporta
+- Si es single sign on o no
+- Service de authentication , depende de la plataforma
+- Definir si soporta google and or facebook authentication
+- Si es RBAC, dar la lista de roles: rolename, description
+- Para cada role, lista de permisos: codigo de permiso, descripcion
+- Si tiene algun tipo de ACL y el nombre del servicio de ACL
+- Si tiene PBAC, definir las políticas 
+- Servicio de secure store para env variables, api keys, sensitive data
+- authenticator server name
+
 ## 1.5 Layered design
 diseño y explicación de las diversas capas de la aplicación en el frontend. 
 
