@@ -31,6 +31,7 @@ The expected result is a fully pre-filled Word DUA document with visual confiden
 - Environments: development, stage and production
 - Environment deployments Azure DevOps Environments
 - Observability by Azure Application Insights SDK
+- State management with redux 5.0.1
 
 
 ## 1.2 UX UI analysis 
@@ -80,46 +81,177 @@ The user can login into his account using the microsoft authentication screen
 
 
 ## 1.3 Component design strategy
-
-Los frameworks de desarrollo o lenguajes de programación por ejemplo para mobile apps poseen paradigmas para desarrollar sus componentes visuales. Esos métodos buscan lograr por ejemplo:
-
-- Que el diseño sea uniforme, es decir, que las etiquetas se vean igual en todas las pantallas, que los botones sigan el mismo estilo, que los colores sean los de la marca y así sucesivamente.
-- Reutilización, es decir, que el componente boton se crea solo una vez, el componente de seleccionar archivo solo una vez, que una caja de diálogo se programe solo una vez, y esto se reutilice en todas las ventanas. 
-- Que sea uniforme aplicar el branding del sistema
-- Detalles de forma se ajusten en un solo lugar y no mezclado con la lógica de negocios
-- Si el sistema soporta múltiples idiomas o monedas, eso se haga a nivel visual en un lugar centralizado
-- Que el sistema sea responsivo, es decir que se ajuste bien al tamaño de los distintos smartphones, tabletas, computadoras y browsers.
-- Adecuar la accesibilidad, en caso de que el sistema requiera ser accesible en alguno de los niveles y estandards, aplicar los ajustes de accesibilidad a nivel de componentes únicamente, y así se propagan al resto del sistema 
-
-Para crear la definición de esta sección entonces proceda con la AI:
-
-1. Dado las tecnologías de desarrollo de frontend [listar las seccionadas], qué frameworks o estrategias de diseño por componentes ofrece, comparelas en una matriz por año de aparición y características de reutilización, internacionalización y responsividad, ventajas y desventajas.  
-
-Esto les va a arrojar varias opciones con sus cualidades, ventajas y desventajas. Use esa información para seleccionar una de las opciones y documente en este apartado.
-
-- name of the strategy
-- reutilization by:
-- internacionalization by:
-- responsiveness by: 
+- Use atomic design for basic and complex component design
+- Centralize CSS styles in just one file per component type
+- Class names patterns for CSS: ComponentName-StyleName
+- Use only "em" positional units to support responsiveness in the design
+- Components supports react-i18next 16.5.8
+- There're not accesible requirements
 
 
 ## 1.4 Security 
-Tecnologías, técnicas y classes con su respectiva ubicación en la estructura del proyecto responsables de la autenticación y la autorización de permisos y sesiones. 
+- Multi-Factor Authentication (MFA) through **Azure Entra ID**.
+- Mobile authenticator application only.
+- Single Sign on Azure Entra ID
+- Authentication is handled by Azure Entra ID.
+- Roles: Manager, Customs Agent
+- Permissions by Role:
+  - **Manager**
+    - Permission Code: `MANAGE_USERS`  
+      - Description: Manage user crud
+    - Permission Code: `VIEW_REPORTS`  
+      - Description: Access operational and performance reports.
+    - Permission Code: `EDIT_TEMPLATES`  
+      - Description: Change or update DUA templates available
+  - **Customs Agent**
+    - Permission Code: `LOAD_FILES`  
+      - Description: Set and upload a folder with data files. 
+    - Permission Code: `GENERATE_DUA`  
+      - Description: Starts the AI process of generating a DUA 
+    - Permission Code: `DOWNLOAD_DUA`  
+      - Description: Downloads the DUA generated
+- Azure Key Vault is used to store Environment variables, API keys, Sensitive configuration data
+- Server Name: `customsidentityserver`
 
-- Si es MFA
-- Qué medios de MFA soporta
-- Si es single sign on o no
-- Service de authentication , depende de la plataforma
-- Definir si soporta google and or facebook authentication
-- Si es RBAC, dar la lista de roles: rolename, description
-- Para cada role, lista de permisos: codigo de permiso, descripcion
-- Si tiene algun tipo de ACL y el nombre del servicio de ACL
-- Si tiene PBAC, definir las políticas 
-- Servicio de secure store para env variables, api keys, sensitive data
-- authenticator server name
+## 1.5 Layered design:
 
-## 1.5 Layered design
-diseño y explicación de las diversas capas de la aplicación en el frontend. 
+## Adjusted Frontend Execution Workflow
+
+* **Initial Request:** Handle initial page request via **SSR (Server-Side Rendering)**.
+* **Session Guard:** Validate session; if unauthenticated, trigger the **Authentication Layer**.
+* **Component Rendering:** Upon successful auth, render the UI using **Atomic Design** (Atoms → Pages).
+* **Action Handling:** **Hooks** bridge UI components with the **Business Logic / Services Layer**.
+* **Business Logic Execution:** **Services** perform application operations, consuming **Utils**, **Settings**, and **ApiClients**.
+* **Configuration Access:** **Settings** fetch environment variables and API keys from **Azure Key Vault** during render.
+* **Data Acquisition:** **ApiClients** execute external requests using configurations from **Settings**.
+* **Data Integrity:** All **ApiClient** inputs and outputs use **Models** strictly enforced by the **DataValidation Layer**.
+* **Async Communication:** Asynchronous API responses are handled via callbacks through the **Notification Service Layer**.
+* **Event Subscription:** Layers subscribe to system events using callback URLs via the **Notification Service**.
+* **Observability:** The **Logs Layer** records system events and transmits them through **ApiClients**.
+* **Shared Resources:** **Models**, **Utils**, and **State Management** are accessible across all architectural layers.
+**ExceptionHandling:** All classes access the ExceptionHandling to log errors and control fails, the Exceptions are wrap into a ExceptionControl class within the Model layer. 
+
+```mermaid
+graph TD
+    %% Global Styles
+    classDef azure fill:#0078d4,stroke:#005a9e,color:#fff;
+    classDef layer fill:#f9f9f9,stroke:#333,stroke-width:2px;
+    classDef core fill:#e1f5fe,stroke:#01579b;
+    classDef cross fill:#fff9c4,stroke:#fbc02d;
+
+    subgraph UserSpace ["Client Side"]
+        User((User Browser))
+    end
+
+    subgraph AzureCloud ["Azure Cloud Services"]
+        KeyVault["Azure Key Vault"]:::azure
+        AppInsights["Application Insights"]:::azure
+        AppService["Azure App Service"]:::azure
+    end
+
+    subgraph FrontendArch ["React 19 SSR Architecture"]
+        
+        subgraph PresentationLayer ["UI Layer (Atomic Design)"]
+            Pages[Pages]:::layer
+            Templates[Templates]:::layer
+            Organisms[Organisms]:::layer
+            Molecules[Molecules]:::layer
+            Atoms[Atoms]:::layer
+        end
+
+        Hooks[Hooks Layer]:::core
+
+        subgraph LogicLayer ["Business & Data Logic"]
+            Auth[Authentication Layer]:::core
+            Services[Services Layer]:::core
+            Notify[Notification Service]:::core
+            ApiClient[ApiClients]:::core
+        end
+
+        subgraph ConfigLayer ["Configuration & Validation"]
+            Settings[Settings Layer]:::layer
+            Validation[Data Validation - Zod]:::layer
+        end
+
+        subgraph SharedLayer ["Cross-Cutting Layers"]
+            Models[Models / ExceptionControl]:::cross
+            State[State Management - Redux]:::cross
+            Utils[Utils]:::cross
+            LogLayer[Logs Layer]:::cross
+            ExHandler[ExceptionHandling]:::cross
+        end
+    end
+
+    %% Workflow Connections
+    User -->|1. Initial Request| Pages
+    Pages -->|2. SSR Render| Auth
+    Auth -->|3. If Authenticated| Templates
+    Templates --> Organisms --> Molecules --> Atoms
+    
+    %% Communication Flow
+    Atoms -.->|Events| Hooks
+    Hooks -->|4. Call| Services
+    Services -->|5. Operations| ApiClient
+    Services -->|Subscription| Notify
+    
+    %% Data & Config Flow
+    ApiClient -->|6. Validate| Validation
+    ApiClient -->|7. API Keys| Settings
+    Settings -->|8. Fetch| KeyVault
+    
+    %% Async & Events
+    ApiClient -.->|9. Async Callback| Notify
+    Notify -.->|10. Dispatch| State
+    
+    %% Logging & Exceptions
+    Pages & Services & ApiClient & Auth --> ExHandler
+    ExHandler -->|Wrap| Models
+    ExHandler --> LogLayer
+    LogLayer -->|Telemetry| AppInsights
+    LogLayer -->|Send Logs| ApiClient
+    
+    %% Shared Access
+    SharedLayer -.->|Available to| PresentationLayer
+    SharedLayer -.->|Available to| LogicLayer
+
+    %% External
+    ApiClient <==> ExternalAPI([External APIs])
+```
+
+based in the following architecture [## 1.1 Technology stack 
+
+- Application type: server side rendering web app
+- Web framework: reactjs version 19.2
+- NodeJs version 21
+- TypeScript 5.9.3
+- Unit testing: Jest 30.2.0
+- Zod 4.3.6 to data validation 
+- Prettier 3.8.1
+- eslint 10.0.2 
+- Integration testing: Playwright version 1.58.2
+- Cloud service: Azure cloud services
+- Hosted by Azure App Service
+- Code respositories by Azure DevOps
+- Automated code tasks by Husky 9.1.7
+- CI CD by Azure DevOps Pipelines
+- Environments: development, stage and production
+- Environment deployments Azure DevOps Environments
+- Observability by Azure Application Insights SDK
+- State management with redux 5.0.1
+] and workflow architecture [* **Initial Request:** Handle initial page request via **SSR (Server-Side Rendering)**.
+* **Session Guard:** Validate session; if unauthenticated, trigger the **Authentication Layer**.
+* **Component Rendering:** Upon successful auth, render the UI using **Atomic Design** (Atoms → Pages).
+* **Action Handling:** **Hooks** bridge UI components with the **Business Logic / Services Layer**.
+* **Business Logic Execution:** **Services** perform application operations, consuming **Utils**, **Settings**, and **ApiClients**.
+* **Configuration Access:** **Settings** fetch environment variables and API keys from **Azure Key Vault** during render.
+* **Data Acquisition:** **ApiClients** execute external requests using configurations from **Settings**.
+* **Data Integrity:** All **ApiClient** inputs and outputs use **Models** strictly enforced by the **DataValidation Layer**.
+* **Async Communication:** Asynchronous API responses are handled via callbacks through the **Notification Service Layer**.
+* **Event Subscription:** Layers subscribe to system events using callback URLs via the **Notification Service**.
+* **Observability:** The **Logs Layer** records system events and transmits them through **ApiClients**.
+* **Shared Resources:** **Models**, **Utils**, and **State Management** are accessible across all architectural layers.
+**ExceptionHandling:** All classes access the ExceptionHandling to log errors and control fails, the Exceptions are wrap into a ExceptionControl class within the Model layer. 
+] generate de architecture diagram for this azure solution with its symbols. 
 
 ## 1.6  Design patterns 
 Diseño de classes con su respectiva ubicación en la estructura del proyecto, donde sea necesario aplicar patrones de diseño orientado a objetos, como por ejemplo: seguridad, refrescado de UI, recepción de notificaciones, almacenamiento de estados, llamadas a api, operaciones asíncronas, invalidación de sesiones, programación por eventos, creación de objetos. 
