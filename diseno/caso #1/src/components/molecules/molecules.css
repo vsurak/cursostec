@@ -1,0 +1,42 @@
+/* ===== FormField ===== */
+.FormField-Container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  margin-bottom: 1em;
+}
+
+/* ===== FileUploader ===== */
+.FileUploader-DropZone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  border: 0.125em dashed var(--color-border);
+  border-radius: 0.5em;
+  background-color: var(--color-surface);
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.FileUploader-DropZone:hover {
+  border-color: var(--color-secondary);
+}
+
+.FileUploader-Input {
+  display: none;
+}
+
+.FileUploader-Label {
+  font-size: 1em;
+  font-weight: 600;
+  color: var(--color-secondary);
+  cursor: pointer;
+  margin-bottom: 0.5em;
+}
+
+.FileUploader-Info {
+  font-size: 0.75em;
+  color: var(--color-text-light);
+}
