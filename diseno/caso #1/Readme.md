@@ -177,10 +177,13 @@ CI/CD:
 Azure DevOps Repo → Pipelines → Dev / Stage / Prod → Azure App Service
 
 
-
-
 ## 1.6  Design patterns 
-Diseño de classes con su respectiva ubicación en la estructura del proyecto, donde sea necesario aplicar patrones de diseño orientado a objetos, como por ejemplo: seguridad, refrescado de UI, recepción de notificaciones, almacenamiento de estados, llamadas a api, operaciones asíncronas, invalidación de sesiones, programación por eventos, creación de objetos. 
+
+- Use Builder Pattern and Strategy Pattern to create the diffrent document processors such as wordx, xlsx, pdf, jpg, png. 
+- NotificationService subscriptions works with Obsever pattern
+- Use adapter pattern to decide the output format to be writen in the documents, use FormatAdapters y Concret Format such as: Paragraph, Bullets, Table, Label, Amount. 
+- Singleton for: ExceptionHandling, Document Parsers, Utils, StateManagement, The Api Clients, Settings classes. 
+
 
 ## 1.7 un folder en /src
 
