@@ -115,143 +115,69 @@ The user can login into his account using the microsoft authentication screen
 
 ## 1.5 Layered design:
 
-## Adjusted Frontend Execution Workflow
+* The frontend performs **SSR (Server-Side Rendering)**.
+* If there is no authenticated session, the **Authentication Layer** is invoked.
+* If authentication is successful, the visual resource is accessed and rendered within the **Components Layer**.
+* Components follow **Atomic Design** (atoms, molecules, organisms, templates, and pages); within components, a **Hooks Layer** exists to connect visual component actions with the **Services Layer**.
+* **Services** contain the application's operations.
+* To perform their tasks, **Services** may require access to the **Utils**, **ApiClients**, and **Settings** layers.
+* **ApiClients** contains all classes that access external APIs.
+* **Settings** accesses environment variables in **Azure Key Vault** during rendering.
+* **ApiClients** reads API keys and URLs from **Settings**.
+* All **ApiClient** calls and returns use classes in **Models**, which are validated by the **DataValidation** layer.
+* All layers can access the **Models**, **Utils**, and **State Management** layers.
+* The **NotificationService** layer allows other layers to subscribe to events via **callback URLs**.
+* Asynchronous API calls are always handled via callback using the **Notification Service** layer.
+* The **Logs** layer provides classes to register system events, which are sent via **ApiClients**.
+* ExceptionHandling layer is a shared layer
 
-* **Initial Request:** Handle initial page request via **SSR (Server-Side Rendering)**.
-* **Session Guard:** Validate session; if unauthenticated, trigger the **Authentication Layer**.
-* **Component Rendering:** Upon successful auth, render the UI using **Atomic Design** (Atoms → Pages).
-* **Action Handling:** **Hooks** bridge UI components with the **Business Logic / Services Layer**.
-* **Business Logic Execution:** **Services** perform application operations, consuming **Utils**, **Settings**, and **ApiClients**.
-* **Configuration Access:** **Settings** fetch environment variables and API keys from **Azure Key Vault** during render.
-* **Data Acquisition:** **ApiClients** execute external requests using configurations from **Settings**.
-* **Data Integrity:** All **ApiClient** inputs and outputs use **Models** strictly enforced by the **DataValidation Layer**.
-* **Async Communication:** Asynchronous API responses are handled via callbacks through the **Notification Service Layer**.
-* **Event Subscription:** Layers subscribe to system events using callback URLs via the **Notification Service**.
-* **Observability:** The **Logs Layer** records system events and transmits them through **ApiClients**.
-* **Shared Resources:** **Models**, **Utils**, and **State Management** are accessible across all architectural layers.
-**ExceptionHandling:** All classes access the ExceptionHandling to log errors and control fails, the Exceptions are wrap into a ExceptionControl class within the Model layer. 
+                +----------------------+
+                |      User Browser    |
+                +----------+-----------+
+                           |
+                           v
+                +----------------------+
+                |    Azure App Service |
+                |  NodeJS + React SSR  |
+                +----------+-----------+
+                           |
+                 SSR Request Handling
+                           |
+                    Authentication
+                           |
+                +----------------------+
+                |   Components Layer   |
+                | Atomic Design UI     |
+                | Atoms → Pages        |
+                +----------+-----------+
+                           |
+                         Hooks
+                           |
+                     Services Layer
+                           |
+         +----------------+----------------+
+         |                |                |
+       Utils          ApiClients        Settings
+                                            |
+                                    Azure Key Vault
+                                            |
+                                     Secrets / Config
+                                            
+ApiClients → External APIs
+External APIs → Notification Service (Callbacks)
 
-```mermaid
-graph TD
-    %% Global Styles
-    classDef azure fill:#0078d4,stroke:#005a9e,color:#fff;
-    classDef layer fill:#f9f9f9,stroke:#333,stroke-width:2px;
-    classDef core fill:#e1f5fe,stroke:#01579b;
-    classDef cross fill:#fff9c4,stroke:#fbc02d;
+Shared Layers:
+Models
+Zod Validation
+Redux State Management
+Exception Handling
+Logs → Azure Application Insights
 
-    subgraph UserSpace ["Client Side"]
-        User((User Browser))
-    end
+CI/CD:
+Azure DevOps Repo → Pipelines → Dev / Stage / Prod → Azure App Service
 
-    subgraph AzureCloud ["Azure Cloud Services"]
-        KeyVault["Azure Key Vault"]:::azure
-        AppInsights["Application Insights"]:::azure
-        AppService["Azure App Service"]:::azure
-    end
 
-    subgraph FrontendArch ["React 19 SSR Architecture"]
-        
-        subgraph PresentationLayer ["UI Layer (Atomic Design)"]
-            Pages[Pages]:::layer
-            Templates[Templates]:::layer
-            Organisms[Organisms]:::layer
-            Molecules[Molecules]:::layer
-            Atoms[Atoms]:::layer
-        end
 
-        Hooks[Hooks Layer]:::core
-
-        subgraph LogicLayer ["Business & Data Logic"]
-            Auth[Authentication Layer]:::core
-            Services[Services Layer]:::core
-            Notify[Notification Service]:::core
-            ApiClient[ApiClients]:::core
-        end
-
-        subgraph ConfigLayer ["Configuration & Validation"]
-            Settings[Settings Layer]:::layer
-            Validation[Data Validation - Zod]:::layer
-        end
-
-        subgraph SharedLayer ["Cross-Cutting Layers"]
-            Models[Models / ExceptionControl]:::cross
-            State[State Management - Redux]:::cross
-            Utils[Utils]:::cross
-            LogLayer[Logs Layer]:::cross
-            ExHandler[ExceptionHandling]:::cross
-        end
-    end
-
-    %% Workflow Connections
-    User -->|1. Initial Request| Pages
-    Pages -->|2. SSR Render| Auth
-    Auth -->|3. If Authenticated| Templates
-    Templates --> Organisms --> Molecules --> Atoms
-    
-    %% Communication Flow
-    Atoms -.->|Events| Hooks
-    Hooks -->|4. Call| Services
-    Services -->|5. Operations| ApiClient
-    Services -->|Subscription| Notify
-    
-    %% Data & Config Flow
-    ApiClient -->|6. Validate| Validation
-    ApiClient -->|7. API Keys| Settings
-    Settings -->|8. Fetch| KeyVault
-    
-    %% Async & Events
-    ApiClient -.->|9. Async Callback| Notify
-    Notify -.->|10. Dispatch| State
-    
-    %% Logging & Exceptions
-    Pages & Services & ApiClient & Auth --> ExHandler
-    ExHandler -->|Wrap| Models
-    ExHandler --> LogLayer
-    LogLayer -->|Telemetry| AppInsights
-    LogLayer -->|Send Logs| ApiClient
-    
-    %% Shared Access
-    SharedLayer -.->|Available to| PresentationLayer
-    SharedLayer -.->|Available to| LogicLayer
-
-    %% External
-    ApiClient <==> ExternalAPI([External APIs])
-```
-
-based in the following architecture [## 1.1 Technology stack 
-
-- Application type: server side rendering web app
-- Web framework: reactjs version 19.2
-- NodeJs version 21
-- TypeScript 5.9.3
-- Unit testing: Jest 30.2.0
-- Zod 4.3.6 to data validation 
-- Prettier 3.8.1
-- eslint 10.0.2 
-- Integration testing: Playwright version 1.58.2
-- Cloud service: Azure cloud services
-- Hosted by Azure App Service
-- Code respositories by Azure DevOps
-- Automated code tasks by Husky 9.1.7
-- CI CD by Azure DevOps Pipelines
-- Environments: development, stage and production
-- Environment deployments Azure DevOps Environments
-- Observability by Azure Application Insights SDK
-- State management with redux 5.0.1
-] and workflow architecture [* **Initial Request:** Handle initial page request via **SSR (Server-Side Rendering)**.
-* **Session Guard:** Validate session; if unauthenticated, trigger the **Authentication Layer**.
-* **Component Rendering:** Upon successful auth, render the UI using **Atomic Design** (Atoms → Pages).
-* **Action Handling:** **Hooks** bridge UI components with the **Business Logic / Services Layer**.
-* **Business Logic Execution:** **Services** perform application operations, consuming **Utils**, **Settings**, and **ApiClients**.
-* **Configuration Access:** **Settings** fetch environment variables and API keys from **Azure Key Vault** during render.
-* **Data Acquisition:** **ApiClients** execute external requests using configurations from **Settings**.
-* **Data Integrity:** All **ApiClient** inputs and outputs use **Models** strictly enforced by the **DataValidation Layer**.
-* **Async Communication:** Asynchronous API responses are handled via callbacks through the **Notification Service Layer**.
-* **Event Subscription:** Layers subscribe to system events using callback URLs via the **Notification Service**.
-* **Observability:** The **Logs Layer** records system events and transmits them through **ApiClients**.
-* **Shared Resources:** **Models**, **Utils**, and **State Management** are accessible across all architectural layers.
-**ExceptionHandling:** All classes access the ExceptionHandling to log errors and control fails, the Exceptions are wrap into a ExceptionControl class within the Model layer. 
-] generate de architecture diagram for this azure solution with its symbols. 
 
 ## 1.6  Design patterns 
 Diseño de classes con su respectiva ubicación en la estructura del proyecto, donde sea necesario aplicar patrones de diseño orientado a objetos, como por ejemplo: seguridad, refrescado de UI, recepción de notificaciones, almacenamiento de estados, llamadas a api, operaciones asíncronas, invalidación de sesiones, programación por eventos, creación de objetos. 
