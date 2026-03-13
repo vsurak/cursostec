@@ -44,7 +44,21 @@ Ejecutar algunos ejercicios de diseño:
 
 - Puesto de lotería
 
-- Post/Like/Comments/Share
+Diseño de una red social similar a IG 
+
+Areas de diseño:
+
+- UserProfiles(everything related to user profile and privacy settings)
+
+- Network(followers, following, mutes)
+
+- Post (post and stories)
+
+- Events and actions on Posts
+
+- Notifications
+
+- Chat
 
 ## Tips para evaluar diseños:
 

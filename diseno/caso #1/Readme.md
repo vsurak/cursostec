@@ -129,8 +129,6 @@ Diseño de classes con su respectiva ubicación en la estructura del proyecto, d
 que contiene el scaffold del proyecto, el cual se genera a partir de toda la especificación de los puntos del 1.1 al 1.6. 
 
 
-
-
 # Backend design
 
 # Data design
