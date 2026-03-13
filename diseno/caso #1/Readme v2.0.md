@@ -41,7 +41,7 @@ The expected result is a fully pre-filled Word DUA document with visual confiden
 - Components supports react-i18next 16.5.8
 - There're not accesible requirements
 
-!(Atomic designfolder)[/src/components]
+[Atomic design folder](/src/components)
 
 ## 1.4 Security 
 - Multi-Factor Authentication (MFA) through **Azure Entra ID**.
