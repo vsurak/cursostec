@@ -80,3 +80,13 @@ Areas de diseño:
 **Evaluar si el diseño cumple los requerimientos**
 “Compara este modelo de datos contra los siguientes requerimientos funcionales y no funcionales. Indica qué requerimientos están cubiertos, cuáles parcialmente y cuáles no están reflejados en el diseño: [ lista de requerimientos]”
 
+**Cómo hacer estos diseños para motores de bases de datos documentales**
+
+1. Determine como se ve a organizar la información según la forma y donde va a ser consumida. 
+
+2. Diseñe un documento que contenga el menos la información que va a ser consumida.
+
+3. Tome en cuenta relaciones 1:1, 1:N y N:N en documentos. 
+
+4. Compare si el diseño cumple con los requerimientos dados por medio de un prompt donde se alimente de los requerimientos y compare con el diseño, desplegando aquellas partes que no hayan sido contempladas. 
+

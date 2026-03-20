@@ -33,53 +33,6 @@ The expected result is a fully pre-filled Word DUA document with visual confiden
 - Observability by Azure Application Insights SDK
 - State management with redux 5.0.1
 
-
-## 1.2 UX UI analysis 
-
-### Core business process
-Describir paso a paso lo que sucede en cada pantalla en términos de acciones (no hablen de botones, ni listas ni de ningún componente visual, solo acciones de usuario y el resultado de cada acción)
-
-#### Login
-1. El usuario ingresa su login, password y el one time token
-2. Al intentar loguearse si falla, se le presenta un mensaje de user and pass invalido
-3. Si es succed ....
-
-#### Configurar el generador
-
-#### Monitoreo del avance
-
-#### Obtención del resultado / exportar
-
-#### Logout 
-
-### Wireframes
-Con esos pasos anteriores le pido a una AI que me genere los screens y los pego aqui con un titulo, descripción y la imagen empotrada.
-
-Login screen
-The user can login into his account using the microsoft authentication screen
-![Login](/media/login.jpg)
-
-- Seleccionar el folder 
-- Seleccionar la plantilla de DUA
-- Cómo monitoreo el avance del proceso 
-- Cómo se ve el resultado final
-
-
-### UX test results
-- escoger alguna app para ejecutar el UX test usando esos wireframes
-- el test se lo van a aplicar en forma remota compartiendo un URL a 3 estudiantes o amigos
-- eso va  generar un reporte de resultados
-
-- crear un markdown table con los resultados
-- Evidencias
-![Juan mi amigo de mante](/media/testdejuan.jpg)
-![Ana la de mante](/media/ana.jpg)
-![Tio de johel](/media/tio.jpg)
-
-- Heatmap
-![Dua steamliner heatmap](/media/heatmap.jpg)
-
-
 ## 1.3 Component design strategy
 - Use atomic design for basic and complex component design
 - Centralize CSS styles in just one file per component type
@@ -88,6 +41,7 @@ The user can login into his account using the microsoft authentication screen
 - Components supports react-i18next 16.5.8
 - There're not accesible requirements
 
+[Atomic design folder](/src/components)
 
 ## 1.4 Security 
 - Multi-Factor Authentication (MFA) through **Azure Entra ID**.
@@ -119,7 +73,7 @@ The user can login into his account using the microsoft authentication screen
 * If there is no authenticated session, the **Authentication Layer** is invoked.
 * If authentication is successful, the visual resource is accessed and rendered within the **Components Layer**.
 * Components follow **Atomic Design** (atoms, molecules, organisms, templates, and pages); within components, a **Hooks Layer** exists to connect visual component actions with the **Services Layer**.
-* **Services** contain the application's operations.
+* **Services** contain the application's operations. [Business logic classes](/src/services)
 * To perform their tasks, **Services** may require access to the **Utils**, **ApiClients**, and **Settings** layers.
 * **ApiClients** contains all classes that access external APIs.
 * **Settings** accesses environment variables in **Azure Key Vault** during rendering.
@@ -178,18 +132,37 @@ Azure DevOps Repo → Pipelines → Dev / Stage / Prod → Azure App Service
 
 
 ## 1.6  Design patterns 
-
 - Use Builder Pattern and Strategy Pattern to create the diffrent document processors such as wordx, xlsx, pdf, jpg, png. 
 - NotificationService subscriptions works with Obsever pattern
 - Use adapter pattern to decide the output format to be writen in the documents, use FormatAdapters y Concret Format such as: Paragraph, Bullets, Table, Label, Amount. 
 - Singleton for: ExceptionHandling, Document Parsers, Utils, StateManagement, The Api Clients, Settings classes. 
 
 
-## 1.7 un folder en /src
-
-que contiene el scaffold del proyecto, el cual se genera a partir de toda la especificación de los puntos del 1.1 al 1.6. 
-
-
 # Backend design
 
-# Data design
+## Technology stack
+- Protocolo de aplicacion y de transporte
+- API service
+- Hosting service
+
+- REST, HTTPS
+- Azure API Management + Azure App Service
+- is required to decided Business logic protocol, paradigm and hosting
+
+### Architecture diagram in layers 
+
+## Security
+
+## Observability
+
+## Infraestructure (devops)
+
+## Availability
+
+## Scalability 
+
+## Backend key workflows 
+
+## Design considerations
+
+

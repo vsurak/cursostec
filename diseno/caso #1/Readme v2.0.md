@@ -73,7 +73,7 @@ The expected result is a fully pre-filled Word DUA document with visual confiden
 * If there is no authenticated session, the **Authentication Layer** is invoked.
 * If authentication is successful, the visual resource is accessed and rendered within the **Components Layer**.
 * Components follow **Atomic Design** (atoms, molecules, organisms, templates, and pages); within components, a **Hooks Layer** exists to connect visual component actions with the **Services Layer**.
-* **Services** contain the application's operations.
+* **Services** contain the application's operations. [Business logic classes](/src/services)
 * To perform their tasks, **Services** may require access to the **Utils**, **ApiClients**, and **Settings** layers.
 * **ApiClients** contains all classes that access external APIs.
 * **Settings** accesses environment variables in **Azure Key Vault** during rendering.
