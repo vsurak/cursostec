@@ -55,6 +55,52 @@ Patrones y piezas que sueles elegir:
 - **.NET**: ASP.NET Core — integración fuerte con Azure.
 - **Rust**: Actix/Axum — latencia y seguridad de memoria cuando el costo de complejidad se justifica.
 
+## Servicios, microservicios, repos y DDD
+
+Hay **tres ejes distintos** que suelen mezclarse: (1) **cómo despliegas** (un artefacto vs varios), (2) **cómo versionas el código** (un repo vs muchos), (3) **cómo modelas el dominio** (DDD es enfoque de diseño, no “tamaño del repo”). Puedes usar DDD en un monolito modular o en microservicios; un monorepo puede contener un solo deployable o docenas.
+
+### Qué es cada cosa (en una frase)
+
+| Concepto | Idea central |
+|----------|----------------|
+| **Servicio / capa de servicio** | Unidad lógica de capacidad de negocio expuesta (API, cola, batch). En un monolito suele ser un **módulo** o paquete; en microservicios, un **proceso desplegable** propio. |
+| **Microservicios** | Varios despliegues **independientes**, límites de equipo/dominio fuertes, comunicación por red (HTTP, gRPC, eventos). Coste: operación, consistencia distribuida y trazabilidad. |
+| **Repos separados (multirepo)** | Un repositorio Git por producto, equipo o servicio. Límites claros de permisos y ciclo de vida; más fricción para cambios que cruzan muchos repos. |
+| **Monorepo** | Un solo repositorio con **varios proyectos/paquetes** (apps, librerías compartidas). Facilita refactors transversales y una sola política de CI; exige disciplina en límites y herramientas de build. |
+| **Domain-Driven Design (DDD)** | Alineación del modelo de software con el **lenguaje y procesos del negocio**: **contextos delimitados (bounded contexts)**, **agregados**, **dominio vs infraestructura**. Define *qué* partes existen y cómo se relacionan; no impone solo microservicios ni solo monolito. |
+
+### Comparación rápida (cuándo inclinar la balanza)
+
+| Dimensión | Monolito modular / “servicios internos” | Microservicios |
+|-----------|----------------------------------------|----------------|
+| Despliegue | Un solo pipeline; rollback simple | Varios pipelines; versionado y compatibilidad entre servicios |
+| Consistencia transaccional | Más fácil (misma BD / misma app) | Sagas, eventos, eventual consistency |
+| Equipo | Equipo pequeño–medio, producto en evolución | Varios equipos autónomos, escalado independiente por carga |
+| Complejidad operativa | Baja–media | Alta (red, observabilidad, contratos) |
+
+| Dimensión | Multirepo | Monorepo |
+|-----------|----------|----------|
+| Propiedad | Repo = dueño claro (equipo/servicio) | Límites por carpetas/herramientas, no por repo |
+| Cambios cruzados | Varios PRs, versionado de librerías entre repos | Un PR puede tocar API + clientes + libs compartidas |
+| CI | Pipeline por repo (simple mentalmente) | **Build/test afectados** (solo lo que cambió) para no explotar tiempos |
+| Seguridad / acceso | Permisos granulares por repositorio | Permisos por paths o subproyectos (más trabajo de gobierno) |
+
+**DDD y arquitectura:** un **bounded context** suele mapearse a un **módulo** (monolito) o a un **servicio** (microservicios), pero la regla es de **cohesión del dominio**, no de moda tecnológica. **Tactical patterns** (entidades, value objects, repositorios) aplican dentro de cada contexto.
+
+### Tecnologías y herramientas de referencia (para comparar en diseño)
+
+| Ámbito | Para qué sirve en la comparación | Ejemplos habituales |
+|--------|----------------------------------|---------------------|
+| **Monorepo / build** | Orquestar muchos paquetes, caching, “solo build lo tocado” | **Nx**, **Turborepo**, **Bazel**, **Rush**, **Gradle** (multi-project), **Cargo workspaces** |
+| **Contratos entre servicios** | Evolución de APIs sin romper consumidores | **OpenAPI**, **AsyncAPI**, **Protobuf** / **gRPC**, **JSON Schema** |
+| **Orquestación de microservicios** | Despliegue, escalado, redes entre servicios | **Kubernetes** (**EKS**, **GKE**, **AKS**), **Nomad** |
+| **Service mesh** (opcional) | mTLS, retries, observabilidad L7 entre pods | **Istio**, **Linkerd**, **Consul Connect** |
+| **Plataforma de desarrollo** | Abstracción común sobre K8s (golden paths) | **Backstage**, **Dapr** (building blocks portables) |
+| **Eventos entre contextos** | Acoplamiento débil, integración asíncrona | **Kafka**, **RabbitMQ**, **NATS**, colas cloud (**SQS**, **Pub/Sub**, **Service Bus**) |
+| **CI en monorepo** | Detectar proyectos afectados por cambio | **Nx affected**, **Turborepo** `--filter`, **Bazel** query, **path filters** en GitHub Actions |
+
+En el documento de diseño conviene dejar **explícito**: límites de dominio (DDD), **cuántos artefactos desplegables** hay, **dónde vive el código** (mono vs multi-repo) y **cómo versionan contratos** entre partes — antes de profundizar en seguridad y observabilidad.
+
 ## Security
 
 Decisiones que el diseñador debe dejar **explícitas en el diseño**, no solo “implementar después”:
