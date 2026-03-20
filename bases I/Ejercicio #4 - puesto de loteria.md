@@ -112,7 +112,7 @@ CREATE TABLE estadosdesorteo (
 -- Tabla de tipos de operación
 CREATE TABLE tiposdeoperacion (
     tipodeoperacionid SERIAL PRIMARY KEY,
-    nombre VARCHAR(10) NOT NULL
+    nombre VARCHAR(15) NOT NULL
 );
 
 -- Tabla de resoluciones
@@ -169,3 +169,18 @@ CREATE TABLE controlcajas (
     comentarios VARCHAR(200),
     solucionid BIGINT REFERENCES resoluciones(resolucionid)
 );
+```
+
+
+
+Dado este problema y este diseño, cómo podría ser el diseño de las colecciones para un modelo documental en mongodb, donde se reduzca a una sola consulta a los collections obtener la información para las siguientes pantallas.
+
+Ventana principal:
+- salen listas de tipos de sorteo, la fecha y hora en que se juega cada sorteo, sale una imagen que identifique el sorteo.
+
+Compra de boletos de un sorteo:
+- La cantidad a comprar, detalles y reglas del sorteo, imagen representativa, precios de boletos, fecha del juego
+
+Confirmacion de compra:
+- tener un recibo de confirmacion de compra, si es compra virtual un correo para recibir el recibo, el recibo tiene el numero, el tipo de sorteo, la fecha, la fecha en que se juega, la cantidad, breve descripcion, fecha limite para canjear el premio. 
+

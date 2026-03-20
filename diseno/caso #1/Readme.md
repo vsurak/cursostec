@@ -32,6 +32,7 @@ The expected result is a fully pre-filled Word DUA document with visual confiden
 - Environment deployments Azure DevOps Environments
 - Observability by Azure Application Insights SDK
 - State management with redux 5.0.1
+- Monorepo, frontend folder: duawebapp
 
 ## 1.3 Component design strategy
 - Use atomic design for basic and complex component design
@@ -141,19 +142,23 @@ Azure DevOps Repo → Pipelines → Dev / Stage / Prod → Azure App Service
 # Backend design
 
 ## Technology stack
-- Protocolo de aplicacion y de transporte
-- API service
-- Hosting service
-
-- REST, HTTPS
+- REST API, HTTPS
 - Azure API Management + Azure App Service
-- is required to decided Business logic protocol, paradigm and hosting
+- API standard with Open API
+- For asyncronous operations and notifications use Azure Notification Hubs
+- No load balance required
+- API coding language .NET, ASP.NET Core
+- This is a monorepo solution, sharing the repository with the frontend, backend folder: duabusiness
 
-### Architecture diagram in layers 
+- services o microservices?
+
+## Architecture diagram in layers 
 
 ## Security
+- esto lo pueden trabajar pues debe ir en sincronía con el FE
 
 ## Observability
+- esto lo pueden trabajar pues debe ir en sincronía con el FE
 
 ## Infraestructure (devops)
 
@@ -162,6 +167,19 @@ Azure DevOps Repo → Pipelines → Dev / Stage / Prod → Azure App Service
 ## Scalability 
 
 ## Backend key workflows 
+- esto lo pueden ir trabajando 
+
+### Upload files to generate dua
+1. The backend receive the list of files to be uploaded 
+2. Open a streaming transfer file by file to received the files content in raw format
+3. All the files are store in azure cloud storage and map in the database ....
+
+... poniendo los pasos de los flujos
+
+### Setup dua template
+1.
+2. 
+3. 
 
 ## Design considerations
 
