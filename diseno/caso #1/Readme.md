@@ -153,6 +153,7 @@ Azure DevOps Repo → Pipelines → Dev / Stage / Prod → Azure App Service
 - services o microservices?
 
 ## Architecture diagram in layers 
+- C4 model , create the 4 diagram
 
 ## Security
 - esto lo pueden trabajar pues debe ir en sincronía con el FE
