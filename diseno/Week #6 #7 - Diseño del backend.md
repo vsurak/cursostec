@@ -152,3 +152,28 @@ Trade-offs entre costo y continuidad del servicio:
 - **Caching**: **ElastiCache**, **Memorystore**, **Azure Cache for Redis**; **CDN** para estáticos y a veces **edge caching** de GETs seguros.
 - **Auto-scaling**: métricas (CPU, RPS, longitud de cola, latencia); límites máximos para control de costos.
 
+
+## Diseño C4 
+
+- Diseño de arquitecturas C4, https://c4model.com/diagrams
+
+* Diagrama de Contexto: Representa la visión global del sistema desde una perspectiva externa, diseñado específicamente para interactuar con perfiles ejecutivos, gerenciales y personal de negocio no técnico.
+
+* Diagrama de Contenedores: Realiza un acercamiento al sistema para detallar su arquitectura tecnológica, incluyendo piezas internas, servicios en la nube, librerías externas, hosting y servicios de terceros. Debe utilizar simbología estándar según la tecnología, como los iconos de AWS, indicando claramente la dirección del flujo de datos en las interacciones y especificando protocolos, frameworks y sistemas operativos organizados en capas debidamente nombradas.
+
+* Diagrama de Componentes: Descompone los contenedores para identificar los dominios funcionales y las divisiones lógicas del sistema, tales como módulos o paquetes de lógica de negocio. El enfoque principal es definir las misiones y responsabilidades de cada parte más allá de la tecnología, asegurando que se visualice correctamente la capa a la que pertenecen estos componentes mediante uno o varios esquemas.
+
+* Diagrama de Código: Utiliza el modelado UML de clases para representar la estructura del software, empleando colores o marcas para distinguir a qué capa o componente pertenecen los objetos. En lugar de una descripción exhaustiva de cada implementación, el objetivo es plasmar la organización de carpetas y la jerarquía de clases que ejecutan los patrones de diseño fundamentales establecidos por el arquitecto.
+
+Recomendaciones para documentar estos diagramas en markdown para una AI:
+
+* Diagrama de Contexto: Debe enfocarse en las fronteras del sistema. En Markdown, describe los actores y sistemas externos, seguido de un bloque Mermaid de tipo `graph` o `C4Context`. 
+
+Ejemplo: El Sistema de Reclutamiento interactúa con Candidatos (quienes envían CVs), Reclutadores (que gestionan vacantes) y el Sistema de Correo externo para notificaciones.
+
+* Diagrama de Contenedores: Se documenta listando las aplicaciones independientes (Web, Mobile, Base de Datos). Para la IA, define cada contenedor con su tecnología y la relación de flujo. Ejemplo: Una Single Page Application en React se comunica vía HTTPS/JSON con una API de Node.js, la cual persiste datos en una instancia de PostgreSQL en AWS RDS y envía eventos a un Microservicio de Notificaciones.
+
+* Diagrama de Componentes: Aquí la documentación debe separar la lógica por dominios funcionales. Indica qué módulos internos forman el contenedor. Ejemplo: Dentro del contenedor API, existen componentes como el Gestor de Candidatos, el Motor de Emparejamiento (Matching Engine) y el Adaptador de Odoo CRM. La IA necesitará ver las interfaces entre estos módulos y cómo se agrupan en capas de Aplicación y Dominio.
+
+* Diagrama de Código: Se documenta mediante diagramas de clases UML que resalten los patrones de diseño. En el Markdown, especifica las clases clave, sus atributos principales y relaciones de herencia o composición. Ejemplo: Una interfaz BaseRepository es implementada por CandidateRepository, la cual es utilizada por el Service de Reclutamiento siguiendo el patrón de Inyección de Dependencias, organizando el código en carpetas como /domain/entities y /infrastructure/persistence.
+

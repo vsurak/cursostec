@@ -152,9 +152,6 @@ Azure DevOps Repo → Pipelines → Dev / Stage / Prod → Azure App Service
 
 - services o microservices?
 
-## Architecture diagram in layers 
-- C4 model , create the 4 diagram
-
 ## Security
 - esto lo pueden trabajar pues debe ir en sincronía con el FE
 
@@ -182,6 +179,24 @@ Azure DevOps Repo → Pipelines → Dev / Stage / Prod → Azure App Service
 2. 
 3. 
 
-## Design considerations
+## Architecture diagrams in layers 
+- Follow the C4 estandard to create the diagrams and explanations
+- Check Week #6 #7 for the details 
+- In this case we're not going to make the components diagram, only context, container and code. 
 
+
+## Design Considerations
+
+* System configurations, parameters, and policies must be fully documented and maintained within the source code.
+* Resource allocations, including memory, server specifications, load balancing settings, and networking parameters.
+* Selection of specific algorithms and their respective parameters to be applied within core business logic.
+* Development and definition of agent prototypes.
+* Definition of interfaces, proxies, and integration points with external systems or architectural components.
+
+## Source Code
+
+* Use a specialized agent to generate the project's backend skeleton based on this technical description.
+* Ensure the agent focuses strictly on generating scripts, folder structures, or class definitions without implementing functional logic.
+* The directory structure of the backend code must align with the chosen repository architecture.
+* Provide direct links to key folders and primary classes within the relevant sections of this README.md file.
 
