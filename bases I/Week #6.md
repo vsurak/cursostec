@@ -190,3 +190,12 @@ FROM salarios_mayores;
   ```
 - Son muy útiles para consultas recursivas y para dar claridad a partes complejas de una consulta.
 
+---
+
+# Para ejecutar en clase
+
+- Explicar el join y el where, el estudiante va escribir 3 joins en papel
+- Explicar declaración de variables, asignacion en codigo, en select, uso de variables y constantes en el select, el estudiante va escribir 2 selects que hagan uso de esa información
+- Explicar el update simple y el update con join, el estudiante va escribir uno de cada uno 
+- Proceder con el ejercicio de store procedures 
+

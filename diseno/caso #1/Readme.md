@@ -149,8 +149,7 @@ Azure DevOps Repo → Pipelines → Dev / Stage / Prod → Azure App Service
 - No load balance required
 - API coding language .NET, ASP.NET Core
 - This is a monorepo solution, sharing the repository with the frontend, backend folder: duabusiness
-
-- services o microservices?
+- services o microservices?z
 
 ## Security
 - esto lo pueden trabajar pues debe ir en sincronía con el FE
