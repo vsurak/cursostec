@@ -153,15 +153,36 @@ Azure DevOps Repo → Pipelines → Dev / Stage / Prod → Azure App Service
 
 ## Security
 - esto lo pueden trabajar pues debe ir en sincronía con el FE
+- Agregar:
+- HTTPS, algoritmo de encriptado que se va usar en la db
+- payload size maximo general o hacer excepciones en ciertos endpoints
+- rate limit cantidad de conexiones concurrentes max
+- cuanto tiempo tengo la data en prod para luego pasarla a archive
+- 
 
 ## Observability
 - esto lo pueden trabajar pues debe ir en sincronía con el FE
+- Lista de eventos que se van a registrar
+- Plataforma para registrar esos eventos
+- Herramienta para generar los dashboards de analisis
 
 ## Infraestructure (devops)
+- Que herramienta controla las acctionces automatizadas desde el repositorio de codigo para CI CD,
+azure devops, github actions,
+- Con que herramienta hago el deployment a dev, stage y prod
+- Ej. dev kubernetes, stage y prod: cloudformation, terraform
 
 ## Availability
+- Cuánto puede estar mi sistema offline en horas anuales? 
+- 99.99 uptime
+- Cuando ya tenga todo el technology stack, le pregunto a la AI cuales son single point of failure
+- Por cada elemento que se listo, debo averiguar que recovery o uptime ofrecen
+- Cualquier cosa que no logre dar la cantidad de 9s por defecto, hay que espeficicar coo se va a lograr el recovery
+
 
 ## Scalability 
+- Qué elementos de la arquitectura crecen cuando crece los cantidad de request por minuto
+
 
 ## Backend key workflows 
 - esto lo pueden ir trabajando 
