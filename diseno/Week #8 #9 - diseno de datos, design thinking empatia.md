@@ -10,18 +10,52 @@ El proceso de diseño de las bases de datos de un sistema, ya sea relacional, no
 
 Pantallas:
 
-0. Profesor: 
+0. Profesor: Productos y ordenes
 
 ```
+El profe
+
 ## Products
-- productId  PK
-- productName varchar(120)
-- categoryId FK
-- description nvarchar(300)
-- measurementUnitId FK
-- createdAt timestamp 
-- enabled boolean 
-- checksum varbinary(150)
+* productId PK
+* productName varchar(120)
+* categoryId FK
+* description nvarchar(300)
+* measurementUnitId FK
+* createdAt timestamp
+* enabled boolean
+* checksum varbinary(150)
+
+## Consumers
+* consumerId PK
+* firstName varchar(100)
+* lastName varchar(100)
+* email varchar(150)
+* phone varchar(50)
+* createdAt timestamp
+* enabled boolean
+* checksum varbinary(150)
+
+## Orders
+* orderId PK
+* consumerId FK
+* orderDate timestamp
+* status varchar(50)
+* totalAmount decimal(12,2)
+* createdAt timestamp
+* enabled boolean
+* checksum varbinary(150)
+
+## OrderDetails
+* orderDetailId PK
+* orderId FK
+* productId FK
+* quantity int
+* unitPrice decimal(12,2)
+* subtotal decimal(12,2)
+* createdAt timestamp
+* enabled boolean
+* checksum varbinary(150)
+
 ```
 
 ## CalendarAppointment
@@ -40,7 +74,59 @@ Pantallas:
 
 2. Solicite a una AI que genere el código del modelo para database markup language dml
 ```dml
+Table Categories {
+  categoryId int [pk]
+  categoryName varchar(120)
+  description nvarchar(300)
+  createdAt timestamp
+  enabled boolean
+  checksum varbinary(150)
+}
 
+Table Products {
+  productId int [pk]
+  productName varchar(120)
+  categoryId int [ref: > Categories.categoryId]
+  description nvarchar(300)
+  measurementUnitId int [ref: > MeasurementUnits.measurementUnitId]
+  createdAt timestamp
+  enabled boolean
+  checksum varbinary(150)
+}
+
+Table Consumers {
+  consumerId int [pk]
+  firstName varchar(100)
+  lastName varchar(100)
+  email varchar(150)
+  phone varchar(50)
+  createdAt timestamp
+  enabled boolean
+  checksum varbinary(150)
+}
+
+Table Orders {
+  orderId int [pk]
+  consumerId int [ref: > Consumers.consumerId]
+  orderDate timestamp
+  status varchar(50)
+  totalAmount decimal(12,2)
+  createdAt timestamp
+  enabled boolean
+  checksum varbinary(150)
+}
+
+Table OrderDetails {
+  orderDetailId int [pk]
+  orderId int [ref: > Orders.orderId]
+  productId int [ref: > Products.productId]
+  quantity int
+  unitPrice decimal(12,2)
+  subtotal decimal(12,2)
+  createdAt timestamp
+  enabled boolean
+  checksum varbinary(150)
+}
 ```
 
 3. Ahora utilice este agente para revisar el diseño. 
