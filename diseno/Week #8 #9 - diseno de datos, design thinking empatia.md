@@ -21,10 +21,13 @@ Pantallas:
 - enabled boolean 
 - checksum varbinary(150)
 
-1. ![Cita de Calendario](./images/model_calendarappointment.png)
-2. ![Actividad de classrom](./images/model_classroom.png)
-3. ![Instagram post](./images/model_igpost.png)
-4. ![Youtube video summary](./images/model_videosummary.png)
+<img src="./images/model_calendarappointment.png" alt="Cita de Calendario" style="width: 30%; height: auto;" />
+
+<img src="./images/model_classroom.png" alt="Actividad de classrom" style="width: 30%; height: auto;" />
+
+<img src="./images/model_igpost.png" alt="Instagram post" style="width: 30%; height: auto;" />
+
+<img src="./images/model_videosummary.png" alt="Youtube video summary" style="width: 30%; height: auto;" />
 
 
 2. Solicite a una AI que genere el código del modelo para database markup language dml
