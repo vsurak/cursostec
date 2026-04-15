@@ -11,6 +11,8 @@ El proceso de diseño de las bases de datos de un sistema, ya sea relacional, no
 Pantallas:
 
 0. Profesor: 
+
+``
 ## Products
 - productId  PK
 - productName varchar(120)
@@ -20,22 +22,30 @@ Pantallas:
 - createdAt timestamp 
 - enabled boolean 
 - checksum varbinary(150)
+```
+
+## CalendarAppointment
 
 <img src="./images/model_calendarappointment.png" alt="Cita de Calendario" style="width: 30%; height: auto;" />
 
+## Classrooma activity
 <img src="./images/model_classroom.png" alt="Actividad de classrom" style="width: 30%; height: auto;" />
 
+## Instagram post
 <img src="./images/model_igpost.png" alt="Instagram post" style="width: 30%; height: auto;" />
 
+## Youtube summary
 <img src="./images/model_videosummary.png" alt="Youtube video summary" style="width: 30%; height: auto;" />
 
 
 2. Solicite a una AI que genere el código del modelo para database markup language dml
 ```dml
+
 ```
 
 3. Ahora utilice este agente para revisar el diseño. 
 
+```
 ## **AI Agent Instructions: Data Model Review (Markdown DML)**
 
 ### **Objective**
@@ -157,7 +167,7 @@ For each observation:
 * **Table Name**
 * **Observation**
 * **Suggestion**
-
+```
 --- 
 
 
