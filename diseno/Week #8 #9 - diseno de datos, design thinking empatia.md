@@ -1,4 +1,4 @@
-# Week #8, no hubo clases, se dió una clase async en la que se trabajó la defiinción inicial de la idea de negocio
+**Week #8**, no hubo clases, se dió una clase async en la que se trabajó la defiinción inicial de la idea de negocio
 
 # Week #9 - Data model design
 
