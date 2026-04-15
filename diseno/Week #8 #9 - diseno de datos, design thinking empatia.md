@@ -12,7 +12,7 @@ Pantallas:
 
 0. Profesor: 
 
-``
+```
 ## Products
 - productId  PK
 - productName varchar(120)
