@@ -158,6 +158,9 @@ For each observation:
 * **Observation**
 * **Suggestion**
 
+--- 
+
+
 
 4. Analice las recomendaciones y decida cuáles aplicar y cómo. 
 
