@@ -268,3 +268,36 @@ For each observation:
 
 8. Pegue el screenshot y el diagrama hecho con los integrantes en el canal general. 
 
+
+
+# Goal Map Diagram:
+
+## Caso ejemplo, pasantias para estudiantes universitarios
+
+- **Empresas / Universidades**  
+  - Definen la necesidad de una pasantía (área, perfil, duración, objetivos).  
+  - Elaboran la descripción del puesto: requisitos, responsabilidades, beneficios.  
+  - Validan internamente la oferta (aprobación de recursos, coordinación con facultades).  
+  - Publican la pasantía en portales oficiales, bolsas de empleo universitarias o plataformas de reclutamiento.  
+
+- **Universidades**  
+  - Difunden las oportunidades a sus estudiantes mediante portales internos, correos o ferias de empleo.  
+  - Orientan a los estudiantes sobre cómo aplicar (documentos requeridos, plazos, formatos).  
+  - En algunos casos, coordinan convenios con empresas para asegurar cupos de pasantías.  
+
+- **Estudiantes**  
+  - Revisan las ofertas disponibles y seleccionan las que se ajustan a su perfil.  
+  - Preparan y envían su aplicación (CV, carta de motivación, expediente académico).  
+  - Participan en procesos adicionales solicitados (tests, formularios, entrevistas iniciales).  
+
+- **Empresas**  
+  - Reciben y filtran las aplicaciones según criterios establecidos.  
+  - Contactan a los candidatos preseleccionados para entrevistas.  
+  - Realizan entrevistas técnicas y/o de recursos humanos.  
+  - Evalúan desempeño y compatibilidad cultural.  
+  - Seleccionan al candidato final y formalizan la contratación mediante convenio de pasantía.  
+
+- **Resultado final**  
+  - El estudiante inicia la pasantía con un contrato o acuerdo firmado.  
+  - La universidad puede dar seguimiento académico y validar créditos.  
+  - La empresa integra al pasante en su equipo y asigna un tutor o supervisor.  
