@@ -51,7 +51,7 @@ Ustedes como proveedor deberán entregar un sistema integrado y contenedorizado 
 * El trabajo se puede realizar en parejas. Deben tener un repositorio github unificado donde realicen el trabajo, cualquier duda será por medio del github.
 * El profesor verificará en la revisión el aporte de ambos integrantes en el github.
 * La pareja de trabajo tendrá derecho a dos revisiones completas de los modelos de la siguiente forma:  a) una en formato markdown, listo para ser enviado a las AI.  b) una en formato pdf ya como diseño visual ERD. 
-* Fecha límite para canjear esas revisiones **jueves 9 de abril.**
+* Fecha límite para canjear esas revisiones **jueves 23 de abril.**
 
 
 # Temas recomendados para investigar
