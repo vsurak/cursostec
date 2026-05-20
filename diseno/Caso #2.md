@@ -233,6 +233,9 @@ De la misma forma, a continuación se enumeran varios aspectos de suma importanc
 
 4. MVP - 10% 
 - pending to describe
+- agentes para principicios de diseño
+- agentes para validar requerimientos versus arqui
+- agentes para desarrollo, PR, CI CD, github actions, QA automation
 
 5. Sales pitch y demo - 10% 
 - pending to describe
