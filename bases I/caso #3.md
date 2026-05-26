@@ -234,7 +234,7 @@ Crear un repositorio unificado donde lo integrantes del grupo trabaje de forma c
     - Uso de triggers
     - sp_recompile
     - coalesce
-    - funciones agregadas
+    - funciones agregadas, group by y having 
     - rank, dense_rank, rownumber y partition by
     - Union, Distinct
     - schema binding y with encryption

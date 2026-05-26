@@ -32,3 +32,10 @@ Mitigración: hacer el proceso asíncrono (object design pattern), tengo que int
 - Patrones de diseño a orientación a objetos que se requieran para interactuar. Proxy, Facade, Adapters, Async/Wait, DTOs, hay que especificar bien las clases y apuntarlas (pointer al codigo), colas. 
 
 - Link to class, si ya existen classes que van hacer la interconexion entonces poner el link al /src/x/y/z
+
+
+# 2. Diseño de patrones arquitectónicos
+
+Ejemplo Ambassador:
+--------
+
