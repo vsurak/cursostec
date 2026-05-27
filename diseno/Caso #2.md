@@ -231,14 +231,181 @@ De la misma forma, a continuación se enumeran varios aspectos de suma importanc
 
 * Siempre vincular las explicaciones a ejemplos reales de código ubicados en `/src` mediante enlaces o referencias claras.
 
-4. MVP - 10% 
-- pending to describe
-- agentes para principicios de diseño
-- agentes para validar requerimientos versus arqui
-- agentes para desarrollo, PR, CI CD, github actions, QA automation
+# 4. MVP - 10% 
+El objetivo del MVP es desarrollar un **Minimum Viable Product** funcional de la plataforma previamente diseñada, como si esta fuera a ser liberada al mercado y comercializada. El MVP debe enfocarse principalmente en las pantallas y funcionalidades que resuelven directamente el *problem statement*, implementando una solución simplificada pero funcional, mientras que los módulos satelitales o secundarios deberán reducirse al mínimo indispensable para soportar el flujo principal.
 
-5. Sales pitch y demo - 10% 
-- pending to describe
+El MVP debe cumplir con los siguientes lineamientos generales:
+
+* Seguir fielmente la arquitectura diseñada y documentada en el `README.md`.
+* Ejecutarse únicamente en ambiente local.
+* Documentar claramente en el `README.md`:
+
+  * Ejecución del Frontend (FE)
+  * Ejecución del Backend (BE)
+  * Ejecución de Base de Datos/Data Layer
+  * Variables de entorno necesarias
+  * Dependencias requeridas
+  * Procedimiento de inicialización de datos
+
+* En caso de no contar con acceso gratuito a servicios de IA reales, se podrán utilizar:
+
+  * Mock services
+  * Fake responses
+  * Simulaciones locales
+  * Stubs o adapters temporales
+
+* El `README.md`, la estructura `/src`, la arquitectura y el MVP implementado deben mantenerse alineados permanentemente. No deben existir diferencias entre documentación, diseño e implementación.
+* El MVP debe incorporar las correcciones y mejoras identificadas durante el ejercicio de UX Design.
+* Puede utilizarse data precargada (*seed data*) para facilitar pruebas funcionales y demostraciones.
+* El alcance del MVP debe ser aprobado previamente por el profesor antes de iniciar el desarrollo.
+
+---
+
+## Proceso de Construcción del MVP
+
+### 1. Definición Formal del Alcance del MVP
+
+Antes de generar código:
+
+* Identifique el flujo principal que resuelve el problema central.
+* Clasifique y documente para el MVP funcionalidades en:
+
+  * Core Features
+  * Supporting Features
+  * Out of Scope
+  * User journeys en scope
+
+### 2. Configuración de GitHub Copilot y VSCode
+
+Se recomienda utilizar:
+
+* [Visual Studio Code](https://code.visualstudio.com)
+* [GitHub Copilot](https://github.com/features/copilot)
+
+Además, se recomienda habilitar:
+
+* Copilot Chat
+* Workspace indexing
+* Context-aware suggestions
+* Multi-file context
+* Inline chat
+
+### 3. Creación de Agentes Especializados
+
+Antes de desarrollar código, deberán crearse agentes especializados siguiendo el estándar del AI Assistant seleccionado.
+
+#### 3.1 Agentes de Principios de Diseño
+
+Crear como mínimo:
+
+* 2 agentes para revisar 2 principios seleccionados de diseño, del 1–10 , https://github.com/vsurak/cursostec/blob/master/diseno/old/SemII2025/4.%20principios%20de%20dise%C3%B1o.md
+* 1 agente especializado SOLID
+
+Los agentes deberán:
+
+* Analizar clases generadas y existentes
+* Detectar violaciones de principios
+* Sugerir refactorizaciones
+
+Cuando haga uso de dichos agentes documente: 
+* Hallazgos y Correcciones sugeridas
+* Correcciones aplicadas
+
+#### 3.2 Agente de Validación Arquitectónica
+
+Crear un agente especializado en validar:
+
+* Requerimientos funcionales
+* Requerimientos no funcionales
+* Arquitectura diseñada
+* Arquitectura implementada
+
+El agente debe:
+
+* Detectar gaps entre diseño y código
+* Detectar desviaciones arquitectónicas
+* Revisar estructura de capas
+
+Cuando haga uso de dichos agentes documente: 
+* Hallazgos y Correcciones sugeridas
+* Correcciones aplicadas
+
+#### 3.3. Agentes Técnicos Especializados
+
+Crear agentes específicos para:
+
+**Frontend**
+
+* Generación de componentes
+* Responsive design
+* State management
+
+**Backend**
+
+* APIs
+* Uno especializado para cada layer clave de la arquitectura diseñada
+
+**Database**
+
+* Diseño relacional y/o no relacional
+
+**Testing**
+
+* Generación de unit tests
+* Ejecución de pruebas
+* Análisis de errores
+
+
+### 4. Skills y Context Engineering
+
+Agregar skills reutilizables al proyecto.
+
+Tomar como referencia:
+
+[skills.sh](https://skills.sh?utm_source=chatgpt.com)
+
+
+### 5. Commands Contextuales en VSCode
+
+Una vez con los agentes creados y los skills cargados, configurar comandos reutilizables para orquestar agentes automáticamente.
+
+Ejemplos:
+
+```text
+Generate Frontend Screen
+Generate Backend Endpoint
+Review SOLID Principles
+Run Unit Tests
+Validate Architecture
+Review Database design
+```
+
+Estos comandos deben:
+
+* Invocar agentes correspondientes
+* Aplicar validaciones automáticas
+* Ejecutar revisiones antes de generar código final
+* Mantener consistencia arquitectónica
+
+### 6. Flujo Recomendado de Desarrollo
+
+Haga uso de los comandos creados para ir fabricando su MVP, este tipo de estrategia le va a permitir por medio de comandos, crear el código del MVP con una arquitectura ya depurada, refinada, suguiendo los principios de su arquitectura, su tech stack y creando código revisado y validado. 
+
+# 5. Sales pitch y demo - 10% 
+El sales pitch demo, consiste en una exposición y demo del producto creado la cual deberá durar un máximo de 10 minutos por grupo:
+
+Dicho sales pitch debe incluir: 
+  * Inspiración del problema, 2 minutos: contar una historia que haga que el público haga empatía y reconozca el problema que se quiere resolver. 
+
+  * Demo, 4 minutos: El expectador puede ver el poder de esta nueva herramienta y servicio y lo que la hace "wow" con respecto, esto usando el demo del MVP en ejecución en local. 
+
+  * Conclusión, 2 minutos: deberá dejar claro los costos y beneficios de usar este nuevo producto, llamando al expectador a la acción. 
+
+  * Preguntas, 2 minutos: deje que alguién del público le haga 1 a 2 preguntas y las contesta.
+
+- No debe usar presentaciones PPT o similares, todo debe ser magistral, conversado, casual, y apoyándose del MVP en tiempo real. 
+
+- Puede que hayan invitados externos en estos sales pitch a los cuales deban convencer por puntos extras de los bueno que es su producto
 
 
 # Fechas de revisión

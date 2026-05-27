@@ -35,7 +35,28 @@ Mitigración: hacer el proceso asíncrono (object design pattern), tengo que int
 
 
 # 2. Diseño de patrones arquitectónicos
+https://learn.microsoft.com/en-us/azure/architecture/patterns/
 
 Ejemplo Ambassador:
 --------
+
+
+
+# 3. Agentic design patterns
+
+https://machinelearningmastery.com/7-must-know-agentic-ai-design-patterns/
+
+
+En los grupos de caso #2, van a seleccionar un patrón, sugerir una caso de uso del patrón dentro de su proyecto. Documentar el diseño de ambos patrones tomando en cuenta:
+
+- Nombre del workflow
+- Reto a resolver, dejando claro los problemas que la programación tradicional sin patrón podría traer
+- Solución: el patrón a utilizar
+- En la solución debe asegurarse de mostrar:
+    - diseño de clases o de componentes que implementan el patrón (diagrama)
+    - ubicación de dichas clases o componentes en el /src
+    - restricciones y guías que deben seguir los desarrolladores
+    - cómo hacer manejo de excepciones
+    - en el caso de clases deben ser claro cuales cuales implementa cuáles métodos del patrón, así también como herencias
+    - en el caso de ser componentes, debe ser claro la responsabilidad de cada componente , cuáles son sus inputs y cuáles son sus outputs. 
 

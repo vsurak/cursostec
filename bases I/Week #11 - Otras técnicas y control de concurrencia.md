@@ -197,14 +197,10 @@ ADD CONSTRAINT DF_Projects_CreatedAt
 DEFAULT (GETDATE()) FOR CreatedAt;
 
 ```
-
-
 # Evaluación de estructura y eficiencia de múltiples consultas 
 que obtienen la misma información  
 
 - se repasan los algoritmos de S1 a S9 del libro de navatte creando ejemplos en SQL
-- 
-
 
 
 # Comparación de la optimización de consultas por medio de 
