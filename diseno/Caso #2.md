@@ -403,10 +403,10 @@ Dicho sales pitch debe incluir:
 
   * Preguntas, 2 minutos: deje que alguién del público le haga 1 a 2 preguntas y las contesta.
 
-- No debe usar presentaciones PPT o similares, todo debe ser magistral, conversado, casual, y apoyándose del MVP en tiempo real. 
 
-- Puede que hayan invitados externos en estos sales pitch a los cuales deban convencer por puntos extras de los bueno que es su producto
+No debe usar presentaciones PPT o similares, todo debe ser magistral, conversado, casual, y apoyándose del MVP en tiempo real. Puede que hayan invitados externos en estos sales pitch a los cuales deban convencer por puntos extras de los bueno que es su producto
 
+---
 
 # Fechas de revisión
 - El grupo de trabajo, antes del 2 de junio, deberá bookear una fecha de revisión de 1.5 horas con el profesor, la fecha debe ser entre el 8 y el 20 de Junio. 
