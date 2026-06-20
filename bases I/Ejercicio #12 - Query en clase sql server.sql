@@ -387,4 +387,94 @@ begin tran
 
     UPDATE dbo.Materials SET BaseCostCRC=@MaterialCost WHERE MaterialId = 5
 commit
+GO
+
+
+--------------------------------------------------------------------------------------------------
+-- Repeatable read problem
+-- La solucion a este problema es el nivel de isolacion repeatable read, pero debe ser usado con mucha
+-- cautela, esto porque lo que hace es bloquear los reads, lo cual no es un comportamiento 
+-- usual, menos a nivel de sistema operativo 
+--------------------------------------------------------------------------------------------------
+-- T1
+-- set transaction isolation level repeatable read 
+begin tran
+    begin try
+        DECLARE @AvgMaterialCost DECIMAL(18,2)
+
+        SELECT @AvgMaterialCost = AvgCost FROM (
+            SELECT MaterialId,SUM(Quantity*UnitCostCRC)/SUM(Quantity) AvgCost FROM dbo.ExecutionMaterialDetails
+            WHERE MaterialId = 11
+            GROUP BY MaterialId
+        ) as Result
+           
+        PRINT @AvgMaterialCost -- en el caso #3 no hacer print ni el doble average, se está haciendo aquí solo para explicar la situación 
+
+        WAITFOR DELAY '00:00:06' -- simulando la pausa del calendarizador
+    
+        SELECT @AvgMaterialCost = AvgCost FROM (
+            SELECT MaterialId,SUM(Quantity*UnitCostCRC)/SUM(Quantity) AvgCost FROM dbo.ExecutionMaterialDetails
+            WHERE MaterialId = 11
+            GROUP BY MaterialId
+        ) as Result
+
+        PRINT @AvgMaterialCost
+
+        commit
+    end try
+    begin catch
+        rollback
+    end catch
+
+-- T2
+begin tran
+
+    UPDATE dbo.ExecutionMaterialDetails SET UnitCostCRC = 1000 WHERE ExecutionMaterialDetailId = 85
+
+commit
+GO
+-- una mala programación de SQL, podría llevarme a meter todos los pasos tanto selects, updates, delete, etc dentro del transact 
+
+--------------------------------------------------------------------------------------------------
+-- Phantom 
+-- Cuando aparecen registros que no estaban antes
+--------------------------------------------------------------------------------------------------
+-- T1
+set transaction isolation level serializable
+begin tran
+    begin try
+        DECLARE @AvgMaterialCost DECIMAL(18,2)
+
+        SELECT @AvgMaterialCost = AvgCost FROM (
+            SELECT MaterialId,SUM(Quantity*UnitCostCRC)/SUM(Quantity) AvgCost FROM dbo.ExecutionMaterialDetails
+            WHERE MaterialId = 11
+            GROUP BY MaterialId
+        ) as Result
+           
+        PRINT @AvgMaterialCost -- en el caso #3 no hacer print ni el doble average, se está haciendo aquí solo para explicar la situación 
+
+        WAITFOR DELAY '00:00:06' -- simulando la pausa del calendarizador
+    
+        SELECT @AvgMaterialCost = AvgCost FROM (
+            SELECT MaterialId,SUM(Quantity*UnitCostCRC)/SUM(Quantity) AvgCost FROM dbo.ExecutionMaterialDetails
+            WHERE MaterialId = 11
+            GROUP BY MaterialId
+        ) as Result
+
+        PRINT @AvgMaterialCost
+
+        commit
+    end try
+    begin catch
+        rollback
+    end catch
+
+-- T2
+begin tran
+
+    INSERt INTO dbo.ExecutionMaterialDetails (ExecutionLogId, MaterialId, quantity, UnitCostCRC, total)
+    VALUES (135, 11, 5, 34000, 5*34000)
+
+commit
+
 
