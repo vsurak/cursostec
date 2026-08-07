@@ -121,3 +121,231 @@ Total operations = n × n = n². Dropping constants (if any), the complexity is 
 Another example: `f(n) = 5n² + 3n + 10` → dominant term is `5n²` → drop constant 5 and lower-order terms → **O(n²)**.
 
 ---
+
+## Empirical measurement
+
+# Empirical Algorithm Measurement
+
+Empirical algorithm measurement is the process of evaluating an algorithm by **executing it on a computer and measuring its actual execution time**. Instead of analyzing the theoretical growth of the algorithm (such as Big O), this method records timestamps immediately before and after the algorithm runs and calculates the elapsed time.
+
+The measured time depends on several factors, including the input size, processor speed, available memory, operating system, compiler or interpreter optimizations, and the current workload of the computer. For this reason, empirical measurements are useful for comparing implementations on the same environment, while theoretical analysis allows comparison independently of the hardware.
+
+---
+
+## Bubble Sort
+
+Bubble Sort repeatedly compares adjacent elements and swaps them whenever they are in the wrong order. After each pass, the largest unsorted element moves to its correct position at the end of the array.
+
+
+### Measuring Execution Time
+
+```typescript
+function bubbleSort(numbers: number[]): void {
+    for (let i = 0; i < numbers.length - 1; i++) {
+        for (let j = 0; j < numbers.length - i - 1; j++) {
+            if (numbers[j] > numbers[j + 1]) {
+                const temp = numbers[j];
+                numbers[j] = numbers[j + 1];
+                numbers[j + 1] = temp;
+            }
+        }
+    }
+}
+
+const values = [8, 5, 2, 9, 1, 4, 7, 3, 6];
+
+const startTime = performance.now();
+
+bubbleSort(values);
+
+const endTime = performance.now();
+
+console.log(`Execution time: ${endTime - startTime} ms`);
+```
+
+
+```java
+public class BubbleSortExample {
+
+    public static void bubbleSort(int[] numbers) {
+        for (int i = 0; i < numbers.length - 1; i++) {
+            for (int j = 0; j < numbers.length - i - 1; j++) {
+                if (numbers[j] > numbers[j + 1]) {
+                    int temp = numbers[j];
+                    numbers[j] = numbers[j + 1];
+                    numbers[j + 1] = temp;
+                }
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int[] values = {8, 5, 2, 9, 1, 4, 7, 3, 6};
+
+        long startTime = System.nanoTime();
+
+        bubbleSort(values);
+
+        long endTime = System.nanoTime();
+
+        double elapsedMilliseconds = (endTime - startTime) / 1_000_000.0;
+
+        System.out.println("Execution time: " + elapsedMilliseconds + " ms");
+    }
+}
+```
+
+Measure the time of the following algorithm:
+
+```python
+function linearSearch(numbers: number[], target: number): number {
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === target) {
+            return i;
+        }
+    }
+
+    return -1;
+}
+
+const numbers: number[] = [];
+
+for (let i = 1; i <= 10000; i++) {
+    numbers.push(i);
+}
+
+linearSearch(numbers, 75);
+
+linearSearch(numbers, 5000);
+
+linearSearch(numbers, 10000);
+```
+
+
+
+## Analytical method 
+
+### Counting rules
+0. Determine what is the size of the problem N, the input size, what is the size the drives the algorithm --> N 
+
+1. Aritmetic operations count as 1 time, except the division and module / % which count as 2 times.  
+
+2. Calling a function or method count as 2 times the call, and 1 time per parameter passed 
+
+3. IF/SWITCH, count the condition time plus the MAX(true section, false section) 
+
+4. Bucles for, while, do while, count the times it interates in function to the size of the problem  
+
+5. Nested bucles, count the iterations size in functions of N of each bucle, then multiple them all 
+
+6. Reductions of N, when the N size is reduce by K on each iteration for example N, N/K, N/K/K, N/K/K/K then the growth rate is log_k(n)
+
+Let's procceed with some examples:
+
+```
+function add(a, b) {
+    return a + b;
+}
+
+function multiply(a, b) {
+    return a * b;
+}
+
+function calculate(x, y, z) {
+    let sum = add(x, y);
+    let result = multiply(sum, z);
+    return result;
+}
+```
+
+```
+function sumArray(numbers) {
+    let total = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        total += numbers[i];
+    }
+
+    return total;
+}
+```
+
+```
+function countEven(numbers) {
+    let count = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 === 0) {
+            count++;
+        }
+    }
+
+    return count;
+}
+```
+
+```
+function findValue(numbers, target) {
+    let i = 0;
+
+    while (i < numbers.length) {
+        if (numbers[i] === target) {
+            return i;
+        }
+        i++;
+    }
+
+    return -1;
+}
+```
+
+```
+function countEqualPairs(numbers) {
+    let matches = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = 0; j < numbers.length; j++) {
+            if (numbers[i] === numbers[j]) {
+                matches++;
+            }
+        }
+    }
+
+    return matches;
+}
+```
+
+```
+function compareWithSteps(numbers) {
+    let count = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+        for (let j = 0; j < numbers.length; j += 2) {
+            if (numbers[i] > numbers[j]) {
+                count++;
+            }
+        }
+    }
+
+    return count;
+}
+```
+
+```
+function compareThreeArrays(arrayA, arrayB) {
+    let total = 0;
+
+    for (let i = 0; i < arrayA.length; i++) {
+        for (let j = 0; j < arrayA.length; j++) {
+            for (let k = 0; k < arrayB.length; k++) {
+                if (arrayA[i] + arrayA[j] === arrayB[k]) {
+                    total++;
+                }
+            }
+        }
+    }
+
+    return total;
+}
+```
