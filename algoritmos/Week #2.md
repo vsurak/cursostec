@@ -11,24 +11,27 @@ build the summation/recurrence, and confirm it matches the stated Big O.
 
 ```java
 public static int binarySearch(int[] arr, int target) {
-    int low = 0, high = arr.length - 1;
-    int steps = 0; // count how many times the loop runs
+    int low = 0, high = arr.length - 1;   // 3   
+    int steps = 0; // count how many times the loop runs //1
 
-    while (low <= high) {
-        steps++;
-        int mid = (low + high) / 2;
+    while (low <= high) {  // 1
+        steps++;  // 2 
+        int mid = (low + high) / 2; // 4
 
-        if (arr[mid] == target) {
-            System.out.println("Found at index " + mid + " in " + steps + " steps");
-            return mid;
-        } else if (arr[mid] < target) {
-            low = mid + 1;
+        if (arr[mid] == target) {  // 2 
+            System.out.println("Found at index " + mid + " in " + steps + " steps"); // 7
+            return mid; // 3
+        } else if (arr[mid] < target) {  // 2
+            low = mid + 1; // 2
         } else {
-            high = mid - 1;
+            high = mid - 1; // 2
         }
     }
-    System.out.println("Not found, " + steps + " steps");
-    return -1;
+    System.out.println("Not found, " + steps + " steps");  // 5
+    return -1; // 3 
+    // f(n) = 3+1+3+5+ 17 log_2 n 
+    // f(n) = 17 log_2 n + 12
+    // O(log_2 n)
 }
 ```
 
@@ -61,21 +64,28 @@ represent `n`).
 
 ```java
 public static int ternarySearch(int[] arr, int low, int high, int target) {
-    if (low > high) return -1;
+    if (low > high) return -1;  // 4
 
-    int mid1 = low + (high - low) / 3;
-    int mid2 = high - (high - low) / 3;
+    int mid1 = low + (high - low) / 3; // 5
+    int mid2 = high - (high - low) / 3; // 5
 
-    if (arr[mid1] == target) return mid1;
-    if (arr[mid2] == target) return mid2;
+    if (arr[mid1] == target) return mid1; // 5 
+    if (arr[mid2] == target) return mid2; // 5
 
-    if (target < arr[mid1]) {
-        return ternarySearch(arr, low, mid1 - 1, target);
-    } else if (target > arr[mid2]) {
-        return ternarySearch(arr, mid2 + 1, high, target);
+    if (target < arr[mid1]) {  // 2
+        return ternarySearch(arr, low, mid1 - 1, target); // 10 
+    } else if (target > arr[mid2]) { // 2
+        return ternarySearch(arr, mid2 + 1, high, target); // 10 
     } else {
-        return ternarySearch(arr, mid1 + 1, mid2 - 1, target);
+        return ternarySearch(arr, mid1 + 1, mid2 - 1, target); // 11
     }
+
+    // f(n) = 4+5+5+5+5+2+11 
+    // f(n) = O(c) X falso
+    // iteracion #1 , size = n
+    // iteracion #2 , size = n/3
+    // iteracion #3 , size = n / 9
+    // por tanto es f(n) = 37 log_3 n => O(log_3 n)
 }
 ```
 
@@ -187,9 +197,17 @@ which grows proportionally to `2ⁿ` (a looser but common way to state its expon
 
 For the following exercises, design a solution algorithm aiming to obtain a solution with a complexity below **O(n³)**. After designing the algorithm in pseudocode, calculate its **polynomial** and **Big O complexity**.
 
+
 1. **Maximum Subarray Sum**
 
    Given an array of integers, determine the subarray containing at least one element that has the maximum possible sum. Provide both a **linear-time solution** and a **logarithmic-time solution**.
+
+   public sumSubArray(int values[], int sum) {
+     // encontrar si existe el sub arreglo mas grande 
+     // que sumando sus numeros se obtenga sum 
+     // | 4 | 3 | 2 | 8 | 7 | 10 | 15 | 1 | , sum = 15
+     // subarray [3-4] posicion 3 y 4
+   }
 
 2. **Range Classification**
 

@@ -1,0 +1,23 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "C/C++: cl.exe build active file",
+            "command": "${workspaceFolder}\\.vscode\\build.bat",
+            "args": [
+                "${file}",
+                "${fileDirname}\\${fileBasenameNoExtension}.exe"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": ["$msCompile"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Loads the MSVC dev environment (vcvars64.bat) then compiles the active .cpp file with cl.exe."
+        }
+    ],
+    "version": "2.0.0"
+}

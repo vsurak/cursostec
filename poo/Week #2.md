@@ -13,7 +13,7 @@ We are going to write object specifications to model real-world things. These sp
 
 For example, we could specify a simple hierarchy of objects to place geometric shapes on a plane.
 
-*Spec Definition
+*Spec Definition*
 ---------------------------- 
 
 Use the following class definition to create the PlantUML code for the diagram. 
@@ -44,52 +44,56 @@ Window
 - circulos LIST of Circulo
 - cuadrados LIST of Cuadrado
 - triangulos LIST of Triangulo
+- Methods:
+  - agregarCirculo(Point position, radio float)
+  - agregarCuadrado(Point position, lado number)
+  - agregarTriangulo(tipo text, positions ARRAY OF POINT)
 
-
+```
 @startuml
-
 class Point {
-  - X : number
-  - Y : number
+    - X : number
+    - Y : number
 }
 
 class Triangulo {
-  - Tipo : text
-  - lados : number[]
-  - angulos : float[]
-  - positions : Point[]
+    - Tipo : text
+    - lados : number[]
+    - angulos : float[]
+    - positions : Point[]
 }
 
 class Circulo {
-  - radio : float
-  - circunferencia : float
-  - diametro : float
-  - position : Point
+    - radio : float
+    - circunferencia : float
+    - diametro : float
+    - position : Point
 }
 
 class Cuadrado {
-  - lado : number
-  - position : Point
+    - lado : number
+    - position : Point
 }
 
 class Window {
-  - alto : number
-  - ancho : number
-  - circulos : List<Circulo>
-  - cuadrados : List<Cuadrado>
-  - triangulos : List<Triangulo>
+    - alto : number
+    - ancho : number
+    - circulos : List<Circulo>
+    - cuadrados : List<Cuadrado>
+    - triangulos : List<Triangulo>
+    + agregarCirculo(position : Point, radio : float)
+    + agregarCuadrado(position : Point, lado : number)
+    + agregarTriangulo(tipo : text, positions : Point[])
 }
 
-' Relationships
-Triangulo "many" --> Point
-Circulo --> Point
-Cuadrado --> Point
-Window --> Circulo
-Window --> Cuadrado
-Window --> Triangulo
-
+Window --> Circulo : contiene
+Window --> Cuadrado : contiene
+Window --> Triangulo : contiene
+Triangulo --> Point : usa
+Circulo --> Point : usa
+Cuadrado --> Point : usa
 @enduml
-
+```
 ---
 
 ## Exercises

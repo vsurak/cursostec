@@ -2,6 +2,8 @@ node_modules
 bin
 !/bases II/hadoop-image/hive/bin
 *.exe
+*.obj
+*.pdb
 *.o
 *.dll
 /.metadata/
