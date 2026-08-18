@@ -2,7 +2,7 @@
 
 Primitives 
 
-// https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
+https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html
 
 Arrays 
 
@@ -267,9 +267,3 @@ ClassName objectName = new ClassName(/* constructor arguments */);
 objectName.methodName(/* arguments */);
 ```
 
-When you read or write Java OOP code, ask four questions:
-
-1. **Which class** (blueprint) am I defining or using?
-2. **Which object** (instance) am I operating on right now?
-3. **Which attributes** hold the data that matters for this operation?
-4. **Which method** should run to express the behavior I need?
