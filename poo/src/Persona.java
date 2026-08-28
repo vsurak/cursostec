@@ -46,8 +46,11 @@ mayuscula, siguiendo camelCase
 */
 
 public class Persona {
-    byte edad;
-    String nombre;
+    private byte edad;  // cuando no se especifica la visibilidad, el default es protected
+    private String nombre;
+    //private enum status = {CAMINANDO(0), DURMIENDO, TRABAJNADO, CANTANDO };
+
+
 
     // constructor no tiene valor de retorno, y debe llamarse igual que la clase
     public Persona() { // los constructores primero reservan memoria y luego se ejecutan
@@ -94,7 +97,8 @@ public class Persona {
     }
 
     public void cantar() {
-        // impriman un verso de no más de 4 líneas, de una canción que les guste y el autor. 
+        // impriman un verso de no más de 4 líneas, de una canción que les guste y el autor.
+        //this.status = CANTANDO; esto seria visible solo internamente en el class 
         System.out.println("Ya me siento un niño de papel que vive con miedo de olvidar" + "\n" +
             "Cuando sonrojabas esas mejillas con sentimientos de cristal" + "\n" +
             "Por la noche, exploto y pienso en terminar con todo y volver a mí" + "\n" +

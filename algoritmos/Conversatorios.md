@@ -44,6 +44,29 @@ Analysis of algorithms that reached production in commercial systems and exhibit
 
 ## Market Sheet
 
+Conversation drivers: 
+
+1. Qué tan común los ingenieros de software se enfrentan a problemas de optimización de algoritmos, donde de eso pueda depender si es un buen ingeniero o no?
+
+2. Después de esto estudiado, cuáles podrían ser estrategias o estructuras de datos que normalmente llevan a un detrimento del rendimiento, y de la misma forma cuáles son técnicas o estructuras que normalmente van asociadas a la mejora?
+
+3. En procesos de ingeniería de software, donde se evidencias problemas de rendimiento que deben ser abordados y solucionados, que técnicas o procesos se dan, para primero detectar y aceptar que el problema existe, luego para ubicarlo focalizadamente, y posteriormente para solucionarlo, que no implique prueba y error?
+
+4. Qué son las variables que normalmente se están midiendo cuando se trata de rendimiento, escalabilidad vertical o horizontal?
+
+5. Qué tan usual los problemas de rendimiento parecen venir de los vendors, productos de software como plataformas, drivers, librerías cuya programación está hecha de cierta forma que el usarla ha llevado a los problemas?
+
+Shares: 
+
+1. El estudiante en su exposición denota que estudió múltiples artículos, varias fuentes y las cruzó organzidamente para sostener sus afirmaciones, siempre dejó claro de donde estaba sacando sus hipotesis, sobre cuales casos de estudio? 25 shares.
+
+2. El estudiante domina, extiende, explica y analiza de forma clara la complejidad algoritmica de los problemas que está exponiendo, del como sucedieron y el cómo los aborda. 30 shares. 
+
+3. Hubo verificación de veracidad de los casos estudiados, de tal forma que se comprobó que en varios medios oficiales, la narrativa del caso es la misma consolidando como un evento real documentado. 20 shares.
+
+4. En análisis del o los problemas abordados por el estudiante, tienen más de una dimensión, entre ellas: complejidad algoritmica, tamaño, formas de monitoreo o detección, mediciones anteriores y posteriores a la mejora. 20 shares.
+
+5. El estudiante hizo pruebas programadas o medición analítica, que simulaban parcialmente el problema en estudio para verificar los rendimientos esperados y obtenidos. Es evidente ese ejercicio en su exposición. 20 shares. 
 ---
 
 # Discussion Session #2
