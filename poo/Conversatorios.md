@@ -45,6 +45,43 @@ The power of the Java API: https://docs.oracle.com/javase/8/docs/api/. The Java 
 
 
 ## Market Sheet
+ 
+Conversation drivers: 
+
+1. Por qué si existen classes para Integer, Boolean, Float, Byte, etc existen primitivas? incluso esas clases muchas veces son creadas con primitivas, o tienen métodos que retornan primitivas. Si las primitivas tienen métodos para que existen las clases. Deberían ser una o la otra únicamente?
+
+2. Cómo java.lang da soporte a las Excepciones y Errores en todo el lenguaje?
+
+3. Si java.lang.Math me da un amplio repertorio de operaciones, para que tengo el paquete de java.math
+
+4. Que controles y como puede administrar java lo que son procesos y threads desde las classes en java.lang
+
+5. Por qué existen los Input y Output streams, qué es el concepto de stream que nos da java?
+
+6. Cuáles son los alcances de java.lang.System class
+
+7. Cuándo se construyen sistemas que van a ser usados en múltiples países, que ventajas me dota java.time
+
+8. Qué tipo de algoritmos, operaciones, técnicas, estructuras y/o soluciones puedo fácilmente crear con java.util, donde se vuelve un aliado en la programación? 
+
+9. Por qué será que Calendar y Date están en java.util y no en java.time. 
+
+10. Cómo podríamos hacer que la AI use cierta versión del JDK, y que solo genere código oficial del java api de la versión específica? Cómo podríamos hacer incluso que ciertos métodos o clases del JDK, los use de únicamente la forma en que queramos todo el tiempo?
+
+
+Shares: 
+
+1. El estudiante dió más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión. 20 shares.
+
+2. El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiantes y para soportar las afirmaciones que está aportando. 30 shares.
+
+3. El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando. 20 shares.
+
+4. Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real, ya sea dentro del contexto de sus estudios en ingeniería de sistemas, o también contextualizando situaciones de desarrollo de programas de la vida real donde lo expuesto consolida esos escenarios. 25 shares.
+
+5. Para aquello que no supo una respuesta, logro conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, tiene coherencia técnica. 15 shares.
+
+6. No solo glorificó las caracteristicas del lenguaje, los paquetes, los alcances poniendo java como un gran lenguaje y plataforma de programación, si no que más bien, logró evidenciar en teoría y en código, deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas sobre su intervensión.  25 shares. 
 
 ---
 
