@@ -1,0 +1,497 @@
+[
+  {
+    "nombre_completo": "AGUILAR SEGURA LUIS ALBERTO",
+    "nickname": "SolBrilla",
+    "shares_totales": 39,
+    "shares_totales_sin_tope": 39,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.25,
+        "shares_obtenidos": 6,
+        "justificacion": "Se centra en un único caso de estudio (Netflix/Cinematch/Netflix Prize) sin mencionar en ningún momento de qué artículos, blogs o fuentes obtuvo la información, ni cruza distintas fuentes; solo hay un caso desarrollado, sin trazabilidad de origen."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 23,
+        "justificacion": "Explica con claridad el paso de O(N×M) a O(K×N+M) mediante descomposición de matrices ('lo movieron a un K por N más M, descomponiendo matrices') y extiende el análisis mencionando evoluciones posteriores (reinforcement learning, redes neuronales profundas); falta profundizar en el porqué matemático de la descomposición o comparar alternativas, por lo que no llega al dominio completo."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "No menciona en ningún momento haber contrastado el caso Netflix/Cinematch en distintos medios oficiales; se presenta la narrativa sin ninguna referencia de verificación cruzada."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.5,
+        "shares_obtenidos": 10,
+        "justificacion": "Cubre complejidad algorítmica (Big O) y tamaño ('eso fue un problema que era creciente por la cantidad de usuarios'), pero no menciona mecanismos de monitoreo/detección del problema ni cifras de medición antes/después del cambio de algoritmo."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "No hay ninguna mención de pruebas, código o mediciones analíticas realizadas por el propio estudiante; solo describe lo que hizo Netflix internamente."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "AGUILAR SOTO MARIANNE SOFIA",
+    "nickname": "LoboCorre",
+    "shares_totales": 57,
+    "shares_totales_sin_tope": 57,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 19,
+        "justificacion": "Desarrolla dos casos distintos e independientes con nivel técnico detallado (Cloudflare 2019 y AWS/Amazon), incluyendo nombres específicos de componentes (WAF, DynamoDB, S3, Lambda) y fases de testing (Dog/Doc, PIC, Canary), lo que evidencia investigación real de varias fuentes; sin embargo no cita explícitamente los artículos/blogs usados como fuente."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 23,
+        "justificacion": "Explica con precisión cómo un error de escritura en una regex del WAF generó backtracking y llevó el Big O a 2^N ('el Big O subió a un exponencial 2 a la N'), ligándolo directamente al colapso de CPU; el caso de AWS se explica más a nivel de fallo de sistema que de complejidad algorítmica propiamente, por lo que el análisis no es igual de profundo en ambos casos."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "No se menciona ningún proceso de verificación cruzada en medios oficiales; los datos se presentan como hechos sin trazabilidad de contraste entre fuentes."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 15,
+        "justificacion": "Cubre complejidad (2^N), monitoreo/detección (explica en detalle las fases de testing de Cloudflare: usuarios internos, no pagos, tráfico alto, hasta usuarios pagos, con 5-6 rondas) y menciona el tamaño del impacto (CPU al 100%, caída de múltiples clientes); no aporta cifras explícitas de medición de rendimiento antes/después del fix."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Describe el proceso de testing que usaba Cloudflare (la empresa), no una prueba o simulación propia realizada por la estudiante para verificar el problema estudiado."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "ALFARO GARCIA ISAAC GERMAN",
+    "nickname": "TigreSalta",
+    "shares_totales": 31,
+    "shares_totales_sin_tope": 31,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 6,
+        "grado_cumplimiento": 0.25,
+        "justificacion": "Menciona varias empresas (Amazon, Facebook, Twitter, Netflix) pero él mismo admite superficialidad ('yo no he vivido tan profundo un caso en específico') y no detalla ni cita fuentes concretas de cada caso, quedando en generalidades."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.5,
+        "shares_obtenidos": 15,
+        "justificacion": "Explica el paso de comparar todos los usuarios entre sí (M×N) a comparar por producto en Amazon, mostrando entendimiento correcto pero básico; no cuantifica el Big O resultante ni profundiza en por qué la nueva estrategia reduce la complejidad."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "No se menciona ninguna verificación en medios oficiales de los casos citados."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.5,
+        "shares_obtenidos": 10,
+        "justificacion": "Cubre complejidad (M×N) y tamaño ('subestimaron la cantidad de usuarios que iban a tener', ejemplo de 100 mil usuarios y 10 millones de seguidores), pero no aborda monitoreo/detección ni mediciones concretas antes/después."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "No hay evidencia de ninguna prueba, simulación o medición realizada por el estudiante."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "ARAYA MAYORGA JOSE DAMIAN",
+    "nickname": "SolAmarillo",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para este estudiante."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      }
+    ],
+    "necesita_revision_manual": true
+  },
+  {
+    "nombre_completo": "ARROYO ORIAS PABLO JESUS",
+    "nickname": "CerroCanta",
+    "shares_totales": 62,
+    "shares_totales_sin_tope": 62,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 19,
+        "justificacion": "Desarrolla tres casos de estudio distintos (Amazon, Twitter, LinkedIn) con datos concretos (LinkedIn de ~5 a 40-60 millones de usuarios) y suma un caso personal (app del MEP), mostrando investigación amplia y organizada; no obstante no cita explícitamente los artículos/fuentes puntuales de cada caso."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 23,
+        "justificacion": "Explica bien que la matriz M×N de Amazon, aunque teóricamente no cuadrática, 'en la práctica terminaba siendo algo cuadrático, m al cuadrado' por la desproporción usuarios/productos, mostrando análisis crítico más allá de la definición teórica; falta profundizar en cómo se resolvió/optimizó ese caso puntual."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "No menciona haber contrastado los casos en distintos medios oficiales para verificar su veracidad."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 15,
+        "justificacion": "Cubre complejidad (M×N cuadrática), tamaño (crecimiento de usuarios en LinkedIn y en la app del MEP) y una forma de monitoreo/detección (pruebas de estrés tipo DDoS con bots para ver si la red aguanta tráfico); no aporta cifras concretas de medición antes/después del cambio de infraestructura."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.25,
+        "shares_obtenidos": 5,
+        "justificacion": "Menciona haber usado pruebas de estrés tipo DDoS ('una forma de testeo que yo usaba mucho... para ver si la red aguantaba cierto tráfico'), pero lo presenta como experiencia general propia y no como una simulación programada específicamente para reproducir el problema de los casos estudiados, por lo que el cumplimiento es solo parcial y superficial."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "BARRANTES VILLALOBOS GABRIEL",
+    "nickname": "AlaVuela",
+    "shares_totales": 52,
+    "shares_totales_sin_tope": 52,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 19,
+        "justificacion": "Presenta tres líneas de investigación (patrón de Facebook, outage de Cloudflare 2020, y uso de librerías en Facebook/Copilot), incluso reconociendo honestamente las limitaciones de su búsqueda ('de uso de librerías externas... realmente no encontré tanta información'), lo que evidencia rigor y transparencia sobre las fuentes, aunque sin citarlas explícitamente por nombre."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 23,
+        "justificacion": "Explica con detalle cómo una regex mal escrita generó un árbol de verificación demasiado grande con backtracking, volviendo el procesamiento 'estúpidamente exponencial' en casos extremos aunque regular para la mayoría, mostrando comprensión clara de la causa técnica; no llega a cuantificar el Big O exacto como sí hicieron otros compañeros (p. ej. 2^N)."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "No se menciona ningún proceso de verificación cruzada en medios oficiales de los casos de Facebook o Cloudflare."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.5,
+        "shares_obtenidos": 10,
+        "justificacion": "Cubre complejidad (cuadrático/exponencial) y tamaño ('a veces pareciera ser algo correcto, pero luego con el tamaño ya no se vuelve tan correcto'), pero no describe cómo se detectó/monitoreó el problema en producción ni aporta mediciones concretas antes/después de la solución."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "No hay evidencia de pruebas o simulaciones realizadas por el propio estudiante; solo menciona el uso de Jupyter por parte de Facebook y de tokens por parte de Copilot, sin ejercicio propio de medición."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "CARBALLO MARTINEZ JOSE ADRIAN",
+    "nickname": "RioFluye",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para este estudiante."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      }
+    ],
+    "necesita_revision_manual": true
+  },
+  {
+    "nombre_completo": "FAJARDO DIAZ GENESIS VALERIA",
+    "nickname": "FuegoArde",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para esta estudiante."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      }
+    ],
+    "necesita_revision_manual": true
+  },
+  {
+    "nombre_completo": "GUZMAN PORTUGUEZ BIANCA DE LOS ANGELES",
+    "nickname": "VientoVa",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para esta estudiante."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      }
+    ],
+    "necesita_revision_manual": true
+  },
+  {
+    "nombre_completo": "MEZA MARIN DYLAN JOSE",
+    "nickname": "MarNada",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para este estudiante."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Sin información disponible para evaluar."
+      }
+    ],
+    "necesita_revision_manual": true
+  },
+  {
+    "nombre_completo": "OBANDO MORALES SANTIAGO LEONEL",
+    "nickname": "LunaBrilla",
+    "shares_totales": 74,
+    "shares_totales_sin_tope": 74,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "1. Estudió múltiples artículos/fuentes y las cruzó organizadamente, dejando claro el origen de sus hipótesis y casos de estudio.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 19,
+        "justificacion": "Cita explícitamente su fuente principal ('yo todo lo que investigué fue mediante los blogs de Discord'), lo cual es una trazabilidad clara y honesta; además evalúa y descarta un segundo caso (GTA Online) por considerarlo simple. Sin embargo, se apoya en una única fuente (los blogs oficiales de la propia empresa) en vez de cruzar varios artículos o fuentes independientes, por lo que no llega al máximo."
+      },
+      {
+        "criterio": "2. Domina, extiende, explica y analiza con claridad la complejidad algorítmica de los problemas expuestos, cómo sucedieron y cómo se abordan.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 1.0,
+        "shares_obtenidos": 30,
+        "justificacion": "Presenta el análisis más completo del grupo: describe la migración MongoDB -> Cassandra -> Scylla motivada por concurrencia y volumen, cuantifica el problema con la métrica de percentil P99 (latencia de hasta 10 segundos para el 1% de usuarios), y explica cómo el middleware en Rust redujo el problema de O(N) consultas individuales a una sola consulta agregada, mostrando dominio técnico y capacidad de extender el análisis más allá de lo teórico."
+      },
+      {
+        "criterio": "3. Verificación de veracidad del caso en varios medios oficiales, consolidando que es un evento real documentado.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.25,
+        "shares_obtenidos": 5,
+        "justificacion": "Usa como fuente los blogs oficiales de Discord ('mediante los blogs de Discord'), lo que da algo de respaldo de oficialidad, pero no describe haber contrastado la narrativa en varios medios oficiales independientes para consolidarla como evento documentado, por lo que el cumplimiento es solo parcial."
+      },
+      {
+        "criterio": "4. El análisis tiene más de una dimensión: complejidad algorítmica, tamaño, monitoreo/detección, mediciones antes/después.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 1.0,
+        "shares_obtenidos": 20,
+        "justificacion": "Cubre las cuatro dimensiones: complejidad (concurrencia, O(N) a consulta unificada), tamaño (billón y luego trillón de mensajes históricos), monitoreo/detección (percentil P99 como métrica de detección) y medición antes/después (latencias de hasta 10 segundos antes de la migración, mejora tras el middleware en Rust)."
+      },
+      {
+        "criterio": "5. Hizo pruebas programadas o medición analítica propia que simulara parcialmente el problema para verificar rendimientos.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Las métricas de latencia (P99) descritas son del propio monitoreo interno de Discord, no una simulación o prueba programada realizada por el estudiante para reproducir el problema."
+      }
+    ],
+    "necesita_revision_manual": false
+  }
+]

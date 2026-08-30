@@ -1,0 +1,156 @@
+[0.00 -> 22.38] vamos a hablar un poco con los sistemas que estamos desarrollando programas que son multipaís
+[22.38 -> 42.38] tenemos el paquetito de Yavatain, me gustaría conversar un poco de eso, de Yavatain y que me ayuda a Yavatain cuando estamos hablando de temas multipaís
+[43.38 -> 65.38] Martín, como tal Yavatain te permite escoger zonas horarias y con eso obtener el tiempo en ese lugar específico, lo cual te permite mostrar el tiempo de ese país en concreto
+[65.38 -> 78.66] Bueno Brian, si quiero aportar que dentro de Yavatain hay una clase que se relaciona mucho al tema que es el zone date time
+[78.66 -> 86.66] y nos permite dejar fechas
+[86.66 -> 94.66] la clase importante es zone date time que se relaciona mucho al tema de diferentes zonas horarias
+[94.66 -> 102.66] se podría hacer un programa que analice o relacione diferentes zonas horarias
+[102.66 -> 113.66] de hecho Andrés, hay otra clase que se llama zone ID que sirve para tener una ID de una zona
+[113.66 -> 123.66] entonces tiene de donde es aproximadamente, puede ser América, Europa, Asia y el lugar específico como Nueva York, Costa Rica o Madrid
+[123.66 -> 128.66] entonces uno puede obtener el específico que tenga la configuración del sistema
+[128.66 -> 142.46] y solo como para ver la fecha del país puedo hacer más cosas que más puedo hacer yo con esto
+[142.46 -> 148.46] porque eso es todo un tema, incluso imagínese estas situaciones
+[149.46 -> 157.46] Gonzalo hizo las votaciones gringas, que digamos en la costa, están grandes estados que aquí ya terminan y aquí cierran las urnas
+[157.46 -> 162.46] en la costa aquí del lado de Miami, pero esa gente todavía levanta 3 o 4 votaciones
+[162.46 -> 170.46] esto es un babilón porque ya van dando conteos de cómo se va viendo las votaciones de esos estados y esa gente todavía va a terminar a votar
+[170.46 -> 175.46] y ahí todo un asunto, pero al final todo el mundo cierra a las 6 de la tarde
+[175.46 -> 179.46] a las 6 de la tarde, a las 6 de la tarde, a todo el mundo le cae igual
+[179.46 -> 186.46] no sé a qué más allá, a nivel de yavataen, que eso nos pueda permitir
+[186.46 -> 191.46] incluso a nivel de formato, todos usamos la fecha igual
+[191.46 -> 208.46] si te permite contabilizar la diferencia horaria para normalizar una fecha o un evento específico
+[208.46 -> 212.46] digamos un ejemplo, dos países bastante lejados entre sí
+[212.46 -> 218.46] digamos que uno quiere venir y tener un evento específico a tal día, tal hora
+[218.46 -> 222.46] y que inicie en el mismo tiempo en todos los países
+[222.46 -> 226.46] se puede normalizar ese tiempo utilizando Daytime
+[226.46 -> 234.97] ¿qué más nos puede ayudar ahí Daytime?
+[234.97 -> 255.49] les doy una que piense, tengo que darles bastante de qué hablar
+[255.49 -> 262.83] vamos a ver, conversé con Yavabuti
+[262.83 -> 269.83] Yavabuti, Yavabuti, ahí la gente ya ha metido todo lo que no les dio una categoría de un tamaño suficientemente grande
+[269.83 -> 277.83] ahí metieron todo, y ahí vemos que hay una gran cantidad de algoritmos, operaciones, técnicas, estructuras de datos
+[277.83 -> 283.83] ahí un montón, entonces, conversar de todo lo que está ahí
+[283.83 -> 288.83] ¿en qué me puede ayudar eso a la hora de programar con lo poco que han hecho?
+[288.83 -> 294.83] creo que están ya las estructuras de datos, apenas están pincelando listas en la sala
+[294.83 -> 302.83] entonces, por ahora hay un poquito, por ahora hay un poquito con lo que hayan programado ya
+[302.83 -> 306.83] con lo que han visto en estructuras de datos, lo que pudieron ver que había ahí en Yavabuti
+[306.83 -> 314.83] ¿qué me cuentan de Yavabuti? ¿cómo puede ser tan buen aliado a mí a la hora de programar el paquete de Yavabuti?
+[315.83 -> 326.83] Yavabuti básicamente se utiliza como uso diario para todos los programados
+[326.83 -> 332.83] y a la hora de hacer el código, permite poder realizar un código preciso, funcional y que sea mantenido
+[332.83 -> 342.83] Martín, Yavuti implementa de manera predeterminada algunos tipos de datos, estructuras de datos
+[342.83 -> 347.83] los cuales, de no ser así, uno tendría que implementarlos a mano
+[347.83 -> 355.83] lo cual consume mayor espacio y afecta a la legibilidad del código
+[355.83 -> 362.83] por lo cual uno puede venir y crear listas de arrays, un hashmap, un tree
+[362.83 -> 366.83] sin necesidad de venir y hacer toda la lógica que está atrás
+[366.83 -> 377.94] bueno, Andrés, uno puede usar Yavuti para muchas cosas por las estructuras de datos
+[377.94 -> 381.94] además de que tiene otra clase de métodos como, se pueden generar números aleatorios
+[381.94 -> 386.94] serían clases, es decir, una clase, una cosa que también puede ser bastante útil
+[386.94 -> 391.94] uno puede hacer, tiene varias estructuras, tiene colas, tiene para hacer mapas
+[391.94 -> 396.94] sea hashmaps, entonces árboles, listas
+[396.94 -> 402.94] y además esas listas uno las puede usar como base para crear otras estructuras de datos específicas que uno necesite
+[402.94 -> 405.94] así que puede incluso ayudarlo uno más
+[405.94 -> 409.94] porque eso es código que no estoy escribiendo y tiempo que ahorro
+[409.94 -> 412.94] evidentemente es un buen punto de Andrés
+[412.94 -> 416.94] qué pasa cuando uno está enseñando estructuras de datos
+[416.94 -> 420.94] uno ve listas porque a partir de listas construye todas las demás
+[420.94 -> 424.94] las pilas, las colas, los árboles, todo lo que busque a partir de listas
+[424.94 -> 426.94] al final la computación todo son puras listas
+[426.94 -> 431.94] como hablábamos la otra vez, ir a buscar, ordenar en esas listas, es lo típico
+[431.94 -> 435.94] entonces Yavuti me da una estructura base para después construir casi todo
+[435.94 -> 439.94] entonces cuando usamos estructuras de datos pasa eso
+[439.94 -> 444.94] algo llega a creer, no, esto y lo vamos a hacer con las listas hechas de ustedes
+[444.94 -> 448.94] para no, pero eventualmente, incluso yo cuando lo oigo
+[448.94 -> 452.94] ya vengo y digo, por ejemplo, ya cuando uno llega a lo que son listas, pilas y colas
+[452.94 -> 456.94] me gusta que usen el código de cada uno, que lo tengan que hacer
+[456.94 -> 460.94] pero ya después para arriba, todo lo que son grafos, árboles y todo eso
+[460.94 -> 462.94] yo ya use todo lo que hay
+[462.94 -> 466.94] entonces ya las listas estas están mucho más completas
+[466.94 -> 469.94] la clase vector también está muy completa
+[469.94 -> 471.94] o la linked list está muy completa
+[471.94 -> 475.94] entonces es para estar haciendo las de uno
+[475.94 -> 479.94] ¿Qué más se encuentra con este?
+[479.94 -> 484.94] básicamente las habilidades que nos permiten tener o desarrollar
+[484.94 -> 488.94] con Yavuti es de almacenar colecciones de datos
+[488.94 -> 492.94] nos permite también buscar y ordenar información
+[492.94 -> 496.94] trabajar con pares de clave y valor
+[496.94 -> 502.94] también nos permite elegir entre cuál estructura de datos
+[502.94 -> 507.94] que ya ha sido mencionado nos sirve más para el programa que estamos haciendo
+[507.94 -> 515.24] además de que nos permite procesar la información de forma más eficiente
+[515.24 -> 519.24] bueno, Andrés, a mí me gustaría también agregar que
+[519.24 -> 523.24] las listas y todas las estructuras de datos que están en Yavuti
+[523.24 -> 528.24] ya han sido probadas, entonces no va a haber ni errores idealmente
+[528.24 -> 532.24] ni muchos problemas y va a ser bastante eficiente
+[532.24 -> 535.24] comparado a un código que yo pueda hacer que sí pueda tener errores
+[535.24 -> 538.24] tenga que hacer pruebas y todo eso es tiempo que ahorro
+[538.24 -> 544.48] y también un poco más de eficiencia a veces
+[544.48 -> 550.48] un ejemplo de código, caso de uso real, idea o algo
+[550.48 -> 558.34] usando algo de lo que está en Yavuti
+[558.34 -> 561.34] alguna deducción que tenga
+[561.34 -> 564.34] o alguna forma para correlacionar incluso este tema
+[564.34 -> 568.34] de Yavuti con Yavatime
+[568.34 -> 573.34] los tiempos, las ubicaciones pueden estar en una
+[573.34 -> 578.34] los tiempos pueden estar en una re-list del Yavutile
+[578.34 -> 583.34] se pueden ordenar en el orden en el cual el evento
+[583.34 -> 586.34] que habíamos definido antes
+[586.34 -> 590.34] utilizando el team sort
+[590.34 -> 595.34] o alguno de esos métodos ya proporcionados por Yavutile
+[595.34 -> 603.13] Andrés, se podría ordenar mediante una letra
+[603.13 -> 606.13] se podría ordenar mediante una letra
+[606.13 -> 608.13] con algún hash mark por ejemplo
+[608.13 -> 611.13] tengo una parte de una zona de Estados Unidos
+[611.13 -> 613.13] la puedo decir como N de norte
+[613.13 -> 615.13] y luego la otra puede ser sur con S
+[615.13 -> 617.13] algo así por ejemplo
+[617.13 -> 620.13] o las puedo ordenar en base a cuál está más temprano
+[620.13 -> 636.54] cuál está antes con alguna estructura de árbol u otras
+[636.54 -> 639.54] que vagones
+[639.54 -> 643.88] algo que me quieren agregar
+[643.88 -> 645.88] si mal me acuerdo creo que en Yavutile
+[645.88 -> 647.88] si mal me acuerdo creo que en Yavutile
+[647.88 -> 650.88] estaba local
+[650.88 -> 653.88] permite venir y obtener
+[653.88 -> 656.88] permite obtener la ubicación
+[656.88 -> 659.88] con eso se puede cometer con el time
+[659.88 -> 662.88] con la ubicación, más locales
+[662.88 -> 665.88] no me acuerdo que más da
+[665.88 -> 667.88] que más cosas son localizadas
+[667.88 -> 671.88] en un sentido común
+[671.88 -> 673.88] que cosas son muy propias de Costa Rica
+[673.88 -> 676.88] que son diferentes en México
+[676.88 -> 679.88] aparte de la zona oraria
+[679.88 -> 682.88] provincias, lugares
+[682.88 -> 685.88] sí bueno, eso sí obviamente
+[685.88 -> 687.88] porque son las cosas divididas
+[687.88 -> 689.88] pero como pareció
+[689.88 -> 692.88] aduciado a cómo manejamos fechas y otras cositas
+[692.88 -> 698.22] propias computacionalmente hablando
+[698.22 -> 700.22] también no políticamente
+[700.22 -> 706.13] quiero decir político y no computacionalmente
+[706.13 -> 708.13] o regionalidad
+[708.13 -> 710.13] nunca me he metido a la compu
+[710.13 -> 712.13] para cambiar la regionalidad de la compu
+[712.13 -> 714.13] todos los manejos locales
+[714.13 -> 717.13] y la regionalidad es parte de ubicación
+[717.13 -> 720.13] sí pero la otra cosa es la ubicación geográfica
+[720.13 -> 723.13] ubicación, lenguaje
+[723.13 -> 726.13] lenguaje
+[726.13 -> 729.13] localidad, lenguaje
+[729.13 -> 732.13] que otra cosa es la localidad
+[732.13 -> 735.13] parte del lenguaje
+[736.13 -> 739.13] no es un dato
+[739.13 -> 742.13] no le pertenece a la región
+[742.13 -> 744.13] al país
+[744.13 -> 747.13] como el idioma venezolano que aparece
+[747.13 -> 750.13] SSR que es español de Costa Rica
+[750.13 -> 753.13] o SMX que es español de México
+[753.13 -> 756.13] eso me lo da locales, locales V&M
+[756.13 -> 758.13] si yo leo la ubicación geográfica
+[758.13 -> 760.13] él me puede decir
+[760.13 -> 762.13] o lo lee el sistema operativo
+[763.13 -> 767.38] no me ocurre nada más
+[767.38 -> 772.04] por el momento no se va a tocar
+[772.04 -> 775.04] hay muchas codas
+[775.04 -> 778.04] localizadas como por ejemplo
+
+
+--- TEXTO COMPLETO CONTINUO ---
+
+vamos a hablar un poco con los sistemas que estamos desarrollando programas que son multipaís tenemos el paquetito de Yavatain, me gustaría conversar un poco de eso, de Yavatain y que me ayuda a Yavatain cuando estamos hablando de temas multipaís Martín, como tal Yavatain te permite escoger zonas horarias y con eso obtener el tiempo en ese lugar específico, lo cual te permite mostrar el tiempo de ese país en concreto Bueno Brian, si quiero aportar que dentro de Yavatain hay una clase que se relaciona mucho al tema que es el zone date time y nos permite dejar fechas la clase importante es zone date time que se relaciona mucho al tema de diferentes zonas horarias se podría hacer un programa que analice o relacione diferentes zonas horarias de hecho Andrés, hay otra clase que se llama zone ID que sirve para tener una ID de una zona entonces tiene de donde es aproximadamente, puede ser América, Europa, Asia y el lugar específico como Nueva York, Costa Rica o Madrid entonces uno puede obtener el específico que tenga la configuración del sistema y solo como para ver la fecha del país puedo hacer más cosas que más puedo hacer yo con esto porque eso es todo un tema, incluso imagínese estas situaciones Gonzalo hizo las votaciones gringas, que digamos en la costa, están grandes estados que aquí ya terminan y aquí cierran las urnas en la costa aquí del lado de Miami, pero esa gente todavía levanta 3 o 4 votaciones esto es un babilón porque ya van dando conteos de cómo se va viendo las votaciones de esos estados y esa gente todavía va a terminar a votar y ahí todo un asunto, pero al final todo el mundo cierra a las 6 de la tarde a las 6 de la tarde, a las 6 de la tarde, a todo el mundo le cae igual no sé a qué más allá, a nivel de yavataen, que eso nos pueda permitir incluso a nivel de formato, todos usamos la fecha igual si te permite contabilizar la diferencia horaria para normalizar una fecha o un evento específico digamos un ejemplo, dos países bastante lejados entre sí digamos que uno quiere venir y tener un evento específico a tal día, tal hora y que inicie en el mismo tiempo en todos los países se puede normalizar ese tiempo utilizando Daytime ¿qué más nos puede ayudar ahí Daytime? les doy una que piense, tengo que darles bastante de qué hablar vamos a ver, conversé con Yavabuti Yavabuti, Yavabuti, ahí la gente ya ha metido todo lo que no les dio una categoría de un tamaño suficientemente grande ahí metieron todo, y ahí vemos que hay una gran cantidad de algoritmos, operaciones, técnicas, estructuras de datos ahí un montón, entonces, conversar de todo lo que está ahí ¿en qué me puede ayudar eso a la hora de programar con lo poco que han hecho? creo que están ya las estructuras de datos, apenas están pincelando listas en la sala entonces, por ahora hay un poquito, por ahora hay un poquito con lo que hayan programado ya con lo que han visto en estructuras de datos, lo que pudieron ver que había ahí en Yavabuti ¿qué me cuentan de Yavabuti? ¿cómo puede ser tan buen aliado a mí a la hora de programar el paquete de Yavabuti? Yavabuti básicamente se utiliza como uso diario para todos los programados y a la hora de hacer el código, permite poder realizar un código preciso, funcional y que sea mantenido Martín, Yavuti implementa de manera predeterminada algunos tipos de datos, estructuras de datos los cuales, de no ser así, uno tendría que implementarlos a mano lo cual consume mayor espacio y afecta a la legibilidad del código por lo cual uno puede venir y crear listas de arrays, un hashmap, un tree sin necesidad de venir y hacer toda la lógica que está atrás bueno, Andrés, uno puede usar Yavuti para muchas cosas por las estructuras de datos además de que tiene otra clase de métodos como, se pueden generar números aleatorios serían clases, es decir, una clase, una cosa que también puede ser bastante útil uno puede hacer, tiene varias estructuras, tiene colas, tiene para hacer mapas sea hashmaps, entonces árboles, listas y además esas listas uno las puede usar como base para crear otras estructuras de datos específicas que uno necesite así que puede incluso ayudarlo uno más porque eso es código que no estoy escribiendo y tiempo que ahorro evidentemente es un buen punto de Andrés qué pasa cuando uno está enseñando estructuras de datos uno ve listas porque a partir de listas construye todas las demás las pilas, las colas, los árboles, todo lo que busque a partir de listas al final la computación todo son puras listas como hablábamos la otra vez, ir a buscar, ordenar en esas listas, es lo típico entonces Yavuti me da una estructura base para después construir casi todo entonces cuando usamos estructuras de datos pasa eso algo llega a creer, no, esto y lo vamos a hacer con las listas hechas de ustedes para no, pero eventualmente, incluso yo cuando lo oigo ya vengo y digo, por ejemplo, ya cuando uno llega a lo que son listas, pilas y colas me gusta que usen el código de cada uno, que lo tengan que hacer pero ya después para arriba, todo lo que son grafos, árboles y todo eso yo ya use todo lo que hay entonces ya las listas estas están mucho más completas la clase vector también está muy completa o la linked list está muy completa entonces es para estar haciendo las de uno ¿Qué más se encuentra con este? básicamente las habilidades que nos permiten tener o desarrollar con Yavuti es de almacenar colecciones de datos nos permite también buscar y ordenar información trabajar con pares de clave y valor también nos permite elegir entre cuál estructura de datos que ya ha sido mencionado nos sirve más para el programa que estamos haciendo además de que nos permite procesar la información de forma más eficiente bueno, Andrés, a mí me gustaría también agregar que las listas y todas las estructuras de datos que están en Yavuti ya han sido probadas, entonces no va a haber ni errores idealmente ni muchos problemas y va a ser bastante eficiente comparado a un código que yo pueda hacer que sí pueda tener errores tenga que hacer pruebas y todo eso es tiempo que ahorro y también un poco más de eficiencia a veces un ejemplo de código, caso de uso real, idea o algo usando algo de lo que está en Yavuti alguna deducción que tenga o alguna forma para correlacionar incluso este tema de Yavuti con Yavatime los tiempos, las ubicaciones pueden estar en una los tiempos pueden estar en una re-list del Yavutile se pueden ordenar en el orden en el cual el evento que habíamos definido antes utilizando el team sort o alguno de esos métodos ya proporcionados por Yavutile Andrés, se podría ordenar mediante una letra se podría ordenar mediante una letra con algún hash mark por ejemplo tengo una parte de una zona de Estados Unidos la puedo decir como N de norte y luego la otra puede ser sur con S algo así por ejemplo o las puedo ordenar en base a cuál está más temprano cuál está antes con alguna estructura de árbol u otras que vagones algo que me quieren agregar si mal me acuerdo creo que en Yavutile si mal me acuerdo creo que en Yavutile estaba local permite venir y obtener permite obtener la ubicación con eso se puede cometer con el time con la ubicación, más locales no me acuerdo que más da que más cosas son localizadas en un sentido común que cosas son muy propias de Costa Rica que son diferentes en México aparte de la zona oraria provincias, lugares sí bueno, eso sí obviamente porque son las cosas divididas pero como pareció aduciado a cómo manejamos fechas y otras cositas propias computacionalmente hablando también no políticamente quiero decir político y no computacionalmente o regionalidad nunca me he metido a la compu para cambiar la regionalidad de la compu todos los manejos locales y la regionalidad es parte de ubicación sí pero la otra cosa es la ubicación geográfica ubicación, lenguaje lenguaje localidad, lenguaje que otra cosa es la localidad parte del lenguaje no es un dato no le pertenece a la región al país como el idioma venezolano que aparece SSR que es español de Costa Rica o SMX que es español de México eso me lo da locales, locales V&M si yo leo la ubicación geográfica él me puede decir o lo lee el sistema operativo no me ocurre nada más por el momento no se va a tocar hay muchas codas localizadas como por ejemplo

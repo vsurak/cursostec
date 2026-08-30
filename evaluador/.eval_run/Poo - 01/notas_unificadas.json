@@ -1,0 +1,163 @@
+[
+  {
+    "nombre_completo": "AGUILAR FONSECA HILARY",
+    "nickname": "ZeusRojo",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "BARRANTES AZOFEIFA EDIER ISAAC",
+    "nickname": "ThorAzul",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "COREA HERRERA STEVEN FERNANDO",
+    "nickname": "OdinVerde",
+    "contenido_audio": "Al cierre del tema de primitivas vs. clases wrapper, el profesor lo llama directamente (\"adelante Steven nos habla sobre primitivas\") y Steven aporta: \"básicamente las primitivas son para operaciones fundamentales... las primitivas son en Java, serían como para las operaciones fundamentales, nada más es como lo que agregaría para complementar, son para operaciones muy muy básicas por así decir\".",
+    "notas_profesor": "Las primitivas son en java son operaciones fundamentales.",
+    "contenido_unificado": "Steven Corea Herrera explicó que las primitivas en Java existen para realizar operaciones fundamentales y muy básicas, en contraste con las clases wrapper. Su aporte en el audio coincide directamente con la nota del profesor: las primitivas son operaciones fundamentales/básicas del lenguaje."
+  },
+  {
+    "nombre_completo": "CUNIO LOPEZ PIERO ANTONIO",
+    "nickname": "RaDorado",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "ESPINOZA ORTEGA MARIA JOSE",
+    "nickname": "ApoloPlata",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "FERNANDEZ CASTRO ANTHONY",
+    "nickname": "HeraNegro",
+    "contenido_audio": "Responde a la pregunta del profesor sobre por qué existen clases (Integer, Boolean, Float, etc.) además de las primitivas: \"según lo que yo puedo entender, para facilitar el uso de las mismas o para hacer algo más complejo de las mismas... es en plan de que el boolean, según que te he entendido, [es] para hacer métodos más fácilmente, pues es lo que yo entendí, sí, es para mayor facilidad de programación\".",
+    "notas_profesor": "Antony menciona es para facilitar el uso de las mismas, es para hacer métodos más fácilmente de programación.",
+    "contenido_unificado": "Anthony Fernandez Castro planteó que las clases wrapper (Integer, Boolean, Float, etc.) existen para facilitar el uso de los tipos primitivos y permitir métodos más fácilmente, es decir, para mayor facilidad de programación. El audio y la nota del profesor coinciden exactamente en esta idea."
+  },
+  {
+    "nombre_completo": "HERNANDEZ CAMACHO IGNACIO",
+    "nickname": "AteneaBlanco",
+    "contenido_audio": null,
+    "notas_profesor": "Los primitivos se pueden ver como un espacio de memoria más directo, entonces en un programa usar un primitivo y un objeto impacta el rendimiento. Las listas lo usan de cierta forma donde las listas genéricas pueden borrar los objetos que estén en el T el generic para poder quitarlo y poder aplicarlo. La virtual machine de java siempre corre un solo proceso, pero se pueden crear hilos que se pueden separar de ese mismo proceso. Trabajar con hilos permite al programa tener multitasking, o si la maquina solo tiene un núcleo puede hacer líneas de ejecución temporales, haciendo que programas pesados se hagan más liviado. Cuando por ejemplo un servidor web puede usar un pool thread de forma que pueda trabajar muchas solicitudes como una pila y así ir mejorando el rendimiento del programa como tal, se puede manipular con la clase Thread. Otro ejemplo de vida real es como cuando se descarga un archivo en segundo plano. Es importante usar esos Pool de hilos para no estar creando hilos manualmente, si son cientos de miles, abrir todos los hilos explota el programa, por eso el pool de hilos funciona correctamente.",
+    "contenido_unificado": "No se detectó intervención de Ignacio Hernández Camacho en las transcripciones de audio disponibles (el tema de hilos/procesos que registran las notas del profesor no aparece en ninguno de los dos audios). Según las notas del profesor, explicó que los primitivos son un espacio de memoria más directo (impactando el rendimiento frente a objetos), que las listas genéricas permiten remover objetos de tipo T, que la JVM corre un solo proceso pero puede crear hilos separados de ese proceso, que los hilos permiten multitasking, y que los thread pools evitan crear hilos manualmente de forma descontrolada (ejemplo: servidor web o descargas en segundo plano)."
+  },
+  {
+    "nombre_completo": "HIDALGO TORRES JOSELYN MELISSA",
+    "nickname": "HadesVioleta",
+    "contenido_audio": "Al preguntar el profesor cómo puede ayudar java.util (\"Yavabuti\") a la hora de programar, una intervención (no rotulada con nombre explícito en la transcripción, pero coincide textualmente con la nota del profesor) responde: \"Yavabuti básicamente se utiliza como uso diario para todos los programados y a la hora de hacer el código, permite poder realizar un código preciso, funcional y que sea mantenido\".",
+    "notas_profesor": "Se utiliza como uso diario para todos los programadores, permite hacer un código preciso funcional.",
+    "contenido_unificado": "Joselyn Hidalgo Torres explicó que java.util se usa a diario por todos los programadores y permite escribir código preciso, funcional y mantenible. El fragmento de audio coincide casi palabra por palabra con la nota del profesor."
+  },
+  {
+    "nombre_completo": "LEIVA VILLALOBOS BRYAN JOSUE",
+    "nickname": "DianaIndigo",
+    "contenido_audio": "Interviene dos veces en el audio de java.time / java.util: (1) \"Bueno Brian, si quiero aportar que dentro de Yavatain hay una clase que se relaciona mucho al tema que es el zone date time y nos permite dejar fechas, la clase importante es zone date time que se relaciona mucho al tema de diferentes zonas horarias, se podría hacer un programa que analice o relacione diferentes zonas horarias\". (2) \"básicamente las habilidades que nos permiten tener o desarrollar con Yavuti es de almacenar colecciones de datos, nos permite también buscar y ordenar información, trabajar con pares de clave y valor, también nos permite elegir entre cuál estructura de datos... nos sirve más para el programa que estamos haciendo, además de que nos permite procesar la información de forma más eficiente\".",
+    "notas_profesor": "La clase importante es DateTime, que se relaciona a zonas horarias. Las habilidades que nos permite java útil nos permite tener coleciones de datos, pares clave valor, hacer búsquedas, elegir cual estructura nos sirve para el programa que estamos haciendo y procesar la información más eficienciente.",
+    "contenido_unificado": "Bryan Leiva Villalobos identificó ZonedDateTime como la clase clave de java.time para trabajar con zonas horarias, y explicó que java.util permite almacenar colecciones de datos, trabajar con pares clave-valor, buscar/ordenar información, elegir la estructura de datos adecuada según el programa, y procesar información de forma más eficiente. Audio y notas del profesor coinciden estrechamente."
+  },
+  {
+    "nombre_completo": "MADRIGAL CAMPOS ANDRES",
+    "nickname": "PoseidonNaranja",
+    "contenido_audio": "Interviene varias veces: (1) sobre java.time: \"de hecho Andrés, hay otra clase que se llama zone ID que sirve para tener una ID de una zona, entonces tiene de donde es aproximadamente, puede ser América, Europa, Asia y el lugar específico como Nueva York, Costa Rica o Madrid, entonces uno puede obtener el específico que tenga la configuración del sistema\". (2) sobre java.util: \"uno puede usar Yavuti para muchas cosas por las estructuras de datos, además de que tiene otra clase de métodos como, se pueden generar números aleatorios... tiene varias estructuras, tiene colas, tiene para hacer mapas sea hashmaps, entonces árboles, listas, y además esas listas uno las puede usar como base para crear otras estructuras de datos específicas que uno necesite\". (3) \"a mí me gustaría también agregar que las listas y todas las estructuras de datos que están en Yavuti ya han sido probadas, entonces no va a haber ni errores idealmente ni muchos problemas y va a ser bastante eficiente comparado a un código que yo pueda hacer\". (4) sobre ordenamiento: \"se podría ordenar mediante una letra con algún hash mark por ejemplo, tengo una parte de una zona de Estados Unidos, la puedo decir como N de norte y luego la otra puede ser sur con S... o las puedo ordenar en base a cuál está más temprano, cuál está antes con alguna estructura de árbol u otras\".",
+    "notas_profesor": "Hay otra class que se llama ZoneId que sirve para tener un ID de una zona para saber de donde es y luego lugares específicos como ciudades como costa rica, NYC, Madrid. Se puede usar para estructuras de datos, se pueden generar números aleatorios, tiene colas, mapas, arboles, listas y además se pueden usar como base para crear otras estructuras de datos. Las listas y estructuras de datos de java.util ya han sido probadas y no hay errores y son eficientes versus programa hecho desde cero. También se pueden hacer ordenamientos por letras como por ejemplo N de norte o S de Sur, también para ordenar en que orden de tiempo están ubicadas las cosas como en un árbol. Locale da el lenguaje.",
+    "contenido_unificado": "Andrés Madrigal Campos explicó ZoneId (identifica una zona horaria y lugares específicos como Costa Rica, NYC, Madrid), detalló que java.util ofrece estructuras de datos (colas, mapas, árboles, listas), generación de números aleatorios, y que esas listas sirven de base para construir otras estructuras. Señaló que las estructuras de java.util ya están probadas, por lo que son más confiables y eficientes que implementaciones propias. También propuso ejemplos de ordenamiento (por letra, ej. N/S, o por estructura de árbol) y mencionó que Locale da el idioma/lenguaje. Audio y notas del profesor coinciden en todos estos puntos."
+  },
+  {
+    "nombre_completo": "MONTERO VALVERDE ELIAN ESTEBAN",
+    "nickname": "AresTurquesa",
+    "contenido_audio": null,
+    "notas_profesor": "Los primitivos son muy simples, no pueden contener un null, en los colecciones los null pueden verse como un valor faltante, las colecciones necesitan un objeto para almacenar ese dato. Un proceso es un programa que tiene su propio espacio en la memoria, en cambio los threads pueden crear muchísimos. En java.lang hay classes como processbuilder para iniciar procesos externos, el Process representa y controla un proceso ya iniciado y también tenemos en Runtime que nos da el proceso de ejecución. La clase thread permite modificar o cambiar el hilo que está iniciado y finalmente tenemos Runnable que representa la tarea que ejecuta el hilo. La JVM se ejecuta como un proceso que tienen múltiples Theads, con el Thread y Runnable se pueden iniciar tareas concurrente, mientras que con ProcessBuilders podemos controlar programas externos. Java no controla directamente el procesador, si no que JVM administra los hilos, el OS participa en la planificación y ejecución. Como consecuencia si se crean muchos Threads una computadora podría no correr el programa.",
+    "contenido_unificado": "No se detectó intervención de Elian Montero Valverde en las transcripciones de audio disponibles (el tema de procesos/hilos que cubren sus notas no aparece en los audios analizados). Según las notas del profesor, explicó que los primitivos no pueden contener null (por lo que las colecciones necesitan objetos), la diferencia entre proceso e hilo, las clases ProcessBuilder/Process/Runtime en java.lang para procesos externos, Thread y Runnable para tareas concurrentes, y que la JVM administra los hilos mientras el OS participa en la planificación, con riesgo de saturar la máquina si se crean demasiados hilos."
+  },
+  {
+    "nombre_completo": "MOYA AGUILAR JOSE JULIAN",
+    "nickname": "ErosCoral",
+    "contenido_audio": null,
+    "notas_profesor": "Existen ambos primitivos y clases, las primitivas son simples, se usan para ponerle un entero a una variable y ya, son casos de uso básicos, se necesitan más directos. En cambio las classes de java.lang, se crea un wrapper, es decir un envoltorio para poder usarlos en los array list por ejemplo que usan objetos y no valores. En ocasiones se necesitan tener listas con valores null, entonces se podrían usar classes, sin necesidad de solo usar un primitivo. Se pueden usar métodos para operaciones distintas con los mismos wrappers, los primitivos los puedo usar para operaciones matemáticas. Es una sintaxis que confunde, los primitivos no son objetos como tales, los otros se trabajan diferentes. Toca el tema de boxing y unboxing. En los Threads se puede trabajar con estados, se puede asignar estados dependiendo si se necesita un multitasking que por ejemplo se suspende una y se inicia otra, también se pueden aplicar prioridades, puede ser complejo trabajarlo manualmente. En algunas ocasiones analizar si está bien hacer un multitasking o no, gestionar tareas, los pools de los hilos si es conveniente o no.",
+    "contenido_unificado": "No se detectó intervención de José Julián Moya Aguilar en las transcripciones de audio disponibles. Según las notas del profesor, explicó la diferencia entre primitivos (simples, uso directo) y las clases wrapper de java.lang (envoltorio para usar objetos en colecciones como ArrayList, útiles cuando se necesitan valores null), el boxing/unboxing, y en el tema de Threads que se pueden asignar estados y prioridades para multitasking, señalando que gestionar hilos manualmente puede ser complejo y que conviene evaluar el uso de pools de hilos."
+  },
+  {
+    "nombre_completo": "OBANDO ARIAS YUNIER STEVEN",
+    "nickname": "FreyaGris",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "ROJAS BARRIOS MARTIN FRANCISCO",
+    "nickname": "LokiRosa",
+    "contenido_audio": "Interviene varias veces en el audio de java.time / java.util: (1) \"Martín, como tal Yavatain te permite escoger zonas horarias y con eso obtener el tiempo en ese lugar específico, lo cual te permite mostrar el tiempo de ese país en concreto\". (2) \"sí te permite contabilizar la diferencia horaria para normalizar una fecha o un evento específico, digamos... dos países bastante lejados entre sí... se puede normalizar ese tiempo utilizando Daytime\". (3) \"Martín, Yavuti implementa de manera predeterminada algunos tipos de datos, estructuras de datos, los cuales, de no ser así, uno tendría que implementarlos a mano, lo cual consume mayor espacio y afecta a la legibilidad del código, por lo cual uno puede venir y crear listas de arrays, un hashmap, un tree sin necesidad de venir y hacer toda la lógica que está atrás\". (4) \"los tiempos pueden estar en una re-list del Yavutile, se pueden ordenar en el orden en el cual el evento que habíamos definido antes, utilizando el team sort o alguno de esos métodos ya proporcionados por Yavutile\". (5) sobre Locale: \"si mal me acuerdo creo que en Yavutile estaba local, permite obtener la ubicación, con eso se puede [conectar] con el time, con la ubicación, más locales\".",
+    "notas_profesor": "Java.time permite seleccionar zonas horarias y mostrar el time de ese país en concreto. Java.time permite contar la diferencia entre zonas horarias para normalizar la hora, si se quiere un evento a cierta hora, se puede normalizar ese tiempo. Java.util implementa estructuras de datos que de no ser así habría que implementarlos a mano, como por ejemplo listas, hashmap, tree, sin necesidad de hacer toda la lógica. Los tiempos pueden estar en un array de java.util, ordenar por eventos por fecha, usando algunos de los sort que ya están proporcionados por java.util. En java.util está Locale que permite obtener la ubicación.",
+    "contenido_unificado": "Martín Rojas Barrios explicó que java.time permite seleccionar zonas horarias y mostrar la hora de un país específico, así como normalizar la diferencia horaria entre países para sincronizar un evento. También indicó que java.util implementa estructuras de datos predeterminadas (listas, hashmap, tree) evitando implementarlas a mano, que los eventos/tiempos pueden ordenarse en listas de java.util usando métodos de sort provistos (ej. TimSort), y que Locale en java.util permite obtener la ubicación. Audio y notas del profesor coinciden en todos los puntos."
+  },
+  {
+    "nombre_completo": "SANCHEZ POVEDA DANIEL",
+    "nickname": "IsisBeige",
+    "contenido_audio": "Es el primero en responder sobre Math vs java.math: \"primero de nada, en el caso de Java.Math, lo que incluye más operaciones aritméticas dirigidas más a lo que son un poco los aspectos primitivos... permite manejar los dobles, los flotantes... Por otro lado, tenemos el java.math, que... fue desarrollado principalmente para el uso de casos financieros más precisos que requerían de una exactitud y una precisión mayor... fue diseñado por la limitación de binarias del punto flotante... dentro de este, el java.math tiene dos características principales: es el BigInteger y el BigDecimal. El BigInteger... son enteros de tamaño más arbitrarios y limitados un poco por lo que es la memoria RAM... el BigDecimal es una lógica mucho más precisa, más exacta, que permite controlar justamente el punto flotante... en el tema del redondeo y en cálculos financieros y monetarios\". Más adelante, sobre clases genéricas: \"estas se usan y se implementan en el código... principalmente para lo que era la reutilización de código, porque cuando... bajamos... a nivel de ensamblado... si no se reutiliza, se va a hacer mucho código redundante... un gasto innecesario en la memoria, que puede provocar errores... entonces lo que se va a ser [importante] en estas clases genéricas es la reutilización de código\".",
+    "notas_profesor": "Math es para operadores aritméticos, en cambio el otro es para precisión financiera, también trae un tema de precisión de punto flotante. El java.math BigInteger y BigDecimal son tamaños más arbitrarios, limitados por memoria ram, BigDecimal es más exacto para puntos flotantes y redondeos. Las classes genéricas se implementan para reutilizar código, cuando bajamos a nivel de ensamblador, si no se usa el reuse, que va ser un gasto inncesario de memoria. Las clases genéricas reusan código para reducir instanciación.",
+    "contenido_unificado": "Daniel Sánchez Poveda explicó con claridad la diferencia entre java.lang.Math (operaciones aritméticas básicas orientadas a primitivos como doubles y floats) y java.math (orientado a precisión financiera y limitaciones del punto flotante binario), detallando BigInteger (enteros de tamaño arbitrario limitados por RAM) y BigDecimal (mayor precisión para redondeo y cálculos financieros). Además explicó que las clases genéricas existen para reutilizar código y evitar gasto innecesario de memoria/errores al no duplicar lógica a nivel de ensamblador. Audio y notas del profesor coinciden estrechamente en ambos temas."
+  },
+  {
+    "nombre_completo": "SEAS ALVAREZ JORDAN LEONARDO",
+    "nickname": "OsirisCian",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "SEGURA QUESADA KEYZEL ESTRELLA",
+    "nickname": "AnubisAmbar",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "TARASOVA ARINA",
+    "nickname": "BacoMarfil",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "TORRES ORELLANA ALEXIS",
+    "nickname": "JanoCobre",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "VARGAS VARGAS GABRIEL",
+    "nickname": "VulcanoBronce",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "VEGA HIDALGO EIMY GUADALUPE",
+    "nickname": "VenusEscarlata",
+    "contenido_audio": null,
+    "notas_profesor": null,
+    "contenido_unificado": ""
+  },
+  {
+    "nombre_completo": "ZUNIGA PICADO DAVID",
+    "nickname": "NeptunoJade",
+    "contenido_audio": "El profesor lo llama (transcrito como \"David Suñé\", probable variante fonética de \"Zúñiga\") para profundizar en primitivos vs. wrapper classes: \"por ejemplo el int, char y boolean, long y double va más dirigido... para mejor uso de la memoria, ya que se almacenan directamente sus valores... y de ahí están los otros que son ya wrapper classes... que se usa[n] por dos razones: las que usted ya mencionó, que es más que todo para [programación] orientada a objetos y las estructuras de datos genéricas... la parte [de] cómo usa[n] ya va a las... sus colecciones, por ejemplo List<Integer>\".",
+    "notas_profesor": "Las clases int, bool, char, float se optimizan para uso de memoria, en cambio los wraper classes para programación orientada a objetos y estructuras de datos genéricas. Eso son la forma en que java usa sus collections.",
+    "contenido_unificado": "David Zúñiga Picado explicó que los tipos primitivos (int, char, boolean, long, double) están orientados a optimizar el uso de memoria al almacenar valores directamente, mientras que las clases wrapper existen por dos razones: la programación orientada a objetos y las estructuras de datos genéricas, siendo esta la forma en que Java implementa sus collections (ej. List<Integer>). Audio y notas del profesor coinciden exactamente."
+  },
+  {
+    "nombre_completo": "ZUNIGA ARROYO PATRICK SEBASTIAN",
+    "nickname": "MartePerla",
+    "contenido_audio": null,
+    "notas_profesor": "Existen las primitivas y las classes porque cumplen funciones distintas, en entorno de la programación permiten optimizar recursos. Permite tener eficiencia y productividad, es necesario que hayan diferentes interfaces java nos ayuda a que no inventemos cosa que ya estén diseñadas. Hay operaciones básicas que las primitivas funcionan de manera suficiente, y hay otras que son necesarias que usan métodos que no puede ser por primitivas.",
+    "contenido_unificado": "No se detectó intervención de Patrick Zúñiga Arroyo en las transcripciones de audio disponibles. Según las notas del profesor, explicó que primitivas y clases cumplen funciones distintas para optimizar recursos, que las interfaces de Java evitan reinventar soluciones ya diseñadas, y que hay operaciones básicas suficientes con primitivas mientras otras requieren métodos que solo ofrecen las clases."
+  }
+]

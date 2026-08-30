@@ -1,0 +1,1688 @@
+[
+  {
+    "archivo": "Conversatorio #1 - poo - gr 1.m4a.mp4",
+    "texto": "Ok, bueno, lo que vamos a conversar es de por qué será que en Yabalán está la clase de Mat que tiene un montón de funciones citas, matemáticas, pero también está el paquete de Yabamá por qué, qué es lo que lo diferencia, qué es lo que debería ir en un lado o en otro qué será lo que está sucediendo ahí porque es que eso está así y si alguien quiere intervenir, nada más Dale, entonces escuchamos a Daniel Sánchez Bueno, primero de nada, en el caso de Yabalán.mat, lo que incluye más operaciones aritméticas dirigidas más a lo que son un poco los aspectos primitivos de Yabá Esto qué quiere decir, que lo que permite va a ser manejar los dobles, los flotantes y demás aspectos Por otro lado, tenemos el Yabá.mat, que es un poco más concreto, pero este fue desarrollado principalmente para el uso de casos financieros más precisos que requerían de una exactitud y una precisión mayor Además, algo importante es que el Yabá.mat fue diseñado por la limitación de binarias del punto flotante cuando se generaban las reimpresiones en el sistema Hay mucho que ver eso que ya hablé ante con el asunto del flotante ¿Alguno quiere agregar algo? No mensaje nada más a Yabá.mat Dale, porque esto necesita varias facetas si quiere, eso lo voy a seguir comentando un poquito Bueno, dentro de este, el Yabá.mat tiene dos características principales Es el Big Integer y el Big Deciman El Big Integer lo que permite es que son enteros de tamaño más arbitrarios y limitados un poco por lo que es la memoria RAM Justamente esto es una de las principales limitaciones Por otro lado, el Big Deciman es una dinética y una lógica mucho más precisa, más exacta que permite controlar justamente el punto flotante como mencionado en el tema del rarondeo y en cálculos financieros y monetarios nuevamente Sí, se llama Big Decimal porque usan todo el... acuérdense que la computación es binaria por tamaño tratamos de manejar la hexadecimal pero el ser humano utiliza limítrica decimal con base 10, todo lo tenemos en base 10 entonces nos sobran unos bits cuando usamos base 10 nos quedan unos bits sobrando entonces eso les da chance de poder darle más precisión a nivel de los decimales y pareciera no ser tan gran cosa no pareciera ser tan grande Jorge Vargas es un profesor que habla muchísimo de la precisión de los decimales porque en algunas cosas si cuenta probablemente para nosotros para un vuelto eso solo es menos con dos decimales que me cobran de algo en un recibo yo ni le hace mente pero por ejemplo ya cuando hay gente que mueve demasiado dinero incluso se puede ver acá seis decimales y de los otros seis decimales que digan se hace millonario perfectamente y esto me quita y lo está viendo pero jugar con más se tiene en su tema y también en temas de precisión porque por ejemplo en el equipo quirúrgico el equipo quirúrgico ya tiene un eje coordenado en números enteros porque hay una péndice, hay un cáncer para ver la imagen es una cuestión minimétrica un tamaño demasiado chiquito incluso a tamaño de nanómetros para poder quemar, para poder romper y todas esas cosas entonces ocupan más precisión entonces si sería una tontera por ejemplo de un sistema de facturación usando las tareas que hay en Java Mat porque es demasiada computación para la computación y viceversa algo que sea tan fino no lo voy a usar como operadores básicos que me da el Mat de Java Lab ok vamos a ver vamos a dar un último temita por acá para que pueda comenzar si hablemos de por qué es que existen clases en Java Lab existen clases para integer, para boolean para float, como clases incluso que están con letra mayúscula sin embargo muchas de ellas también ya vimos que son primitivas incluso esas clases basen trabajan con primitivas también entonces por qué es que tenemos ambas cosas incluso si ven las primitivas tienen métodos también no es que no sean objetos entonces ¿qué pueden conversar ustedes por ahí de eso? según lo que yo puedo entender para facilitar el uso de las mismas o para hacer algo más complejo de las mismas es en plan de que el boolean según que te he entendido para hacer métodos más fácilmente pues es lo que yo entendí si es para mayor facilidad de programación ¿qué no se puede desamplear ahí David Suñé? este bueno que por ejemplo el influx char y boolean long y double va más dirigido por ejemplo para mejor este mejor este uso de la memoria ya que se almacenan directamente sus valores de pila de peneado por ejemplo que puede ser y de ahí están los otros que son ya wrapper classes que son por ejemplo bueno se les dice ese también heap que se usa por dos razones las que usted ya mencionó que es más que todo para formación orientada a objetos y las estructuras de datos genericas y eso está el class y después va loco ¿qué es eso? ¿estructuras de datos genéricas? es este la parte como usa ya va a las sus colecciones por ejemplo Lee's integer falta hablar un poquito ahí un poquito de la idea de todas las collections alguien más quiere agregar algo es el último chance de participar de este tema ¿no? nos ocupa decir el nombre ahí sí, perdón que nos comentas Daniel para comentarlo y complementar un poco los viejos compañeros con respecto a las clases genéricas estas se usan y se implementan en el código que ya va principalmente para lo que era la utilización de código porque cuando por ejemplo ya bajamos un poco más a lo que es a nivel de máquina un poco a nivel de ensamblado de ordenar todos los programas de pasar por este proceso para la utilización de código se va a hacer mucho código redundante muchas líneas de código innecesarias que lo que van a hacer es un gasto innecesario en la memoria entonces este gasto innecesario en la memoria lo que nos puede provocar incluso a veces son errores que no se controlan de la forma adecuada y que no se tiene el manejo adecuado en la memoria entonces lo que se va a ser peligroso en estas clases genéricas es la reutilización de código mediante la diferenciación que realiza el usuario previamente en el código hay otro temita detrás de los generics de por qué tengo que usar esas clases y no los primitivos ahí tiene su tema de por qué todos usan clases sin los primitivos aunque para él aunque no hay bastante collection que agarro primitivos en genéricos hay bastantes generics que utilizan primitivos también quien me va a agregar algo por acá si quiere volver a retomar el tema anterior de Yabamat o este y Steve no, creo que él sabe de acuerdo con mis compañeros creo que llenó todo lo que él pensaba está bien jóvenes entonces estamos con ustedes bueno no sé si puedo agregar algo más dale sí básicamente las primitivas son para operaciones fundamentales es como lo único que... perdón, perdón si no conocí el nombre adelante Steven nos habla sobre primitivas las primitivas son en Yabat serían como para las operaciones fundamentales nada más es como lo que agregaría para complementar son para operaciones muy muy básicas por así decir está bien listo estamos jóvenes",
+    "texto_segmentado": [
+      {
+        "inicio": 1.17,
+        "fin": 12.09,
+        "texto": "Ok, bueno, lo que vamos a conversar es de por qué será que en Yabalán está la clase de Mat"
+      },
+      {
+        "inicio": 12.09,
+        "fin": 19.89,
+        "texto": "que tiene un montón de funciones citas, matemáticas, pero también está el paquete de Yabamá"
+      },
+      {
+        "inicio": 19.89,
+        "fin": 27.85,
+        "texto": "por qué, qué es lo que lo diferencia, qué es lo que debería ir en un lado o en otro"
+      },
+      {
+        "inicio": 27.85,
+        "fin": 35.69,
+        "texto": "qué será lo que está sucediendo ahí porque es que eso está así y si alguien quiere intervenir, nada más"
+      },
+      {
+        "inicio": 35.69,
+        "fin": 39.21,
+        "texto": "Dale, entonces escuchamos a Daniel Sánchez"
+      },
+      {
+        "inicio": 39.21,
+        "fin": 45.37,
+        "texto": "Bueno, primero de nada, en el caso de Yabalán.mat, lo que incluye más operaciones aritméticas"
+      },
+      {
+        "inicio": 45.37,
+        "fin": 49.37,
+        "texto": "dirigidas más a lo que son un poco los aspectos primitivos de Yabá"
+      },
+      {
+        "inicio": 49.37,
+        "fin": 54.89,
+        "texto": "Esto qué quiere decir, que lo que permite va a ser manejar los dobles, los flotantes y demás aspectos"
+      },
+      {
+        "inicio": 55.13,
+        "fin": 63.13,
+        "texto": "Por otro lado, tenemos el Yabá.mat, que es un poco más concreto, pero este fue desarrollado principalmente para el uso de casos financieros más precisos"
+      },
+      {
+        "inicio": 63.13,
+        "fin": 67.29,
+        "texto": "que requerían de una exactitud y una precisión mayor"
+      },
+      {
+        "inicio": 67.29,
+        "fin": 78.09,
+        "texto": "Además, algo importante es que el Yabá.mat fue diseñado por la limitación de binarias del punto flotante"
+      },
+      {
+        "inicio": 78.09,
+        "fin": 81.45,
+        "texto": "cuando se generaban las reimpresiones en el sistema"
+      },
+      {
+        "inicio": 82.17,
+        "fin": 86.65,
+        "texto": "Hay mucho que ver eso que ya hablé ante con el asunto del flotante"
+      },
+      {
+        "inicio": 96.55,
+        "fin": 101.78,
+        "texto": "¿Alguno quiere agregar algo?"
+      },
+      {
+        "inicio": 101.78,
+        "fin": 103.78,
+        "texto": "No mensaje nada más a Yabá.mat"
+      },
+      {
+        "inicio": 106.82,
+        "fin": 112.82,
+        "texto": "Dale, porque esto necesita varias facetas si quiere, eso lo voy a seguir comentando un poquito"
+      },
+      {
+        "inicio": 112.82,
+        "fin": 117.94,
+        "texto": "Bueno, dentro de este, el Yabá.mat tiene dos características principales"
+      },
+      {
+        "inicio": 118.18,
+        "fin": 122.18,
+        "texto": "Es el Big Integer y el Big Deciman"
+      },
+      {
+        "inicio": 122.18,
+        "fin": 128.18,
+        "texto": "El Big Integer lo que permite es que son enteros de tamaño más arbitrarios y limitados un poco por lo que es la memoria RAM"
+      },
+      {
+        "inicio": 128.18,
+        "fin": 132.18,
+        "texto": "Justamente esto es una de las principales limitaciones"
+      },
+      {
+        "inicio": 132.18,
+        "fin": 136.18,
+        "texto": "Por otro lado, el Big Deciman es una dinética y una lógica mucho más precisa, más exacta"
+      },
+      {
+        "inicio": 136.18,
+        "fin": 142.18,
+        "texto": "que permite controlar justamente el punto flotante como mencionado en el tema del rarondeo"
+      },
+      {
+        "inicio": 142.18,
+        "fin": 147.53,
+        "texto": "y en cálculos financieros y monetarios nuevamente"
+      },
+      {
+        "inicio": 147.77,
+        "fin": 153.77,
+        "texto": "Sí, se llama Big Decimal porque usan todo el..."
+      },
+      {
+        "inicio": 153.77,
+        "fin": 157.77,
+        "texto": "acuérdense que la computación es binaria"
+      },
+      {
+        "inicio": 157.77,
+        "fin": 161.77,
+        "texto": "por tamaño tratamos de manejar la hexadecimal"
+      },
+      {
+        "inicio": 161.77,
+        "fin": 165.77,
+        "texto": "pero el ser humano utiliza limítrica decimal"
+      },
+      {
+        "inicio": 165.77,
+        "fin": 167.77,
+        "texto": "con base 10, todo lo tenemos en base 10"
+      },
+      {
+        "inicio": 167.77,
+        "fin": 169.77,
+        "texto": "entonces nos sobran unos bits"
+      },
+      {
+        "inicio": 169.77,
+        "fin": 171.77,
+        "texto": "cuando usamos base 10 nos quedan unos bits sobrando"
+      },
+      {
+        "inicio": 171.77,
+        "fin": 175.77,
+        "texto": "entonces eso les da chance de poder darle más precisión"
+      },
+      {
+        "inicio": 176.01,
+        "fin": 178.01,
+        "texto": "a nivel de los decimales"
+      },
+      {
+        "inicio": 180.01,
+        "fin": 184.01,
+        "texto": "y pareciera no ser tan gran cosa"
+      },
+      {
+        "inicio": 184.01,
+        "fin": 186.01,
+        "texto": "no pareciera ser tan grande"
+      },
+      {
+        "inicio": 186.01,
+        "fin": 190.01,
+        "texto": "Jorge Vargas es un profesor que habla muchísimo de la precisión de los decimales"
+      },
+      {
+        "inicio": 192.01,
+        "fin": 194.01,
+        "texto": "porque en algunas cosas si cuenta"
+      },
+      {
+        "inicio": 194.01,
+        "fin": 198.01,
+        "texto": "probablemente para nosotros para un vuelto eso solo es menos"
+      },
+      {
+        "inicio": 198.01,
+        "fin": 202.01,
+        "texto": "con dos decimales que me cobran de algo en un recibo"
+      },
+      {
+        "inicio": 202.01,
+        "fin": 204.01,
+        "texto": "yo ni le hace mente"
+      },
+      {
+        "inicio": 204.25,
+        "fin": 208.25,
+        "texto": "pero por ejemplo ya cuando hay gente que mueve demasiado dinero"
+      },
+      {
+        "inicio": 212.25,
+        "fin": 216.25,
+        "texto": "incluso se puede ver acá seis decimales"
+      },
+      {
+        "inicio": 216.25,
+        "fin": 220.25,
+        "texto": "y de los otros seis decimales que digan se hace millonario"
+      },
+      {
+        "inicio": 220.25,
+        "fin": 224.25,
+        "texto": "perfectamente y esto me quita y lo está viendo"
+      },
+      {
+        "inicio": 224.25,
+        "fin": 228.25,
+        "texto": "pero jugar con más se tiene en su tema"
+      },
+      {
+        "inicio": 228.25,
+        "fin": 230.25,
+        "texto": "y también en temas de precisión"
+      },
+      {
+        "inicio": 230.49,
+        "fin": 234.49,
+        "texto": "porque por ejemplo en el equipo quirúrgico"
+      },
+      {
+        "inicio": 236.49,
+        "fin": 240.49,
+        "texto": "el equipo quirúrgico ya tiene un eje coordenado en números enteros"
+      },
+      {
+        "inicio": 240.49,
+        "fin": 244.49,
+        "texto": "porque hay una péndice, hay un cáncer"
+      },
+      {
+        "inicio": 244.49,
+        "fin": 246.49,
+        "texto": "para ver la imagen es una cuestión minimétrica"
+      },
+      {
+        "inicio": 246.49,
+        "fin": 250.49,
+        "texto": "un tamaño demasiado chiquito incluso a tamaño de nanómetros"
+      },
+      {
+        "inicio": 250.49,
+        "fin": 254.49,
+        "texto": "para poder quemar, para poder romper y todas esas cosas"
+      },
+      {
+        "inicio": 254.49,
+        "fin": 256.49,
+        "texto": "entonces ocupan más precisión"
+      },
+      {
+        "inicio": 256.73,
+        "fin": 260.73,
+        "texto": "entonces si sería una tontera por ejemplo de un sistema de facturación"
+      },
+      {
+        "inicio": 260.73,
+        "fin": 262.73,
+        "texto": "usando las tareas que hay en Java Mat"
+      },
+      {
+        "inicio": 262.73,
+        "fin": 265.73,
+        "texto": "porque es demasiada computación para la computación"
+      },
+      {
+        "inicio": 265.73,
+        "fin": 267.73,
+        "texto": "y viceversa"
+      },
+      {
+        "inicio": 267.73,
+        "fin": 269.73,
+        "texto": "algo que sea tan fino no lo voy a usar"
+      },
+      {
+        "inicio": 269.73,
+        "fin": 273.73,
+        "texto": "como operadores básicos que me da el Mat de Java Lab"
+      },
+      {
+        "inicio": 277.73,
+        "fin": 279.73,
+        "texto": "ok vamos a ver"
+      },
+      {
+        "inicio": 279.73,
+        "fin": 283.73,
+        "texto": "vamos a dar un último temita por acá para que pueda comenzar"
+      },
+      {
+        "inicio": 283.97,
+        "fin": 285.97,
+        "texto": "si"
+      },
+      {
+        "inicio": 289.97,
+        "fin": 293.97,
+        "texto": "hablemos de por qué es que existen clases"
+      },
+      {
+        "inicio": 293.97,
+        "fin": 297.97,
+        "texto": "en Java Lab existen clases para integer, para boolean"
+      },
+      {
+        "inicio": 297.97,
+        "fin": 299.97,
+        "texto": "para float, como clases"
+      },
+      {
+        "inicio": 299.97,
+        "fin": 301.97,
+        "texto": "incluso que están con letra mayúscula"
+      },
+      {
+        "inicio": 301.97,
+        "fin": 306.97,
+        "texto": "sin embargo muchas de ellas también ya vimos que son primitivas"
+      },
+      {
+        "inicio": 306.97,
+        "fin": 308.97,
+        "texto": "incluso esas clases basen"
+      },
+      {
+        "inicio": 308.97,
+        "fin": 310.97,
+        "texto": "trabajan con primitivas también"
+      },
+      {
+        "inicio": 311.21,
+        "fin": 315.21,
+        "texto": "entonces por qué es que tenemos ambas cosas"
+      },
+      {
+        "inicio": 315.21,
+        "fin": 319.21,
+        "texto": "incluso si ven las primitivas tienen métodos también"
+      },
+      {
+        "inicio": 319.21,
+        "fin": 321.21,
+        "texto": "no es que no sean objetos"
+      },
+      {
+        "inicio": 321.21,
+        "fin": 324.21,
+        "texto": "entonces ¿qué pueden conversar ustedes por ahí de eso?"
+      },
+      {
+        "inicio": 329.73,
+        "fin": 331.73,
+        "texto": "según lo que yo puedo entender"
+      },
+      {
+        "inicio": 331.73,
+        "fin": 334.73,
+        "texto": "para facilitar el uso de las mismas"
+      },
+      {
+        "inicio": 334.73,
+        "fin": 337.73,
+        "texto": "o para hacer algo más complejo de las mismas"
+      },
+      {
+        "inicio": 337.73,
+        "fin": 339.73,
+        "texto": "es en plan de que"
+      },
+      {
+        "inicio": 339.73,
+        "fin": 343.73,
+        "texto": "el boolean según que te he entendido"
+      },
+      {
+        "inicio": 343.97,
+        "fin": 345.97,
+        "texto": "para hacer métodos más fácilmente"
+      },
+      {
+        "inicio": 345.97,
+        "fin": 347.97,
+        "texto": "pues es lo que yo entendí"
+      },
+      {
+        "inicio": 347.97,
+        "fin": 354.5,
+        "texto": "si es para mayor facilidad de programación"
+      },
+      {
+        "inicio": 356.5,
+        "fin": 359.5,
+        "texto": "¿qué no se puede desamplear ahí David Suñé?"
+      },
+      {
+        "inicio": 359.5,
+        "fin": 361.5,
+        "texto": "este bueno que"
+      },
+      {
+        "inicio": 361.5,
+        "fin": 364.5,
+        "texto": "por ejemplo el influx char y boolean"
+      },
+      {
+        "inicio": 364.5,
+        "fin": 366.5,
+        "texto": "long y double"
+      },
+      {
+        "inicio": 366.5,
+        "fin": 368.5,
+        "texto": "va más dirigido por ejemplo"
+      },
+      {
+        "inicio": 368.5,
+        "fin": 371.5,
+        "texto": "para mejor este"
+      },
+      {
+        "inicio": 371.5,
+        "fin": 374.5,
+        "texto": "mejor este uso de la memoria"
+      },
+      {
+        "inicio": 374.74,
+        "fin": 377.74,
+        "texto": "ya que se almacenan directamente"
+      },
+      {
+        "inicio": 377.74,
+        "fin": 380.74,
+        "texto": "sus valores de pila de peneado"
+      },
+      {
+        "inicio": 380.74,
+        "fin": 382.74,
+        "texto": "por ejemplo que puede ser"
+      },
+      {
+        "inicio": 382.74,
+        "fin": 385.74,
+        "texto": "y de ahí están los otros que son ya"
+      },
+      {
+        "inicio": 385.74,
+        "fin": 387.74,
+        "texto": "wrapper classes"
+      },
+      {
+        "inicio": 387.74,
+        "fin": 389.74,
+        "texto": "que son por ejemplo"
+      },
+      {
+        "inicio": 389.74,
+        "fin": 391.74,
+        "texto": "bueno se les dice"
+      },
+      {
+        "inicio": 391.74,
+        "fin": 393.74,
+        "texto": "ese también heap"
+      },
+      {
+        "inicio": 393.74,
+        "fin": 395.74,
+        "texto": "que se usa por dos razones"
+      },
+      {
+        "inicio": 395.74,
+        "fin": 397.74,
+        "texto": "las que usted ya mencionó"
+      },
+      {
+        "inicio": 397.74,
+        "fin": 399.74,
+        "texto": "que es más que todo para formación orientada a objetos"
+      },
+      {
+        "inicio": 399.74,
+        "fin": 403.74,
+        "texto": "y las estructuras de datos genericas"
+      },
+      {
+        "inicio": 403.98,
+        "fin": 405.98,
+        "texto": "y eso está el class y después va loco"
+      },
+      {
+        "inicio": 405.98,
+        "fin": 413.81,
+        "texto": "¿qué es eso? ¿estructuras de datos genéricas?"
+      },
+      {
+        "inicio": 413.81,
+        "fin": 415.81,
+        "texto": "es este"
+      },
+      {
+        "inicio": 415.81,
+        "fin": 417.81,
+        "texto": "la parte"
+      },
+      {
+        "inicio": 417.81,
+        "fin": 419.81,
+        "texto": "como usa"
+      },
+      {
+        "inicio": 419.81,
+        "fin": 421.81,
+        "texto": "ya va a las"
+      },
+      {
+        "inicio": 421.81,
+        "fin": 422.81,
+        "texto": "sus colecciones"
+      },
+      {
+        "inicio": 422.81,
+        "fin": 430.57,
+        "texto": "por ejemplo Lee's integer"
+      },
+      {
+        "inicio": 430.57,
+        "fin": 432.57,
+        "texto": "falta hablar un poquito ahí"
+      },
+      {
+        "inicio": 432.57,
+        "fin": 434.57,
+        "texto": "un poquito de la idea"
+      },
+      {
+        "inicio": 434.57,
+        "fin": 436.57,
+        "texto": "de todas las collections"
+      },
+      {
+        "inicio": 436.57,
+        "fin": 438.57,
+        "texto": "alguien más quiere agregar algo"
+      },
+      {
+        "inicio": 438.57,
+        "fin": 440.57,
+        "texto": "es el último chance de participar"
+      },
+      {
+        "inicio": 440.57,
+        "fin": 450.6,
+        "texto": "de este tema"
+      },
+      {
+        "inicio": 450.6,
+        "fin": 452.6,
+        "texto": "¿no?"
+      },
+      {
+        "inicio": 452.6,
+        "fin": 454.6,
+        "texto": "nos ocupa decir el nombre"
+      },
+      {
+        "inicio": 454.6,
+        "fin": 458.55,
+        "texto": "ahí sí, perdón"
+      },
+      {
+        "inicio": 458.55,
+        "fin": 460.55,
+        "texto": "que nos comentas"
+      },
+      {
+        "inicio": 460.55,
+        "fin": 462.55,
+        "texto": "Daniel"
+      },
+      {
+        "inicio": 462.55,
+        "fin": 464.55,
+        "texto": "para comentarlo y complementar un poco"
+      },
+      {
+        "inicio": 464.55,
+        "fin": 466.55,
+        "texto": "los viejos compañeros con respecto a las clases genéricas"
+      },
+      {
+        "inicio": 466.55,
+        "fin": 468.55,
+        "texto": "estas se usan y se implementan en el código"
+      },
+      {
+        "inicio": 468.55,
+        "fin": 470.55,
+        "texto": "que ya va principalmente para lo que era la utilización de código"
+      },
+      {
+        "inicio": 470.55,
+        "fin": 472.55,
+        "texto": "porque cuando por ejemplo"
+      },
+      {
+        "inicio": 472.55,
+        "fin": 474.55,
+        "texto": "ya bajamos un poco más a lo que es a nivel de máquina"
+      },
+      {
+        "inicio": 474.55,
+        "fin": 476.55,
+        "texto": "un poco a nivel de ensamblado"
+      },
+      {
+        "inicio": 476.55,
+        "fin": 478.55,
+        "texto": "de ordenar todos los programas"
+      },
+      {
+        "inicio": 478.55,
+        "fin": 480.55,
+        "texto": "de pasar por este proceso"
+      },
+      {
+        "inicio": 480.55,
+        "fin": 482.55,
+        "texto": "para la utilización de código"
+      },
+      {
+        "inicio": 482.55,
+        "fin": 484.55,
+        "texto": "se va a hacer mucho código redundante"
+      },
+      {
+        "inicio": 484.55,
+        "fin": 486.55,
+        "texto": "muchas líneas de código innecesarias"
+      },
+      {
+        "inicio": 486.55,
+        "fin": 488.55,
+        "texto": "que lo que van a hacer es un gasto innecesario"
+      },
+      {
+        "inicio": 488.55,
+        "fin": 490.55,
+        "texto": "en la memoria"
+      },
+      {
+        "inicio": 490.55,
+        "fin": 492.55,
+        "texto": "entonces este gasto innecesario en la memoria"
+      },
+      {
+        "inicio": 492.55,
+        "fin": 494.55,
+        "texto": "lo que nos puede provocar incluso a veces son errores"
+      },
+      {
+        "inicio": 494.55,
+        "fin": 496.55,
+        "texto": "que no se controlan de la forma adecuada"
+      },
+      {
+        "inicio": 496.55,
+        "fin": 498.55,
+        "texto": "y que no se tiene el manejo adecuado en la memoria"
+      },
+      {
+        "inicio": 498.55,
+        "fin": 500.55,
+        "texto": "entonces lo que se va a ser peligroso"
+      },
+      {
+        "inicio": 500.55,
+        "fin": 502.55,
+        "texto": "en estas clases genéricas"
+      },
+      {
+        "inicio": 502.55,
+        "fin": 504.55,
+        "texto": "es la reutilización de código"
+      },
+      {
+        "inicio": 504.55,
+        "fin": 506.55,
+        "texto": "mediante la diferenciación que realiza el usuario"
+      },
+      {
+        "inicio": 506.55,
+        "fin": 512.04,
+        "texto": "previamente en el código"
+      },
+      {
+        "inicio": 512.04,
+        "fin": 514.04,
+        "texto": "hay otro temita detrás"
+      },
+      {
+        "inicio": 514.04,
+        "fin": 516.04,
+        "texto": "de los generics"
+      },
+      {
+        "inicio": 516.04,
+        "fin": 518.04,
+        "texto": "de por qué tengo que usar esas clases"
+      },
+      {
+        "inicio": 518.04,
+        "fin": 520.04,
+        "texto": "y no los primitivos"
+      },
+      {
+        "inicio": 520.04,
+        "fin": 522.04,
+        "texto": "ahí tiene su tema de por qué"
+      },
+      {
+        "inicio": 522.04,
+        "fin": 524.04,
+        "texto": "todos usan clases sin los primitivos"
+      },
+      {
+        "inicio": 524.04,
+        "fin": 529.3,
+        "texto": "aunque para él"
+      },
+      {
+        "inicio": 529.3,
+        "fin": 531.3,
+        "texto": "aunque no hay bastante collection"
+      },
+      {
+        "inicio": 531.3,
+        "fin": 533.3,
+        "texto": "que agarro primitivos"
+      },
+      {
+        "inicio": 533.3,
+        "fin": 535.3,
+        "texto": "en genéricos"
+      },
+      {
+        "inicio": 535.3,
+        "fin": 537.3,
+        "texto": "hay bastantes generics"
+      },
+      {
+        "inicio": 537.3,
+        "fin": 539.3,
+        "texto": "que utilizan primitivos también"
+      },
+      {
+        "inicio": 539.3,
+        "fin": 545.18,
+        "texto": "quien me va a agregar algo por acá"
+      },
+      {
+        "inicio": 545.18,
+        "fin": 547.18,
+        "texto": "si quiere volver a retomar"
+      },
+      {
+        "inicio": 547.18,
+        "fin": 549.18,
+        "texto": "el tema anterior"
+      },
+      {
+        "inicio": 549.18,
+        "fin": 551.18,
+        "texto": "de Yabamat"
+      },
+      {
+        "inicio": 551.18,
+        "fin": 561.18,
+        "texto": "o este"
+      },
+      {
+        "inicio": 561.18,
+        "fin": 566.12,
+        "texto": "y Steve"
+      },
+      {
+        "inicio": 566.12,
+        "fin": 568.12,
+        "texto": "no, creo que él sabe de acuerdo con mis compañeros"
+      },
+      {
+        "inicio": 568.12,
+        "fin": 570.12,
+        "texto": "creo que llenó todo lo que él pensaba"
+      },
+      {
+        "inicio": 570.12,
+        "fin": 573.88,
+        "texto": "está bien jóvenes"
+      },
+      {
+        "inicio": 573.88,
+        "fin": 575.88,
+        "texto": "entonces estamos con ustedes"
+      },
+      {
+        "inicio": 575.88,
+        "fin": 577.88,
+        "texto": "bueno"
+      },
+      {
+        "inicio": 577.88,
+        "fin": 579.88,
+        "texto": "no sé si puedo agregar algo más"
+      },
+      {
+        "inicio": 579.88,
+        "fin": 581.88,
+        "texto": "dale sí"
+      },
+      {
+        "inicio": 581.88,
+        "fin": 583.88,
+        "texto": "básicamente"
+      },
+      {
+        "inicio": 583.88,
+        "fin": 585.88,
+        "texto": "las primitivas son para operaciones"
+      },
+      {
+        "inicio": 585.88,
+        "fin": 589.19,
+        "texto": "fundamentales"
+      },
+      {
+        "inicio": 589.19,
+        "fin": 591.19,
+        "texto": "es como lo único que..."
+      },
+      {
+        "inicio": 591.19,
+        "fin": 593.19,
+        "texto": "perdón, perdón"
+      },
+      {
+        "inicio": 593.19,
+        "fin": 595.19,
+        "texto": "si no conocí el nombre"
+      },
+      {
+        "inicio": 595.19,
+        "fin": 597.19,
+        "texto": "adelante Steven nos habla sobre primitivas"
+      },
+      {
+        "inicio": 597.19,
+        "fin": 599.19,
+        "texto": "las primitivas son en Yabat"
+      },
+      {
+        "inicio": 599.19,
+        "fin": 601.19,
+        "texto": "serían como para las operaciones fundamentales"
+      },
+      {
+        "inicio": 601.19,
+        "fin": 603.19,
+        "texto": "nada más es como lo que agregaría"
+      },
+      {
+        "inicio": 603.19,
+        "fin": 605.19,
+        "texto": "para complementar"
+      },
+      {
+        "inicio": 605.19,
+        "fin": 607.19,
+        "texto": "son para operaciones"
+      },
+      {
+        "inicio": 607.19,
+        "fin": 609.19,
+        "texto": "muy"
+      },
+      {
+        "inicio": 609.19,
+        "fin": 611.19,
+        "texto": "muy básicas"
+      },
+      {
+        "inicio": 611.19,
+        "fin": 613.19,
+        "texto": "por así decir"
+      },
+      {
+        "inicio": 613.19,
+        "fin": 615.19,
+        "texto": "está bien listo"
+      },
+      {
+        "inicio": 615.19,
+        "fin": 617.19,
+        "texto": "estamos jóvenes"
+      }
+    ],
+    "duracion_seg": 617.83,
+    "error": null
+  },
+  {
+    "archivo": "Conversatorio #1 - poo - gr 2.m4a.mp4",
+    "texto": "vamos a hablar un poco con los sistemas que estamos desarrollando programas que son multipaís tenemos el paquetito de Yavatain, me gustaría conversar un poco de eso, de Yavatain y que me ayuda a Yavatain cuando estamos hablando de temas multipaís Martín, como tal Yavatain te permite escoger zonas horarias y con eso obtener el tiempo en ese lugar específico, lo cual te permite mostrar el tiempo de ese país en concreto Bueno Brian, si quiero aportar que dentro de Yavatain hay una clase que se relaciona mucho al tema que es el zone date time y nos permite dejar fechas la clase importante es zone date time que se relaciona mucho al tema de diferentes zonas horarias se podría hacer un programa que analice o relacione diferentes zonas horarias de hecho Andrés, hay otra clase que se llama zone ID que sirve para tener una ID de una zona entonces tiene de donde es aproximadamente, puede ser América, Europa, Asia y el lugar específico como Nueva York, Costa Rica o Madrid entonces uno puede obtener el específico que tenga la configuración del sistema y solo como para ver la fecha del país puedo hacer más cosas que más puedo hacer yo con esto porque eso es todo un tema, incluso imagínese estas situaciones Gonzalo hizo las votaciones gringas, que digamos en la costa, están grandes estados que aquí ya terminan y aquí cierran las urnas en la costa aquí del lado de Miami, pero esa gente todavía levanta 3 o 4 votaciones esto es un babilón porque ya van dando conteos de cómo se va viendo las votaciones de esos estados y esa gente todavía va a terminar a votar y ahí todo un asunto, pero al final todo el mundo cierra a las 6 de la tarde a las 6 de la tarde, a las 6 de la tarde, a todo el mundo le cae igual no sé a qué más allá, a nivel de yavataen, que eso nos pueda permitir incluso a nivel de formato, todos usamos la fecha igual si te permite contabilizar la diferencia horaria para normalizar una fecha o un evento específico digamos un ejemplo, dos países bastante lejados entre sí digamos que uno quiere venir y tener un evento específico a tal día, tal hora y que inicie en el mismo tiempo en todos los países se puede normalizar ese tiempo utilizando Daytime ¿qué más nos puede ayudar ahí Daytime? les doy una que piense, tengo que darles bastante de qué hablar vamos a ver, conversé con Yavabuti Yavabuti, Yavabuti, ahí la gente ya ha metido todo lo que no les dio una categoría de un tamaño suficientemente grande ahí metieron todo, y ahí vemos que hay una gran cantidad de algoritmos, operaciones, técnicas, estructuras de datos ahí un montón, entonces, conversar de todo lo que está ahí ¿en qué me puede ayudar eso a la hora de programar con lo poco que han hecho? creo que están ya las estructuras de datos, apenas están pincelando listas en la sala entonces, por ahora hay un poquito, por ahora hay un poquito con lo que hayan programado ya con lo que han visto en estructuras de datos, lo que pudieron ver que había ahí en Yavabuti ¿qué me cuentan de Yavabuti? ¿cómo puede ser tan buen aliado a mí a la hora de programar el paquete de Yavabuti? Yavabuti básicamente se utiliza como uso diario para todos los programados y a la hora de hacer el código, permite poder realizar un código preciso, funcional y que sea mantenido Martín, Yavuti implementa de manera predeterminada algunos tipos de datos, estructuras de datos los cuales, de no ser así, uno tendría que implementarlos a mano lo cual consume mayor espacio y afecta a la legibilidad del código por lo cual uno puede venir y crear listas de arrays, un hashmap, un tree sin necesidad de venir y hacer toda la lógica que está atrás bueno, Andrés, uno puede usar Yavuti para muchas cosas por las estructuras de datos además de que tiene otra clase de métodos como, se pueden generar números aleatorios serían clases, es decir, una clase, una cosa que también puede ser bastante útil uno puede hacer, tiene varias estructuras, tiene colas, tiene para hacer mapas sea hashmaps, entonces árboles, listas y además esas listas uno las puede usar como base para crear otras estructuras de datos específicas que uno necesite así que puede incluso ayudarlo uno más porque eso es código que no estoy escribiendo y tiempo que ahorro evidentemente es un buen punto de Andrés qué pasa cuando uno está enseñando estructuras de datos uno ve listas porque a partir de listas construye todas las demás las pilas, las colas, los árboles, todo lo que busque a partir de listas al final la computación todo son puras listas como hablábamos la otra vez, ir a buscar, ordenar en esas listas, es lo típico entonces Yavuti me da una estructura base para después construir casi todo entonces cuando usamos estructuras de datos pasa eso algo llega a creer, no, esto y lo vamos a hacer con las listas hechas de ustedes para no, pero eventualmente, incluso yo cuando lo oigo ya vengo y digo, por ejemplo, ya cuando uno llega a lo que son listas, pilas y colas me gusta que usen el código de cada uno, que lo tengan que hacer pero ya después para arriba, todo lo que son grafos, árboles y todo eso yo ya use todo lo que hay entonces ya las listas estas están mucho más completas la clase vector también está muy completa o la linked list está muy completa entonces es para estar haciendo las de uno ¿Qué más se encuentra con este? básicamente las habilidades que nos permiten tener o desarrollar con Yavuti es de almacenar colecciones de datos nos permite también buscar y ordenar información trabajar con pares de clave y valor también nos permite elegir entre cuál estructura de datos que ya ha sido mencionado nos sirve más para el programa que estamos haciendo además de que nos permite procesar la información de forma más eficiente bueno, Andrés, a mí me gustaría también agregar que las listas y todas las estructuras de datos que están en Yavuti ya han sido probadas, entonces no va a haber ni errores idealmente ni muchos problemas y va a ser bastante eficiente comparado a un código que yo pueda hacer que sí pueda tener errores tenga que hacer pruebas y todo eso es tiempo que ahorro y también un poco más de eficiencia a veces un ejemplo de código, caso de uso real, idea o algo usando algo de lo que está en Yavuti alguna deducción que tenga o alguna forma para correlacionar incluso este tema de Yavuti con Yavatime los tiempos, las ubicaciones pueden estar en una los tiempos pueden estar en una re-list del Yavutile se pueden ordenar en el orden en el cual el evento que habíamos definido antes utilizando el team sort o alguno de esos métodos ya proporcionados por Yavutile Andrés, se podría ordenar mediante una letra se podría ordenar mediante una letra con algún hash mark por ejemplo tengo una parte de una zona de Estados Unidos la puedo decir como N de norte y luego la otra puede ser sur con S algo así por ejemplo o las puedo ordenar en base a cuál está más temprano cuál está antes con alguna estructura de árbol u otras que vagones algo que me quieren agregar si mal me acuerdo creo que en Yavutile si mal me acuerdo creo que en Yavutile estaba local permite venir y obtener permite obtener la ubicación con eso se puede cometer con el time con la ubicación, más locales no me acuerdo que más da que más cosas son localizadas en un sentido común que cosas son muy propias de Costa Rica que son diferentes en México aparte de la zona oraria provincias, lugares sí bueno, eso sí obviamente porque son las cosas divididas pero como pareció aduciado a cómo manejamos fechas y otras cositas propias computacionalmente hablando también no políticamente quiero decir político y no computacionalmente o regionalidad nunca me he metido a la compu para cambiar la regionalidad de la compu todos los manejos locales y la regionalidad es parte de ubicación sí pero la otra cosa es la ubicación geográfica ubicación, lenguaje lenguaje localidad, lenguaje que otra cosa es la localidad parte del lenguaje no es un dato no le pertenece a la región al país como el idioma venezolano que aparece SSR que es español de Costa Rica o SMX que es español de México eso me lo da locales, locales V&M si yo leo la ubicación geográfica él me puede decir o lo lee el sistema operativo no me ocurre nada más por el momento no se va a tocar hay muchas codas localizadas como por ejemplo",
+    "texto_segmentado": [
+      {
+        "inicio": 0.0,
+        "fin": 22.38,
+        "texto": "vamos a hablar un poco con los sistemas que estamos desarrollando programas que son multipaís"
+      },
+      {
+        "inicio": 22.38,
+        "fin": 42.38,
+        "texto": "tenemos el paquetito de Yavatain, me gustaría conversar un poco de eso, de Yavatain y que me ayuda a Yavatain cuando estamos hablando de temas multipaís"
+      },
+      {
+        "inicio": 43.38,
+        "fin": 65.38,
+        "texto": "Martín, como tal Yavatain te permite escoger zonas horarias y con eso obtener el tiempo en ese lugar específico, lo cual te permite mostrar el tiempo de ese país en concreto"
+      },
+      {
+        "inicio": 65.38,
+        "fin": 78.66,
+        "texto": "Bueno Brian, si quiero aportar que dentro de Yavatain hay una clase que se relaciona mucho al tema que es el zone date time"
+      },
+      {
+        "inicio": 78.66,
+        "fin": 86.66,
+        "texto": "y nos permite dejar fechas"
+      },
+      {
+        "inicio": 86.66,
+        "fin": 94.66,
+        "texto": "la clase importante es zone date time que se relaciona mucho al tema de diferentes zonas horarias"
+      },
+      {
+        "inicio": 94.66,
+        "fin": 102.66,
+        "texto": "se podría hacer un programa que analice o relacione diferentes zonas horarias"
+      },
+      {
+        "inicio": 102.66,
+        "fin": 113.66,
+        "texto": "de hecho Andrés, hay otra clase que se llama zone ID que sirve para tener una ID de una zona"
+      },
+      {
+        "inicio": 113.66,
+        "fin": 123.66,
+        "texto": "entonces tiene de donde es aproximadamente, puede ser América, Europa, Asia y el lugar específico como Nueva York, Costa Rica o Madrid"
+      },
+      {
+        "inicio": 123.66,
+        "fin": 128.66,
+        "texto": "entonces uno puede obtener el específico que tenga la configuración del sistema"
+      },
+      {
+        "inicio": 128.66,
+        "fin": 142.46,
+        "texto": "y solo como para ver la fecha del país puedo hacer más cosas que más puedo hacer yo con esto"
+      },
+      {
+        "inicio": 142.46,
+        "fin": 148.46,
+        "texto": "porque eso es todo un tema, incluso imagínese estas situaciones"
+      },
+      {
+        "inicio": 149.46,
+        "fin": 157.46,
+        "texto": "Gonzalo hizo las votaciones gringas, que digamos en la costa, están grandes estados que aquí ya terminan y aquí cierran las urnas"
+      },
+      {
+        "inicio": 157.46,
+        "fin": 162.46,
+        "texto": "en la costa aquí del lado de Miami, pero esa gente todavía levanta 3 o 4 votaciones"
+      },
+      {
+        "inicio": 162.46,
+        "fin": 170.46,
+        "texto": "esto es un babilón porque ya van dando conteos de cómo se va viendo las votaciones de esos estados y esa gente todavía va a terminar a votar"
+      },
+      {
+        "inicio": 170.46,
+        "fin": 175.46,
+        "texto": "y ahí todo un asunto, pero al final todo el mundo cierra a las 6 de la tarde"
+      },
+      {
+        "inicio": 175.46,
+        "fin": 179.46,
+        "texto": "a las 6 de la tarde, a las 6 de la tarde, a todo el mundo le cae igual"
+      },
+      {
+        "inicio": 179.46,
+        "fin": 186.46,
+        "texto": "no sé a qué más allá, a nivel de yavataen, que eso nos pueda permitir"
+      },
+      {
+        "inicio": 186.46,
+        "fin": 191.46,
+        "texto": "incluso a nivel de formato, todos usamos la fecha igual"
+      },
+      {
+        "inicio": 191.46,
+        "fin": 208.46,
+        "texto": "si te permite contabilizar la diferencia horaria para normalizar una fecha o un evento específico"
+      },
+      {
+        "inicio": 208.46,
+        "fin": 212.46,
+        "texto": "digamos un ejemplo, dos países bastante lejados entre sí"
+      },
+      {
+        "inicio": 212.46,
+        "fin": 218.46,
+        "texto": "digamos que uno quiere venir y tener un evento específico a tal día, tal hora"
+      },
+      {
+        "inicio": 218.46,
+        "fin": 222.46,
+        "texto": "y que inicie en el mismo tiempo en todos los países"
+      },
+      {
+        "inicio": 222.46,
+        "fin": 226.46,
+        "texto": "se puede normalizar ese tiempo utilizando Daytime"
+      },
+      {
+        "inicio": 226.46,
+        "fin": 234.97,
+        "texto": "¿qué más nos puede ayudar ahí Daytime?"
+      },
+      {
+        "inicio": 234.97,
+        "fin": 255.49,
+        "texto": "les doy una que piense, tengo que darles bastante de qué hablar"
+      },
+      {
+        "inicio": 255.49,
+        "fin": 262.83,
+        "texto": "vamos a ver, conversé con Yavabuti"
+      },
+      {
+        "inicio": 262.83,
+        "fin": 269.83,
+        "texto": "Yavabuti, Yavabuti, ahí la gente ya ha metido todo lo que no les dio una categoría de un tamaño suficientemente grande"
+      },
+      {
+        "inicio": 269.83,
+        "fin": 277.83,
+        "texto": "ahí metieron todo, y ahí vemos que hay una gran cantidad de algoritmos, operaciones, técnicas, estructuras de datos"
+      },
+      {
+        "inicio": 277.83,
+        "fin": 283.83,
+        "texto": "ahí un montón, entonces, conversar de todo lo que está ahí"
+      },
+      {
+        "inicio": 283.83,
+        "fin": 288.83,
+        "texto": "¿en qué me puede ayudar eso a la hora de programar con lo poco que han hecho?"
+      },
+      {
+        "inicio": 288.83,
+        "fin": 294.83,
+        "texto": "creo que están ya las estructuras de datos, apenas están pincelando listas en la sala"
+      },
+      {
+        "inicio": 294.83,
+        "fin": 302.83,
+        "texto": "entonces, por ahora hay un poquito, por ahora hay un poquito con lo que hayan programado ya"
+      },
+      {
+        "inicio": 302.83,
+        "fin": 306.83,
+        "texto": "con lo que han visto en estructuras de datos, lo que pudieron ver que había ahí en Yavabuti"
+      },
+      {
+        "inicio": 306.83,
+        "fin": 314.83,
+        "texto": "¿qué me cuentan de Yavabuti? ¿cómo puede ser tan buen aliado a mí a la hora de programar el paquete de Yavabuti?"
+      },
+      {
+        "inicio": 315.83,
+        "fin": 326.83,
+        "texto": "Yavabuti básicamente se utiliza como uso diario para todos los programados"
+      },
+      {
+        "inicio": 326.83,
+        "fin": 332.83,
+        "texto": "y a la hora de hacer el código, permite poder realizar un código preciso, funcional y que sea mantenido"
+      },
+      {
+        "inicio": 332.83,
+        "fin": 342.83,
+        "texto": "Martín, Yavuti implementa de manera predeterminada algunos tipos de datos, estructuras de datos"
+      },
+      {
+        "inicio": 342.83,
+        "fin": 347.83,
+        "texto": "los cuales, de no ser así, uno tendría que implementarlos a mano"
+      },
+      {
+        "inicio": 347.83,
+        "fin": 355.83,
+        "texto": "lo cual consume mayor espacio y afecta a la legibilidad del código"
+      },
+      {
+        "inicio": 355.83,
+        "fin": 362.83,
+        "texto": "por lo cual uno puede venir y crear listas de arrays, un hashmap, un tree"
+      },
+      {
+        "inicio": 362.83,
+        "fin": 366.83,
+        "texto": "sin necesidad de venir y hacer toda la lógica que está atrás"
+      },
+      {
+        "inicio": 366.83,
+        "fin": 377.94,
+        "texto": "bueno, Andrés, uno puede usar Yavuti para muchas cosas por las estructuras de datos"
+      },
+      {
+        "inicio": 377.94,
+        "fin": 381.94,
+        "texto": "además de que tiene otra clase de métodos como, se pueden generar números aleatorios"
+      },
+      {
+        "inicio": 381.94,
+        "fin": 386.94,
+        "texto": "serían clases, es decir, una clase, una cosa que también puede ser bastante útil"
+      },
+      {
+        "inicio": 386.94,
+        "fin": 391.94,
+        "texto": "uno puede hacer, tiene varias estructuras, tiene colas, tiene para hacer mapas"
+      },
+      {
+        "inicio": 391.94,
+        "fin": 396.94,
+        "texto": "sea hashmaps, entonces árboles, listas"
+      },
+      {
+        "inicio": 396.94,
+        "fin": 402.94,
+        "texto": "y además esas listas uno las puede usar como base para crear otras estructuras de datos específicas que uno necesite"
+      },
+      {
+        "inicio": 402.94,
+        "fin": 405.94,
+        "texto": "así que puede incluso ayudarlo uno más"
+      },
+      {
+        "inicio": 405.94,
+        "fin": 409.94,
+        "texto": "porque eso es código que no estoy escribiendo y tiempo que ahorro"
+      },
+      {
+        "inicio": 409.94,
+        "fin": 412.94,
+        "texto": "evidentemente es un buen punto de Andrés"
+      },
+      {
+        "inicio": 412.94,
+        "fin": 416.94,
+        "texto": "qué pasa cuando uno está enseñando estructuras de datos"
+      },
+      {
+        "inicio": 416.94,
+        "fin": 420.94,
+        "texto": "uno ve listas porque a partir de listas construye todas las demás"
+      },
+      {
+        "inicio": 420.94,
+        "fin": 424.94,
+        "texto": "las pilas, las colas, los árboles, todo lo que busque a partir de listas"
+      },
+      {
+        "inicio": 424.94,
+        "fin": 426.94,
+        "texto": "al final la computación todo son puras listas"
+      },
+      {
+        "inicio": 426.94,
+        "fin": 431.94,
+        "texto": "como hablábamos la otra vez, ir a buscar, ordenar en esas listas, es lo típico"
+      },
+      {
+        "inicio": 431.94,
+        "fin": 435.94,
+        "texto": "entonces Yavuti me da una estructura base para después construir casi todo"
+      },
+      {
+        "inicio": 435.94,
+        "fin": 439.94,
+        "texto": "entonces cuando usamos estructuras de datos pasa eso"
+      },
+      {
+        "inicio": 439.94,
+        "fin": 444.94,
+        "texto": "algo llega a creer, no, esto y lo vamos a hacer con las listas hechas de ustedes"
+      },
+      {
+        "inicio": 444.94,
+        "fin": 448.94,
+        "texto": "para no, pero eventualmente, incluso yo cuando lo oigo"
+      },
+      {
+        "inicio": 448.94,
+        "fin": 452.94,
+        "texto": "ya vengo y digo, por ejemplo, ya cuando uno llega a lo que son listas, pilas y colas"
+      },
+      {
+        "inicio": 452.94,
+        "fin": 456.94,
+        "texto": "me gusta que usen el código de cada uno, que lo tengan que hacer"
+      },
+      {
+        "inicio": 456.94,
+        "fin": 460.94,
+        "texto": "pero ya después para arriba, todo lo que son grafos, árboles y todo eso"
+      },
+      {
+        "inicio": 460.94,
+        "fin": 462.94,
+        "texto": "yo ya use todo lo que hay"
+      },
+      {
+        "inicio": 462.94,
+        "fin": 466.94,
+        "texto": "entonces ya las listas estas están mucho más completas"
+      },
+      {
+        "inicio": 466.94,
+        "fin": 469.94,
+        "texto": "la clase vector también está muy completa"
+      },
+      {
+        "inicio": 469.94,
+        "fin": 471.94,
+        "texto": "o la linked list está muy completa"
+      },
+      {
+        "inicio": 471.94,
+        "fin": 475.94,
+        "texto": "entonces es para estar haciendo las de uno"
+      },
+      {
+        "inicio": 475.94,
+        "fin": 479.94,
+        "texto": "¿Qué más se encuentra con este?"
+      },
+      {
+        "inicio": 479.94,
+        "fin": 484.94,
+        "texto": "básicamente las habilidades que nos permiten tener o desarrollar"
+      },
+      {
+        "inicio": 484.94,
+        "fin": 488.94,
+        "texto": "con Yavuti es de almacenar colecciones de datos"
+      },
+      {
+        "inicio": 488.94,
+        "fin": 492.94,
+        "texto": "nos permite también buscar y ordenar información"
+      },
+      {
+        "inicio": 492.94,
+        "fin": 496.94,
+        "texto": "trabajar con pares de clave y valor"
+      },
+      {
+        "inicio": 496.94,
+        "fin": 502.94,
+        "texto": "también nos permite elegir entre cuál estructura de datos"
+      },
+      {
+        "inicio": 502.94,
+        "fin": 507.94,
+        "texto": "que ya ha sido mencionado nos sirve más para el programa que estamos haciendo"
+      },
+      {
+        "inicio": 507.94,
+        "fin": 515.24,
+        "texto": "además de que nos permite procesar la información de forma más eficiente"
+      },
+      {
+        "inicio": 515.24,
+        "fin": 519.24,
+        "texto": "bueno, Andrés, a mí me gustaría también agregar que"
+      },
+      {
+        "inicio": 519.24,
+        "fin": 523.24,
+        "texto": "las listas y todas las estructuras de datos que están en Yavuti"
+      },
+      {
+        "inicio": 523.24,
+        "fin": 528.24,
+        "texto": "ya han sido probadas, entonces no va a haber ni errores idealmente"
+      },
+      {
+        "inicio": 528.24,
+        "fin": 532.24,
+        "texto": "ni muchos problemas y va a ser bastante eficiente"
+      },
+      {
+        "inicio": 532.24,
+        "fin": 535.24,
+        "texto": "comparado a un código que yo pueda hacer que sí pueda tener errores"
+      },
+      {
+        "inicio": 535.24,
+        "fin": 538.24,
+        "texto": "tenga que hacer pruebas y todo eso es tiempo que ahorro"
+      },
+      {
+        "inicio": 538.24,
+        "fin": 544.48,
+        "texto": "y también un poco más de eficiencia a veces"
+      },
+      {
+        "inicio": 544.48,
+        "fin": 550.48,
+        "texto": "un ejemplo de código, caso de uso real, idea o algo"
+      },
+      {
+        "inicio": 550.48,
+        "fin": 558.34,
+        "texto": "usando algo de lo que está en Yavuti"
+      },
+      {
+        "inicio": 558.34,
+        "fin": 561.34,
+        "texto": "alguna deducción que tenga"
+      },
+      {
+        "inicio": 561.34,
+        "fin": 564.34,
+        "texto": "o alguna forma para correlacionar incluso este tema"
+      },
+      {
+        "inicio": 564.34,
+        "fin": 568.34,
+        "texto": "de Yavuti con Yavatime"
+      },
+      {
+        "inicio": 568.34,
+        "fin": 573.34,
+        "texto": "los tiempos, las ubicaciones pueden estar en una"
+      },
+      {
+        "inicio": 573.34,
+        "fin": 578.34,
+        "texto": "los tiempos pueden estar en una re-list del Yavutile"
+      },
+      {
+        "inicio": 578.34,
+        "fin": 583.34,
+        "texto": "se pueden ordenar en el orden en el cual el evento"
+      },
+      {
+        "inicio": 583.34,
+        "fin": 586.34,
+        "texto": "que habíamos definido antes"
+      },
+      {
+        "inicio": 586.34,
+        "fin": 590.34,
+        "texto": "utilizando el team sort"
+      },
+      {
+        "inicio": 590.34,
+        "fin": 595.34,
+        "texto": "o alguno de esos métodos ya proporcionados por Yavutile"
+      },
+      {
+        "inicio": 595.34,
+        "fin": 603.13,
+        "texto": "Andrés, se podría ordenar mediante una letra"
+      },
+      {
+        "inicio": 603.13,
+        "fin": 606.13,
+        "texto": "se podría ordenar mediante una letra"
+      },
+      {
+        "inicio": 606.13,
+        "fin": 608.13,
+        "texto": "con algún hash mark por ejemplo"
+      },
+      {
+        "inicio": 608.13,
+        "fin": 611.13,
+        "texto": "tengo una parte de una zona de Estados Unidos"
+      },
+      {
+        "inicio": 611.13,
+        "fin": 613.13,
+        "texto": "la puedo decir como N de norte"
+      },
+      {
+        "inicio": 613.13,
+        "fin": 615.13,
+        "texto": "y luego la otra puede ser sur con S"
+      },
+      {
+        "inicio": 615.13,
+        "fin": 617.13,
+        "texto": "algo así por ejemplo"
+      },
+      {
+        "inicio": 617.13,
+        "fin": 620.13,
+        "texto": "o las puedo ordenar en base a cuál está más temprano"
+      },
+      {
+        "inicio": 620.13,
+        "fin": 636.54,
+        "texto": "cuál está antes con alguna estructura de árbol u otras"
+      },
+      {
+        "inicio": 636.54,
+        "fin": 639.54,
+        "texto": "que vagones"
+      },
+      {
+        "inicio": 639.54,
+        "fin": 643.88,
+        "texto": "algo que me quieren agregar"
+      },
+      {
+        "inicio": 643.88,
+        "fin": 645.88,
+        "texto": "si mal me acuerdo creo que en Yavutile"
+      },
+      {
+        "inicio": 645.88,
+        "fin": 647.88,
+        "texto": "si mal me acuerdo creo que en Yavutile"
+      },
+      {
+        "inicio": 647.88,
+        "fin": 650.88,
+        "texto": "estaba local"
+      },
+      {
+        "inicio": 650.88,
+        "fin": 653.88,
+        "texto": "permite venir y obtener"
+      },
+      {
+        "inicio": 653.88,
+        "fin": 656.88,
+        "texto": "permite obtener la ubicación"
+      },
+      {
+        "inicio": 656.88,
+        "fin": 659.88,
+        "texto": "con eso se puede cometer con el time"
+      },
+      {
+        "inicio": 659.88,
+        "fin": 662.88,
+        "texto": "con la ubicación, más locales"
+      },
+      {
+        "inicio": 662.88,
+        "fin": 665.88,
+        "texto": "no me acuerdo que más da"
+      },
+      {
+        "inicio": 665.88,
+        "fin": 667.88,
+        "texto": "que más cosas son localizadas"
+      },
+      {
+        "inicio": 667.88,
+        "fin": 671.88,
+        "texto": "en un sentido común"
+      },
+      {
+        "inicio": 671.88,
+        "fin": 673.88,
+        "texto": "que cosas son muy propias de Costa Rica"
+      },
+      {
+        "inicio": 673.88,
+        "fin": 676.88,
+        "texto": "que son diferentes en México"
+      },
+      {
+        "inicio": 676.88,
+        "fin": 679.88,
+        "texto": "aparte de la zona oraria"
+      },
+      {
+        "inicio": 679.88,
+        "fin": 682.88,
+        "texto": "provincias, lugares"
+      },
+      {
+        "inicio": 682.88,
+        "fin": 685.88,
+        "texto": "sí bueno, eso sí obviamente"
+      },
+      {
+        "inicio": 685.88,
+        "fin": 687.88,
+        "texto": "porque son las cosas divididas"
+      },
+      {
+        "inicio": 687.88,
+        "fin": 689.88,
+        "texto": "pero como pareció"
+      },
+      {
+        "inicio": 689.88,
+        "fin": 692.88,
+        "texto": "aduciado a cómo manejamos fechas y otras cositas"
+      },
+      {
+        "inicio": 692.88,
+        "fin": 698.22,
+        "texto": "propias computacionalmente hablando"
+      },
+      {
+        "inicio": 698.22,
+        "fin": 700.22,
+        "texto": "también no políticamente"
+      },
+      {
+        "inicio": 700.22,
+        "fin": 706.13,
+        "texto": "quiero decir político y no computacionalmente"
+      },
+      {
+        "inicio": 706.13,
+        "fin": 708.13,
+        "texto": "o regionalidad"
+      },
+      {
+        "inicio": 708.13,
+        "fin": 710.13,
+        "texto": "nunca me he metido a la compu"
+      },
+      {
+        "inicio": 710.13,
+        "fin": 712.13,
+        "texto": "para cambiar la regionalidad de la compu"
+      },
+      {
+        "inicio": 712.13,
+        "fin": 714.13,
+        "texto": "todos los manejos locales"
+      },
+      {
+        "inicio": 714.13,
+        "fin": 717.13,
+        "texto": "y la regionalidad es parte de ubicación"
+      },
+      {
+        "inicio": 717.13,
+        "fin": 720.13,
+        "texto": "sí pero la otra cosa es la ubicación geográfica"
+      },
+      {
+        "inicio": 720.13,
+        "fin": 723.13,
+        "texto": "ubicación, lenguaje"
+      },
+      {
+        "inicio": 723.13,
+        "fin": 726.13,
+        "texto": "lenguaje"
+      },
+      {
+        "inicio": 726.13,
+        "fin": 729.13,
+        "texto": "localidad, lenguaje"
+      },
+      {
+        "inicio": 729.13,
+        "fin": 732.13,
+        "texto": "que otra cosa es la localidad"
+      },
+      {
+        "inicio": 732.13,
+        "fin": 735.13,
+        "texto": "parte del lenguaje"
+      },
+      {
+        "inicio": 736.13,
+        "fin": 739.13,
+        "texto": "no es un dato"
+      },
+      {
+        "inicio": 739.13,
+        "fin": 742.13,
+        "texto": "no le pertenece a la región"
+      },
+      {
+        "inicio": 742.13,
+        "fin": 744.13,
+        "texto": "al país"
+      },
+      {
+        "inicio": 744.13,
+        "fin": 747.13,
+        "texto": "como el idioma venezolano que aparece"
+      },
+      {
+        "inicio": 747.13,
+        "fin": 750.13,
+        "texto": "SSR que es español de Costa Rica"
+      },
+      {
+        "inicio": 750.13,
+        "fin": 753.13,
+        "texto": "o SMX que es español de México"
+      },
+      {
+        "inicio": 753.13,
+        "fin": 756.13,
+        "texto": "eso me lo da locales, locales V&M"
+      },
+      {
+        "inicio": 756.13,
+        "fin": 758.13,
+        "texto": "si yo leo la ubicación geográfica"
+      },
+      {
+        "inicio": 758.13,
+        "fin": 760.13,
+        "texto": "él me puede decir"
+      },
+      {
+        "inicio": 760.13,
+        "fin": 762.13,
+        "texto": "o lo lee el sistema operativo"
+      },
+      {
+        "inicio": 763.13,
+        "fin": 767.38,
+        "texto": "no me ocurre nada más"
+      },
+      {
+        "inicio": 767.38,
+        "fin": 772.04,
+        "texto": "por el momento no se va a tocar"
+      },
+      {
+        "inicio": 772.04,
+        "fin": 775.04,
+        "texto": "hay muchas codas"
+      },
+      {
+        "inicio": 775.04,
+        "fin": 778.04,
+        "texto": "localizadas como por ejemplo"
+      }
+    ],
+    "duracion_seg": 777.41,
+    "error": null
+  }
+]

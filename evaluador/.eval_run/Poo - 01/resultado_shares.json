@@ -1,0 +1,409 @@
+[
+  {
+    "nombre_completo": "AGUILAR FONSECA HILARY",
+    "nickname": "ZeusRojo",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para esta estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para este estudiante."
+  },
+  {
+    "nombre_completo": "BARRANTES AZOFEIFA EDIER ISAAC",
+    "nickname": "ThorAzul",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para este estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para este estudiante."
+  },
+  {
+    "nombre_completo": "COREA HERRERA STEVEN FERNANDO",
+    "nickname": "OdinVerde",
+    "fuente_evaluacion": "audio+notas",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Solo repitió que 'las primitivas son para operaciones fundamentales... muy muy básicas', prácticamente calcando la nota del profesor, sin dar un caso concreto de uso ni correlacionar con otros conceptos (wrappers, boxing, memoria)."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No presentó ningún ejemplo de código Java."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No aportó ninguna deducción o simplificación propia; se limitó a parafrasear la nota del profesor."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No mencionó ningún escenario real de ingeniería o desarrollo de software donde aplique esta distinción."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No se observa que enfrentara una pregunta que no supiera responder; su intervención es una afirmación directa y breve."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No evidenció ninguna limitación, reto o deficiencia del uso de primitivas o de Java en general."}
+    ],
+    "necesita_revision_manual": false,
+    "nota_revision": "Hay contenido, pero es extremadamente breve (una sola frase que repite casi textualmente la nota del profesor); no se marca para revisión manual porque sí existe evidencia, aunque mínima."
+  },
+  {
+    "nombre_completo": "CUNIO LOPEZ PIERO ANTONIO",
+    "nickname": "RaDorado",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para este estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para este estudiante."
+  },
+  {
+    "nombre_completo": "ESPINOZA ORTEGA MARIA JOSE",
+    "nickname": "ApoloPlata",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para esta estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para esta estudiante."
+  },
+  {
+    "nombre_completo": "FERNANDEZ CASTRO ANTHONY",
+    "nickname": "HeraNegro",
+    "fuente_evaluacion": "audio+notas",
+    "shares_totales": 18,
+    "shares_totales_sin_tope": 18,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.25, "shares_obtenidos": 5, "justificacion": "Dio una razón general ('para facilitar el uso... para hacer métodos más fácilmente') que va algo más allá de la pura definición, pero no aportó un caso concreto de uso ni correlacionó explícitamente con boxing/unboxing o colecciones."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No presentó código Java de ejemplo."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.25, "shares_obtenidos": 5, "justificacion": "Su respuesta ('según lo que yo puedo entender... es lo que yo entendí') refleja una interpretación propia, aunque muy básica y sin desarrollo adicional."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No conectó la idea con un escenario real de desarrollo de software o de ingeniería."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.5, "shares_obtenidos": 8, "justificacion": "Marca explícitamente su respuesta como interpretación personal ante una pregunta que no domina del todo ('según lo que yo puedo entender'), y logra conectar la idea de 'facilidad de uso' con la existencia de métodos en las clases wrapper de forma coherente, aunque incompleta."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No mencionó ninguna limitación o desventaja de las clases wrapper o de las primitivas."}
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "HERNANDEZ CAMACHO IGNACIO",
+    "nickname": "AteneaBlanco",
+    "fuente_evaluacion": "solo_notas_profesor",
+    "shares_totales": 68,
+    "shares_totales_sin_tope": 68,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 1.0, "shares_obtenidos": 20, "justificacion": "Según las notas del profesor (no hay transcripción propia), dio casos concretos (un servidor web usando pool de hilos para atender múltiples solicitudes; descarga de un archivo en segundo plano) y correlacionó primitivos/objetos con rendimiento, y procesos con hilos dentro de la JVM."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Las notas no registran ningún ejemplo de código Java, solo descripciones conceptuales de clases como Thread."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.5, "shares_obtenidos": 10, "justificacion": "Las notas muestran una síntesis organizada de varios conceptos (memoria directa de primitivos, relación proceso/hilo, necesidad de pools), lo que sugiere cierta elaboración propia, aunque en su mayoría es explicación estándar del tema."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 1.0, "shares_obtenidos": 25, "justificacion": "Dio dos ejemplos reales y concretos: un servidor web que gestiona múltiples solicitudes con un pool de hilos, y la descarga de un archivo en segundo plano, ambos escenarios reales de desarrollo de software."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay evidencia en las notas de que respondiera una pregunta que no dominaba."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.5, "shares_obtenidos": 13, "justificacion": "Señaló un riesgo concreto: 'si son cientos de miles, abrir todos los hilos explota el programa', justificando por qué no basta con crear hilos manualmente; no lo acompañó de código ni extendió la crítica a otros paquetes."}
+    ],
+    "necesita_revision_manual": false,
+    "nota_revision": "Evaluado únicamente con base en notas del profesor; no hay transcripción de audio que cubra la intervención de este estudiante (tema de threads/procesos no presente en los audios entregados)."
+  },
+  {
+    "nombre_completo": "HIDALGO TORRES JOSELYN MELISSA",
+    "nickname": "HadesVioleta",
+    "fuente_evaluacion": "audio+notas",
+    "shares_totales": 6,
+    "shares_totales_sin_tope": 6,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Se limita a una afirmación general ('se utiliza como uso diario... permite un código preciso, funcional y mantenido'), prácticamente calcada de la nota del profesor, sin caso concreto ni correlación con otros conceptos de java.util."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No mostró código de ejemplo."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay elaboración propia más allá de repetir la idea general de la nota del profesor."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.25, "shares_obtenidos": 6, "justificacion": "La mención de que se usa 'a diario por todos los programadores' es una referencia general al mundo real de la programación, pero no describe un escenario o caso específico."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No se evidencia que enfrentara una pregunta que no supiera; responde de forma directa."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No menciona ninguna limitación de java.util."}
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "LEIVA VILLALOBOS BRYAN JOSUE",
+    "nickname": "DianaIndigo",
+    "fuente_evaluacion": "audio+notas",
+    "shares_totales": 23,
+    "shares_totales_sin_tope": 23,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.5, "shares_obtenidos": 10, "justificacion": "Identificó ZonedDateTime y propuso una idea de uso ('se podría hacer un programa que analice o relacione diferentes zonas horarias'), y para java.util listó varias capacidades (colecciones, pares clave-valor, búsqueda/orden, elección de estructura); va más allá de la definición pero sin ejemplo de código ni correlación profunda entre estos conceptos."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No incluyó código Java."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Se mantiene en un nivel descriptivo/enumerativo sin aportar una simplificación o teoría propia."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.5, "shares_obtenidos": 13, "justificacion": "La propuesta de 'un programa que analice o relacione diferentes zonas horarias' es una correlación concreta, aunque breve, con un escenario real de desarrollo de software."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay indicios de que respondiera algo que no supiera; sus intervenciones son afirmaciones directas."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No mencionó ninguna limitación de java.time o java.util."}
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "MADRIGAL CAMPOS ANDRES",
+    "nickname": "PoseidonNaranja",
+    "fuente_evaluacion": "audio+notas",
+    "shares_totales": 49,
+    "shares_totales_sin_tope": 49,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 1.0, "shares_obtenidos": 20, "justificacion": "Fue mucho más allá de la definición: dio ejemplos concretos de ZoneId (América, Europa, Asia, Nueva York, Costa Rica, Madrid), describió múltiples estructuras de java.util (colas, hashmaps, árboles, listas) correlacionando las listas como base para crear otras estructuras, y conectó el tema con Locale."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No presentó código Java, solo descripciones conceptuales de las clases y estructuras."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.5, "shares_obtenidos": 10, "justificacion": "Propuso su propia idea de cómo ordenar zonas ('ordenar mediante una letra... N de norte... S de sur... o en base a cuál está más temprano... con alguna estructura de árbol'), una simplificación propia parcial, aunque no llega a construir una teoría más amplia."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.75, "shares_obtenidos": 19, "justificacion": "Ejemplificó con lugares reales (Nueva York, Costa Rica, Madrid) y con estados de EE.UU. para el ordenamiento N/S, conectando el tema con escenarios reales de uso de zonas horarias en software."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No mostró indicios de estar respondiendo algo que no dominaba; sus respuestas son seguras y directas."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Más bien glorificó las estructuras de java.util ('ya han sido probadas... no va a haber ni errores... va a ser bastante eficiente'), sin señalar ninguna limitación o reto real de su uso."}
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "MONTERO VALVERDE ELIAN ESTEBAN",
+    "nickname": "AresTurquesa",
+    "fuente_evaluacion": "solo_notas_profesor",
+    "shares_totales": 44,
+    "shares_totales_sin_tope": 44,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.75, "shares_obtenidos": 15, "justificacion": "Según las notas, correlacionó varios conceptos (primitivos sin null, necesidad de objetos en colecciones, diferencia proceso/hilo, y las clases ProcessBuilder, Process, Runtime, Thread y Runnable de java.lang), superando la definición simple, aunque sin un caso de uso concreto tipo aplicación real."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay ningún ejemplo de código Java en las notas."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.5, "shares_obtenidos": 10, "justificacion": "La explicación de que 'Java no controla directamente el procesador, sino que la JVM administra los hilos, el OS participa en la planificación' refleja una síntesis propia de la arquitectura de capas (JVM/OS), más allá de una definición mecánica de cada clase."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.25, "shares_obtenidos": 6, "justificacion": "No se registra un escenario o aplicación real concreta (como un servidor o app específica); la mención de que 'una computadora podría no correr el programa' es una consecuencia general, no un caso de uso contextualizado."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay evidencia de que enfrentara una pregunta fuera de su dominio."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.5, "shares_obtenidos": 13, "justificacion": "Identificó un riesgo real: crear demasiados threads puede hacer que 'una computadora podría no correr el programa', una limitación concreta del manejo de hilos, aunque sin profundizar más ni mostrar código."}
+    ],
+    "necesita_revision_manual": false,
+    "nota_revision": "Evaluado únicamente con base en notas del profesor; no hay transcripción de audio que cubra la intervención de este estudiante (tema de threads/procesos no presente en los audios entregados)."
+  },
+  {
+    "nombre_completo": "MOYA AGUILAR JOSE JULIAN",
+    "nickname": "ErosCoral",
+    "fuente_evaluacion": "solo_notas_profesor",
+    "shares_totales": 68,
+    "shares_totales_sin_tope": 68,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.75, "shares_obtenidos": 15, "justificacion": "Las notas muestran que fue más allá de la definición: ejemplificó con ArrayList (que requiere objetos, no primitivos), la necesidad de valores null en listas, y el tema de boxing/unboxing, correlacionando primitivos, wrappers y colecciones."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No se registra ningún ejemplo de código Java."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.75, "shares_obtenidos": 15, "justificacion": "Aporta una reflexión propia notable: 'es una sintaxis que confunde, los primitivos no son objetos como tales', y en el tema de hilos evalúa si 'está bien hacer un multitasking o no' y si conviene usar pools, mostrando un juicio analítico propio más allá de repetir hechos."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.75, "shares_obtenidos": 19, "justificacion": "Ejemplifica con un caso concreto y real de programación (ArrayList que necesita objetos, no primitivos, y la necesidad de listas con valores null), y en hilos conecta con la decisión práctica de si usar pools de hilos conviene o no."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay evidencia de que respondiera algo fuera de su dominio; su exposición es afirmativa y organizada."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.75, "shares_obtenidos": 19, "justificacion": "Señaló explícitamente deficiencias/retos: la sintaxis de primitivos/wrappers 'confunde', y trabajar con estados y prioridades de hilos manualmente 'puede ser complejo', además de cuestionar si conviene o no usar pools de hilos — una postura crítica genuina, no solo elogiosa."}
+    ],
+    "necesita_revision_manual": false,
+    "nota_revision": "Evaluado únicamente con base en notas del profesor; no hay transcripción de audio que cubra la intervención de este estudiante (tema de threads/procesos no presente en los audios entregados)."
+  },
+  {
+    "nombre_completo": "OBANDO ARIAS YUNIER STEVEN",
+    "nickname": "FreyaGris",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para este estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para este estudiante."
+  },
+  {
+    "nombre_completo": "ROJAS BARRIOS MARTIN FRANCISCO",
+    "nickname": "LokiRosa",
+    "fuente_evaluacion": "audio+notas",
+    "shares_totales": 49,
+    "shares_totales_sin_tope": 49,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 1.0, "shares_obtenidos": 20, "justificacion": "Superó la definición pura: explicó cómo java.time permite mostrar la hora de un país específico y normalizar la diferencia horaria entre países distantes para sincronizar un evento, y correlacionó java.util (listas, hashmap, tree, sort) con Locale para obtener ubicación."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Nombra métodos como el 'team sort' (TimSort) pero no escribe ni muestra código Java."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.5, "shares_obtenidos": 10, "justificacion": "Justifica con su propia lógica por qué conviene usar las estructuras predefinidas ('de no ser así, uno tendría que implementarlos a mano, lo cual consume mayor espacio y afecta la legibilidad'), una explicación razonada propia, aunque no constituye una teoría completamente original."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.75, "shares_obtenidos": 19, "justificacion": "El ejemplo de normalizar la hora de un evento entre 'dos países bastante lejados entre sí' es un escenario concreto y realista de desarrollo de software."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay evidencia de que respondiera algo que no dominaba; sus respuestas son seguras."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No señaló ninguna deficiencia o reto de java.time/java.util; su argumento sobre 'implementar a mano' se usa para justificar las bondades del paquete, no para criticarlo."}
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "SANCHEZ POVEDA DANIEL",
+    "nickname": "IsisBeige",
+    "fuente_evaluacion": "audio+notas",
+    "shares_totales": 67,
+    "shares_totales_sin_tope": 67,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 1.0, "shares_obtenidos": 20, "justificacion": "Diferenció con detalle Math (operaciones aritméticas sobre primitivos como doubles/floats) de java.math (precisión financiera, limitación del punto flotante binario), explicando BigInteger y BigDecimal con usos concretos (tamaño arbitrario limitado por RAM; redondeo y cálculos financieros), y correlacionó el tema con las clases genéricas y la reutilización de código."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No mostró código Java, solo explicaciones conceptuales."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.75, "shares_obtenidos": 15, "justificacion": "Conectó la necesidad de clases genéricas con consideraciones de bajo nivel ('cuando bajamos a nivel de ensamblado, si no se reutiliza se va a hacer mucho código redundante... un gasto innecesario en la memoria, que puede provocar errores'), una síntesis propia que enlaza memoria, ensamblador y reutilización más allá de repetir la definición estándar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.75, "shares_obtenidos": 19, "justificacion": "Ligó BigDecimal/BigInteger a un escenario real y concreto: cálculos financieros y monetarios que requieren exactitud."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Respondió con seguridad y detalle en ambos temas; no hay evidencia de estar completando una respuesta que no domina."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.5, "shares_obtenidos": 13, "justificacion": "Explicó que java.math surge por 'la limitación de binarias del punto flotante', evidenciando una deficiencia real de los tipos primitivos/Math para precisión financiera; no lo mostró con código ni extendió la crítica a otros paquetes."}
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "SEAS ALVAREZ JORDAN LEONARDO",
+    "nickname": "OsirisCian",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para este estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para este estudiante."
+  },
+  {
+    "nombre_completo": "SEGURA QUESADA KEYZEL ESTRELLA",
+    "nickname": "AnubisAmbar",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para esta estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para esta estudiante."
+  },
+  {
+    "nombre_completo": "TARASOVA ARINA",
+    "nickname": "BacoMarfil",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para esta estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para esta estudiante."
+  },
+  {
+    "nombre_completo": "TORRES ORELLANA ALEXIS",
+    "nickname": "JanoCobre",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para este estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para este estudiante."
+  },
+  {
+    "nombre_completo": "VARGAS VARGAS GABRIEL",
+    "nickname": "VulcanoBronce",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para este estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para este estudiante."
+  },
+  {
+    "nombre_completo": "VEGA HIDALGO EIMY GUADALUPE",
+    "nickname": "VenusEscarlata",
+    "fuente_evaluacion": "sin_informacion",
+    "shares_totales": 0,
+    "shares_totales_sin_tope": 0,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay transcripción de audio ni notas del profesor para esta estudiante; no existe evidencia sobre la que evaluar este criterio."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Sin información disponible para evaluar."}
+    ],
+    "necesita_revision_manual": true,
+    "nota_revision": "Sin información disponible para evaluar: no hay transcripción de audio ni notas del profesor para esta estudiante."
+  },
+  {
+    "nombre_completo": "ZUNIGA PICADO DAVID",
+    "nickname": "NeptunoJade",
+    "fuente_evaluacion": "audio+notas",
+    "shares_totales": 28,
+    "shares_totales_sin_tope": 28,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.75, "shares_obtenidos": 15, "justificacion": "Fue más allá de la definición al explicar por qué existen primitivas (uso de memoria, valores directos) y wrappers (POO y estructuras genéricas), citando el ejemplo concreto List<Integer> como forma en que Java implementa sus collections."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Mencionó el tipo List<Integer> pero no escribió ni mostró un ejemplo de código Java completo."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No aportó una deducción o teoría propia adicional; se ciñó a explicar la razón ya conocida (memoria vs. POO/genéricos)."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.5, "shares_obtenidos": 13, "justificacion": "La referencia a List<Integer> como forma en que Java implementa sus collections es un ejemplo concreto y realista de uso en programación, aunque no describe un escenario de aplicación más amplio."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "Respondió con seguridad, sin señales de estar completando una respuesta que no dominaba."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No mencionó ninguna limitación o reto de las primitivas o las clases wrapper."}
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "ZUNIGA ARROYO PATRICK SEBASTIAN",
+    "nickname": "MartePerla",
+    "fuente_evaluacion": "solo_notas_profesor",
+    "shares_totales": 5,
+    "shares_totales_sin_tope": 5,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {"criterio": "El estudiante dio más que definiciones teóricas de los conceptos, habló de casos concretos de uso, correlacionó el concepto con otros existentes para ampliar la comprensión.", "shares_maximos": 20, "grado_cumplimiento": 0.25, "shares_obtenidos": 5, "justificacion": "Las notas son muy generales ('cumplen funciones distintas... para optimizar recursos... eficiencia y productividad'), sin un caso concreto de uso ni una correlación explícita y detallada con otros conceptos (boxing, colecciones, memoria)."},
+      {"criterio": "El estudiante realizó programación ejemplo en código java para demostrar los aspectos estudiados y para soportar las afirmaciones que está aportando.", "shares_maximos": 30, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay ejemplo de código Java."},
+      {"criterio": "El estudiante logró crear deducciones propias, simplificaciones propias, teorías propias sobre el entendimiento y uso de los conceptos y técnicas que está aplicando.", "shares_maximos": 20, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No se aprecia una deducción o simplificación propia; son afirmaciones generales ya conocidas."},
+      {"criterio": "Pudo correlacionar los temas estudiados y expuestos con el entorno del mundo real (contexto de ingeniería de sistemas o desarrollo de programas de la vida real).", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No se menciona ningún escenario real de desarrollo de software o de ingeniería."},
+      {"criterio": "Para aquello que no supo una respuesta, logró conectar múltiples conceptos estudiados para llegar a una respuesta que aún tal vez no sea correcta, pero tiene coherencia técnica.", "shares_maximos": 15, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No hay evidencia de que respondiera una pregunta que no dominaba."},
+      {"criterio": "No solo glorificó las características de Java, sino que evidenció en teoría y en código deficiencias, mejoras y retos de uso de los diferentes paquetes, clases o implementaciones discutidas.", "shares_maximos": 25, "grado_cumplimiento": 0.0, "shares_obtenidos": 0, "justificacion": "No señala ninguna deficiencia; más bien elogia que 'java nos ayuda a que no inventemos cosas que ya estén diseñadas'."}
+    ],
+    "necesita_revision_manual": false,
+    "nota_revision": "Evaluado únicamente con base en notas del profesor; no hay transcripción de audio propia para este estudiante."
+  }
+]

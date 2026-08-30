@@ -1,0 +1,188 @@
+[1.17 -> 12.09] Ok, bueno, lo que vamos a conversar es de por qué será que en Yabalán está la clase de Mat
+[12.09 -> 19.89] que tiene un montón de funciones citas, matemáticas, pero también está el paquete de Yabamá
+[19.89 -> 27.85] por qué, qué es lo que lo diferencia, qué es lo que debería ir en un lado o en otro
+[27.85 -> 35.69] qué será lo que está sucediendo ahí porque es que eso está así y si alguien quiere intervenir, nada más
+[35.69 -> 39.21] Dale, entonces escuchamos a Daniel Sánchez
+[39.21 -> 45.37] Bueno, primero de nada, en el caso de Yabalán.mat, lo que incluye más operaciones aritméticas
+[45.37 -> 49.37] dirigidas más a lo que son un poco los aspectos primitivos de Yabá
+[49.37 -> 54.89] Esto qué quiere decir, que lo que permite va a ser manejar los dobles, los flotantes y demás aspectos
+[55.13 -> 63.13] Por otro lado, tenemos el Yabá.mat, que es un poco más concreto, pero este fue desarrollado principalmente para el uso de casos financieros más precisos
+[63.13 -> 67.29] que requerían de una exactitud y una precisión mayor
+[67.29 -> 78.09] Además, algo importante es que el Yabá.mat fue diseñado por la limitación de binarias del punto flotante
+[78.09 -> 81.45] cuando se generaban las reimpresiones en el sistema
+[82.17 -> 86.65] Hay mucho que ver eso que ya hablé ante con el asunto del flotante
+[96.55 -> 101.78] ¿Alguno quiere agregar algo?
+[101.78 -> 103.78] No mensaje nada más a Yabá.mat
+[106.82 -> 112.82] Dale, porque esto necesita varias facetas si quiere, eso lo voy a seguir comentando un poquito
+[112.82 -> 117.94] Bueno, dentro de este, el Yabá.mat tiene dos características principales
+[118.18 -> 122.18] Es el Big Integer y el Big Deciman
+[122.18 -> 128.18] El Big Integer lo que permite es que son enteros de tamaño más arbitrarios y limitados un poco por lo que es la memoria RAM
+[128.18 -> 132.18] Justamente esto es una de las principales limitaciones
+[132.18 -> 136.18] Por otro lado, el Big Deciman es una dinética y una lógica mucho más precisa, más exacta
+[136.18 -> 142.18] que permite controlar justamente el punto flotante como mencionado en el tema del rarondeo
+[142.18 -> 147.53] y en cálculos financieros y monetarios nuevamente
+[147.77 -> 153.77] Sí, se llama Big Decimal porque usan todo el...
+[153.77 -> 157.77] acuérdense que la computación es binaria
+[157.77 -> 161.77] por tamaño tratamos de manejar la hexadecimal
+[161.77 -> 165.77] pero el ser humano utiliza limítrica decimal
+[165.77 -> 167.77] con base 10, todo lo tenemos en base 10
+[167.77 -> 169.77] entonces nos sobran unos bits
+[169.77 -> 171.77] cuando usamos base 10 nos quedan unos bits sobrando
+[171.77 -> 175.77] entonces eso les da chance de poder darle más precisión
+[176.01 -> 178.01] a nivel de los decimales
+[180.01 -> 184.01] y pareciera no ser tan gran cosa
+[184.01 -> 186.01] no pareciera ser tan grande
+[186.01 -> 190.01] Jorge Vargas es un profesor que habla muchísimo de la precisión de los decimales
+[192.01 -> 194.01] porque en algunas cosas si cuenta
+[194.01 -> 198.01] probablemente para nosotros para un vuelto eso solo es menos
+[198.01 -> 202.01] con dos decimales que me cobran de algo en un recibo
+[202.01 -> 204.01] yo ni le hace mente
+[204.25 -> 208.25] pero por ejemplo ya cuando hay gente que mueve demasiado dinero
+[212.25 -> 216.25] incluso se puede ver acá seis decimales
+[216.25 -> 220.25] y de los otros seis decimales que digan se hace millonario
+[220.25 -> 224.25] perfectamente y esto me quita y lo está viendo
+[224.25 -> 228.25] pero jugar con más se tiene en su tema
+[228.25 -> 230.25] y también en temas de precisión
+[230.49 -> 234.49] porque por ejemplo en el equipo quirúrgico
+[236.49 -> 240.49] el equipo quirúrgico ya tiene un eje coordenado en números enteros
+[240.49 -> 244.49] porque hay una péndice, hay un cáncer
+[244.49 -> 246.49] para ver la imagen es una cuestión minimétrica
+[246.49 -> 250.49] un tamaño demasiado chiquito incluso a tamaño de nanómetros
+[250.49 -> 254.49] para poder quemar, para poder romper y todas esas cosas
+[254.49 -> 256.49] entonces ocupan más precisión
+[256.73 -> 260.73] entonces si sería una tontera por ejemplo de un sistema de facturación
+[260.73 -> 262.73] usando las tareas que hay en Java Mat
+[262.73 -> 265.73] porque es demasiada computación para la computación
+[265.73 -> 267.73] y viceversa
+[267.73 -> 269.73] algo que sea tan fino no lo voy a usar
+[269.73 -> 273.73] como operadores básicos que me da el Mat de Java Lab
+[277.73 -> 279.73] ok vamos a ver
+[279.73 -> 283.73] vamos a dar un último temita por acá para que pueda comenzar
+[283.97 -> 285.97] si
+[289.97 -> 293.97] hablemos de por qué es que existen clases
+[293.97 -> 297.97] en Java Lab existen clases para integer, para boolean
+[297.97 -> 299.97] para float, como clases
+[299.97 -> 301.97] incluso que están con letra mayúscula
+[301.97 -> 306.97] sin embargo muchas de ellas también ya vimos que son primitivas
+[306.97 -> 308.97] incluso esas clases basen
+[308.97 -> 310.97] trabajan con primitivas también
+[311.21 -> 315.21] entonces por qué es que tenemos ambas cosas
+[315.21 -> 319.21] incluso si ven las primitivas tienen métodos también
+[319.21 -> 321.21] no es que no sean objetos
+[321.21 -> 324.21] entonces ¿qué pueden conversar ustedes por ahí de eso?
+[329.73 -> 331.73] según lo que yo puedo entender
+[331.73 -> 334.73] para facilitar el uso de las mismas
+[334.73 -> 337.73] o para hacer algo más complejo de las mismas
+[337.73 -> 339.73] es en plan de que
+[339.73 -> 343.73] el boolean según que te he entendido
+[343.97 -> 345.97] para hacer métodos más fácilmente
+[345.97 -> 347.97] pues es lo que yo entendí
+[347.97 -> 354.50] si es para mayor facilidad de programación
+[356.50 -> 359.50] ¿qué no se puede desamplear ahí David Suñé?
+[359.50 -> 361.50] este bueno que
+[361.50 -> 364.50] por ejemplo el influx char y boolean
+[364.50 -> 366.50] long y double
+[366.50 -> 368.50] va más dirigido por ejemplo
+[368.50 -> 371.50] para mejor este
+[371.50 -> 374.50] mejor este uso de la memoria
+[374.74 -> 377.74] ya que se almacenan directamente
+[377.74 -> 380.74] sus valores de pila de peneado
+[380.74 -> 382.74] por ejemplo que puede ser
+[382.74 -> 385.74] y de ahí están los otros que son ya
+[385.74 -> 387.74] wrapper classes
+[387.74 -> 389.74] que son por ejemplo
+[389.74 -> 391.74] bueno se les dice
+[391.74 -> 393.74] ese también heap
+[393.74 -> 395.74] que se usa por dos razones
+[395.74 -> 397.74] las que usted ya mencionó
+[397.74 -> 399.74] que es más que todo para formación orientada a objetos
+[399.74 -> 403.74] y las estructuras de datos genericas
+[403.98 -> 405.98] y eso está el class y después va loco
+[405.98 -> 413.81] ¿qué es eso? ¿estructuras de datos genéricas?
+[413.81 -> 415.81] es este
+[415.81 -> 417.81] la parte
+[417.81 -> 419.81] como usa
+[419.81 -> 421.81] ya va a las
+[421.81 -> 422.81] sus colecciones
+[422.81 -> 430.57] por ejemplo Lee's integer
+[430.57 -> 432.57] falta hablar un poquito ahí
+[432.57 -> 434.57] un poquito de la idea
+[434.57 -> 436.57] de todas las collections
+[436.57 -> 438.57] alguien más quiere agregar algo
+[438.57 -> 440.57] es el último chance de participar
+[440.57 -> 450.60] de este tema
+[450.60 -> 452.60] ¿no?
+[452.60 -> 454.60] nos ocupa decir el nombre
+[454.60 -> 458.55] ahí sí, perdón
+[458.55 -> 460.55] que nos comentas
+[460.55 -> 462.55] Daniel
+[462.55 -> 464.55] para comentarlo y complementar un poco
+[464.55 -> 466.55] los viejos compañeros con respecto a las clases genéricas
+[466.55 -> 468.55] estas se usan y se implementan en el código
+[468.55 -> 470.55] que ya va principalmente para lo que era la utilización de código
+[470.55 -> 472.55] porque cuando por ejemplo
+[472.55 -> 474.55] ya bajamos un poco más a lo que es a nivel de máquina
+[474.55 -> 476.55] un poco a nivel de ensamblado
+[476.55 -> 478.55] de ordenar todos los programas
+[478.55 -> 480.55] de pasar por este proceso
+[480.55 -> 482.55] para la utilización de código
+[482.55 -> 484.55] se va a hacer mucho código redundante
+[484.55 -> 486.55] muchas líneas de código innecesarias
+[486.55 -> 488.55] que lo que van a hacer es un gasto innecesario
+[488.55 -> 490.55] en la memoria
+[490.55 -> 492.55] entonces este gasto innecesario en la memoria
+[492.55 -> 494.55] lo que nos puede provocar incluso a veces son errores
+[494.55 -> 496.55] que no se controlan de la forma adecuada
+[496.55 -> 498.55] y que no se tiene el manejo adecuado en la memoria
+[498.55 -> 500.55] entonces lo que se va a ser peligroso
+[500.55 -> 502.55] en estas clases genéricas
+[502.55 -> 504.55] es la reutilización de código
+[504.55 -> 506.55] mediante la diferenciación que realiza el usuario
+[506.55 -> 512.04] previamente en el código
+[512.04 -> 514.04] hay otro temita detrás
+[514.04 -> 516.04] de los generics
+[516.04 -> 518.04] de por qué tengo que usar esas clases
+[518.04 -> 520.04] y no los primitivos
+[520.04 -> 522.04] ahí tiene su tema de por qué
+[522.04 -> 524.04] todos usan clases sin los primitivos
+[524.04 -> 529.30] aunque para él
+[529.30 -> 531.30] aunque no hay bastante collection
+[531.30 -> 533.30] que agarro primitivos
+[533.30 -> 535.30] en genéricos
+[535.30 -> 537.30] hay bastantes generics
+[537.30 -> 539.30] que utilizan primitivos también
+[539.30 -> 545.18] quien me va a agregar algo por acá
+[545.18 -> 547.18] si quiere volver a retomar
+[547.18 -> 549.18] el tema anterior
+[549.18 -> 551.18] de Yabamat
+[551.18 -> 561.18] o este
+[561.18 -> 566.12] y Steve
+[566.12 -> 568.12] no, creo que él sabe de acuerdo con mis compañeros
+[568.12 -> 570.12] creo que llenó todo lo que él pensaba
+[570.12 -> 573.88] está bien jóvenes
+[573.88 -> 575.88] entonces estamos con ustedes
+[575.88 -> 577.88] bueno
+[577.88 -> 579.88] no sé si puedo agregar algo más
+[579.88 -> 581.88] dale sí
+[581.88 -> 583.88] básicamente
+[583.88 -> 585.88] las primitivas son para operaciones
+[585.88 -> 589.19] fundamentales
+[589.19 -> 591.19] es como lo único que...
+[591.19 -> 593.19] perdón, perdón
+[593.19 -> 595.19] si no conocí el nombre
+[595.19 -> 597.19] adelante Steven nos habla sobre primitivas
+[597.19 -> 599.19] las primitivas son en Yabat
+[599.19 -> 601.19] serían como para las operaciones fundamentales
+[601.19 -> 603.19] nada más es como lo que agregaría
+[603.19 -> 605.19] para complementar
+[605.19 -> 607.19] son para operaciones
+[607.19 -> 609.19] muy
+[609.19 -> 611.19] muy básicas
+[611.19 -> 613.19] por así decir
+[613.19 -> 615.19] está bien listo
+[615.19 -> 617.19] estamos jóvenes
+
+
+--- TEXTO COMPLETO CONTINUO ---
+
+Ok, bueno, lo que vamos a conversar es de por qué será que en Yabalán está la clase de Mat que tiene un montón de funciones citas, matemáticas, pero también está el paquete de Yabamá por qué, qué es lo que lo diferencia, qué es lo que debería ir en un lado o en otro qué será lo que está sucediendo ahí porque es que eso está así y si alguien quiere intervenir, nada más Dale, entonces escuchamos a Daniel Sánchez Bueno, primero de nada, en el caso de Yabalán.mat, lo que incluye más operaciones aritméticas dirigidas más a lo que son un poco los aspectos primitivos de Yabá Esto qué quiere decir, que lo que permite va a ser manejar los dobles, los flotantes y demás aspectos Por otro lado, tenemos el Yabá.mat, que es un poco más concreto, pero este fue desarrollado principalmente para el uso de casos financieros más precisos que requerían de una exactitud y una precisión mayor Además, algo importante es que el Yabá.mat fue diseñado por la limitación de binarias del punto flotante cuando se generaban las reimpresiones en el sistema Hay mucho que ver eso que ya hablé ante con el asunto del flotante ¿Alguno quiere agregar algo? No mensaje nada más a Yabá.mat Dale, porque esto necesita varias facetas si quiere, eso lo voy a seguir comentando un poquito Bueno, dentro de este, el Yabá.mat tiene dos características principales Es el Big Integer y el Big Deciman El Big Integer lo que permite es que son enteros de tamaño más arbitrarios y limitados un poco por lo que es la memoria RAM Justamente esto es una de las principales limitaciones Por otro lado, el Big Deciman es una dinética y una lógica mucho más precisa, más exacta que permite controlar justamente el punto flotante como mencionado en el tema del rarondeo y en cálculos financieros y monetarios nuevamente Sí, se llama Big Decimal porque usan todo el... acuérdense que la computación es binaria por tamaño tratamos de manejar la hexadecimal pero el ser humano utiliza limítrica decimal con base 10, todo lo tenemos en base 10 entonces nos sobran unos bits cuando usamos base 10 nos quedan unos bits sobrando entonces eso les da chance de poder darle más precisión a nivel de los decimales y pareciera no ser tan gran cosa no pareciera ser tan grande Jorge Vargas es un profesor que habla muchísimo de la precisión de los decimales porque en algunas cosas si cuenta probablemente para nosotros para un vuelto eso solo es menos con dos decimales que me cobran de algo en un recibo yo ni le hace mente pero por ejemplo ya cuando hay gente que mueve demasiado dinero incluso se puede ver acá seis decimales y de los otros seis decimales que digan se hace millonario perfectamente y esto me quita y lo está viendo pero jugar con más se tiene en su tema y también en temas de precisión porque por ejemplo en el equipo quirúrgico el equipo quirúrgico ya tiene un eje coordenado en números enteros porque hay una péndice, hay un cáncer para ver la imagen es una cuestión minimétrica un tamaño demasiado chiquito incluso a tamaño de nanómetros para poder quemar, para poder romper y todas esas cosas entonces ocupan más precisión entonces si sería una tontera por ejemplo de un sistema de facturación usando las tareas que hay en Java Mat porque es demasiada computación para la computación y viceversa algo que sea tan fino no lo voy a usar como operadores básicos que me da el Mat de Java Lab ok vamos a ver vamos a dar un último temita por acá para que pueda comenzar si hablemos de por qué es que existen clases en Java Lab existen clases para integer, para boolean para float, como clases incluso que están con letra mayúscula sin embargo muchas de ellas también ya vimos que son primitivas incluso esas clases basen trabajan con primitivas también entonces por qué es que tenemos ambas cosas incluso si ven las primitivas tienen métodos también no es que no sean objetos entonces ¿qué pueden conversar ustedes por ahí de eso? según lo que yo puedo entender para facilitar el uso de las mismas o para hacer algo más complejo de las mismas es en plan de que el boolean según que te he entendido para hacer métodos más fácilmente pues es lo que yo entendí si es para mayor facilidad de programación ¿qué no se puede desamplear ahí David Suñé? este bueno que por ejemplo el influx char y boolean long y double va más dirigido por ejemplo para mejor este mejor este uso de la memoria ya que se almacenan directamente sus valores de pila de peneado por ejemplo que puede ser y de ahí están los otros que son ya wrapper classes que son por ejemplo bueno se les dice ese también heap que se usa por dos razones las que usted ya mencionó que es más que todo para formación orientada a objetos y las estructuras de datos genericas y eso está el class y después va loco ¿qué es eso? ¿estructuras de datos genéricas? es este la parte como usa ya va a las sus colecciones por ejemplo Lee's integer falta hablar un poquito ahí un poquito de la idea de todas las collections alguien más quiere agregar algo es el último chance de participar de este tema ¿no? nos ocupa decir el nombre ahí sí, perdón que nos comentas Daniel para comentarlo y complementar un poco los viejos compañeros con respecto a las clases genéricas estas se usan y se implementan en el código que ya va principalmente para lo que era la utilización de código porque cuando por ejemplo ya bajamos un poco más a lo que es a nivel de máquina un poco a nivel de ensamblado de ordenar todos los programas de pasar por este proceso para la utilización de código se va a hacer mucho código redundante muchas líneas de código innecesarias que lo que van a hacer es un gasto innecesario en la memoria entonces este gasto innecesario en la memoria lo que nos puede provocar incluso a veces son errores que no se controlan de la forma adecuada y que no se tiene el manejo adecuado en la memoria entonces lo que se va a ser peligroso en estas clases genéricas es la reutilización de código mediante la diferenciación que realiza el usuario previamente en el código hay otro temita detrás de los generics de por qué tengo que usar esas clases y no los primitivos ahí tiene su tema de por qué todos usan clases sin los primitivos aunque para él aunque no hay bastante collection que agarro primitivos en genéricos hay bastantes generics que utilizan primitivos también quien me va a agregar algo por acá si quiere volver a retomar el tema anterior de Yabamat o este y Steve no, creo que él sabe de acuerdo con mis compañeros creo que llenó todo lo que él pensaba está bien jóvenes entonces estamos con ustedes bueno no sé si puedo agregar algo más dale sí básicamente las primitivas son para operaciones fundamentales es como lo único que... perdón, perdón si no conocí el nombre adelante Steven nos habla sobre primitivas las primitivas son en Yabat serían como para las operaciones fundamentales nada más es como lo que agregaría para complementar son para operaciones muy muy básicas por así decir está bien listo estamos jóvenes
