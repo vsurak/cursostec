@@ -69,11 +69,33 @@ Shares:
 5. El estudiante hizo pruebas programadas o medición analítica, que simulaban parcialmente el problema en estudio para verificar los rendimientos esperados y obtenidos. Es evidente ese ejercicio en su exposición. 20 shares. 
 ---
 
-# Discussion Session #2
+# Discussion Session #2 - Friday, September 11th, 2026
+
+## Topic
+Dynamic Programming and Greedy Algorithms, real business applications
+
+When studying types of algorithms, it is common to find academic examples used to illustrate the concepts: the traveling salesman, the shortest path in a graph, a simple game, the queens problem, Huffman trees, making change, the towers of Hanoi, among others. Commercially, programmers sometimes solve problems using these techniques, knowing and applying them in a planned or unplanned way, with a complete or sometimes partial approach.
+
+The student is expected to identify multiple real problems, either solved in a documented way or potential candidates to be solved by such techniques.
+
+*Expected mastery*
+- Fully masters the principles of each algorithmic strategy: what its steps and stages are, its formal requirements and criteria, how it manages the size of the problem, how it attacks, divides, and solves it, and the deterministic path it follows to arrive at a final answer.
+
+- Masters and studies multiple business cases for each type of algorithm, so that they can explain the context of the problem, its size, the algorithmic complexity, how the algorithm was designed, the steps it takes, and the result to be obtained; and, very importantly, knows the successes as well as the cases where the algorithm could fail or not be optimal, to the point of even being able to analyze its code.
+
+- For business cases that are potential candidates and/or have no detailed documentation, the student studies, analyzes, and develops a theory of application in which all the algorithm's requirements are addressed, can identify the steps to follow, the stages, the optima, the problem size N, the complexity measure, the correct cases and the corner cases that are not well handled, and clearly identifies the limitations and the potential of the proposed algorithm. This is applied to several problems and to both types of algorithms. In such a case, plenty of documentation was study to understand the real business problem. 
+
+- The student has such command of the material that they do NOT need to read theory during the discussion session in order to explain the multiple facets of both the problems and the solution algorithms.
+
+
+## Market Sheet
+
+---
+
+# Discussion Session #3
 
 ## Topic
 
 ## Market Sheet
 
 ---
-

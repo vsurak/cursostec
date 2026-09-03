@@ -18,6 +18,19 @@ Following a trend is difficult because of the speed at which values change and t
 8. Build a UI that displays statistics of the generated trends and follows the trend visually with a chart. This part does not need to be planned step-by-step; it can be generated directly through prompting once the producer/consumer with divide and conquer is working.
 9. Prepare to present your strategy and final solution to your classmates at the end of class.
 
+- En este punto el consumer ya tiene un sample de números de tamaño N al que hay que aplicar un Divide and conquer para obtener la respuesta del trend. 
+
+Specs del algoritmo:
+- tipo de dato de retorno XYZ, el nombre del método y los parámetros
+- definir XYZ
+- definir si hay que hacerle algún tratamiento a la colección (opcional)
+- darle la regla de division del N
+- decidir si sigo llamando iterativo cada tracto o recursivo 
+- declarar que la división llega hasta un tamaño mínimo, definir
+- describir el método que van a usar para determinar el trend value y si subió o bajó
+- especificar lo que se retorna 
+- declarar cuál es el algoritmo de "merge" de las respuestas que van armando la respuesta final hacia arriba. 
+
 ## Clusters
 
 ### Context

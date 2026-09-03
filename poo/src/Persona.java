@@ -47,7 +47,7 @@ mayuscula, siguiendo camelCase
 
 public class Persona {
     private byte edad;  // cuando no se especifica la visibilidad, el default es protected
-    private String nombre;
+    protected String nombre;
     //private enum status = {CAMINANDO(0), DURMIENDO, TRABAJNADO, CANTANDO };
 
 

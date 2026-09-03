@@ -33,6 +33,7 @@ public class quickstart {
 
         rodri = xyz; // si se hace esto, entonces los 3 punteros (nombres de variable), apuntarían
         // a la misma instancia. Y la instancia (fragmento de memoria), quedaría innaccesible. 
+        //rodri == xyz == p1 ?? es true
 
     }
 }

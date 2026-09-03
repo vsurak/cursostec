@@ -10,3 +10,4 @@ bin
 !/bases II/hadoop-image/kafka
 *.dat
 /bases I/mysql
+*.class

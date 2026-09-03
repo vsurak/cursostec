@@ -85,11 +85,33 @@ Shares:
 
 ---
 
-# Discussion Session #2
+# Discussion Session #2 - Friday, September 11th, 2026
+
+## Topic
+There are concepts that are pillars for mastering the object-oriented paradigm in any programming language: abstraction, encapsulation, inheritance, and polymorphism. The student not only comes to master these concepts in theory and in Java, but also masters them in practice and extrapolates them to other programming languages.
+
+*Expected mastery*
+
+- The student can explain real situations in class design where the principles of encapsulation are met or not met, knowing and mastering the scenarios in which the use of public, private, and protected is appropriate. They understand the effect of those modifiers on classes, constructors, methods, and instance variables.
+
+- Given example problems, they can mentally design in seconds the classes needed to solve a variety of problems, applying a correct separation of concerns.
+
+- Fully masters how inheritance is done not only in Java but also in some other language; thoroughly understands aspects associated with inheritance, such as the use of abstract classes, abstract methods, and the use of this and super when there is inheritance, in both methods and constructors. Knows how to build multi-level inheritance, how to override inherited methods, and also how to extend them when both the functionality programmed in the parent and the additional code written in the child are required in a given order; and applies those skills to real-life examples in different languages.
+
+- Is able to imagine and create new possibilities and worlds supported by polymorphism; knows and fully masters how to achieve polymorphic classes and methods by means of concrete classes, abstract classes, and interfaces. Combines polymorphism and inheritance skillfully and recognizes their particularities in Java and in some other language.
+
+- The student masters all of the above without reading documentation, and can explain it to other people fluently, with real examples and situations that could arise in programs they have built or could be building in the future.
+
+- The 4 pillars are identifiable not only in code and in theory, but also graphically using UML.
+
+## Market Sheet
+
+---
+
+# Discussion Session #3
 
 ## Topic
 
 ## Market Sheet
 
 ---
-
