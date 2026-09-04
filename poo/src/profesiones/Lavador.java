@@ -1,4 +1,7 @@
+package profesiones;
+
 import java.util.Vector;
+import personas.Persona;
 
 public class Lavador extends Persona {
     private Vector<String> propiedades;

@@ -2,7 +2,7 @@
 
 Continue the design and programming of our small Person program. We are going to carry out the following activities.
 
-1. **Inheritance.** Inheritance lets a class share and specialize the structure and behavior of a more general class: a subclass inherits the attributes and methods of its parent and can override or extend them to behave differently. Use inheritance to model different types of Person professions, so that each profession can perform different actions depending on what it is. Create 3 different professions. Each class must have proper getters and setters, and must correctly control what is private, public, and static.
+1. **Inheritance.** Inheritance lets a class share and specialize the structure and behavior of a more general class: a subclass inherits the attributes and methods of its parent and can override or extend them to behave differently. Use inheritance to model different types of Person professions, so that each profession can perform different actions depending on what it is. Create 3 different professions. Each class must have proper getters and setters, and must correctly control what is private, public, protected and static.
 
 2. **Polymorphism.** Polymorphism lets objects of different classes be treated through a common type, while each one still executes its own specific version of a behavior when that behavior is invoked. Using polymorphism, create mutant powers — 5 different mutant powers in total. Each power must print to the console a different string of characters that visually represents that power when it is used.
 

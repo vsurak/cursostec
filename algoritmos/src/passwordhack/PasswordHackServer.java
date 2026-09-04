@@ -28,7 +28,7 @@ public class PasswordHackServer {
     private static final Pattern VALID_GUESS = Pattern.compile("^[a-z]{2,4}$");
 
     private volatile String currentPassword;
-
+`
     public static void main(String[] args) throws IOException {
         new PasswordHackServer().start();
     }

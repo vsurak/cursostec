@@ -1,4 +1,7 @@
+package profesiones;
+
 import java.util.Vector;
+import personas.Persona;
 
 public class Narco extends Persona {
     private Vector<Dealer> dealers;

@@ -47,4 +47,21 @@ Dynamic programming is well suited to problems where a solution can be built inc
 6. Verify that your design satisfies the properties/requirements of a dynamic programming algorithm.
 7. Once the code has been generated in a specific language, add comments in the code that point to the exact location where each dynamic programming requirement is satisfied.
 
+Spec
+- Producer, Consumer con pace configurables, el patron exige queue. 
+- nombres de los métodos, los parámetros, valores de retorno
+- closeness: f(x) = 
+- Subproblema: divisiones en decenas, optimo local: los clusters de este grupo y la magnitud del closeness + juntando los clusters y la magnitud de entrada. 
+- Solapamiento: los clusters y la magnitud se pasan al siguiente subproblema, a la siguiente decena
 
+3, 5, 7  etapa 1
+(0 clusters, magnitud 0) 
+= mem(1 cluster , magnitud es 3 )
+--------------------------------------
+Siguiente (el siguiente grupo de numeros) etapa 2
+- recalculo clusters, magnitudes y actualizo el mem
+mem (3 clusters, magnitud 13)
+
+---------------
+
+El optimo es el ultimo valor en mem
