@@ -90,7 +90,17 @@ The student is expected to identify multiple real problems, either solved in a d
 
 ## Market Sheet
 
----
+Shares:
+
+1. El estudiante demostró que estudió más de un ejemplo o caso por cada tipo de algoritmo. 20 shares.
+
+2. Siempre que explicó un caso existente o un candidato para programación dinámica fué claro en como le pasaba resultados de una etapa a otra, también donde y cómo ocurría la memorización de valores previamente calculados, y tuvo claridad en el tamaño n y etapas del algoritmo. 40 shares.
+
+3. Cuando explicó casos existentes o candidatos para algoritmos voráces supo determinar cuál era el criterio de selección, la función de evaluación de la función, los óptimos locales y globales del algoritmo. 40 shares. 
+
+4. Pudo explicar código de alguno de los algoritmos estudiados a cabalidad, haciendo énfasis en la estrategia del algoritmo y cómo esta se encuentra y es evidente en el código. 30 shares. 
+
+5. Demuestra claro dominio del tamaño N del problema cuando discute y sobre las etapas que debe seguir ese algoritmo con respecto a ese N. 15 shares. 
 
 # Discussion Session #3
 

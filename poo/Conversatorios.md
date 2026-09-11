@@ -106,6 +106,53 @@ There are concepts that are pillars for mastering the object-oriented paradigm i
 
 ## Market Sheet
 
+Shares:
+1. El estudiante en su explicación logra extraer capacidades al poder de la herencia, más allá de solo la herencia de carácterístias como atributos, si no más bien, asociados a encapsulamiento y polimorfismo.
+30 shares.
+
+2. Deja claro los momentos en los que es conveniente usar herencia de clases versus interfaces, dejando claro las ventajas y momentos donde es mejor una técnica que otra. 35 shares.
+
+3. El estudiante tiene claro las limitaciones de las interfaces pero también la flexibilidad de sus ventajas, incluso al punto que abstrae el porque el java api o alguno de los paquetes de java posee Interfaces que podemos implementar. 25 shares. 
+
+4. El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado. 25 shares.
+
+![Discussion Session #2](images/conversatorio#2-1.png)
+
+
+```
+@startuml
+
+class TransaccionDinero {
+    - monto : double
+    - fecha : Date
+    - tipoTransaccion : String
+    - descripcion : String
+    - tipoCambio : double
+}
+
+class Persona {
+    - nombre : String
+    - cedula : String
+    - direccion : String
+    - invoice : Invoice   // ❌ Error: debería ser una colección (muchos invoices)
+}
+
+class Invoice {
+    - numero : String
+    - monto : double
+    - fecha : Date
+    - transaccion : String
+    - moneda : String
+    - saldo : double
+    - dirigidoA : String
+}
+
+Persona -- Invoice : tiene 1
+Persona --|> TransaccionDinero : ❌ Error de herencia
+
+@enduml
+```
+
 ---
 
 # Discussion Session #3

@@ -263,3 +263,11 @@ for char, code in sorted(codes.items()):
 - **Ignoring problem structure**: Applying greedy without understanding whether the problem actually admits a greedy solution.
 - **Incorrect sorting or ordering**: Using wrong sort criteria that don't align with the greedy strategy, breaking the algorithm's correctness.
 - **Not handling edge cases**: Failing to address empty inputs, single elements, or impossible constraints that might cause unexpected behavior.
+
+
+## Exercise to be done in class on paper
+
+Millions of records coming from thousands of CSV files need to be loaded into a database. It is known that all records within each file are unique, but duplicate records may exist across other files with a different identifier, even though the information is the same. The records have the form (recordnumber, invoicenumber, description, amount, date, authorby).
+
+- Design a greedy algorithm that processes the N CSV files and loads only the unique records into the database, avoiding the insertion of duplicates; knowing that querying the database to check whether a record already exists is not acceptable, given the very high performance cost of doing so record by record.
+
