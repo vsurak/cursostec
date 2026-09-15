@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="960" height="560" fill="#0f172a"/>
+  <text x="480" y="40" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="700">Decomposition and Component Identification</text>
+
+  <!-- Top-level system -->
+  <rect x="360" y="70" width="240" height="60" rx="10" fill="#38bdf8"/>
+  <text x="480" y="106" text-anchor="middle" fill="#0f172a" font-weight="700" font-size="16">Library System</text>
+
+  <!-- Connectors down to subsystems -->
+  <line x1="480" y1="130" x2="150" y2="185" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="480" y1="130" x2="480" y2="185" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="480" y1="130" x2="810" y2="185" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- Subsystems (functional decomposition) -->
+  <g font-size="14" fill="#0f172a">
+    <rect x="40" y="185" width="220" height="50" rx="8" fill="#34d399"/>
+    <text x="150" y="216" text-anchor="middle" font-weight="700">Catalog Subsystem</text>
+
+    <rect x="370" y="185" width="220" height="50" rx="8" fill="#34d399"/>
+    <text x="480" y="216" text-anchor="middle" font-weight="700">Loan Subsystem</text>
+
+    <rect x="700" y="185" width="220" height="50" rx="8" fill="#34d399"/>
+    <text x="810" y="216" text-anchor="middle" font-weight="700">Member Subsystem</text>
+  </g>
+
+  <!-- Class boxes derived (object identification) under Loan subsystem -->
+  <line x1="480" y1="235" x2="480" y2="270" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="480" y1="270" x2="300" y2="270" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="480" y1="270" x2="480" y2="270" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="480" y1="270" x2="660" y2="270" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="300" y1="270" x2="300" y2="300" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="480" y1="270" x2="480" y2="300" stroke="#cbd5e1" stroke-width="2"/>
+  <line x1="660" y1="270" x2="660" y2="300" stroke="#cbd5e1" stroke-width="2"/>
+
+  <!-- UML-like class boxes -->
+  <g>
+    <rect x="200" y="300" width="200" height="110" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="200" y="300" width="200" height="28" fill="#fbbf24"/>
+    <text x="300" y="319" text-anchor="middle" fill="#0f172a" font-weight="700" font-size="14">Loan</text>
+    <line x1="200" y1="350" x2="400" y2="350" stroke="#475569"/>
+    <text x="212" y="342" fill="#e2e8f0" font-size="11">- dueDate: Date</text>
+    <text x="212" y="366" fill="#e2e8f0" font-size="11">+ renew()</text>
+    <text x="212" y="382" fill="#e2e8f0" font-size="11">+ close()</text>
+    <text x="212" y="398" fill="#e2e8f0" font-size="11">+ isOverdue(): bool</text>
+  </g>
+
+  <g>
+    <rect x="440" y="300" width="200" height="110" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="440" y="300" width="200" height="28" fill="#fbbf24"/>
+    <text x="540" y="319" text-anchor="middle" fill="#0f172a" font-weight="700" font-size="14">Book</text>
+    <line x1="440" y1="350" x2="640" y2="350" stroke="#475569"/>
+    <text x="452" y="342" fill="#e2e8f0" font-size="11">- isbn: String</text>
+    <text x="452" y="366" fill="#e2e8f0" font-size="11">+ checkAvailability()</text>
+    <text x="452" y="382" fill="#e2e8f0" font-size="11">+ reserve()</text>
+    <text x="452" y="398" fill="#e2e8f0" font-size="11">+ getCopies(): int</text>
+  </g>
+
+  <g>
+    <rect x="680" y="300" width="200" height="110" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="2"/>
+    <rect x="680" y="300" width="200" height="28" fill="#fbbf24"/>
+    <text x="780" y="319" text-anchor="middle" fill="#0f172a" font-weight="700" font-size="14">Fine</text>
+    <line x1="680" y1="350" x2="880" y2="350" stroke="#475569"/>
+    <text x="692" y="342" fill="#e2e8f0" font-size="11">- amount: Decimal</text>
+    <text x="692" y="366" fill="#e2e8f0" font-size="11">+ calculate()</text>
+    <text x="692" y="382" fill="#e2e8f0" font-size="11">+ pay()</text>
+    <text x="692" y="398" fill="#e2e8f0" font-size="11">+ waive()</text>
+  </g>
+
+  <!-- relationship line between Loan and Book, Loan and Fine -->
+  <line x1="400" y1="355" x2="440" y2="355" stroke="#94a3b8" stroke-width="2"/>
+  <text x="420" y="345" text-anchor="middle" fill="#94a3b8" font-size="10">1..*</text>
+  <line x1="640" y1="355" x2="680" y2="355" stroke="#94a3b8" stroke-width="2"/>
+  <text x="660" y="345" text-anchor="middle" fill="#94a3b8" font-size="10">0..1</text>
+
+  <text x="480" y="450" text-anchor="middle" fill="#e2e8f0" font-size="14">Top-down functional decomposition (system → subsystems)</text>
+  <text x="480" y="470" text-anchor="middle" fill="#e2e8f0" font-size="14">joins bottom-up object identification (nouns → classes with attributes/methods)</text>
+  <text x="480" y="500" text-anchor="middle" fill="#94a3b8" font-size="13">Each subsystem is realized by a small set of cohesive, loosely coupled classes</text>
+</svg>

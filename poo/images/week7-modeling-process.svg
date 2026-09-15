@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="960" height="520" fill="#0f172a"/>
+  <text x="480" y="40" text-anchor="middle" fill="#f8fafc" font-size="24" font-weight="700">Object-Oriented Modeling Process</text>
+
+  <!-- Step boxes -->
+  <g font-size="15" fill="#0f172a">
+    <rect x="30" y="90" width="170" height="90" rx="10" fill="#38bdf8"/>
+    <text x="115" y="125" text-anchor="middle" font-weight="700">Problem Domain</text>
+    <text x="115" y="147" text-anchor="middle" font-size="12">Requirements &amp;</text>
+    <text x="115" y="163" text-anchor="middle" font-size="12">real-world entities</text>
+
+    <rect x="245" y="90" width="170" height="90" rx="10" fill="#34d399"/>
+    <text x="330" y="118" text-anchor="middle" font-weight="700">Heuristics</text>
+    <text x="330" y="140" text-anchor="middle" font-size="12">Nouns → classes</text>
+    <text x="330" y="156" text-anchor="middle" font-size="12">Verbs → methods</text>
+
+    <rect x="460" y="90" width="170" height="90" rx="10" fill="#fbbf24"/>
+    <text x="545" y="118" text-anchor="middle" font-weight="700">Decomposition</text>
+    <text x="545" y="140" text-anchor="middle" font-size="12">Split into</text>
+    <text x="545" y="156" text-anchor="middle" font-size="12">subsystems</text>
+
+    <rect x="675" y="90" width="170" height="90" rx="10" fill="#f472b6"/>
+    <text x="760" y="118" text-anchor="middle" font-weight="700">Component ID</text>
+    <text x="760" y="140" text-anchor="middle" font-size="12">Classes, attributes,</text>
+    <text x="760" y="156" text-anchor="middle" font-size="12">relationships</text>
+  </g>
+
+  <!-- Arrows top row -->
+  <g stroke="#cbd5e1" stroke-width="3" marker-end="url(#arrow)">
+    <line x1="200" y1="135" x2="243" y2="135"/>
+    <line x1="415" y1="135" x2="458" y2="135"/>
+    <line x1="630" y1="135" x2="673" y2="135"/>
+  </g>
+
+  <!-- Refine loop -->
+  <rect x="245" y="260" width="470" height="90" rx="10" fill="#818cf8"/>
+  <text x="480" y="292" text-anchor="middle" fill="#0f172a" font-weight="700" font-size="16">Refine &amp; Validate Model</text>
+  <text x="480" y="315" text-anchor="middle" fill="#0f172a" font-size="12">Check cohesion, coupling, responsibilities against use cases</text>
+  <text x="480" y="332" text-anchor="middle" fill="#0f172a" font-size="12">(UML class &amp; sequence diagrams)</text>
+
+  <line x1="760" y1="180" x2="760" y2="230" stroke="#cbd5e1" stroke-width="3"/>
+  <line x1="760" y1="230" x2="480" y2="230" stroke="#cbd5e1" stroke-width="3"/>
+  <line x1="480" y1="230" x2="480" y2="258" stroke="#cbd5e1" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <path d="M 245 305 C 150 305 150 200 113 200 113 200 113 190" fill="none" stroke="#94a3b8" stroke-width="3" stroke-dasharray="6 4" marker-end="url(#arrow-grey)"/>
+  <text x="150" y="400" fill="#e2e8f0" font-size="13">Iterate: refined model feeds back into</text>
+  <text x="150" y="418" fill="#e2e8f0" font-size="13">problem understanding until stable</text>
+
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#cbd5e1"/>
+    </marker>
+    <marker id="arrow-grey" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#94a3b8"/>
+    </marker>
+  </defs>
+
+  <text x="480" y="470" text-anchor="middle" fill="#94a3b8" font-size="13">From requirements to a validated object model: an iterative, not linear, path</text>
+</svg>

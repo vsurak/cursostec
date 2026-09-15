@@ -116,7 +116,7 @@ Shares:
 
 4. El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado. 25 shares.
 
-![Discussion Session #2](images/conversatorio#2-1.png)
+![Discussion Session #2](./images/conversatorio#2-1.png)
 
 
 ```
