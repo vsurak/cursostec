@@ -1,0 +1,92 @@
+[
+  {
+    "nombre_completo": "OBANDO MORALES SANTIAGO LEONEL",
+    "nickname": "LunaBrilla",
+    "shares_totales": 90,
+    "shares_totales_sin_tope": 90,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante demostró que estudió más de un ejemplo o caso por cada tipo de algoritmo.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.25,
+        "shares_obtenidos": 5,
+        "justificacion": "Trajo exactamente un caso por tipo (git diff para PD, token bucket del kernel de Linux para voraz), ambos con mucha profundidad, pero el criterio pide 'más de un ejemplo' por tipo y no aportó un segundo caso en ninguno de los dos, por lo que solo se reconoce parcialmente el esfuerzo de documentación individual de cada caso."
+      },
+      {
+        "criterio": "Siempre que explicó un caso existente o un candidato para programación dinámica fué claro en como le pasaba resultados de una etapa a otra, también donde y cómo ocurría la memorización de valores previamente calculados, y tuvo claridad en el tamaño n y etapas del algoritmo.",
+        "shares_maximos": 40,
+        "grado_cumplimiento": 1.0,
+        "shares_obtenidos": 40,
+        "justificacion": "Explicó con precisión el paso de una etapa a otra ('ese paso de una iteración a la otra del grafo es en esa parte de las diagonales'), identificó explícitamente dónde ocurre la memoization ('memoriza los cambios que hizo en cada iteración de este grafo') y definió con claridad N (longitud del archivo), D (cantidad de cambios) y la complejidad (D*N, peor caso N^2), cubriendo todos los elementos del criterio."
+      },
+      {
+        "criterio": "Cuando explicó casos existentes o candidatos para algoritmos voráces supo determinar cuál era el criterio de selección, la función de evaluación de la función, los óptimos locales y globales del algoritmo.",
+        "shares_maximos": 40,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 30,
+        "justificacion": "Identificó con claridad el criterio de selección (comparación binaria de tokens disponibles vs. tamaño del paquete) y contrastó explícitamente la falta de óptimo global ('sin tener una percepción global del entorno de la red') con la decisión local por paquete; sin embargo, no formalizó una 'función de evaluación' explícita más allá del cálculo de tokens por timestamp, por lo que no se otorga el máximo."
+      },
+      {
+        "criterio": "Pudo explicar código de alguno de los algoritmos estudiados a cabalidad, haciendo énfasis en la estrategia del algoritmo y cómo esta se encuentra y es evidente en el código.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "Describe el comportamiento algorítmico y la lógica interna con detalle (construcción del grafo, iteración de D), pero en ningún momento hace referencia a líneas o fragmentos de código reales ni señala explícitamente dónde en el código se evidencia la estrategia, por lo que no se cumple el criterio tal como está planteado."
+      },
+      {
+        "criterio": "Demuestra claro dominio del tamaño N del problema cuando discute y sobre las etapas que debe seguir ese algoritmo con respecto a ese N.",
+        "shares_maximos": 15,
+        "grado_cumplimiento": 1.0,
+        "shares_obtenidos": 15,
+        "justificacion": "Define N explícitamente como la longitud del archivo, relaciona las etapas (incremento de D) con ese N, y calcula la complejidad resultante (D*N, peor caso N^2), mostrando dominio completo de este aspecto."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "AGUILAR SEGURA LUIS ALBERTO",
+    "nickname": "SolBrilla",
+    "shares_totales": 50,
+    "shares_totales_sin_tope": 50,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante demostró que estudió más de un ejemplo o caso por cada tipo de algoritmo.",
+        "shares_maximos": 20,
+        "grado_cumplimiento": 0.5,
+        "shares_obtenidos": 10,
+        "justificacion": "Para el algoritmo voraz aplicó Dijkstra a dos dominios distintos (rutas GPS/Google Maps e instalaciones eléctricas), lo que se acerca a 'más de un caso'; pero para programación dinámica solo trajo un único caso (similitud de palabras / corrector ortográfico), por lo que el criterio se cumple solo parcialmente y de forma desigual entre los dos tipos."
+      },
+      {
+        "criterio": "Siempre que explicó un caso existente o un candidato para programación dinámica fué claro en como le pasaba resultados de una etapa a otra, también donde y cómo ocurría la memorización de valores previamente calculados, y tuvo claridad en el tamaño n y etapas del algoritmo.",
+        "shares_maximos": 40,
+        "grado_cumplimiento": 0.25,
+        "shares_obtenidos": 10,
+        "justificacion": "Menciona vagamente la idea de reutilizar 'el código de cada carácter' para la siguiente palabra (un indicio de memoization) y las tres operaciones de edición, pero él mismo reconoce que 'me costó un poco más entenderlo' y no define el tamaño N del problema, ni explica con precisión cómo se pasan los resultados de una etapa a otra en la matriz, por lo que solo se reconoce un elemento menor y superficial."
+      },
+      {
+        "criterio": "Cuando explicó casos existentes o candidatos para algoritmos voráces supo determinar cuál era el criterio de selección, la función de evaluación de la función, los óptimos locales y globales del algoritmo.",
+        "shares_maximos": 40,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 30,
+        "justificacion": "Identificó con claridad el criterio de selección (vértice/arista de menor distancia) y el concepto de óptimo local frente al global ('el óptimo local también podría ser de A a B, el más corto, sin tener que llegar a C'), aplicándolo a dos dominios distintos; no obstante, no formalizó explícitamente una 'función de evaluación' más allá de la noción de distancia/peso, por lo que no alcanza el máximo."
+      },
+      {
+        "criterio": "Pudo explicar código de alguno de los algoritmos estudiados a cabalidad, haciendo énfasis en la estrategia del algoritmo y cómo esta se encuentra y es evidente en el código.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "No se hace referencia en ningún momento a código fuente real de Dijkstra ni del algoritmo de distancia de edición; la explicación se mantiene a nivel conceptual, sin señalar cómo la estrategia se evidencia en líneas de código concretas."
+      },
+      {
+        "criterio": "Demuestra claro dominio del tamaño N del problema cuando discute y sobre las etapas que debe seguir ese algoritmo con respecto a ese N.",
+        "shares_maximos": 15,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "En ninguno de los dos casos (Dijkstra ni la comparación de palabras) define o discute explícitamente el tamaño N del problema ni cómo las etapas escalan con N; sus explicaciones son cualitativas y no abordan este aspecto."
+      }
+    ],
+    "necesita_revision_manual": false
+  }
+]

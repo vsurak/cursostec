@@ -1,0 +1,306 @@
+[
+  {
+    "nombre_completo": "MADRIGAL CAMPOS ANDRES",
+    "nickname": "PoseidonNaranja",
+    "shares_totales": 64,
+    "shares_totales_sin_tope": 64,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante en su explicación logra extraer capacidades al poder de la herencia, más allá de solo la herencia de características como atributos, sino más bien, asociados a encapsulamiento y polimorfismo.",
+        "shares_maximos": 30,
+        "grado_cumplimiento": 0.75,
+        "shares_obtenidos": 23,
+        "justificacion": "Usa la jerarquía de Cuenta con un método actualizar() que se sobreescribe distinto en cada subtipo (con/sin interés), mostrando el poder polimórfico de la herencia más allá de heredar atributos; no llega a 1.0 porque no vincula explícitamente el concepto con encapsulamiento."
+      },
+      {
+        "criterio": "Deja claro los momentos en los que es conveniente usar herencia de clases versus interfaces, dejando claro las ventajas y momentos donde es mejor una técnica que otra.",
+        "shares_maximos": 35,
+        "grado_cumplimiento": 1.0,
+        "shares_obtenidos": 35,
+        "justificacion": "Establece explícitamente la regla de decisión: si los comportamientos son de un mismo linaje de herencia se usa herencia, si son distintos se fuerza a usar interfaces (ejemplo de transporte con método moverse), y añade la ventaja de poder implementar varias interfaces en una misma clase; cubre completamente lo pedido por el criterio."
+      },
+      {
+        "criterio": "El estudiante tiene claro las limitaciones de las interfaces pero también la flexibilidad de sus ventajas, incluso al punto que abstrae el porqué el java API o alguno de los paquetes de java posee interfaces que podemos implementar.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.25,
+        "shares_obtenidos": 6,
+        "justificacion": "Menciona la flexibilidad de las interfaces para combinar comportamientos distintos (transporte) y la posibilidad de implementar varias a la vez, pero no discute limitaciones de las interfaces ni razona sobre por qué el Java API las expone."
+      },
+      {
+        "criterio": "El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado.",
+        "shares_maximos": 25,
+        "grado_cumplimiento": 0.0,
+        "shares_obtenidos": 0,
+        "justificacion": "El contenido unificado de este estudiante corresponde al segmento de audio sobre polimorfismo e interfaces; no hay evidencia de que haya analizado el diagrama de Persona/Invoice/TransaccionDinero ni propuesto correcciones."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "FERNANDEZ CASTRO ANTHONY",
+    "nickname": "HeraNegro",
+    "shares_totales": 62,
+    "shares_totales_sin_tope": 62,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante en su explicación logra extraer capacidades al poder de la herencia, más allá de solo la herencia de características como atributos, sino más bien, asociados a encapsulamiento y polimorfismo.",
+        "shares_maximos": 30,
+        "shares_obtenidos": 23,
+        "grado_cumplimiento": 0.75,
+        "justificacion": "Explica con claridad cómo una lista del tipo padre puede contener objetos de cualquier subclase gracias al polimorfismo (todo hijo puede hacer lo que el padre puede) y cómo las clases abstractas obligan a implementar el contrato en las hijas; buen manejo de polimorfismo, pero no conecta explícitamente con encapsulamiento."
+      },
+      {
+        "criterio": "Deja claro los momentos en los que es conveniente usar herencia de clases versus interfaces, dejando claro las ventajas y momentos donde es mejor una técnica que otra.",
+        "shares_maximos": 35,
+        "shares_obtenidos": 26,
+        "grado_cumplimiento": 0.75,
+        "justificacion": "Señala explícitamente que las interfaces sirven para estandarizar nombres entre clases 'que no tienen relación directa de herencia' (ejemplo de tienda: reparar/garantía), dejando clara la ventaja de usar interfaz cuando no aplica herencia; no llega a 1.0 porque no elabora igual de explícito el lado de cuándo conviene la herencia por sí misma."
+      },
+      {
+        "criterio": "El estudiante tiene claro las limitaciones de las interfaces pero también la flexibilidad de sus ventajas, incluso al punto que abstrae el porqué el java API o alguno de los paquetes de java posee interfaces que podemos implementar.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 13,
+        "grado_cumplimiento": 0.5,
+        "justificacion": "Muestra bien la flexibilidad de las interfaces (estandarizar nombres en clases sin relación de herencia, facilitar expansión de un inventario), pero no menciona limitaciones concretas de las interfaces ni referencia directa al Java API."
+      },
+      {
+        "criterio": "El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "Su participación corresponde al segmento sobre polimorfismo/interfaces/clases abstractas; no aborda el diagrama de facturación ni sus errores."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "HERNANDEZ CAMACHO IGNACIO",
+    "nickname": "AteneaBlanco",
+    "shares_totales": 60,
+    "shares_totales_sin_tope": 60,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante en su explicación logra extraer capacidades al poder de la herencia, más allá de solo la herencia de características como atributos, sino más bien, asociados a encapsulamiento y polimorfismo.",
+        "shares_maximos": 30,
+        "shares_obtenidos": 23,
+        "grado_cumplimiento": 0.75,
+        "justificacion": "Va más allá de la herencia de atributos: advierte que alterar una clase padre puede afectar sin intención a las hijas (riesgo asociado a jerarquías grandes) y da un ejemplo claro de polimorfismo con método abstracto calcularArea sobreescrito distinto en cada figura; el vínculo con encapsulamiento queda solo insinuado, no explícito, por eso no llega a 1.0."
+      },
+      {
+        "criterio": "Deja claro los momentos en los que es conveniente usar herencia de clases versus interfaces, dejando claro las ventajas y momentos donde es mejor una técnica que otra.",
+        "shares_maximos": 35,
+        "shares_obtenidos": 18,
+        "grado_cumplimiento": 0.5,
+        "justificacion": "Explica que al no existir herencia múltiple en Java se fuerza a usar interfaces o combinar extends+implements (ejemplo Thread/Runnable), lo cual es un caso válido de cuándo usar interfaz; pero no desarrolla una comparación más amplia de ventajas de herencia vs interfaz más allá de esa limitación puntual del lenguaje."
+      },
+      {
+        "criterio": "El estudiante tiene claro las limitaciones de las interfaces pero también la flexibilidad de sus ventajas, incluso al punto que abstrae el porqué el java API o alguno de los paquetes de java posee interfaces que podemos implementar.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 19,
+        "grado_cumplimiento": 0.75,
+        "justificacion": "Da un ejemplo concreto y correcto del Java API (Thread y Runnable) explicando por qué existe esa interfaz para lograr comportamiento de hilo sin depender de herencia múltiple; le falta profundizar explícitamente en limitaciones propias de las interfaces (p. ej. ausencia de estado) para llegar a 1.0."
+      },
+      {
+        "criterio": "El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No hay referencia en su contenido al diagrama de Persona/Invoice/TransaccionDinero ni a sus errores."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "COREA HERRERA STEVEN FERNANDO",
+    "nickname": "OdinVerde",
+    "shares_totales": 36,
+    "shares_totales_sin_tope": 36,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante en su explicación logra extraer capacidades al poder de la herencia, más allá de solo la herencia de características como atributos, sino más bien, asociados a encapsulamiento y polimorfismo.",
+        "shares_maximos": 30,
+        "shares_obtenidos": 23,
+        "grado_cumplimiento": 0.75,
+        "justificacion": "Con el ejemplo del carro conecta explícitamente herencia y encapsulamiento: la clase padre concentra la información vital y compleja (motor, tornillos) protegida, mientras la hija solo expone lo superficial (volante, freno, cambios), de modo que los cambios se hacen solo en el padre; no menciona polimorfismo, por eso no llega a 1.0."
+      },
+      {
+        "criterio": "Deja claro los momentos en los que es conveniente usar herencia de clases versus interfaces, dejando claro las ventajas y momentos donde es mejor una técnica que otra.",
+        "shares_maximos": 35,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No hay mención de interfaces en su aporte; la sugerencia de usar interfaz para A,B,C,D en esa sección fue hecha por 'Martín Rojas', quien no es estudiante de la lista y se excluye explícitamente."
+      },
+      {
+        "criterio": "El estudiante tiene claro las limitaciones de las interfaces pero también la flexibilidad de sus ventajas, incluso al punto que abstrae el porqué el java API o alguno de los paquetes de java posee interfaces que podemos implementar.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No aborda el tema de interfaces en ningún momento de su intervención."
+      },
+      {
+        "criterio": "El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 13,
+        "grado_cumplimiento": 0.5,
+        "justificacion": "Detecta que la relación entre TransaccionDinero y Persona no está bien planteada y propone una alternativa (TransaccionDinero como padre reutilizando los datos de Persona), pero la solución sigue usando herencia de forma poco natural (no plantea la opción de composición/asociación) y no detecta el otro error marcado (Invoice debería ser una colección), que en esa sección fue señalado por un participante externo, no por él."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "SANCHEZ POVEDA DANIEL",
+    "nickname": "IsisBeige",
+    "shares_totales": 28,
+    "shares_totales_sin_tope": 28,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante en su explicación logra extraer capacidades al poder de la herencia, más allá de solo la herencia de características como atributos, sino más bien, asociados a encapsulamiento y polimorfismo.",
+        "shares_maximos": 30,
+        "shares_obtenidos": 15,
+        "grado_cumplimiento": 0.5,
+        "justificacion": "Identifica que TransaccionDinero e Invoice comparten atributos (monto, fecha) que podrían sobreescribirse de forma inconsistente entre sí, y propone encapsulamiento (privado) como mitigación; es una conexión real entre herencia/duplicación de estado y encapsulamiento, pero no menciona polimorfismo ni desarrolla el concepto más allá de este caso puntual."
+      },
+      {
+        "criterio": "Deja claro los momentos en los que es conveniente usar herencia de clases versus interfaces, dejando claro las ventajas y momentos donde es mejor una técnica que otra.",
+        "shares_maximos": 35,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No hay ninguna mención a interfaces ni a la comparación herencia vs interfaces en su contenido."
+      },
+      {
+        "criterio": "El estudiante tiene claro las limitaciones de las interfaces pero también la flexibilidad de sus ventajas, incluso al punto que abstrae el porqué el java API o alguno de los paquetes de java posee interfaces que podemos implementar.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No aborda el tema de interfaces."
+      },
+      {
+        "criterio": "El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 13,
+        "grado_cumplimiento": 0.5,
+        "justificacion": "Detecta problemas reales de encapsulamiento (tipo de cambio modificable desde Persona, datos sensibles expuestos) y de duplicación/inconsistencia de atributos entre Invoice y TransaccionDinero, proponiendo encapsulamiento como solución; sin embargo no identifica ninguno de los dos errores específicamente marcados por el profesor (Invoice debería ser colección, y el error de herencia Persona--|>TransaccionDinero)."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "VARGAS VARGAS GABRIEL",
+    "nickname": "VulcanoBronce",
+    "shares_totales": 27,
+    "shares_totales_sin_tope": 27,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante en su explicación logra extraer capacidades al poder de la herencia, más allá de solo la herencia de características como atributos, sino más bien, asociados a encapsulamiento y polimorfismo.",
+        "shares_maximos": 30,
+        "shares_obtenidos": 8,
+        "grado_cumplimiento": 0.25,
+        "justificacion": "Su argumento principal para que Persona sea padre de Transacción es 'heredar fácilmente cédula o dirección', que es precisamente herencia de atributos, justo lo que el criterio pide superar; el punto de la clase abstracta como molde para A,B,C,D roza la idea de centralizar comportamiento, pero no se conecta explícitamente con encapsulamiento ni polimorfismo."
+      },
+      {
+        "criterio": "Deja claro los momentos en los que es conveniente usar herencia de clases versus interfaces, dejando claro las ventajas y momentos donde es mejor una técnica que otra.",
+        "shares_maximos": 35,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No menciona interfaces en ningún momento; solo propone clases abstractas."
+      },
+      {
+        "criterio": "El estudiante tiene claro las limitaciones de las interfaces pero también la flexibilidad de sus ventajas, incluso al punto que abstrae el porqué el java API o alguno de los paquetes de java posee interfaces que podemos implementar.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No aborda el tema de interfaces."
+      },
+      {
+        "criterio": "El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 19,
+        "grado_cumplimiento": 0.75,
+        "justificacion": "Detecta directamente el error de herencia marcado por el profesor ('Persona debería ser el padre de la transacción y no al revés') y justifica bien el porqué (una persona puede tener múltiples transacciones); no llega a 1.0 porque no detecta el segundo error marcado (Invoice debería ser una colección) y porque su solución sigue usando herencia donde probablemente convendría una asociación/composición."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "ZUNIGA ARROYO PATRICK SEBASTIAN",
+    "nickname": "MartePerla",
+    "shares_totales": 23,
+    "shares_totales_sin_tope": 23,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante en su explicación logra extraer capacidades al poder de la herencia, más allá de solo la herencia de características como atributos, sino más bien, asociados a encapsulamiento y polimorfismo.",
+        "shares_maximos": 30,
+        "shares_obtenidos": 23,
+        "grado_cumplimiento": 0.75,
+        "justificacion": "Explica con detalle y ejemplos (lista de Animal con perro/gato/loro, orquesta) cómo la herencia habilita polimorfismo (sobreescritura + dinamismo en tiempo de ejecución) y extensibilidad al agregar nuevas clases; no llega a 1.0 porque no vincula esto con encapsulamiento."
+      },
+      {
+        "criterio": "Deja claro los momentos en los que es conveniente usar herencia de clases versus interfaces, dejando claro las ventajas y momentos donde es mejor una técnica que otra.",
+        "shares_maximos": 35,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No menciona interfaces; compara herencia rígida contra composición, una comparación distinta a la pedida por el criterio (herencia vs interfaces)."
+      },
+      {
+        "criterio": "El estudiante tiene claro las limitaciones de las interfaces pero también la flexibilidad de sus ventajas, incluso al punto que abstrae el porqué el java API o alguno de los paquetes de java posee interfaces que podemos implementar.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No hay mención de interfaces en su contenido."
+      },
+      {
+        "criterio": "El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "Su participación corresponde al segmento de polimorfismo/abstracción; no analiza el diagrama de facturación."
+      }
+    ],
+    "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "ZUNIGA PICADO DAVID",
+    "nickname": "NeptunoJade",
+    "shares_totales": 8,
+    "shares_totales_sin_tope": 8,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante en su explicación logra extraer capacidades al poder de la herencia, más allá de solo la herencia de características como atributos, sino más bien, asociados a encapsulamiento y polimorfismo.",
+        "shares_maximos": 30,
+        "shares_obtenidos": 8,
+        "grado_cumplimiento": 0.25,
+        "justificacion": "Solo da un ejemplo breve y superficial (override/extend en camión/barco adaptando capacidad de carga) sin profundizar en el mecanismo de polimorfismo (dispatch dinámico, colecciones) ni mencionar encapsulamiento; cumple solo un elemento menor del criterio."
+      },
+      {
+        "criterio": "Deja claro los momentos en los que es conveniente usar herencia de clases versus interfaces, dejando claro las ventajas y momentos donde es mejor una técnica que otra.",
+        "shares_maximos": 35,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No menciona interfaces en absoluto."
+      },
+      {
+        "criterio": "El estudiante tiene claro las limitaciones de las interfaces pero también la flexibilidad de sus ventajas, incluso al punto que abstrae el porqué el java API o alguno de los paquetes de java posee interfaces que podemos implementar.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No aborda el tema de interfaces."
+      },
+      {
+        "criterio": "El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "Su participación no aborda el diagrama de facturación ni sus errores."
+      }
+    ],
+    "necesita_revision_manual": false
+  }
+]

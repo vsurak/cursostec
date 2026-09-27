@@ -1,5 +1,5 @@
 /evaluar-estudiantes
-<audios>C:\dev\conversatorios\#1\algoritmos</audios>
+<audios>C:\dev\conversatorios\#2\algoritmos</audios>
 
 <tema>
 a.	Después de esto estudiado, cuáles podrían ser estrategias o estructuras de datos que normalmente llevan a un detrimento del rendimiento, y de la misma forma cuáles son técnicas o estructuras que normalmente van asociadas a la mejora?
