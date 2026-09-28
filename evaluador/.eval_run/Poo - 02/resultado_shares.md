@@ -8,6 +8,7 @@
 | FERNANDEZ CASTRO ANTHONY | HeraNegro | 62 | 62 |
 | HERNANDEZ CAMACHO IGNACIO | AteneaBlanco | 60 | 60 |
 | COREA HERRERA STEVEN FERNANDO | OdinVerde | 36 | 36 |
+| ROJAS BARRIOS MARTIN FRANCISCO | LokiRosa | 34 | 34 |
 | SANCHEZ POVEDA DANIEL | IsisBeige | 28 | 28 |
 | VARGAS VARGAS GABRIEL | VulcanoBronce | 27 | 27 |
 | ZUNIGA ARROYO PATRICK SEBASTIAN | MartePerla | 23 | 23 |
@@ -18,9 +19,16 @@ Ningún estudiante superó los 100 shares, por lo que el tope no se aplicó en n
 Nota de contexto: en la grabación se identifican dos bloques temáticos distintos. El
 "Audio 2" (Patrick, David, Andrés, Anthony, Ignacio) se centró en polimorfismo, herencia,
 clases/métodos abstractos e interfaces en general (criterios 1–3), mientras que el
-"Audio 1" (Steven, Gabriel, Daniel) se centró en la crítica del diagrama de facturación
-(criterio 4). Por eso varios estudiantes obtienen 0 en criterios cuyo tema simplemente no
-fue abordado en su intervención, no porque se haya evaluado negativamente algo que sí dijeron.
+"Audio 1" (Steven, Gabriel, Daniel, Martín) se centró en la crítica del diagrama de
+facturación (criterio 4). Por eso varios estudiantes obtienen 0 en criterios cuyo tema
+simplemente no fue abordado en su intervención, no porque se haya evaluado negativamente
+algo que sí dijeron.
+
+Corrección: Martín Rojas Barrios (LokiRosa) había sido inicialmente excluido por
+identificarse erróneamente como una persona ajena a la lista de estudiantes; se confirmó
+que sí es un estudiante evaluable y se agregó su evaluación. Es, de hecho, el único
+estudiante que detectó por cuenta propia ambos errores marcados por el profesor en el
+diagrama (colección de invoices + herencia invertida).
 
 ---
 
@@ -61,6 +69,15 @@ fue abordado en su intervención, no porque se haya evaluado negativamente algo 
 | 2. Herencia vs interfaces | 35 | 0.0 | 0 | No menciona interfaces; la sugerencia de interfaz en esa sección fue de "Martín Rojas", quien no es estudiante de la lista y se excluye de su evaluación. |
 | 3. Limitaciones/flexibilidad de interfaces y Java API | 25 | 0.0 | 0 | No aborda interfaces. |
 | 4. Detección de problemas de diseño | 25 | 0.5 | 13 | Detecta que la relación Persona/TransaccionDinero está mal planteada y propone una alternativa, pero la solución sigue usando herencia de forma cuestionable y no detecta el error de que Invoice debería ser una colección (ese hallazgo corresponde al participante externo, no a él). |
+
+### ROJAS BARRIOS MARTIN FRANCISCO (LokiRosa) — 34 shares
+
+| Criterio | Shares máx. | Grado | Shares obtenidos | Justificación |
+|---|---|---|---|---|
+| 1. Herencia → encapsulamiento/polimorfismo | 30 | 0.0 | 0 | Su crítica a la herencia se centra en la corrección semántica de la relación "es-un" (Transacción no debería heredar de Persona porque "la persona no hace la transacción de dinero"), válido pero sin vínculo con encapsulamiento ni polimorfismo. |
+| 2. Herencia vs interfaces | 35 | 0.25 | 9 | Sugiere una interfaz para unificar A,B,C,D y que todas se accedan desde un mismo punto (indicio de facade), pero no compara explícitamente ventajas/desventajas frente a herencia. |
+| 3. Limitaciones/flexibilidad de interfaces y Java API | 25 | 0.0 | 0 | No discute limitaciones de interfaces, flexibilidad ni Java API. |
+| 4. Detección de problemas de diseño | 25 | 1.0 | 25 | Único estudiante que detecta, desde la primera intervención y por cuenta propia, ambos errores marcados por el profesor: Invoice debería ser colección/vector, y la herencia Persona→TransaccionDinero está invertida. |
 
 ### SANCHEZ POVEDA DANIEL (IsisBeige) — 28 shares
 

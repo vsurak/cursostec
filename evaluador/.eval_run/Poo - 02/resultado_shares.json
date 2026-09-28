@@ -302,5 +302,43 @@
       }
     ],
     "necesita_revision_manual": false
+  },
+  {
+    "nombre_completo": "ROJAS BARRIOS MARTIN FRANCISCO",
+    "nickname": "LokiRosa",
+    "shares_totales": 34,
+    "shares_totales_sin_tope": 34,
+    "tope_aplicado": false,
+    "detalle_criterios": [
+      {
+        "criterio": "El estudiante en su explicación logra extraer capacidades al poder de la herencia, más allá de solo la herencia de características como atributos, sino más bien, asociados a encapsulamiento y polimorfismo.",
+        "shares_maximos": 30,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "Su crítica a la herencia se centra en la corrección semántica de la relación 'es-un' (Transacción no debería heredar de Persona porque 'la persona como tal no hace la transacción de dinero'), lo cual es válido pero no vincula la herencia con encapsulamiento ni con polimorfismo, que es lo que pide el criterio."
+      },
+      {
+        "criterio": "Deja claro los momentos en los que es conveniente usar herencia de clases versus interfaces, dejando claro las ventajas y momentos donde es mejor una técnica que otra.",
+        "shares_maximos": 35,
+        "shares_obtenidos": 9,
+        "grado_cumplimiento": 0.25,
+        "justificacion": "Sugiere usar una interfaz para unificar las clases A,B,C,D y que todas se accedan desde un mismo punto (indicio de facade, según el profesor), pero no elabora una comparación explícita de ventajas/desventajas entre herencia e interfaces ni justifica por qué interfaz y no herencia en ese caso."
+      },
+      {
+        "criterio": "El estudiante tiene claro las limitaciones de las interfaces pero también la flexibilidad de sus ventajas, incluso al punto que abstrae el porqué el java API o alguno de los paquetes de java posee interfaces que podemos implementar.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 0,
+        "grado_cumplimiento": 0.0,
+        "justificacion": "No discute limitaciones de las interfaces, flexibilidad de sus ventajas ni el Java API."
+      },
+      {
+        "criterio": "El estudiante logra detectar los problemas en el diseño presentado y puede proponer un mejor diseño que arregle el presentado.",
+        "shares_maximos": 25,
+        "shares_obtenidos": 25,
+        "grado_cumplimiento": 1.0,
+        "justificacion": "Es el único estudiante que detecta, por cuenta propia y desde la primera intervención, ambos errores marcados por el profesor en el diagrama: que Invoice debería ser una colección/vector en lugar de una única referencia, y que la relación de herencia está invertida (Persona no debería ser hija de TransaccionDinero, ya que 'la persona no hace la transacción de dinero'). Cobertura completa y correcta de lo que pide el criterio."
+      }
+    ],
+    "necesita_revision_manual": false
   }
 ]
