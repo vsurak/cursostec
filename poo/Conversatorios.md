@@ -155,7 +155,21 @@ Persona --|> TransaccionDinero : ❌ Error de herencia
 
 ---
 
-# Discussion Session #3
+# Discussion Session #3 - Wednesday 14th, October 2026.
+
+## Topic
+
+In this session, we will discuss the power and capabilities that object-oriented design patterns such as Singleton, Abstract Factory, and Adapter can provide.
+
+The session will cover their theory, how to implement them in Java, their constraints and particular characteristics, as well as specific Java language features and instructions used when programming these patterns. We will also examine the influence of inheritance and polymorphism on these patterns, new language features and techniques learned to implement them, and real-world use cases with code examples demonstrating how to apply these patterns.
+
+Reference: https://refactoring.guru/design-patterns/catalog .
+
+## Market Sheet
+
+---
+
+# Discussion Session #4
 
 ## Topic
 
