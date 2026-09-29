@@ -106,19 +106,22 @@ Shares:
 # Discussion Session #3 - Miércoles 14 de Octubre, 2026
 
 ## Topic
-Para esta fecha el estudiante ha estudiado y practicado algoritmos genéricos y algoritmos probabilistas. Se dice que un GA es un probabilista también. Busque un problema real de su vida, de su día a día, como por ejemplo venir a las clases del tec, tomar el tec, el comedor, sobre las tareas pendientes de los cursos, de la convivencia en el apartamento con los compañeros, compras de supermercado, etc. Algún problema de su vida real que cumpla qué:
+By this date, the student has studied and practiced both generic algorithms and probabilistic algorithms. It is said that a Genetic Algorithm (GA) is also probabilistic.
 
-- El problema se repite varias veces, ya sea en ciclos de horas, o todos los días, cada cierta cantidad de días, etc.
+The student must look for a real-life problem from their daily routine—for example, attending classes at TEC, commuting to TEC, eating at the cafeteria, pending coursework, living with roommates in the apartment, grocery shopping, etc. A real-life problem that meets the following conditions:
 
-- La acción a tomar no siempre es la misma, aunque el problema si lo sea, pero dado variables adicionales, a veces hay que tomar una decisión u otra; además de las variables, sus emociones influyan si tomar uno u otro camino como solución. 
+The problem repeats multiple times, whether in hourly cycles, daily, or every certain number of days.
 
-- Reduzca dicha decisión a un problema específico influenciado por un conjunto reducido de variables.
+The action to take is not always the same, even if the problem itself is the same. Depending on additional variables, sometimes one decision must be taken over another; furthermore, emotions may influence which path is chosen as a solution.
 
-Alrededor de dicho problema el estudiante va ser amplio en demostrar y explicar conceptos relaciones como representación cromosomática, población inicial, función de fitness, operación de cruce, mutación y resultado final como la población; y además nos va a dejar claro por qué este problema con este algoritmo es también considerado probabilista. 
+Reduce this decision to a specific problem influenced by a limited set of variables.
+
+Around this problem, the student will elaborate broadly to demonstrate and explain related concepts such as chromosomal representation, initial population, fitness function, crossover operation, mutation, and final population outcome. Additionally, the student must clarify why this problem, when solved with this algorithm, is also considered probabilistic.
 
 ## Market Sheet
 
 ---
+
 # Discussion Session #4
 
 ## Topic
