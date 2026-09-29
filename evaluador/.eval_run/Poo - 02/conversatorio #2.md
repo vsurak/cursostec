@@ -105,6 +105,7 @@ COREA HERRERA STEVEN FERNANDO,OdinVerde
 -	En ese caso dado que son facturas, debería ser transacción de dinero ser Padre y Persona es la hija, donde la clase padre tendría solo los datos para reemplazarlos por la Persona, en lugar de hacer una Perona nueva en cada factura. 
 -	Declarar en las clases hijas A,B, C, D podría poner como por ejemplo lo del carro, pongo solo las cosas superficiales y lo demás que está por detrás sería como el motor y las piezas, solo se modifica la clase padre en lugar de modificar las clases hijas donde solo tenemos la info necesaria. 
 -	Usar encapsulamiento en la clase padre las piezas que ya ese carro lleva en el motor y tipo de tornillos. 
+
 Martin Rojas
 -	Debería ser un collection de invoices un vector de invoices 
 -	Transacción de dinero Heredia de persona, pero la persona no hace la transacción de dinero 

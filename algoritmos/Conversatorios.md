@@ -102,7 +102,24 @@ Shares:
 
 5. Demuestra claro dominio del tamaño N del problema cuando discute y sobre las etapas que debe seguir ese algoritmo con respecto a ese N. 15 shares. 
 
-# Discussion Session #3
+---
+# Discussion Session #3 - Miércoles 14 de Octubre, 2026
+
+## Topic
+Para esta fecha el estudiante ha estudiado y practicado algoritmos genéricos y algoritmos probabilistas. Se dice que un GA es un probabilista también. Busque un problema real de su vida, de su día a día, como por ejemplo venir a las clases del tec, tomar el tec, el comedor, sobre las tareas pendientes de los cursos, de la convivencia en el apartamento con los compañeros, compras de supermercado, etc. Algún problema de su vida real que cumpla qué:
+
+- El problema se repite varias veces, ya sea en ciclos de horas, o todos los días, cada cierta cantidad de días, etc.
+
+- La acción a tomar no siempre es la misma, aunque el problema si lo sea, pero dado variables adicionales, a veces hay que tomar una decisión u otra; además de las variables, sus emociones influyan si tomar uno u otro camino como solución. 
+
+- Reduzca dicha decisión a un problema específico influenciado por un conjunto reducido de variables.
+
+Alrededor de dicho problema el estudiante va ser amplio en demostrar y explicar conceptos relaciones como representación cromosomática, población inicial, función de fitness, operación de cruce, mutación y resultado final como la población; y además nos va a dejar claro por qué este problema con este algoritmo es también considerado probabilista. 
+
+## Market Sheet
+
+---
+# Discussion Session #4
 
 ## Topic
 
