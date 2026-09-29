@@ -230,9 +230,7 @@ $$
 and:
 
 $$
-E[X]
-=
-E[X_1]+\cdots+E[X_{1000}]
+E[X]=E[X_1]+\cdots+E[X_{1000}]
 $$
 
 This is the **linearity of expectation**.
@@ -258,9 +256,7 @@ we can ask:
 If \(T\) is the random variable representing running time:
 
 $$
-E[T]
-=
-\sum_t tP(T=t)
+E[T]=\sum_t tP(T=t)
 $$
 
 For a simple example, suppose an algorithm takes:
@@ -271,9 +267,7 @@ For a simple example, suppose an algorithm takes:
 Then:
 
 $$
-E[T]
-=
-(1)(0.8)+(5)(0.2)
+E[T]=(1)(0.8)+(5)(0.2)
 $$
 
 $$
