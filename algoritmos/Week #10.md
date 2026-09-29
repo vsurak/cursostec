@@ -80,9 +80,7 @@ $$
 Therefore:
 
 $$
-P(\text{at least one success})
-=
-1-(1-p)^k
+P(\text{at least one success})=1-(1-p)^k
 $$
 
 ### Example
@@ -98,19 +96,13 @@ Then one execution has a 10% failure probability.
 After 5 independent executions:
 
 $$
-P(\text{all fail})
-=
-(0.10)^5
-=
-0.00001
+P(\text{all fail})=(0.10)^5=0.00001
 $$
 
 Therefore:
 
 $$
-P(\text{at least one success})
-=
-0.99999
+P(\text{at least one success})=0.99999
 $$
 
 or:
@@ -336,9 +328,7 @@ This is a stronger requirement.
 The number of possible subsets is:
 
 $$
-\binom{N}{M}
-=
-\frac{N!}{M!(N-M)!}
+\binom{N}{M}=\frac{N!}{M!(N-M)!}
 $$
 
 A **uniform sample** requires every one of these subsets to have probability:
