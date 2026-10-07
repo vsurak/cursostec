@@ -77,7 +77,7 @@ sequenceDiagram
     L-->>B: true (A has not created it yet)
     A->>L: instance = new Logger() → object #1
     B->>L: instance = new Logger() → object #2
-    Note over A,B: ❌ two instances!
+    Note over A,B: two instances!
 ```
 
 Demo that can show the problem (you may see "Creating Logger..." printed more than once):
@@ -116,7 +116,7 @@ public class Logger {
 }
 ```
 
-✅ Correct. ❌ But **every** call pays the cost of acquiring the lock, even after the instance already exists (which is 99.99% of the calls).
+Correct. But **every** call pays the cost of acquiring the lock, even after the instance already exists (which is 99.99% of the calls).
 
 ### 1.3 Thread safe with double-checked locking
 
@@ -206,23 +206,6 @@ public class Logger {
     }
 }
 ```
-
-### Comparison
-
-| Variant | Thread safe? | Uses lock? | Lazy? | Cost per call | Notes |
-|---|---|---|---|---|---|
-| 1.1 Basic | ❌ No | No | Yes | Very low | Only valid in single-threaded code |
-| 1.2 `synchronized` method | ✅ Yes | Yes, always | Yes | High (lock every call) | Simplest correct version |
-| 1.3 Double-checked locking | ✅ Yes | Only at creation | Yes | Low | Needs `volatile` |
-| 1.4 Semaphore | ✅ Yes | Only at creation | Yes | Low | Explicit, supports timeouts, must `release()` in `finally` |
-| 1.5 Eager / Holder | ✅ Yes | No (JVM handles it) | Eager: No / Holder: Yes | Very low | Recommended in most Java code |
-
-**Lock vs. no lock, in short:**
-- **Without a lock**, the check-then-create (`if null -> new`) is not atomic, so two threads can interleave and create two objects.
-- **With a lock/semaphore**, the check-then-create becomes a *critical section*: only one thread at a time can execute it.
-- **Without a lock but relying on the JVM** (static init), you get thread safety for free, because the JVM guarantees a class is initialized exactly once.
-
----
 
 ## 2. Abstract Factory
 
@@ -364,9 +347,6 @@ public class Main {
 }
 ```
 
-- ✅ Simple, readable, type safe, errors caught at compile time.
-- ❌ Every new family (e.g., `LinuxFactory`) requires **modifying** the `switch` (violates the Open/Closed principle).
-
 ### 2.2 Choosing the factory with reflection (class name as a string)
 
 The class name can come from a config file, a database, or an environment variable. The code never mentions the concrete classes.
@@ -399,20 +379,6 @@ public class Main {
     }
 }
 ```
-
-- ✅ Adding a `LinuxFactory` requires **no change** in `FactoryProvider`: just create the class and change the string in the config.
-- ❌ Errors (typo in the name, missing constructor) only appear at **runtime**; reflection is slower and harder to follow.
-
-### Switch vs. Reflection
-
-| | `switch` | Reflection |
-|---|---|---|
-| Add new family | Modify the switch | Only add the class + config |
-| Errors detected | Compile time | Runtime |
-| Performance | Fast | Slower (cache the result if called often) |
-| Readability | High | Medium |
-| Typical use | Small, fixed set of options | Plugins, frameworks, configurable systems |
-
 ---
 
 ## 3. Builder
@@ -440,6 +406,53 @@ Separate the **construction** of a complex object from its **representation**, s
 | **Concrete Builder** | Implements the steps and keeps the product under construction; returns it with `build()`. | `ItalianPizzaBuilder` |
 | **Director** (optional) | Knows the *order* of steps to build common configurations (recipes). | `PizzaChef` |
 | **Client** | Creates the builder, optionally passes it to the director, and gets the result. | `Main` |
+
+```mermaid
+classDiagram
+    class Pizza {
+        -String size
+        -String crust
+        -boolean cheese
+        -List~String~ toppings
+        ~setSize(String size)
+        ~setCrust(String crust)
+        ~setCheese(boolean c)
+        ~addTopping(String t)
+        +toString() String
+    }
+    class PizzaBuilder {
+        <<interface>>
+        +reset() PizzaBuilder
+        +size(String size) PizzaBuilder
+        +crust(String crust) PizzaBuilder
+        +cheese() PizzaBuilder
+        +topping(String topping) PizzaBuilder
+        +build() Pizza
+    }
+    class ItalianPizzaBuilder {
+        -Pizza pizza
+        +reset() PizzaBuilder
+        +size(String size) PizzaBuilder
+        +crust(String crust) PizzaBuilder
+        +cheese() PizzaBuilder
+        +topping(String t) PizzaBuilder
+        +build() Pizza
+    }
+    class PizzaChef {
+        +makeMargherita(PizzaBuilder b) Pizza
+        +makePepperoni(PizzaBuilder b) Pizza
+    }
+    class Main {
+        +main(String[] args)$
+    }
+
+    PizzaBuilder <|.. ItalianPizzaBuilder
+    ItalianPizzaBuilder o-- Pizza : builds
+    PizzaChef ..> PizzaBuilder : uses
+    Main ..> PizzaBuilder : creates / uses
+    Main ..> PizzaChef : uses
+    Main ..> Pizza : receives
+```
 
 ### Code example
 
@@ -716,8 +729,3 @@ sequenceDiagram
     C->>N: send()
 ```
 
-- **Singleton** → one shared entry point to build notifications.
-- **Builder** → readable step-by-step configuration with validation in `build()`.
-- **Factory** → decides the concrete class, so adding `PushNotification` only touches the factory (or, using the reflection variation from section 2.2, not even that).
-
-> ⚠️ Design note: a singleton builder that stored the fields directly in the singleton (`this.to = ...`) would **not** be thread safe: two threads building at the same time would overwrite each other's data. That is why the singleton only creates independent `Draft` objects.
