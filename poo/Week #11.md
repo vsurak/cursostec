@@ -10,6 +10,8 @@ Structural patterns deal with **how classes and objects are combined** to form l
 | Proxy | How do I **control access** to an object (lazy loading, caching, security, logging)? |
 | Bridge | How do I split a class that grows in **two independent dimensions** into two hierarchies? |
 
+> In-class activity (Adapter, Decorator, Facade with AI prompting): [Week #11 - Activity](Week%20%2311%20-%20Activity.md)
+
 ---
 
 ## 1. Adapter
