@@ -148,3 +148,105 @@ Suggested message types:
 - Review with the professor by prior appointment.
 
 
+---
+
+# Análisis de datos en archivos
+
+## Inventario de datos existentes - Probabilista
+
+Objetivo del alg. Prob: es determinar cantidad de vehículos por unidad de tiempo
+
+Supuesto
+- Por provincia, por Cantón: flota vehicular, viajes por día, % crecimiento anual  
+- Rutas provincia provincia, cantidad de viajes semanal, sabado y domingo
+- Rutas cantón canton, cantidad de viajes semana laboral, sabado y domingo
+- Nombres de ruta por provincia
+- Puntos de interés por provincia, canton y ruta
+- Tipos de los puntos de interés y carga de viajes por día
+- Cargas de viajes por las 24 horas semana laboral, sabado y domingo general y por provincia
+
+Supuestos:
+- StartDate: 01/01/2025 00:00:00 
+- se incrementa flota vehicular y viajes promedio por día con la misma proporción de crecimiento poblacional 
+
+Data source stadistico (opciones):
+
+a) cuando el programa arranca lee los archivos fuente y monta una estructura como esta
+b) manipular las fuentes de datos en excel para que se acomoden a la informacion realmente necesito, pasarlo a CSV o JSON, o sea un formato fácil de leer por compu. Ese archivo ya procesado se carga al inicio del programa. 
+
+{
+  datapoints: 
+    [
+      {
+        point: {
+          origen: {provincia: "", canton: ""}
+          destino: {provincia: "", canton: ""},
+          rutas: ["ruta 10", "ruta 4", "Calle dolores", "none"],
+          landmark: "landmarkname" | "none",
+          landmarktype: { type: "Turismo", cantidadViajes: 999}  | {type: "none", cantidadViajes: 999}
+          flota: 9999,
+          incrementoAnual: 1.01, -- percentage
+        }
+        momentos: {
+          viajesLaborales: {total : 999, horas: [{hora: 0, cantidad: 99},..., {hora: 24, cantidad: 99}, ]}
+          cantidadViajesSabado: 999,
+          cantidadViajesDomingo: 999
+        }
+      }
+    ]
+  }
+}
+
+
+Previo:
+- user: Va haber mucha presa mañana en la entrada de cartago?
+- AI Agents:
+  - Un tool que analiza lugar:  basando en provincias y cantones, le pueden suministrar la lista de provincia, canton distrito. Extraer la provincias cantones y distrito basado en esta [ lista ], si no existe es "none". Determinar provincia canton origen, provincia canton distrino, si no hay falta la provincia entonces ponga el canton en ambos provincia y cantos, si falta el canton, ponga la provincia en provincia y canton.  Si habla de rutas, calles, extraer los nombres que hagan mejor match segun [lista landmarks] si no aparece "none", si si tiene landmark name entonces determine el tipo de la lista [Turismo, Educacion, Compras...]
+  - Un tool que analiza rutas: 
+  - Un tool que saca landmarks: 
+  - Un tool que analiza tiempo o momento: extraer año, mes, día, nombre del día, hora, un boolean si es día laboral de lunes a viernes. Si no está el valor exacto anotar "none"
+
+
+Pasos del algoritmo:
+- N datapoints
+- Filtrar los data points dependiendo de lo que el usuario está pidiendo, recorrer mis lista y hacer matching para encontrar los data points que podrían estar asociados a la pregunta del usuario.
+- retorna K data points 
+- contar cantidad de none por data point, entre más none hay, menos tiene
+
+row 1, 2 none, % ,  30%
+row 2, 1 none, % ,  55%
+row 3, 4 none, % ,  15%
+------------------
+7 nones, 100% 
+
+- Cantidad de samplings: 3 oportunidades por row
+- which row = rand() => 0.0 a 1.0
+- calculo cuántos carros son, deterministico
+- probabilidad total
+- subgrupos por hora, dia, landmark, calle y tipo de actividad, cada subgrupo tiene su total
+- con ese total que incluye a los none, puedo asignarle un % de probabilidad a ese elmento de ese subgrupo 
+- todas esas distribuciones me dan un número entre 0 y 1, que si las sumo tengo un total y por ende otra distribucion, aquí genero un random que se va recostar a lo que tenga mayor carga, obteniendo con ello un solo data point. 
+- calculo deterministico para saber cuantos carros van haber en ese evento. 
+a)
+{
+  enviar al genetico, tipo, porcentajes, cantidades 
+}
+
+obtiene resultado
+
+b) podría ser que haga todos los samplings obtengo respuesta final de samplings
+{
+  enviar al genetico, tipo, porcentajes, cantidades 
+}
+
+
+
+
+
+
+## Inventario de datos existentes - GA
+- Tipos de actividades y sus horarios
+- Conciertos y feriados
+
+Objetivo del GA: es dado la cantidad de vehículos y la acción, determinar el comportamiento de 
+los drivers. Genere eventos de comportamiento con cantidad y %. 
