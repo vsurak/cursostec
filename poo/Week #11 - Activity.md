@@ -1,38 +1,38 @@
-# Week #11 Activity: Spot it, then direct the AI
+# Actividad Semana #11: Detectalo y luego dirigí a la IA
 
-**Patterns:** Adapter · Decorator · Facade  **Duration:** 50 minutes  **Format:** pairs, one computer and one AI coding assistant per pair
+**Patrones:** Adapter · Decorator · Facade  **Duración:** 50 minutos  **Formato:** parejas, una computadora y un asistente de programación con IA por pareja
 
-> **Core idea:** if you can describe a structure precisely enough for an AI to build it, you understand the pattern. In this activity **you** find where a pattern belongs, and **you** decide the structure. The AI only types the code.
+> **Idea central:** si podés describir una estructura con suficiente precisión para que una IA la construya, entendés el patrón. En esta actividad **ustedes** encuentran dónde aplica un patrón y **ustedes** deciden la estructura. La IA solo escribe el código.
 
 ---
 
-## Part 1 – Student handout
+## Parte 1: Hoja para estudiantes
 
-### The rules
+### Las reglas
 
-1. **Work in pairs.** The **driver** writes the prompts. The **navigator** reviews each AI answer against the checks for that round. Swap roles every round.
-2. **Banned words in your prompts:** `adapter`, `decorator`, `facade`, `wrapper`, `pattern`, `design pattern`, `refactor this using…`, `what pattern…`, `improve this code`, `clean this up`.
-   A prompt that uses any of them **does not count**. (`gift wrap` is fine because it's a product feature.)
-3. **Don't ask the AI where the problems are.** Detection is your job (Step 1).
-4. **One step per prompt.** No "do everything at once" prompts.
-5. **The baseline is your test.** After every change, `Main` must print **exactly** the baseline output below.
-6. **Keep a prompt log** in `prompts.md`: copy every prompt you send, and add one line on what the AI got right or wrong. This log is what gets graded.
+1. **Trabajen en parejas.** El **driver** escribe los prompts. El **navigator** revisa cada respuesta de la IA contra los chequeos de esa ronda. Intercambien roles en cada ronda.
+2. **Palabras prohibidas en los prompts:** `adapter`, `decorator`, `facade`, `wrapper`, `pattern`, `design pattern`, y sus equivalentes en español: `adaptador`, `decorador`, `fachada`, `envoltorio`, `patrón`, `patrón de diseño`. Tampoco frases como `refactorizá esto usando…`, `¿qué patrón…?`, `mejorá este código`, `limpiá esto`.
+   Un prompt que use cualquiera de ellas **no cuenta**. (`gift wrap` sí se puede usar porque es una característica del producto.)
+3. **No le pregunten a la IA dónde están los problemas.** Detectarlos es trabajo de ustedes (Paso 1).
+4. **Un paso por prompt.** Nada de prompts de "hacé todo de una vez".
+5. **La salida base es su prueba.** Después de cada cambio, `Main` debe imprimir **exactamente** la salida base de abajo.
+6. **Lleven una bitácora de prompts** en `prompts.md`: copien cada prompt que envían y agreguen una línea sobre qué hizo bien o mal la IA. Esta bitácora es lo que se califica.
 
-### The starter project: TecShop checkout
+### El proyecto inicial: TecShop checkout
 
-Folder: `src/patterns/tecshop/` (package `tecshop`)
+Carpeta: `src/patterns/tecshop/` (paquete `tecshop`)
 
-| Class | What it does |
+| Clase | Qué hace |
 |---|---|
-| `Main` | Builds two carts and checks out one on the web and one at the kiosk |
-| `WebCheckout`, `KioskCheckout` | Run a purchase from start to finish |
-| `Cart`, `CartItem` | Products and their extras (gift wrap, insurance, express) |
-| `Inventory`, `TaxCalculator`, `PaymentGateway`, `InvoicePrinter`, `Money` | Store services |
-| `ShippingService` | Picks a shipping provider and gets a quote |
-| `ShippingProvider`, `LocalCourier` | **Our** shipping interface and our in-house courier |
-| `CorreosApi` | **Third-party** SDK from Correos de Costa Rica. **You may not modify it.** |
+| `Main` | Arma dos carritos; uno se paga en la web y otro en el kiosco |
+| `WebCheckout`, `KioskCheckout` | Ejecutan una compra de principio a fin |
+| `Cart`, `CartItem` | Productos y sus extras (envoltura de regalo, seguro, envío exprés) |
+| `Inventory`, `TaxCalculator`, `PaymentGateway`, `InvoicePrinter`, `Money` | Servicios de la tienda |
+| `ShippingService` | Escoge un proveedor de envío y obtiene una cotización |
+| `ShippingProvider`, `LocalCourier` | **Nuestra** interfaz de envío y nuestro mensajero propio |
+| `CorreosApi` | SDK **de terceros** de Correos de Costa Rica. **No se puede modificar.** |
 
-Run it:
+Para ejecutarlo:
 
 ```bash
 cd src/patterns/tecshop
@@ -40,7 +40,7 @@ javac -encoding UTF-8 -d out *.java
 java -cp out tecshop.Main
 ```
 
-**Baseline output** (it must stay identical):
+**Salida base** (debe mantenerse idéntica):
 
 ```
 Inventory: reserved 3 items
@@ -64,140 +64,140 @@ Payment: charged CRC 53,592.75 via SINPE Movil
   TOTAL:    CRC 53,592.75
 ```
 
-### Step 1 – Detection (no AI): fill in the Smell Map
+### Paso 1: Detección (sin IA). Completen el Mapa de Problemas
 
-Read the code. There are **three** design problems. Use the Detection Card to find them.
+Lean el código. Hay **tres** problemas de diseño. Usen la Tarjeta de Detección para encontrarlos.
 
-| # | Where (class.method) | Symptom: what will hurt when the code changes? | Who knows too much? | Which existing class(es) would you keep untouched? |
+| # | Dónde (clase.método) | Síntoma: ¿qué va a doler cuando el código cambie? | ¿Quién sabe demasiado? | ¿Qué clase(s) existente(s) dejarían intactas? |
 |---|---|---|---|---|
 | S1 | | | | |
 | S2 | | | | |
 | S3 | | | | |
 
-### Detection Card
+### Tarjeta de Detección
 
-| If you see… | Ask yourself… | Structural move |
+| Si ves… | Preguntate… | Movimiento estructural |
 |---|---|---|
-| Client code that **converts** units, types or names before calling a class it **can't change** | "Could my code talk only to **my** interface?" | A new class **implements my interface**, **holds the foreign object** in a field, and **translates** each call. |
-| **Boolean flags** or `if` chains that add cost or behavior, or **one subclass per combination** | "Could each extra be its own object that I add **at runtime**?" | Objects that **share the item's interface**, **hold another item**, and **add to its result**. They can be stacked. |
-| The **same multi-step sequence** over several subsystem classes, **copied** in several clients | "Could the clients call **one method** instead?" | One class **owns the sequence** and offers a simple method. The subsystem classes stay as they are. |
+| Código cliente que **convierte** unidades, tipos o nombres antes de llamar a una clase que **no puede cambiar** | "¿Podría mi código hablar solo con **mi** interfaz?" | Una clase nueva **implementa mi interfaz**, **guarda el objeto ajeno** en un atributo y **traduce** cada llamada. |
+| **Banderas booleanas** o cadenas de `if` que suman costo o comportamiento, o **una subclase por cada combinación** | "¿Podría cada extra ser su propio objeto que agrego **en tiempo de ejecución**?" | Objetos que **comparten la interfaz del ítem**, **guardan otro ítem** y **le suman a su resultado**. Se pueden apilar. |
+| La **misma secuencia de varios pasos** sobre varias clases de un subsistema, **copiada** en varios clientes | "¿Podrían los clientes llamar a **un solo método**?" | Una clase **es dueña de la secuencia** y ofrece un método simple. Las clases del subsistema quedan como están. |
 
-### The technical directive template
+### Plantilla de directiva técnica
 
-Every prompt you write should have these five parts:
+Cada prompt que escriban debe tener estas cinco partes:
 
 ```
-CONTEXT:   Which files/classes are involved (paste only what the AI needs).
-TASK:      ONE step: one new class, or one change to one class.
-STRUCTURE: Type name; implements/extends what; fields (private? final?);
-           constructor parameters; method signatures; which object each
-           method delegates to, and what it does before/after delegating.
-RULES:     What must NOT change (e.g. "do not modify CorreosApi");
-           no new libraries; keep package tecshop; don't touch other files.
-DONE WHEN: It compiles; Main prints exactly the baseline;
-           show me only the changed/new file.
+CONTEXTO:    Qué archivos/clases están involucrados (peguen solo lo que la IA necesita).
+TAREA:       UN paso: una clase nueva, o un cambio en una clase.
+ESTRUCTURA:  Nombre del tipo; qué implementa/extiende; atributos (¿private? ¿final?);
+             parámetros del constructor; firmas de métodos; a qué objeto delega
+             cada método y qué hace antes/después de delegar.
+REGLAS:      Qué NO debe cambiar (p. ej. "no modifiques CorreosApi");
+             sin librerías nuevas; mantener el paquete tecshop; no tocar otros archivos.
+TERMINADO:   Compila; Main imprime exactamente la salida base;
+             mostrame solo el archivo nuevo/modificado.
 ```
 
-**Weak prompts vs. a strong prompt**
+**Prompts débiles vs. un prompt fuerte**
 
-| ❌ Weak | Why it's weak |
+| ❌ Débil | Por qué es débil |
 |---|---|
-| "Fix the shipping code, it's messy." | No structure or constraints. The AI decides everything. |
-| "Apply the adapter pattern to Correos." | Uses a banned word. You learn nothing about the structure. |
-| "Refactor the whole project so it's easy to extend." | Too much in one step. You can't check it. |
+| "Arreglá el código de envíos, está desordenado." | Sin estructura ni restricciones. La IA decide todo. |
+| "Aplicá el patrón adapter a Correos." | Usa una palabra prohibida. No aprenden nada de la estructura. |
+| "Refactorizá todo el proyecto para que sea fácil de extender." | Demasiado en un solo paso. No lo pueden verificar. |
 
-✅ Strong:
+✅ Fuerte:
 
-> CONTEXT: `ShippingProvider.java` and `CorreosApi.java` (pasted below).
-> TASK: Create a new class `CorreosShipping` in package `tecshop`.
-> STRUCTURE: It implements `ShippingProvider`. It has one field `private final CorreosApi api` that it receives in its constructor. For now, leave `quote` throwing `UnsupportedOperationException`.
-> RULES: Do not modify `CorreosApi`, `ShippingProvider` or any other file.
-> DONE WHEN: It compiles. Show only the new file.
+> CONTEXTO: `ShippingProvider.java` y `CorreosApi.java` (pegados abajo).
+> TAREA: Creá una clase nueva `CorreosShipping` en el paquete `tecshop`.
+> ESTRUCTURA: Implementa `ShippingProvider`. Tiene un único atributo `private final CorreosApi api` que recibe en su constructor. Por ahora, dejá que `quote` lance `UnsupportedOperationException`.
+> REGLAS: No modifiques `CorreosApi`, `ShippingProvider` ni ningún otro archivo.
+> TERMINADO: Compila. Mostrame solo el archivo nuevo.
 
-### Rounds
+### Rondas
 
-For every round, write your **own** prompt sequence with the template, log it, and run the baseline check after each step.
+En cada ronda escriban su **propia** secuencia de prompts con la plantilla, regístrenla y verifiquen la salida base después de cada paso.
 
-**Round 1 – S1 (10 min).** Navigator checks:
-- [ ] Does `ShippingService` still mention `CorreosApi`, grams, postal codes or `₡`?
-- [ ] Was `CorreosApi` left untouched?
-- [ ] Does the output match the baseline?
+**Ronda 1: S1 (10 min).** El navigator verifica:
+- [ ] ¿`ShippingService` todavía menciona `CorreosApi`, gramos, códigos postales o `₡`?
+- [ ] ¿`CorreosApi` quedó intacta?
+- [ ] ¿La salida coincide con la salida base?
 
-**Round 2 – S2 (12 min).** Swap roles. Navigator checks:
-- [ ] Can I add a 4th extra (e.g. *engraving*, +CRC 3,000) **without editing any existing class**? Try it.
-- [ ] Can I choose the extras for each item **at runtime** in `Main`?
-- [ ] Does the output match the baseline? (Hint: think about the **order** of the extras for the keyboard.)
+**Ronda 2: S2 (12 min).** Intercambien roles. El navigator verifica:
+- [ ] ¿Puedo agregar un 4.º extra (p. ej. *grabado*, +CRC 3,000) **sin editar ninguna clase existente**? Pruébenlo.
+- [ ] ¿Puedo escoger los extras de cada ítem **en tiempo de ejecución** desde `Main`?
+- [ ] ¿La salida coincide con la salida base? (Pista: piensen en el **orden** de los extras del teclado.)
 
-**Round 3 – S3 (9 min).** Swap roles. Navigator checks:
-- [ ] Do `WebCheckout` and `KioskCheckout` each reduce to **one call**?
-- [ ] Do the checkout classes still create `Inventory`, `TaxCalculator`, etc.?
-- [ ] Were the store service classes left unchanged?
-- [ ] Does the output match the baseline?
+**Ronda 3: S3 (9 min).** Intercambien roles. El navigator verifica:
+- [ ] ¿`WebCheckout` y `KioskCheckout` quedan reducidos a **una sola llamada** cada uno?
+- [ ] ¿Las clases de checkout todavía crean `Inventory`, `TaxCalculator`, etc.?
+- [ ] ¿Las clases de servicios de la tienda quedaron sin cambios?
+- [ ] ¿La salida coincide con la salida base?
 
-### Exit ticket (individual, last 2 minutes)
+### Boleta de salida (individual, últimos 2 minutos)
 
-Write **one** prompt, without any banned words, that would make an AI create the structure you built in Round 2 from scratch.
+Escriban **un** prompt, sin palabras prohibidas, que haría que una IA cree desde cero la estructura que construyeron en la Ronda 2.
 
 ---
 
-## Part 2 – Teacher guide
+## Parte 2: Guía para el docente
 
-### Timeline (50 min)
+### Cronograma (50 min)
 
-| Min | Phase | What happens | Teacher's role |
+| Min | Fase | Qué pasa | Rol del docente |
 |---|---|---|---|
-| 0–5 | **Hook and rules** | Project the weak vs. strong prompts. Explain the banned words, roles, baseline and prompt log. | Say it plainly: *"Today the AI is your keyboard, not your architect."* |
-| 5–12 | **Detection (no AI)** | Pairs read the code and fill in the Smell Map with the Detection Card. | At minute 11, do a quick 1-minute plenary: confirm the **locations** of S1–S3. **Don't say the pattern names.** |
-| 12–22 | **Round 1 – S1** | Prompt, run, compare, log. | Walk around. If a pair is stuck, ask: *"Which interface does `ShippingService` wish Correos had?"* |
-| 22–34 | **Round 2 – S2** | Roles swap. | Ask: *"Where does the extra get its price from, if not from flags?"* |
-| 34–43 | **Round 3 – S3** | Roles swap. | Ask: *"If a third checkout (mobile app) appears tomorrow, how many lines would it copy?"* |
-| 43–50 | **Debrief** | **Reveal the names** (S1 = Adapter, S2 = Decorator, S3 = Facade). Pairs label their classes with the actor names from [Week #11](Week%20%2311.md) (Target, Adaptee, Component, Base Decorator, Subsystem…). One pair projects its best and worst prompt. The class says which part of the template the worst prompt was missing. Exit ticket. | Show the "Proxy vs Decorator" note as a teaser for next class. |
+| 0–5 | **Gancho y reglas** | Proyectar los prompts débiles vs. el fuerte. Explicar las palabras prohibidas, los roles, la salida base y la bitácora. | Decirlo claro: *"Hoy la IA es su teclado, no su arquitecta."* |
+| 5–12 | **Detección (sin IA)** | Las parejas leen el código y completan el Mapa de Problemas con la Tarjeta de Detección. | En el minuto 11, hacer un plenario rápido de 1 minuto: confirmar la **ubicación** de S1–S3. **No decir los nombres de los patrones.** |
+| 12–22 | **Ronda 1: S1** | Prompt, ejecutar, comparar, registrar. | Circular por el aula. Si una pareja se traba, preguntar: *"¿Qué interfaz le gustaría a `ShippingService` que tuviera Correos?"* |
+| 22–34 | **Ronda 2: S2** | Cambio de roles. | Preguntar: *"¿De dónde saca su precio el extra, si no es de las banderas?"* |
+| 34–43 | **Ronda 3: S3** | Cambio de roles. | Preguntar: *"Si mañana aparece un tercer checkout (app móvil), ¿cuántas líneas copiaría?"* |
+| 43–50 | **Cierre** | **Revelar los nombres** (S1 = Adapter, S2 = Decorator, S3 = Facade). Las parejas etiquetan sus clases con los nombres de los actores de la [Semana #11](Week%20%2311.md) (Target, Adaptee, Component, Base Decorator, Subsystem…). Una pareja proyecta su mejor y su peor prompt. El grupo dice qué parte de la plantilla le faltó al peor. Boleta de salida. | Mostrar la nota "Proxy vs. Decorator" como adelanto de la próxima clase. |
 
-### Grading rubric for the prompt log (0–2 points per criterion, 8 total)
+### Rúbrica de la bitácora de prompts (0–2 puntos por criterio, 8 en total)
 
-| Criterion | 0 | 1 | 2 |
+| Criterio | 0 | 1 | 2 |
 |---|---|---|---|
-| **Specific structure** | "Make it better" | Names classes, but not fields or delegation | Names type, implements/extends, fields, constructor parameters and delegation |
-| **Incremental** | One huge prompt | 2 steps per round | 3+ small, checkable steps per round |
-| **Constraints** | None | Some | Says explicitly what must not change, every time |
-| **Verification** | Never ran it | Ran it | Ran the baseline after each step **and** logged at least one AI mistake they caught |
+| **Estructura específica** | "Hacelo mejor" | Nombra clases, pero no atributos ni delegación | Nombra el tipo, implements/extends, atributos, parámetros del constructor y delegación |
+| **Incremental** | Un prompt enorme | 2 pasos por ronda | 3 o más pasos pequeños y verificables por ronda |
+| **Restricciones** | Ninguna | Algunas | Indica explícitamente, siempre, qué no debe cambiar |
+| **Verificación** | Nunca lo ejecutaron | Lo ejecutaron | Verificaron la salida base después de cada paso **y** registraron al menos un error de la IA que detectaron |
 
-A banned word sets that prompt to 0.
+Una palabra prohibida deja ese prompt en 0.
 
-### What to watch for (common AI mistakes students should catch)
+### Qué observar (errores comunes de la IA que los estudiantes deberían detectar)
 
-- **S1:** the AI changes `CorreosApi` to make it fit, or keeps the `if ("correos")` branch and only moves the conversion into a helper method. That's a static helper, not an object that implements our interface.
-- **S2:** the AI creates subclasses like `GiftWrapExpressItem` (class explosion again). Or it forgets that `Cart` and `InvoicePrinter` must now use the **interface** type, not `CartItem`. Or it reorders the extras, which changes the keyboard's price (insurance is 5% of whatever it wraps). That's a good debrief moment: **with stackable extras, order matters**.
-- **S3:** the AI "simplifies" by merging `TaxCalculator` into the new class, or deletes the subsystem classes. The subsystem must stay intact and unaware of the new class.
+- **S1:** la IA modifica `CorreosApi` para que encaje, o mantiene la rama `if ("correos")` y solo mueve la conversión a un método auxiliar. Eso es un helper estático, no un objeto que implementa nuestra interfaz.
+- **S2:** la IA crea subclases como `GiftWrapExpressItem` (otra vez la explosión de clases). O se le olvida que `Cart` e `InvoicePrinter` ahora deben usar el tipo de la **interfaz**, no `CartItem`. O reordena los extras, lo que cambia el precio del teclado (el seguro es el 5 % de lo que envuelve). Es un buen momento para el cierre: **con extras apilables, el orden importa**.
+- **S3:** la IA "simplifica" metiendo `TaxCalculator` dentro de la clase nueva, o borra las clases del subsistema. El subsistema debe quedar intacto y sin saber que existe la clase nueva.
 
 <details>
-<summary><strong>Answer key: reference prompt sequences and resulting structure (teacher only)</strong></summary>
+<summary><strong>Solucionario: secuencias de prompts de referencia y estructura resultante (solo docente)</strong></summary>
 
-This key was checked: applying it produces output identical to the baseline.
+Este solucionario fue verificado: al aplicarlo, la salida es idéntica a la salida base.
 
 #### S1 → Adapter
-1. Create `CorreosShipping implements ShippingProvider` with a `private final CorreosApi api` constructor field. `quote` throws for now.
-2. Implement `quote(kg, city)`: convert kg to `int` grams (`Math.round(kg * 1000)`), look up the postal code in a `Map<String,String>` field (San Jose 10101, Alajuela 20101, Cartago 30101, Limon 70101), call `api.calcularTarifa`, remove `₡` and parse to `double`. Unknown city → `IllegalArgumentException`.
-3. In `ShippingService`, replace both fields and the `if/else` with a `Map<String, ShippingProvider>`: `"local"` → `new LocalCourier()`, `"correos"` → `new CorreosShipping(new CorreosApi())`. `quote` looks up and delegates.
-4. Run and compare with the baseline.
+1. Crear `CorreosShipping implements ShippingProvider` con un atributo `private final CorreosApi api` recibido en el constructor. Por ahora `quote` lanza una excepción.
+2. Implementar `quote(kg, city)`: convertir kg a gramos `int` (`Math.round(kg * 1000)`), buscar el código postal en un atributo `Map<String,String>` (San Jose 10101, Alajuela 20101, Cartago 30101, Limon 70101), llamar a `api.calcularTarifa`, quitar el `₡` y convertir a `double`. Ciudad desconocida → `IllegalArgumentException`.
+3. En `ShippingService`, reemplazar los dos atributos y el `if/else` por un `Map<String, ShippingProvider>`: `"local"` → `new LocalCourier()`, `"correos"` → `new CorreosShipping(new CorreosApi())`. `quote` busca y delega.
+4. Ejecutar y comparar con la salida base.
 
-Actors: **Target** `ShippingProvider` · **Adaptee** `CorreosApi` · **Adapter** `CorreosShipping` · **Client** `ShippingService`.
+Actores: **Target** `ShippingProvider` · **Adaptee** `CorreosApi` · **Adapter** `CorreosShipping` · **Client** `ShippingService`.
 
 #### S2 → Decorator
-1. Create interface `Item { double getPrice(); String describe(); }`. `CartItem` implements it, its 3 booleans are removed, and its constructor becomes `(String name, double basePrice)`. `Cart` and `InvoicePrinter` use `Item` instead of `CartItem`.
-2. Create `abstract class ItemExtra implements Item` with `protected final Item inner` received in the constructor. Both methods delegate to `inner`.
-3. Create `GiftWrap` (+1500, `" + gift wrap"`), `Insurance` (+5% of `inner.getPrice()`, `" + insurance"`) and `Express` (+2500, `" + express"`), each extending `ItemExtra`, calling `inner` first and then adding.
-4. In `Main`: `new Express(new GiftWrap(new CartItem("Laptop stand", 25000)))`, `new Insurance(new CartItem("USB-C hub", 18000))`, `new Insurance(new GiftWrap(new CartItem("Mechanical keyboard", 42000)))`.
-5. Bonus: add `Engraving` without touching any existing class.
+1. Crear la interfaz `Item { double getPrice(); String describe(); }`. `CartItem` la implementa, se le quitan los 3 booleanos y su constructor pasa a ser `(String name, double basePrice)`. `Cart` e `InvoicePrinter` usan `Item` en lugar de `CartItem`.
+2. Crear `abstract class ItemExtra implements Item` con `protected final Item inner` recibido en el constructor. Ambos métodos delegan en `inner`.
+3. Crear `GiftWrap` (+1500, `" + gift wrap"`), `Insurance` (+5 % de `inner.getPrice()`, `" + insurance"`) y `Express` (+2500, `" + express"`). Cada una extiende `ItemExtra`, llama primero a `inner` y luego suma.
+4. En `Main`: `new Express(new GiftWrap(new CartItem("Laptop stand", 25000)))`, `new Insurance(new CartItem("USB-C hub", 18000))`, `new Insurance(new GiftWrap(new CartItem("Mechanical keyboard", 42000)))`.
+5. Extra: agregar `Engraving` sin tocar ninguna clase existente.
 
-Actors: **Component** `Item` · **Concrete Component** `CartItem` · **Base Decorator** `ItemExtra` · **Concrete Decorators** `GiftWrap`, `Insurance`, `Express` · **Client** `Main`.
+Actores: **Component** `Item` · **Concrete Component** `CartItem` · **Base Decorator** `ItemExtra` · **Concrete Decorators** `GiftWrap`, `Insurance`, `Express` · **Client** `Main`.
 
 #### S3 → Facade
-1. Create `OrderProcess` with private fields for `Inventory`, `TaxCalculator`, `ShippingService`, `PaymentGateway` and `InvoicePrinter`, and a method `placeOrder(Cart cart, String customer, String city, String shippingProvider, String paymentMethod)` that runs the 5 steps in the current order.
-2. Rewrite `WebCheckout.buy` and `KioskCheckout.buy` so each holds an `OrderProcess` and makes **one** call (`"correos"/"credit card"` and `"local"/"SINPE Movil"`).
-3. Check that neither checkout class refers to any subsystem class, and compare with the baseline.
+1. Crear `OrderProcess` con atributos privados para `Inventory`, `TaxCalculator`, `ShippingService`, `PaymentGateway` e `InvoicePrinter`, y un método `placeOrder(Cart cart, String customer, String city, String shippingProvider, String paymentMethod)` que ejecuta los 5 pasos en el orden actual.
+2. Reescribir `WebCheckout.buy` y `KioskCheckout.buy` para que cada uno tenga un `OrderProcess` y haga **una** sola llamada (`"correos"/"credit card"` y `"local"/"SINPE Movil"`).
+3. Verificar que ninguna clase de checkout haga referencia a clases del subsistema, y comparar con la salida base.
 
-Actors: **Facade** `OrderProcess` · **Subsystem** `Inventory`, `TaxCalculator`, `ShippingService`, `PaymentGateway`, `InvoicePrinter` · **Clients** `WebCheckout`, `KioskCheckout`.
+Actores: **Facade** `OrderProcess` · **Subsystem** `Inventory`, `TaxCalculator`, `ShippingService`, `PaymentGateway`, `InvoicePrinter` · **Clients** `WebCheckout`, `KioskCheckout`.
 
 ```mermaid
 classDiagram
