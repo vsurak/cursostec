@@ -202,7 +202,7 @@ Previo:
 - user: Va haber mucha presa mañana en la entrada de cartago?
 - AI Agents:
   - Un tool que analiza lugar:  basando en provincias y cantones, le pueden suministrar la lista de provincia, canton distrito. Extraer la provincias cantones y distrito basado en esta [ lista ], si no existe es "none". Determinar provincia canton origen, provincia canton distrino, si no hay falta la provincia entonces ponga el canton en ambos provincia y cantos, si falta el canton, ponga la provincia en provincia y canton.  Si habla de rutas, calles, extraer los nombres que hagan mejor match segun [lista landmarks] si no aparece "none", si si tiene landmark name entonces determine el tipo de la lista [Turismo, Educacion, Compras...]
-  - Un tool que analiza rutas: 
+  - Un tool que analiza rutas:  
   - Un tool que saca landmarks: 
   - Un tool que analiza tiempo o momento: extraer año, mes, día, nombre del día, hora, un boolean si es día laboral de lunes a viernes. Si no está el valor exacto anotar "none"
 
@@ -221,13 +221,32 @@ row 3, 4 none, % ,  15%
 
 - Cantidad de samplings: 3 oportunidades por row
 - which row = rand() => 0.0 a 1.0
+para todos los samplings saco los datapoints
+
+DP1, DP1
+DP3 , DP3
+DP4
+DP7
+
+- segun las ocurrencias del sampling saco la probabilidad de los data points
+- por random escojo un datapoint
 - calculo cuántos carros son, deterministico
-- probabilidad total
-- subgrupos por hora, dia, landmark, calle y tipo de actividad, cada subgrupo tiene su total
-- con ese total que incluye a los none, puedo asignarle un % de probabilidad a ese elmento de ese subgrupo 
-- todas esas distribuciones me dan un número entre 0 y 1, que si las sumo tengo un total y por ende otra distribucion, aquí genero un random que se va recostar a lo que tenga mayor carga, obteniendo con ello un solo data point. 
-- calculo deterministico para saber cuantos carros van haber en ese evento. 
-a)
+- calculo deterministico para saber cuantos carros van haber en ese evento.
+
+Con esto arman un json respuesta:
+{
+  lugar: "none" | "Heredia" | "Belen de Heredia" | "Belen de Heredia a Angeles de Cartago",
+  landmark: "none" | "Tec",
+  totalVehiculos: 1818,
+  viajes: 3450,
+  fecha: "14/10/2026",
+  tipoDia: "laboral" | "fin de semana",
+  ////////
+  factorPresa: 0.3+0.01=0.301;
+  eventos: [{ nombre: "pleito callejro", "probabilidad" : 52%}, {nombre: "calle despejada", probabilidad: 30%} ]
+  nivelDePresa: (factorPresa*viajes)/totalVehiculos;
+}
+a) enviar cada sampling al genetico
 {
   enviar al genetico, tipo, porcentajes, cantidades 
 }
