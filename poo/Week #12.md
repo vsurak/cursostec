@@ -960,3 +960,24 @@ public class Main {
 | Memento | Originator creates **opaque snapshots**, caretaker stores them | Save/restore state without breaking encapsulation |
 | State | Context **has-a** state object that changes itself | Behavior changes when the internal state changes |
 | Chain of Responsibility | Handlers linked in a **chain** | Pass a request along until it's handled or stopped |
+
+
+## Para actividad en clase
+
+*1. Sistema de frenado de un carro*
+Un carro tiene frenos de distinto tipo en sus ruedas. El taller necesita revisarlas una por una para medir el desgaste y la temperatura de cada freno. Cuando el conductor pisa el pedal, la señal debe pasar por varios sistemas de seguridad antes de que el carro frene.
+
+*2. Planta secadora de café*
+La planta procesa lotes de grano que avanzan por una línea donde hay silos, secadores y ventiladores. El jefe de planta quiere medir la humedad y el consumo eléctrico de cada equipo. Si la temperatura sube demasiado, la alarma debe atenderla la persona o el sistema que corresponda según la gravedad.
+
+*3. Cajero automático*
+El cajero registra retiros, depósitos y consultas durante el día. Al cierre, el banco revisa todas las transacciones para calcular comisiones y generar reportes de auditoría. Cuando alguien retira dinero, el cajero arma el monto con billetes de distintas denominaciones.
+
+*4. Emergencias de una clínica*
+Los pacientes esperan en una fila ordenada por prioridad. A cada paciente se le hacen exámenes de distinto tipo, y luego hay que calcular su costo y preparar el reporte para el seguro. Cada paciente es atendido por el nivel de personal que su caso requiere.
+
+*5. Caja de supermercado*
+El cajero pasa uno a uno los productos del carrito: algunos se venden por peso, otros son electrónicos y otros son licores. Para cada producto se calcula el impuesto y los puntos de lealtad. La venta de licor debe cumplir varias condiciones antes de aprobarse.
+
+*6. Control de equipaje en el aeropuerto*
+Por la banda pasan maletas, mochilas y paquetes frágiles. Cada pieza debe revisarse para calcular su sobrepeso y asignarle una etiqueta de manejo. Además, el equipaje pasa por varios controles de seguridad, y cada control decide si lo deja pasar o lo detiene.
