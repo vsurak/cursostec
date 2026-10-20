@@ -131,5 +131,5 @@ LLM  ──calls tool──►  MCP Server (Python)
 - The probabilistic algorithms and GAs do not write new calculated data to be consulted later. Instead, they generate the simulated information at the moment of the user's query.
 - The probabilistic algorithms and GAs must follow the structure seen in class.
 - The project must be on GitHub with a proper `README.md`, which must include an explanation of the algorithmic techniques used by the student, with links to the key files, and a guide on how to run the solution.
-- Last commit: Saturday, October 24.
+- Last commit: Saturday, October 27, 2026.
 - Review with the professor by prior appointment.

@@ -144,7 +144,7 @@ Suggested message types:
 - The student may use any AI assistance; however, if the student is unable to understand, explain, and defend the code, the class design, and the algorithms, and cannot account for any line of code, they may lose between 20 and 60 points on the review, depending on the severity of the knowledge gap.
 - The review will take place in a scheduled appointment with the professor, and all work must be tracked in GitHub. It will be verified that both students contributed to the code during development; otherwise, the student may lose up to 15 points on the review.
 - Failing to demonstrate command of GitHub and the command line may cost up to 10 points on the review.
-- Last commit: Saturday, October 24, 2026.
+- Last commit: Saturday, October 27, 2026.
 - Review with the professor by prior appointment.
 
 
