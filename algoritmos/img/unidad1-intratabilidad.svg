@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="720" height="400" fill="#ffffff"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">Mapa de clases de problemas</text>
+
+  <!-- NP -->
+  <ellipse cx="250" cy="215" rx="215" ry="150" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="250" y="100" text-anchor="middle" font-size="16" font-weight="bold" fill="#92400e">NP</text>
+  <text x="250" y="118" text-anchor="middle" font-size="12" fill="#92400e">verificable en tiempo polinomial</text>
+
+  <!-- P -->
+  <ellipse cx="170" cy="235" rx="105" ry="70" fill="#d1fae5" stroke="#059669" stroke-width="2"/>
+  <text x="170" y="232" text-anchor="middle" font-size="16" font-weight="bold" fill="#065f46">P</text>
+  <text x="170" y="250" text-anchor="middle" font-size="12" fill="#065f46">resoluble en tiempo</text>
+  <text x="170" y="265" text-anchor="middle" font-size="12" fill="#065f46">polinomial (tratables)</text>
+
+  <!-- NP-completo -->
+  <ellipse cx="365" cy="235" rx="75" ry="55" fill="#fee2e2" stroke="#dc2626" stroke-width="2"/>
+  <text x="365" y="230" text-anchor="middle" font-size="14" font-weight="bold" fill="#991b1b">NP-Completo</text>
+  <text x="365" y="248" text-anchor="middle" font-size="11" fill="#991b1b">los más difíciles de NP</text>
+
+  <!-- Examples -->
+  <text x="350" y="170" text-anchor="middle" font-size="11" fill="#6b7280">Ej: viajante, mochila, SAT</text>
+
+  <!-- Right panel -->
+  <rect x="480" y="70" width="225" height="310" rx="10" fill="#f3f4f6" stroke="#9ca3af"/>
+  <text x="592" y="95" text-anchor="middle" font-size="14" font-weight="bold" fill="#1f2937">¿Qué hacer con un NP duro?</text>
+  <g font-size="12" fill="#374151">
+    <text x="495" y="125">▸ Minimizar el problema → aproximados</text>
+    <text x="495" y="155">▸ Minimizar la solución → aleatorizados</text>
+    <text x="495" y="185">▸ Minimizar el método → probabilistas</text>
+    <text x="495" y="215">▸ Minimizar la arquitectura → paralelos</text>
+    <text x="495" y="245">▸ Minimizar la máquina → analógicos</text>
+  </g>
+  <line x1="495" y1="268" x2="690" y2="268" stroke="#9ca3af"/>
+  <text x="495" y="290" font-size="12" font-weight="bold" fill="#1f2937">Crecimiento del costo</text>
+  <text x="495" y="312" font-size="12" fill="#059669">n², n³  → polinomial (factible)</text>
+  <text x="495" y="332" font-size="12" fill="#dc2626">2ⁿ, 1.08ⁿ, n!  → exponencial (intratable)</text>
+  <text x="495" y="360" font-size="11" fill="#6b7280">Si un NP-Completo cae en P, todo NP cae.</text>
+</svg>

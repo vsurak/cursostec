@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 420" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+  <rect width="720" height="420" fill="#ffffff"/>
+  <text x="360" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">Cifrado simétrico vs asimétrico</text>
+
+  <!-- Symmetric panel -->
+  <rect x="15" y="45" width="340" height="285" rx="10" fill="#eff6ff" stroke="#2563eb"/>
+  <text x="185" y="70" text-anchor="middle" font-size="15" font-weight="bold" fill="#1e3a8a">Simétrico: UNA llave compartida</text>
+
+  <rect x="30" y="100" width="90" height="40" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="75" y="125" text-anchor="middle" font-size="12" fill="#1e3a8a">Emisor</text>
+  <rect x="250" y="100" width="90" height="40" rx="6" fill="#dbeafe" stroke="#2563eb"/>
+  <text x="295" y="125" text-anchor="middle" font-size="12" fill="#1e3a8a">Receptor</text>
+  <line x1="120" y1="120" x2="250" y2="120" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="185" y="113" text-anchor="middle" font-size="11" fill="#6b7280">texto cifrado</text>
+
+  <text x="75" y="165" text-anchor="middle" font-size="22">🔑</text>
+  <text x="295" y="165" text-anchor="middle" font-size="22">🔑</text>
+  <text x="185" y="165" text-anchor="middle" font-size="11" fill="#1e3a8a">misma clave K</text>
+  <text x="75" y="190" text-anchor="middle" font-size="11" fill="#1e3a8a">cifra con K</text>
+  <text x="295" y="190" text-anchor="middle" font-size="11" fill="#1e3a8a">descifra con K</text>
+
+  <g font-size="12" fill="#374151">
+    <text x="30" y="225">• Rápido; ideal para grandes volúmenes</text>
+    <text x="30" y="247">• Reto: acordar la clave de forma segura</text>
+    <text x="30" y="269">• Toda la seguridad está en la clave</text>
+    <text x="30" y="291" font-weight="bold">DES → 3DES → AES · IDEA</text>
+    <text x="30" y="313" fill="#6b7280">Bloques: DES/IDEA 64 bits, AES 128 bits</text>
+  </g>
+
+  <!-- Asymmetric panel -->
+  <rect x="365" y="45" width="340" height="285" rx="10" fill="#fdf2f8" stroke="#be185d"/>
+  <text x="535" y="70" text-anchor="middle" font-size="15" font-weight="bold" fill="#831843">Asimétrico: PAR de llaves</text>
+
+  <rect x="380" y="100" width="90" height="40" rx="6" fill="#fce7f3" stroke="#be185d"/>
+  <text x="425" y="125" text-anchor="middle" font-size="12" fill="#831843">Emisor</text>
+  <rect x="600" y="100" width="90" height="40" rx="6" fill="#fce7f3" stroke="#be185d"/>
+  <text x="645" y="125" text-anchor="middle" font-size="12" fill="#831843">Receptor</text>
+  <line x1="470" y1="120" x2="600" y2="120" stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)"/>
+  <text x="535" y="113" text-anchor="middle" font-size="11" fill="#6b7280">texto cifrado</text>
+
+  <text x="425" y="165" text-anchor="middle" font-size="22">🔓</text>
+  <text x="645" y="165" text-anchor="middle" font-size="22">🔒</text>
+  <text x="425" y="190" text-anchor="middle" font-size="11" fill="#831843">cifra con la clave</text>
+  <text x="425" y="204" text-anchor="middle" font-size="11" fill="#831843">PÚBLICA del receptor</text>
+  <text x="645" y="190" text-anchor="middle" font-size="11" fill="#831843">descifra con su</text>
+  <text x="645" y="204" text-anchor="middle" font-size="11" fill="#831843">clave PRIVADA</text>
+
+  <g font-size="12" fill="#374151">
+    <text x="380" y="235">• La pública se comparte, la privada nunca</text>
+    <text x="380" y="257">• Más lento; resuelve el intercambio de claves</text>
+    <text x="380" y="279" font-weight="bold">RSA (factorización) · DH (log. discreto)</text>
+    <text x="380" y="301" fill="#6b7280">RSA firma · DH negocia claves</text>
+  </g>
+
+  <!-- Blockchain strip -->
+  <text x="360" y="355" text-anchor="middle" font-size="13" font-weight="bold" fill="#1f2937">Blockchain: bloques encadenados por hash</text>
+  <g stroke="#059669" stroke-width="2" fill="#d1fae5">
+    <rect x="110" y="368" width="120" height="40" rx="6"/>
+    <rect x="300" y="368" width="120" height="40" rx="6"/>
+    <rect x="490" y="368" width="120" height="40" rx="6"/>
+  </g>
+  <g font-size="11" fill="#065f46" text-anchor="middle">
+    <text x="170" y="385">Bloque 1</text><text x="170" y="400">hash: A1</text>
+    <text x="360" y="385">Bloque 2</text><text x="360" y="400">prev: A1 · hash: B2</text>
+    <text x="550" y="385">Bloque 3</text><text x="550" y="400">prev: B2 · hash: C3</text>
+  </g>
+  <g stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)">
+    <line x1="230" y1="388" x2="300" y2="388"/>
+    <line x1="420" y1="388" x2="490" y2="388"/>
+  </g>
+</svg>

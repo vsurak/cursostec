@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 400" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#6b7280"/>
+    </marker>
+  </defs>
+  <rect width="720" height="400" fill="#ffffff"/>
+  <text x="360" y="30" text-anchor="middle" font-size="18" font-weight="bold" fill="#1f2937">Divide, procesa en paralelo, mezcla (modelo Work-Depth)</text>
+
+  <!-- Problem -->
+  <rect x="270" y="55" width="180" height="40" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+  <text x="360" y="80" text-anchor="middle" font-size="13" fill="#1e3a8a">Problema de tamaño n</text>
+
+  <!-- Arrows to tasks -->
+  <g stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)">
+    <line x1="320" y1="95" x2="125" y2="170"/>
+    <line x1="345" y1="95" x2="265" y2="170"/>
+    <line x1="375" y1="95" x2="455" y2="170"/>
+    <line x1="400" y1="95" x2="595" y2="170"/>
+  </g>
+  <text x="165" y="125" font-size="11" fill="#6b7280" transform="rotate(21 165 125)">dividir</text>
+
+  <!-- Tasks -->
+  <g fill="#d1fae5" stroke="#059669" stroke-width="2">
+    <rect x="60" y="170" width="130" height="50" rx="8"/>
+    <rect x="200" y="170" width="130" height="50" rx="8"/>
+    <rect x="390" y="170" width="130" height="50" rx="8"/>
+    <rect x="530" y="170" width="130" height="50" rx="8"/>
+  </g>
+  <g font-size="12" fill="#065f46" text-anchor="middle">
+    <text x="125" y="192">Procesador 1</text><text x="125" y="208">pieza 1</text>
+    <text x="265" y="192">Procesador 2</text><text x="265" y="208">pieza 2</text>
+    <text x="455" y="192">Procesador 3</text><text x="455" y="208">pieza 3</text>
+    <text x="595" y="192">Procesador 4</text><text x="595" y="208">pieza 4</text>
+  </g>
+  <text x="360" y="200" text-anchor="middle" font-size="20" fill="#6b7280">···</text>
+
+  <!-- Arrows to merge -->
+  <g stroke="#6b7280" stroke-width="1.5" marker-end="url(#a)">
+    <line x1="125" y1="220" x2="320" y2="285"/>
+    <line x1="265" y1="220" x2="345" y2="285"/>
+    <line x1="455" y1="220" x2="375" y2="285"/>
+    <line x1="595" y1="220" x2="400" y2="285"/>
+  </g>
+  <text x="515" y="265" font-size="11" fill="#6b7280" transform="rotate(-21 515 265)">mezclar</text>
+
+  <!-- Merge -->
+  <rect x="270" y="285" width="180" height="40" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+  <text x="360" y="310" text-anchor="middle" font-size="13" fill="#92400e">Merge → resultado final</text>
+
+  <!-- Legend -->
+  <rect x="40" y="345" width="640" height="42" rx="8" fill="#f3f4f6" stroke="#9ca3af"/>
+  <text x="360" y="363" text-anchor="middle" font-size="12" fill="#374151"><tspan font-weight="bold">W (work)</tspan> = total de operaciones   ·   <tspan font-weight="bold">D (depth)</tspan> = cadena más larga de dependencias   ·   <tspan font-weight="bold">P = W / D</tspan></text>
+  <text x="360" y="379" text-anchor="middle" font-size="12" fill="#374151">Menos dependencias → D pequeño → más paralelismo posible</text>
+</svg>
