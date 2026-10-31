@@ -134,7 +134,7 @@ class Persona {
     - nombre : String
     - cedula : String
     - direccion : String
-    - invoice : Invoice   // ❌ Error: debería ser una colección (muchos invoices)
+    - invoice : Invoice   // Error: debería ser una colección (muchos invoices)
 }
 
 class Invoice {
@@ -155,7 +155,7 @@ Persona --|> TransaccionDinero : ❌ Error de herencia
 
 ---
 
-# Discussion Session #3 - Wednesday 14th, October 2026.
+# Discussion Session #3 - Wednesday 4th, November 2026.
 
 ## Topic
 
@@ -167,12 +167,54 @@ Reference: https://refactoring.guru/design-patterns/catalog .
 
 ## Market Sheet
 
+Shares:
+1. El estudiante logra explicar detalles teoricos y practicos de los 3 patrones. 35 shares.
+2. El estudiante logra explicar detalles teoricos y prácticos de solo 2 de los patrones. 25 shares.
+3. El estudiante logra explicar detalles teoricos y prácticos de solo 1 de los patrones. 15 shares.
+4. Cuando el estudiante explica los patrones hace énfasis en lo que logra hacer la herencia y el polimorfismo en el patrón. 30 shares.
+5. Logra establecer las reglas del patrón, los actores y el flujo de ejecución con usos reales o aplicaciones reales del patrón con algún caso ejemplo. 50 shares. 
+
 ---
 
-# Discussion Session #4
+# Discussion Session #4 #5 - Wednesday 4th y Friday 6th, November
 
 ## Topic
 
+From specification to object model: spec-driven development, UML class diagrams, Mermaid, and design patterns in Java.
+
+This session treats software development as an engineering process, not as “writing classes until something compiles.” Students will argue how a specification drives the design, how that design is made visible with UML class diagrams and Mermaid, and how inheritance, polymorphism, and design patterns become the vocabulary for turning a problem into a Java object model.
+
+The conversation will move among three layers that must stay consistent:
+
+1. **Process.** Spec-driven development: what a spec is for, how it constrains design decisions, how it reduces ambiguity before code, and how AI can help produce, critique, and refine specs and diagrams without replacing the engineer’s judgment.
+2. **Representation.** UML class diagrams as the contract of the object model (classes, attributes, operations, associations, inheritance, interfaces, multiplicity, responsibilities). Mermaid as a practical way to sketch the same ideas quickly, iterate in conversation, and keep the diagram close to the spec.
+3. **Construction.** Design patterns applied with inheritance and polymorphism, mixed when a single pattern is not enough, and verified in Java: the student must be able to say not only *which* classes exist, but *why* each class exists, what it is responsible for, and how those responsibilities would be coded.
+
+Students will be challenged on the fly to invent models for unfamiliar problems: name at least a first cut of the classes, assign responsibilities, choose relationships (association, composition, inheritance, interface), pick and combine patterns, and defend how that design would look in Java. The goal is not a perfect catalog of patterns, but fluency: object strategy, diagram literacy, and the ability to keep process, diagram, and Java code aligned.
+
+*Expected mastery*
+
+- Explain spec-driven development: how a written spec (problem, actors, constraints, invariants, acceptance criteria) precedes and governs class design; how changing the spec should change the model.
+- Read and produce UML class diagrams: classes, fields and methods, visibility, associations and multiplicity, generalization, realization of interfaces, and notes that capture responsibilities.
+- Express the same model in Mermaid (`classDiagram`), knowing what Mermaid can and cannot represent compared with full UML, and when a quick Mermaid sketch is enough to reason about a design.
+- Given a problem stated only in words, propose an object strategy: at least five classes, the responsibility of each class, and how they collaborate. Separate “who knows,” “who does,” and “who creates.”
+- Apply inheritance and polymorphism as design tools, not as default structure: when a superclass or an interface is justified, when composition is better, and how polymorphic types keep client code stable.
+- Use design patterns (structure, intent, participants, and typical Java shape) and, above all, combine patterns when the problem needs more than one (for example factory + strategy, singleton + facade, adapter + decorator, observer + command). Justify the mix against the spec.
+- Translate the design into Java verbally with language-level precision: packages, constructors, access modifiers, abstract classes vs interfaces, overrides, `final`, collections as associations, and where the pattern actually appears in code.
+- Identify convenient uses of AI in this pipeline (drafting specs, generating first-cut diagrams, proposing class lists, reviewing pattern fit) and how to tighten AI output: constraints, examples, forbidden designs, JDK version, “implement this diagram, do not invent classes,” iterative critique against the spec.
+
 ## Market Sheet
+
+Shares:
+
+1. El estudiante logra explicar con amplitud los temas que se le han preguntado, no limitándose a la respuesta específica sino correlacionando temas y dando ejemplos. 35 shares.
+
+2. El dominio de Java es notorio en la explicación: detalla verbalmente aspectos del lenguaje que complementan la parte técnica de su rationale. 30 shares.
+
+3. Entiende los procesos de ingeniería de software e identifica usos convenientes de AI, así como cómo afinar la precisión de los resultados de AI.
+
+4. El estudiante puede crear diseños de problemas al vuelo, detallando al menos 5 clases que podría necesitar para solucionar el problema y cuáles son las responsabilidades de cada clase.
+
+5. Demuestra agilidad con los patrones de diseño: uso, aplicación, estructura y, sobre todo, cómo mezclar patrones unos con otros para lograr una solución. 45 shares.
 
 ---

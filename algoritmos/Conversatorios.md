@@ -103,7 +103,7 @@ Shares:
 5. Demuestra claro dominio del tamaño N del problema cuando discute y sobre las etapas que debe seguir ese algoritmo con respecto a ese N. 15 shares. 
 
 ---
-# Discussion Session #3 - Miércoles 14 de Octubre, 2026
+# Discussion Session #3 - Miércoles 4 de Noviembre, 2026
 
 ## Topic
 By this date, the student has studied and practiced both generic algorithms and probabilistic algorithms. It is said that a Genetic Algorithm (GA) is also probabilistic.
@@ -120,12 +120,56 @@ Around this problem, the student will elaborate broadly to demonstrate and expla
 
 ## Market Sheet
 
+Shares:
+
+1. Logra para un ejemplo de la vida real plantear un algoritmo genético que resuelve el problema de la arbitrariedad de las decisiones de las personas de alguna forma controlada pero que podría ser algo impredecible. 50 shares.
+
+2. 1. Logra para un ejemplo de la vida real plantear un algoritmo probabilista que resuelve el problema de la arbitrariedad de las decisiones de las personas de alguna forma controlada pero que podría ser algo impredecible. 50 shares.
+
+3. Las partes, componentes y retos del algoritmo probabilista está claro para el estudiante, sabe como componer una distribución de probabilidad y usarla para guiar la decisión de obtener respuesta de un algoritmo? 50 shares. 
+
+4. El estudiante puede diseñar una representación cromosomática, población, función de fitness e imaginar la ejecución de un algoritmo genético para lidear con problemas de este tipo de incertidumbre evolutiva. 50 shares. 
+
+5. Las variables para plantear el problema y la solución con cualquiera de las tecnicas son reconocidas y bien delimitadas. 15 shares. 
 ---
 
-# Discussion Session #4
+# Discussion Session #4 #5 - Miércoles 4 y 6 de noviembre.
 
 ## Topic
 
+Parallel algorithms, intractability, encryption, and choosing an algorithmic strategy.
+
+This session asks the student to treat algorithms as engineering decisions: given a problem of size N, which family of techniques can attack it, at what cost, and with what hardware or cryptographic assumptions. The conversation will move among four areas that must stay connected.
+
+**1. Parallel algorithms.** Every parallel discussion starts from a problem of N elements (or N units of work) and from how those N are partitioned among processes or hardware cores. The student must distinguish a *parallel algorithm*—work divided so that independent (or coordinated) pieces run on distinct processors/cores, with a defined mapping of N to workers, a merge or reduction step, and a complexity argument in terms of N and of the number of processors P—from a *process that uses threads*. Threads can implement parallelism, but spawning threads, sharing memory, or “doing several things at once” is not by itself a parallel algorithm: there must be a strategy for splitting N, assigning chunks, synchronizing, combining results, and reasoning about speedup, bottlenecks, and when extra cores stop helping. Students should recognize problems that are good candidates for parallel algorithms (independent subproblems, map-reduce style aggregations, data-parallel loops, search over disjoint spaces) and problems that are not (strict sequential dependence, tiny N, communication heavier than computation).
+
+**2. Intractability and algorithmic complexity.** The student must know when a problem is intractable: not merely “slow on my laptop,” but a growth rate (typically exponential or worse in N, or NP-hard in the usual informal sense used in the course) that makes exact solution unusable as N grows. They should contrast polynomial vs exponential behavior, explain why adding machines does not magically make an intractable exact algorithm tractable, and name ways to attack such problems: heuristics, approximations, restrictions of the input, parameterization, preprocessing, greedy or DP on a simplified model, probabilistic methods, genetic search, parallel search that still does not change the worst-case class, or accepting a bounded-quality answer. Real-life examples are expected (routing, scheduling, packing, cryptographic brute force, constraint satisfaction, large combinatorial planning).
+
+**3. Symmetric and asymmetric encryption.** The student must explain clearly how symmetric algorithms (same secret key for encrypt and decrypt) differ from asymmetric ones (public/private key pair): key distribution, typical use (bulk data vs key exchange and signatures), computational cost, and how the two are often combined in practice. Encryption here is treated as an algorithmic family with its own assumptions, not as a product name.
+
+**4. Strategy on the fly.** Given problems stated in the session, the student must pick and justify a possible algorithmic strategy using techniques seen during the semester: divide and conquer, dynamic programming, backtracking, greedy, parallel, probabilistic, encryption, and genetic algorithms. The answer is a strategy, not a full implementation: problem size N, why that technique fits, what would go wrong with a mismatched technique, and how two techniques might be combined if one is not enough.
+
+*Expected mastery*
+
+- Given N and a number of processes or cores P, describe how work is split, what each worker does, how results are combined, and how time depends on N and P.
+- Separate parallel *algorithm* (partition of N, independence or defined communication, reduction) from a sequential algorithm that merely uses threads, locks, or asynchronous calls.
+- Point to real or plausible problems that admit parallel algorithms, and say why the subproblems are (or are not) independent.
+- Decide whether a problem is tractable or intractable as N grows; justify with complexity, not with intuition alone.
+- List concrete attack options for intractable problems and illustrate at least one with a real-life example (what is given up: optimality, completeness, exactness, or generality).
+- Contrast symmetric vs asymmetric encryption: keys, typical algorithms or roles, when each is appropriate, and a realistic pipeline that uses both.
+- Faced with an unseen problem, name a semester technique (or a mix), bind it to N, and sketch the strategy: stages, what is stored or branched, what is chosen greedily, what is evolved, what is encrypted, or what is run in parallel.
+
 ## Market Sheet
 
----
+Shares:
+
+1. El estudiante distingue con claridad un algoritmo paralelo (reparto de un problema de tamaño N entre procesos o cores, fusión de resultados, argumento en N y P) de un programa que simplemente usa hilos. 30 shares.
+
+2. Identifica problemas donde un algoritmo paralelo es conveniente y explica cómo se distribuirían los N elementos, qué queda independiente y dónde está la sincronización o la reducción. 25 shares.
+
+3. Determina cuándo un problema es intratable, relaciona esa conclusión con la complejidad algorítmica y propone formas concretas de atacarlo (aproximación, heurística, restricción del input, métodos probabilistas o genéticos, etc.), con ejemplos de la vida real. 35 shares.
+
+4. Explica con precisión la diferencia entre algoritmos simétricos y asimétricos de encriptación: claves, usos típicos, costo y cómo se combinan en un escenario real. 25 shares.
+
+5. Ante problemas planteados en la sesión, elige y justifica una estrategia algorítmica usando técnicas del semestre (divide y vencerás, programación dinámica, backtracking, voraz, paralelo, probabilista, cifrado, genéticos), dejando claro el N, por qué esa técnica y no otra, y si haría falta mezclarlas. 40 shares.
+
