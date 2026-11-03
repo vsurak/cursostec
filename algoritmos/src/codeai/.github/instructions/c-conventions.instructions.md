@@ -1,0 +1,16 @@
+---
+applyTo: "src/**/*.c,src/**/*.h"
+description: "Conventions for C algorithm programs"
+---
+- Use C only in these files. Target C11 unless the build flags declare another standard (`-std=c99`, `/std:c11`).
+- Each feature lives in `src/<feature-slug>/`: `<name>.h` declares the structs and algorithm functions, `<name>.c` implements them, `main.c` is the entrypoint.
+- `main.c` only reads input, calls the algorithm functions, and prints output. Algorithms never read or print.
+- Headers use include guards named `<FEATURE>_<NAME>_H` and are self-contained. C++ code that includes them wraps declarations in `extern "C"`.
+- Structs are `typedef struct {...} snake_case_t;` functions and variables are `snake_case`; constants and macros are `UPPER_SNAKE_CASE`.
+- Prefix every public function with its module name: `stack_push`, `graph_add_edge`.
+- A data structure has an explicit lifecycle: `<type>_init`/`<type>_create` and `<type>_destroy`. Every `malloc`/`calloc`/`realloc` is checked for `NULL` and has exactly one matching `free`.
+- Arrays are always passed with their length (`const int *a, size_t n`). Use `size_t` for sizes and indexes and fixed-width types (`int64_t`) when the spec's N can overflow `int`.
+- Mark inputs `const`. Do not use variable-length arrays for sizes that depend on N; allocate on the heap.
+- Functions report failure through a return value (`bool`, `int` status, or `NULL`), never by calling `exit` from algorithm code.
+- Compile clean with `-Wall -Wextra` (or `/W4`). No undefined behavior: no out-of-bounds access, no signed overflow, no use after free.
+- Prefer the C standard library. Add a dependency only when the standard library cannot do the job.

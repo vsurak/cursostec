@@ -1,0 +1,15 @@
+---
+description: Testing conventions for C and C++ test files
+globs: tests/**/*.cpp,tests/**/*.c,tests/**/*.hpp,tests/**/*.h
+alwaysApply: false
+---
+- Tests live in `tests/<feature-slug>/`, mirroring `src/<feature-slug>/`. Files are `test_<name>.cpp` or `test_<name>.c`.
+- C++ tests use GoogleTest when `CMakeLists.txt` already fetches it; otherwise use plain `<cassert>` with a `main` that runs every test function. C tests use `<assert.h>` with a `main` that runs every test function (or Unity if the project already vendors it).
+- Tests include only the feature's header and call the algorithm functions directly. Never test through `main.cpp` or `main.c`.
+- Test names describe behavior: `returns_empty_when_input_is_empty`, `test_stack_pop_on_empty_returns_false`.
+- Every algorithm gets these cases: empty input and N = 1, a typical example from the spec, duplicates, already-sorted and reverse-sorted input when order matters, negative or boundary values, and a spec test criterion per case.
+- For each algorithm that has a simpler brute-force version, add a randomized test that compares both on small inputs. Seed the generator with a fixed value so failures reproduce.
+- For each algorithm, add one test at the spec's maximum N that finishes within the time limit the spec states. Skip it only when the spec gives no maximum.
+- C tests that allocate check that every create has a matching destroy. Run them under AddressSanitizer.
+- Build tests with `-Wall -Wextra -g -fsanitize=address,undefined`. Example C++: `g++ -std=c++17 -Wall -Wextra -g -fsanitize=address,undefined src/<f>/<name>.cpp tests/<f>/test_<name>.cpp -o test_<name>`. Example C: `gcc -std=c11 ...`. With MSVC use `cl /EHsc /W4 /std:c++17 /fsanitize=address`.
+- Run tests with `ctest --output-on-failure` when a `CMakeLists.txt` exists, otherwise run each `test_<name>` binary. A non-zero exit code means failure.
