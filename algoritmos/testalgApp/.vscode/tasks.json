@@ -1,0 +1,8 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    { "label": "build taxi", "type": "shell", "command": "make", "group": { "kind": "build", "isDefault": true } },
+    { "label": "run taxi", "type": "shell", "command": "./taxi", "dependsOn": "build taxi" },
+    { "label": "test", "type": "shell", "command": "make test" }
+  ]
+}

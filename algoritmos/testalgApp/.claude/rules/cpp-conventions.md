@@ -1,0 +1,17 @@
+---
+paths:
+  - "src/**/*.cpp"
+  - "src/**/*.hpp"
+  - "src/**/*.cc"
+---
+- Use C++ only in these files. Target the standard declared in `CMakeLists.txt` (`CMAKE_CXX_STANDARD`) or the build flags; default to C++17.
+- Each feature lives in `src/<feature-slug>/`: `<name>.hpp` declares the data structures and algorithm functions, `<name>.cpp` implements them, `main.cpp` is the entrypoint.
+- `main.cpp` only reads input, calls the algorithm functions, and prints output. Algorithms never read or print.
+- Algorithm functions are free functions or methods of a data-structure type. They take inputs by value or `const&` and return results; avoid global state.
+- Headers start with `#pragma once`. Never write `using namespace std;` in a header.
+- Types are `PascalCase`; functions, methods, and variables are `snake_case`; constants are `UPPER_SNAKE_CASE`; member fields end with `_`.
+- Use `std::vector`, `std::array`, `std::string`, and the `<algorithm>`/`<queue>`/`<unordered_map>` family before writing a custom container. Write a custom data structure only when the spec defines one.
+- Own memory with RAII (containers, `std::unique_ptr`). No raw `new`/`delete` and no `malloc`/`free`.
+- Size and index values use `std::size_t` or fixed-width types (`int64_t`); pick the type from the spec's N so sums and products cannot overflow.
+- Compile clean with `-Wall -Wextra` (or `/W4`). No undefined behavior: no out-of-range access, no signed overflow, no uninitialized reads.
+- Prefer the standard library. Add a dependency only when the standard library cannot do the job.
