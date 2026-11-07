@@ -73,3 +73,21 @@ Un aspecto importante de este programa es que la respuesta del servidor no puede
 - Se puede usar inteligencia artificial para construir la solución. Sin embargo, si el estudiante no puede explicar la **estrategia**, el **algoritmo** y el **código**, puede perder de **20 a 60 puntos** de la nota.
 - Último commit: **miércoles 18 de noviembre de 2026**.
 - Revisión con el profesor con cita previa.
+
+
+## Opcional - 10%
+- Crear un algoritmo genético que permita hacer una visualización por medio de charts sobre el comportamiento de las diversas variables que un usuario al consultar la data puede ver. 
+
+- Por ejemplo, en el sitio de Kaggle, cuando se consulta el dataset es posible ver ciertos gráficos que permitan visualizar el comportamiento de los datos, para saber las tendencias de esos valores. 
+
+- Usando un sampling de los datos extraídos en el dataset, cree un algoritmo genético que obtenga un json descriptivo de las columnas que el usuario que accede a la plataforma tiene permiso de ver. Ese dashboard debe ser un gráfico por cada columna describiendo que información hay ahí. El algoritmo genético, no va a recorrer toda la data, el previamente ya tiene un data set sample que le permite modelar el GA, y luego de algunas iteraciones del GA logra obtener la información descriptiva de las columnas.
+
+Su GA debe contar claramente con:
+- Debe estar claro que son los individuos del GA, con respecto a los datos. 
+- Debe justificar el tamaño de la población inicial, en función de los datos y los samples. (no hardcoded values)
+- Crear una representación cromosomática, basado en los datos que entran por los samples. (no hardcoded values)
+- La función de fitness debe lograr calificar de forma que se aproxime a los valores y cantidad de datos reales existentes en el dataset, sin usar valores hardcoded, siempre sujeto y relativo a los individuos de la población.
+- Continuar las operaciones de cruce, mutación y finalización definidas en clase.
+
+Con este resultado del GA, el web app debe ser capaz de diagramar el dashboard visual descriptivo de las columnas resultantes del query. 
+

@@ -137,30 +137,13 @@ LLM  ──calls tool──►  MCP Server (Python)
 
 ---
 
-# Análisis de datos en archivos
+# Segunda revisión caso #2 opcional, 20%
 
-## Inventario de datos existentes - Probabilista
+# Algoritmo probabilista
+1. Procesar los archivos de datos para crear una sola entidad con los datos filtrados y con solo aquellos que se van a usar para calcular la probabilidad de volumen de carros en una ruta o lugar. 
 
-Objetivo del alg. Prob: es determinar cantidad de vehículos por unidad de tiempo
-
-Supuesto
-- Por provincia, por Cantón: flota vehicular, viajes por día, % crecimiento anual  
-- Rutas provincia provincia, cantidad de viajes semanal, sabado y domingo
-- Rutas cantón canton, cantidad de viajes semana laboral, sabado y domingo
-- Nombres de ruta por provincia
-- Puntos de interés por provincia, canton y ruta
-- Tipos de los puntos de interés y carga de viajes por día
-- Cargas de viajes por las 24 horas semana laboral, sabado y domingo general y por provincia
-
-Supuestos:
-- StartDate: 01/01/2025 00:00:00 
-- se incrementa flota vehicular y viajes promedio por día con la misma proporción de crecimiento poblacional 
-
-Data source stadistico (opciones):
-
-a) cuando el programa arranca lee los archivos fuente y monta una estructura como esta
-b) manipular las fuentes de datos en excel para que se acomoden a la informacion realmente necesito, pasarlo a CSV o JSON, o sea un formato fácil de leer por compu. Ese archivo ya procesado se carga al inicio del programa. 
-
+Crear la estructura similar a la vista en clase:
+```json
 {
   datapoints: 
     [
@@ -169,58 +152,33 @@ b) manipular las fuentes de datos en excel para que se acomoden a la informacion
           origen: {provincia: "", canton: ""}
           destino: {provincia: "", canton: ""},
           rutas: ["ruta 10", "ruta 4", "Calle dolores", "none"],
-          landmark: "landmarkname" | "none",
-          landmarktype: { type: "Turismo", cantidadViajes: 999}  | {type: "none", cantidadViajes: 999}
+          landmarks: [{type: "Turismo", name: "Volcan Arenal", cantidadViajes: 999}, {}],
           flota: 9999,
           incrementoAnual: 1.01, -- percentage
-        }
-        momentos: {
-          viajesLaborales: {total : 999, horas: [{hora: 0, cantidad: 99},..., {hora: 24, cantidad: 99}, ]}
-          cantidadViajesSabado: 999,
-          cantidadViajesDomingo: 999
+          viajesPorDia: [{numeroDeDia: 1, cantidad: 999},{numeroDeDia: 2, cantidad: 999}]
         }
       }
     ]
   }
 }
+```
 
+2. Someter el query del usuario a un LLM de bajo costo para que extraiga lugares, landmarks, tipo de lugares, fecha. Esto se hace contra un json output definido en un schema, para que el LLM  llene el json con la información que logre sacar del query. 
 
-Previo:
-- user: Va haber mucha presa mañana en la entrada de cartago?
-- AI Agents:
-  - Un tool que analiza lugar:  basando en provincias y cantones, le pueden suministrar la lista de provincia, canton distrito. Extraer la provincias cantones y distrito basado en esta [ lista ], si no existe es "none". Determinar provincia canton origen, provincia canton distrino, si no hay falta la provincia entonces ponga el canton en ambos provincia y cantos, si falta el canton, ponga la provincia en provincia y canton.  Si habla de rutas, calles, extraer los nombres que hagan mejor match segun [lista landmarks] si no aparece "none", si si tiene landmark name entonces determine el tipo de la lista [Turismo, Educacion, Compras...]
-  - Un tool que analiza rutas:  
-  - Un tool que saca landmarks: 
-  - Un tool que analiza tiempo o momento: extraer año, mes, día, nombre del día, hora, un boolean si es día laboral de lunes a viernes. Si no está el valor exacto anotar "none"
+3. Hacer un filter out de los datapoints que hacen algún match con lo extraído del punto 2. Asignando un score a aquellos que tengan más match que los otros.
 
+4. Sumar todos los scores para que ese sea el 100% del total y con ello hacer distribución % de los data points.
 
-Pasos del algoritmo:
-- N datapoints
-- Filtrar los data points dependiendo de lo que el usuario está pidiendo, recorrer mis lista y hacer matching para encontrar los data points que podrían estar asociados a la pregunta del usuario.
-- retorna K data points 
-- contar cantidad de none por data point, entre más none hay, menos tiene
+5. Se hacen N ensayos, tirando random y sacando data points.
 
-row 1, 2 none, % ,  30%
-row 2, 1 none, % ,  55%
-row 3, 4 none, % ,  15%
-------------------
-7 nones, 100% 
+6. En cada ensayo se hace el cáculo de vehículos que se espera que hayan y el workload %. 
 
-- Cantidad de samplings: 3 oportunidades por row
-- which row = rand() => 0.0 a 1.0
-para todos los samplings saco los datapoints
+7. Se acumulan los ensayos y se agrupan por aquellos que resultaron con valores más cercanos entre sí, siendo uno de esos ensayos la respuesta final a usar.
 
-DP1, DP1
-DP3 , DP3
-DP4
-DP7
+8. Con esa respuesta se da la carta vehícular y la cantidad, y se le pide al LMM que escriba una respuesta al query basado en ese dato. 
 
-- segun las ocurrencias del sampling saco la probabilidad de los data points
-- por random escojo un datapoint
-- calculo cuántos carros son, deterministico
-- calculo deterministico para saber cuantos carros van haber en ese evento.
-
-Con esto arman un json respuesta:
+Ejemplo del json respuesta para el llm:
+```json
 {
   lugar: "none" | "Heredia" | "Belen de Heredia" | "Belen de Heredia a Angeles de Cartago",
   landmark: "none" | "Tec",
@@ -228,31 +186,5 @@ Con esto arman un json respuesta:
   viajes: 3450,
   fecha: "14/10/2026",
   tipoDia: "laboral" | "fin de semana",
-  ////////
-  factorPresa: 0.3+0.01=0.301;
-  eventos: [{ nombre: "pleito callejro", "probabilidad" : 52%}, {nombre: "calle despejada", probabilidad: 30%} ]
-  nivelDePresa: (factorPresa*viajes)/totalVehiculos;
+  cargaPresaVehicular: 0.4;
 }
-a) enviar cada sampling al genetico
-{
-  enviar al genetico, tipo, porcentajes, cantidades 
-}
-
-obtiene resultado
-
-b) podría ser que haga todos los samplings obtengo respuesta final de samplings
-{
-  enviar al genetico, tipo, porcentajes, cantidades 
-}
-
-
-
-
-
-
-## Inventario de datos existentes - GA
-- Tipos de actividades y sus horarios
-- Conciertos y feriados
-
-Objetivo del GA: es dado la cantidad de vehículos y la acción, determinar el comportamiento de 
-los drivers. Genere eventos de comportamiento con cantidad y %. 
